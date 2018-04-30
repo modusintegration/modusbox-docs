@@ -3,6 +3,6 @@ title: PortX
 version: 1.0
 start
 nav:
-- modules/ROOT/toc.adoc
-- modules/connectors/toc.adoc
-- modules/release-notes/toc.adoc
+- modules/ROOT/_toc.adoc
+- modules/connectors/_toc.adoc
+- modules/release-notes/_toc.adoc
