@@ -1,7 +1,6 @@
 name: portx
 title: PortX
 version: 1.0
-start
 nav:
 - modules/ROOT/_toc.adoc
 - modules/connectors/_toc.adoc
