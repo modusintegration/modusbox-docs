@@ -1,0 +1,6 @@
+name: portx
+title: PortX
+version: 1.0
+nav:
+- modules/connectors/index.adoc
+- modules/ROOT/release-notes/index.adoc
