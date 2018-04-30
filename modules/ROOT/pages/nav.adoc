@@ -1,5 +1,0 @@
-// Anypoint B2B TOC File
-
-.xref:index.adoc[PortX]
-* xref:key-concepts.adoc[Key Concepts]
-* xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]

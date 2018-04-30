@@ -1,7 +1,7 @@
 = PortX
 :keywords: b2b, introduction, portal, partner, manager
 
-PortX provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+PortX provides a web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
 
 == Transaction Monitoring
 
