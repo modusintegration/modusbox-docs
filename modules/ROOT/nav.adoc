@@ -1,6 +1,3 @@
-.xref:maps.adoc[maps]
-* xref:key-concepts.adoc[Key Concepts]
-// Anypoint B2B TOC File
 
 * xref:index.adoc[PortX]
 
