@@ -1,5 +1,5 @@
 // Core Connectors 4.0 TOC File
-* link:/connectors/[Connectors]
+* link:/index.adoc/[Connectors]
 
 
 ** link:/connectors/partner-manager-connector[Partner Manager Connector]
