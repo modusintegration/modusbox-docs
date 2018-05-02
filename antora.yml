@@ -1,5 +1,5 @@
-name: portx
-title: PortX
+name: modus-box
+title: ModusBoxDox
 version: '1.0'
 nav:
 - modules/ROOT/nav.adoc
