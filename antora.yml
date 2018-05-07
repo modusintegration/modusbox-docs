@@ -4,7 +4,7 @@ start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
 
-name: portx
+name: whatdya
 title: PortX
 version: '1.0'
 start_page: portx:index.adoc
