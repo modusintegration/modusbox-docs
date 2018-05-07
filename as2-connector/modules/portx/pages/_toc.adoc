@@ -1,0 +1,53 @@
+// Anypoint B2B TOC File
+
+* xref:/portx/[PortX]
+
+
+** xref:/portx/key-concepts[Key Concepts]
+** xref:/portx/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
+** xref:/portx/resolution-processes[Resolution Processes]
+*** xref:/portx/tracking[Tracking]
+
+** xref:/portx/examples[Examples]
+
+
+** xref:/portx/transaction-monitoring[Transaction Monitoring]
+*** xref:/portx/central-pane-elements[Central Pane Elements]
+*** xref:/portx/tracking-scenarios[Tracking Scenarios]
+
+** xref:/portx/partner-configuration[Partner Configuration]
+
+*** xref:/portx/company-information[Company Information]
+*** xref:/portx/identifiers[Identifiers]
+*** xref:/portx/on-hold-inactive[On-Hold/Inactive]
+*** xref:/portx/certificate[Certificate]
+
+
+*** xref:/portx/x12-settings[X12 Settings]
+*** xref:/portx/edifact-settings[EDIFACT Settings]
+*** xref:/portx/csv-settings[CSV Settings]
+
+*** xref:/portx/transaction-designer[Transaction Designer]
+*** xref:/portx/document-types[Document Types]
+*** xref:/portx/endpoints[Endpoints]
+*** xref:/portx/maps[Maps]
+*** xref:/portx/channels[Channels]
+*** xref:/portx/routes[Routes]
+*** xref:/portx/partner-conversations[Partner Conversations]
+*** xref:/portx/rosettanet-pips[RosettaNet PIPs]
+*** xref:/portx/rosettanet-agreements[RosettaNet Agreements]
+
+** xref:/portx/administration[Administration]
+*** xref:/portx/environments[Environments]
+*** xref:/portx/error-codes[Error Codes]
+*** xref:/portx/security[Security]
+*** xref:/portx/lookup-tables[Lookup Tables]
+
+** xref:/portx/tutorials[Tutorials]
+*** xref:/portx/apm-tutorial-td[PortX Tutorial: Designing a Transaction]
+*** xref:/portx/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+
+** xref:/portx/anypoint-partner-manager-api[PortX API]
+
+** xref:/portx/glossary[Glossary]
+

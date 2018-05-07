@@ -1,0 +1,11 @@
+= Key Concepts
+:keywords: Anypoint b2b PortX concepts
+
+
+The following pages explain key PortX concepts:
+
+* link:/portx/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
+* link:/portx/resolution-processes[Resolution Processes]
+* link:/portx/tracking[Tracking]
+
+For more information, see link:/portx/anypoint-partner-manager[PortX].

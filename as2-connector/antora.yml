@@ -1,0 +1,7 @@
+name: as2-connector
+title: AS2 Connector
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc
+
+

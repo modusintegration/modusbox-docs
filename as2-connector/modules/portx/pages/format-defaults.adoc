@@ -1,0 +1,7 @@
+= Format Defaults
+
+You can provide defaults for these formats:
+
+* link:/portx/x12-settings[X12 Settings]
+* link:/portx/edifact-settings[EDIFACT Settings]
+* link:/portx/csv-settings[CSV Settings]

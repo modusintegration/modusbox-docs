@@ -1,6 +1,0 @@
-// Master TOC
-
-// * link:getting-started[Anypoint Platform Overview]
-* link:portx[Portx]
-* link:connectors[Connectors]
-* link:release-notes[Release Notes]
