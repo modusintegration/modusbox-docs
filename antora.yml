@@ -1,7 +1,19 @@
-name: modus-box
-title: ModusBoxDox
-version: '1.0'
+name: SpacePortx
+title: SpacePortX
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
+
+name: portx
+title: PortX
+version: '1.0'
+start_page: portx:index.adoc
+nav:
+- modules/portx/nav.adoc
+
+name: as2-connector
+title: AS2 Connector
+version: '2.0'
 - modules/connectors/nav.adoc
+nav:
+- modules/ROOT/nav.adoc
