@@ -1,7 +1,0 @@
-= Partners
-
-You can configure the following for a :
-
-* link:/portx/company-information[Company Information]
-* link:/portx/identifiers[Identifiers]
-* link:/portx/administration[Administration] (Home partner only)
