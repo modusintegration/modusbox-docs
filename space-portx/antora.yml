@@ -1,4 +1,5 @@
 name: space-portx
+version: 1.0
 title: SpacePortX
 start_page: ROOT:index.adoc
 nav:
