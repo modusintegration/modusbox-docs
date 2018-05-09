@@ -1,6 +1,6 @@
-name: space-portx
+name: portx
 version: '1.0'
-title: SpacePortX
+title: PortX
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc

@@ -1,6 +1,6 @@
-name: space-portx
+name: as2-connector
 version: '1.0'
-title: SpacePortX
+title: AS2 Connector
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc

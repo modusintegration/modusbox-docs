@@ -1,3 +1,0 @@
-= Release Notes
-
-For every new release, update, and fix, we publish a page that identifies details relevant to users. 
