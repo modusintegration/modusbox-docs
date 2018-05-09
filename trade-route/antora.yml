@@ -1,6 +1,6 @@
-name: portx
+name: trade-route
 version: '1.0'
-title: PortX
+title: Trade Route
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc

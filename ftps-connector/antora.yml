@@ -1,6 +1,6 @@
-name: as2-connector
+name: ftps-connector
 version: '1.0'
-title: AS2 Connector
+title: FTPS Connector
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
