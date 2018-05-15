@@ -1,3 +1,3 @@
-* xref:as3-connector.adoc[AS2 Connector]
+* xref:as2-connector.adoc[AS2 Connector]
 
 
