@@ -1,7 +1,7 @@
-name: as2-connector
+name: partner-manager-connector
 version: '1.0'
-title: AS2 Connector
-start_page: ROOT:as2-connector.adoc
+title: Partner Manager Connector
+start_page: ROOT:partner—manager-connector.adoc
 nav:
 - modules/ROOT/nav.adoc
 
