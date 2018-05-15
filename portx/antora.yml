@@ -1,5 +1,6 @@
 name: portx
 title: PortX
+version: dev
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
