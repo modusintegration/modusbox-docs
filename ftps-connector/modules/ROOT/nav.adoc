@@ -1,3 +1,3 @@
-* xref:index.adoc[AS2 Connector]
+* xref:ftps-connector.adoc[FTPS Connector]
 
 
