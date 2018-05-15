@@ -1,8 +1,6 @@
 // Release Notes TOC File
 
-* xref:index[Release Notes]
-
-** xref:anypoint-partner-manager-release-notes[Anypoint Partner Manager Release Notes]
-** xref:as2-connector-release-notes[AS2 Connector Release Notes]
-** xref:partner-manager-connector-release-notes[Partner Manager Connector Release Notes]
-** xref:ftps-connector-release-notes[FTPS Connector Release Notes (for Mule 4)]
+** xref:anypoint-partner-manager-release-notes.adoc[Anypoint Partner Manager Release Notes]
+** xref:as2-connector-release-notes.adoc[AS2 Connector Release Notes]
+** xref:partner-manager-connector-release-notes.adoc[Partner Manager Connector Release Notes]
+** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes (for Mule 4)]
