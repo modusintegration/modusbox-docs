@@ -1,0 +1,3 @@
+* xref:partner—manager-connector.adoc[Partner Manager Connector]
+
+
