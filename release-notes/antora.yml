@@ -1,7 +1,7 @@
-name: trade-route
+name: release-notes
 version: '1.0'
-title: Trade Route
-start_page: ROOT:index.adoc
+title: Release Notes
+start_page: ROOT:release-notes.adoc
 nav:
 - modules/ROOT/nav.adoc
 
