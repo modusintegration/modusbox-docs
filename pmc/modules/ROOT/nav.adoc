@@ -1,0 +1,3 @@
+* xref:pmc.adoc[Partner Manager Connector]
+
+
