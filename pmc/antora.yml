@@ -1,7 +1,7 @@
-name: partner-manager-connector
+name: pmc
 version: '1.0'
 title: Partner Manager Connector
-start_page: ROOT:partner—manager-connector.adoc
+start_page: ROOT:pmc.adoc
 nav:
 - modules/ROOT/nav.adoc
 
