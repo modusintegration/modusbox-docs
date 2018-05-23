@@ -1,6 +1,6 @@
 name: trade-route
 version: '1.0'
-title: Trade Route (TM)
+title: Trade Route(TM)
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
