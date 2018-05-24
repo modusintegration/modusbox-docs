@@ -1,0 +1,9 @@
+= Configuration
+
+You can configure:
+
+* link:/portx/document-types[Document Types]
+* link:/portx/endpoints[Endpoints]
+* link:/portx/maps[Maps]
+* link:/portx/channels[Channels]
+* link:/portx/routes[Routes]
