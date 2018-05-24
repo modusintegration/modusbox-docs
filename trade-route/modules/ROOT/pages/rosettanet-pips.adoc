@@ -59,7 +59,7 @@ Enter settings as appropriate.
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
-* *Company name* (see link:/portx/partners[Partners] and link:/portx/company-information[Company Information])
+* *Company name* (see xref:portx/partners[Partners] and xref:portx/company-information[Company Information])
 * *Process Code* (see below)
 
 NOTE: If you choose to change the default, then subsequently want to revert to it, click *Auto Fill*.

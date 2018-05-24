@@ -1,49 +1,49 @@
 * xref:index.adoc[TradeRoute Manager]
 
-*** link:/trade-route/key-concepts[Key Concepts]
-**** link:/trade-route/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
-**** link:/trade-route/resolution-processes[Resolution Processes]
-**** link:/trade-route/tracking[Tracking]
+*** xref:trade-route/key-concepts[Key Concepts]
+**** xref:trade-route/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
+**** xref:trade-route/resolution-processes[Resolution Processes]
+**** xref:trade-route/tracking[Tracking]
 
-*** link:/trade-route/examples[Examples]
-
-
-*** link:/trade-route/transaction-monitoring[Transaction Monitoring]
-**** link:/trade-route/central-pane-elements[Central Pane Elements]
-**** link:/trade-route/tracking-scenarios[Tracking Scenarios]
-
-*** link:/trade-route/partner-configuration[Partner Configuration]
-
-**** link:/trade-route/company-information[Company Information]
-**** link:/trade-route/identifiers[Identifiers]
-**** link:/trade-route/on-hold-inactive[On-Hold/Inactive]
-**** link:/trade-route/certificate[Certificate]
+*** xref:trade-route/examples[Examples]
 
 
-**** link:/trade-route/x12-settings[X12 Settings]
-**** link:/trade-route/edifact-settings[EDIFACT Settings]
-**** link:/trade-route/csv-settings[CSV Settings]
+*** xref:trade-route/transaction-monitoring[Transaction Monitoring]
+**** xref:trade-route/central-pane-elements[Central Pane Elements]
+**** xref:trade-route/tracking-scenarios[Tracking Scenarios]
 
-**** link:/trade-route/transaction-designer[Transaction Designer]
-**** link:/trade-route/document-types[Document Types]
-**** link:/trade-route/endpoints[Endpoints]
-**** link:/trade-route/maps[Maps]
-**** link:/trade-route/channels[Channels]
-**** link:/trade-route/routes[Routes]
-**** link:/trade-route/partner-conversations[Partner Conversations]
-**** link:/trade-route/rosettanet-pips[RosettaNet PIPs]
-**** link:/trade-route/rosettanet-agreements[RosettaNet Agreements]
+*** xref:trade-route/partner-configuration[Partner Configuration]
 
-***  link:/trade-route/administration[Administration]
-**** link:/trade-route/environments[Environments]
-**** link:/trade-route/error-codes[Error Codes]
-**** link:/trade-route/security[Security]
-**** link:/trade-route/lookup-tables[Lookup Tables]
+**** xref:trade-route/company-information[Company Information]
+**** xref:trade-route/identifiers[Identifiers]
+**** xref:trade-route/on-hold-inactive[On-Hold/Inactive]
+**** xref:trade-route/certificate[Certificate]
 
-*** link:/trade-route/tutorials[Tutorials]
-**** link:/trade-route/apm-tutorial-td[Anypoint Partner Manager Tutorial: Designing a Transaction]
-**** link:/trade-route/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
 
-*** link:/trade-route/anypoint-partner-manager-api[Anypoint Partner Manager API]
+**** xref:trade-route/x12-settings[X12 Settings]
+**** xref:trade-route/edifact-settings[EDIFACT Settings]
+**** xref:trade-route/csv-settings[CSV Settings]
 
-*** link:/trade-route/glossary[Glossary]
+**** xref:trade-route/transaction-designer[Transaction Designer]
+**** xref:trade-route/document-types[Document Types]
+**** xref:trade-route/endpoints[Endpoints]
+**** xref:trade-route/maps[Maps]
+**** xref:trade-route/channels[Channels]
+**** xref:trade-route/routes[Routes]
+**** xref:trade-route/partner-conversations[Partner Conversations]
+**** xref:trade-route/rosettanet-pips[RosettaNet PIPs]
+**** xref:trade-route/rosettanet-agreements[RosettaNet Agreements]
+
+***  xref:trade-route/administration[Administration]
+**** xref:trade-route/environments[Environments]
+**** xref:trade-route/error-codes[Error Codes]
+**** xref:trade-route/security[Security]
+**** xref:trade-route/lookup-tables[Lookup Tables]
+
+*** xref:trade-route/tutorials[Tutorials]
+**** xref:trade-route/apm-tutorial-td[Anypoint Partner Manager Tutorial: Designing a Transaction]
+**** xref:trade-route/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+
+*** xref:trade-route/anypoint-partner-manager-api[Anypoint Partner Manager API]
+
+*** xref:trade-route/glossary[Glossary]

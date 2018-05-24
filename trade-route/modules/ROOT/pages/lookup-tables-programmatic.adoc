@@ -6,8 +6,8 @@ PortX enables you to create, populate and edit a _link:https://docs.staging.modu
 
 You can create a lookup table using either the:
 
-* link:/portx/lookup-tables#creating-a-lookup-table[PortX user interface]
-* link:/portx/anypoint-partner-manager-api[PortX API].
+* xref:portx/lookup-tables#creating-a-lookup-table[PortX user interface]
+* xref:portx/anypoint-partner-manager-api[PortX API].
 
 This section shows how to make API calls using link:https://curl.haxx.se/[curl] to create a three-column, two-key table.
 
@@ -94,7 +94,7 @@ curl -X POST -H
 curl -X GET -H  "http://anypoint.mulesoft.com/b2b/tpm/api/lookupTables/lookup?key=OutboundProductCodes&lookupTable=ProductCodes&fields=InternalProductCode:Int1001%26PartnerName:Beta&environmentId=yourEnvironmentId1&apiKey=yourAPIKey"
 ----
 +
-NOTE: To query the lookup table from within a Mule flow, see link:/mule-user-guide/v/3.8/consuming-a-rest-api[Consuming a REST API].
+NOTE: To query the lookup table from within a Mule flow, see xref:mule-user-guide/v/3.8/consuming-a-rest-api[Consuming a REST API].
 
 
 == Working with a Lookup Table
@@ -106,4 +106,4 @@ AFter you have created a lookup table, you can use the PortX user interface to:
 * Edit a table row
 * Delete a table row
 
-For more information, see  link:/portx/lookup-tables#working-with-a-lookup-table[Working with a Lookup Table].
+For more information, see  xref:portx/lookup-tables#working-with-a-lookup-table[Working with a Lookup Table].

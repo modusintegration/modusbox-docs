@@ -22,7 +22,7 @@ B2B Transaction Definition:: The full configuration that configures how a docume
 
 B2B transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
 
-B2B Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of link:/mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in link:/portx/anypoint-partner-manager[PortX] (PortX)
+B2B Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:portx/anypoint-partner-manager[PortX] (PortX)
 
 [[sectd]]
 *D*
@@ -36,7 +36,7 @@ Document Properties:: Document Properties are data fields that are extracted fro
 [[secte]]
 *E*
 
-Environment ID:: String that uniquely identifies an link:/access-management/environments[environment].
+Environment ID:: String that uniquely identifies an xref:access-management/environments[environment].
 
 External Partner:: Any company registered in PortX that is not the Home Partner.
 
@@ -88,4 +88,4 @@ Transaction Definition:: The full configuration that configures how a document i
 
 Transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
 
-Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of link:/mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in link:/portx/anypoint-partner-manager[PortX] (PortX)
+Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:portx/anypoint-partner-manager[PortX] (PortX)

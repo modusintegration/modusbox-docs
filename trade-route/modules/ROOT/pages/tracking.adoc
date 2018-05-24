@@ -6,16 +6,16 @@ Payload:: The content of the message
 
 Metadata:: Data about the message
 
-The link:/portx/b2b-transaction-processing-framework#partner-manager-connector[Partner Manager Connector] posts:
+The xref:portx/b2b-transaction-processing-framework#partner-manager-connector[Partner Manager Connector] posts:
 
 * Metadata from
-link:/portx/b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
-to the link:/portx/b2b-transaction-processing-framework#tracking-api[Tracking API]
+xref:portx/b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
+to the xref:portx/b2b-transaction-processing-framework#tracking-api[Tracking API]
 * Payload data within
-link:/portx/b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
+xref:portx/b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
  to Tracking Data Storage.
 
-The customer then uses link:/portx/anypoint-partner-manager[PortX] to request and view metadata and payload data, a process which includes the link:/portx/b2b-transaction-processing-framework#trading-partner-management-api[Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
+The customer then uses xref:portx/anypoint-partner-manager[PortX] to request and view metadata and payload data, a process which includes the xref:portx/b2b-transaction-processing-framework#trading-partner-management-api[Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
 
 
 

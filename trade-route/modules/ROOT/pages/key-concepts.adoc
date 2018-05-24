@@ -4,8 +4,8 @@
 
 The following pages explain key PortX concepts:
 
-* link:/portx/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
-* link:/portx/resolution-processes[Resolution Processes]
-* link:/portx/tracking[Tracking]
+* xref:portx/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
+* xref:portx/resolution-processes[Resolution Processes]
+* xref:portx/tracking[Tracking]
 
-For more information, see link:/portx/anypoint-partner-manager[PortX].
+For more information, see xref:portx/anypoint-partner-manager[PortX].

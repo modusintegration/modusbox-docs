@@ -15,7 +15,7 @@ NOTE: Your company may have been set up during the provisioning process. If so, 
 
 == Get Started
 
-. link:/portx/anypoint-partner-manager#start-anypoint-manager[Start PortX].
+. xref:portx/anypoint-partner-manager#start-anypoint-manager[Start PortX].
 The <<anypoint-partner-manager.adoc#img-apm-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
@@ -46,28 +46,28 @@ image::company-information.png[img-company-information,title="Company Informatio
 
 [start=2]
 
-. To add or edit company information, see link:/portx/company-information[Company Information].
+. To add or edit company information, see xref:portx/company-information[Company Information].
 +
 Notice that the left-hand navigation pane of the xref:img-company-information[] includes a number of different types of partner settings.
 To add or edit settings for any of these settings types, click the page name in the left-hand navigation pane. See the following sections for information about the settings on each page.
 
 === Partner Settings
-** link:/portx/company-information[Company Information]
-** link:/portx/identifiers[Identifiers]
+** xref:portx/company-information[Company Information]
+** xref:portx/identifiers[Identifiers]
 
 
 === Default Settings for Message Format
-** link:/portx/x12-settings[X12 Settings]
-** link:/portx/edifact-settings[EDIFACT]
-** link:/portx/csv-settings[CSV Settings]
+** xref:portx/x12-settings[X12 Settings]
+** xref:portx/edifact-settings[EDIFACT]
+** xref:portx/csv-settings[CSV Settings]
 
 === Configuration Settings
-** link:/portx/document-types[Document Types]
-** link:/portx/endpoints[Endpoints]
-** link:/portx/maps[Maps]
-** link:/portx/channels[Channels]
-** link:/portx/routes[Routes]
-** link:/portx/partner-conversations[Partner Conversations]
+** xref:portx/document-types[Document Types]
+** xref:portx/endpoints[Endpoints]
+** xref:portx/maps[Maps]
+** xref:portx/channels[Channels]
+** xref:portx/routes[Routes]
+** xref:portx/partner-conversations[Partner Conversations]
 
 
 == Saving Settings
@@ -87,7 +87,7 @@ These partners can be imported back into PortX later; see <<Importing Partners>>
 
 === To Export a Partner
 
-. link:/portx/anypoint-partner-manager#start-anypoint-manager[Start PortX]. +
+. xref:portx/anypoint-partner-manager#start-anypoint-manager[Start PortX]. +
 In the left-hand navigation pane, click *Partner Configuration*. The xref:img-partner-configuration[] appears.
 . On the xref:img-partner-configuration[], in the *Name* table, select the radio button or radio buttons of the partner or partners you want to export. +
 On the xref:img-partner-configuration[], the *Promote* and *Export* buttons appear to the left of the *New Partner* button.
@@ -124,7 +124,7 @@ If this checkbox is deselected, then certificates for this partner that exist in
 . Click *Import*.
 
 == Promoting a Partner
-PortX provides the ability to _promote_ - that is, copy, a trading partner from one environment to another. For information about scenarios in which you might want to promote a partner, see link:/portx/examples#promotion-scenarios[Promotion Scenarios].
+PortX provides the ability to _promote_ - that is, copy, a trading partner from one environment to another. For information about scenarios in which you might want to promote a partner, see xref:portx/examples#promotion-scenarios[Promotion Scenarios].
 
 
 NOTE: Only users with the appropriate role or permissions will be able to promote partners.
