@@ -1,49 +1,49 @@
-* xref:index.adoc[TradeRoute Manager]
+* xref:index.adoc.adoc[TradeRoute Manager]
 
-*** xref:trade-route/key-concepts[Key Concepts]
-**** xref:trade-route/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
-**** xref:trade-route/resolution-processes[Resolution Processes]
-**** xref:trade-route/tracking[Tracking]
+*** xref:trade-route/key-concepts.adoc[Key Concepts]
+**** xref:trade-route/b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
+**** xref:trade-route/resolution-processes.adoc[Resolution Processes]
+**** xref:trade-route/tracking.adoc[Tracking]
 
-*** xref:trade-route/examples[Examples]
-
-
-*** xref:trade-route/transaction-monitoring[Transaction Monitoring]
-**** xref:trade-route/central-pane-elements[Central Pane Elements]
-**** xref:trade-route/tracking-scenarios[Tracking Scenarios]
-
-*** xref:trade-route/partner-configuration[Partner Configuration]
-
-**** xref:trade-route/company-information[Company Information]
-**** xref:trade-route/identifiers[Identifiers]
-**** xref:trade-route/on-hold-inactive[On-Hold/Inactive]
-**** xref:trade-route/certificate[Certificate]
+*** xref:trade-route/examples.adoc[Examples]
 
 
-**** xref:trade-route/x12-settings[X12 Settings]
-**** xref:trade-route/edifact-settings[EDIFACT Settings]
-**** xref:trade-route/csv-settings[CSV Settings]
+*** xref:trade-route/transaction-monitoring.adoc[Transaction Monitoring]
+**** xref:trade-route/central-pane-elements.adoc[Central Pane Elements]
+**** xref:trade-route/tracking-scenarios.adoc[Tracking Scenarios]
 
-**** xref:trade-route/transaction-designer[Transaction Designer]
-**** xref:trade-route/document-types[Document Types]
-**** xref:trade-route/endpoints[Endpoints]
-**** xref:trade-route/maps[Maps]
-**** xref:trade-route/channels[Channels]
-**** xref:trade-route/routes[Routes]
-**** xref:trade-route/partner-conversations[Partner Conversations]
-**** xref:trade-route/rosettanet-pips[RosettaNet PIPs]
-**** xref:trade-route/rosettanet-agreements[RosettaNet Agreements]
+*** xref:trade-route/partner-configuration.adoc[Partner Configuration]
 
-***  xref:trade-route/administration[Administration]
-**** xref:trade-route/environments[Environments]
-**** xref:trade-route/error-codes[Error Codes]
-**** xref:trade-route/security[Security]
-**** xref:trade-route/lookup-tables[Lookup Tables]
+**** xref:trade-route/company-information.adoc[Company Information]
+**** xref:trade-route/identifiers.adoc[Identifiers]
+**** xref:trade-route/on-hold-inactive.adoc[On-Hold/Inactive]
+**** xref:trade-route/certificate.adoc[Certificate]
 
-*** xref:trade-route/tutorials[Tutorials]
-**** xref:trade-route/apm-tutorial-td[Anypoint Partner Manager Tutorial: Designing a Transaction]
-**** xref:trade-route/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
 
-*** xref:trade-route/anypoint-partner-manager-api[Anypoint Partner Manager API]
+**** xref:trade-route/x12-settings.adoc[X12 Settings]
+**** xref:trade-route/edifact-settings.adoc[EDIFACT Settings]
+**** xref:trade-route/csv-settings.adoc[CSV Settings]
 
-*** xref:trade-route/glossary[Glossary]
+**** xref:trade-route/transaction-designer.adoc[Transaction Designer]
+**** xref:trade-route/document-types.adoc[Document Types]
+**** xref:trade-route/endpoints.adoc[Endpoints]
+**** xref:trade-route/maps.adoc[Maps]
+**** xref:trade-route/channels.adoc[Channels]
+**** xref:trade-route/routes.adoc[Routes]
+**** xref:trade-route/partner-conversations.adoc[Partner Conversations]
+**** xref:trade-route/rosettanet-pips.adoc[RosettaNet PIPs]
+**** xref:trade-route/rosettanet-agreements.adoc[RosettaNet Agreements]
+
+***  xref:trade-route/administration.adoc[Administration]
+**** xref:trade-route/environments.adoc[Environments]
+**** xref:trade-route/error-codes.adoc[Error Codes]
+**** xref:trade-route/security.adoc[Security]
+**** xref:trade-route/lookup-tables.adoc[Lookup Tables]
+
+*** xref:trade-route/tutorials.adoc[Tutorials]
+**** xref:trade-route/apm-tutorial-td.adoc[Anypoint Partner Manager Tutorial: Designing a Transaction]
+**** xref:trade-route/transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
+
+*** xref:trade-route/anypoint-partner-manager-api.adoc[Anypoint Partner Manager API]
+
+*** xref:trade-route/glossary.adoc[Glossary]
