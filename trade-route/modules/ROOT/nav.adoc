@@ -1,49 +1,49 @@
 * xref:index.adoc[TradeRoute Manager]
 
-*** link:/anypoint-b2b/key-concepts[Key Concepts]
-**** link:/anypoint-b2b/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
-**** link:/anypoint-b2b/resolution-processes[Resolution Processes]
-**** link:/anypoint-b2b/tracking[Tracking]
+*** link:/trade-route/key-concepts[Key Concepts]
+**** link:/trade-route/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
+**** link:/trade-route/resolution-processes[Resolution Processes]
+**** link:/trade-route/tracking[Tracking]
 
-*** link:/anypoint-b2b/examples[Examples]
-
-
-*** link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-**** link:/anypoint-b2b/central-pane-elements[Central Pane Elements]
-**** link:/anypoint-b2b/tracking-scenarios[Tracking Scenarios]
-
-*** link:/anypoint-b2b/partner-configuration[Partner Configuration]
-
-**** link:/anypoint-b2b/company-information[Company Information]
-**** link:/anypoint-b2b/identifiers[Identifiers]
-**** link:/anypoint-b2b/on-hold-inactive[On-Hold/Inactive]
-**** link:/anypoint-b2b/certificate[Certificate]
+*** link:/trade-route/examples[Examples]
 
 
-**** link:/anypoint-b2b/x12-settings[X12 Settings]
-**** link:/anypoint-b2b/edifact-settings[EDIFACT Settings]
-**** link:/anypoint-b2b/csv-settings[CSV Settings]
+*** link:/trade-route/transaction-monitoring[Transaction Monitoring]
+**** link:/trade-route/central-pane-elements[Central Pane Elements]
+**** link:/trade-route/tracking-scenarios[Tracking Scenarios]
 
-**** link:/anypoint-b2b/transaction-designer[Transaction Designer]
-**** link:/anypoint-b2b/document-types[Document Types]
-**** link:/anypoint-b2b/endpoints[Endpoints]
-**** link:/anypoint-b2b/maps[Maps]
-**** link:/anypoint-b2b/channels[Channels]
-**** link:/anypoint-b2b/routes[Routes]
-**** link:/anypoint-b2b/partner-conversations[Partner Conversations]
-**** link:/anypoint-b2b/rosettanet-pips[RosettaNet PIPs]
-**** link:/anypoint-b2b/rosettanet-agreements[RosettaNet Agreements]
+*** link:/trade-route/partner-configuration[Partner Configuration]
 
-***  link:/anypoint-b2b/administration[Administration]
-**** link:/anypoint-b2b/environments[Environments]
-**** link:/anypoint-b2b/error-codes[Error Codes]
-**** link:/anypoint-b2b/security[Security]
-**** link:/anypoint-b2b/lookup-tables[Lookup Tables]
+**** link:/trade-route/company-information[Company Information]
+**** link:/trade-route/identifiers[Identifiers]
+**** link:/trade-route/on-hold-inactive[On-Hold/Inactive]
+**** link:/trade-route/certificate[Certificate]
 
-*** link:/anypoint-b2b/tutorials[Tutorials]
-**** link:/anypoint-b2b/apm-tutorial-td[Anypoint Partner Manager Tutorial: Designing a Transaction]
-**** link:/anypoint-b2b/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
 
-*** link:/anypoint-b2b/anypoint-partner-manager-api[Anypoint Partner Manager API]
+**** link:/trade-route/x12-settings[X12 Settings]
+**** link:/trade-route/edifact-settings[EDIFACT Settings]
+**** link:/trade-route/csv-settings[CSV Settings]
 
-*** link:/anypoint-b2b/glossary[Glossary]
+**** link:/trade-route/transaction-designer[Transaction Designer]
+**** link:/trade-route/document-types[Document Types]
+**** link:/trade-route/endpoints[Endpoints]
+**** link:/trade-route/maps[Maps]
+**** link:/trade-route/channels[Channels]
+**** link:/trade-route/routes[Routes]
+**** link:/trade-route/partner-conversations[Partner Conversations]
+**** link:/trade-route/rosettanet-pips[RosettaNet PIPs]
+**** link:/trade-route/rosettanet-agreements[RosettaNet Agreements]
+
+***  link:/trade-route/administration[Administration]
+**** link:/trade-route/environments[Environments]
+**** link:/trade-route/error-codes[Error Codes]
+**** link:/trade-route/security[Security]
+**** link:/trade-route/lookup-tables[Lookup Tables]
+
+*** link:/trade-route/tutorials[Tutorials]
+**** link:/trade-route/apm-tutorial-td[Anypoint Partner Manager Tutorial: Designing a Transaction]
+**** link:/trade-route/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+
+*** link:/trade-route/anypoint-partner-manager-api[Anypoint Partner Manager API]
+
+*** link:/trade-route/glossary[Glossary]
