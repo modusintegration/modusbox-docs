@@ -2,8 +2,8 @@
 
 == Latest Versions
 
-* link:/portx/apm-tutorial-td[Designing an AS2 and EDI X12 Purchase Order Transaction]
+* xref:apm-tutorial-td[Designing an AS2 and EDI X12 Purchase Order Transaction]
 
 == Versions 1.0 - 1.23.0
 
-* link:/portx/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+* xref:transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
