@@ -3,7 +3,7 @@
 
 TRADACOMS EDI lets you convert TRADACOMS files to and from DataWeave-compatible representations using lists and maps.
 
-*Release Notes:* link:/release-notes/tradacoms-connector-release-notes[TRADACOMS Connector Release Notes]
+*Release Notes:* xref:release-notes/tradacoms-connector-release-notes[TRADACOMS Connector Release Notes]
 
 TRADACOMS EDI includes:
 
@@ -157,7 +157,7 @@ The TRADACOMS EDI uses a YAML format called ESL (for EDI Schema Language) to re
 If your implementation convention differs from the standard, you can define an _overlay schema_ so that TRADACOMS is configured to work with your files. An overlay schema is a special form of ESL that allows you to modify a base schema, such as an TRADACOMS INVOIC schema, with your specific conventions. (You don't need an overlay schema if you're using the structure defined by the standard, but you can use an overlay to tailor the structure to your usage.)
 
 You can also define your own schemas from scratch.
-See link:/portx/edi-schema-language-reference[EDI Schema Language Reference] for more details.
+See xref:portx/edi-schema-language-reference[EDI Schema Language Reference] for more details.
 
 TRADACOMS EDI schemas have a few differences from the generic EDI format. TRADACOMS files are composed of multiple messages, which occur in a fixed order and only one type is allowed to repeat within a file. To represent these constraints in ESL TRADACOMS adopts some conventions:
 
@@ -182,7 +182,7 @@ To specify a schema according to your implementation convention, you can follow 
 . Customize the structure of individual messages - segment usage, positions, groups and counts.
 . Customize segments - including usage and counts.
 
-Overlay schemas are very similar in structure to a link:/portx/edi-schema-language-reference[complete schema definition], but instead of providing all the details of the schema structure they only list changes. Overlay schemas specify how to use implementation conventions with a particular trading partner to extend and customize the standard.
+Overlay schemas are very similar in structure to a xref:portx/edi-schema-language-reference[complete schema definition], but instead of providing all the details of the schema structure they only list changes. Overlay schemas specify how to use implementation conventions with a particular trading partner to extend and customize the standard.
 
 For example, here's a sample overlay schema modifying the basic TRADACOMS INVOIC file definition:
 

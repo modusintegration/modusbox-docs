@@ -11,4 +11,4 @@ image::environments.png[img-environments,title="Environments Page"]
 
 == Get Environment Information
 
-The information on the <<img-environments>> is required when using link:/portx/partner-manager-connector[Partner Manager Connector].
+The information on the <<img-environments>> is required when using xref:portx/partner-manager-connector[Partner Manager Connector].

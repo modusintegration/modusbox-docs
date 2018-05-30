@@ -4,9 +4,9 @@
 A _channel_ provides a means of specifying, for a given partner:
 
 Type:: Source or Target
-Document:: As created in link:/portx/document-types[Document Types]
-Document Map:: As created in link:/portx/maps[Maps]
-Endpoint:: As created in link:/portx/endpoints[Endpoints]
+Document:: As created in xref:portx/document-types[Document Types]
+Document Map:: As created in xref:portx/maps[Maps]
+Endpoint:: As created in xref:portx/endpoints[Endpoints]
 
 include::/_sources/edit-settings.adoc[]
 [start=3]

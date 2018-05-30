@@ -5,7 +5,7 @@ _Premium_
 
 The X12 Module provides you with the ability to communicate with trading partners using X12 EDI (electronic data interchange).
 
-NOTE: This document describes the Mule 3 version of X12. For the Mule 4 version, see the link:/connectors/x12-edi-connector[X12 EDI Connector].
+NOTE: This document describes the Mule 3 version of X12. For the Mule 4 version, see the xref:connectors/x12-edi-connector[X12 EDI Connector].
 
 The X12 Module includes:
 
@@ -43,7 +43,7 @@ The X12 Module uses a YAML format called ESL (for EDI Schema Language) to repre
 To configure the X12 Module according to your implementation convention, define an _overlay schema_. An overlay schema is a special form of ESL that allows you to modify a base schema, such as an X12 4010 850 schema, with your specific conventions. (You don't need an overlay schema if you're using the structure defined by the standard, but most EDI exchanges modify the base definitions in an implementation convention).
 
 You can also define your own schemas from scratch.
-See link:/portx/edi-schema-language-reference[EDI Schema Language Reference] for more details.
+See xref:portx/edi-schema-language-reference[EDI Schema Language Reference] for more details.
 
 [NOTE]
 ====
@@ -60,7 +60,7 @@ To specify a schema according to your implementation convention, you can follow 
 * Customize the overall structure - segment usage, positions, groups and counts
 * Customize segments - including usage and counts
 
-Overlay schemas are very similar in structure to a link:/portx/edi-schema-language-reference[complete schema definition], but instead of providing all the details of the schema structure they only list changes. Overlay schemas specify how to use implementation conventions with a particular trading partner to extend and customizes the standard.
+Overlay schemas are very similar in structure to a xref:portx/edi-schema-language-reference[complete schema definition], but instead of providing all the details of the schema structure they only list changes. Overlay schemas specify how to use implementation conventions with a particular trading partner to extend and customizes the standard.
 
 By way of example, here's the start of a sample overlay schema modifying the basic X12 005010 850 transaction set definition. This sample customizes the `CUR` segment and specifies that it is unused - thereby ensuring that it doesn't show up in the mapping structures in Studio.
 

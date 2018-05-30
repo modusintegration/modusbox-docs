@@ -1,7 +1,7 @@
 = Anypoint Partner Manager Release Notes
 :keywords: b2b, partner manager, mule, release notes
 
-*link:/anypoint-b2b/anypoint-partner-manager[Anypoint Partner Manager User Documentation]*
+*xref:anypoint-b2b/anypoint-partner-manager[Anypoint Partner Manager User Documentation]*
 
 == Version 1.24.2  - February 1, 2018
 
@@ -30,9 +30,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 
 == Version 1.24.0  - December 16, 2017
@@ -72,9 +72,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 
 
@@ -99,9 +99,9 @@ Compatible with:
 
 === New Features
 
-* "Pretty-print" formatting for JSON and XML payloads in link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring].
-* Type Manager screens in link:/anypoint-b2b/administration[Administration] allow editing of Property Types and Identifier Types.
-* Changed Partnership filters in link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring] to explicitly display both Partners in the Partnership.
+* "Pretty-print" formatting for JSON and XML payloads in xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring].
+* Type Manager screens in xref:anypoint-b2b/administration[Administration] allow editing of Property Types and Identifier Types.
+* Changed Partnership filters in xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring] to explicitly display both Partners in the Partnership.
 
 === Fixed in this Release
 
@@ -110,9 +110,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.22.0 - August 26, 2017
 
@@ -140,7 +140,7 @@ Compatible with:
 === New Features
 
 * Support for assigning priority to transactions to control order of releasing from Onhold state.
-* Support for Onhold/Inactive/Release functionality when link:/anypoint-b2b/partner-manager-connector[Partner Manager Connector] is in Async mode.
+* Support for Onhold/Inactive/Release functionality when xref:anypoint-b2b/partner-manager-connector[Partner Manager Connector] is in Async mode.
 
 === Fixed in this Release
 
@@ -148,9 +148,9 @@ Statistics now automatically reload on tracking UI after changing environment.
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.20.0  - July 29, 2017
 
@@ -178,9 +178,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 
 == Version 1.19.0  - July 15, 2017
@@ -223,9 +223,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.18.0  - June 17, 2017
 
@@ -262,13 +262,13 @@ Compatible with:
 
 Deleting an error code and then attempting to recreate the same error code results in an error.
 
-Workaround:: To make changes to an error code, link:/anypoint-b2b/error-codes#edit-an-existing-error-code[edit the error code] rather than deleting and re-adding it.
+Workaround:: To make changes to an error code, xref:anypoint-b2b/error-codes#edit-an-existing-error-code[edit the error code] rather than deleting and re-adding it.
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 
 == Version 1.17.0  - June 3, 2017
@@ -296,18 +296,18 @@ Compatible with:
 
 === Fixed in this Release
 
-* Consolidated steps required to view a payload in link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* Consolidated steps required to view a payload in xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
 * Deleting an endpoint from an existing source or target channel now works correctly
 
 Now possible to:
 
-* Filter large number of records when link:/anypoint-b2b/lookup-tables#working-with-lookup-table-data[Working with Lookup Table Data].
+* Filter large number of records when xref:anypoint-b2b/lookup-tables#working-with-lookup-table-data[Working with Lookup Table Data].
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.16.0  - May 20, 2017
 
@@ -340,9 +340,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.15.0  - May 6, 2017
 
@@ -374,7 +374,7 @@ Ability to:
 
 === Fixed in this Release
 
-* Configuration validation for link:/anypoint-b2b/partner-conversations[Partner Conversations] improved
+* Configuration validation for xref:anypoint-b2b/partner-conversations[Partner Conversations] improved
 * Improved performance for Transaction Monitoring screen for large numbers of transactions
 * Large message payloads no longer obscure Download button in Transaction Monitoring
 * Retreiving DocumentMaps no longer introduces possibility of latency or timeouts
@@ -383,9 +383,9 @@ Ability to:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.13.1 April 9, 2017
 Fixed: Track Errors operation not working for Partner manager Connector 5.2.0
@@ -411,16 +411,16 @@ Compatible with:
 
 === New Features
 
-* Ability to configure On-hold or Inactive status windows for link:/anypoint-b2b/transaction-monitoring[transactions] and link:/anypoint-b2b/partner-configuration[partners]
-* Ability to edit the following attributes for system-defined link:/anypoint-b2b/error-codes[Error Codes]:
+* Ability to configure On-hold or Inactive status windows for xref:anypoint-b2b/transaction-monitoring[transactions] and xref:anypoint-b2b/partner-configuration[partners]
+* Ability to edit the following attributes for system-defined xref:anypoint-b2b/error-codes[Error Codes]:
 ** Severity
 ** Notification Scope
 ** Category
 
 === Fixed in this Release
 
-* link:/anypoint-b2b/x12-settings[X12 Settings] save functionality.
-* AS2 and FTPS link:/anypoint-b2b/endpoints[Endpoints] can now be made defaults even if they were not initially made defaults.
+* xref:anypoint-b2b/x12-settings[X12 Settings] save functionality.
+* AS2 and FTPS xref:anypoint-b2b/endpoints[Endpoints] can now be made defaults even if they were not initially made defaults.
 * Track errors operation (wasn't working properly with older versions of Partner Manager Connector)
 
 === Known Issues
@@ -428,9 +428,9 @@ Releasing doesn't work properly when more than one channel is set on an Onhold o
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.12.0  - March 25, 2017
 
@@ -453,25 +453,25 @@ Compatible with:
 
 === New Features
 
-* Ability to configure Document Properties harvested from searches against link:/anypoint-b2b/lookup-tables[Lookup Tables]
-* Added *PingFederate OAuth - Client Credentials* as a *Scheme* option in link:/anypoint-b2b/security[Security]
-* Extended properties of link:/anypoint-b2b/error-codes[Error Codes] to support notifications
+* Ability to configure Document Properties harvested from searches against xref:anypoint-b2b/lookup-tables[Lookup Tables]
+* Added *PingFederate OAuth - Client Credentials* as a *Scheme* option in xref:anypoint-b2b/security[Security]
+* Extended properties of xref:anypoint-b2b/error-codes[Error Codes] to support notifications
 
 
 === Fixed in this Release
 
 * Validation for:
 ** Date ranges
-** Saving new link:/anypoint-b2b/routes[Routes]
-* Visibility of Custom Error messages in the link:/anypoint-b2b/errors-view[Errors View]
+** Saving new xref:anypoint-b2b/routes[Routes]
+* Visibility of Custom Error messages in the xref:anypoint-b2b/errors-view[Errors View]
 
 
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.11.0  - March 11, 2017
 
@@ -503,9 +503,9 @@ Minor bug fixes
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.10.1  - February 28, 2017
 
@@ -532,9 +532,9 @@ Issue updating X12 settings
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.10.0  - February 25, 2017
 
@@ -565,9 +565,9 @@ Compatible with:
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.9.0 - February, 2017
 
@@ -604,13 +604,13 @@ Lookup Table filter now correctly uses *AND* instead of *OR* for multi-field key
 ===  Known issues
 
 In some cases, for existing FTP transmissions,  data may not appear in the
-link:/anypoint-b2b/transmissions-view#detail-pane[Transmissions Detail Pane].
+xref:anypoint-b2b/transmissions-view#detail-pane[Transmissions Detail Pane].
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.8.0  - January, 2017
 
@@ -643,9 +643,9 @@ Add support for DUNS (link:http://www.dnb.com/duns-number.html[Data Universal Nu
 
 == Related Information
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]
 
 == Version 1.7.0  - December, 2016
 
@@ -914,7 +914,7 @@ Compatible with:
 
 
 For more information, see
-link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager].
+xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager].
 
 === Compatibility
 
@@ -926,6 +926,6 @@ link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Man
 
 == See Also
 
-* link:/anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
-* link:/anypoint-b2b/transaction-monitoring[Transaction Monitoring]
-* link:/anypoint-b2b/partner-configuration[Partner Configuration]
+* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
+* xref:anypoint-b2b/partner-configuration[Partner Configuration]

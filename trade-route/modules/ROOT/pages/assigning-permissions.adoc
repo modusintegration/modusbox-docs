@@ -1,7 +1,7 @@
 
 = Assigning Permissions
 
-The following table identifies permissions you can assign, as well as the privileges and scope that correspond to those privileges. For detailed information about how to use Anypoint Platform to assign these permissions, see link:/access-management/[Access Management] and link:/access-management/managing-permissions[Managing Permissions]. 
+The following table identifies permissions you can assign, as well as the privileges and scope that correspond to those privileges. For detailed information about how to use Anypoint Platform to assign these permissions, see xref:access-management/[Access Management] and xref:access-management/managing-permissions[Managing Permissions]. 
 
 ***
 ---
@@ -38,5 +38,5 @@ The following table identifies permissions you can assign, as well as the privil
 
 == More information
 
-* link:/access-management/[Access Management]
-* link:/access-management/managing-permissions[Managing Permissions]
+* xref:access-management/[Access Management]
+* xref:access-management/managing-permissions[Managing Permissions]

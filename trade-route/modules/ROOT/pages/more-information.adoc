@@ -1,37 +1,37 @@
 = More information
 
-== About link:/portx/partner-configuration[configuring trading partners]
+== About xref:portx/partner-configuration[configuring trading partners]
 
-** link:/portx/partners[Partners]
-*** link:/portx/company-information[Company Information]
-*** link:/portx/identifiers[Identifiers]
-*** link:/portx/administration[Administration] (Home partner only)
+** xref:portx/partners[Partners]
+*** xref:portx/company-information[Company Information]
+*** xref:portx/identifiers[Identifiers]
+*** xref:portx/administration[Administration] (Home partner only)
 
-** link:/portx/format-defaults[Format Defaults]
-*** link:/portx/x12-settings[X12 Settings]
-*** link:/portx/edifact-settings[EDIFACT]
-*** link:/portx/csv-settings[CSV Settings]
+** xref:portx/format-defaults[Format Defaults]
+*** xref:portx/x12-settings[X12 Settings]
+*** xref:portx/edifact-settings[EDIFACT]
+*** xref:portx/csv-settings[CSV Settings]
 
-** link:/portx/configuration[Configuration]
-*** link:/portx/document-types[Document Types]
-*** link:/portx/endpoints[Endpoints]
-*** link:/portx/maps[Maps]
-*** link:/portx/channels[Channels]
-*** link:/portx/routes[Routes]
-*** link:/portx/partner-conversations[Partner Conversations]
+** xref:portx/configuration[Configuration]
+*** xref:portx/document-types[Document Types]
+*** xref:portx/endpoints[Endpoints]
+*** xref:portx/maps[Maps]
+*** xref:portx/channels[Channels]
+*** xref:portx/routes[Routes]
+*** xref:portx/partner-conversations[Partner Conversations]
 
 
-== About link:/portx/anypoint-partner-manager[PortX]
+== About xref:portx/anypoint-partner-manager[PortX]
 
-* link:/portx/partner-configuration[Partner Configuration]
-* link:/portx/transaction-monitoring[Transaction Monitoring]
-* link:/portx/working-with-environments[Working with Environments]
-* link:/portx/key-concepts[PortX Key Concepts]
-* link:/portx/anypoint-partner-manager-api[PortX API]
+* xref:portx/partner-configuration[Partner Configuration]
+* xref:portx/transaction-monitoring[Transaction Monitoring]
+* xref:portx/working-with-environments[Working with Environments]
+* xref:portx/key-concepts[PortX Key Concepts]
+* xref:portx/anypoint-partner-manager-api[PortX API]
 
 == About Anypoint B2B
 
-* link:/portx/as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
-* link:/portx/ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
-* link:/portx/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
-* link:/portx/glossary[PortX Glossary]
+* xref:portx/as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
+* xref:portx/ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
+* xref:portx/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+* xref:portx/glossary[PortX Glossary]
