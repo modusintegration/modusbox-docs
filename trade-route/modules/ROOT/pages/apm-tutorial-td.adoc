@@ -1,10 +1,10 @@
-= PortX Tutorial: Designing a Transaction
+= Trade Route Tutorial: Designing a Transaction
 
 This tutorial:
 
-* Illustrates the role PortX plays in B2B transaction processing. 
-* Introduces _Transaction Designer_, an PortX feature that enables you to design the elements of a transaction from beginning to end.
-* Provides instructions for using Transaction Designer to configure PortX so that you can simulate a transaction and see how PortX processes it.
+* Illustrates the role Trade Route plays in B2B transaction processing. 
+* Introduces _Transaction Designer_, a Trade Route feature that enables you to design the elements of a transaction from beginning to end.
+* Provides instructions for using Transaction Designer to configure Trade Route so that you can simulate a transaction and see how Trade Route processes it.
 
 [[img-td-overview]]
 
@@ -17,8 +17,8 @@ The elements required to process a transaction are shown in <<img-td-overview>>.
 * <<Configure a Buyer>>
 * <<Design a Source Channel>>
 * <<Configure an S3 Bucket (optional)>>
-* <<Copy PortX Information>>
-* <<Configure PortX Routing Engine in Anypoint Studio>>
+* <<Copy Trade Route Information>>
+* <<Configure Trade Route Routing Engine in Anypoint Studio>>
 * <<Start the Applications>>
 * <<Send a Message>>
 * <<Monitor the Transaction>>
@@ -28,9 +28,9 @@ The elements required to process a transaction are shown in <<img-td-overview>>.
 
 Verify that you have the following:
 
-* Anypoint Platform user account with PortX access
+* Anypoint Platform user account with Trade Route access
 +
-NOTE: If you are unable to access PortX, see your Mulesoft account administrator for assistance.
+NOTE: If you are unable to access Trade Route, see your Mulesoft account administrator for assistance.
 
 * Anypoint Studio with Mule 3.8.4 and the following connectors:
 ** Partner Manager 6.5.0
@@ -43,12 +43,12 @@ NOTE: If you are unable to access PortX, see your Mulesoft account administrator
 
 === Download Tutorial Materials
 
-. Download link: https://drive.google.com/open?id=1ZqNUazJHoBJ5Xj25L9OXEXYRilrsdkTH[PortX Tutorial Materials].
-. Click *PortX Tutorial Materials.zip* to expand it.
+. Download link: https://drive.google.com/open?id=1ZqNUazJHoBJ5Xj25L9OXEXYRilrsdkTH[Trade Route Tutorial Materials].
+. Click *Trade Route Tutorial Materials.zip* to expand it.
 
 == Get Started
 
-. xref:portx/anypoint-partner-manager#start-anypoint-manager[Start PortX].
+. xref:anypoint-partner-manager#start-anypoint-manager[Start Trade Route].
 The <<anypoint-partner-manager.adoc#img-apm-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
@@ -64,10 +64,10 @@ This tutorial works with two partners: a Supplier and a Buyer.
 
 The Supplier is *AAZFasteners*, a fictional retailer of nuts and bolts, also identified on the xref:img-partner-configuration[] as *YOUR COMPANY*.
 
-NOTE: In your copy of PortX, *YOUR COMPANY* is probably not named *AAZFasteners*. However, for illustration purposes, we refer to *YOUR COMPANY* as *AAZFasteners* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *AAZFasteners*, see xref:portx/partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
+NOTE: In your copy of Trade Route, *YOUR COMPANY* is probably not named *AAZFasteners*. However, for illustration purposes, we refer to *YOUR COMPANY* as *AAZFasteners* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *AAZFasteners*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
 
 The other partner in this tutorial is the _Buyer_, a fictional retailer of home supplies. In <<Create the Buyer Partner>>, we create this partner, identifying it as *AcmeHomeSupply*.
-In the tutorial, AcmeHomeSupply uses PortX to order products from AAZFasteners. In the following sections, you will:
+In the tutorial, AcmeHomeSupply uses Trade Route to order products from AAZFasteners. In the following sections, you will:
 
 * <<Add Identifiers>>
 
@@ -86,60 +86,60 @@ In the following sections, we add identifiers for the supplier. We will add buye
 
 ==== Add Supplier X12-ISA Identifier
 
-include::_sources/tutorial/supplier/identifier-x12-isa-supplier.adoc[]
+include::_partials/tutorial/supplier/identifier-x12-isa-supplier.adoc[]
 
 ==== Add Supplier AS2 Identifier
 
-include::_sources/tutorial/supplier/identifier-as2-supplier.adoc[]
+include::_partials/tutorial/supplier/identifier-as2-supplier.adoc[]
 
 === Upload Certificates
 
-PortX provides for the uploading of certificates to verify the identity of a partner.
+Trade Route provides for the uploading of certificates to verify the identity of a partner.
 
 ==== Upload the Supplier Certificate
 
-include::_sources/tutorial/supplier/certificate-supplier.adoc[]
+include::_partials/tutorial/supplier/certificate-supplier.adoc[]
 
 
 == Design a Target Channel
 
 A _channel_ provides a means of specifying, for a given partner:
 
-Type:: Source or Target, As created in xref:portx/maps[Channels] or in xref:portx/transaction-designer[Transaction Designer]. Source Channel settings are always specific to the origin of a document. Target Channel settings are always specific to the destination.
-Document:: As created in xref:portx/document-types[Document Types] or in xref:portx/transaction-designer[Transaction Designer]
-Document Map:: As created in xref:portx/maps[Maps] or in xref:portx/transaction-designer[Transaction Designer]
-Endpoint:: As created in xref:portx/endpoints[Endpoints] or in xref:portx/transaction-designer[Transaction Designer]
+Type:: Source or Target, As created in xref:maps[Channels] or in xref:transaction-designer[Transaction Designer]. Source Channel settings are always specific to the origin of a document. Target Channel settings are always specific to the destination.
+Document:: As created in xref:document-types[Document Types] or in xref:transaction-designer[Transaction Designer]
+Document Map:: As created in xref:maps[Maps] or in xref:transaction-designer[Transaction Designer]
+Endpoint:: As created in xref:endpoints[Endpoints] or in xref:transaction-designer[Transaction Designer]
 
 In this section, you create a template for any transaction in which you receive a purchase order from a partner and send it to your HTTP endpoint. Later, in <<Design a Source Channel>>, you will use this template as the starting point from which you configure a transaction specific to receiving a purchase order from AcmeHomeSupply.
 
 ==== Start Transaction Designer
 
-include::_sources/tutorial/supplier/start-td-aaz.adoc[]
+include::_partials/tutorial/supplier/start-td-aaz.adoc[]
 
 === Create the Target Channel
 
-include::_sources/tutorial/supplier/td-target-channel-aaz.adoc[]
+include::_partials/tutorial/supplier/td-target-channel-aaz.adoc[]
 
 
 === Create the Source Document Type for the Target Channel
 
 The terms  _document_, _file_, and _message_ are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term document to represent these instances.
 
-PortX enables you to categorize and configure specific _Document Types_. In this section, you create a Source Document Type for the Target Channel.
+Trade Route enables you to categorize and configure specific _Document Types_. In this section, you create a Source Document Type for the Target Channel.
 
 ==== To Create the Source Document Type for the Target Channel
 
-include::_sources/tutorial/supplier/td-target-channel-source-doc-aaz.adoc[]
+include::_partials/tutorial/supplier/td-target-channel-source-doc-aaz.adoc[]
 
 
 === Configure Endpoints
 
 An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture.
-In PortX, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
+In Trade Route, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
 ==== Configure the Target Endpoint
 
-include::_sources/tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
+include::_partials/tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
 
 
 === Save the Transaction
@@ -166,7 +166,7 @@ The <<img-td-target-channel-in-progress-aaz>> appears.
 
 === Create the Buyer Partner
 
-include::_sources/tutorial/buyer/create-buyer-partner.adoc[]
+include::_partials/tutorial/buyer/create-buyer-partner.adoc[]
 
 
 === Add Buyer Identifiers
@@ -244,22 +244,22 @@ The <<img-endpoints>> appears.
 
 ==== Start Transaction Designer
 
-include::_sources/tutorial/buyer/start-td-acme.adoc[]
+include::_partials/tutorial/buyer/start-td-acme.adoc[]
 
 === Create the Source Channel
 
 
-include::_sources/tutorial/buyer/td-source-channel-acme.adoc[]
+include::_partials/tutorial/buyer/td-source-channel-acme.adoc[]
 
 
 === Create the Source Document
 
-include::_sources/tutorial/buyer/td-source-channel-source-doc-acme.adoc[]
+include::_partials/tutorial/buyer/td-source-channel-source-doc-acme.adoc[]
 
 
 === Create the Buyer Receive Endpoint
 
-include::_sources/tutorial/buyer/td-source-channel-endpoint-acme.adoc[]
+include::_partials/tutorial/buyer/td-source-channel-endpoint-acme.adoc[]
 
 Note that, on the <<img-td-possible-endpoints-no-property-acme>>, the warning *1 property cannot be found in the document type* appears.
 
@@ -409,12 +409,12 @@ image::partner/td-designs-acme.png[img-td-designs-acme, title="Transaction Desig
 
 == Configure an S3 Bucket (optional)
 
-Configuring an Amazon Simple Storage Service (Amazon S3) bucket enables you to view message payloads in <<Monitor the Transaction>>. You will add configuration data from the bucket in <<Configure PortX Routing Engine in Anypoint Studio>>.
+Configuring an Amazon Simple Storage Service (Amazon S3) bucket enables you to view message payloads in <<Monitor the Transaction>>. You will add configuration data from the bucket in <<Configure Trade Route Routing Engine in Anypoint Studio>>.
 
 
-== Copy PortX Information
+== Copy Trade Route Information
 
-In order to identify your PortX environment and its API Key to Anypoint Studio:
+In order to identify your Trade Route environment and its API Key to Anypoint Studio:
 
 * <<Copy your Environment ID>>
 * <<Identify or Create an API Key>>
@@ -426,18 +426,18 @@ In order to identify your PortX environment and its API Key to Anypoint Studio:
 
 === Identify or Create an API Key
 
-In order to create a Mule project, you must enter an xref:portx/glossary#secta[API Key] and an .
+In order to create a Mule project, you must enter an xref:glossary#secta[API Key] and an .
 
 If you have an existing API Key, use it. If you do not know the API Key, consult your organization's MuleSoft administrator.
 
-If your organization has not created an API Key, you can use PortX to create one.
+If your organization has not created an API Key, you can use Trade Route to create one.
 
-WARNING: The API Key is used by every Mule application across your entire Master xref:access-management/organization[Organization] that communicates with PortX. Therefore, before you create a new API Key, coordinate with your organization's MuleSoft administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
+WARNING: The API Key is used by every Mule application across your entire Master xref:access-management/organization[Organization] that communicates with Trade Route. Therefore, before you create a new API Key, coordinate with your organization's MuleSoft administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
 
-To obtain a key, see xref:portx/administration#create-a-new-api-key[Create a New API Key].
+To obtain a key, see xref:administration#create-a-new-api-key[Create a New API Key].
 
 
-== Configure PortX Routing Engine in Anypoint Studio
+== Configure Trade Route Routing Engine in Anypoint Studio
 
 For information about using Anypoint Studio, see xref:anypoint-studio/[Anypoint Studio].
 
@@ -453,7 +453,7 @@ The Import Source Selection Window appears.
 . Click *Next*. +
 The Import Mule Project Window appears.
 . In the Import Mule Project Window, browse to the location to which you downloaded the archive in <<Download Tutorial Materials>>.
-. Click to expand *PortX Tutorial Materials*, and then click *Apps* to expand that folder.
+. Click to expand *Trade Route Tutorial Materials*, and then click *Apps* to expand that folder.
 . In the *Apps* folder, click *apm-tutorial-routing-engine.zip*, then click *Open*. +
 The *Project Name* box auto-populates. +
 NOTE: The Project Name must be unique with respect to any previously-imported projects. If it is not, *Finish* will not be enabled. If this is the case, change the Project Name so that *Finish* is enabled.
@@ -464,7 +464,7 @@ The project appears in the Anypoint Studio Package Explorer pane.
 
 To import the mock partner application, repeat the steps in <<Import the Routing Engine Application>>, substituting *apm-acme-mock.zip* for the Routing Engine App in Step 7.
 
-=== Insert PortX Environment Information
+=== Insert Trade Route Environment Information
 
 . In Anypoint project (expand if necessary), expand the *src/main/app*, double-click *apm.prod.edi.properties*. +
 Project properties appear in the Anypoint Studio Canvas.
@@ -493,7 +493,7 @@ The Postman user interface looks something like <<img-td-postman>>.
 
 . In the imported collection, select *INBOUND-850*.
 . Click *Send*. 
-. Go to <<Monitor the Transaction>> to see how PortX displays transaction information. 
+. Go to <<Monitor the Transaction>> to see how Trade Route displays transaction information. 
 . If you send another request from Postman, increment the request number in the four places it appears. In <<img-td-postman>>, this number is *47530*. We have added yellow highlighting where the number appears in the figure.
 
 [[img-td-postman]]
@@ -515,12 +515,12 @@ The xref:img-transaction-monitoring-successful-transaction[] should confirm that
 
 * An XML purchase order as read from the company's filesystem and transformed to an X12 850 document.
 * The 850 was sent to a supplier over AS2.
-* The xref:portx/as2-connector[AS2 Connector]
+* The xref:as2-connector[AS2 Connector]
  listened for (on an AS2 endpoint) and received an X12 997 document that identifies whether the 850 was accepted or rejected.
 
 === Inspect a Payload
 
-PortX enables you to view a transmission payload. For example, in <<img-transaction-monitoring-successful-transaction>>, click the Payload icon in the right pane (identified in the figure by the gold arrow). The <<img-transmission-payload>> appears, presenting payload data.
+Trade Route enables you to view a transmission payload. For example, in <<img-transaction-monitoring-successful-transaction>>, click the Payload icon in the right pane (identified in the figure by the gold arrow). The <<img-transmission-payload>> appears, presenting payload data.
 
 [[img-transmission-payload]]
 
@@ -533,6 +533,6 @@ image::transmission-payload.png[img-transmission-payload, title="Transmission Pa
 
 For more information, see:
 
-* xref:portx/partner-configuration[Partner Configuration]
-* xref:portx/transaction-monitoring[Transaction Monitoring]
-* xref:portx/tracking-scenarios[Tracking Scenarios]
+* xref:partner-configuration[Partner Configuration]
+* xref:transaction-monitoring[Transaction Monitoring]
+* xref:tracking-scenarios[Tracking Scenarios]
