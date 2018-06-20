@@ -1,4 +1,4 @@
-= On-Hold and Inactive Windows
+= Availability Windows
 
 You can configure windows (periods of time) during which partners or transactions are on-hold or inactive.
 
