@@ -53,7 +53,6 @@ The <<trade-route.adoc#img-apm-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
 
-
 [[img-partner-configuration]]
 image::partner-configuration.png[img-partner-configuration,title="Partner Configuration Page"]
 
