@@ -48,7 +48,7 @@ NOTE: If you are unable to access Trade Route, see your Mulesoft account adminis
 
 == Get Started
 
-. xref:trade-route.adoc#_start_trade_route[Start Trade Route].
+. xref:trade-route.adoc#start-trade-route[Start Trade Route].
 The <<trade-route.adoc#img-apm-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.

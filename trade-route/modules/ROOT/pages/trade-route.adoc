@@ -1,7 +1,7 @@
-= PortX
+= Trade Route
 :keywords: b2b, introduction, portal, partner, manager
 
-PortX provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+Trade Route provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
 
 == Transaction Monitoring
 
