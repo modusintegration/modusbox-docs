@@ -5,13 +5,13 @@ You can configure windows (periods of time) during which partners or transaction
 include::/_sources/edit-settings.adoc[]
 [start=3]
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *On-Hold/Inactive*.
+. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Availability*.
 +
-The <<img-on-hold-inactive>> appears.
+The <<img-availability>> appears.
 
-[[img-on-hold-inactive]]
+[[img-availabilty]]
 
-image::on-hold-inactive.png[img-on-hold-inactive, title="On-Hold/Inactive Page"]
+image::availability.png[img-availability, title="Availability Page"]
 
 
 == To Add a New Partner Status Window
