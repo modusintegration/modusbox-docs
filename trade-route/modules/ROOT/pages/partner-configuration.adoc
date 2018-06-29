@@ -1,6 +1,6 @@
 
 
-= Partner Configuration
+= Partner Configurations
 
 :keywords: portal, partner, manager
 
