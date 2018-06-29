@@ -8,13 +8,26 @@ include::/_sources/edit-settings.adoc[]
 
 . In the *Partners* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Certificate*.
 +
+The <<img-certificates>> appears.
+
+[[img-certificates, Certificates Page]]
+
+image::certificates.png[img-certificates, title="Certificates Page"]
+
+
+[start=4]
+
+. On the <<img-certificates>>, to edit an existing certificate, click the row that corresponds to the certificate you want to edit.
++
+To add a new certificate, click *New*.
++
 The <<img-certificate>> appears.
 
 [[img-certificate, Certificate Page]]
 
 image::certificate.png[img-certificate, title="Certificate Page"]
 
-[start=4]
+[start=5]
 
 . Click *Choose File*, then select the certificate file you want to upload.
 . Click *Upload Certificate* to upload the certificate.

@@ -16,9 +16,8 @@
 
 *** xref:company-information.adoc[Company Information]
 *** xref:identifiers.adoc[Identifiers]
-*** xref:on-hold-inactive.adoc[On-Hold/Inactive]
+*** xref:availability.adoc[Availability]
 *** xref:certificate.adoc[Certificate]
-
 
 *** xref:x12-settings.adoc[X12 Settings]
 *** xref:edifact-settings.adoc[EDIFACT Settings]
