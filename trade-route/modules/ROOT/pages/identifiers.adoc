@@ -1,6 +1,7 @@
 = Identifiers
 
 include::/_sources/edit-settings.adoc[]
+include::{partialsdir}/edit-settings.adoc[]
 
 [start=3]
 
