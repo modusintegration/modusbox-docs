@@ -15,8 +15,8 @@ NOTE: Your company may have been set up during the provisioning process. If so, 
 
 == Get Started
 
-. xref:portx/anypoint-partner-manager#start-anypoint-manager[Start PortX].
-The <<anypoint-partner-manager.adoc#img-apm-start,Transaction Monitoring Page>> appears.
+. xref:trade-route#start-trade-route[Start Trade Route].
+The <<trade-route.adoc#img-trade-route-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
 
