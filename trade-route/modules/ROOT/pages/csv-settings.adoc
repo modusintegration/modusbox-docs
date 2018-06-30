@@ -25,7 +25,7 @@ image::csv-settings.png[img-csv-settings, title="CSV Settings Page"]
 
 Valid values:: xref:portx/glossary#sects[Standard PortX field format]
 +
-It is common to use a comma or pipe character (*\|*) as a delimiter.
+It is common to use a comma or pipe character as a delimiter.
 
 
 
