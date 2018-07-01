@@ -7,7 +7,8 @@ Configuring a _document type_ for a partner means configuring settings specific 
 
 
 
-include::/_sources/edit-settings.adoc[]
+include::{partialsdir}/edit-settings.adoc[]
+
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Document Types*.
