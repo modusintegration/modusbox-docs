@@ -2,7 +2,7 @@
 
 Configuring a _map_ for a partner enables you to specify:
 
-include::/_sources/edit-settings.adoc[]
+include::{partialsdir}/edit-settings.adoc[]
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Maps*.

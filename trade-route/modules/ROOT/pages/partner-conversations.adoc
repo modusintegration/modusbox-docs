@@ -4,7 +4,7 @@ When you create a  _Partner Conversation_, you establish a sequence of events be
 
 This page provides instructing for creating and editing Partner Conversations. For information about tracking Conversations, see  xref:portx/transaction-monitoring[Transaction Monitoring].
 
-include::/_sources/edit-settings.adoc[]
+include::{partialsdir}/edit-settings.adoc[]
 
 [start=3]
 

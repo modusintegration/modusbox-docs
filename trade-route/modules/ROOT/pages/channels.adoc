@@ -8,7 +8,7 @@ Document:: As created in xref:portx/document-types[Document Types]
 Document Map:: As created in xref:portx/maps[Maps]
 Endpoint:: As created in xref:portx/endpoints[Endpoints]
 
-include::/_sources/edit-settings.adoc[]
+include::{partialsdir}/edit-settings.adoc[]
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Channels*.

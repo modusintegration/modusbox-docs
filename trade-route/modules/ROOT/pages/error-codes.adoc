@@ -1,6 +1,6 @@
 = Error Codes
 
-include::/_sources/edit-home-partner-settings.adoc[]
+include::{partialsdir}/edit-home-partner-settings.adoc[]
 
 [start=3]
 
