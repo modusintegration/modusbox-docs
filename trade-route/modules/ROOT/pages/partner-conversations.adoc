@@ -14,7 +14,6 @@ The <<img-partner-conversations>> appears.
 
 [[img-partner-conversations]]
 
-image::partner-conversations.png[img-partner-conversations, title="Partner Conversations Page"]
 
 [start=4]
 
@@ -27,46 +26,34 @@ image::partner-conversations.png[img-partner-conversations, title="Partner Conve
 
 . On the <<img-partner-conversations>>, click the Partner Conversation you want to edit.
 +
-The <<img-partner-conversation-edit>> appears.
+The Partner Conversation-Edit Page appears.
 
-[[img-partner-conversation-edit]]
-
-image::partner-conversation-edit.png[img-partner-conversation-edit, title="Partner Conversation-Edit Page"]
 
 [start=2]
 
-. On the <<img-partner-conversation-edit>>, you can:
+. On the Partner Conversation-Edit Page, you can:
 * <<Add a New Step>>
 * <<Edit an Existing Step>>
 
 == Add a New Partner Conversation
 
-. On the <<img-partner-conversations>>, click *New*.
+. On the Partner Conversation Page, click *New*.
 +
-The <<img-partner-conversation>> appears.
+The Partner Conversation Page appears.
 
-[[img-partner-conversation]]
-
-image::partner-conversation.png[img-partner-conversation, title="Partner Conversation Page"]
 
 [start=2]
 
 . In the *Name* box, type a name for this process.
 . Click *Save*.
 +
-The <<img-partner-conversation-steps>> appears.
+The Partner Conversation Steps Page appears.
 
-[[img-partner-conversation-steps]]
-
-image::partner-conversation-steps.png[img-partner-conversation-steps, title="Partner Conversation Steps Page"]
 
 == Add a New Step
-. On the <<img-partner-conversation-steps>>, in the *Steps* section, click *New*. +
-The <<img-partner-conversation-define-step>> appears.
+. On the Partner Conversation Steps Page, in the *Steps* section, click *New*. +
+The Partner Conversation Define-Step Page appears.
 
-[[img-partner-conversation-define-step]]
-
-image::partner-conversation-define-step.png[img-partner-conversation-define-step, title="Partner Conversation Define-Step Page"]
 
 [start=2]
 
@@ -78,24 +65,17 @@ The *Pick a document* box appears.
 
 . In the *Pick a document* box, click the row that corresponds to the document for which you want to define a process, then click *Use selected*.
 +
-The <<img-partner-conversation-steps>> reappears, with the direction and document you selected in the preceding steps shown.
+The Partner Conversation Steps Page reappears, with the direction and document you selected in the preceding steps shown.
 . Click *Save* to save the definition.
 +
-The <<img-partner-conversation-step-added>> appears.
+The Partner Conversation Step-Added Page appears.
 
-[[img-partner-conversation-step-added]]
-
-image::partner-conversation-step-added.png[img-partner-conversation-step-added, title="Partner Conversation Step-Added Page"]
 
 == Add Additional Steps
 
-. On the <<img-partner-conversation-step-added>>, click *New*.
+. On the Partner Conversation Step-Added Page, click *New*.
 +
-The <<img-partner-conversation-add-another-step>> appears.
-
-[[img-partner-conversation-add-another-step]]
-
-image::partner-conversation-add-another-step.png[img-partner-conversation-add-another-step, title="Partner Conversation Add-Another-Step-Page"]
+The Partner Conversation Add-Another-Step-Page appears.
 
 [start=2]
 
@@ -111,15 +91,15 @@ NOTE: For a property to appear in this list, it must have been defined in xref:p
 
 . In the *New Correlation Type Name* box, enter a name for this correlation type, then click *Create*.
 . Click *Save*. +
-The <<img-partner-conversation-step-added>> appears.
+The Partner Conversation Step-Added Page appears.
 +
 To add another step, repeat the previous steps.
 
 == Edit an Existing Step
 
-. On the <<img-partner-conversation-edit>>, in the *Step* column, click the number that corresponds to the step you want to edit.
+. On the Partner Conversation-Edit Page, in the *Step* column, click the number that corresponds to the step you want to edit.
 +
-The <<img-partner-conversation-define-step>> appears.
+The Partner Conversation Define-Step Page appears.
 . Edit information that pertains to the step as appropriate.
 +
 For more information, see <<Add a New Step>>.

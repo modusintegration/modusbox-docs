@@ -49,7 +49,7 @@ NOTE: If you are unable to access Trade Route, see your Mulesoft account adminis
 == Get Started
 
 . xref:trade-route.adoc#start-trade-route[Start Trade Route].
-The <<trade-route.adoc#img-apm-start,Transaction Monitoring Page>> appears.
+The <<trade-route.adoc#img-trade-route-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
 
@@ -420,7 +420,7 @@ In order to identify your Trade Route environment and its API Key to Anypoint St
 
 === Copy your Environment ID
 
-. On the <<trade-route.adoc#img-apm-start,B2B Transactions Page>>, in the left-hand navigation pane, click *Administration*, then click *Environments*.
+. On the <<trade-route.adoc#img-trade-route-start,B2B Transactions Page>>, in the left-hand navigation pane, click *Administration*, then click *Environments*.
 . In the row that corresponds to the environment with which you are working, click *copy*.
 
 === Identify or Create an API Key
