@@ -1,5 +1,5 @@
 name: pmc
-version: '1.0'
+version: '6.7.0'
 title: Partner Manager Connector
 start_page: ROOT:pmc.adoc
 nav:

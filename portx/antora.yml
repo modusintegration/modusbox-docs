@@ -1,6 +1,6 @@
 name: portx
 title: PortX(TM)
-version: LiftOff
+version: 1.0
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc

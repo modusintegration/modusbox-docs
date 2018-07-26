@@ -1,5 +1,5 @@
 name: ftps-connector
-version: '1.0'
+version: '2.0.2'
 title: FTPS Connector
 start_page: ROOT:ftps-connector.adoc
 nav:
