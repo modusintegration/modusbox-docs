@@ -1,6 +1,6 @@
-= Lift Off with PortX(TM)!
+= Welcome to PortX(TM)!
 
-PortX powers B2B integration with these complementary products: 
+PortX powers integration with these products: 
 
 * xref:trade-route:ROOT:trade-route.adoc[Trade Route]
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
