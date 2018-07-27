@@ -1,7 +1,7 @@
-= Partner Manager Connector
+= Trade Route Connector
 :keywords: b2b, edi, anypoint partner manager, apm, pmc, partner manager connector
 
-This page provides information about Partner Manager Connector (PMC), including:
+This page provides information about Trade Route Connector, including:
 
 * <<Overview>>.
 * <<Installing the Connector>>.
