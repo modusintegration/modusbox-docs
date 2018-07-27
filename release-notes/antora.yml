@@ -1,5 +1,5 @@
 name: release-notes
-version: '1.0'
+version: ''
 title: Release Notes
 start_page: ROOT:release-notes.adoc
 nav:
