@@ -1,5 +1,5 @@
 name: pmc
-version: '6.7.0'
+version: '7.0'
 title: Trade Route Connector
 start_page: ROOT:trade-route.adoc
 nav:
