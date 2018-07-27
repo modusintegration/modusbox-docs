@@ -1,4 +1,4 @@
-= Anypoint Partner Manager Release Notes
+= Trade Route Release Notes
 :keywords: b2b, partner manager, mule, release notes
 
 *xref:anypoint-b2b/anypoint-partner-manager[Anypoint Partner Manager User Documentation]*
