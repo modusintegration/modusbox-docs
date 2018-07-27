@@ -1,13 +1,11 @@
 = Trade Route Release Notes
 :keywords: b2b, partner manager, mule, release notes
 
-*xref:anypoint-b2b/anypoint-partner-manager[Anypoint Partner Manager User Documentation]*
-
 == Version 1.26.0  - August 1, 2018
 
 === Browser Support
 
-Anypoint Partner Manager, as a component of https://anypoint.mulesoft.com[Anypoint Platform], supports the following browsers:
+Trade Route supports the following browsers:
 
 * Firefox (latest version)
 * Chrome (latest version)
