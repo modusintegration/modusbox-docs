@@ -1,4 +1,4 @@
-name: pmc
+name: trade-route-connector
 version: '7.0'
 title: Trade Route Connector
 start_page: ROOT:trade-route-connector.adoc

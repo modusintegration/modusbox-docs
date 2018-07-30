@@ -3,6 +3,8 @@
 PortX powers integration with these products: 
 
 * xref:trade-route:ROOT:trade-route.adoc[Trade Route]
+<!--
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 * xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+-->
 * xref:pmc:ROOT:trade-route-connector.adoc[Trade Route Connector]
