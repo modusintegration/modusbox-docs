@@ -21,7 +21,7 @@ https://anypoint.mulesoft.com/b2b/tracker/api/console/index.html
 Resources having the _Searchable_ trait can be queried through the *q* query parameter
 using Trade Route Query Language (TRQL). TRQL is a SQL-like language giving you
 the ability to search for resources by fields other than the resource ID. Before diving into the syntax,
-here are a few examples of queries expressed in PMQL:
+here are a few examples of queries expressed in TRQL:
 
 [source]
 name == 'AS2 Receive'
@@ -35,7 +35,7 @@ processedAt > '2016-04-29 00:00:00' and processedAt <= '2016-04-29 00:00:01'
 [source]
 standard =in= ('X12', 'EDIFACT') and (direction == 'INBOUND' or messageType == 'PO') and processedAt >= '2016-01-01 00:00:00'
 
-A PMQL expression is composed of one or more comparisons, related to each other with logical operators:
+A TRQL expression is composed of one or more comparisons, related to each other with logical operators:
 
 * Logical AND: `and`
 * Logical OR: `or`
@@ -50,12 +50,12 @@ A comparison is composed of a selector, an operator, and an argument:
 [source]
 comparison = selector, comparison operator, arguments
 
-== PMQL Selector
+== TRQL Selector
 
 A selector identifies a field of the resource representation to filter by. It can be
 any non-empty Unicode string that does not contain reserved characters (see below) or a white space.
 
-== PMQL Comparison Operator
+== TRQL Comparison Operator
 
 A comparison operator can be any one of the following:
 
@@ -68,7 +68,7 @@ A comparison operator can be any one of the following:
 * In: `=in=`
 * Like: `=like=`
 
-== PMQL Argument
+== TRQL Argument
 
 An argument can be a single value, or multiple values in parenthesis separated by comma.
 Multiple values can only be used with operators that support such argument types like
