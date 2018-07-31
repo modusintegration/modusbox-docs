@@ -1,9 +1,9 @@
 = B2B Transaction-Processing Framework
 
-A xref:portx/glossary#sectb[_B2B transaction-processing solution_] serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
+A xref:glossary#sectb[B2B transaction-processing solution] serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
 
-xref:portx/glossary#sectb[_B2B Transaction Processing Framework_] enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in
-xref:portx/anypoint-partner-manager[PortX] (PortX).
+xref:glossary#sectb[_B2B Transaction Processing Framework_] enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in
+xref:anypoint-partner-manager[PortX] (PortX).
 Thus, non-programmers such as data analysts can use PortX to onboard new trading partner relationships and support new transaction types without having to develop, test, or deploy new Mule Runtime flows.
 
 This section identifies high-level framework components and their roles in end-to-end B2B transaction processing.
@@ -18,12 +18,12 @@ NOTE: Processing stages and their sequence can vary between implementations.
 image::functional-architecture.png[img-functional-architecture,title="Functional Architecture"]
 === Receive
 
-Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:portx/endpoints[_endpoint_] configured to receive the message.
+Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints[_endpoint_] configured to receive the message.
 
 === Resolve
 Using data that may be inside a document or in incoming metadata (such as HTTP headers or filenames), this stage identifies the partner and the transaction type, then uses these to retrieve corresponding processing details from PortX. These details include:
 
-* xref:portx/endpoints[Endpoint] to which the transformed message is to be delivered
+* xref:endpoints[Endpoint] to which the transformed message is to be delivered
 * <<Schema>> to use for validation
 * <<Map>> to transform the message into the required target format
 
@@ -49,11 +49,11 @@ image::b2b-message-processing-framework.png[img-b2b-message-processing-framework
 === MuleSoft-Provided Components
 
 ==== PortX
-xref:portx/anypoint-partner-manager[PortX] (PortX)
+xref:anypoint-partner-manager[PortX] (PortX)
 is the B2B Transaction Processing Framework user interface, enabling you to:
 
-* xref:portx/partner-configuration[Configure how B2B transactions are processed]
-* xref:portx/transaction-monitoring[Monitor and manage processed transactions]
+* xref:partner-configuration[Configure how B2B transactions are processed]
+* xref:transaction-monitoring[Monitor and manage processed transactions]
 
 [[tpmapi]]
 ===== Trading Partner Management (TPM) API
@@ -98,7 +98,7 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 ==== Transform Flow
 
 * Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
-* Does any necessary data translation, such as resolving partner values to your company's values using xref:portx/[lookup tables] functions, and flows.
+* Does any necessary data translation, such as resolving partner values to your company's values using xref:[lookup tables] functions, and flows.
 * Uses the Trade Route Connector to track the mapped, canonical version of the message.
 * Passes the updated message body to the next processing stage.
 
@@ -151,13 +151,13 @@ An _receive endpoint_ is a URL to which a document can be sent.
 
 A _send endpoint_ is a URL from which a document can be sent.
 
-For information about how endpoints are created, see xref:portx/resolution-processes#endpoint-resolution[Endpoint Resolution].
+For information about how endpoints are created, see xref:resolution-processes#endpoint-resolution[Endpoint Resolution].
 
 === Document, Message, File
 These terms are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term _document_ to represent these instances.
 
 === Document Type
-xref:portx/document-types[Document Types] are configured in PortX. A given document type
+xref:document-types[Document Types] are configured in PortX. A given document type
 is identified by the following pieces of information:
 
 * Standard
@@ -240,28 +240,28 @@ For an outbound transaction, the document might originate in the canonical forma
 
 == User Interface
 
-The PortX user interface enables xref:portx/partner-configuration[partner configuration], xref:portx/administration[administration] and detailed xref:portx/transaction-monitoring[transaction monitoring].
+The PortX user interface enables xref:partner-configuration[partner configuration], xref:administration[administration] and detailed xref:transaction-monitoring[transaction monitoring].
 
-=== xref:portx/partner-configuration[Partner Configuration]
+=== xref:partner-configuration[Partner Configuration]
 
 * Format Defaults
-** xref:portx/x12-settings[X12 Settings]
-** xref:portx/edifact-settings[EDIFACT Settings]
-** xref:portx/csv-settings[CSV Settings]
-* xref:portx/document-types[Document Types]
-* xref:portx/endpoints[Endpoints]
-* xref:portx/maps[Maps]
-* xref:portx/channels[Channels]
-* xref:portx/routes[Routes]
-* xref:portx/partner-conversations[Partner Conversations]
+** xref:x12-settings[X12 Settings]
+** xref:edifact-settings[EDIFACT Settings]
+** xref:csv-settings[CSV Settings]
+* xref:document-types[Document Types]
+* xref:endpoints[Endpoints]
+* xref:maps[Maps]
+* xref:channels[Channels]
+* xref:routes[Routes]
+* xref:partner-conversations[Partner Conversations]
 
-=== xref:portx/administration[Administration]
-* xref:portx/environments[Environments]
-* xref:portx/error-codes[Error Codes]
-* xref:portx/security[Security]
-* xref:portx/lookup-tables[Lookup Tables]
+=== xref:administration[Administration]
+* xref:environments[Environments]
+* xref:error-codes[Error Codes]
+* xref:security[Security]
+* xref:lookup-tables[Lookup Tables]
 
-=== xref:portx/transaction-monitoring[Transaction Monitoring]
+=== xref:transaction-monitoring[Transaction Monitoring]
 * Search and view results of processed transactions.
 * View end-to-end processing that occurred for a transaction.
 * Manually cause the replay of failed transactions.

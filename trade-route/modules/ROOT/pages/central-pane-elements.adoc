@@ -65,7 +65,7 @@ A table appears in the lower part of the Central Pane. Table column headings dep
 
 The following views are possible:
 
-* xref:portx/transactions-view[Transactions View]
-* xref:portx/transmissions-view[Transmissions View]
-* xref:portx/errors-view[Errors View]
-* xref:portx/documents-view[Documents View]
+* xref:transactions-view[Transactions View]
+* xref:transmissions-view[Transmissions View]
+* xref:errors-view[Errors View]
+* xref:documents-view[Documents View]

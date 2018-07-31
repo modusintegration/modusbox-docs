@@ -1,7 +1,7 @@
 = EDI X12 Order Processing Example
 :keywords: b2b, edi, x12, order, processing, example
 
-This example shows how to process an X12 850 document, export data to a CSV file, and generate a 997 acknowledgement using the File endpoint, xref:portx/x12-module[X12 Module], xref:mule-user-guide/v/3.9/using-mel-with-batch-processing[Using MEL with Batch Processing] module, and xref:mule-user-guide/v/3.9/dataweave[DataWeave]. 
+This example shows how to process an X12 850 document, export data to a CSV file, and generate a 997 acknowledgement using the File endpoint, xref:x12-module[X12 Module], xref:mule-user-guide/v/3.9/using-mel-with-batch-processing[Using MEL with Batch Processing] module, and xref:mule-user-guide/v/3.9/dataweave[DataWeave]. 
 
 == Prerequisites
 

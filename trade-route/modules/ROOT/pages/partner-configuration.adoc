@@ -46,28 +46,28 @@ image::company-information.png[img-company-information,title="Company Informatio
 
 [start=2]
 
-. To add or edit company information, see xref:portx/company-information[Company Information].
+. To add or edit company information, see xref:company-information[Company Information].
 +
 Notice that the left-hand navigation pane of the xref:img-company-information[] includes a number of different types of partner settings.
 To add or edit settings for any of these settings types, click the page name in the left-hand navigation pane. See the following sections for information about the settings on each page.
 
 === Partner Settings
-** xref:portx/company-information[Company Information]
-** xref:portx/identifiers[Identifiers]
+** xref:company-information[Company Information]
+** xref:identifiers[Identifiers]
 
 
 === Default Settings for Message Format
-** xref:portx/x12-settings[X12 Settings]
-** xref:portx/edifact-settings[EDIFACT]
-** xref:portx/csv-settings[CSV Settings]
+** xref:x12-settings[X12 Settings]
+** xref:edifact-settings[EDIFACT]
+** xref:csv-settings[CSV Settings]
 
 === Configuration Settings
-** xref:portx/document-types[Document Types]
-** xref:portx/endpoints[Endpoints]
-** xref:portx/maps[Maps]
-** xref:portx/channels[Channels]
-** xref:portx/routes[Routes]
-** xref:portx/partner-conversations[Partner Conversations]
+** xref:document-types[Document Types]
+** xref:endpoints[Endpoints]
+** xref:maps[Maps]
+** xref:channels[Channels]
+** xref:routes[Routes]
+** xref:partner-conversations[Partner Conversations]
 
 
 == Saving Settings
@@ -87,7 +87,7 @@ These partners can be imported back into PortX later; see <<Importing Partners>>
 
 === To Export a Partner
 
-. xref:portx/anypoint-partner-manager#start-anypoint-manager[Start PortX]. +
+. xref:anypoint-partner-manager#start-anypoint-manager[Start PortX]. +
 In the left-hand navigation pane, click *Partner Configuration*. The xref:img-partner-configuration[] appears.
 . On the xref:img-partner-configuration[], in the *Name* table, select the radio button or radio buttons of the partner or partners you want to export. +
 On the xref:img-partner-configuration[], the *Promote* and *Export* buttons appear to the left of the *New Partner* button.
@@ -124,7 +124,7 @@ If this checkbox is deselected, then certificates for this partner that exist in
 . Click *Import*.
 
 == Promoting a Partner
-PortX provides the ability to _promote_ - that is, copy, a trading partner from one environment to another. For information about scenarios in which you might want to promote a partner, see xref:portx/examples#promotion-scenarios[Promotion Scenarios].
+PortX provides the ability to _promote_ - that is, copy, a trading partner from one environment to another. For information about scenarios in which you might want to promote a partner, see xref:examples#promotion-scenarios[Promotion Scenarios].
 
 
 NOTE: Only users with the appropriate role or permissions will be able to promote partners.

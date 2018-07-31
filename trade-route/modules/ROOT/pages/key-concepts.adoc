@@ -1,11 +1,11 @@
 = Key Concepts
-:keywords: Anypoint b2b PortX concepts
+:keywords: Trade Route concepts
 
 
-The following pages explain key PortX concepts:
+The following pages explain key Trade Route concepts:
 
-* xref:portx/b2b-transaction-processing-framework[B2B Transaction-Processing Framework]
-* xref:portx/resolution-processes[Resolution Processes]
-* xref:portx/tracking[Tracking]
+* xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
+* xref:resolution-processes.adoc[Resolution Processes]
+* xref:tracking.adoc[Tracking]
 
-For more information, see xref:portx/anypoint-partner-manager[PortX].
+For more information, see xref:trade-route.adoc[Trade Route].

@@ -68,7 +68,7 @@ For information about Protocol- and Type-specific settings, go to the correspond
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
-* *Company name* (see xref:portx/partners[Partners] and xref:portx/company-information[Company Information])
+* *Company name* (see xref:partners[Partners] and xref:company-information[Company Information])
 * *Protocol*
 * *Type*
 
@@ -153,7 +153,7 @@ Choose the section that corresponds to the Protocol-Type of the Endpoint for whi
 
 === To Save Endpoint Settings
 
-See xref:portx/partner-configuration#saving-settings[Saving Settings].
+See xref:partner-configuration#saving-settings[Saving Settings].
 
 
 

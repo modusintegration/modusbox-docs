@@ -1,5 +1,5 @@
 = Walkthroughs
 
-* xref:portx/as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
-* xref:portx/ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
-* xref:portx/transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+* xref:as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
+* xref:ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
+* xref:transaction-tracking-walkthrough[Transaction Tracking Walkthrough]

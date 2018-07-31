@@ -6,8 +6,8 @@ PortX enables you to create, populate and edit a _link:https://docs.staging.modu
 
 You can create a lookup table using either the:
 
-* xref:portx/lookup-tables#creating-a-lookup-table[PortX user interface]
-* xref:portx/anypoint-partner-manager-api[PortX API].
+* xref:lookup-tables#creating-a-lookup-table[PortX user interface]
+* xref:anypoint-partner-manager-api[PortX API].
 
 This section shows how to make API calls using link:https://curl.haxx.se/[curl] to create a three-column, two-key table.
 
@@ -106,4 +106,4 @@ AFter you have created a lookup table, you can use the PortX user interface to:
 * Edit a table row
 * Delete a table row
 
-For more information, see  xref:portx/lookup-tables#working-with-a-lookup-table[Working with a Lookup Table].
+For more information, see  xref:lookup-tables#working-with-a-lookup-table[Working with a Lookup Table].

@@ -1,3 +1,0 @@
-* xref:ftps-connector.adoc[FTPS Connector]
-
-

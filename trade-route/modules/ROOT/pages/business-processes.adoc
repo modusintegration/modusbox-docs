@@ -1,6 +1,6 @@
 = Business Processes
 
-Configuring a Business Process is done using xref:portx/anypoint-partner-manager-api[PortX API]. This page shows an example of the necessary calls. 
+Configuring a Business Process is done using xref:anypoint-partner-manager-api[PortX API]. This page shows an example of the necessary calls. 
 
 == Create New Business Process
 

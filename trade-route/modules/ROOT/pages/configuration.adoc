@@ -2,8 +2,8 @@
 
 You can configure:
 
-* xref:portx/document-types[Document Types]
-* xref:portx/endpoints[Endpoints]
-* xref:portx/maps[Maps]
-* xref:portx/channels[Channels]
-* xref:portx/routes[Routes]
+* xref:document-types[Document Types]
+* xref:endpoints[Endpoints]
+* xref:maps[Maps]
+* xref:channels[Channels]
+* xref:routes[Routes]

@@ -26,7 +26,7 @@ image::lookup-tables-admin.png[img-lookup-tables-admin, title="Lookup Tables Adm
 
 == Create a Lookup Table
 
-This section shows you how to use the PortX user interface to create a lookup table. Alternatively, you can create a lookup table through calls to the xref:portx/anypoint-partner-manager-api[PortX API]; see xref:portx/lookup-tables-programmatic[Create a Lookup Table]. See xref:portx/lookup-tables-programmatic[Create a Lookup Table] also for instructions for querying a table.
+This section shows you how to use the PortX user interface to create a lookup table. Alternatively, you can create a lookup table through calls to the xref:anypoint-partner-manager-api[PortX API]; see xref:lookup-tables-programmatic[Create a Lookup Table]. See xref:lookup-tables-programmatic[Create a Lookup Table] also for instructions for querying a table.
 
 === To Create a Lookup Table
 

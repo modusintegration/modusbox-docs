@@ -28,7 +28,7 @@ This walkthrough shows you how to leverage the Anypoint B2B Platform to track B2
 . Launch Anypoint Studio and create a new Mule project.
 . Switch to the *Global Elements* view and create a Partner Manager Connector configuration.
 ////
-as described in the xref:portx/as2-and-edi-x12-purchase-order-walkthrough[AS2 and X12 Purchase Order Walkthrough].
+as described in the xref:as2-and-edi-x12-purchase-order-walkthrough[AS2 and X12 Purchase Order Walkthrough].
 ////
 . Go back to the *Message Flow* view. Drag the *File Connector* from the palette to the canvas in order to create a message source:
 +
@@ -78,7 +78,7 @@ image:transmission-tracking-walk-9.png[transmission-tracking-walk-9]
 +
 If you have enabled S3 storage in the Partner Manager Connector config, then you need to add the AWS and S3 parameters to the Mule application VM arguments. 
 ////
-Consult the xref:portx/as2-and-edi-x12-purchase-order-walkthrough[AS2 and X12 Purchase Order Walkthrough] for information on how to add the parameters.
+Consult the xref:as2-and-edi-x12-purchase-order-walkthrough[AS2 and X12 Purchase Order Walkthrough] for information on how to add the parameters.
 ////
 +
 . Drop the file link:https://drive.google.com/open?id=1-59ej2jTORbPqI3vOt58SabbzOeIpHEw[b2b-tracking-po.xml] in the `outbox` directory. You should see the file moved to the `inbox` directory.

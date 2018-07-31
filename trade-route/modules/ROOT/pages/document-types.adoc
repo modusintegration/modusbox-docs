@@ -65,7 +65,7 @@ image::document.png[img-document, title="Document Page"]
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
-* *Company name* (see xref:portx/partners[Partners] and xref:portx/company-information[Company Information])
+* *Company name* (see xref:partners[Partners] and xref:company-information[Company Information])
 * *Standard* (see <<Format>>)
 * *Version* (see <<Format>>)
 
@@ -144,7 +144,7 @@ None
 
 |Default Checkboxes
 
-|Select either of these checkboxes in order to use the values selected in the corresponding sections of xref:portx/x12-settings[x12-Settings].
+|Select either of these checkboxes in order to use the values selected in the corresponding sections of xref:x12-settings[x12-Settings].
 
 Deselect either of these boxes if you want to choose different values than those chosen as defaults.
 
@@ -217,7 +217,7 @@ None
 |Default Checkboxes
 
 |Select either of these checkboxes in order to use the values selected in the corresponding sections of
-xref:portx/edifact-settings[EDIFACT].
+xref:edifact-settings[EDIFACT].
 
 Deselect either of these boxes if you want to choose different values than those chosen as defaults.
 
@@ -290,7 +290,7 @@ None
 
 |Use default Outbound CSV for partner
 
-|Select this checkbox in order to use the values selected in the corresponding sections of xref:portx/csv-settings[CSV-Settings].
+|Select this checkbox in order to use the values selected in the corresponding sections of xref:csv-settings[CSV-Settings].
 
 Deselect this checkbox if you want to choose different values than those chosen as defaults.
 
@@ -314,7 +314,7 @@ If you deselect the *Use default Outbound CSV for partner* checkbox, the followi
 
 |Separates data in a document or message
 
-Valid values:: xref:portx/glossary#sects[Standard PortX field format]
+Valid values:: xref:glossary#sects[Standard PortX field format]
 +
 It is common to use a comma or pipe character (*\|*) as a delimiter.
 
@@ -333,7 +333,7 @@ Deselect the checkbox to omit header rows.
 
 |Use default Inbound CSV for partner
 
-|Select this checkbox in order to use the values selected in the corresponding sections of xref:portx/csv-settings[CSV-Settings].
+|Select this checkbox in order to use the values selected in the corresponding sections of xref:csv-settings[CSV-Settings].
 
 Deselect this checkbox if you want to choose different values than those chosen as defaults.
 
@@ -356,7 +356,7 @@ If you deselect the *Use default Inbound CSV for partner* checkbox, the followin
 
 |Separates data in a document or message
 
-Valid values:: xref:portx/glossary#sects[Standard PortX field format]
+Valid values:: xref:glossary#sects[Standard PortX field format]
 +
 It is common to use a comma or pipe character (*\|*) as a delimiter.
 
@@ -413,7 +413,7 @@ None
 Required?::
 No
 
-Valid values:: xref:portx/glossary#sects[Standard PortX field format]
+Valid values:: xref:glossary#sects[Standard PortX field format]
 
 
 Default::
@@ -469,7 +469,7 @@ None
 | Required?::
 Yes
 
-Valid values:: xref:portx/glossary#sects[Standard PortX field format]
+Valid values:: xref:glossary#sects[Standard PortX field format]
 
 Default::
 
@@ -509,7 +509,7 @@ None
 | Required?::
 Yes
 
-Valid values:: xref:portx/glossary#sects[Standard PortX field format]
+Valid values:: xref:glossary#sects[Standard PortX field format]
 
 Default::
 
