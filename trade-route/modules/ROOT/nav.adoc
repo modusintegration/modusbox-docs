@@ -43,6 +43,6 @@
 *** xref:trade-route-tutorial-td.adoc[Trade Route Tutorial: Designing a Transaction]
 *** xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
 
-** xref:trade-route-apis.adoc[Trade Route API]
+** xref:trade-route-apis.adoc[Trade Route APIs]
 
 ** xref:glossary.adoc[Glossary]
