@@ -16,7 +16,7 @@ Compatible with:
 
 * X12 Module 1.2.1
 * EDIFACT Module 1.2.1
-* Partner Manager Connector 3.0.x
+* Trade Route Connector 3.0.x
 * FTPS Connector 1.0.8
 * AS2 Connector 2.0.1
 
