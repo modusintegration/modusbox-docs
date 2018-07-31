@@ -43,6 +43,6 @@
 *** xref:trade-route-tutorial-td.adoc[Trade Route Tutorial: Designing a Transaction]
 *** xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
 
-** xref:anypoint-partner-manager-api.adoc[Anypoint Partner Manager API]
+** xref:trade-route-api.adoc[Trade Route API]
 
 ** xref:glossary.adoc[Glossary]

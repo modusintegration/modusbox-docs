@@ -1,5 +1,5 @@
 = Trade Route Connector
-:keywords: b2b, edi, anypoint partner manager, apm, trade route connector, partner manager connector
+:keywords: b2b, edi, trade route, trade route connector
 
 This page provides information about Trade Route Connector, including:
 
@@ -10,7 +10,7 @@ This page provides information about Trade Route Connector, including:
 
 == Overview
 
-Trade Route Connector provides connectivity to Anypoint Partner Manager (APM). The connector allows the management of APM-enabled connectors from APM and tracking of B2B exchanges.
+Trade Route Connector provides connectivity to Trade Route. The connector allows the management of APM-enabled connectors from APM and tracking of B2B exchanges.
 
 == To Install this Connector
 
