@@ -1,6 +1,7 @@
 // Release Notes TOC File
 
 ** xref:trade-route-release-notes.adoc[Trade Route Release Notes]
-** xref:as2-connector-release-notes.adoc[AS2 Connector Release Notes]
 ** xref:trade-route-connector-release-notes.adoc[Trade Route Connector Release Notes]
-** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes (for Mule 4)]
+
+# ** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes (for Mule 4)]
+# ** xref:as2-connector-release-notes.adoc[AS2 Connector Release Notes]
