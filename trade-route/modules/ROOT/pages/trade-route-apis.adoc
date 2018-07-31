@@ -8,13 +8,13 @@ PortX has two distinct APIs that clients can call:
 
 * *Trading Partner Management Service API* (TPM Service API) - Manages partner-related configurations such as document definitions. +
 *Download URL:*
-https://anypoint.mulesoft.com/b2b/tpm/api/definition/api.raml +
-*Experiment URL:* https://anypoint.mulesoft.com/b2b/tpm/api/console/index.html
+https://traderoute.portx.io/tpm/api/definition/api.raml +
+*Experiment URL:* https://traderoute.portx.io/tpm/api/console/index.html
 * *Tracker API* - Gives you access to run-time data such as transactions and business documents. +
 *Download URL:*
-https://anypoint.mulesoft.com/b2b/tracker/api/definition/api.raml +
+https://traderoute.portx.io/tracker/api/definition/api.raml +
 *Experiment URL:*
-https://anypoint.mulesoft.com/b2b/tracker/api/console/index.html
+https://traderoute.portx.io/tracker/api/console/index.html
 
 == Trade Route Query Language
 
