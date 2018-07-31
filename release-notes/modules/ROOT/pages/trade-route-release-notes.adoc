@@ -22,6 +22,6 @@ Compatible with:
 
 == Related Information
 
-* xref:anypoint-b2b/anypoint-partner-manager[Introduction to Anypoint Partner Manager]
+* xref:anypoint-b2b/trade-route[Introduction to Trade Route]
 * xref:anypoint-b2b/transaction-monitoring[Transaction Monitoring]
 * xref:anypoint-b2b/partner-configuration[Partner Configuration]

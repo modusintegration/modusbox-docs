@@ -1,4 +1,4 @@
-* xref:index.adoc[TradeRoute Manager]
+* xref:index.adoc[TradeRoute]
 
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
