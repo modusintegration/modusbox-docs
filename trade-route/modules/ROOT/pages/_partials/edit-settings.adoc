@@ -2,7 +2,7 @@
 
 == Get Started
 
-. link:trade-route#start-trade-route[Start Trade Route].
+. xref:trade-route#start-trade-route[Start Trade Route].
 The <<trade-route.adoc#img-trade-route-start, Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*. The <<partner-configuration.adoc#img-partner-configuration, Partner Configuration Page>> appears.
 +
