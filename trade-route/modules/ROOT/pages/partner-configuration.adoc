@@ -87,8 +87,11 @@ These partners can be imported back into PortX later; see <<Importing Partners>>
 
 === To Export a Partner
 
-. xref:anypoint-partner-manager#start-anypoint-manager[Start PortX]. +
-In the left-hand navigation pane, click *Partner Configuration*. The xref:img-partner-configuration[] appears.
+. xref:trade-route#start-trade-route[Start Trade Route].
+The <<trade-route.adoc#img-trade-route-start,Transaction Monitoring Page>> appears.
+. In the left-hand navigation pane, click *Partner Configuration*.
+The xref:img-partner-configuration[] appears.
+
 . On the xref:img-partner-configuration[], in the *Name* table, select the radio button or radio buttons of the partner or partners you want to export. +
 On the xref:img-partner-configuration[], the *Promote* and *Export* buttons appear to the left of the *New Partner* button.
 . Click the *Export* button. +
