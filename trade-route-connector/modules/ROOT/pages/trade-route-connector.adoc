@@ -3,16 +3,16 @@
 
 This page provides information about Trade Route Connector, including:
 
-* <<Overview>>.
-* <<Installing the Connector>>.
-* <<Configuring the Connector>>.
-* <<Supported Operations>>.
+* <<Overview>>
+* <<Installing the Connector>>
+* <<Configuring the Connector>>
+* <<Supported Operations>>
 
 == Overview
 
 Trade Route Connector provides connectivity to Trade Route. The connector allows the management of APM-enabled connectors from APM and tracking of B2B exchanges.
 
-== To Install this Connector
+== Installing the Connector
 
 . In Anypoint Studio, click the Exchange icon in the Studio taskbar.
 . Click Login in Anypoint Exchange.
