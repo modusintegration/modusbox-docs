@@ -92,7 +92,7 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 ==== Resolve Flow
 
 * Pulls together from the message and any transport headers the needed metadata fields for identifying the specific document type.
-* Passes the metadata fields to the TPM service to look up the document type and associated configuration settings (<<Map>>, <<Schema>>, target <<endpoint>>) and adds this information to the context headers that travel with the message to be used by later stages.
+* Passes the metadata fields to the TPM service to look up the document type and associated configuration settings (<<Map>>, <<Schema>>, target <<Endpoint>>) and adds this information to the context headers that travel with the message to be used by later stages.
 * Passes the message to the next processing stage.
 
 ==== Transform Flow
