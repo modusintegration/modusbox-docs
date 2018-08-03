@@ -1,11 +1,11 @@
-= Trade Route Release Notes
+= Partner Manager Release Notes
 :keywords: b2b, release notes
 
 == Version 1.26.0  - August 1, 2018
 
 === Browser Support
 
-Trade Route supports the following browsers:
+Partner Manager supports the following browsers:
 
 * Firefox (latest version)
 * Chrome (latest version)
@@ -16,12 +16,12 @@ Compatible with:
 
 * X12 Module 1.2.1
 * EDIFACT Module 1.2.1
-* Trade Route Connector 3.0.x
+* Partner Manager Connector 3.0.x
 * FTPS Connector 1.0.8
 * AS2 Connector 2.0.1
 
 == Related Information
 
-* xref:trade-route:ROOT:trade-route.adoc[Trade Route]
-* xref:trade-route:ROOT:transaction-monitoring.adoc[Transaction Monitoring]
-* xref:trade-route:ROOT:partner-configuration.adoc[Partner Configuration]
+* xref:partner-manager:ROOT:partner-manager.adoc[Partner Manager]
+* xref:partner-manager:ROOT:transaction-monitoring.adoc[Transaction Monitoring]
+* xref:partner-manager:ROOT:partner-configuration.adoc[Partner Configuration]

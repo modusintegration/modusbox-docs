@@ -1,3 +1,0 @@
-* xref:trade-route-connector.adoc[Trade Route Connector]
-
-

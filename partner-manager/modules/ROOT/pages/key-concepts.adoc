@@ -1,11 +1,11 @@
 = Key Concepts
-:keywords: Trade Route concepts
+:keywords: Partner Manager concepts
 
 
-The following pages explain key Trade Route concepts:
+The following pages explain key Partner Manager concepts:
 
 * xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
 * xref:resolution-processes.adoc[Resolution Processes]
 * xref:tracking.adoc[Tracking]
 
-For more information, see xref:trade-route.adoc[Trade Route].
+For more information, see xref:partner-manager.adoc[Partner Manager].

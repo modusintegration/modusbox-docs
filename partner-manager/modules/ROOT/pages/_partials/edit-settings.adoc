@@ -2,8 +2,8 @@
 
 == Get Started
 
-. xref:trade-route#start-trade-route[Start Trade Route].
-The <<trade-route.adoc#img-trade-route-start, Transaction Monitoring Page>> appears.
+. xref:partner-manager#start-partner-manager[Start Partner Manager].
+The <<partner-manager.adoc#img-partner-manager-start, Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*. The <<partner-configuration.adoc#img-partner-configuration, Partner Configuration Page>> appears.
 +
 To edit or add settings for your company, in the *Name* table,

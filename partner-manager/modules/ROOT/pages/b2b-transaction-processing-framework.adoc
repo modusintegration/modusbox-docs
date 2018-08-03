@@ -72,11 +72,11 @@ For example:
 
 This includes, but is not limited to correlation logic for matching acknowledgements to original messages and identifying duplicate messages.
 
-==== Trade Route Connector
-The Trade Route Connector runs inside xref:mule-user-guide[Mule Runtime] and coordinates all interaction with the PortX APIs (TPM and Tracking).
+==== Partner Manager Connector
+The Partner Manager Connector runs inside xref:mule-user-guide[Mule Runtime] and coordinates all interaction with the PortX APIs (TPM and Tracking).
 
 ==== Object Store
-The Object Store is a distributed cache in xref:mule-user-guide[Mule Runtime] that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. Trade Route Connector manages this caching.
+The Object Store is a distributed cache in xref:mule-user-guide[Mule Runtime] that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. Partner Manager Connector manages this caching.
 
 === Customer-Built Flows
 NOTE: At this time the flows identified below must be developed by the customer. MuleSoft may provide these components as part of the product in the future. However, in order to provide full extensibility and customization, the option will remain for customers to provide their own implementations .
@@ -84,7 +84,7 @@ NOTE: At this time the flows identified below must be developed by the customer.
 ==== Receive Flows
 Each receive endpoint corresponds to a Mule flow that consists of the appropriate protocol connector and the appropriate endpoint configuration. After receiving a message over a particular protocol, each receive flow:
 
-* Tracks the message using the Trade Route Connector in order to persist a copy of the message as it was received from the partner.
+* Tracks the message using the Partner Manager Connector in order to persist a copy of the message as it was received from the partner.
 * Places a queue message with headers populated with any important metadata from the inbound protocol, such as transport headers and filenames, on the Resolve queue.
 
 Receive flows are activated dynamically by a Receive Endpoint listener flow which polls the TPM system for the list of endpoints that should be active. This flow creates a specific endpoint for each flow based on a template for the required transport protocol. It then dynamically instantiates that flow into the Mule Runtime and starts it, so that the required connector endpoint is active and listening for messages.
@@ -99,22 +99,22 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 
 * Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
 * Does any necessary data translation, such as resolving partner values to your company's values using xref:[lookup tables] functions, and flows.
-* Uses the Trade Route Connector to track the mapped, canonical version of the message.
+* Uses the Partner Manager Connector to track the mapped, canonical version of the message.
 * Passes the updated message body to the next processing stage.
 
 ==== Validate Flow
 
 * Dynamically applies the configured schema script to validate that the message is in the required format.
-* Uses the Trade Route Connector to track the validation result for the message.
+* Uses the Partner Manager Connector to track the validation result for the message.
 * Passes the message to the next processing stage.
 
 ==== Deliver Flow
 
 * Invokes the target service by passing the transformed message to the configured transport endpoint.
-* Uses the Trade Route Connector to track the result from the target service.
+* Uses the Partner Manager Connector to track the result from the target service.
 
 ==== Message Payload Persistence Flow
-This is an optional flow that can be implemented to store message payloads at various stages. It receives a MuleSoft message from the Trade Route Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Flow. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Flow and display the message payload in a pop-up window.
+This is an optional flow that can be implemented to store message payloads at various stages. It receives a MuleSoft message from the Partner Manager Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Flow. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Flow and display the message payload in a pop-up window.
 
 ==== Message Payload Retrieval API Flow
 The Message Payload Retrieval API Flow is used to retrieve the message payload with a URL (which contains the specific transactionId of the message to be retrieved).

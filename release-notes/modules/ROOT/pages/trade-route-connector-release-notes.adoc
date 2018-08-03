@@ -1,4 +1,4 @@
-= Trade Route Connector Release Notes
+= Partner Manager Connector Release Notes
 :keywords: connector, release notes, 
 
 == Version 7.0.0 - 1 August, 2018

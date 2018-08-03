@@ -1,6 +1,6 @@
-= Trade Route APIs
+= Partner Manager APIs
 
-:keywords: Trade Route APIs, Trade Route Query Language, TRQL
+:keywords: Partner Manager APIs, Partner Manager Query Language, TRQL
 
 Clients often want to interact with PortX
 programmatically to automate their processing tasks.
@@ -16,10 +16,10 @@ https://traderoute.portx.io/tracker/api/definition/api.raml +
 *Experiment URL:*
 https://traderoute.portx.io/tracker/api/console/index.html
 
-== Trade Route Query Language
+== Partner Manager Query Language
 
 Resources having the _Searchable_ trait can be queried through the *q* query parameter
-using Trade Route Query Language (TRQL). TRQL is a SQL-like language giving you
+using Partner Manager Query Language (TRQL). TRQL is a SQL-like language giving you
 the ability to search for resources by fields other than the resource ID. Before diving into the syntax,
 here are a few examples of queries expressed in TRQL:
 

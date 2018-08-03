@@ -1,7 +1,7 @@
-= Trade Route Connector
-:keywords: b2b, edi, trade route, trade route connector
+= Partner Manager Connector
+:keywords: b2b, edi, Partner Manager, Partner Manager connector
 
-This page provides information about Trade Route Connector, including:
+This page provides information about Partner Manager Connector, including:
 
 * <<Overview>>
 * <<Installing the Connector>>
@@ -10,7 +10,7 @@ This page provides information about Trade Route Connector, including:
 
 == Overview
 
-Trade Route Connector provides connectivity to Trade Route. The connector allows the management of APM-enabled connectors from APM and tracking of B2B exchanges.
+Partner Manager Connector provides connectivity to Partner Manager. The connector allows the management of APM-enabled connectors from APM and tracking of B2B exchanges.
 
 == Installing the Connector
 
@@ -35,7 +35,7 @@ The method for configuring the connector depends on whether you want to have _pa
 . Enter _Partner Manager_ in the filter.
 . Choose *Basic Configuration* and click *OK*.
 . In the *API Key* attribute, enter your private API key which is generated from APM portal.
-. Enter in the *Environment ID* attribute the CloudHub environment you want Trade Route Connector to run in.
+. Enter in the *Environment ID* attribute the CloudHub environment you want Partner Manager Connector to run in.
 . Press *OK*.
 
 === Configuration Using Amazon S3 for Payload Persistence
@@ -44,7 +44,7 @@ The method for configuring the connector depends on whether you want to have _pa
 . Enter _Partner Manager_ in the filter.
 . Choose *Amazon S3 File Storage* and click *OK*.
 . In the *API Key* attribute, enter your private API key which is generated from APM portal.
-. Enter in the *Environment ID* attribute the CloudHub environment you want Trade Route Connector to run in.
+. Enter in the *Environment ID* attribute the CloudHub environment you want Partner Manager Connector to run in.
 . Enter the settings of the S3 bucket to be used for storing files. These settings are obtained from your AWS console.
 . Press *OK*.
 
@@ -54,7 +54,7 @@ The method for configuring the connector depends on whether you want to have _pa
 . Enter _Partner Manager_ in the filter.
 . Choose *Custom File Storage* and click *OK*.
 . In the *API Key* attribute, enter your private API key which is generated from APM portal.
-. Enter in the *Environment ID* attribute the CloudHub environment you want Trade Route Connector to run in.
+. Enter in the *Environment ID* attribute the CloudHub environment you want Partner Manager Connector to run in.
 . Type in the name of the flow to be used for persisting files in the *Flow Name* attribute.
 . Optionally, inside the File URL attribute, set a MEL expression to read the file URL from the message produced by the flow.
 . Press *OK*.

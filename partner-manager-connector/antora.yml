@@ -1,0 +1,8 @@
+name: partner-manager-connector
+version: '7.0'
+title: Partner Manager Connector
+start_page: ROOT:partner-manager-connector.adoc
+nav:
+- modules/ROOT/nav.adoc
+
+

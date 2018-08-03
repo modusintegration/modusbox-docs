@@ -2,7 +2,7 @@
 
 == Latest Versions
 
-* xref:trade-route-tutorial-td.adoc[Designing an AS2 and EDI X12 Purchase Order Transaction]
+* xref:partner-manager-tutorial-td.adoc[Designing an AS2 and EDI X12 Purchase Order Transaction]
 
 == Versions 1.0 - 1.23.0
 

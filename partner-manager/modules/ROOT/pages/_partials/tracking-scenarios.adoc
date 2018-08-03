@@ -1,7 +1,7 @@
 = Tracking Scenarios
-:keywords: Anypoint b2b Trade Route concepts
+:keywords: Anypoint b2b Partner Manager concepts
 
-This section identifies scenarios in which Trade Route (APM) is useful to track B2B exchanges. A basic knowledge of APM is assumed; see xref:anypoint-partner-manager[Trade Route] for more information.
+This section identifies scenarios in which Partner Manager (APM) is useful to track B2B exchanges. A basic knowledge of APM is assumed; see xref:anypoint-partner-manager[Partner Manager] for more information.
 
 
 == Replaying an Incomplete Transaction

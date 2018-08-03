@@ -2,8 +2,8 @@
 
 PortX powers integration with these products: 
 
-* xref:trade-route:ROOT:trade-route.adoc[Trade Route]
-* xref:trade-route-connector:ROOT:trade-route-connector.adoc[Trade Route Connector]
+* xref:partner-manager:ROOT:partner-manager.adoc[Partner Manager]
+* xref:partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 ////
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]

@@ -15,8 +15,8 @@ NOTE: Your company may have been set up during the provisioning process. If so, 
 
 == Get Started
 
-. xref:trade-route#start-trade-route[Start Trade Route].
-The <<trade-route.adoc#img-trade-route-start,Transaction Monitoring Page>> appears.
+. xref:partner-manager#start-partner-manager[Start Partner Manager].
+The <<partner-manager.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
 
@@ -87,8 +87,8 @@ These partners can be imported back into PortX later; see <<Importing Partners>>
 
 === To Export a Partner
 
-. xref:trade-route#start-trade-route[Start Trade Route].
-The <<trade-route.adoc#img-trade-route-start,Transaction Monitoring Page>> appears.
+. xref:partner-manager#start-partner-manager[Start Partner Manager].
+The <<partner-manager.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
 

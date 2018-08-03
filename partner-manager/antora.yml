@@ -1,6 +1,6 @@
-name: trade-route
+name: partner-manager
 version: '2.0'
-title: Trade Route
+title: Partner Manager
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
