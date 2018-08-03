@@ -1,1 +1,1 @@
-include::/_sources/tracking-scenarios.adoc[]
+include::{partialsdir}/tracking-scenarios.adoc[]

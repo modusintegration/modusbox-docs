@@ -15,7 +15,7 @@ To cancel instead of saving, click *Cancel*.
 NOTE: These settings are editable for the Home Partner (*Your company* in the
 <<partner-configuration.adoc#img-trading-partners, Trading Partners Page>>) only.
 
-. link:/anypoint-b2b/anypoint-partner-manager#start-anypoint-manager[Start APM].
+.xref:anypoint-partner-manager#start-anypoint-manager[Start APM].
 The <<anypoint-partner-manager.adoc#img-trade-route-start, B2B Transactions Page>> appears.
 . In the left-hand navigation pane, click *Trading Partners*. The <<partner-configuration.adoc#img-trading-partners, Trading Partners Page>> appears.
 +
