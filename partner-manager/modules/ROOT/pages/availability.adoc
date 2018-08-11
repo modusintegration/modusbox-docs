@@ -16,7 +16,7 @@ image::availability.png[img-availability, title="Availability Page"]
 
 == To Add a New Partner Status Window
 
-. On the <<img-on-hold-inactive>>, in the *Partner Status Windows* section, click *Create New Window*. +
+. On the <<availability>>, in the *Partner Status Windows* section, click *Create New Window*. +
 The <<img-partner-status-window-add>> appears.
 
 [[img-partner-status-window-add]]
@@ -34,7 +34,7 @@ To create an inactive window, click *INACTIVE*.
 
 == To Add a New Transaction Status Window
 
-. On the <<img-on-hold-inactive>>, in the *Transaction Status Windows* section, click *Create New Window*. +
+. On the <<img-availability>>, in the *Transaction Status Windows* section, click *Create New Window*. +
 The <<img-transaction-status-window-add>> appears.
 
 [[img-transaction-status-window-add]]
@@ -53,7 +53,7 @@ The Pick a Channel Window appears.
 
 == To Edit an On-Hold or Inactive Window
 
-. On the <<img-on-hold-inactive>>, in the section that corresponds to the type of window you want to edit, identify the window you wan to edit and click it. +
+. On the <<img-availability>>, in the section that corresponds to the type of window you want to edit, identify the window you wan to edit and click it. +
 The  appropriate page appears.
 . On the page, make changes as appropriate.
 . Click *Save* to save your changes.
