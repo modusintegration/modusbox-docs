@@ -38,13 +38,6 @@ In the most common scenario, PortX is used in conjunction with Anypoint Studio, 
 
 == Start Partner Manager
 
-For access to Partner Manager, see your PortX representative.
-
-////
-
-== Start Partner Manager
-
-
 . link:https://anypoint.mulesoft.com/apiplatform.adoc[Sign up] to use Anypoint Platform.
 . Log into Anypoint Platform.
 The xref:img-anypoint-platform-application-selection[] appears.
@@ -101,5 +94,3 @@ PortX roles include the following:
 |Assigned per Business Group. Has privileges in all environments in the Business Group.
 
 |===
-
-////
