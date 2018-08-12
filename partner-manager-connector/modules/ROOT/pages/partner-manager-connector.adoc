@@ -1,8 +1,9 @@
 = Partner Manager Connector
 :keywords: b2b, edi, Partner Manager, Partner Manager connector
 
-This page provides information about Partner Manager Connector, including:
+This page provides information about Partner Manager Connector. For more information, see your PortX representative.
 
+////
 * <<Overview>>
 * <<Installing the Connector>>
 * <<Configuring the Connector>>
@@ -58,6 +59,8 @@ The method for configuring the connector depends on whether you want to have _pa
 . Type in the name of the flow to be used for persisting files in the *Flow Name* attribute.
 . Optionally, inside the File URL attribute, set a MEL expression to read the file URL from the message produced by the flow.
 . Press *OK*.
+
+////
 
 == Supported Operations
 
