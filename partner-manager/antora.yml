@@ -1,6 +1,6 @@
 name: partner-manager
-version: 'PlatformX'
 title: Partner Manager
+version: 'PlatformX'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
