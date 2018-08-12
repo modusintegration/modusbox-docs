@@ -34,9 +34,16 @@ xref:key-concepts.adoc[Key Concepts].
 
 == Examples
 
-In the most common scenario, PortX is used in conjunction with Anypoint Studio, Partner Manager Connector, and other MuleSoft connectors. Find information about this and other PortX use cases in xref:examples.adoc[Examples].
+In the most common scenario, PortX is used in conjunction with an Enterprise Service Bus (ESB), Partner Manager Connector, and other connectors. Find information about this and other PortX use cases in xref:examples.adoc[Examples].
 
 == Start Partner Manager
+
+For access to Partner Manager, see your PortX representative.
+
+////
+
+== Start Partner Manager
+
 
 . link:https://anypoint.mulesoft.com/apiplatform.adoc[Sign up] to use Anypoint Platform.
 . Log into Anypoint Platform.
@@ -49,12 +56,12 @@ image::anypoint-platform-application-selection.png[img-anypoint-platform-applica
 
 . On the Anypoint Platform application selection screen, in the *Manage* drop-down listbox, click *Partner Manager*.
 +
-The xref:img-partner-manager-start[] appears.
+The xref:img-partner-manager-start[] page appears.
 +
 For more information, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
 
 [[img-partner-manager-start]]
-image::apm-start.png[img-partner-manager-start,title="Transaction Monitoring Page"]
+image::partner-manager-start.png[img-partner-manager-start,title="Transaction Monitoring Page"]
 
 [start=4]
 
@@ -94,3 +101,5 @@ PortX roles include the following:
 |Assigned per Business Group. Has privileges in all environments in the Business Group.
 
 |===
+
+////
