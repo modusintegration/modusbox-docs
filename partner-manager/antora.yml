@@ -1,6 +1,6 @@
 name: partner-manager
-version: 'Mulesoft'
 title: Partner Manager
+version: 'Mulesoft'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
