@@ -1,4 +1,5 @@
 name: release-notes
+version: 'Mulesoft'
 title: Release Notes
 version: 'PlatformX'
 start_page: ROOT:release-notes.adoc

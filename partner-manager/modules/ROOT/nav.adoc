@@ -5,7 +5,7 @@
 *** xref:resolution-processes.adoc[Resolution Processes]
 *** xref:tracking.adoc[Tracking]
 
-** xref:PlatformX@partner-manager:ROOT:examples.adoc[Examples]
+** xref:examples.adoc[Examples]
 
 
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
