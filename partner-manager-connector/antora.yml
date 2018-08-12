@@ -1,7 +1,7 @@
 name: partner-manager-connector
 title: Partner Manager Connector
 version: 'PlatformX'
-start_page: ROOT:partner-manager-connector.adoc
+start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
 
