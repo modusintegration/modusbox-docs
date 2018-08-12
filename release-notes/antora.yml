@@ -1,6 +1,6 @@
 name: release-notes
-version: 'All'
 title: Release Notes
+version: 'PlatformX'
 start_page: ROOT:release-notes.adoc
 nav:
 - modules/ROOT/nav.adoc
