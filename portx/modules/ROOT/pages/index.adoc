@@ -1,6 +1,6 @@
 = Welcome to PortX(TM)!
 
-PortX powers integration with these products: 
+PortX powers integration with: 
 
 * xref:partner-manager:ROOT:index.adoc[Partner Manager]
 * xref:partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
