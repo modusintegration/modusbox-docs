@@ -10,7 +10,7 @@ For information about the procedures you would use to implement a given example,
 
 == End-to-End Use Case
 
-In this example, a user performs a series of configuration tasks in PortX and Anypoint Studio, resulting in the ability to view events and track transmissions.
+In this example, a user performs a series of configuration tasks in PortX and an Enterprise Service Bus (ESB), resulting in the ability to view events and track transmissions.
 
 === In PortX
 
