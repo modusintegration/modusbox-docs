@@ -2,7 +2,7 @@
 
 PortX powers integration with these products: 
 
-* xref:partner-manager:ROOT:partner-manager.adoc[Partner Manager]
+* xref:partner-manager:ROOT:index.adoc[Partner Manager]
 * xref:partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 ////
