@@ -34,7 +34,7 @@ xref:key-concepts.adoc[Key Concepts].
 
 == Examples
 
-In the most common scenario, PortX is used in conjunction with Anypoint Studio, Partner Manager Connector, and other MuleSoft connectors. Find information about this and other PortX use cases in xref:examples.adoc[Examples].
+In the most common scenario, PortX is used in conjunction with an Enterprise Service Bus (ESB), Partner Manager Connector, and other connectors. Find information about this and other PortX use cases in xref:examples.adoc[Examples].
 
 == Start Partner Manager
 
