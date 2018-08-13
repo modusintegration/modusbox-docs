@@ -4,14 +4,14 @@ PortX powers integration with products tailored for your platform.
 
 == Enterprise Service Bus Platforms
 
-For information about products applicable to most Enterprise Service Bus platforms, see these libraries:
+For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
 * xref:PlatformX@partner-manager::index.adoc[Partner Manager]
 * xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 == Custom Platforms
 
-For information about products applicable to specific platforms, see these libraries.
+For information about built to power integratino on specific platforms, see these libraries.
 
 === Mulesoft
 
