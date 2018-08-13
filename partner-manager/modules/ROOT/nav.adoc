@@ -39,9 +39,7 @@
 *** xref:security.adoc[Security]
 *** xref:lookup-tables.adoc[Lookup Tables]
 
-** xref:tutorials.adoc[Tutorials]
-*** xref:partner-manager-tutorial-td.adoc[Partner Manager Tutorial: Designing a Transaction]
-*** xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
+** xref:partner-manager-tutorial-td.adoc[Partner Manager Tutorial: Designing a Transaction]
 
 ** xref:partner-manager-apis.adoc[Partner Manager APIs]
 

@@ -8,4 +8,4 @@ The following pages explain key Partner Manager concepts:
 * xref:resolution-processes.adoc[Resolution Processes]
 * xref:tracking.adoc[Tracking]
 
-For more information, see xref:partner-manager.adoc[Partner Manager].
+For more information, see xref:index.adoc[Partner Manager].

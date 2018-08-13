@@ -48,8 +48,8 @@ NOTE: If you are unable to access Partner Manager, see your Mulesoft account adm
 
 == Get Started
 
-. xref:partner-manager.adoc#start-partner-manager[Start Partner Manager].
-The <<partner-manager.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
+. xref:index.adoc#start-partner-manager[Start Partner Manager].
+The <<index.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
 
@@ -420,7 +420,7 @@ In order to identify your Partner Manager environment and its API Key to Anypoin
 
 === Copy your Environment ID
 
-. On the <<partner-manager.adoc#img-partner-manager-start,B2B Transactions Page>>, in the left-hand navigation pane, click *Administration*, then click *Environments*.
+. On the <<index.adoc#img-partner-manager-start,B2B Transactions Page>>, in the left-hand navigation pane, click *Administration*, then click *Environments*.
 . In the row that corresponds to the environment with which you are working, click *copy*.
 
 === Identify or Create an API Key

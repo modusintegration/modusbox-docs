@@ -22,6 +22,6 @@ Compatible with:
 
 == Related Information
 
-* xref:partner-manager:ROOT:partner-manager.adoc[Partner Manager]
+* xref:partner-manager:ROOT:index.adoc[Partner Manager]
 * xref:partner-manager:ROOT:transaction-monitoring.adoc[Transaction Monitoring]
 * xref:partner-manager:ROOT:partner-configuration.adoc[Partner Configuration]

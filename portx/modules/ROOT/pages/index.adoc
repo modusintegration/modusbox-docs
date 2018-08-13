@@ -1,9 +1,25 @@
 = Welcome to PortX(TM)!
 
-PortX powers integration with: 
+PortX powers integration with:
 
-* xref:partner-manager:ROOT:index.adoc[Partner Manager]
-* xref:partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+* Cross-platform products
+* Products tailored for specific platforms. 
+
+== Cross-Platform
+
+For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
+
+* xref:PlatformX@partner-manager::index.adoc[Partner Manager]
+* xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+
+== Custom Platforms
+
+For information about built to power integratino on specific platforms, see these libraries.
+
+=== Mulesoft
+
+* xref:Mulesoft@partner-manager:ROOT:index.adoc[Partner Manager (Mulesoft)]
+* xref:Mulesoft@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
 
 ////
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
