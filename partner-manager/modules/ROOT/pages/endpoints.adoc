@@ -122,6 +122,7 @@ None
 
 |===
 +
+////
 When you have entered settings for *Name*, *Protocol* and *Type*, additional settings specific to the protocol-type combination appear; the <<img-endpoint-add>> becomes the <<img-endpoint-settings-b>>. For  information about the additional settings, go to the appropriate Protocol-Type combination in <<To Enter Protocol/Type-Specific Endpoint Settings>>.
 +
 [[img-endpoint-settings-b]]
@@ -225,3 +226,4 @@ include::{partialsdir}/endpoint-smtp-send.adoc[]
 include::{partialsdir}/endpoint-pop3-receive.adoc[]
 include::{partialsdir}/endpoint-imap-receive.adoc[]
 include::{partialsdir}/endpoint-rnif.adoc[]
+////
