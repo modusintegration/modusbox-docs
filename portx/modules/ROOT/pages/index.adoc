@@ -2,12 +2,18 @@
 
 PortX powers integration with products tailored for your platform. 
 
-For information about products applicable to a broad range of platforms, see these libraries:
+== Enterprise Service Bus Platforms
+
+For information about products applicable to most Enterprise Service Bus platforms, see these libraries:
 
 * xref:PlatformX@partner-manager::index.adoc[Partner Manager]
 * xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
-For information about products applicable to a broad range of platforms, see these libraries:
+== Custom Platforms
+
+For information about products applicable to specific platforms, see these libraries.
+
+=== Mulesoft
 
 * xref:Mulesoft@partner-manager:ROOT:index.adoc[Partner Manager]
 * xref:Mulesoft@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
