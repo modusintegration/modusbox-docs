@@ -4,13 +4,13 @@ PortX powers integration with products tailored for your platform.
 
 For information about products applicable to a broad range of platforms, see these libraries:
 
-* xref:master@partner-manager::index.adoc[Partner Manager]
-* xref:master@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+* xref:PlatformX@partner-manager::index.adoc[Partner Manager]
+* xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 For information about products applicable to a broad range of platforms, see these libraries:
 
-* xref:new-mule@partner-manager:ROOT:index.adoc[Partner Manager]
-* xref:new-mule@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+* xref:Mulesoft@partner-manager:ROOT:index.adoc[Partner Manager]
+* xref:Mulesoft@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 ////
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
