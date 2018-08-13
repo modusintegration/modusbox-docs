@@ -4,7 +4,7 @@ PortX powers integration with products tailored for your platform.
 
 For information about products applicable to a broad range of platforms, see these libraries:
 
-* xref:master@partner-manager:ROOT:index.adoc[Partner Manager]
+* xref:master@partner-manager::index.adoc[Partner Manager]
 * xref:master@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 For information about products applicable to a broad range of platforms, see these libraries:
