@@ -1,6 +1,9 @@
 = Welcome to PortX(TM)!
 
-PortX powers integration with both cross-platform products and products tailored for specific platforms. 
+PortX powers integration with:
+
+* Cross-platform products
+* Products tailored for specific platforms. 
 
 == Cross-Platform
 
