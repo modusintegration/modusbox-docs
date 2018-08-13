@@ -27,7 +27,7 @@ here are a few examples of queries expressed in TRQL:
 name == 'AS2 Receive'
 
 [source]
-documentPropertyValue =like= 'MuleSoft%'
+documentPropertyValue =like= 'GearCo%'
 
 [source]
 processedAt > '2016-04-29 00:00:00' and processedAt <= '2016-04-29 00:00:01'
