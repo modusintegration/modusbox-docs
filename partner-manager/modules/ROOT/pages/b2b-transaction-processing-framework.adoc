@@ -45,7 +45,7 @@ Component definitions follow the diagram.
 [[img-b2b-message-processing-framework]]
 image::b2b-message-processing-framework.png[img-b2b-message-processing-framework,title="B2B Message Processing Framework"]
 
-=== MuleSoft-Provided Components
+=== Components
 
 ==== PortX
 xref:anypoint-partner-manager[PortX] (PortX)
@@ -72,21 +72,21 @@ For example:
 This includes, but is not limited to correlation logic for matching acknowledgements to original messages and identifying duplicate messages.
 
 ==== Partner Manager Connector
-The Partner Manager Connector runs inside xref:mule-user-guide[Mule Runtime] and coordinates all interaction with the PortX APIs (TPM and Tracking).
+The Partner Manager Connector runs inside the ESB and coordinates all interaction with the PortX APIs (TPM and Tracking).
 
 ==== Object Store
-The Object Store is a distributed cache in xref:mule-user-guide[Mule Runtime] that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. Partner Manager Connector manages this caching.
+The Object Store is a distributed cache in the ESB that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. Partner Manager Connector manages this caching.
 
 === Customer-Built Flows
-NOTE: At this time the flows identified below must be developed by the customer. MuleSoft may provide these components as part of the product in the future. However, in order to provide full extensibility and customization, the option will remain for customers to provide their own implementations .
+NOTE: At this time the flows identified below must be developed by the customer. PortX may provide these components as part of the product in the future. However, in order to provide full extensibility and customization, the option will remain for customers to provide their own implementations.
 
 ==== Receive Flows
-Each receive endpoint corresponds to a Mule flow that consists of the appropriate protocol connector and the appropriate endpoint configuration. After receiving a message over a particular protocol, each receive flow:
+Each receive endpoint corresponds to a component that consists of the appropriate protocol connector and the appropriate endpoint configuration. After receiving a message over a particular protocol, each receive flow:
 
 * Tracks the message using the Partner Manager Connector in order to persist a copy of the message as it was received from the partner.
 * Places a queue message with headers populated with any important metadata from the inbound protocol, such as transport headers and filenames, on the Resolve queue.
 
-Receive flows are activated dynamically by a Receive Endpoint listener flow which polls the TPM system for the list of endpoints that should be active. This flow creates a specific endpoint for each flow based on a template for the required transport protocol. It then dynamically instantiates that flow into the Mule Runtime and starts it, so that the required connector endpoint is active and listening for messages.
+Receive flows are activated dynamically by a Receive Endpoint listener flow which polls the TPM system for the list of endpoints that should be active. This flow creates a specific endpoint for each flow based on a template for the required transport protocol. It then dynamically instantiates that flow into the ESB and starts it, so that the required connector endpoint is active and listening for messages.
 
 ==== Resolve Flow
 
@@ -113,19 +113,19 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 * Uses the Partner Manager Connector to track the result from the target service.
 
 ==== Message Payload Persistence Flow
-This is an optional flow that can be implemented to store message payloads at various stages. It receives a MuleSoft message from the Partner Manager Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Flow. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Flow and display the message payload in a pop-up window.
+This is an optional flow that can be implemented to store message payloads at various stages. It receives a message from the Partner Manager Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Flow. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Flow and display the message payload in a pop-up window.
 
 ==== Message Payload Retrieval API Flow
 The Message Payload Retrieval API Flow is used to retrieve the message payload with a URL (which contains the specific transactionId of the message to be retrieved).
 
 ==== Business Service Flows
-For each target internal service, there is typically a Mule Runtime flow that exposes a REST-based API and communicates with the backend system using the appropriate connector or connectors. These Business Service flows are not technically part of the B2B system, but are often part of the overall solution.
+For each target internal service, there is typically a component that exposes a REST-based API and communicates with the backend system using the appropriate connector or connectors. These Business Service flows are not technically part of the B2B system, but are often part of the overall solution.
 
 ==== Replay Flow
 The replay flow coordinates replaying transactions. It polls the Tracking service for transactions that have been marked for replay. When it finds transactions that need to be replayed it:
 
 . Pulls the original message body and headers from the Tracking API and the Message Payload Retrieval API.
-. Constructs a new Mule message with the original payload and headers and passes it to the Resolve flow to reprocess the transaction.
+. Constructs a new message with the original payload and headers and passes it to the Resolve flow to reprocess the transaction.
 . Tracks the fact that the transaction has been replayed.
 . Updates the TPM service to indicate that the replay is complete
 
@@ -146,7 +146,7 @@ A predefined identifier of a specific Partner. There are several types of Partne
 
 === Endpoint
 
-An _receive endpoint_ is a URL to which a document can be sent.
+A _receive endpoint_ is a URL to which a document can be sent.
 
 A _send endpoint_ is a URL from which a document can be sent.
 
@@ -196,7 +196,7 @@ The schema is stored with the <<Document Type>>. It is one of the following, dep
 
 === Map
 
-Script (XSLT or xref:mule-user-guide/v/3.8/dataweave[DataWeave]) for transforming one <<Document Type>> to another <<Document Type>>.
+Script for transforming one <<Document Type>> to another <<Document Type>>.
 
 === Source Channel
 Details pertaining to how to receive a particular document. _Receive_ is relative to the B2B Transaction Processing flows. For example:
