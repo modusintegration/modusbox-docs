@@ -11,7 +11,7 @@ xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz
 [[secta]]
 *A*
 
-API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by Mule applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
+API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
 [[sectb]]
 *B*
