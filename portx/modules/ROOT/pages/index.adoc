@@ -14,7 +14,7 @@ For information about products built to power integration on most Enterprise Ser
 
 == Custom Platforms
 
-For information about built to power integratino on specific platforms, see these libraries.
+For information about products built to power integration on specific platforms, see these libraries.
 
 === Mulesoft
 
