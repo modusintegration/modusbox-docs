@@ -32,7 +32,7 @@ NOTE: For a transaction to be replayable, the second (Replay Status) column must
 A blue *Replay* button appears in the Top Bar.
 +
 
-. Click the blue *Replay* button
+. Click the blue *Replay* button.
 +
 The button becomes unclickable, and a message that the transaction is being replayed appears in its place.
 +
