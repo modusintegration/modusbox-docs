@@ -1,6 +1,6 @@
 name: partner-manager
 title: Partner Manager
-version: 'ESB: Gardem Variety'
+version: 'ESB: Garden Variety'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
