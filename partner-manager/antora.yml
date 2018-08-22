@@ -1,6 +1,6 @@
 name: partner-manager
 title: Partner Manager
-version: 'PlatformX'
+version: 'ESB: Gardem Variety'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
