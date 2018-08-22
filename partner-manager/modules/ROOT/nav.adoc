@@ -40,7 +40,7 @@
 *** xref:lookup-tables.adoc[Lookup Tables]
 
 ////
-** xref:partner-manager-tutorial-td.adoc[Partner Manager Tutorial: Designing a Transaction]
+** xref:partner-manager-tutorial-td.adoc[Partner Manager Tutorial]
 ////
 
 ** xref:partner-manager-apis.adoc[Partner Manager APIs]
