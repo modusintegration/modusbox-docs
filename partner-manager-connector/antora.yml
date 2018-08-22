@@ -1,10 +1,6 @@
 name: partner-manager-connector
 title: Partner Manager Connector
-<<<<<<< HEAD
-version: 'PlatformX'
-=======
 version: 'Mulesoft'
->>>>>>> ffc1db0643771fedcfeca738edbd5f7325cb99d8
 start_page: ROOT:partner-manager-connector.adoc
 nav:
 - modules/ROOT/nav.adoc
