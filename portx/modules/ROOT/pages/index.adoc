@@ -9,8 +9,8 @@ PortX powers integration with:
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
-* xref:PlatformX@partner-manager::index.adoc[Partner Manager]
-* xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+* xref:'ESB: Other'@partner-manager::index.adoc[Partner Manager]
+* xref:'ESB: Other'@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 == Custom Platforms
 
@@ -18,8 +18,8 @@ For information about products built to power integration on specific platforms,
 
 === Mulesoft
 
-* xref:Mulesoft@partner-manager:ROOT:index.adoc[Partner Manager (Mulesoft)]
-* xref:Mulesoft@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
+* xref:'ESB: Mulesoft'@partner-manager:ROOT:index.adoc[Partner Manager (Mulesoft)]
+* xref:'ESB: Mulesoft'@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
 
 ////
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
