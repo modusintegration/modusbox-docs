@@ -1,5 +1,5 @@
 name: release-notes
-version: 'Mulesoft'
+version: 'Mulesoft ESB'
 title: Release Notes
 start_page: ROOT:release-notes.adoc
 nav:
