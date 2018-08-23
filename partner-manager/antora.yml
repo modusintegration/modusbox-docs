@@ -1,6 +1,6 @@
 name: partner-manager
 title: Partner Manager
-version: 'ESB: Garden Variety'
+version: 'ESB: Other'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
