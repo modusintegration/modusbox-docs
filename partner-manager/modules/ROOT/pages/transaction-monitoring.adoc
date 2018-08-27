@@ -19,7 +19,7 @@ The <<img-transaction-monitoring>> appears.
 
 [[img-transaction-monitoring]]
 
-image::transaction-monitoring.png[img-transaction-monitoring, title="Transaction Monitoring Page"]
+image:transaction-monitoring.png[img-transaction-monitoring, title="Transaction Monitoring Page"]
 
 [step=2]
 
