@@ -35,10 +35,10 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
-Anypoint Platform Header:: At the top of every page.
+PortX Banner:: At the top of every page.
 * Menu on the left enables you to switch to other Anypoint applications.
 * *?* button provides access to support resources.
-* _Master Organization_ name appears at top right. For more information, see xref:access-management/organizationl[Organization].
+* _Organization name_ (*GearCo* in appears leftmost among the grouip. For more information, see xref:access-management/organizationl[Organization].
 
 Navigation Sidebar (left):: Use this sidebar to move from page to page.
 
