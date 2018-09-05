@@ -9,8 +9,8 @@ PortX powers integration with:
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
-* xref:PlatformX@partner-manager::index.adoc[Partner Manager]
-* xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+* xref:Other ESB@partner-manager::index.adoc[Partner Manager]
+* xref:Other ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
 == Custom Platforms
 
