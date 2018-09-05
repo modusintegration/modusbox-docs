@@ -18,7 +18,7 @@ For information about products built to power integration on specific platforms,
 === Mulesoft
 
 * xref:Mulesoft ESB@partner-manager:ROOT:index.adoc[Partner Manager (Mulesoft)]
-* xref:Mulesoft ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
+* xref:Mule ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
 
 ////
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
