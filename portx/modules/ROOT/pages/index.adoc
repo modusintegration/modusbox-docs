@@ -2,7 +2,38 @@
 
 PortX powers integration with products designed for use with an Enterprise Service Bus (ESB). 
 
-
+|===
+| Attributes
+ 
+|
+ifdef::intermediate[:intermediate:]
+ifndef::intermediate[:intermediate!:]
+ 
+|
+ifdef::advanced[:advanced:]
+ifndef::advanced[:advanced!:]
+ 
+|===
+ 
+ 
+ifdef::advanced[]
+This is only visible if we
+set the advanced attribute.
+endif::advanced[]
+ 
+ifdef::intermediate,advanced[]
+Here is some content for the
+intermediate or advanced readers,
+which is visible if the attributes
+intermediate or advanced are set.
+endif::intermediate,advanced[]
+ 
+ifdef::intermediate+advanced[]
+Here is some content for the
+intermediate and advanced readers,
+which is visible if the attributes
+intermediate AND advanced are set.
+endif::intermediate+advanced[]
 
 == General ESB
 
