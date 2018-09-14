@@ -4,19 +4,22 @@
 Partner Manager provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
 
 
-////
 :version: {version}
  
+ifeval::[2 > 1]
+== Transaction Monitoring for Mule
+endif::[]
+
  
-ifeval::[{version} = Other ESB]
+ 
+ifeval::[{version} == "Other ESB"]
 == Transaction Monitoring for Other ESB
 endif::[]
  
  
-ifeval::[{version} = Mule]
+ifeval::[{version} == "Mule"]
 == Transaction Monitoring for Mule
 endif::[]
-////
 
 
 
