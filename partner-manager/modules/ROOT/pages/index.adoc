@@ -3,7 +3,7 @@
 
 Partner Manager provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
 
-== Transaction Monitoring and so on
+== Transaction Monitoring
 
 Because B2B transactions often communicate contractual obligations between companies, it is desirable (and often necessary) to track all transmissions sent or received, storing the  transmission content as well as metadata (such as data and time the transmission was sent or received, the identity of the partner, and success or failure of processing). Partner Manager provides a simple, secure, and integrated mechanism for tracking B2B transactions. Uses for this data include:  
 
