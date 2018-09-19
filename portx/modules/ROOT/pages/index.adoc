@@ -1,25 +1,24 @@
 = Welcome to PortX(TM)!
 
-PortX powers integration with:
+PortX powers integration with products designed for use with an Enterprise Service Bus (ESB). 
 
-* Cross-platform products
-* Products tailored for specific platforms. 
 
-== Cross-Platform
+
+== General ESB
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
-* xref:PlatformX@partner-manager::index.adoc[Partner Manager]
-* xref:PlatformX@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
+* xref:Other ESB@partner-manager::index.adoc[Partner Manager]
+* xref:Other ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
-== Custom Platforms
+== Specific ESB
 
 For information about products built to power integration on specific platforms, see these libraries.
 
 === Mulesoft
 
-* xref:Mulesoft@partner-manager:ROOT:index.adoc[Partner Manager (Mulesoft)]
-* xref:Mulesoft@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
+* xref:Mulesoft ESB@partner-manager:ROOT:index.adoc[Partner Manager (Mulesoft)]
+* xref:Mule ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector (Mulesoft)]
 
 ////
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]

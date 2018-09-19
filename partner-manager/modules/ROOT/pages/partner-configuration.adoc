@@ -15,11 +15,10 @@ NOTE: Your company may have been set up during the provisioning process. If so, 
 
 == Get Started
 
-. xref:partner-manager#start-partner-manager[Start Partner Manager].
+. xref:index.adoc#start-partner-manager[Start Partner Manager].
 The <<index.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
-
 
 [[img-partner-configuration]]
 image::partner-configuration.png[img-partner-configuration,title="Partner Configuration Page"]
@@ -87,7 +86,7 @@ These partners can be imported back into PortX later; see <<Importing Partners>>
 
 === To Export a Partner
 
-. xref:partner-manager#start-partner-manager[Start Partner Manager].
+. xref:index.adoc#start-partner-manager[Start Partner Manager].
 The <<index.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
@@ -107,7 +106,7 @@ For example, *partners_export_2016-07-12.txt*
 
 == Importing Partners
 
-PortX provides the ability to import Partners that have been exported (see <<Exporting Partners>> for more information.
+PortX provides the ability to import Partners that have been exported (see <<Exporting Partners>> for more information).
 Only users with the appropriate role or permissions are able to import partners.
 
 NOTE: If a specific partner exists in an environment and you import that partner into the environment, data from the imported partner replaces the data of the existing partner.

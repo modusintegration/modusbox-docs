@@ -6,7 +6,7 @@ This section identifies scenarios in which Partner Manager (APM) is useful to tr
 
 == Replaying an Incomplete Transaction
 
-On thexref:monitor-b2b-transactions[B2B Transactions Page], the Transactions View includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
+On the xref:monitor-b2b-transactions[B2B Transactions Page], the Transactions View includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
 
 Green checkmark:: Indicates a complete transaction.
 Red exclamation point (*!*):: Indicates a transaction has one or more errors that prevented completion.
@@ -31,7 +31,8 @@ NOTE: For a transaction to be replayable, the second (Replay Status) column must
 +
 A blue *Replay* button appears in the Top Bar.
 +
-. Click the blue *Replay* button
+
+. Click the blue *Replay* button.
 +
 The button becomes unclickable, and a message that the transaction is being replayed appears in its place.
 +
@@ -54,7 +55,7 @@ If you need to continue replaying the transaction, you can do so with the same r
 
 If you see an atypical number of errors of a similar nature, you can review all of them simultaneously.
 
-The *Dashboard* at the top of thexref:transaction-monitoring[Transaction Monitoring] provides a summary of what has happened in a given timeframe (the default is the current day) including how many errors have been detected during that timeframe.
+The *Dashboard* at the top of the xref:transaction-monitoring[Transaction Monitoring] provides a summary of what has happened in a given timeframe (the default is the current day) including how many errors have been detected during that timeframe.
 
 == To View Error Information in the Dashboard
 
@@ -69,7 +70,7 @@ The navigation buttons at top right enable you to view the transactions with whi
 
 == Transport Problem Identification
 
-If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter in combination with the Transmissions View on thexref:transaction-monitoring[Transaction Monitoring]. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
+If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter in combination with the Transmissions View on the xref:transaction-monitoring[Transaction Monitoring]. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
 
 You can find additional relevant information in the Transmissions Detail Pane to the right. In the Detail Pane, you can see what happened with individual transactions with which transmissions were involved through a navigation button in the upper corner.
 
@@ -83,7 +84,7 @@ Often, a partner requires specific information relating to a transaction, transm
 
 == Finding Transmissions
 
-. On *View Dropdown List* of thexref:monitor-b2b-transactions[B2B Transactions Page], choose *Transmissions*.
+. On *View Dropdown List* of the xref:monitor-b2b-transactions[B2B Transactions Page], choose *Transmissions*.
 +
 The Transmissions View appears.
 +
@@ -101,7 +102,7 @@ If you need to find out more information about a transmission or just where it e
 
 == Finding Documents
 
-. On *View Dropdown List* of thexref:monitor-b2b-transactions[B2B Transactions Page], choose *Documents*.
+. On *View Dropdown List* of the xref:monitor-b2b-transactions[B2B Transactions Page], choose *Documents*.
 +
 The Documents View appears.
 . In the *Document ID* filter, enter the Document ID that the partner provided you.

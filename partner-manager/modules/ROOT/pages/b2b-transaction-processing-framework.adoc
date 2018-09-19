@@ -17,12 +17,12 @@ NOTE: Processing stages and their sequence can vary between implementations.
 image::functional-architecture.png[img-functional-architecture,title="Functional Architecture"]
 === Receive
 
-Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints[_endpoint_] configured to receive the message.
+Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints.adoc[endpoint] configured to receive the message.
 
 === Resolve
 Using data that may be inside a document or in incoming metadata (such as HTTP headers or filenames), this stage identifies the partner and the transaction type, then uses these to retrieve corresponding processing details from PortX. These details include:
 
-* xref:endpoints[Endpoint] to which the transformed message is to be delivered
+* xref:endpoints.adoc[Endpoint] to which the transformed message is to be delivered
 * <<Schema>> to use for validation
 * <<Map>> to transform the message into the required target format
 

@@ -1,6 +1,6 @@
 name: partner-manager-connector
 title: Partner Manager Connector
-version: 'PlatformX'
+version: 'Other ESB'
 start_page: ROOT:partner-manager-connector.adoc
 nav:
 - modules/ROOT/nav.adoc

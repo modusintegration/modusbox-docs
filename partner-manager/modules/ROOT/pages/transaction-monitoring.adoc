@@ -10,16 +10,15 @@ You can:
 * Review and monitor errors and acknowledgements.
 * Search for metadata
 
-This page identifies the PortX components you use to monitor transactions; see also xref:tracking-scenarios[Tracking Scenarios].
+This page identifies the PortX components you use to monitor transactions; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
 
 == Get Started
 
-. xref:anypoint-partner-manager#start-anypoint-manager[Start PortX].
-The <<img-transaction-monitoring>> appears.
+. xref:index.adoc#start-anypoint-manager[Start PortX].
+The xref:img-transaction-monitoring[] appears.
 
 [[img-transaction-monitoring]]
-
-image::transaction-monitoring.png[img-transaction-monitoring, title="Transaction Monitoring Page"]
+image::transaction-monitoring.png[img-transaction-monitoring,title="Transaction Monitoring Page"]
 
 [step=2]
 
@@ -35,10 +34,10 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
-Anypoint Platform Header:: At the top of every page.
+PortX Banner:: At the top of every page.
 * Menu on the left enables you to switch to other Anypoint applications.
 * *?* button provides access to support resources.
-* _Master Organization_ name appears at top right. For more information, see xref:access-management/organization[Organization].
+* _Organization name_ (*GearCo* in appears leftmost among the grouip. For more information, see xref:access-management/organizationl[Organization].
 
 Navigation Sidebar (left):: Use this sidebar to move from page to page.
 
@@ -52,4 +51,4 @@ Detail Sidebar (right)::
 ** Clicking on this will add the ID to your clip board.
 
 Central Pane:: Presents content associated with the selection in the Navigation Sidebar. +
-For information about elements that can appear within this pane, see xref:central-pane-elements[Central Pane elements].
+For information about elements that can appear within this pane, see xref:central-pane-elements.adoc[Central Pane elements].
