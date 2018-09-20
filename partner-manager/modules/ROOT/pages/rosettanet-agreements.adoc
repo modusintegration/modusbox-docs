@@ -12,7 +12,7 @@ The <<img-agreements>> appears.
 
 [[img-agreements]]
 
-image::agreements.png[img-agreements, title="RosettaNet Agreements Page"]
+image::agreements.png[img-agreements,title="RosettaNet Agreements Page"]
 
 [start=4]
 

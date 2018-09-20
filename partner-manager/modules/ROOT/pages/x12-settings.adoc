@@ -12,7 +12,7 @@ The <<img-x12-settings>> appears.
 
 [[img-x12-settings]]
 
-image::x12-settings.png[img-x12-settings, title="X12 Settings Page"]
+image::x12-settings.png[img-x12-settings,title="X12 Settings Page"]
 
 
 * xref:x12-identity-settings.adoc[X12 Identity Settings]
