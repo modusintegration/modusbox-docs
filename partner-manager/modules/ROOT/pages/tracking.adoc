@@ -6,7 +6,7 @@ Payload:: The content of the message
 
 Metadata:: Data about the message
 
-The xref:b2b-transaction-processing-framework#partner-manager-connector[Partner Manager Connector] posts:
+The xref:b2b-transaction-processing-framework.adoc#partner-manager-connector[Partner Manager Connector] posts:
 
 * Metadata from
 xref:b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
@@ -15,7 +15,7 @@ to the xref:b2b-transaction-processing-framework#tracking-api[Tracking API]
 xref:b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
  to Tracking Data Storage.
 
-The customer then uses xref:partner-manager.adoc[Partner Manager] to request and view metadata and payload data, a process which includes the xref:b2b-transaction-processing-framework#tpmapi[Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
+The customer then uses xref:index.adoc[Partner Manager] to request and view metadata and payload data, a process which includes the xref:b2b-transaction-processing-framework#tpmapi[Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
 
 
 
