@@ -122,7 +122,7 @@ include::_partials/tutorial/supplier/td-target-channel-aaz.adoc[]
 
 === Create the Source Document Type for the Target Channel
 
-The terms  _document_, _file_, and _message_ are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term document to represent these instances. type new stuff 
+The terms  _document_, _file_, and _message_ are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term document to represent these instances.
 
 Partner Manager enables you to categorize and configure specific _Document Types_. In this section, you create a Source Document Type for the Target Channel.
 
