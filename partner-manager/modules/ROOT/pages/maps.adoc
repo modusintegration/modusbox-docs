@@ -1,6 +1,14 @@
 = Maps
 
+Partner Manager facilitates EDI mapping with easy-to-use EDI mapping tools, the most important of which is a _map_. 
+
 Configuring a _map_ for a partner enables you to specify:
+
+* Map name
+* Source Document
+* Target Document
+* Mapping Type 
+* Script 
 
 include::{partialsdir}/edit-settings.adoc[]
 [start=3]
