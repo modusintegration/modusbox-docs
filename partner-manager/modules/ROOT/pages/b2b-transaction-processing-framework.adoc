@@ -57,7 +57,7 @@ is the B2B Transaction Processing Framework user interface, enabling you to:
 [[tpmapi]]
 ===== Trading Partner Management (TPM) API
 
-The Trading Partner Management (TPM) API manages storage and retrieval of configuration data for partners, including the details for processing their transactions.
+The Trading Partner Management (TPM) API performs all the functions of an EDI Trading Partner Manager: That is, it manages storage and retrieval of configuration data for partners, including the details for processing their transactions.
 
 ===== Tracking API
 The Tracking API manages storage and retrieval of metadata from processed transactions. +
