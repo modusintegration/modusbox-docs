@@ -1,6 +1,6 @@
 name: partner-manager
 title: Partner Manager
-version: 'Other ESB'
+version: 'Other-ESB'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
