@@ -1,6 +1,6 @@
 name: release-notes
 title: Release Notes
-version: 'Other ESB'
+version: 'Other-ESB'
 start_page: ROOT:release-notes.adoc
 nav:
 - modules/ROOT/nav.adoc
