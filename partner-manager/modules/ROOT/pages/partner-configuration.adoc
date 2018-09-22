@@ -51,22 +51,22 @@ Notice that the left-hand navigation pane of the xref:img-company-information[] 
 To add or edit settings for any of these settings types, click the page name in the left-hand navigation pane. See the following sections for information about the settings on each page.
 
 === Partner Settings
-** xref:company-information[Company Information]
-** xref:identifiers[Identifiers]
+** xref:company-information.adoc[Company Information]
+** xref:identifiers.adoc[Identifiers]
 
 
 === Default Settings for Message Format
-** xref:x12-settings[X12 Settings]
-** xref:edifact-settings[EDIFACT]
-** xref:csv-settings[CSV Settings]
+** xref:x12-settings.adoc[X12 Settings]
+** xref:edifact-settings.adoc[EDIFACT]
+** xref:csv-settings.adoc[CSV Settings]
 
 === Configuration Settings
-** xref:document-types[Document Types]
-** xref:endpoints[Endpoints]
-** xref:maps[Maps]
-** xref:channels[Channels]
-** xref:routes[Routes]
-** xref:partner-conversations[Partner Conversations]
+** xref:document-types.adoc[Document Types]
+** xref:endpoints.adoc[Endpoints]
+** xref:maps.adoc[Maps]
+** xref:channels.adoc[Channels]
+** xref:routes.adoc[Routes]
+** xref:partner-conversations.adoc[Partner Conversations]
 
 
 == Saving Settings

@@ -1,0 +1,12 @@
+name: partner-manager
+title: Partner Manager
+<<<<<<< HEAD
+version: 'Mulesoft ESB'
+=======
+version: 'Other ESB'
+>>>>>>> 568ec0f80015e8adf9abc92779ade73a44b2687a
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc
+
+

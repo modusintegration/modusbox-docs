@@ -1,18 +1,17 @@
 = Welcome to PortX(TM)!
 
-PortX powers integration with:
+PortX powers integration with products designed for use with an Enterprise Service Bus (ESB). 
 
-* Cross-platform products
-* Products tailored for specific platforms. 
 
-== Cross-Platform
+
+== General ESB
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
 * xref:Other ESB@partner-manager::index.adoc[Partner Manager]
 * xref:Other ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 
-== Custom Platforms
+== Specific ESB
 
 For information about products built to power integration on specific platforms, see these libraries.
 

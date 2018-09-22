@@ -14,7 +14,7 @@ This page identifies the PortX components you use to monitor transactions; see a
 
 == Get Started
 
-. xref:partner-manager.adoc#start-anypoint-manager[Start PortX].
+. xref:anypoint-partner-manager#start-anypoint-manager[Start PortX].
 The <<img-transaction-monitoring>> appears.
 
 [[img-transaction-monitoring]]
@@ -38,7 +38,7 @@ The <<img-transaction-monitoring>> consists of the following elements:
 Anypoint Platform Header:: At the top of every page.
 * Menu on the left enables you to switch to other Anypoint applications.
 * *?* button provides access to support resources.
-* _Master Organization_ name appears at top right. For more information, see xref:access-management/organizationl[Organization].
+* _Master Organization_ name appears at top right. For more information, see xref:access-management/organization[Organization].
 
 Navigation Sidebar (left):: Use this sidebar to move from page to page.
 

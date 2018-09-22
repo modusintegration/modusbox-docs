@@ -32,10 +32,11 @@ Go to the B2B Transmissions area of PortX to view tracked events and messages.
 
 
 // Promotion Scenarios
+include::_sources/promotion-scenarios.adoc[leveloffset=+1]
 
 include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
 
+// removed image PromoteIDsOffCertsOn kris 7/1/2017
 
-// Tracking Scenarios
 
 include::{partialsdir}/tracking-scenarios.adoc[leveloffset=+1]

@@ -17,12 +17,12 @@ NOTE: Processing stages and their sequence can vary between implementations.
 image::functional-architecture.png[img-functional-architecture,title="Functional Architecture"]
 === Receive
 
-Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints[_endpoint_] configured to receive the message.
+Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints.adoc[endpoint] configured to receive the message.
 
 === Resolve
 Using data that may be inside a document or in incoming metadata (such as HTTP headers or filenames), this stage identifies the partner and the transaction type, then uses these to retrieve corresponding processing details from PortX. These details include:
 
-* xref:endpoints[Endpoint] to which the transformed message is to be delivered
+* xref:endpoints.adoc[Endpoint] to which the transformed message is to be delivered
 * <<Schema>> to use for validation
 * <<Map>> to transform the message into the required target format
 
@@ -97,7 +97,7 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 ==== Transform Flow
 
 * Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
-* Does any necessary data translation, such as resolving partner values to your company's values using xref:[lookup tables] functions, and flows.
+* Does any necessary data translation, such as resolving partner values to your company's values using xref:lookup-tables.adoc[lookup tables], functions, and flows.
 * Uses the Partner Manager Connector to track the mapped, canonical version of the message.
 * Passes the updated message body to the next processing stage.
 
@@ -150,13 +150,13 @@ A _receive endpoint_ is a URL to which a document can be sent.
 
 A _send endpoint_ is a URL from which a document can be sent.
 
-For information about how endpoints are created, see xref:resolution-processes#endpoint-resolution[Endpoint Resolution].
+For information about how endpoints are created, see xref:resolution-processes.adoc#endpoint-resolution[Endpoint Resolution].
 
 === Document, Message, File
 These terms are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term _document_ to represent these instances.
 
 === Document Type
-xref:document-types[Document Types] are configured in PortX. A given document type
+xref:document-types.adoc[Document Types] are configured in PortX. A given document type
 is identified by the following pieces of information:
 
 * Standard
@@ -168,7 +168,7 @@ is identified by the following pieces of information:
 NOTE: For standards that don’t have version, such as XML and CSV, *Version* is not part of the Document Type configuration.
 
 * Message Type
-** X12 - 850, 855, 856, etc.
+** X12 - 850, 855, 856, etc.F
 ** RosettaNet - 3B3
 ** XML - root node name, namespace
 ** CSV, JSON - Name given to the transaction, not necessarily contained in the message
@@ -239,26 +239,26 @@ For an outbound transaction, the document might originate in the canonical forma
 
 == User Interface
 
-The PortX user interface enables xref:partner-configuration[partner configuration], xref:administration[administration] and detailed xref:transaction-monitoring[transaction monitoring].
+The PortX user interface enables xref:partner-configuration.adoc[partner configuration], xref:administration.adoc[administration] and detailed xref:transaction-monitoring.adoc[transaction monitoring].
 
-=== xref:partner-configuration[Partner Configuration]
+=== xref:partner-configuration.adoc[Partner Configuration]
 
 * Format Defaults
-** xref:x12-settings[X12 Settings]
-** xref:edifact-settings[EDIFACT Settings]
-** xref:csv-settings[CSV Settings]
-* xref:document-types[Document Types]
-* xref:endpoints[Endpoints]
-* xref:maps[Maps]
-* xref:channels[Channels]
-* xref:routes[Routes]
-* xref:partner-conversations[Partner Conversations]
+** xref:x12-settings.adoc[X12 Settings]
+** xref:edifact-settings.adoc[EDIFACT Settings]
+** xref:csv-settings.adoc[CSV Settings]
+* xref:document-types.adoc[Document Types]
+* xref:endpoints.adoc[Endpoints]
+* xref:maps.adoc[Maps]
+* xref:channels.adoc[Channels]
+* xref:routes.adoc[Routes]
+* xref:partner-conversations.adoc[Partner Conversations]
 
-=== xref:administration[Administration]
-* xref:environments[Environments]
-* xref:error-codes[Error Codes]
-* xref:security[Security]
-* xref:lookup-tables[Lookup Tables]
+=== xref:administration.adoc[Administration]
+* xref:environments.adoc[Environments]
+* xref:error-codes.adoc[Error Codes]
+* xref:security.adoc[Security]
+* xref:lookup-tables.adoc[Lookup Tables]
 
 === xref:transaction-monitoring[Transaction Monitoring]
 * Search and view results of processed transactions.
