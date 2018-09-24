@@ -49,12 +49,12 @@ image::anypoint-platform-application-selection.png[img-anypoint-platform-applica
 
 . On the Anypoint Platform application selection screen, in the *Manage* drop-down listbox, click *Partner Manager*.
 +
-The xref:img-partner-manager-start[] page appears.
+The xref:img-apm-start[] page appears.
 +
 For more information, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
 
-[[img-partner-manager-start]]
-image::partner-manager-start.png[img-partner-manager-start,title="Transaction Monitoring Page"]
+[[img-apm-start]]
+image::apm-start.png[img-apm-start,title="Transaction Monitoring Page"]
 
 [start=4]
 
