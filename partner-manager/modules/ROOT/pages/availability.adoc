@@ -9,14 +9,14 @@ include::{partialsdir}/edit-settings.adoc[]
 +
 The <<img-availability>> appears.
 
-[[img-availabilty]]
+[[img-availability]]
 
-image::availability.png[img-availability, title="Availability Page"]
+image::availity.png[img-availability, title="Availability Page"]
 
 
 == To Add a New Partner Status Window
 
-. On the <<availability>>, in the *Partner Status Windows* section, click *Create New Window*. +
+. On the <<img-availability>>, in the *Partner Status Windows* section, click *Create New Window*. +
 The <<img-partner-status-window-add>> appears.
 
 [[img-partner-status-window-add]]
