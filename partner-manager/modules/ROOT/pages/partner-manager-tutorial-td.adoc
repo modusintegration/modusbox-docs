@@ -33,7 +33,7 @@ Verify that you have the following:
 NOTE: If you are unable to access Partner Manager, see your Mulesoft account administrator for assistance.
 
 * Anypoint Studio with Mule 3.8.4 and the following connectors:
-** Partner Manager 6.5.0
+** Partner Manager 7.0.0
 ** AS2 v2.1.0
 ** FTPS v2.0.0
 ** EDIFACT EDI
@@ -151,7 +151,7 @@ The <<img-td-save-transaction-aaz>> appears.
 
 [[img-td-save-transaction-aaz]]
 
-image::yc/td-save-transaction-aaz.png[img-td-save-transaction-aaz,title="Save transaction Page"]
+image::td-save-transaction-aaz.png[img-td-save-transaction-aaz,title="Save transaction Page"]
 
 
 [start=3]
@@ -320,9 +320,9 @@ image::partner/td-new-map-acme.png[img-td-new-map-acme, title="Map Page"]
 +
 The Pick a document Page appears.
 
-. On the Pick a document Page, click the row that corresponds to the Target Document Type - that is, the row for which the value in the *Name* column is  *JSON-PurchaseOrder-AAZFasteners*.
+. On the Pick a document Page, click the row that corresponds to the Target Document Type - that is, the row for which the value in the *Name* column is  *JSON-PurchaseOrder(AAZFasteners)*.
 +
-The <<img-td-new-map-acme>> appears, with *JSON-PurchaseOrder-AAZFasteners* in the *Target Document* box.
+The <<img-td-new-map-acme>> appears, with *JSON-PurchaseOrder(AAZFasteners)* in the *Target Document* box.
 . In the *Mapping Type* box, click *DataWeave*.
 +
 For more information, see xref:mule-user-guide/v/3.8/dataweave[DataWeave].
@@ -374,6 +374,7 @@ image::partner/td-source-channel-in-progress-map-added-script-added-acme.png[img
 ////
 
 
+////
 === Add the Target Channel
 
 . On the <<img-td-source-channel-in-progress-map-added-acme>>, click *Use Existing Channel*.
@@ -386,6 +387,13 @@ The <<img-td-source-channel-in-progress-map-added-acme>> appears, displaying the
 
 
 The <<img-td-save-transaction>> appears.
+////
+
+=== Save Transaction
+
+. Click save button on top right side to save the transaction.
+
+
 
 [[img-td-save-transaction]]
 
@@ -425,7 +433,7 @@ In order to identify your Partner Manager environment and its API Key to Anypoin
 
 === Identify or Create an API Key
 
-In order to create a Mule project, you must enter an xref:glossary#secta[API Key] and an .
+In order to connect your application to Partner Manager, you must enter an xref:glossary#secta[API Key] and environment Id.
 
 If you have an existing API Key, use it. If you do not know the API Key, consult your organization's MuleSoft administrator.
 

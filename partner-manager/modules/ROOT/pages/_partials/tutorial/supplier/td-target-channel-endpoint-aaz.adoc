@@ -17,10 +17,11 @@ From the list, click *HTTP*.
 Notice that the the *Type* box, is populated with the appropriate value (*SEND*).
 +
 The <<img-td-new-endpoint-aaz>> expands to include more settings.
+. Uncheck *Uses Reusable Endpoint* checkbox.
 . Scroll down to the *Operation Settings* section.
 +
 In the *Host* box, type *0.0.0.0*.
-. In the *Port* box, type *8086*.
+. In the *Port* box, type *8086*    (If port 8086 is not available in your machine then choose the one available).
 . In the *Path* box, type */PurchaseOrder*.
 . In the *Authentication* listbox, click the down-arrow to expand the list of available methods.
 +

@@ -4,7 +4,7 @@ The xref:img-company-information-aaz[] appears.
 
 [[img-company-information-aaz, Company Information Page]]
 
-image::yc/company-information-aaz.png[img-company-information-yc, title="Company Information Page"]
+image::company-information-aaz.png[img-company-information-yc, title="Company Information Page"]
 
 [start=2]
 
@@ -14,7 +14,7 @@ The <<img-identifiers-aaz>> appears.
 
 [[img-identifiers-aaz, Identifiers Page]]
 
-image::yc/identifiers-aaz.png[img-identifiers-aaz, title="Identifiers Page"]
+image::identifiers-aaz.png[img-identifiers-aaz, title="Identifiers Page"]
 
 [start=3]
 
@@ -50,6 +50,6 @@ The <<img-identifiers-x12-added-aaz2>> appears.
 
 [[img-identifiers-x12-added-aaz2, Identifiers Page (Identifier Added)]]
 
-image::yc/identifiers-x12-added-aaz2.png[img-identifiers-x12-added-aaz2, title="Identifiers Page (X12-ISA Identifier Added)"]
+image::identifiers-x12-added-aaz2.png[img-identifiers-x12-added-aaz2, title="Identifiers Page (X12-ISA Identifier Added)"]
 
 Note that the Identifier you added in the preceding steps (*X12-ISA*) now appears.

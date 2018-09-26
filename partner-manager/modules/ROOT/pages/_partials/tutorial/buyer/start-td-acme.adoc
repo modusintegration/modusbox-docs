@@ -1,4 +1,4 @@
-. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:img-endpoints[] (or any other APM Configuration page), click *Transaction Designer*.
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:img-endpoints[] (or any other APM Configuration page), click *Transaction Designs*.
 +
 The <<img-td-acme>> appears.
 
@@ -18,7 +18,7 @@ image::partner/td-pick-a-template-acme.png[img-td-pick-a-template-acme, title="P
 
 [start=3]
 
-. On the <<img-td-pick-a-template-acme>>, select *TargetPurchaseOrder*. 
+. On the <<img-td-pick-a-template-acme>>, select *JSON-PurchaseOrder*. 
 +
 The <<img-td-new-acme>> appears.
 
