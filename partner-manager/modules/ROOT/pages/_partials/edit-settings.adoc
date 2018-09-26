@@ -1,4 +1,5 @@
 
+
 == Get Started
 
 . xref:index.adoc#start-partner-manager[Start Partner Manager].
