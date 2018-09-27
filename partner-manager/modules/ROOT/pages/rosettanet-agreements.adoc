@@ -25,12 +25,14 @@ image::agreements.png[img-agreements,title="RosettaNet Agreements Page"]
 
 . On the <<img-agreements>>, click the Agreement you want to edit.
 +
-The <<img-agreement-edit>> appears.
+The Existing Agreement Page appears.
 
 
+////
 [[img-agreement-edit]]
 
 image::agreement-edit.png[img-agreement-edit, title="Existing Agreement Page"]
+////
 
 . Edit settings as appropriate. +
 For information about editing specific settings, see <<Add a New Agreement>>.
