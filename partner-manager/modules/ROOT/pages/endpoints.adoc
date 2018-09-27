@@ -22,9 +22,9 @@ image::endpoints.png[img-endpoints, title="Endpoints Page"]
 
 . On the <<img-endpoints>>, in the *Name* column, click the endpoint you want to edit.
 +
-The <<img-endpoint-settings-a>> appears. The settings that appear depend on the values for *Protocol* and *Type*.
+The <<img-endpoint-settings>> appears. The settings that appear depend on the values for *Protocol* and *Type*.
 +
-[[img-endpoint-settings-a]]
+[[img-endpoint-settings]]
 image::endpoint-settings.png[img-endpoint-settings, title="Endpoint Page"]
 
 . To edit the Endpoint Name, Protocol, or Type, go to xref:choose[Choose Endpoint Name, Protocol, and Type].
