@@ -1,7 +1,6 @@
 = Error Codes
 
-include::{partialsdir}/edit-home-partner-settings.adoc[]
-
+include::{partialsdir}/edit-settings.adoc[]
 [start=3]
 
 . On the Administration Page, in the left hand navigation pane, click *Error Codes*.
