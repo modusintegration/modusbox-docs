@@ -32,14 +32,10 @@ Verify that you have the following:
 +
 NOTE: If you are unable to access Partner Manager, see your Mulesoft account administrator for assistance.
 
-* Anypoint Studio with Mule 3.8.4 and the following connectors:
-** Partner Manager 6.5.0
-** AS2 v2.1.0
-** FTPS v2.0.0
-** EDIFACT EDI
-** RosettaNet
-** X12 v1.2.2
-** Object Store v2.1.0
+* Anypoint Studio with Mule 3.9.0 and the following connectors:
+** Partner Manager 7.0.0
+** AS2 v2.3.0
+** X12 v1.3.2
 
 === Download Tutorial Materials
 
@@ -47,8 +43,8 @@ NOTE: If you are unable to access Partner Manager, see your Mulesoft account adm
 . Click *Partner Manager Tutorial Materials.zip* to expand it.
 
 == Get Started
-
 . xref:index.adoc#start-partner-manager[Start Partner Manager].
+If you are logging in for the first time, you will see pop up window to select *Company* and *Business Group*. 
 The <<index.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
 The xref:img-partner-configuration[] appears.
@@ -61,12 +57,12 @@ image::partner-configuration.png[img-partner-configuration,title="Partner Config
 
 This tutorial works with two partners: a Supplier and a Buyer.
 
-The Supplier is *AAZFasteners*, a fictional retailer of nuts and bolts, also identified on the xref:img-partner-configuration[] as *YOUR COMPANY*.
+The Supplier is *GearCo*, a fictional retailer of nuts and bolts, also identified on the xref:img-partner-configuration[] as *YOUR COMPANY*.
 
-NOTE: In your copy of Partner Manager, *YOUR COMPANY* is probably not named *AAZFasteners*. However, for illustration purposes, we refer to *YOUR COMPANY* as *AAZFasteners* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *AAZFasteners*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
+NOTE: In your copy of Partner Manager, *YOUR COMPANY* is probably not named *GearCo*. However, for illustration purposes, we refer to *YOUR COMPANY* as *GearCo* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *GearCo*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
 
 The other partner in this tutorial is the _Buyer_, a fictional retailer of home supplies. In <<Create the Buyer Partner>>, we create this partner, identifying it as *AcmeHomeSupply*.
-In the tutorial, AcmeHomeSupply uses Partner Manager to order products from AAZFasteners. In the following sections, you will:
+In the tutorial, AcmeHomeSupply uses Partner Manager to order products from GearCo. In the following sections, you will:
 
 * <<Add Identifiers>>
 
@@ -143,22 +139,22 @@ include::_partials/tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
 
 === Save the Transaction
 
-. In the *Transaction Name* box, type *TargetPurchaseOrder*.
+. In the *Transaction Name* box, type *TargetPurchaseOrderTemplate*.
 . Click *Save Template*.
 +
-The <<img-td-save-transaction-aaz>> appears.
+The <<img-td-save-transaction-gearco>> appears.
 
 
-[[img-td-save-transaction-aaz]]
+[[img-td-save-transaction-gearco]]
 
-image::yc/td-save-transaction-aaz.png[img-td-save-transaction-aaz,title="Save transaction Page"]
+image::yc/td-save-transaction-gearco.png[img-td-save-transaction-gearco,title="Save transaction Page"]
 
 
 [start=3]
 
-. On the <<img-td-save-transaction-aaz>>, click *Close*.
+. On the <<img-td-save-transaction-gearco>>, click *Close*.
 +
-The <<img-td-target-channel-in-progress-aaz>> appears.
+The <<img-td-target-channel-in-progress-gearco>> appears.
 
 
 == Configure a Buyer
@@ -170,22 +166,22 @@ include::_partials/tutorial/buyer/create-buyer-partner.adoc[]
 
 === Add Buyer Identifiers
 
-NOTE: Make sure you are configuring *AcmeHomeSupply*, not *AAZFasteners*.
+NOTE: Make sure you are configuring *AcmeHomeSupply*, not *GearCo*.
 
 ==== Add Buyer X12-ISA Identifier
 
 To add this identifier, perform steps in <<Add Supplier X12-ISA Identifier>>,
-substituting *Acme* for *AAZ*.
+substituting *Acme* for *GearCo*.
 
 ==== Add Buyer AS2 Identifier
 
 To add this identifier, perform steps in <<Add Supplier AS2 Identifier>>,
-substituting *Acme* for *AAZ*.
+substituting *Acme* for *GearCo*.
 
 === Upload the Buyer Certificate
 
 To add the certificate, perform steps in <<Upload the Supplier Certificate>>,
-substituting *partner.cer* for *HomeOrg.p12*.
+substituting *partner.pem* for *HomeOrg.p12*.
 
 
 === Create the Buyer Send Endpoint
@@ -262,7 +258,8 @@ include::_partials/tutorial/buyer/td-source-channel-endpoint-acme.adoc[]
 
 Note that, on the <<img-td-possible-endpoints-no-property-acme>>, the warning *1 property cannot be found in the document type* appears.
 
-==== Add a Property
+==== Add required Properties
+===== Direction
 
 . On the <<img-td-possible-endpoints-no-property-acme>>, click the Property icon (identified by a gold arrow in the figure).
 The <<img-td-linked-endpoint-properties-acme>> appears.
@@ -284,6 +281,23 @@ The Add Property Page appears.
 . In the *Property Source Type* box, select *Constant*.
 . In the *Path* box, type *INBOUND*.
 . Click *Save Property*.
++
+The <<img-td-linked-endpoint-properties-acme>> appears.
+
+
+
+===== Transaction Set Id
+. On the <<img-td-linked-endpoint-properties-acme>>, click *New Property*.
++
+The Add Property Page appears.
+
+[start=2]
+. In the *Property Type* listbox, click the down-arrow.
+. In the drop-down list, scroll down to select *Transaction Set ID (system)*.
+. In the *Property Source Type* box, select *Constant*.
+. In the *Path* box, type *850*.
+. Click *Save Property*.
+
 +
 The <<img-td-linked-endpoint-properties-acme>> appears.
 . Click *Save*.
@@ -320,12 +334,12 @@ image::partner/td-new-map-acme.png[img-td-new-map-acme, title="Map Page"]
 +
 The Pick a document Page appears.
 
-. On the Pick a document Page, click the row that corresponds to the Target Document Type - that is, the row for which the value in the *Name* column is  *JSON-PurchaseOrder-AAZFasteners*.
+. On the Pick a document Page, click the row that corresponds to the Target Document Type - that is, the row for which the value in the *Name* column is  *JSON-PurchaseOrder(GearCo)*.
 +
-The <<img-td-new-map-acme>> appears, with *JSON-PurchaseOrder-AAZFasteners* in the *Target Document* box.
+The <<img-td-new-map-acme>> appears, with *JSON-PurchaseOrder(GearCo)* in the *Target Document* box.
 . In the *Mapping Type* box, click *DataWeave*.
 +
-For more information, see xref:mule-user-guide/v/3.8/dataweave[DataWeave].
+For more information, see xref:https://docs.mulesoft.com/mule-runtime/3.8/dataweave-reference-documentation[DataWeave].
 . Click *Save*.
 +
 The <<img-td-source-channel-in-progress-map-added-acme>> appears.
@@ -373,7 +387,7 @@ image::partner/td-source-channel-in-progress-map-added-script-added-acme.png[img
 
 ////
 
-
+////
 === Add the Target Channel
 
 . On the <<img-td-source-channel-in-progress-map-added-acme>>, click *Use Existing Channel*.
@@ -386,6 +400,12 @@ The <<img-td-source-channel-in-progress-map-added-acme>> appears, displaying the
 
 
 The <<img-td-save-transaction>> appears.
+
+////
+
+=== Save Transaction
+
+. Click save button on top right side to save the transaction.
 
 [[img-td-save-transaction]]
 
@@ -421,17 +441,17 @@ In order to identify your Partner Manager environment and its API Key to Anypoin
 === Copy your Environment ID
 
 . On the <<index.adoc#img-partner-manager-start,B2B Transactions Page>>, in the left-hand navigation pane, click *Administration*, then click *Environments*.
-. In the row that corresponds to the environment with which you are working, click *copy*.
+. In the row that corresponds to the environment with which you are working, click on + icon to copy the value.
 
 === Identify or Create an API Key
 
-In order to create a Mule project, you must enter an xref:glossary#secta[API Key] and an .
+In order to connect your application to Partner Manager, you must enter an xref:glossary#secta[API Key] and environment Id.
 
-If you have an existing API Key, use it. If you do not know the API Key, consult your organization's MuleSoft administrator.
+If you have an existing API Key, use it. If you do not know the API Key, consult your organization's Partner Manager administrator.
 
 If your organization has not created an API Key, you can use Partner Manager to create one.
 
-WARNING: The API Key is used by every Mule application across your entire Master xref:access-management/organization[Organization] that communicates with Partner Manager. Therefore, before you create a new API Key, coordinate with your organization's MuleSoft administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
+WARNING: The API Key is used by every Mule application across your entire Master xref:access-management/organization[Organization] that communicates with Partner Manager. Therefore, before you create a new API Key, coordinate with your organization's Partner Manager administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
 
 To obtain a key, see xref:administration#create-a-new-api-key[Create a New API Key].
 
@@ -475,10 +495,10 @@ you copied in <<Identify or Create an API Key>>.
 
 == Start the Applications
 
-. In Package Explorer (Anypoint Studio), right-click *apm-routing-engine-nm*.
+. In Package Explorer (Anypoint Studio), right-click *apm-routing-engine*.
 . Click *Run As*.
 . Click *Mule Application (configure)*.
-. On the *General* tab, in the *Mule domains/projects to launch* pane, select both *apm-routing-engine-nm* and *AS2-partnermock*.
+. On the *General* tab, in the *Mule domains/projects to launch* pane, select both *apm-routing-engine* and *AS2-partnermock*.
 . Click *Run*. +
 When both applications have deployed, proceed to <<Send a Message>>.
 

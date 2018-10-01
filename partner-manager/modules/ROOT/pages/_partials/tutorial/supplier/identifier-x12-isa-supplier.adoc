@@ -1,24 +1,24 @@
-. On the xref:img-partner-configuration[], click *AAZFasteners*.
+. On the xref:img-partner-configuration[], click *GearCo*.
 +
-The xref:img-company-information-aaz[] appears.
+The xref:img-company-information-gearco[] appears.
 
-[[img-company-information-aaz, Company Information Page]]
+[[img-company-information-gearco, Company Information Page]]
 
-image::yc/company-information-aaz.png[img-company-information-yc, title="Company Information Page"]
+image::yc/company-information-gearco.png[img-company-information-yc, title="Company Information Page"]
 
 [start=2]
 
 . In the *Partners* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Identifiers*.
 +
-The <<img-identifiers-aaz>> appears.
+The <<img-identifiers-gearco>> appears.
 
-[[img-identifiers-aaz, Identifiers Page]]
+[[img-identifiers-gearco, Identifiers Page]]
 
-image::yc/identifiers-aaz.png[img-identifiers-aaz, title="Identifiers Page"]
+image::yc/identifiers-gearco.png[img-identifiers-gearco, title="Identifiers Page"]
 
 [start=3]
 
-. On the <<img-identifiers-aaz>>, click *New*.
+. On the <<img-identifiers-gearco>>, click *New*.
 +
 The <<img-identifier-new>> appears.
 
@@ -39,17 +39,17 @@ More identifier boxes appear.
 . In the *Interchange ID Qualifier (ISA)* listbox, click the down-arrow.
 +
 A list of qualifiers appears.
-. *AAZFasteners* and *AcmeHomeSupply* do not use standards-based identifiers, so *ZZ (Mutually Defined)* is the appropriate choice.
-. In the *Interchange ID (ISA)* box, type *AAZ*.
+. *GearCo* and *AcmeHomeSupply* do not use standards-based identifiers, so *ZZ (Mutually Defined)* is the appropriate choice.
+. In the *Interchange ID (ISA)* box, type *GearCo*.
 +
 
 . Click *Save* to save the new identifier.
 +
-The <<img-identifiers-x12-added-aaz2>> appears.
+The <<img-identifiers-x12-added-gearco>> appears.
 
 
-[[img-identifiers-x12-added-aaz2, Identifiers Page (Identifier Added)]]
+[[img-identifiers-x12-added-gearco, Identifiers Page (Identifier Added)]]
 
-image::yc/identifiers-x12-added-aaz2.png[img-identifiers-x12-added-aaz2, title="Identifiers Page (X12-ISA Identifier Added)"]
+image::yc/identifiers-x12-added-gearco.png[img-identifiers-x12-added-gearco, title="Identifiers Page (X12-ISA Identifier Added)"]
 
 Note that the Identifier you added in the preceding steps (*X12-ISA*) now appears.

@@ -1,4 +1,4 @@
-. On the <<img-identifiers-x12-added-aaz>>, click *New*.
+. On the <<img-identifiers-x12-added-gearco>>, click *New*.
 +
 The <<img-identifier-new>> appears.
 
@@ -8,8 +8,8 @@ A list of identifier types appears.
 . From the list, select *AS2*.
 +
 The *AS2 Identity* box appears.
-. In the *AS2 Identity* box, type *AAZ*.
+. In the *AS2 Identity* box, type *GearCo*.
 
 . Click *Save* to save the new identifier.
 
-The <<img-identifiers-x12-added-aaz>> appears.
+The <<img-identifiers-x12-added-gearco>> appears.
