@@ -17,7 +17,7 @@ From the list, click *HTTP*.
 Notice that the the *Type* box, is populated with the appropriate value (*SEND*).
 +
 The <<img-td-new-endpoint-gearco>> expands to include more settings.
-. Uncheck *Uses Reusable Endpoint* checkbox.
+. Deselect the *Uses Reusable Endpoint* checkbox.
 . Scroll down to the *Operation Settings* section.
 +
 In the *Host* box, type *0.0.0.0*.
