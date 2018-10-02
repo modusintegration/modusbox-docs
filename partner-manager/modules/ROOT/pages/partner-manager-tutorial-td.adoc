@@ -441,7 +441,7 @@ In order to identify your Partner Manager environment and its API Key to Anypoin
 === Copy your Environment ID
 
 . On the <<index.adoc#img-partner-manager-start,B2B Transactions Page>>, in the left-hand navigation pane, click *Administration*, then click *Environments*.
-. In the row that corresponds to the environment with which you are working, click on + icon to copy the value.
+. In the row that corresponds to the environment with which you are working, click the *+* icon to copy the value.
 
 === Identify or Create an API Key
 
