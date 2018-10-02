@@ -405,7 +405,7 @@ The <<img-td-save-transaction>> appears.
 
 === Save Transaction
 
-. Click save button on top right side to save the transaction.
+. Click *Save* at top right side to save the transaction.
 
 [[img-td-save-transaction]]
 
