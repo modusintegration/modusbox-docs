@@ -16,7 +16,7 @@ image::partner/td-new-source-doc-acme.png[img-td-new-source-doc-acme, title="Sou
 . Click *Save*. +
 The <<img-td-source-channel-in-progress-doc-added-acme>> appears, displaying the Document Type you added.
  + 
-The source doc is complaining about parent ISA and GS. We will generate them in next steps. 
+The source doc is reporting about parent ISA and GS. We will generate them in next steps. 
 
 [[img-td-source-channel-in-progress-doc-added-acme]]
 
