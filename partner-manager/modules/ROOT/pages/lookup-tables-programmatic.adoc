@@ -1,4 +1,4 @@
-= Lookup Tables
+= Lookup Tables (Using APIs)
 
 Anypoint Partner Manager (APM) enables you to create, populate and edit a _xref:glossary#sectl[lookup table]_.  A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates home partner product codes with trading partner product codes.
 
@@ -7,7 +7,7 @@ Anypoint Partner Manager (APM) enables you to create, populate and edit a _xref:
 You can create a lookup table using either the:
 
 * xref:lookup-tables.adoc#creating-a-lookup-table[Partner Manager user interface]
-* xref:partner-manager-apis[Partner Manager APIs]
+* xref:partner-manager-apis.adoc[Partner Manager APIs]
 
 This section shows how to make API calls using link:https://curl.haxx.se/[curl] to create a three-column, two-key table.
 
