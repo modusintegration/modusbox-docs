@@ -1,7 +1,11 @@
 = Lookup Tables
 
+<<<<<<< HEAD
 Anypoint Partner Manager (APM) enables you to create, populate and edit a xref:glossary.adoc#sectl[lookup table].
 A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates home partner product codes with trading partner product codes.
+=======
+Anypoint Partner Manager (APM) enables you to create, populate and edit a _xref:glossary#sectl[lookup table]_.  A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates home partner product codes with trading partner product codes.
+>>>>>>> 0b01781... italicize glossary term
 
 == Creating a Lookup Table
 
