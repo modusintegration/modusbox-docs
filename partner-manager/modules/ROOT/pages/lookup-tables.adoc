@@ -24,7 +24,7 @@ image::lookup-tables-admin.png[img-lookup-tables-admin, title="Lookup Tables Adm
 * <<Create a Lookup Table>> or
 * <<Administer an Existing Lookup Table>>
 
-== Create a Lookup Table
+== Creating a Lookup Table
 
 This section shows you how to use the PortX user interface to create a lookup table. Alternatively, you can create a lookup table through calls to the xref:partner-manager-apis.adoc[Partner Manager APIs]; see xref:lookup-tables-programmatic.adoc[Create a Lookup Table]. See xref:lookup-tables-programmatic.adoc[Create a Lookup Table] also for instructions for querying a table.
 

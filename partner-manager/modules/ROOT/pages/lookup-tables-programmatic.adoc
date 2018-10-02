@@ -6,8 +6,8 @@ Anypoint Partner Manager (APM) enables you to create, populate and edit a _xref:
 
 You can create a lookup table using either the:
 
-* link:/anypoint-b2b/lookup-tables#creating-a-lookup-table[Anypoint Partner Manager user interface]
-* link:/anypoint-b2b/anypoint-partner-manager-api[Anypoint Partner Manager API].
+* xref:lookup-tables.adoc#creating-a-lookup-table[Partner Manager user interface]
+* xref:partner-manager-apis[Partner Manager APIs]
 
 This section shows how to make API calls using link:https://curl.haxx.se/[curl] to create a three-column, two-key table.
 
