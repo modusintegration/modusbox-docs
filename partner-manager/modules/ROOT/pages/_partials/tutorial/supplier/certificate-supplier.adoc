@@ -17,7 +17,7 @@ The xref:img-new-certificate[] appears.
 
 image::new-certificate.png[img-new-certificate, title="New Certificate Page"]
 [start=3]
-. Click *Choose File* option.
+. Click *Choose File*.
 +
 A file selection window specific to the operating system of the computer you are using appears.
 . In the selection window, navigate to the folder to which you downloaded the tutorial materials in <<Download Tutorial Materials>>.
@@ -30,7 +30,7 @@ The xref:img-new-certificate[] refreshes, displaying details of the uploaded cer
 NOTE: Check the expiration date of certificate and make sure it is not expired. 
 
 [start=6]
-. Click *Save* Button.
+. Click *Save*.
 +
 The xref:img-certificate[] appears.
 
