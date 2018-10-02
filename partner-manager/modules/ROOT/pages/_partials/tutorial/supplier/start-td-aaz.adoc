@@ -1,17 +1,17 @@
-. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:img-endpoints[] (or any other APM Configuration page), click *Transaction Designer*.
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:img-certificate[] (or any other APM Configuration page), click *Transaction Designs*.
 +
-The <<img-td-aaz>> appears.
+The <<img-td-gearco>> appears.
 
-[[img-td-aaz]]
+[[img-td-gearco]]
 
-image::yc/td-aaz.png[img-td-aaz, title="Transaction Designer Page"]
+image::yc/td-gearco.png[img-td-gearco, title="Transaction Designer Page"]
 
 [start=2]
 
-. On the <<img-td-aaz>>, click *Create Template*. 
+. On the <<img-td-gearco>>, click *Create Template*. 
 +
-The <<img-td-new-aaz>> appears.
+The <<img-td-new-gearco>> appears.
 
-[[img-td-new-aaz]]
+[[img-td-new-gearco]]
 
-image::yc/td-new-aaz.png[img-td-new-aaz, title="Transaction Design Page"]
+image::yc/td-new-gearco.png[img-td-new-gearco, title="Transaction Design Page"]

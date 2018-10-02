@@ -1,12 +1,12 @@
 // Configure the Target Endpoint
 
-. On the <<img-td-target-channel-in-progress-aaz>>, click *New Endpoint*.
+. On the <<img-td-target-channel-in-progress-gearco>>, click *New Endpoint*.
 +
-The <<img-td-new-endpoint-aaz>> appears.
+The <<img-td-new-endpoint-gearco>> appears.
 
-[[img-td-new-endpoint-aaz]]
+[[img-td-new-endpoint-gearco]]
 
-image::yc/td-new-endpoint-aaz.png[img-td-new-endpoint-aaz, title="Endpoint Page"]
+image::yc/td-new-endpoint-gearco.png[img-td-new-endpoint-gearco, title="Endpoint Page"]
 
 [start=2]
 
@@ -16,7 +16,8 @@ From the list, click *HTTP*.
 +
 Notice that the the *Type* box, is populated with the appropriate value (*SEND*).
 +
-The <<img-td-new-endpoint-aaz>> expands to include more settings.
+The <<img-td-new-endpoint-gearco>> expands to include more settings.
+. Deselect the *Uses Reusable Endpoint* checkbox.
 . Scroll down to the *Operation Settings* section.
 +
 In the *Host* box, type *0.0.0.0*.
@@ -27,4 +28,4 @@ In the *Host* box, type *0.0.0.0*.
 From the list, click *None*.
 . Click *Save*.
 +
-The <<img-td-target-channel-in-progress-aaz>> appears.
+The <<img-td-target-channel-in-progress-gearco>> appears.
