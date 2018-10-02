@@ -1,7 +1,7 @@
 = Lookup Tables
 
 PortX enables you to create, populate and edit a 
-xref:glossary.adoc#sectl[lookup table]. A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates internal partner product codes with customer product codes.
+_xref:glossary.adoc#sectl[lookup table]_. A lookup table is a table that facilitates transaction processing by associating values. For example, this page shows how to create a lookup table that associates internal partner product codes with customer product codes.
 
 include::{partialsdir}/edit-settings.adoc[]
 . If you want to create a lookup table or edit the name, fields or keys for an existing table, go to <<Administer a Lookup Table>>.
@@ -127,5 +127,5 @@ To duplicate the row, click the Duplicate icon (the leftmost of the three icons 
 +
 To edit the row, click the Edit icon (the middle of the three icons.)
 +
-To delete the row, click *X* (the rightmost of the three icons.)
+To delete the row, click *X* (the rightmost of the three icons).
 .
