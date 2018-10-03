@@ -106,4 +106,4 @@ AFter you have created a lookup table, you can use the Anypoint Partner Manager 
 * Edit a table row
 * Delete a table row
 
-For more information, see  link:/anypoint-b2b/lookup-tables#administer-an-existing-lookup-table[Working with an Existing Lookup Table].
+For more information, see  xref:lookup-tables.adoc#administer-an-existing-lookup-table[Working with an Existing Lookup Table].
