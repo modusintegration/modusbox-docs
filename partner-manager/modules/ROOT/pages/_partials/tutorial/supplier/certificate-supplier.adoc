@@ -2,20 +2,20 @@
 
 . On the <<img-identifiers-x12-added-gearco>>, in the left-hand navigation pane, in the *USER INFO* section, click *Certificate*.
 +
-The xref:img-certificate[] appears.
+The xref:img-certificates[] appears.
 
-[[img-certificate, Certificate Page]]
+[[img-certificates, Certificates Page]]
 
-image::certificate.png[img-certificate, title="Certificate Page"]
+image::certificates.png[img-certificates, title="Certificate Page"]
 
 [start=2]
 . Click *New* button. 
 +
-The xref:img-new-certificate[] appears. 
+The xref:img-certificate[] appears. 
 
-[[img-new-certificate, Add New Certificate Page]]
+[[img-certificate, Add New Certificate Page]]
 
-image::new-certificate.png[img-new-certificate, title="New Certificate Page"]
+image::certificate.png[img-certificate, title="New Certificate Page"]
 [start=3]
 . Click *Choose File*.
 +
@@ -25,12 +25,12 @@ A file selection window specific to the operating system of the computer you are
 +
 *HomeOrg.p12* appears in the Certificate box. 
 +
-The xref:img-new-certificate[] refreshes, displaying details of the uploaded certificate.
+The xref:img-certificate[] refreshes, displaying details of the uploaded certificate.
 
 NOTE: Check the expiration date of certificate and make sure it is not expired. 
 
 [start=6]
 . Click *Save*.
 +
-The xref:img-certificate[] appears.
+The xref:img-certificates[] appears.
 
