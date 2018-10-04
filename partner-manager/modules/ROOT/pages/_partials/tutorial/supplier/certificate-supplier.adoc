@@ -6,7 +6,7 @@ The xref:img-certificates[] appears.
 
 [[img-certificates, Certificates Page]]
 
-image::certificates.png[img-certificates, title="Certificate Page"]
+image::certificates.png[img-certificates, title="Certificates Page"]
 
 [start=2]
 . Click *New* button. 
