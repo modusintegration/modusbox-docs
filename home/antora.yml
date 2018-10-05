@@ -1,6 +1,6 @@
-name: portx
-title: PortX
-version: '1.0'
+name: home
+title: home
+version: Master
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
