@@ -27,6 +27,10 @@ A file selection window specific to the operating system of the computer you are
 +
 The xref:img-certificate[] refreshes, displaying details of the uploaded certificate.
 
+. In the *Used with Partner* box, select *GearCo*
+. In the *Certificate Purpose* box, select *AS2*
+
+
 NOTE: Check the expiration date of certificate and make sure it is not expired. 
 
 [start=6]

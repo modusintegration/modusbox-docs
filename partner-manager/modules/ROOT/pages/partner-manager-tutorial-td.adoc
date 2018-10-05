@@ -32,10 +32,7 @@ Verify that you have the following:
 +
 NOTE: If you are unable to access Partner Manager, see your Mulesoft account administrator for assistance.
 
-* Anypoint Studio with Mule 3.9.0 and the following connectors:
-** Partner Manager 7.0.0
-** AS2 v2.3.0
-** X12 v1.3.2
+* Anypoint Studio with Mule 3.9.1
 
 === Download Tutorial Materials
 
@@ -182,6 +179,8 @@ substituting *Acme* for *GearCo*.
 
 To add the certificate, perform steps in <<Upload the Supplier Certificate>>,
 substituting *partner.pem* for *HomeOrg.p12*.
+
+You can leave the *Certificate purpose* to default value, which is *Any*
 
 
 === Create the Buyer Send Endpoint
@@ -498,9 +497,23 @@ you copied in <<Identify or Create an API Key>>.
 . In Package Explorer (Anypoint Studio), right-click *apm-routing-engine*.
 . Click *Run As*.
 . Click *Mule Application (configure)*.
-. On the *General* tab, in the *Mule domains/projects to launch* pane, select both *apm-routing-engine* and *AS2-partnermock*.
-. Click *Run*. +
-When both applications have deployed, proceed to <<Send a Message>>.
+. On the *General* tab, in the *Mule domains/projects to launch* pane, select both *apm-routing-engine* and *apm-acme-mock*.
+. Click *Run*.
+. Verify the application is deployed successfully on Anypoint Studio console, 
+  
+[[img-app-deploy-verify]]
+
+image::app-deploy-verify.png[img-app-deploy-verify, title="Verify Application Deployed"]
+
+[start = 7]
+
+. Monitor the console for few seconds, it should start polling PM and load the dynamic endpoints. Once it finishes it prints *TPM manager Executed* in the console. 
+
+[[img-tpm-executed]]
+
+image::tpm-executed.png[img-tpm-executed, title="Partner Manager Executed"]
+
+Now proceed to <<Send a Message>>. If Polling doesn't start automatically, then follow <<Start Application in debug mode>> 
 
 
 == Send a Message
@@ -546,6 +559,9 @@ Partner Manager enables you to view a transmission payload. For example, in <<im
 image::transmission-payload.png[img-transmission-payload, title="Transmission Payload Page"]
 
 
+== Troubleshooting
+
+include::_partials/tutorial/troubleshooting.adoc[]
 
 == More Information
 
