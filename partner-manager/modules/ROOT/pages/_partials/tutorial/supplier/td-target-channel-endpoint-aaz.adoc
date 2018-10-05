@@ -14,7 +14,7 @@ image::yc/td-new-endpoint-gearco.png[img-td-new-endpoint-gearco, title="Endpoint
 +
 From the list, click *HTTP*.
 +
-Notice that the the *Type* box, is populated with the appropriate value (*SEND*).
+Note that the *Type* box is populated with the appropriate value (*SEND*).
 +
 The <<img-td-new-endpoint-gearco>> expands to include more settings.
 . Deselect the *Uses Reusable Endpoint* checkbox.

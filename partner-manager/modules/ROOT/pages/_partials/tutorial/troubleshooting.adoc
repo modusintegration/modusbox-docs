@@ -1,0 +1,15 @@
+=== Start Application in debug mode
+. In Package Explorer (Anypoint Studio), right-click *apm-routing-engine*.
+. Click *Debug As*.
+. Click *Mule Application (configure)*.
+. On the *General* tab, in the *Mule domains/projects to launch* pane, select both *apm-routing-engine* and *apm-acme-mock*.
+. Click *Debug*.
+. From the *Package Explorer*, do the following:
+.. Expand the *apm-routing-engine* app.
+.. Expand the *src/main/app*
+.. Open *dynamic-endpoint.xml*. 
+. Click the play button with Poll in *executeDynamicFlows* flow. 
+
+[[img-dynamic-flow, Dynamic Endpoints Flow]]
+
+image::dynamic-flow.png[img-dynamic-flow, title="Dynamic Endpoints Flow"]
