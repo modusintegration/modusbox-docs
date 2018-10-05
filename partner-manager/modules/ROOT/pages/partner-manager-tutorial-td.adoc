@@ -507,13 +507,13 @@ image::app-deploy-verify.png[img-app-deploy-verify, title="Verify Application De
 
 [start = 7]
 
-. Monitor the console for few seconds, it should start polling PM and load the dynamic endpoints. Once it finishes it prints *TPM manager Executed* in the console. 
+. Monitor the console for a few seconds; it should begin polling PM and loading the dynamic endpoints. On completion, it prints *TPM manager Executed* in the console. 
 
 [[img-tpm-executed]]
 
 image::tpm-executed.png[img-tpm-executed, title="Partner Manager Executed"]
 
-Now proceed to <<Send a Message>>. If Polling doesn't start automatically, then follow <<Start Application in debug mode>> 
+Proceed to <<Send a Message>>. If Polling does not start automatically, follow <<Start Application in debug mode>>.
 
 
 == Send a Message
