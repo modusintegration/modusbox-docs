@@ -180,7 +180,7 @@ substituting *Acme* for *GearCo*.
 To add the certificate, perform steps in <<Upload the Supplier Certificate>>,
 substituting *partner.pem* for *HomeOrg.p12*.
 
-You can leave the *Certificate purpose* to default value, which is *Any*
+ For *Certificate purpose*, accept default value (*Any*).
 
 
 === Create the Buyer Send Endpoint
