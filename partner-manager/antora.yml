@@ -1,6 +1,6 @@
 name: partner-manager
 title: Partner Manager
-version: 'Mulesoft ESB'
+version: 'Mulesoft-ESB'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
