@@ -9,7 +9,7 @@ include::{partialsdir}/edit-settings.adoc[]
 +
 The <<img-availability>> appears.
 
-[[img-availabilty]]
+[[img-availability]]
 
 image::availability.png[img-availability, title="Availability Page"]
 
