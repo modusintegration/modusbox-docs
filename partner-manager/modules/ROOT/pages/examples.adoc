@@ -12,7 +12,7 @@ For information about the procedures you would use to implement a given example,
 
 In this example, a user performs a series of configuration tasks in PortX and Anypoint Studio, resulting in the ability to view events and track transmissions.
 
-=== In PortX
+=== In Partner Manager
 
 * Enter home organization settings
 * Enter external trading partner settings
@@ -24,15 +24,13 @@ In this example, a user performs a series of configuration tasks in PortX and An
 . Configure Partner Manager-enabled connectors to use the Partner Manager Connector.
 . Use standard connectors and processors to complete the processing and integration of the message into downstream systems as required.
 
-=== Back in PortX
+=== Back in Partner Manager
 
 Go to the B2B Transmissions area of PortX to view tracked events and messages.
 
-// include::_sources/content-based-routing-example.adoc[]
-
 
 // Promotion Scenarios
-include::_sources/promotion-scenarios.adoc[leveloffset=+1]
+
 
 include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
 
