@@ -472,7 +472,7 @@ The Import Source Selection Window appears.
 The Import Mule Project Window appears.
 . In the Import Mule Project Window, browse to the location to which you downloaded the archive in <<Download Tutorial Materials>>.
 . Click to expand *Partner Manager Tutorial Materials*, and then click *Apps* to expand that folder.
-. In the *Apps* folder, click *apm-tutorial-routing-engine.zip*, then click *Open*. +
+. In the *Apps* folder, click *apm-routing-engine.zip*, then click *Open*. +
 The *Project Name* box auto-populates. +
 NOTE: The Project Name must be unique with respect to any previously-imported projects. If it is not, *Finish* will not be enabled. If this is the case, change the Project Name so that *Finish* is enabled.
 . Click *Finish*. +
@@ -484,10 +484,10 @@ To import the mock partner application, repeat the steps in <<Import the Routing
 
 === Insert Partner Manager Environment Information
 
-. In Anypoint project (expand if necessary), expand the *src/main/app*, double-click *apm.prod.edi.properties*. +
+. In Anypoint project (expand if necessary), expand the *src/main/resources*, double-click *apm.prod.edi.properties*. +
 Project properties appear in the Anypoint Studio Canvas.
-. In Line 2, replace *{Insert environment id}* with the environment ID you copied in <<Copy your Environment ID>>.
-. In Line 3, replace *{Insert API Key}* with the API Key
+. In Line 1, replace *{Insert environment id}* with the environment ID you copied in <<Copy your Environment ID>>.
+. In Line 2, replace *{Insert API Key}* with the API Key
 you copied in <<Identify or Create an API Key>>.
 . In Anypoint Studio, click *File*, then click *Save All*.
 
