@@ -13,10 +13,18 @@ image::partner/td-new-source-doc-acme.png[img-td-new-source-doc-acme, title="Sou
 . On the <<img-td-new-source-doc-acme>>, in the *Standard* listbox, click the down-arrow, then select *X12*.
 . In the *Version* listbox, select *4010*.
 . In the *Message Type* listbox, select *PO (850 Purchase Order)*.
-. Click *Save*. +
-The <<img-td-source-channel-in-progress-doc-added-acme>> appears, displaying the Document Type you added.
+. Click *Save*. 
+. A pop-up window will appear. Click on *Auto-Generate Inbound ISA and GS*.
++
+This will generate and link ISA and GS with current document. 
+[[img-td-source-channel-link-isa-gs-acme]]
 
-The source doc is reporting about parent ISA and GS. You will generate them in next steps. 
+image::partner/td-source-channel-link-isa-gs-acme.png[img-td-source-channel-link-isa-gs-acme, title="ISA and GS Link Completed"]
+[start=7]
+. Click *Continue*.
+. Click *Close*.
++
+The <<img-td-source-channel-in-progress-doc-added-acme>> appears, displaying the Document Type you added.
 
 [[img-td-source-channel-in-progress-doc-added-acme]]
 
