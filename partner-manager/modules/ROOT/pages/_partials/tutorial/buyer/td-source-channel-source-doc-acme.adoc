@@ -14,9 +14,9 @@ image::partner/td-new-source-doc-acme.png[img-td-new-source-doc-acme, title="Sou
 . In the *Version* listbox, select *4010*.
 . In the *Message Type* listbox, select *PO (850 Purchase Order)*.
 . Click *Save*. 
-. A pop-up window will appear. Click on *Auto-Generate Inbound ISA and GS*.
+. A pop-up window appears. Click *Auto-Generate Inbound ISA and GS*.
 +
-This will generate and link ISA and GS with current document. 
+This generates and links ISA and GS with the current document. 
 [[img-td-source-channel-link-isa-gs-acme]]
 
 image::partner/td-source-channel-link-isa-gs-acme.png[img-td-source-channel-link-isa-gs-acme, title="ISA and GS Link Completed"]
