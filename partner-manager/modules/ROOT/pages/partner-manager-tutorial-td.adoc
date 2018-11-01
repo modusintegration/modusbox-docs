@@ -463,6 +463,8 @@ For information about using Anypoint Studio, see xref:anypoint-studio/[Anypoint 
 
 ==== Import the Routing Engine Application
 
+NOTE: You must uninstall the existing Partner Manager connector from Anypoint Studio before importing.
+
 . In Anypoint Studio, click *File*. +
 The File Menu appears.
 . On the File Menu, click *Import*. +
