@@ -1,7 +1,7 @@
-name: as2-connector
-title: AS2 Connector
+name: ftps-connector
+title: FTPS Connector
 version: 'Other-ESB'
-start_page: ROOT:as2-connector.adoc
+start_page: ROOT:ftps-connector.adoc
 nav:
 - modules/ROOT/nav.adoc
 
