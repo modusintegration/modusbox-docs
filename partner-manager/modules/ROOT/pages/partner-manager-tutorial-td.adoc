@@ -30,7 +30,7 @@ Verify that you have the following:
 
 * Anypoint Platform user account with Partner Manager access
 +
-NOTE: If you are unable to access Partner Manager, see your Mulesoft account administrator for assistance.
+NOTE: If you are unable to access Partner Manager, see your PortX account administrator for assistance, or to setup a trial account.
 
 * Anypoint Studio with Mule 3.9.1
 
