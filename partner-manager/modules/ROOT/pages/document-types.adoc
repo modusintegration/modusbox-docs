@@ -4,9 +4,6 @@
 Configuring a _document type_ for a partner means configuring settings specific to that document type.
 
 
-
-
-
 include::{partialsdir}/edit-settings.adoc[]
 
 [start=3]
