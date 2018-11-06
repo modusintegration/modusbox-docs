@@ -29,4 +29,12 @@ image::document.png[img-document, title="Document Page"]
 . In the *Message Type* box, select *PO (850 - Purchase Order)*
 +
 An Information Icon appears in the upper right of the xref:partner-configuration.adoc#img-company-information[Company Information Page]. 
-. Click the Information Icon to reveal a message. 
+. Click the Information Icon to reveal a message indicating that the X12 Document Definition requires a GS. 
++
+To create the GS, click *Save*.
++
+The Saving X12 Document Type *_[sb Definition]_* box appears.
+. On the 12 Document Type box, click *Auto-generate Inbound ISA and GS* to generate these Document Types. 
++
+If you do not want to generate these Document Types *_[why wouldn't you?]_*, click *Continue Without Linking*. 
+. 
