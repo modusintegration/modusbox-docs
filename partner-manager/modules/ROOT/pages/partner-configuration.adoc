@@ -18,10 +18,10 @@ NOTE: Your company may have been set up during the provisioning process. If so, 
 . xref:index.adoc#start-partner-manager[Start Partner Manager].
 The <<index.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
-The xref:img-partner-configuration[] appears.
+The xref:img-trading-partners[] appears.
 
-[[img-partner-configuration]]
-image::partner-configuration.png[img-partner-configuration,title="Partner Configuration Page"]
+[[img-trading-partners]]
+image::trading-partners.png[img-trading-partners,title="Trading Partners Page"]
 
 [start=2]
 
