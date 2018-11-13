@@ -58,12 +58,15 @@ image::anypoint-platform-application-selection.png[img-anypoint-platform-applica
 . Login to PortX.
 +
 For Partner Manager login information, see your PortX representative.
+
+. In the Company box, select your company.
+. In the Business Group box, select your Business Group. 
 +
-The xref:img-partner-manager-start[] page appears.
+The xref:img-transaction-monitoring[] page appears.
 For more information, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
 
-[[img-partner-manager-start]]
-image::partner-manager-start.png[img-partner-manager-start,title="Transaction Monitoring Page"]
+[[img-transaction-monitoring]]
+image::transaction-monitoring.png[img-transaction-monitoring,title="Transaction Monitoring Page"]
 
 [start=2]
 
