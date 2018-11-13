@@ -1,4 +1,4 @@
-. On the xref:img-partner-configuration[], click *GearCo*.
+. On the xref:img-trading-partners[], click *GearCo*.
 +
 The xref:img-company-information-gearco[] appears.
 

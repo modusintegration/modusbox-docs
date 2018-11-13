@@ -1,7 +1,7 @@
 == Get Started
 
 NOTE: These settings are editable for your company (as identified on the
-<<partner-configuration.adoc#img-partner-configuration,Partner Configuration Page>>) only.
+<<partner-configuration.adoc#img-trading-partners,Trading Partners Page>>) only.
 
 . link:partner-manager#start-partner-manager[Start APM].
 When the <<index.adoc#img-partner-manager-start,Transaction Monitoring Page>> appears, return to this page and procede to the next step.

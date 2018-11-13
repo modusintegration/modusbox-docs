@@ -1,8 +1,8 @@
 // Create Buyer Partner
 
 . On the <<img-td-target-channel-in-progress-gearco>>, in the left-hand navigation pane, click *Transaction Designs* and then click *Partners*. +
-The <<img-partner-configuration>> appears. 
-. On the <<img-partner-configuration>>, click *Create New Partner*. +
+The <<img-trading-partners>> appears. 
+. On the <<img-trading-partners>>, click *Create New Partner*. +
 The <<img-company-information>> appears.
 
 [[img-company-information, Company Information Page]]

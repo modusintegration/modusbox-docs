@@ -1,7 +1,7 @@
 ==== Add Supplier X12-ISA Identifier
 
 
-. On the xref:img-partner-configuration[], click *AAZFasteners*.
+. On the xref:img-trading-partners[], click *AAZFasteners*.
 +
 The xref:img-company-information-acme[] appears.
 

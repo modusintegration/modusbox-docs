@@ -1,6 +1,6 @@
 = Certificate
 
-The <<img-certificate>> enables you to upload an AS2 or RNIF certificate for the partner you selected on the <<partner-configuration.adoc#img-partner-configuration, Partner Configuration Page>>.
+The <<img-certificate>> enables you to upload an AS2 or RNIF certificate for the partner you selected on the <<partner-configuration.adoc#img-trading-partners, Trading Partners Page>>.
 
 include::{partialsdir}/edit-settings.adoc[]
 
