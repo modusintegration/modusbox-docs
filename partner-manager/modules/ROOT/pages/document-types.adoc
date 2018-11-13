@@ -31,7 +31,7 @@ The <<img-document-types-edit>> appears.
 
 [[img-document-types-edit]]
 
-image::document-types-edit.png[img-document-types-edit, title="Existing Document Page"]
+image::document-types-edit.png[img-document-types-edit, title="Existing Document Types Page"]
 
 . Edit settings as appropriate. +
 For information about editing specific settings, see <<Add a New Document Type>>.
