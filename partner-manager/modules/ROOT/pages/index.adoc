@@ -64,13 +64,12 @@ For Partner Manager login information, see your PortX representative.
 +
 The xref:img-transaction-monitoring[] page appears.
 For more information, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
-
++
 [[img-transaction-monitoring]]
 image::transaction-monitoring.png[img-transaction-monitoring,title="Transaction Monitoring Page"]
++
 
-[start=2]
-
-. To configure or edit the configuration of a trading partner, see xref:partner-configuration.adoc[Partner Configuration].
+To configure or edit the configuration of a trading partner, see xref:partner-configuration.adoc[Partner Configuration].
 +
 To edit or configure settings for your company, see xref:administration.adoc[Administration].
 
