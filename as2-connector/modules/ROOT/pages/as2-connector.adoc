@@ -11,7 +11,7 @@ After reading this page you should be able to accomplish the following:
 
 == Prerequisites
 
-This document assumes that you are familiar with Mule, the link:/anypoint-studio/v/6/index[Anypoint Studio Essentials] and link:/mule-user-guide/v/3.8/global-elements[Global Elements]. Further, it is assumed that you are familiar with AS2 endpoints and have received endpoint configuration requirements.
+This document assumes that you are familiar with Mule, the Anypoint Studio Essentials and Global Elements. Further, it is assumed that you are familiar with AS2 endpoints and have received endpoint configuration requirements.
 
 === Namespace and Schema Location
 
