@@ -80,7 +80,7 @@ The following example requires basic familiarity with AS2, Anypoint Studio, and 
 
 Create a new Mule Project with Mule Server 3.6.0 EE as runtime:
 
-image::receive-example-step-1.png[receive-example-step-1] +
+image::receive-example-step-1.png[receive-example-step-1] 
 
 ==== Step 2
 
