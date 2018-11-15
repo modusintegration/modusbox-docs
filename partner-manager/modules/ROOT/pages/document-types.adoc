@@ -40,12 +40,12 @@ CAUTION: Changing the values for *Name* or *Message Type* may disrupt existing p
 
 == Add a New Document Type
 
-. Click *New*.
-The <<img-document-types>> appears.
+. On the <<img-document-types>>, click *New*.
+The <<img-document-type>> appears.
 
-[[img-document-types]]
+[[img-document-type]]
 
-image::document-types.png[img-document-types, title="Document Types Page"]
+image::document-type.png[img-document-type, title="Document Type Page"]
 
 . Enter settings as appropriate.
 . To add a new property, see <<Document Properties>>.
