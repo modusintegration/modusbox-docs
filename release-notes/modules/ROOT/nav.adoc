@@ -2,7 +2,7 @@
 
 ** xref:partner-manager-release-notes.adoc[Partner Manager Release Notes]
 ** xref:partner-manager-connector-release-notes.adoc[Partner Manager Connector Release Notes]
-** xref:jde-connector-release-notes.adoc[JD Edwards Connector Release Notes]
+** xref:jde-release-notes.adoc[JD Edwards Connector Release Notes]
 
 
 # ** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes (for Mule 4)]
