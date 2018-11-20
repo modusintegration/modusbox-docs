@@ -2,5 +2,6 @@
 ** xref:partner-manager:ROOT:index.adoc[Partner Manager]
 ** xref:partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector]
 ** xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
+** xref:jde:ROOT:jde.adoc[JD Edwards Connector]
 ** xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
 ** xref:release-notes:ROOT:release-notes.adoc[Release Notes]
