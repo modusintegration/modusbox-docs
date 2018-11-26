@@ -1,4 +1,4 @@
-= Debatching Incoming Documents
+= Debatching Incoming AS2 Documents
 
 == AS2 Documents
 

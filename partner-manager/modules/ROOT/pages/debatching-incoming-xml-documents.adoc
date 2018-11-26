@@ -1,8 +1,6 @@
-= Debatching Incoming Documents
+== XML Documents
 
-== AS2 Documents
-
-Purchase orders (POs) sent in AS2 format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
+Purchase orders (POs) sent in XML format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
 
 [[img-isa-gs-st-debatching]]
 
@@ -39,9 +37,9 @@ image::document-type.png[img-document-type, title="Document Type Page"]
 
 [start=3]
 
-. In the *Standard* box, select *X12*.
-. In the *Version* box, select *5010*.
-. In the *Message Type* box, select *PO (850 - Purchase Order)*.
+. In the *Standard* box, select *XML*.
+. In the *Root Node* box, type *Parent-Container*.
+. Click *Save*.
 +
 To create the GS, click *Save*.
 +
