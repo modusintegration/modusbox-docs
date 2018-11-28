@@ -8,18 +8,18 @@ Purchase orders (POs) sent in X12 format are typically enclosed in a GS envelope
 
 image::isa-gs-st-debatching.png[img-isa-gs-st-debatching, title="ISA, GS, and ST Debatching"]
 
-xref:debatching-incoming-x12-documents[Debatching Incoming AS2 Documents] shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs. 
+xref:debatching-incoming-x12-documents.adoc[Debatching Incoming X12 Documents] shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs. 
 
 
 == XML Documents
 
 Purchase orders (POs) sent in XML are typically enclosed in a GS envelope, which is in turn enclosed in an GS envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
 
-[[img-isa-gs-st-debatching]]
+[[img-xml-debatching]]
 
-image::xml-debatching.png[img-isa-gs-st-debatching, title="XML Debatching"]
+image::xml-debatching.png[img-xml-debatching, title="XML Debatching"]
 
-xref:debatching-incoming-xml-documents[Debatching Incoming AS2 Documents] shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.
+xref:debatching-incoming-xml-documents.adoc[Debatching Incoming XML Documents] shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.
 
 
 = Consider cutting here
