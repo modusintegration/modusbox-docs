@@ -1,8 +1,8 @@
 = Debatching Incoming Documents
 
-== AS2 Documents
+== X12 Documents
 
-Purchase orders (POs) sent in AS2 format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
+Purchase orders (POs) sent in X12 format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
 
 [[img-isa-gs-st-debatching]]
 

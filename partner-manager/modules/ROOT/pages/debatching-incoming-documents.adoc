@@ -13,7 +13,7 @@ xref:debatching-incoming-x12-documents.adoc[Debatching Incoming X12 Documents] s
 
 == XML Documents
 
-Purchase orders (POs) sent in XML are typically enclosed in a GS envelope, which is in turn enclosed in an GS envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
+Purchase orders (POs) sent in XML are typically enclosed in a GS envelope, which is in turn enclosed in an GS envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-xml-debatching>>.
 
 [[img-xml-debatching]]
 

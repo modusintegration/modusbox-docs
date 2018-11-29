@@ -1,10 +1,10 @@
 == XML Documents
 
-Purchase orders (POs) sent in XML format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GS envelopes, shown in <<img-isa-gs-st-debatching>>.
+Purchase orders (POs) sent in XML format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GS envelopes, shown in <<img-xml-debatching>>.
 
 [[img-xml-debatching]]
 
-image::isa-gs-st-debatching.png[img-xml-debatching, title="XML Debatching"]
+image::xml-debatching.png[img-xml-debatching, title="XML Debatching"]
 
 This page shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.   
 
@@ -33,23 +33,52 @@ The <<img-document-type>> appears.
 
 image::document-type.png[img-document-type, title="Document Type Page"]
 
-=== Create Document Types
+=== Creating Document Types
+
+==== Create Parent Container
 
 [start=3]
 
 . In the *Standard* box, select *XML*.
 . In the *Root Node* box, type *Parent-Container*.
-. Click *Save*.
+. To create the Parent Container, click *Save*.
 +
-To create the GS, click *Save*.
-+
-The Saving X12 Document Type box appears.
+The <<img-document-types-parent-container-added>> appears.
 
-[[img-saving-x12-document-type]]
+[[img-document-types-parent-container-added]]
 
-image::saving-x12-document-type.png[img-saving-x12-document-type, title="Saving X12 Document Type Box"]
+image::document-types-parent-container-added.png[img-document-types-parent-container-added.png, title="Document Types Page"]
+
+
+
+==== Create Child Product Order
 
 [start=6]
+
+. On the <<img-document-types-parent-container-added>>, click *New*.
++ 
+The <<img-document-type>> appears.
+. In the *Standard* box, select *XML*.
+. In the *Root Node* box, type *ProductOrder*.
+. Click *Save*.
++
+The [[img-document-types-parent-container-added]] appears. 
+. On the [[img-document-types-parent-container-added]], select the child (*ProductOrder*) document.
++
+The <<img-document-type>> appears.
+. Click the *Parents* Tab.
++
+The *This document has parent document types* appears.
+. Check the box. 
++
+The *Debatching* Tab appears. 
+. Click *Add Parent Document Type*
++
+The *Linked Parent Document Type* Box appears. 
+
+
+
+
 
 
 . In the <<img-saving-x12-document-type>>, click *Auto-generate Inbound ISA and GS* to generate these Document Types. 
