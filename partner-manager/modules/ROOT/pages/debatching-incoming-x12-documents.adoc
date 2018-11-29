@@ -1,6 +1,4 @@
-= Debatching Incoming Documents
-
-== X12 Documents
+= Debatching Incoming X12 Document Sets
 
 Purchase orders (POs) sent in X12 format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
 
@@ -10,12 +8,12 @@ image::isa-gs-st-debatching.png[img-isa-gs-st-debatching, title="ISA, GS, and ST
 
 This page shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.   
 
-=== Before you begin
+== Before you begin
 
 * Make sure that you have xref:partner-configuration.adoc#create-and-configure-partners[created the partner] from which you want to receive documents.
 
 
-=== Get Started
+== Get Started
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Document Definitions*.
 + 
@@ -35,7 +33,7 @@ The <<img-document-type>> appears.
 
 image::document-type.png[img-document-type, title="Document Type Page"]
 
-=== Create Document Types
+== Create Document Types
 
 [start=3]
 
@@ -71,7 +69,7 @@ The <<img-document-types-parents-children>> appears, displaying the three new do
 
 image::document-types-parents-children.png[img-document-types-parents-children, title="Document Types Page"]
 
-=== Verify Debatching Settings
+== Verify Debatching Settings
 
 . To verify that the PO document type you have created is set to debatch, on the <<img-document-types-parents-children>>, click the PO. 
 +
@@ -86,7 +84,7 @@ image::document-type-parents-tab.png[img-document-type-parents-tab, title="Docum
 
 
 
-=== About Automatic Debatching
+== About Automatic Debatching
 
 Note that, in <<img-document-type-parents-tab>>, automatic debatching is selected for the GS Document Type, and a shredding path is configured; if you were to view the corresponding page and tab for the GS and ISA documents, you would see that they are also configured in this manner. Thus, when this ISA Document Type is received, it will automatically debatch from an ISA containing a GS containing _x_ 850s to _x_ separate ISAs, each containing a GS and an 850, as shown in <<img-isa-gs-st-debatching>>.
 
