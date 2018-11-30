@@ -1,0 +1,117 @@
+= Debatching Incoming XML Document Sets
+
+Purchase orders (POs) sent in XML format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GS envelopes, shown in <<img-xml-debatching>>.
+
+[[img-xml-debatching]]
+
+image::xml-debatching.png[img-xml-debatching, title="XML Debatching"]
+
+This page shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.   
+
+== Before you begin
+
+* Make sure that you have xref:partner-configuration.adoc#create-and-configure-partners[created the partner] from which you want to receive documents.
+
+
+== Get Started
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the xref:partner-configuration.adoc#img-company-information[Company Information Page], click *Document Definitions*.
++ 
+The <<img-document-types-none-added>> appears.
+
+[[img-document-types-none-added]]
+
+image::document-types-none-added.png[img-document-types-none-added, title="Document Types Page"]
+
+[start=2]
+
+. On the <<img-document-types-none-added>>, click *New*.
++
+The <<img-document-type>> appears.
+
+[[img-document-type]]
+
+image::document-type.png[img-document-type, title="Document Type Page"]
+
+== Creating Document Types
+
+=== Create Parent Container
+
+[start=3]
+
+. In the *Standard* box, select *XML*.
+. In the *Root Node* box, type *Parent-Container*.
+. To create the Parent Container, click *Save*.
++
+The <<img-document-types-parent-container-added>> appears.
+
+[[img-document-types-parent-container-added]]
+
+image::document-types-parent-container-added.png[img-document-types-parent-container-added.png, title="Document Types Page"]
+
+
+
+=== Create Child Product Order
+
+[start=6]
+
+. On the <<img-document-types-parent-container-added>>, click *New*.
++ 
+The <<img-document-type>> appears.
+. In the *Standard* box, select *XML*.
+. In the *Root Node* box, type *ProductOrder*.
+. Click *Save*.
++
+The <<img-document-types-parent-container-added>> appears. 
+. On the <<img-document-types-parent-container-added>>, select the child (*ProductOrder*) document.
++
+The <<img-document-type>> appears.
+. Click the *Parents* Tab.
++
+The *This document has parent document types* checkbox appears.
+. Select the checkbox. 
++
+The *Debatching* Tab appears. 
+. Click *Add Parent Document Type*
++
+The *Linked Parent Document Type* window appears.
+. Click the *Parent Document* box. 
++
+The *Pick a document* window appears. 
+. Select *XML-ParentContainer(AAZBoards)*. 
++ 
+The *Linked Parent Document Type* window reappears.
+. In the *Shredding Path* box, type */ProductOrder*. 
+. Click *Add Parent Document*. 
++ The <<img-document-type>> appears.
+. Click *Save*. 
++
+The <<img-document-types-xml-complete>> appears. 
+
+[[img-document-types-xml-complete]]
+
+image::document-types-xml-complete.png[img-document-types-xml-complete.png, title="Document Types Page"]
+
+
+
+
+=== Verify Debatching Settings
+
+. To verify that the PO document type you have created is set to debatch, on the <<img-document-types-parents-children>>, click the PO. 
++
+The <<img-document-type>> appears, displaying the details of the 850. 
+. On the <<img-document-type>>, click *Parents*. 
++
+The <<img-document-type-parents-tab>> appears, displaying the parent GS.
+
+[[img-document-type-parents-tab]]
+
+image::document-type-parents-tab.png[img-document-type-parents-tab, title="Document Type Page, Parents Tab"]
+
+
+
+=== About Automatic Debatching
+
+Note that, in <<img-document-type-parents-tab>>, automatic debatching is selected for the GS Document Type, and a shredding path is configured; if you were to view the corresponding page and tab for the GS and ISA documents, you would see that they are also configured in this manner. Thus, when this ISA Document Type is received, it will automatically debatch from an ISA containing a GS containing _x_ 850s to _x_ separate ISAs, each containing a GS and an 850, as shown in <<img-isa-gs-st-debatching>>.
+
+
