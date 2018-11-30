@@ -1,5 +1,10 @@
 = Debatching Incoming Documents
 
+Incoming documents often serve as containers for other documents. To facilitate processing both the container documents and the contained documents, each container is copied into _x_ identical container documents, where _x_ is the number of documents that the original container document contains. This process is known as _debatching_.
+The most common formats for which this process is used are X12 and XML.
+
+This section shows how GearCo creates document types to enable debatching of incoming orders from its partner AAZBoards. 
+
 == X12 Documents
 
 Purchase orders (POs) sent in X12 format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-isa-gs-st-debatching>>.
