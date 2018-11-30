@@ -1,12 +1,12 @@
 = Debatching Incoming XML Document Sets
 
-Purchase orders (POs) sent in XML format are typically enclosed in a GS envelope, which is in turn enclosed in an ISA envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GS envelopes, shown in <<img-xml-debatching>>.
+Product orders sent in XML format are typically enclosed in a parent container. In order to process the product orders, they must be _debatched_: that is, separated so that each product order is enclosed in its parent container, as shown in <<img-xml-debatching>>.
 
 [[img-xml-debatching]]
 
 image::xml-debatching.png[img-xml-debatching, title="XML Debatching"]
 
-This page shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.   
+This page shows how GearCo uses xref:document-types[Document Types] to debatch an XML parent container received from its partner *AAZBoards*.  
 
 == Before you begin
 
@@ -37,8 +37,6 @@ image::document-type.png[img-document-type, title="Document Type Page"]
 
 === Create Parent Container
 
-[start=3]
-
 . In the *Standard* box, select *XML*.
 . In the *Root Node* box, type *Parent-Container*.
 . To create the Parent Container, click *Save*.
@@ -52,8 +50,6 @@ image::document-types-parent-container-added.png[img-document-types-parent-conta
 
 
 === Create Child Product Order
-
-[start=6]
 
 . On the <<img-document-types-parent-container-added>>, click *New*.
 + 
@@ -81,9 +77,10 @@ The *Pick a document* window appears.
 . Select *XML-ParentContainer(AAZBoards)*. 
 + 
 The *Linked Parent Document Type* window reappears.
-. In the *Shredding Path* box, type */ProductOrder*. 
+. In the *Shredding Path* box, type *./ProductOrder*. 
 . Click *Add Parent Document*. 
-+ The <<img-document-type>> appears.
++ 
+The <<img-document-type>> appears.
 . Click *Save*. 
 +
 The <<img-document-types-xml-complete>> appears. 
@@ -97,16 +94,25 @@ image::document-types-xml-complete.png[img-document-types-xml-complete.png, titl
 
 === Verify Debatching Settings
 
-. To verify that the PO document type you have created is set to debatch, on the <<img-document-types-parents-children>>, click the PO. 
+. To verify that you have configured the Product Order document type to debatch correctly, on the <<img-document-types-xml-complete>>, click the *XML-ParentContainer* document type. 
 +
-The <<img-document-type>> appears, displaying the details of the 850. 
-. On the <<img-document-type>>, click *Parents*. 
+The <<img-document-types-parent-container-detail>> appears. 
+. On the <<img-document-types-parent-container-detail>>, click *Children*. 
 +
-The <<img-document-type-parents-tab>> appears, displaying the parent GS.
+The <<img-document-types-parent-container-detail>> appears.
++
+[[img-document-types-parent-container-detail]]
++
+image::document-types-parent-container-detail.png[img-document-types-parent-container-detail.png, title="Document Type Page, Children Tab"]
++
+Note that:
++
+* The Product Order document type that you added in the previous section appears in the *Debatching* section of the tab. 
+* Automatic debatching is set to occur for the document type.
 
-[[img-document-type-parents-tab]]
+Thus, whenever this partner receives a document of the type you created in <<Create Parent Container>>, and the docment contains _x_ XML documents of the type you created in <<Create Child Product Order>>, the parent container document will be debatched into _x_ parent containers_, each containing a product order. This process is shown in <<img-xml-debatching>>.
 
-image::document-type-parents-tab.png[img-document-type-parents-tab, title="Document Type Page, Parents Tab"]
+////
 
 
 
