@@ -13,13 +13,15 @@ xref:debatching-incoming-x12-documents.adoc[Debatching Incoming X12 Documents] s
 
 == XML Documents
 
-Purchase orders (POs) sent in XML are typically enclosed in a GS envelope, which is in turn enclosed in an GS envelope. In order to process the POs, they must be _debatched_: that is, separated so that each PO is enclosed in its own GSA and ISA envelopes, as shown in <<img-xml-debatching>>.
+Product orders sent in XML format are typically enclosed in a parent container. In order to process the product orders, they must be _debatched_: that is, separated so that each product order is enclosed in its parent container, as shown in <<img-xml-debatching>>.
 
 [[img-xml-debatching]]
 
 image::xml-debatching.png[img-xml-debatching, title="XML Debatching"]
 
 xref:debatching-incoming-xml-documents.adoc[Debatching Incoming XML Documents] shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs.
+
+////
 
 
 = Consider cutting here
