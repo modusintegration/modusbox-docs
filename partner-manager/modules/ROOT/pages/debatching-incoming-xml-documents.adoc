@@ -6,7 +6,7 @@ Product orders sent in XML format are typically enclosed in a parent container. 
 
 image::xml-debatching.png[img-xml-debatching, title="XML Debatching"]
 
-This page shows how GearCo uses xref:document-types[Document Types] to debatch an XML parent container received from its partner *AAZBoards*.  
+This page shows how GearCo uses xref:document-types.adoc[Document Types] to debatch an XML parent container received from its partner *AAZBoards*.  
 
 == Before you begin
 

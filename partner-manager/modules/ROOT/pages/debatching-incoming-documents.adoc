@@ -13,7 +13,7 @@ Purchase orders (POs) sent in X12 format are typically enclosed in a GS envelope
 
 image::isa-gs-st-debatching.png[img-isa-gs-st-debatching, title="ISA, GS, and ST Debatching"]
 
-xref:debatching-incoming-x12-documents.adoc[Debatching Incoming X12 Documents] shows how GearCo uses xref:document-types[Document Types] to debatch an ISA envelope containing a GS and multiple STs. 
+xref:debatching-incoming-x12-documents.adoc[Debatching Incoming X12 Documents] shows how GearCo uses xref:document-types.adoc[Document Types] to debatch an ISA envelope containing a GS and multiple STs. 
 
 
 == XML Documents
