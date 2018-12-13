@@ -13,6 +13,7 @@ include::{partialsdir}/edit-settings.adoc[]
 The <<img-partner-conversations>> appears.
 
 [[img-partner-conversations]]
+image::partner-conversations.png[img-partner-conversations,title="Partner Conversations Page"]
 
 
 [start=4]
