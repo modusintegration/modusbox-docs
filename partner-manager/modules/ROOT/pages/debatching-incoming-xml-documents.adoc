@@ -110,7 +110,7 @@ Note that:
 * The Product Order document type that you added in the previous section appears in the *Debatching* section of the tab. 
 * Automatic debatching is set to occur for the document type.
 
-Thus, whenever this partner receives a document of the type you created in <<Create Parent Container>>, and the docment contains _x_ XML documents of the type you created in <<Create Child Product Order>>, the parent container document will be debatched into _x_ parent containers_, each containing a product order. This process is shown in <<img-xml-debatching>>.
+Thus, whenever this partner receives a document of the type you created in <<Create Parent Container>>, and the docment contains _x_ XML documents of the type you created in <<Create Child Product Order>>, the parent container document will be debatched into _x_ parent containers, each containing a product order. This process is shown in <<img-xml-debatching>>.
 
 ////
 
