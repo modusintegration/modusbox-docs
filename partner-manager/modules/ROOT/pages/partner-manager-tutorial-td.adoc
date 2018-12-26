@@ -54,12 +54,12 @@ image::trading-partners.png[img-trading-partners,title="Trading Partners Page"]
 
 This tutorial works with two partners: a Supplier and a Buyer.
 
-The Supplier is *GearCo*, a fictional retailer of nuts and bolts, also identified on the xref:img-trading-partners[] as *YOUR COMPANY*.
+The Supplier is *AAZFasteners*, a fictional retailer of nuts and bolts, also identified on the xref:img-trading-partners[] as *YOUR COMPANY*.
 
-NOTE: In your copy of Partner Manager, *YOUR COMPANY* is probably not named *GearCo*. However, for illustration purposes, we refer to *YOUR COMPANY* as *GearCo* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *GearCo*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
+NOTE: In your copy of Partner Manager, *YOUR COMPANY* is probably not named *AAZFasteners*. However, for illustration purposes, we refer to *YOUR COMPANY* as *AAZFasteners* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *AAZFasteners*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
 
 The other partner in this tutorial is the _Buyer_, a fictional retailer of home supplies. In <<Create the Buyer Partner>>, we create this partner, identifying it as *AcmeHomeSupply*.
-In the tutorial, AcmeHomeSupply uses Partner Manager to order products from GearCo. In the following sections, you will:
+In the tutorial, AcmeHomeSupply uses Partner Manager to order products from AAZFasteners. In the following sections, you will:
 
 * <<Add Identifiers>>
 
@@ -139,19 +139,19 @@ include::_partials/tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
 . In the *Transaction Name* box, type *TargetPurchaseOrderTemplate*.
 . Click *Save Template*.
 +
-The <<img-td-save-transaction-gearco>> appears.
+The <<img-td-save-transaction-AAZFasteners>> appears.
 
 
-[[img-td-save-transaction-gearco]]
+[[img-td-save-transaction-AAZFasteners]]
 
-image::yc/td-save-transaction-gearco.png[img-td-save-transaction-gearco,title="Save transaction Page"]
+image::yc/td-save-transaction-AAZFasteners.png[img-td-save-transaction-AAZFasteners,title="Save transaction Page"]
 
 
 [start=3]
 
-. On the <<img-td-save-transaction-gearco>>, click *Close*.
+. On the <<img-td-save-transaction-AAZFasteners>>, click *Close*.
 +
-The <<img-td-target-channel-in-progress-gearco>> appears.
+The <<img-td-target-channel-in-progress-AAZFasteners>> appears.
 
 
 == Configure a Buyer
@@ -163,17 +163,17 @@ include::_partials/tutorial/buyer/create-buyer-partner.adoc[]
 
 === Add Buyer Identifiers
 
-NOTE: Make sure you are configuring *AcmeHomeSupply*, not *GearCo*.
+NOTE: Make sure you are configuring *AcmeHomeSupply*, not *AAZFasteners*.
 
 ==== Add Buyer X12-ISA Identifier
 
 To add this identifier, perform steps in <<Add Supplier X12-ISA Identifier>>,
-substituting *Acme* for *GearCo*.
+substituting *Acme* for *AAZFasteners*.
 
 ==== Add Buyer AS2 Identifier
 
 To add this identifier, perform steps in <<Add Supplier AS2 Identifier>>,
-substituting *Acme* for *GearCo*.
+substituting *Acme* for *AAZFasteners*.
 
 === Upload the Buyer Certificate
 
@@ -333,9 +333,9 @@ image::partner/td-new-map-acme.png[img-td-new-map-acme, title="Map Page"]
 +
 The Pick a document Page appears.
 
-. On the Pick a document Page, click the row that corresponds to the Target Document Type - that is, the row for which the value in the *Name* column is  *JSON-PurchaseOrder(GearCo)*.
+. On the Pick a document Page, click the row that corresponds to the Target Document Type - that is, the row for which the value in the *Name* column is  *JSON-PurchaseOrder(AAZFasteners)*.
 +
-The <<img-td-new-map-acme>> appears, with *JSON-PurchaseOrder(GearCo)* in the *Target Document* box.
+The <<img-td-new-map-acme>> appears, with *JSON-PurchaseOrder(AAZFasteners)* in the *Target Document* box.
 . In the *Mapping Type* box, click *DataWeave*.
 +
 For more information, see xref:https://docs.mulesoft.com/mule-runtime/3.8/dataweave-reference-documentation[DataWeave].
