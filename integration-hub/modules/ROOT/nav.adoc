@@ -1,8 +1,7 @@
 * xref:index.adoc[Integration Hub]
 
 ** xref:key-concepts.adoc[Key Concepts]
-*** xref:b2b-transaction-processing-fram>>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/nav.adoc
-ework.adoc[B2B Transaction-Processing Framework]
+*** xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
 *** xref:resolution-processes.adoc[Resolution Processes]
 *** xref:tracking.adoc[Tracking]
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
@@ -37,13 +36,9 @@ ework.adoc[B2B Transaction-Processing Framework]
 *** xref:security.adoc[Security]
 *** xref:lookup-tables.adoc[Lookup Tables]
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/nav.adoc
-** xref:partner-manager-tutorial-td.adoc[Partner Manager Tutorial: Designing a Transaction]
-=======
 ////
 ** xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
 ////
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/nav.adoc
 
 ** xref:integration-hub-apis.adoc[Integration Hub APIs]
 
