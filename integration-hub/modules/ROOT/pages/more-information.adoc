@@ -1,0 +1,37 @@
+= More information
+
+== About xref:partner-configuration[configuring trading partners]
+
+** xref:partners[Partners]
+*** xref:company-information[Company Information]
+*** xref:identifiers[Identifiers]
+*** xref:administration[Administration] (Home partner only)
+
+** xref:format-defaults[Format Defaults]
+*** xref:x12-settings[X12 Settings]
+*** xref:edifact-settings[EDIFACT]
+*** xref:csv-settings[CSV Settings]
+
+** xref:configuration[Configuration]
+*** xref:document-types[Document Types]
+*** xref:endpoints[Endpoints]
+*** xref:maps[Maps]
+*** xref:channels[Channels]
+*** xref:routes[Routes]
+*** xref:partner-conversations[Partner Conversations]
+
+
+== About xref:anypoint-integration-hub[PortX]
+
+* xref:partner-configuration[Partner Configuration]
+* xref:transaction-monitoring[Transaction Monitoring]
+* xref:working-with-environments[Working with Environments]
+* xref:key-concepts[PortX Key Concepts]
+* xref:anypoint-integration-hub-api[PortX API]
+
+== About Anypoint B2B
+
+* xref:as2-and-edi-x12-purchase-order-walkthrough[AS2 and EDI X12 Purchase Order Walkthrough]
+* xref:ftps-and-edi-x12-purchase-order-walkthrough[FTPS and EDI X12 Purchase Order Walkthrough]
+* xref:transaction-tracking-walkthrough[Transaction Tracking Walkthrough]
+* xref:glossary[PortX Glossary]

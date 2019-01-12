@@ -1,8 +1,0 @@
-== Get Started
-
-. xref:index.adoc#start-partner-manager[Start Partner Manager].
-The <<transaction-monitoring.adoc#img-transaction-monitoring, Transaction Monitoring Page>> appears.
-
-. In the left-hand navigation pane, click *Partner Configuration*. The <<trading-partners.adoc#img-trading-partners, Trading Partners Page>> appears.
-. On the <<trading-partners.adoc#img-trading-partners, Trading Partners Page>>, select the name of the partner you want to configure.
-. The <<partner-configuration.adoc#img-company-information, Company Information Page>> appears.

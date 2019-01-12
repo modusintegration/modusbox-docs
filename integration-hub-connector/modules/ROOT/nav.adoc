@@ -1,0 +1,3 @@
+* xref:integration-hub-connector.adoc[Integration Hub Connector]
+
+

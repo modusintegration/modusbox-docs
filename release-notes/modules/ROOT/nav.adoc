@@ -1,7 +1,10 @@
 // Release Notes TOC File
 
-** xref:partner-manager-release-notes.adoc[Partner Manager Release Notes]
-** xref:partner-manager-connector-release-notes.adoc[Partner Manager Connector Release Notes]
+** xref:integration-hub-release-notes.adoc[Integration Hub Release Notes]
+** xref:integration-hub-connector-release-notes.adoc[Integration Hub Connector Release Notes]
+** xref:jde-release-notes.adoc[JD Edwards Connector Release Notes]
 
+////
 # ** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes (for Mule 4)]
 # ** xref:as2-connector-release-notes.adoc[AS2 Connector Release Notes]
+////

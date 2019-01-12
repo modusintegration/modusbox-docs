@@ -1,0 +1,50 @@
+* xref:index.adoc[Integration Hub]
+
+** xref:key-concepts.adoc[Key Concepts]
+*** xref:b2b-transaction-processing-fram>>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/nav.adoc
+ework.adoc[B2B Transaction-Processing Framework]
+*** xref:resolution-processes.adoc[Resolution Processes]
+*** xref:tracking.adoc[Tracking]
+** xref:integration-hub:ROOT:examples.adoc[Examples]
+** xref:transaction-monitoring.adoc[Transaction Monitoring]
+*** xref:central-pane-elements.adoc[Central Pane Elements]
+*** xref:tracking-scenarios.adoc[Tracking Scenarios]
+
+** xref:partner-configuration.adoc[Partner Configuration]
+
+*** xref:company-information.adoc[Company Information]
+*** xref:identifiers.adoc[Identifiers]
+*** xref:availability.adoc[Availability]
+*** xref:certificate.adoc[Certificate]
+
+*** xref:x12-settings.adoc[X12 Settings]
+*** xref:edifact-settings.adoc[EDIFACT Settings]
+*** xref:csv-settings.adoc[CSV Settings]
+
+*** xref:transaction-designer.adoc[Transaction Designer]
+*** xref:document-types.adoc[Document Types]
+*** xref:endpoints.adoc[Endpoints]
+*** xref:maps.adoc[Maps]
+*** xref:channels.adoc[Channels]
+*** xref:routes.adoc[Routes]
+*** xref:partner-conversations.adoc[Partner Conversations]
+*** xref:rosettanet-pips.adoc[RosettaNet PIPs]
+*** xref:rosettanet-agreements.adoc[RosettaNet Agreements]
+
+**  xref:administration.adoc[Administration]
+*** xref:environments.adoc[Environments]
+*** xref:error-codes.adoc[Error Codes]
+*** xref:security.adoc[Security]
+*** xref:lookup-tables.adoc[Lookup Tables]
+
+<<<<<<< HEAD:partner-manager/modules/ROOT/nav.adoc
+** xref:partner-manager-tutorial-td.adoc[Partner Manager Tutorial: Designing a Transaction]
+=======
+////
+** xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
+////
+>>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/nav.adoc
+
+** xref:integration-hub-apis.adoc[Integration Hub APIs]
+
+** xref:glossary.adoc[Glossary]
