@@ -11,8 +11,4 @@ image::environments.png[img-environments,title="Environments Page"]
 
 == Get Environment Information
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/environments.adoc
-The information on the <<img-environments>> is required when using xref:Mule ESB@partner-manager-connector:ROOT:partner-manager-connector.adoc[Partner Manager Connector].
-=======
 The information on the <<img-environments>> is required when using xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector].
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/environments.adoc

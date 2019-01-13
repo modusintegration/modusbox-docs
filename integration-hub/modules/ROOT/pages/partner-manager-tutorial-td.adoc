@@ -56,12 +56,6 @@ This tutorial works with two partners: a Supplier and a Buyer.
 
 The Supplier is *AAZFasteners*, a fictional retailer of nuts and bolts, also identified on the xref:img-trading-partners[] as *YOUR COMPANY*.
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/partner-manager-tutorial-td.adoc
-NOTE: In your copy of Partner Manager, *YOUR COMPANY* is probably not named *AAZFasteners*. However, for illustration purposes, we refer to *YOUR COMPANY* as *AAZFasteners* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *AAZFasteners*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
-
-The other partner in this tutorial is the _Buyer_, a fictional retailer of home supplies. In <<Create the Buyer Partner>>, we create this partner, identifying it as *AcmeHomeSupply*.
-In the tutorial, AcmeHomeSupply uses Partner Manager to order products from AAZFasteners. In the following sections, you will:
-=======
 NOTE: In your copy of Integration Hub, *YOUR COMPANY* is probably not named *GearCo*. However, for illustration purposes, we refer to *YOUR COMPANY* as *GearCo* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *GearCo*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
 
 The other partner in this tutorial is the _Buyer_, a fictional retailer of home supplies. In <<Create the Buyer Partner>>, we create this partner, identifying it as *AcmeHomeSupply*.

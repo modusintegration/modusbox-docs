@@ -6,13 +6,8 @@ Anypoint Integration Hub (APM) enables you to create, populate and edit a _xref:
 
 You can create a lookup table using either the:
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/lookup-tables-programmatic.adoc
-* xref:lookup-tables.adoc#create-a-lookup-table[Partner Manager user interface]
-* xref:partner-manager-apis.adoc[Partner Manager APIs]
-=======
 * xref:lookup-tables.adoc#creating-a-lookup-table[Integration Hub user interface]
 * xref:integration-hub-apis.adoc[Integration Hub APIs]
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/lookup-tables-programmatic.adoc
 
 This section shows how to make API calls using link:https://curl.haxx.se/[curl] to create a three-column, two-key table.
 

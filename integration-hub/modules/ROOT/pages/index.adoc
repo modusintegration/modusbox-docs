@@ -5,7 +5,7 @@ Integration Hub provides a single web-based user interface for <<Transaction Mon
 
 == Transaction Monitoring
 
-Because B2B transactions often communicate contractual obligations between companies, it is desirable (and often necessary) to track all transmissions sent or received, storing the  transmission content as well as metadata (such as data and time the transmission was sent or received, the identity of the partner, and success or failure of processing). Integration Hub provides a simple, secure, and integrated mechanism for tracking B2B transactions. Uses for this data include:  
+Because B2B transactions often communicate contractual obligations between companies, it is desirable (and often necessary) to track all transmissions sent or received, storing the  transmission content as well as metadata (such as data and time the transmission was sent or received, the identity of the partner, and success or failure of processing). Integration Hub provides a simple, secure, and integrated mechanism for tracking B2B traHEADnsactions. Uses for this data include:  
 
 * Non-repudiation
 * Correlation of acknowledgments
@@ -36,16 +36,6 @@ xref:key-concepts.adoc[Key Concepts].
 
 In the most common scenario, PortX is used in conjunction with an Enterprise Service Bus (ESB), Integration Hub Connector, and other connectors. Find information about this and other PortX use cases in xref:examples.adoc[Examples].
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/index.adoc
-== Start Partner Manager
-=======
-////
-
-== Start Integration Hub
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/index.adoc
-
-For access to Partner Manager, see your PortX representative.
-
 
 ////
 
@@ -58,11 +48,6 @@ image::anypoint-platform-application-selection.png[img-anypoint-platform-applica
 
 [start=3]
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/index.adoc
-. On the Anypoint Platform application selection screen, in the *Manage* drop-down listbox, click *Partner Manager*.
-+
-The xref:img-apm-start[] page appears.
-=======
 . On the Anypoint Platform application selection screen, in the *Manage* drop-down listbox, click *Integration Hub*.
 ////
 
@@ -74,25 +59,15 @@ For Integration Hub login information, see your PortX representative.
 
 . In the Company box, select your company.
 . In the Business Group box, select your Business Group. 
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/index.adoc
 +
 For more information, see  xref:transaction-monitoring.adoc[Transaction Monitoring].
-<<<<<<< HEAD
 
-[[img-apm-start]]
-image::apm-start.png[img-apm-start,title="Transaction Monitoring Page"]
-
-[start=4]
-
-. To configure or edit the configuration of a trading partner, see xref:partner-configuration.adoc[Partner Configuration].
-=======
 +
 [[img-transaction-monitoring]]
 image::transaction-monitoring.png[img-transaction-monitoring,title="Transaction Monitoring Page"]
 +
 
 To configure or edit the configuration of a trading partner, see xref:partner-configuration.adoc[Partner Configuration].
->>>>>>> 608f35a... as32, ftps images
 +
 To edit or configure settings for your company, see xref:administration.adoc[Administration].
 

@@ -1,11 +1,7 @@
 = Examples
 :keywords: b2b, portal, partner, manager, environments
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/examples.adoc
-This page identifies examples of  xref:anypoint-partner-manager[PortX] in use.
-=======
 This page identifies examples of  xref:integration-hub[Integration Hub] in use.
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/examples.adoc
 
 For conceptual information, see xref:key-concepts[Key Concepts].
 
@@ -13,12 +9,6 @@ For information about the procedures you would use to implement a given example,
 
 
 == End-to-End Use Case
-
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/examples.adoc
-In this example, a user performs a series of configuration tasks in PortX and Anypoint Studio, resulting in the ability to view events and track transmissions.
-=======
-In this example, a user performs a series of configuration tasks in Integration Hub and an Enterprise Service Bus (ESB), resulting in the ability to view events and track transmissions.
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/examples.adoc
 
 === In Integration Hub
 
@@ -34,13 +24,9 @@ In this example, a user performs a series of configuration tasks in Integration 
 
 === Back in Integration Hub
 
-<<<<<<< HEAD:partner-manager/modules/ROOT/pages/examples.adoc
-Go to the B2B Transmissions area of PortX to view tracked events and messages.
-=======
 Go to the B2B Transmissions area of Integration Hub to view tracked events and messages.
 
 // include::_sources/content-based-routing-example.adoc[]
->>>>>>> 0f39bfe... global change to integration hub:integration-hub/modules/ROOT/pages/examples.adoc
 
 
 // Promotion Scenarios
