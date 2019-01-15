@@ -107,7 +107,7 @@ This table is either:
 . Return results
 
 
-== Scenarios
+=== Scenarios
 
 === Shared 
 
@@ -187,13 +187,13 @@ This table is either:
 |===
 
 
-=== Override
+=== Flow
 
-C sends doc to A with From = C and To = A
-Routing Engine finds Route ID 1
-Successfully delivers message
-B sends doc to A with From = B and To = A
-Routing Engine finds nothing and Stops.
+* C sends doc to A with From = C and To = A
+** Routing Engine finds Route ID 1
+* Successfully delivers message
+** B sends doc to A with From = B and To = A
+* Routing Engine finds nothing and Stops.
 
 Scenario #2: Default in Partnership A:*, B does something different.
 4 partners A,B,C,D
