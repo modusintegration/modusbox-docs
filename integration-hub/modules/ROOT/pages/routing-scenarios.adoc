@@ -1,5 +1,7 @@
 = Route Resolution Scenarios
 
+////
+
 == Any-to-Any Table Model
 
 === Assumptions
@@ -46,7 +48,7 @@ Partnership between Partner X and all other partners
 * (Soft) Routes must be in a Partnership between partners (FP:TP)
 * (Soft) When you add a route definition, if USC already exists but for a diff doc def.
 ** Warn the User
-
+////
 
 ////
 === Routing Table
@@ -113,7 +115,7 @@ This table is either:
 
 === Scenarios
 
-=== Shared 
+== Shared 
 
 * Everything in Partnership A:*
 * Three partners: A,B and C
@@ -199,9 +201,9 @@ This table is either:
 
 * C sends doc to A with From = C and To = A
 ** Routing Engine finds Route ID 1
-* Successfully delivers message
-** B sends doc to A with From = B and To = A
-* Routing Engine finds nothing and Stops.
+** Successfully delivers message
+* B sends doc to A with From = B and To = A
+** Routing Engine finds nothing and stops.
 
 
 == Override 
@@ -518,6 +520,9 @@ SCQPT
 * Partner A wants to multicast Document Q to everyone.
 * Partner B,D wants to map it to Canonical
 * Partner C wants it in the raw form.
+
+
+////
 
 === Artifact Location
 
