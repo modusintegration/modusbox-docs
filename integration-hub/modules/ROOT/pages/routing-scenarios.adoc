@@ -48,6 +48,7 @@ Partnership between Partner X and all other partners
 ** Warn the User
 
 
+////
 === Routing Table
 
 |===
@@ -92,6 +93,7 @@ This table is either:
 * Should be Unique on Route ID column
 * USC = From, To, URN (Standard, Version, MsgType, etc.)
 
+
 === Resolution Logic
 . Find FP and TP id’s using the identifiers.
 .. If FP is null, throw error.
@@ -106,6 +108,8 @@ This table is either:
 . Filter Routes found in 2 using CBRF
 . Return results
 
+////
+
 
 === Scenarios
 
@@ -114,6 +118,8 @@ This table is either:
 * Everything in Partnership A:*
 * Three partners: A,B and C
 * Partner A wants to receive Document Q from Partner C but not from Partner B
+
+////
 
 ==== Artifact Location
 
@@ -186,6 +192,8 @@ This table is either:
 
 |===
 
+////
+
 
 === Flow
 
@@ -195,13 +203,17 @@ This table is either:
 ** B sends doc to A with From = B and To = A
 * Routing Engine finds nothing and Stops.
 
-Scenario #2: Default in Partnership A:*, B does something different.
-4 partners A,B,C,D
-Partner A wants to receive Document Q from Partner D,C
-Partner A wants to receive Document Q’ from Partner B
-Q and Q’ both have same Std, Ver, MsgType, etc.
-Canonical lives in *:*
 
+== Override 
+
+* Default in Partnership A:*, B does something different.
+* Four partners A,B,C,D
+* Partner A wants to receive Document Q from Partner D,C
+* P artner A wants to receive Document Q’ from Partner B
+* Q and Q’ both have same Std, Ver, MsgType, etc.
+* Canonical lives in +*:*+
+
+////
 Artifact Location
 
 
@@ -363,204 +375,31 @@ Que
 A:B
 SCQ’
 3
-
-
-Flow: 
-C sends doc to A with From = C and To = A
-Routing Engine finds Route ID 1
-D sends doc to A with From = D and To = A
-Routing Engine finds Route ID 2
-B sends doc to A with From = B and To = A
-Routing Engine finds Route ID 3
-
-Scenario #2.5 (Bad): Default in Partnership A:*, B does something different. A:* tries to have a default transaction.
-4 partners A,B,C,D
-Partner A wants to receive Document Q from anyone they are Partners with
-Partner A wants to receive Document Q’ from Partner B
-Q and Q’ both have same Std, Ver, MsgType
-Canonical lives in *:*
-
-Artifact Location
-
-
-
-Source
-
-
-Target
-Owner
-Doc
-Def In
-Channel
-Map
-Canonical 
-Route
-Channel
-Map
-Doc
-Def
-Out
-Endpoint
-A:*
-Q
-SCQ
-✓
-
-
-SCQ✓TC
-TC
-
-
-✓
-✓
-A:B
-
-
-
-
-
-
-
-
-SCQ’✓TC
-
-
-
-
-
-
-
-
-A:C
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-A:D
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-B:*
-Q’
-SCQ’
-✓
-
-
-
-
-
-
-
-
-
-
-
-
-*:*
-
-
-
-
-
-
-✓
-
-
-
-
-
-
-
-
-
-
-
-Routing Table
-
-From
-To
-Standard
-Version
-MsgType
-Doc ID
-Partnership
-Source Channel
-Route ID
-*
-A
-CSV
-1
-Que
-123
-A:*
-SCQ
-1
-B
-A
-CSV
-1
-Que
-234
-A:B
-SCQ’
-2
-
-
-Flow: 
-C sends doc to A
-Routing Engine finds Route ID 1
-D sends doc to A
-Routing Engine finds Route ID 1
-B sends doc to A
-Routing Engine finds Route ID 2 and Route ID 1
-Routing engine executes both!
-
-Solution:
-Either:
-Stop the user from making Routes in A:* and force them to always makes routes in the Partnerships between Partners. (See soft rule above)
-Alert the user of the overlap and ask them to add in a CBRF on the Source Channel.
-
-Scenario #3: Partner wants to both Pass-Through and Map an incoming document.
-2 partners A,B
-Partner A wants to receive Document Q from Partner B
-Partner A wants to PassThrough Q to 1 system.
-Partner A wants to Map Q through Canonical as well.
+////
+
+=== Flow
+* C sends doc to A with From = C and To = A
+* Routing Engine finds Route ID 1
+* D sends doc to A with From = D and To = A
+* Routing Engine finds Route ID 2
+* B sends doc to A with From = B and To = A
+* Routing Engine finds Route ID 3
+
+
+== Multiple-Source Channel 
+
+* Partner wants to both Pass-Through and Map an incoming document.
+* 2 partners A,B
+* Partner A wants to receive Document Q from Partner B
+* Partner A wants to PassThrough Q to 1 system.
+* Partner A wants to Map Q through Canonical as well.
 
 Artifact Location
 SCQM = Source Chanel for Q with Map
 SCQPT = Source Chanel for Q with Passthrough
 
 
-
+////
 Source
 
 
@@ -663,24 +502,29 @@ Que
 A:B
 SCQPT
 2
+////
+
+=== Flow 
+
+* B sends doc Q to A
+* Routing Engine finds Route ID 1
+* Routing Engine finds Route ID 2
+* Routing Engine Executes both.
 
 
-Flow: 
-B sends doc Q to A
-Routing Engine finds Route ID 1
-Routing Engine finds Route ID 2
-Routing Engine Executes both.
-Scenario #4: Multicast
-4 partners A,B,C,D
-Partner A wants to multicast Document Q to everyone.
-Partner B,D wants to map it to Canonical
-Partner C wants it in the raw form.
+== Multicast
 
-Artifact Location
-SCQMC = Source Chanel for Q with Map to Canonical
-SCQ = Source Chanel for Q with no Map
+* Four partners A,B,C,D
+* Partner A wants to multicast Document Q to everyone.
+* Partner B,D wants to map it to Canonical
+* Partner C wants it in the raw form.
 
+=== Artifact Location
 
+* SCQMC = Source Chanel for Q with Map to Canonical
+* SCQ = Source Chanel for Q with no Map
+
+////
 
 Source
 
@@ -816,15 +660,17 @@ Que
 A:D
 SCQM
 3
+////
 
+=== Flow
 
-Flow: 
-A sends Q with From Parter = A and To Partner = *
-Routing Engine finds Route ID 1
-Routing Engine finds Route ID 2
-Routing Engine finds Route ID 3
-Routing Engine Executes all.
+* A sends Q with From Parter = A and To Partner = *
+** Routing Engine finds Route ID 1
+** Routing Engine finds Route ID 2
+** Routing Engine finds Route ID 3
+** Routing Engine Executes all.
 
+////
 Scenario #5: Service Manager Logger
 3 Apps A,B,C
 1 Logger L
@@ -1248,3 +1094,5 @@ Filter Source Channels found using Content-based Route Filter (CBRF)
 Execute Source Channel Map
 Filter Routes found using CBRF using Data extracted from Map
 Return results
+
+////

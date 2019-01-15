@@ -3,7 +3,7 @@
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
 *** xref:resolution-processes.adoc[Resolution Processes]
-*** xfef:routing-scenarios.adoc[Routing Scenarios]
+*** xref:routing-scenarios.adoc[Routing Scenarios]
 *** xref:tracking.adoc[Tracking]
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
