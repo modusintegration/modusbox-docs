@@ -113,8 +113,6 @@ This table is either:
 ////
 
 
-=== Scenarios
-
 == Shared 
 
 * Everything in Partnership A:*
@@ -396,10 +394,11 @@ SCQ’
 * Partner A wants to PassThrough Q to 1 system.
 * Partner A wants to Map Q through Canonical as well.
 
+////
 Artifact Location
 SCQM = Source Chanel for Q with Map
 SCQPT = Source Chanel for Q with Passthrough
-
+////
 
 ////
 Source
