@@ -379,17 +379,17 @@ SCQ’
 
 === Flow
 * C sends doc to A with From = C and To = A
-* Routing Engine finds Route ID 1
+** Routing Engine finds Route ID 1
 * D sends doc to A with From = D and To = A
-* Routing Engine finds Route ID 2
+** Routing Engine finds Route ID 2
 * B sends doc to A with From = B and To = A
-* Routing Engine finds Route ID 3
+** Routing Engine finds Route ID 3
 
 
 == Multiple-Source Channel 
 
 * Partner wants to both Pass-Through and Map an incoming document.
-* 2 partners A,B
+* Two partners A,B
 * Partner A wants to receive Document Q from Partner B
 * Partner A wants to PassThrough Q to 1 system.
 * Partner A wants to Map Q through Canonical as well.
@@ -508,9 +508,9 @@ SCQPT
 === Flow 
 
 * B sends doc Q to A
-* Routing Engine finds Route ID 1
-* Routing Engine finds Route ID 2
-* Routing Engine Executes both.
+** Routing Engine finds Route ID 1
+** Routing Engine finds Route ID 2
+** Routing Engine Executes both.
 
 
 == Multicast
