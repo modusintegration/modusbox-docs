@@ -1,7 +1,7 @@
 * xref:index.adoc[Integration Hub]
 
 ** xref:key-concepts.adoc[Key Concepts]
-*** xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
+*** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 *** xref:resolution-processes.adoc[Resolution Processes]
 *** xref:routing-scenarios.adoc[Routing Scenarios]
 *** xref:tracking.adoc[Tracking]
