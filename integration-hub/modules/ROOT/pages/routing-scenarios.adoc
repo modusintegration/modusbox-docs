@@ -1,4 +1,4 @@
-= Route Resolution Scenarios
+= Routing Scenarios
 
 ////
 
@@ -116,7 +116,7 @@ This table is either:
 == Shared 
 
 * Everything in Partnership A:*
-* Three partners: A,B and C
+* Three partners: A, B and C
 * Partner A wants to receive Document Q from Partner C but not from Partner B
 
 ////
