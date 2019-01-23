@@ -4,7 +4,7 @@
 
 The following pages explain key Integration Hub concepts:
 
-* xref:b2b-transaction-processing-framework.adoc[B2B Transaction-Processing Framework]
+* xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 * xref:resolution-processes.adoc[Resolution Processes]
 * xref:tracking.adoc[Tracking]
 
