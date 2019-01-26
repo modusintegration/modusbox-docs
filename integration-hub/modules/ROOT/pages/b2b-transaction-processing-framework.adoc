@@ -1,8 +1,8 @@
-= B2B Transaction-Processing Framework
+= Transaction-Processing Framework
 
 A xref:glossary#sectb[B2B transaction-processing solution] serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
 
-xref:glossary#sectb[_B2B Transaction Processing Framework_] enables developers to build a single set of components that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Partner Manager].
+xref:glossary#sectb[_B2B Transaction Processing Framework_] enables developers to build a single set of components that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[integration hub].
 Thus, non-programmers such as data analysts can use PortX to onboard new trading partner relationships and support new transaction types without having to develop, test, or deploy new components.
 
 This section identifies high-level framework components and their roles in end-to-end B2B transaction processing.
@@ -48,7 +48,7 @@ image::b2b-message-processing-framework.png[img-b2b-message-processing-framework
 === Components
 
 ==== PortX
-xref:anypoint-partner-manager[PortX] (PortX)
+xref:portx:ROOT:index.adoc[PortX] (PortX)
 is the B2B Transaction Processing Framework user interface, enabling you to:
 
 * xref:partner-configuration[Configure how B2B transactions are processed]
@@ -71,11 +71,11 @@ For example:
 
 This includes, but is not limited to correlation logic for matching acknowledgements to original messages and identifying duplicate messages.
 
-==== Partner Manager Connector
-The Partner Manager Connector runs inside the ESB and coordinates all interaction with the PortX APIs (TPM and Tracking).
+==== integration hub Connector
+The integration hub Connector runs inside the ESB and coordinates all interaction with the PortX APIs (TPM and Tracking).
 
 ==== Object Store
-The Object Store is a distributed cache in the ESB that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. Partner Manager Connector manages this caching.
+The Object Store is a distributed cache in the ESB that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. integration hub Connector manages this caching.
 
 === Customer-Built Flows
 NOTE: At this time the flows identified below must be developed by the customer. PortX may provide these components as part of the product in the future. However, in order to provide full extensibility and customization, the option will remain for customers to provide their own implementations.
@@ -83,7 +83,7 @@ NOTE: At this time the flows identified below must be developed by the customer.
 ==== Receive Flows
 Each receive endpoint corresponds to a component that consists of the appropriate protocol connector and the appropriate endpoint configuration. After receiving a message over a particular protocol, each receive flow:
 
-* Tracks the message using the Partner Manager Connector in order to persist a copy of the message as it was received from the partner.
+* Tracks the message using the Integration Hub Connector in order to persist a copy of the message as it was received from the partner.
 * Places a queue message with headers populated with any important metadata from the inbound protocol, such as transport headers and filenames, on the Resolve queue.
 
 Receive flows are activated dynamically by a Receive Endpoint listener flow which polls the TPM system for the list of endpoints that should be active. This flow creates a specific endpoint for each flow based on a template for the required transport protocol. It then dynamically instantiates that flow into the ESB and starts it, so that the required connector endpoint is active and listening for messages.
@@ -98,22 +98,22 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 
 * Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
 * Does any necessary data translation, such as resolving partner values to your company's values using xref:lookup-tables.adoc[lookup tables], functions, and flows.
-* Uses the Partner Manager Connector to track the mapped, canonical version of the message.
+* Uses the Integration Hub Connector to track the mapped, canonical version of the message.
 * Passes the updated message body to the next processing stage.
 
 ==== Validate Flow
 
 * Dynamically applies the configured schema script to validate that the message is in the required format.
-* Uses the Partner Manager Connector to track the validation result for the message.
+* Uses the Integration Hub Connector to track the validation result for the message.
 * Passes the message to the next processing stage.
 
 ==== Deliver Flow
 
 * Invokes the target service by passing the transformed message to the configured transport endpoint.
-* Uses the Partner Manager Connector to track the result from the target service.
+* Uses the Integration Hub Connector to track the result from the target service.
 
 ==== Message Payload Persistence Flow
-This is an optional flow that can be implemented to store message payloads at various stages. It receives a message from the Partner Manager Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Flow. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Flow and display the message payload in a pop-up window.
+This is an optional flow that can be implemented to store message payloads at various stages. It receives a message from the Integration Hub Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Flow. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Flow and display the message payload in a pop-up window.
 
 ==== Message Payload Retrieval API Flow
 The Message Payload Retrieval API Flow is used to retrieve the message payload with a URL (which contains the specific transactionId of the message to be retrieved).
