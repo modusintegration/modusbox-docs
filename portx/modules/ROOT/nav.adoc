@@ -3,4 +3,5 @@
 ** xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 ** xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 ** xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+** xref:jde:ROOT:jde.adoc[JDE Connector]
 ** xref:release-notes:ROOT:release-notes.adoc[Release Notes]
