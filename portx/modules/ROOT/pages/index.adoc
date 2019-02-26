@@ -2,6 +2,14 @@
  
 PortX streamlines data flow between you, your partners, and your applications with products designed for use with an Enterprise Service Bus (ESB). PortX facilitates fast, secure, and reliable transaction processing without the developer overhead typically required to achieve it.
 
+ifdef::mule[]
+If you are a mule, read on!
+endif::[]
+
+ifdef::otheresb[]
+If you are another esb, blast off!
+endif::[]
+
 == PortX Components
 
 === xref:integration-hub:ROOT:index.adoc[Integration Hub]
