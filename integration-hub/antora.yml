@@ -1,6 +1,6 @@
 name: integration-hub
 title: Integration Hub
-version: 'Mulesoft-ESB'
+version: 'latest'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc
