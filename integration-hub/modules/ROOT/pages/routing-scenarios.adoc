@@ -4,19 +4,18 @@
 
 === Goal
 
-Here our users want to receive a single document Q from PartnerA, map it once to the internal standard Document C and send it to a backend Database DATA.
+Here our users want to receive a single document *DocQ* from partner *PartA*, map it once to the internal standard document *DocC* and send it to a backend database *DATA*.
 
 === Setup
 
 There are two relationships in this scenario:
 
 [YourCompany B2B:Any]
-Universal relationship between your company and any partner.
-Artifacts used across all partners with whom you do business.
-[PartnerA:YourCompany B2B]
-Your relationship with the partner with whom you are doing business (in this case, PartnerA).
-Contains artifacts used only with this partner.
-
+* Universal relationship between your company and any partner.
+* Artifacts used across all partners with whom you do business.
+[*PartA*:YourCompany B2B]
+* Your relationship with the partner with whom you are doing business (in this case, *PartA*).
+* Contains artifacts used only with this partner.
 
 [[img-basic-scenario-overview]]
 
@@ -25,31 +24,31 @@ image::basic-scenario-overview.png[img-basic-scenario-overview, title="Basic Sce
 
 ==== Artifacts in [YourCompany B2B:Any]
 
-* Document C
+* *DocC*
 
 ** A document you use internally in your company.
 
-* Endpoint DATA
+* Endpoint *DATA*
 
 ** The endpoint that points to your internal database.
 
-* Target Channel DocC-to-Data
+* Target Channel *DocC-to-Data*
 
 ** This channel will take the internal document C and send it to Endpoint Data.
 
 ==== [PartnerA:YourCompany B2B]
 
-* Endpoint RecFromA
+* Endpoint *RecFromA*
 
-** This is the endpoint on which you expect to receive documents from PartnerA.
+** This is the endpoint on which you expect to receive documents from *PartA*.
 
-* Document Q
+* *DocQ*
 
 ** A document you expect to receive from your partner.
 
-* Map Q-to-C
+* Map *Q-to-C*
 
-** This map will convert the document Q into document C
+** This map will convert *DocQ* into document C
 
 * Source Channel DocQ-to-DocC
 
