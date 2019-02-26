@@ -10,10 +10,10 @@ Here our users want to receive a single document *DocQ* from partner *PartA*, ma
 
 There are two relationships in this scenario:
 
-[YourCompany B2B:Any]
+[YourCompany B2B:Any]::
 * Universal relationship between your company and any partner.
 * Artifacts used across all partners with whom you do business.
-[*PartA*:YourCompany B2B]
+[*PartA*:YourCompany B2B]::
 * Your relationship with the partner with whom you are doing business (in this case, *PartA*).
 * Contains artifacts used only with this partner.
 
