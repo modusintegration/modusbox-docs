@@ -1,9 +1,11 @@
 = PortX(TM): Managing, Connecting and Integrating Partners and Applications
  
 PortX streamlines data flow between you, your partners, and your applications with products designed for use with 
+
 ifdef::mule[]
 the Mulesoft Enterprise Service Bus (ESB).
 endif::[]
+
 ifdef::other-esb[]
 an Enterprise Service Bus (ESB). 
 endif::[]
