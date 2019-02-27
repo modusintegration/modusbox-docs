@@ -6,7 +6,7 @@ ifdef::mule[]
 the Mulesoft Enterprise Service Bus (ESB).
 endif::[]
 
-ifdef::other-esb[]
+ifdef::otheresb[]
 an Enterprise Service Bus (ESB). 
 endif::[]
 
