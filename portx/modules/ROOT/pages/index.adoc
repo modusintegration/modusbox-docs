@@ -23,26 +23,30 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 
 == Requirements
 
-=== General ESB
+ifdef::other-esb[]
+=== ESB
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
-* xref:Other-ESB@integration-hub::index.adoc[Integration Hub]
-* xref:Other-ESB@integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
-
-=== Specific ESB
-
-For information about products built to power integration on specific platforms, see these libraries.
+* xref:integration-hub::index.adoc[Integration Hub]
+* xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
+endif::[]
+ifdef::mule[]
 
 === Mulesoft
 
-* xref:Mulesoft-ESB@integration-hub:ROOT:index.adoc[Integration Hub (Mulesoft)]
-* xref:Mulesoft-ESB@integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector (Mulesoft)]
+* xref:integration-hub:ROOT:index.adoc[Integration Hub (Mulesoft)]
+* xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector (Mulesoft)]
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 * xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+endif::[]
 
 
 == Getting Started
 
 For conceptual information, see xref:key-concepts[Key Concepts].
-To see the Integration Hub in action, see xref:
+
+ifdef::mule[]
+To see Integration Hub in action, see xref:
+endif::[]
+
