@@ -46,7 +46,8 @@ endif::[]
 
 For conceptual information, see xref:key-concepts[Key Concepts].
 
+////
 ifdef::mule[]
 To see Integration Hub in action, see xref:
 endif::[]
-
+////
