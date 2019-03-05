@@ -4,7 +4,11 @@
 
 === Goal
 
-Here our users want to receive a single document *DocQ* from partner *PartA*, map it once to the internal standard document *DocC* and send it to a backend database *DATA*.
+Here our users want to:
+
+. Receive a single document *DocQ* from partner *PartA*
+. Map it once to the internal standard document *DocC* 
+. Send it to a backend database *DATA*.
 
 === Setup
 
@@ -22,7 +26,9 @@ There are two relationships in this scenario:
 image::basic-scenario-overview.png[img-basic-scenario-overview, title="Basic Scenario Overview"]
 
 
-==== Artifacts in [YourCompany B2B:Any]
+=== Artifact Locations 
+
+==== _[YourCompany B2B:Any]_
 
 * *DocC*
 
@@ -34,9 +40,9 @@ image::basic-scenario-overview.png[img-basic-scenario-overview, title="Basic Sce
 
 * Target Channel *DocC-to-Data*
 
-** This channel will take the internal document C and send it to Endpoint Data.
+** This channel will take the internal *DocC* and send it to Endpoint *Data*.
 
-==== [PartnerA:YourCompany B2B]
+==== _[PartnerA:YourCompany B2B]_
 
 * Endpoint *RecFromA*
 
@@ -62,16 +68,14 @@ image::basic-scenario-overview.png[img-basic-scenario-overview, title="Basic Sce
 
 === Execution
 
-==== ParnerA sends Document Q to Endpoint RecFromA.
+==== PartnerA sends Document Q to Endpoint RecFromA.
 
 Integration Hub:
 
-* Receives Document Q
-
-* Attempts to resolve routes
-* Finds Transaction DocQ-to-DocC-to-DATA
-* Executes that transaction, which maps the transaction to Document C
-
+* Receives Document Q.
+* Attempts to resolve routes.
+* Finds Transaction DocQ-to-DocC-to-DATA.
+* Executes that transaction, which maps the transaction to Document C.
 * Sends Document C to Endpoint DATA.
 
 [[img-basic-scenario-execution-success]]
@@ -81,13 +85,13 @@ image::basic-scenario-execution-success.png[img-basic-scenario-execution-success
 
 
 
-==== Partner PartA sends Document P to Endpoint RecFromA,.
+==== Partner PartA sends Document P to Endpoint RecFromA
 
 Integration Hub:
 
-* Receives document P
+* Receives document P.
 
-* Attempts to resolve routes
+* Attempts to resolve routes.
 
 * Does not find a corresponding transaction.
 
