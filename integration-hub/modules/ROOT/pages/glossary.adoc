@@ -2,9 +2,10 @@
 
 :keywords: Anypoint B2B PortX
 
-xref:secta[A] xref:sectb[B] xref:sectc[C] xref:sectd[D] xref:secte[E] xref:sectf[F] xref:sectg[G] xref:secth[H] xref:secti[I] xref:sectj[J] xref:sectk[K] xref:sectl[L] xref:sectm[M] xref:sectn[N] xref:secto[O] xref:sectp[P] xref:sectq[Q] xref:sectr[R] xref:sects[S] xref:sectt[T]
+xref:secta[A] xref:sectc[C] xref:sectd[D] xref:secte[E] xref:sectf[F] xref:sectg[G] xref:secth[H] xref:secti[I] xref:sectj[J] xref:sectk[K] xref:sectl[L] xref:sectm[M] xref:sectn[N] xref:secto[O] xref:sectp[P] xref:sectq[Q] xref:sectr[R] xref:sects[S] xref:sectt[T]
 
 ////
+xref:sectb[B]
 xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz[Z]
 ////
 
@@ -13,25 +14,23 @@ xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz
 
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
+////
 [[sectb]]
 *B*
+////
 
-B2B Transaction:: Denotes the end-to-end processing of a single instance of a document from the receipt at an endpoint all the way to the desired Business Service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
-
-B2B Transaction Definition:: The full configuration that configures how a document is processed between two partners.
-
-B2B transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
-
-B2B Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single ESB application that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
 
 [[sectd]]
 *D*
 
-Document:: An instance of a structured payload data being passed through the B2B system.  Synonymous with other terms commonly used in various integration-related domains such as file, interchange, payload, message, and transaction.
+Document:: An instance of a structured payload data being passed through Integration Hub. 
+
+Used interchangeably with other terms commonly used in  integration-related domains. For example, file, payload, message.
 
 Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
 
-Document Properties:: Document Properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document.  These properties are extracted and stored by the Tracking service.
+Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
+Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document.  These properties are extracted and stored by the Tracking service.
 
 [[secte]]
 *E*
@@ -82,7 +81,7 @@ Standard PortX Field Format:: Describes fields for which valid values can includ
 [[sectt]]
 *T*
 
-Transaction:: The end-to-end processing of a single instance of a document from receipt at an endpoint all the way to the desired Business Service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
+Transaction:: The end-to-end processing of a single instance of a document from receipt at an endpoint all the way to the desired business service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
 
