@@ -4,7 +4,7 @@ PortX streamlines data flow between you, your partners, and your applications wi
 ifdef::mule[]
 the Mulesoft Enterprise Service Bus (ESB).
 endif::[]
-ifdef::other-esb[]
+ifdef::otheresb[]
 an Enterprise Service Bus (ESB). 
 endif::[]
 
@@ -31,8 +31,8 @@ For information about products built to power integration on most Enterprise Ser
 * xref:integration-hub::index.adoc[Integration Hub]
 * xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 endif::[]
-
 ifdef::mule[]
+
 === Mulesoft
 
 * xref:integration-hub:ROOT:index.adoc[Integration Hub (Mulesoft)]
@@ -46,7 +46,8 @@ endif::[]
 
 For conceptual information, see xref:key-concepts[Key Concepts].
 
+////
 ifdef::mule[]
 To see Integration Hub in action, see xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
 endif::[]
-
+////
