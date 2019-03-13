@@ -105,7 +105,7 @@ Endpoint:: As created in xref:endpoints[Endpoints] or in xref:transaction-design
 
 In this section, you create a template for any transaction in which you receive a purchase order from a partner and send it to your HTTP endpoint. Later, in <<Design a Source Channel>>, you will use this template as the starting point from which you configure a transaction specific to receiving a purchase order from AcmeHomeSupply.
 
-==== Start Transaction Designer
+=== Start Transaction Designer
 
 include::_partials/tutorial/supplier/start-td-aaz.adoc[]
 
@@ -237,7 +237,7 @@ The <<img-endpoints>> appears.
 * <<Add the Target Channel>>
 
 
-==== Start Transaction Designer
+=== Start Transaction Designer
 
 include::_partials/tutorial/buyer/start-td-acme.adoc[]
 

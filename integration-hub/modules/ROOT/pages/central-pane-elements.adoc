@@ -1,11 +1,11 @@
 = Central Pane Elements
 
-=== Dashboard
+== Dashboard
 
 * Top of Central Pane
 * Provides data for the timeframe you select in the <<Overview for _timeframe_ Dropdown List>> at the upper left.
 
-==== Overview for _timeframe_ Dropdown List
+=== Overview for _timeframe_ Dropdown List
 
 Enables you to present data specific to the following timeframes:
 
@@ -18,7 +18,7 @@ The default is *Today*.
 
 
 
-===== Dashboard Data
+==== Dashboard Data
 
 Between the <<Overview for _timeframe_ Dropdown List>> and the <<View Dropdown List>>, Dashboard Data is presented in two forms:
 

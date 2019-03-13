@@ -14,7 +14,7 @@ This page identifies the PortX components you use to monitor transactions; see a
 
 == Get Started
 
-. xref:anypoint-partner-manager#start-anypoint-manager[Start PortX].
+. xref:index.adoc#start-integration-hub[Start Integration Hub].
 The <<img-transaction-monitoring>> appears.
 
 [[img-transaction-monitoring]]
