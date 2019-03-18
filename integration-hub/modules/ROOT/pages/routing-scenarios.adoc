@@ -104,24 +104,24 @@ Integration Hub:
 * Executes Transaction *DocTypeQ-to-DocTypeC-to-DATA*, which transforms the document from *DocTypeQ* to *DocTypeC*.
 * Sends the document to Endpoint *DATA*.
 
-[[img-basic-scenario-execution-success]]
+[[img-basic-scenario-outcome-success]]
 
-image::basic-scenario-execution-success.png[img-basic-scenario-execution-success, title="Basic Scenario Successful Execution"]
+image::basic-scenario-outcome-success.png[img-basic-scenario-outcome-success, title="Basic Scenario Outcome (Success)"]
 
 
 ==== Document Rejected
 
-Document Type *DocTypeC* is not configured in Relationship *YourCompany B2B:Any*; IH rejects an incoming document of Document Type *DocTypeC* from Partner *PartA*. 
+*Part* sends a document of Document Type *DocTypeP* to Endpoint *RecFromA*. 
+Document Type *DocTypeP* is not configured in Relationship *YourCompany B2B:Any*; IH rejects the document. 
 
 Integration Hub:
 
 * Receives incoming document.
 * Attempts to resolve Routes.
 * Does not find a corresponding Transaction.
-
 * Rejects the Document.
 
-[[img-basic-scenario-execution-rejection]]
+[[img-basic-scenario-outcome-rejection]]
 
-image::basic-scenario-execution-rejection.png[img-basic-scenario-execution-rejection, title="Basic Scenario Execution (Rejection)"]
+image::basic-scenario-outcome-rejection.png[img-basic-scenario-outcome-rejection, title="Basic Scenario Outcome (Rejection)"]
 
