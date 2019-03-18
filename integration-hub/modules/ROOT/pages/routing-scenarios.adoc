@@ -1,15 +1,9 @@
 = Routing Scenarios
 
-This page presents scenarios that illustrate:
+This page presents scenarios that identify and illustrate:
 
 * Integration Hub (IH) artifacts
 * How you can configure IH artifacts to implement routing objectives.
-
-
-== Requirements
-
-* Familiarity with IH artifacts as defined in xref:transaction-processing-framework[Transaction Processing Framework]
-* Access to Integration Hub. To obtain access, connect with your PortX representative. 
 
 == Basic Scenario
 
@@ -38,15 +32,15 @@ image::basic-scenario-overview.png[img-basic-scenario-overview, title="Basic Sce
 
 This section identifies:
 
-* Artifacts that must be configured in order for the document in this scenario to be routed
+* Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
 * The Relationship (either *YourCompany B2B:Any* or *PartA:YourCompany B2B*) in which the artifacts are configured
 
-==== Configured in YourCompany B2B:Any
+==== Configured in *YourCompany B2B:Any*
 
 * Document Type *DocTypeC*
 
 ** Document Type you use internally in your company
-** Configured in the xref:document-types[Document Types]  
+** Configured in xref:document-types[Document Types]  
 
 * Endpoint *DATA*
 ** Endpoint that points to your internal database
@@ -60,31 +54,30 @@ This section identifies:
 ==== Configured in PartA:YourCompany B2B
 
 * Endpoint *RecFromA*
-** Endpoint at which you expect to receive documents from *PartA*.
+** Endpoint at which you expect to receive documents from *PartA*
 
 * Document Type *DocTypeQ*
-** Document Type that includes a document you expect to receive from *PartA*.
+** Document Type that includes a document you expect to receive from *PartA*
 
 * Map *Q-to-C*
-** Transforms a document of Document Type *DocTypeQ* to a document of Document Type *DocTypeC*.
+** Transforms a document of Document Type *DocTypeQ* to a document of Document Type *DocTypeC*
 ** Configured in xref:maps[Maps]
 
 
 * Source Channel Q-to-C
 
-** Includes the process that maps and sends a document of *DocTypeQ* to a document of *DocTypeC*.
+** Includes the process that maps and sends a document of *DocTypeQ* to a document of *DocTypeC*
 
 * Transaction Q-to-C-to-Data
 
 ** This xref:glossary#sectt[Transaction] is the combination of the Source Channel *Q-to-C* and the Target Channel *C-to-Data*.
 It receives a document of *DocTypeQ*, maps it to a document of *DocTypeC* and then sends it to Endpoint *DATA*. 
-** 
-This transaction has the *From* Partner set to *PartA* and the *To* Partner set to *Your Company B2B*.
+** This transaction has the *From* Partner set to *PartA* and the *To* Partner set to *Your Company B2B*.
 
 
-=== Outcomes
+=== Outcome
 
-Having read this scenario, you have the information to know that the outcome of this scenario depends on whether you have configured the following artifacts appropriately:
+Having read this far, you now know that the outcome of this scenario depends on whether you have configured the following artifacts appropriately:
 
 * Partner *PartA*
 * Document Type *DocTypeQ*
@@ -118,7 +111,7 @@ image::basic-scenario-execution-success.png[img-basic-scenario-execution-success
 
 ==== Document Rejected
 
-Document Type *DocTypeC* is not configured in Relationship *YourCompany B2B:Any*; IH rejects an incoming document of Document Type *DocTypeC* from Partner PartA. 
+Document Type *DocTypeC* is not configured in Relationship *YourCompany B2B:Any*; IH rejects an incoming document of Document Type *DocTypeC* from Partner *PartA*. 
 
 Integration Hub:
 
