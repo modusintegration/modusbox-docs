@@ -23,9 +23,9 @@ API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by 
 [[sectd]]
 *D*
 
-Document:: An instance of a structured payload data being passed through Integration Hub. 
+Document:: An instance of structured payload data being passed through Integration Hub. 
 
-Used interchangeably with other terms commonly used in  integration-related domains. For example, file, payload, message.
+Used interchangeably with other terms commonly used in integration-related domains. For example, file, payload, message.
 
 Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
 
@@ -63,6 +63,8 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 
 [[sectr]]
 *R*
+
+Relationship: Union of a partner or partners with another partner or partners. Analagous to a programming namespace. 
 
 Route:: Connects a source Channel to a Target Channel.
 
