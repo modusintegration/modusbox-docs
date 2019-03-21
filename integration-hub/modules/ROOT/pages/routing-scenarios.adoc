@@ -111,7 +111,7 @@ image::basic-scenario-outcome-success.png[img-basic-scenario-outcome-success, ti
 
 ==== Document Rejected
 
-Partner *Part* sends a document of Document Type *DocTypeP* to Endpoint *RecFromA*. 
+Partner *PartA* sends a document of Document Type *DocTypeP* to Endpoint *RecFromA*. 
 Document Type *DocTypeP* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
 
 Integration Hub:
