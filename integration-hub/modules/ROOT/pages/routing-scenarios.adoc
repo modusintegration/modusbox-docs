@@ -35,21 +35,32 @@ This section identifies:
 * Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
 * The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*) in which the artifacts are configured
 
+
 ==== Configured in *YourCompany B2B : Any*
 
-* Document Type *DocTypeC*
+[cols="4*"]
+|===
 
-** Document Type you use internally in your company
-** Configured in xref:document-types[Document Types]  
 
-* Endpoint *API*
-** Endpoint that points to an internal API
-** Configured in xref:endpoints[Endpoints] 
+|Artifact|Artifact Name|Description
+|Configured on page
 
-* Target Channel *C-to-API*
-** Channel that sends a document of the internal Document Type *DocTypeC* to Endpoint *API*
-** Configured in xref:channels[Channels] 
+|Document Type
+|*DocTypeC*
+|Document Type you use internally in your company
+|xref:document-types[Document Types]
 
+|Endpoint 
+|*API*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|Target Channel 
+|*C-to-API*
+|Channel that sends a document of the internal Document Type *DocTypeC* to Endpoint *API*
+|xref:channels[Channels] 
+
+|===
 
 ==== Configured in YourCompany B2B : PartA
 
@@ -72,7 +83,7 @@ This section identifies:
 
 ** This xref:glossary#sectt[Transaction] is the combination of the Source Channel *Q-to-C* and the Target Channel *C-to-API*.
 It receives a document of *DocTypeQ*, maps it to a document of *DocTypeC* and then sends it to Endpoint *API*. 
-** This transaction has the *From* Partner set to *PartA* and the *To* Partner set to *Your Company B2B*.
+** In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
 
 
 === Outcome
@@ -87,10 +98,6 @@ Having read this far, you now know that the outcome of this scenario depends on 
 * Target Channel *C-to-API*
 * Source Channel *Q-to-C*
 * Transaction *Q-to-C-to-API*
-
-
-
-
 
 ==== Document Accepted and Routed
 
