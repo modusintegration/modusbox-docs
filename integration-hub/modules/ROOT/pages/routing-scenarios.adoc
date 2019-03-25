@@ -25,6 +25,7 @@ YourCompany B2B : *PartA*::
 
 [[img-basic-scenario-artifacts]]
 
+//Figma Frame 3
 image::basic-scenario-artifacts.png[img-basic-scenario-artifacts, title="Basic Scenario Artifacts"]
 
 
@@ -36,79 +37,90 @@ This section identifies:
 * The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*) in which the artifacts are configured
 
 
-==== Configured in *YourCompany B2B : Any*
+//==== Configured in *YourCompany B2B : Any*
 
+.Basic Scenario Artifacts - YourCompany B2B : PartA
 [cols="4*"]
 |===
+|Artifact|Artifact Name|Description|Configured on page
 
-
-|Artifact|Artifact Name|Description
-|Configured on page
-
-|Document Type
-|*DocTypeC*
+|xref:glossary#sectd[Document Type]
+|*DocTypeY*
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
-|Endpoint 
+|xref:glossary#secte[Endpoint]
 |*API*
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints] 
 
-|Target Channel 
-|*C-to-API*
+|xref:glossary#sectt[Target Channel ]
+|*Y-to-API*
 |Channel that sends a document of the internal Document Type *DocTypeC* to Endpoint *API*
 |xref:channels[Channels] 
 
 |===
 
-==== Configured in YourCompany B2B : PartA
+//==== Configured in YourCompany B2B : PartA
 
-* Endpoint *RecFromA*
-** Endpoint at which you expect to receive documents from *PartA*
+.Basic Scenario Artifacts - YourCompany B2B : PartA
 
-* Document Type *DocTypeQ*
-** Document Type that includes a document you expect to receive from *PartA*
+[cols="2, 2, 6, 2"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
 
-* Map *Q-to-C*
-** Transforms a document of Document Type *DocTypeQ* to a document of Document Type *DocTypeC*
-** Configured in xref:maps[Maps]
+|xref:glossary#secte[Endpoint]
+|*RecFromA*
+|Endpoint at which you expect to receive documents from *PartA*
+|xref:endpoints[Endpoints] 
 
+|xref:glossary#sectd[Document Type]
+|*DocTypeX*
+|Document Type that includes a document you expect to receive from *PartA*
+|xref:document-types[Document Types]
 
-* Source Channel Q-to-C
+|xref:glossary:#sectm[Map] 
+|*X-to-Y*
+|Transforms a document of Document Type *DocTypeQ* to a document of Document Type *DocTypeC*
+|xref:maps[Maps]
 
-** Includes the process that maps and sends a document of *DocTypeQ* to a document of *DocTypeC*
+|xref:glossary#sects[Source Channel]
+|*X-to-Y*
+|Includes the process that maps and sends a document of *DocTypeQ* to a document of *DocTypeX*
+|xref:channels[Channels] 
 
-* Transaction Q-to-C-to-API
-
-** This xref:glossary#sectt[Transaction] is the combination of the Source Channel *Q-to-C* and the Target Channel *C-to-API*.
+|xref:glossary#sect[Transaction] 
+|*X-to-Y-to-API*
+|Combination of the Source Channel *Q-to-C* and the Target Channel *C-to-API*.
 It receives a document of *DocTypeQ*, maps it to a document of *DocTypeC* and then sends it to Endpoint *API*. 
 ** In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
 
+|===
 
-=== Outcome
+=== Outcomes
 
-Having read this far, you now know that the outcome of this scenario depends on whether you have configured the following artifacts appropriately:
+The outcome of this scenario depends on whether the following artifacts are configured appropriately:
 
 * Partner *PartA*
-* Document Type *DocTypeQ*
-* Document Type *DocTypeC*
+* Document Type *DocTypeX*
+* Document Type *DocTypeY*
 * Endpoint *RecFromA*
 * Endpoint *API*
-* Target Channel *C-to-API*
-* Source Channel *Q-to-C*
-* Transaction *Q-to-C-to-API*
+* Target Channel *X-to-API*
+* Source Channel *X-to-Y*
+* Transaction *X-to-Y-to-API*
 
-==== Document Accepted and Routed
+==== Outcome: Document Accepted and Routed
 
 All artifacts are correctly configured; IH routes an incoming document of *DocTypeQ* from Partner *PartA* to Endpoint *RecFromA*.
 
 Integration Hub:
 
-* Receives a document of *DocTypeQ*.
+* Receives a document of *DocTypeX*.
 * Attempts to resolve routes.
-** Finds a Transaction *DocTypeQ-to-DocTypeC-to-API* that contains *DocTypeQ*.
-* Executes Transaction *DocTypeQ-to-DocTypeC-to-API*, which transforms the document from *DocTypeQ* to *DocTypeC*.
+** Finds a Transaction *DocTypeX-to-DocTypeY-to-API* that contains *DocTypeX*.
+* Executes Transaction *DocTypeX-to-DocTypeY-to-API*, which transforms the document from *DocTypeX* to *DocTypeY*.
 * Sends the document to Endpoint *API*.
 
 [[img-basic-scenario-outcome-success]]
@@ -116,10 +128,10 @@ Integration Hub:
 image::basic-scenario-outcome-success.png[img-basic-scenario-outcome-success, title="Basic Scenario Outcome (Success)"]
 
 
-==== Document Rejected
+==== Outcome: Document Rejected
 
-Partner *PartA* sends a document of Document Type *DocTypeP* to Endpoint *RecFromA*. 
-Document Type *DocTypeP* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
+Partner *PartA* sends a document of Document Type *DocTypeZ* to Endpoint *RecFromA*. 
+Document Type *DocTypeZ* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
 
 Integration Hub:
 
