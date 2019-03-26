@@ -1,0 +1,259 @@
+
+
+== Override Scenario
+
+In this scenario, your organization expects to receive xref:glossary#sectd[document]s of a single xref:glossary#sectd[Document Type] from multiple xref:glossary#sectp[Partner]s. 
+However, one partner uses a variation of the Document Type, so you must override the standard map that you use to transform that partner's Document Type to your internal Document Type. 
+Subsequent to transformation, all documents are sent to an internal document, as in the xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+If IH has been configured to receive a document of this xref:glossary#sectd[Document Type], IH routes the document to an internal API. 
+If IH has not been configured to receive a document of this Document Type, IH rejects the document. 
+
+
+=== Relationships
+
+There are four xref:glossary#sectr[Relationships] in this scenario:
+
+.Override Routing Scenario Relationships
+[cols="3*"]
+
+|===
+|Relationship|Description|Contains
+
+|YourCompany B2B : Any 
+|Universal relationship between any partner and your company
+|Contains Artifacts used across all partners with whom you do business
+
+|YourCompany B2B : PartA 
+|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
+|Contains artifacts used only with this partner
+
+|YourCompany B2B : PartB
+|Your organization's relationship with *PartB*
+|Contains artifacts used only with *PartB*
+
+|YourCompany B2B : PartC
+|Your organization's relationship with *PartC*
+|Contains artifacts used only with *PartC*
+
+|===
+
+
+[[img-override-routing-scenario-artifacts]]
+
+image::override-routing-scenario-artifacts.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts"]
+
+
+=== Artifacts and Artifact Configuration 
+
+This section identifies:
+
+* Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
+* The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*) in which the artifacts are configured
+
+
+//==== Configured in *YourCompany B2B : Any*
+
+.Override Routing Scenario Artifacts - YourCompany B2B : Any
+[cols="4*"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectd[Document Type]
+|*DocTypeY*
+|Document Type you use internally in your company
+|xref:document-types[Document Types]
+
+|xref:glossary#sectd[Document Type]
+|*DocTypeX*
+|Document Type you use internally in your company
+|xref:document-types[Document Types]
+
+|xref:glossary#sectm[Map]
+|*Map X-to-Y*
+|Transforms a document of Document Type DocTypeX to a document of Document Type DocTypeY
+|xref:maps[Maps]
+
+|xref:glossary#sects[Source Channel ]
+|DocX-to-DocY
+|Channel that  a recieved document Q into the document C
+|xref:channels[Channels] 
+
+
+|xref:glossary#secte[Endpoint]
+|*API*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectt[Target Channel ]
+|*Y-to-API*
+|Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
+|xref:channels[Channels] 
+
+|===
+
+//==== Configured in YourCompany B2B : PartA
+
+.Override Routing Scenario Artifacts - YourCompany B2B : PartA
+
+[cols="2, 2, 6, 2"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+|*RecFromA*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sect[Transaction] 
+|*X-to-Y-to-API*
+|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeX-to-API*.
+It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+// ==== Configured in YourCompany B2B : PartB
+
+.Override Routing Scenario Artifacts - YourCompany B2B : PartB
+[cols="2, 2, 6, 2"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+|*RecFromB*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sect[Transaction] 
+|*X-to-Y-to-API*
+|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeX-to-API*.
+It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartB* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+//==== Configured in YourCompany B2B : PartC
+
+.Override Routing Scenario Artifacts - YourCompany B2B : PartC
+
+[cols="2, 2, 6, 2"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+|*RecFromC*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectd[Document Type]
+|*DocTypeX'*
+|Document Type you expect to receive from this partner that is a variation on the standard for this Document Type. 
+|xref:document-types[Document Types] 
+
+|xref:glossary#sects[Source Channel]
+|*DocTypeX'-to-DocTypeY*
+|Maps *DocTypeQ'* to *DocTypeY*
+|xref:channels[Channels] 
+
+|xref:glossary#sect[Transaction] 
+|*X'-to-Y-to-API*
+|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeY-to-API*.
+It receives a document of *DocTypeX'*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartC* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+=== Outcomes
+
+The outcome of this scenario depends on whether the following artifacts are configured appropriately:
+
+* Partner *PartA*
+* Partner *PartB*
+* Partner *PartC*
+* Document Type *DocTypeX*
+* Document Type *DocTypeX'*
+* Document Type *DocTypeY*
+* Endpoint *RecFromA*
+* Endpoint *RecFromB*
+* Endpoint *RecFromC*
+* Endpoint *API*
+* Map *X-to-Y*
+* Map *X'-to-Y*
+* Source Channel *X-to-Y*
+* Source Channel *X'-to-Y*
+* Target Channel *Y-to-API*
+* Transaction *X-to-Y-to-API*
+* Transaction *X'-to-Y-to-API*
+
+=== Outcomes
+
+==== PartA sends Document X to Endpoint RecFromA.
+* Integration Manager:
+
+** Receives Document Q
+
+** Attempts to resolve routes
+** Finds Transaction DocQ-to-DocC-to-DATA
+** Executes that transaction, which maps the transaction to Document C
+
+**  Sends Document C to Endpoint DATA.
+
+[[img-override-scenario-outcome]]
+
+image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
+
+==== PartB sends Document X to Endpoint RecFromB.
+
+* Integration Manager:
+
+** Receives Document Q
+
+** Attempts to resolve routes
+** Finds Transaction DocQ-to-DocC-to-DATA
+** Executes that transaction, which maps the transaction to Document C
+
+**  Sends Document C to Endpoint DATA.
+
+[[img-override-scenario-outcome]]
+
+image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
+
+==== PartC sends Document X' to Endpoint RecFromC
+
+Integration Manager:
+
+** Receives Document X'
+
+** Attempts to resolve routes
+** Finds Transaction DocX'-to-DocY-to-API
+** Executes that transaction, which maps the transaction to Document Y
+
+**  Sends Document Y to Endpoint API.
+
+[[img-override-scenario-outcome]]
+
+image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
+
+
+==== Outcome: Document Rejected
+
+Partner *PartA* sends a document of Document Type *DocTypeZ* to Endpoint *RecFromA*. 
+Document Type *DocTypeZ* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
+
+Integration Hub:
+
+* Receives incoming document.
+* Attempts to resolve Routes.
+* Does not find a corresponding Transaction.
+* Rejects the document.
+
+[[img-basic-scenario-outcome-rejection]]
+
+image::basic-scenario-outcome-rejection.png[img-basic-scenario-outcome-rejection, title="Basic Scenario Outcome (Rejection)"]
+

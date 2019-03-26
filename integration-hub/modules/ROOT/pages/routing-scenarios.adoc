@@ -81,12 +81,12 @@ This section identifies:
 
 |xref:glossary:#sectm[Map] 
 |*X-to-Y*
-|Transforms a document of Document Type *DocTypeQ* to a document of Document Type *DocTypeC*
+|Transforms a document of Document Type *DocTypeX* to a document of Document Type *DocTypeY*
 |xref:maps[Maps]
 
 |xref:glossary#sects[Source Channel]
 |*X-to-Y*
-|Includes the process that maps and sends a document of *DocTypeQ* to a document of *DocTypeX*
+|Includes the process that maps and sends a document of *DocTypeX* to a document of *DocTypeY*
 |xref:channels[Channels] 
 
 |xref:glossary#sect[Transaction] 

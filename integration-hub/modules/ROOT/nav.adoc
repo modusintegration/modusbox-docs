@@ -3,8 +3,16 @@
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 *** xref:resolution-processes.adoc[Resolution Processes]
-*** xref:routing-scenarios.adoc[Routing Scenarios]
 *** xref:tracking.adoc[Tracking]
+
+** xref:routing-scenarios.adoc[Routing Scenarios]
+*** xref:basic-routing-scenario.adoc[Basic Routing Scenario]
+*** xref:shared-routing-scenario.adoc[Shared Routing Scenario]
+*** xref:override-routing-scenario.adoc[Override Routing Scenario]
+*** xref:multiple-internal-routes.adoc[Multiple Internal Routes Routing Scenario]
+*** xref:multicast-routing-scenario.adoc[Multicast Routing Scenario]
+
+
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
 *** xref:central-pane-elements.adoc[Central Pane Elements]
