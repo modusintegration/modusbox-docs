@@ -1,0 +1,141 @@
+
+== Shared Scenario
+
+In this scenario, you organization wants to receive a document of document X from two partners, Partner A (*PartA*) and Partner B (*PartB*), map it to an internal standard C and send it to a backend database DATA.
+
+=== Relationships
+
+There are three relationships in this scenario:
+
+YourCompany B2B : Any ::
+* Universal relationship between your organization and any partner
+* Contains artifacts used across all partners with whom you do business
+
+YourCompany B2B : PartA ::
+* Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*). 
+* Contains artifacts used only with this partner.
+
+YourCompany B2B : PartB ::
+
+** Your organization's relationship with the partner with whom you are doing business (in this case, *PartB*). Contains artifacts used only with this partner.
+
+=== Artifacts and Artifact Configuration 
+
+This section identifies:
+
+* Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
+* The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*, or *YourCompany B2B : PartB*) in which the artifacts are configured
+
+
+//==== Configured in *YourCompany B2B : Any*
+
+.Basic Scenario Artifacts - YourCompany B2B : Any
+[cols="4*"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectd[Document Type]
+|*DocTypeY*
+|Document Type you use internally in your company
+|xref:document-types[Document Types]
+
+|xref:glossary#secte[Endpoint]
+|*API*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectt[Target Channel ]
+|*Y-to-API*
+|Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
+|xref:channels[Channels] 
+
+|===
+
+* Document C
+
+** A document you use internally in your company.
+
+* Document Q
+
+** A document you expect to receive from your partner.
+
+* Map Q-to-C
+
+** This map will convert the document Q into document C
+
+* Source Channel DocQ-to-DocC
+
+** This source channel will map a recieved document Q into the document C
+
+* Endpoint DATA
+
+** The endpoint that points to your internal database.
+
+* Target Channel DocC-to-Data
+
+** This channel will take the internal document C and send it to Endpoint Data.
+
+==== [PartnerA:YourCompany B2B]
+
+* Endpoint RecFromA
+
+** This is the endpoint on which you expect to receive documents from PartnerA.
+
+* Transaction DocQ-to-DocC-to-Data:(PartnerA)
+
+** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
+
+==== [PartnerB:YourCompany B2B]
+
+* Endpoint RecFromB
+
+** This is the endpoint on which you expect to receive documents from PartnerB.
+
+* Transaction DocQ-to-DocC-to-Data:(PartnerB)
+
+** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartB and the To Partner set to Your Company B2B.
+
+==== ParnetA sends Document Q to Endpoint RecFromA.
+
+* Integration Manager:
+
+** Receives Document Q
+
+** Attempts to resolve routes
+** Finds Transaction DocQ-to-DocC-to-DATA
+** Executes that transaction, which maps the transaction to Document C
+
+**  Sends Document C to Endpoint DATA.
+
+
+
+==== ParnetB sends Document Q to Endpoint RecFromB.
+
+* Integration Manager:
+
+** Receives Document Q
+
+** Attempts to resolve routes
+** Finds Transaction DocQ-to-DocC-to-DATA
+** Executes that transaction, which maps the transaction to Document C
+
+**  Sends Document C to Endpoint DATA.
+
+
+
+==== The Partner PartC sends Document Q to Endpoint RecFromB,.
+
+Integration Manager:
+
+* Receives document Q
+
+**, Attempts to resolve routes
+
+**, Does not find a corresponding transaction.
+
+** Rejects the document.
+
+
+
+
+

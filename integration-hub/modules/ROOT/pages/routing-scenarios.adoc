@@ -39,7 +39,7 @@ This section identifies:
 
 //==== Configured in *YourCompany B2B : Any*
 
-.Basic Scenario Artifacts - YourCompany B2B : PartA
+.Basic Scenario Artifacts - YourCompany B2B : Any
 [cols="4*"]
 |===
 |Artifact|Artifact Name|Description|Configured on page
@@ -56,7 +56,7 @@ This section identifies:
 
 |xref:glossary#sectt[Target Channel ]
 |*Y-to-API*
-|Channel that sends a document of the internal Document Type *DocTypeC* to Endpoint *API*
+|Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
 |xref:channels[Channels] 
 
 |===
