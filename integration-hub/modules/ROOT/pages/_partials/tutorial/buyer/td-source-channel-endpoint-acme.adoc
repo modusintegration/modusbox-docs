@@ -31,7 +31,22 @@ From the list, click *AS2*.
 +
 The <<img-td-endpoint-acme>> expands to include more settings.
 . Select the *Default for AcmeHomeSupply* checkbox. 
-. In the *URL* box, type *http://localhost:8085/edi*. 
+. AS2 endpoint can be configured either using HTTP URL or by selecting an existing HTTP endpoint. 
+* Configuring HTTP URL
++
+Select *AS2 URL* in URL Type and in the *URL* box, type *http://localhost:8085/edi*.
+* Using existing HTTP endpoint
++
+Select *HTTP Endpoint* in URL Type, and then click on *Endpoint* box. A *Pick a HTTP endpoint* window will appear and choose the configured HTTP endpoint. 
+
+NOTE: Configure HTTP endpoint with following values,
+Host = 0.0.0.0, 
+Port = 8085
+
+For details on configuring endpoint, see xref:endpoints.adoc#add-a-new-endpoint[Add a new Endpoint].
+
+[start=7]
+
 . Check the *Message Encrypted* and *Message Signed* checkboxes.
 . Click *Save*.
 +
