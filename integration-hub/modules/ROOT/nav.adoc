@@ -16,6 +16,7 @@
 *** xref:identifiers.adoc[Identifiers]
 *** xref:availability.adoc[Availability]
 *** xref:certificate.adoc[Certificate]
+*** xref:property-type.adoc[Property Type]
 
 *** xref:x12-settings.adoc[X12 Settings]
 *** xref:edifact-settings.adoc[EDIFACT Settings]
