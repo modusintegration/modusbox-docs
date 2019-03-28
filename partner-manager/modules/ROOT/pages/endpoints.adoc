@@ -80,7 +80,7 @@ If you choose to change the default, then subsequently want to revert to it, cli
 |Protocol for this endpoint
 
 Required?::
-No
+Yes
 
 Valid values::
 
@@ -105,7 +105,7 @@ None
 
 Required?::
 
-No
+Yes
 
 Valid values::
 
@@ -119,6 +119,17 @@ None
 |Default for _partner_ checkbox
 
 |Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
+
+|Uses Reusable Endpoint checkbox
+
+|It is possible to create reusable configuration for endpoints and use them instead of entering the endpoint connection details every time. 
+
+This feature is available for all Receive type endpoints except *AS2* endpoint.
+For more details on using Reusable config see <<Using Reusable Config>>
+
+
+
+
 
 |===
 +
@@ -227,3 +238,25 @@ include::{partialsdir}/endpoint-pop3-receive.adoc[]
 include::{partialsdir}/endpoint-imap-receive.adoc[]
 include::{partialsdir}/endpoint-rnif.adoc[]
 ////
+
+
+== Using Reusable Config
+
+. On the xref:img-endpoint-add[] select *Using Reusable Config* checkbox. 
+. The page gets updated and a new Button and Box appears. 
+
+[[img-endpoint-using-reusable-config]]
+image::endpoint-using-reusable-config.png[img-endpoint-using-reusable-config, title="Endpoint Using Reusable Config"]
+
+[start=3]
+. Click on the *New Reusable Endpoint Configuration* button, xref:img-create-reusable-config[] appears appears. 
+
+[[img-create-reusable-config, Create Reusable Configuration]]
+
+image::reusable-configuration-page.png[img-create-reusable-config, title="Create New Reusable Configuration"]
+[start=4]
+. Scroll down and in the *Operation Settings* section provide values for *Host* and *Port* fields. 
+
+NOTE: The xref:img-create-reusable-config[] page will have different fields based on Endpoint Type. The Step 4 above is for HTTP endpoint.
+
+
