@@ -1,4 +1,4 @@
-= Basic Scenario
+= Basic Routing Scenario
 
 In this scenario, your organization receives a xref:glossary#sectd[document] from a xref:glossary#sectp[Partner]. 
 If IH has been configured to receive a document of this xref:glossary#sectd[Document Type], IH routes the document to an internal API. 

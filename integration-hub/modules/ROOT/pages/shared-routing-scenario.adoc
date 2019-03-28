@@ -1,5 +1,4 @@
-
-== Shared Scenario
+= Shared Routing Scenario
 
 In this scenario, you organization wants to receive a document of document X from two partners, Partner A (*PartA*) and Partner B (*PartB*), map it to an internal standard C and send it to a backend database DATA.
 
