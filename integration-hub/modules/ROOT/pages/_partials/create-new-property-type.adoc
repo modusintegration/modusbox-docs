@@ -1,0 +1,22 @@
+=== Add a new Property Type
+
+. On the xref:img-add-property-page[], click *Create New Property Type*.
++
+The xref:img-create-property-type[] appears.
+
+[[img-create-property-type, Create New Property Type]]
+
+image::create-property-type-page.png[img-create-property-type, title="Create New Property Type"]
+
+[start=2]
+
+. In the box enter desired property type name. For example *ServicePath* which is used for AS2 endpoints.
+
+. click *Save Property*.
+
++
+The <<img-add-property-page>> appears.
+
+. The *Property Type* box should be pre-filled with newly created Property type. 
++ 
+If the new property type is not pre-filled then click down arrow in *Property Type* box and select new created property type. 
