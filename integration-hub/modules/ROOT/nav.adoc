@@ -37,9 +37,7 @@
 *** xref:security.adoc[Security]
 *** xref:lookup-tables.adoc[Lookup Tables]
 
-////
 ** xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
-////
 
 ** xref:integration-hub-apis.adoc[Integration Hub APIs]
 
