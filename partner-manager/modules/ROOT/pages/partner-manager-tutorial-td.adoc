@@ -297,6 +297,23 @@ The Add Property Page appears.
 . In the *Path* box, type *850*.
 . Click *Save Property*.
 
+===== ServicePath
+
+. This property is required only if selected *HTTP endpoint* in URL Type. 
++
+On the <<img-td-linked-endpoint-properties-acme>>, click *New Property*.
++
+The Add Property Page appears.
+
+[start=2]
+. In the *Property Type* listbox, click the down-arrow. 
+. In the drop-down list, scroll down to select *ServicePath*. 
++
+If this property is not available in list, see xref:property-type.adoc#to-create-a-new-property-type[Create New Property Type] to create a new Property with name *ServicePath*
+. In the *Property Source Type* box, select *Constant*.
+. In the *Path* box, type *edi*.
+. Click *Save Property*.
+
 +
 The <<img-td-linked-endpoint-properties-acme>> appears.
 . Click *Save*.

@@ -1,0 +1,11 @@
+= Property Type 
+
+While adding properties for *Endpoint* or *Document*, if the desired Property Type is not available then it is possible to create new *Property Type*. 
+
+[[img-add-property-page]]
+
+image::add-property-page.png[img-add-property-page, title="Add Property Page"]
+
+== To Create a new Property Type
+
+include::{partialsdir}/create-new-property-type.adoc[]
