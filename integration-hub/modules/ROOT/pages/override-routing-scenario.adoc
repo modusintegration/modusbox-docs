@@ -9,7 +9,7 @@ If IH has been configured to receive a document of this xref:glossary#sectd[Docu
 If IH has not been configured to receive a document of this Document Type, IH rejects the document. 
 
 
-=== Relationships
+== Relationships
 
 There are four xref:glossary#sectr[Relationships] in this scenario:
 
@@ -43,7 +43,7 @@ There are four xref:glossary#sectr[Relationships] in this scenario:
 image::override-routing-scenario-artifacts.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts"]
 
 
-=== Artifacts and Artifact Configuration 
+== Artifacts and Artifact Configuration 
 
 This section identifies:
 
@@ -164,14 +164,18 @@ It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and th
 |Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeY-to-API*.
 It receives a document of *DocTypeX'*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartC* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
-
 |===
 
 
-=== Outcomes
+== Outcomes
 
-The outcome of this scenario depends on whether the following artifacts are configured appropriately:
+If all artifacts in the following table are configured appropriately, then the outcome of any of the partners in the scenario sending a document of *DocTypeY* to the Endpoint specific to their relationship with *YourCompany B2B* is that IH will route the document to that Endpoint. 
 
+If any artifact in the relationship between the partner and *YourCompany B2B* or in *YourCompany B2B : Any* is incorrectly configured (or not configured at all), then IH will reject the document. 
+
+For more information, see <<Outcome Details>>.
+
+////
 * Partner *PartA*
 * Partner *PartB*
 * Partner *PartC*
@@ -189,64 +193,97 @@ The outcome of this scenario depends on whether the following artifacts are conf
 * Target Channel *Y-to-API*
 * Transaction *X-to-Y-to-API*
 * Transaction *X'-to-Y-to-API*
+////
 
-[cols="2, 2, 6, 2"]
+.Override Routing Scenario Artifact Summary 
+[cols="8*",options="header", e]
+|===
+|Relationship
+7+^|Artifact Type 
+||Partners|Document Types|Maps|Endpoints 
+2+^|Channels|Transactions
+
+5+||Source|Target|
+
+s|YourCompany B2B : Any
+s|NA
+s|DocTypeY
+DoctypeX
+s|Y-to-X
+s|API
+s|Y-to-X
+s|X-to-API
+|
+
+s|YourCompany B2B : PartA
+s|PartA
+|
+|
+|
+|
+s|RecFromA
+s|Y-to-X-to-API
+
+s|YourCompany B2B : PartB
+s|PartB
+|
+|
+|
+|
+s|RecFromB
+s|Y-to-X-to-API
+
+
+s|YourCompany B2B : PartC
+s|PartC
+s|DocTypeY'
+|
+s|Y'-to-X
+|
+s|RecFromC
+s|Y'-to-X-to-API
+
 |===
 
-.2+|Artifact Type
-|Cell in column 2, row 2
-|Partners|Document Types|Endpoints|Maps|Channels|Transactions
+=== Outcome Details
 
-|xref:glossary#secte[Endpoint]
-|*RecFromC*
-|Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
+==== PartA sends document (DocTypeY) to Endpoint RecFromA
 
 
-=== Outcomes
+Integration Hub:
 
-==== PartA sends Document X to Endpoint RecFromA.
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
+* Receives the document at Endpoint *RecFromA*
+* Attempts to resolve routes
+* Finds Transaction *Y-to-X-to-API*
+* Executes *Y-to-X-to-API*, which transforms the document to * DocTypeX*
+* Sends the document to Endpoint *API*.
 
 [[img-override-scenario-outcome]]
 
 image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
 
-==== PartB sends Document X to Endpoint RecFromB.
+==== PartB sends document (DocTypeY) to Endpoint RecFromB
 
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
+* Receives Document Y at Endpoint *RecFromB*
+* Attempts to resolve routes
+* Finds Transaction *Y-to-X-to-API*
+* Executes *Y-to-X-to-API*, which transforms the document to *DocTypeX*
+* Sends the document to Endpoint *API*.
 
 [[img-override-scenario-outcome]]
 
 image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
 
-==== PartC sends Document X' to Endpoint RecFromC
+==== PartC sends document (DocTypeY') to Endpoint RecFromC
 
 Integration Manager:
 
-** Receives Document X'
+** Receives the document at Endpoint *RecFromC*
 
 ** Attempts to resolve routes
-** Finds Transaction DocX'-to-DocY-to-API
-** Executes that transaction, which maps the transaction to Document Y
-
-**  Sends Document Y to Endpoint API.
+** Finds Transaction *Y-to-DocX-to-API*
+** Executes that transaction, which transforms the document to *DocTypeX*
+**  Sends the document to Endpoint *API*.
 
 [[img-override-scenario-outcome]]
 
@@ -260,8 +297,8 @@ Document Type *DocTypeZ* is not configured in Relationship *YourCompany B2B : An
 
 Integration Hub:
 
-* Receives incoming document.
-* Attempts to resolve Routes.
+* Receives the document
+* Attempts to resolve Routes
 * Does not find a corresponding Transaction.
 * Rejects the document.
 
