@@ -70,13 +70,13 @@ This section identifies:
 |xref:document-types[Document Types]
 
 |xref:glossary#sectm[Map]
-|*Map X-to-Y*
-|Transforms a document of Document Type DocTypeX to a document of Document Type DocTypeY
+|*Y-to-X*
+|Transforms a document of Document Type *DocTypeY* to a document of Document Type *DocTypeX*
 |xref:maps[Maps]
 
 |xref:glossary#sects[Source Channel ]
-|DocX-to-DocY
-|Channel that  a recieved document Q into the document C
+|*Y-to-X*
+|Channel that transforms a document of Document Type *DocTypeY* into a document of Document Type *DocTypeX*
 |xref:channels[Channels] 
 
 
@@ -86,8 +86,8 @@ This section identifies:
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sectt[Target Channel ]
-|*Y-to-API*
-|Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
+|*X-to-API*
+|Channel that sends a document of the internal Document Type *DocTypeX* to Endpoint *API*
 |xref:channels[Channels] 
 
 |===
@@ -106,9 +106,9 @@ This section identifies:
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sect[Transaction] 
-|*X-to-Y-to-API*
-|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeX-to-API*.
-It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
+|*Y-to-X-to-API*
+|Combination of the Source Channel *DocTypeY-to-DocTypeX* and the Target Channel *DocTypeX-to-API*.
+It receives a document of *DocTypeY*, maps it to a document of *DocTypeX* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
 
 |===
@@ -128,9 +128,9 @@ It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and th
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sect[Transaction] 
-|*X-to-Y-to-API*
-|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeX-to-API*.
-It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartB* and the *To* Partner as *YourCompany B2B*.
+|*Y-to-X-to-API*
+|Combination of the Source Channel *DocTypeY-to-DocTypeX* and the Target Channel *DocTypeX-to-API*.
+It receives a document of *DocTypeY*, maps it to a document of *DocTypeX* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartB* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
 
 |===
@@ -150,19 +150,19 @@ It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and th
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sectd[Document Type]
-|*DocTypeX'*
+|*DocTypeY'*
 |Document Type you expect to receive from this partner that is a variation on the standard for this Document Type. 
 |xref:document-types[Document Types] 
 
 |xref:glossary#sects[Source Channel]
-|*DocTypeX'-to-DocTypeY*
-|Maps *DocTypeQ'* to *DocTypeY*
+|*Y'-to-X*
+|Maps document of *DocTypeY'* to document of *DocTypeX*
 |xref:channels[Channels] 
 
 |xref:glossary#sect[Transaction] 
-|*X'-to-Y-to-API*
-|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeY-to-API*.
-It receives a document of *DocTypeX'*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartC* and the *To* Partner as *YourCompany B2B*.
+|*Y'-to-X-to-API*
+|Combination of the Source Channel *DocTypeY-to-DocTypeX* and the Target Channel *DocTypeX-to-API*.
+It receives a document of *DocTypeY'*, maps it to a document of *DocTypeX* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartC* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
 |===
 
@@ -219,28 +219,28 @@ s|YourCompany B2B : PartA
 s|PartA
 |
 |
-|
-|
 s|RecFromA
+|
+|
 s|Y-to-X-to-API
 
 s|YourCompany B2B : PartB
 s|PartB
 |
 |
-|
-|
 s|RecFromB
+|
+|
 s|Y-to-X-to-API
 
 
 s|YourCompany B2B : PartC
 s|PartC
 s|DocTypeY'
-|
 s|Y'-to-X
-|
 s|RecFromC
+|DocTypeY'-to-DocTypeX
+|
 s|Y'-to-X-to-API
 
 |===
