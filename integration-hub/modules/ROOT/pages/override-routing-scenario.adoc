@@ -24,23 +24,18 @@ There are four xref:glossary#sectr[Relationships] in this scenario:
 |Contains Artifacts used across all partners with whom you do business
 
 |YourCompany B2B : PartA 
-|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
+|Your organization's relationship with the partner with whom you are doing business (in this case, *P|A*)
 |Contains artifacts used only with this partner
 
 |YourCompany B2B : PartB
-|Your organization's relationship with *PartB*
-|Contains artifacts used only with *PartB*
+|Your organization's relationship with *P|B*
+|Contains artifacts used only with *P|B*
 
 |YourCompany B2B : PartC
-|Your organization's relationship with *PartC*
-|Contains artifacts used only with *PartC*
+|Your organization's relationship with *P|C*
+|Contains artifacts used only with *P|C*
 
 |===
-
-
-[[img-override-routing-scenario-artifacts]]
-
-image::override-routing-scenario-artifacts.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts"]
 
 
 == Artifacts and Artifact Configuration 
@@ -94,6 +89,10 @@ This section identifies:
 
 //==== Configured in YourCompany B2B : PartA
 
+[[img-override-routing-scenario-artifacts-partner-a]]
+
+image::override-routing-scenario-artifacts-partner-a.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts, Partner A"]
+
 .Override Routing Scenario Artifacts - YourCompany B2B : PartA
 
 [cols="2, 2, 6, 2"]
@@ -116,6 +115,10 @@ It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and th
 
 // ==== Configured in YourCompany B2B : PartB
 
+[[img-override-routing-scenario-artifacts-partner-b]]
+
+image::override-routing-scenario-artifacts-partner-b.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts, Partner B"]
+
 .Override Routing Scenario Artifacts - YourCompany B2B : PartB
 [cols="2, 2, 6, 2"]
 
@@ -137,6 +140,10 @@ It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and th
 
 
 //==== Configured in YourCompany B2B : PartC
+
+[[img-override-routing-scenario-artifacts-partner-c]]
+
+image::override-routing-scenario-artifacts-partner-c.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts, Partner C"]
 
 .Override Routing Scenario Artifacts - YourCompany B2B : PartC
 
