@@ -13,47 +13,46 @@ If IH has not been configured to receive a document of this Document Type, IH re
 
 == Relationships, Artifacts, and Transactions
 
-There are four xref:glossary#sectr[Relationships] in this scenario. Artifacts are distributed among the relationships according to how they are used. For example the internal Endpoint *API* is used in all scenarios, so it is configured in the *YourCompany B2B : Any* Relationship. The Endpoints *RecFromA*, *RecFromB,* and *RecFromC* are used only by specific partners; therefore they are configured in the relationships that correspond to those partners. 
+There are four xref:glossary#sectr[Relationships] in this scenario. Artifacts are distributed among the relationships according to how they are used. For example, the internal Endpoint *E|API* is used in all scenarios, so it is configured in the *YourCompany B2B : Any* Relationship. The Endpoints *E|RecFromA*, *E|RecFromB,* and *E|RecFromC* are used only by specific partners; therefore they are configured in the relationships that correspond to those partners. 
+<<Override Routing Scenario Relationships, Table 1>> describes these Relationships and identifies their contents.
 
 .Override Routing Scenario Relationships
-[cols="3*", separator=$]
+[cols="3*"]
 
 |===
-$Relationship$Description$Contains
+|Relationship|Description|Contains
 
-$||| piping away
-$oo||s
-$youbetcha|||
 
-s$<<YourCompany B2B : Any>> 
-s$Universal relationship between your company any partner
-s$Contains Artifacts used across all partners with whom you do business
+s|<<YourCompany B2B : Any>> 
+|Universal relationship between your company any partner
+|Contains Artifacts used across all partners with whom you do business
 
-s$<<YourCompany B2B : A>>
-$Your organization's relationship with the partner with whom you are doing business (in this case, Partner *A*)
-$Contains artifacts used only with Partner *A*
+s|<<YourCompany B2B : P|A>>
+|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *P|A*)
+|Contains artifacts used only with Partner *P|A*
 
-s$<<YourCompany B2B : B>>
-$Your organization's relationship with Partner *B*
-$Contains artifacts used only with Partner *B*
+s|<<YourCompany B2B : P|B>>
+|Your organization's relationship with Partner *P|B*
+|Contains artifacts used only with Partner *P|B*
 
-s$<<YourCompany B2B : C>>
-$Your organization's relationship with Partner *C*
-$Contains artifacts used only with Partner *C*
+s|<<YourCompany B2B : C>>
+|Your organization's relationship with Partner *P|C*
+|Contains artifacts used only with Partner *P|C*
 
 |===
 
 
 == Artifacts and Artifact Configuration 
 
-This section identifies:
+This tables and flow diagrams in this section identifies:
 
-* Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
+* Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
 * The Relationship in which the artifacts are configured
 
 === YourCompany B2B : Any
 
-Artifacts in this Relationship are available in all scenarios. Therefore, they appear in each of the diagrams that follow. 
+Artifacts in this Relationship are accessible from all Partner Relationships. 
+Therefore, these artifacts, tabulated in <<Override Routing Scenario Artifacts - YourCompany B2B : Any, Table 2>>, appear in each of the Transaction diagrams that follow. 
 
 //==== Configured in *YourCompany B2B : Any*
 
@@ -64,7 +63,7 @@ Artifacts in this Relationship are available in all scenarios. Therefore, they a
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#sectd[Document Type]
-|DT\|YÒ
+|DT\|Y
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
@@ -101,9 +100,10 @@ Artifacts in this Relationship are available in all scenarios. Therefore, they a
 
 //==== Configured in YourCompany B2B : PartA
 
-[[img-override-routing-scenario-artifacts-partner-a]]
 
-image::override-routing-scenario-artifacts-partner-a.png[img-override-scenario-artifacts]
+[[img-override-routing-scenario-transaction-partner-a]]
+
+image::override-routing-scenario-T|DT|Y-to-DT|X-to-E|API-(P|A).png[img-override-routing-scenario-transaction-partner-a, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|A)"]
 
 //.Override Routing Scenario Artifacts - YourCompany B2B : A
 
@@ -119,7 +119,9 @@ image::override-routing-scenario-artifacts-partner-a.png[img-override-scenario-a
 |xref:glossary#sect[Transaction] 
 |*T\|DT\|Y-to-DT\|X-to-E\|API*
 |Combination of the Source Channel *DT\|Y-to-DT\|X* and the Target Channel *DT\|X-to-E\|API*.
-It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sends it to Endpoint *E\|API*. In this Transaction, the *From* Partner is configured as *P\|A* and the *To* Partner as *YourCompany B2B*.
+It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sends it to Endpoint *E\|API*. 
+In this Transaction, 
+the *From* Partner is configured as *P\|A* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
 
 |===
@@ -128,9 +130,9 @@ It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sen
 
 // ==== Configured in YourCompany B2B : PartB
 
-[[img-override-routing-scenario-artifacts-partner-b]]
+[[img-override-routing-scenario-transaction-partner-b]]
 
-image::override-routing-scenario-artifacts-partner-b.png[img-override-scenario-artifacts]
+image::override-routing-scenario-T|DT|Y-to-DT|X-to-E|API-(P|B).png[img-override-routing-scenario-transaction-partner-b, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|B)"]
 
 //.Override Routing Scenario Artifacts - YourCompany B2B : PartB
 [cols="2, 2, 6, 2"]
@@ -146,7 +148,7 @@ image::override-routing-scenario-artifacts-partner-b.png[img-override-scenario-a
 |xref:glossary#sect[Transaction] 
 |*T\|DT\|Y-to-DT\|X-to-E\|API*
 |Combination of the Source Channel *DT\|Y-to-DT\|X* and the Target Channel *DT\|X-to-E\|API*.
-It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sends it to Endpoint *E\|API*. In this Transaction, the *From* Partner is configured as *P|B* and the *To* Partner as *YourCompany B2B*.
+It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sends it to Endpoint *E\|API*. In this Transaction, the *From* Partner is configured as *P\|B* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
 
 |===
@@ -156,9 +158,9 @@ It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sen
 
 //==== Configured in YourCompany B2B : PartC
 
-[[img-override-routing-scenario-artifacts-partner-c]]
+[[img-override-routing-scenario-transaction-partner-c]]
 
-image::override-routing-scenario-artifacts-partner-c.png[img-override-scenario-artifacts]
+image::override-routing-scenario-T|DT|Y’-to-DT|X-to-E|API-P|C).png[img-override-routing-scenario-transaction-partner-c, title ="Transaction T|DT|Y'-to-DT|X-to-E|API (P|C)"]
 
 //.Override Routing Scenario Artifacts - YourCompany B2B : PartC
 
@@ -184,7 +186,7 @@ image::override-routing-scenario-artifacts-partner-c.png[img-override-scenario-a
 |xref:glossary#sect[Transaction] 
 |*DT\|Y'-to-DT\|X-to-E\|API*
 |Combination of the Source Channel *DT\|Y-to-DT\|X* and the Target Channel *DT\|X-to-E\|API*.
-It receives a document of *DT\|Y'*, maps it to a document of *DT\|X* and then sends it to Endpoint *E\|API*. In this Transaction, the *From* Partner is configured as *P|C* and the *To* Partner as *YourCompany B2B*.
+It receives a document of *DT\|Y'*, maps it to a document of *DT\|X* and then sends it to Endpoint *E\|API*. In this Transaction, the *From* Partner is configured as *P\|C* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer[Transaction Designer] 
 |===
 
@@ -241,7 +243,7 @@ s|YourCompany B2B : PartA
 s|PartA
 |
 |
-s|RecFromA
+s|E\|RecFromA
 |
 |
 s|DT\|Y-to-DT\X-to-E\API
@@ -260,7 +262,7 @@ s|YourCompany B2B : P\|C
 s|P\|C
 s|DT\|Y'
 s|DT\|Y'-to-DT\|X
-s|RecFromC
+s|E\|RecFromC
 s|DT\|Y'-to-DT\|X
 |
 s|DT\Y'-to-DT\|X-to-E\|API
@@ -269,53 +271,58 @@ s|DT\Y'-to-DT\|X-to-E\|API
 
 === Outcome Details
 
-==== Partner A (P|A) sends document of Document Type Y (DT\|Y) to Endpoint E (E|RecFromA)
+==== Partner *P|A* sends a document of Document Type *DT|Y* to Endpoint *E|RecFromA*
+
+[[img-override-routing-scenario-P_A-sends-DT_Y]]
+
+image::override-routing-scenario-P_A-sends-DT_Y.png[img-override-routing-scenario-P_A-sends-DT_Y, title ="Override Routing Scenario: P|A sends DT|Y"]
 
 
 Integration Hub:
 
 * Receives the document at Endpoint *E|RecFromA*
 * Attempts to resolve routes
-* Finds Transaction *DT\|Y-to-DT\|X-to-E\|API*
-* Executes *DT\|Y-to-DT\|X-to-E\|API*, which transforms the document to *DT\|X*
-* Sends the document to Endpoint *E\|API*.
+* Finds Transaction *DT|Y-to-DT|X-to-E|API*
+* Executes *DT|Y-to-DT|X-to-E|API*, which transforms the document to *DT|X*
+* Sends the document to Endpoint *E|API*.
 
-[[img-override-scenario-outcome]]
+==== PartB sends document (DT|Y) to Endpoint E|RecFromB
 
-image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
+[[img-override-routing-scenario-P_B-sends-DT_Y]]
 
-==== PartB sends document (DT\|Y) to Endpoint RecFromB
+image::override-routing-scenario-P_B-sends-DT_Y.png[img-override-routing-scenario-P_B-sends-DT_Y, title ="Override Routing Scenario: P|B sends DT|Y"]
 
-* Receives Document Y at Endpoint *RecFromB*
+
+Integration Hub: 
+
+* Receives Document *DT|Y* at Endpoint *E|RecFromB*
 * Attempts to resolve routes
-* Finds Transaction *Y-to-X-to-API*
-* Executes *Y-to-X-to-API*, which transforms the document to *DT\|X*
+* Finds Transaction *DT|Y-to-ST|X-to-E|API*
+* Executes *DT|Y-to-ST|X-to-E|API*, which transforms the document to *DT|X*
 * Sends the document to Endpoint *API*.
 
-[[img-override-scenario-outcome]]
 
-image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
+==== P|C sends document (DT|Y') to Endpoint E|RecFromC
 
-==== PartC sends document (DT\|Y') to Endpoint RecFromC
+[[img-override-routing-scenario-P_C-sends-DT_Y]]
 
-Integration Manager:
+image::override-routing-scenario-P_C-sends-DT_Y.png[img-override-routing-scenario-P_C-sends-DT_Y, title ="Override Routing Scenario: P|C sends DT|Y"]
 
-** Receives the document at Endpoint *RecFromC*
 
-** Attempts to resolve routes
-** Finds Transaction *Y-to-DocX-to-API*
-** Executes that transaction, which transforms the document to *DT\|X*
-**  Sends the document to Endpoint *API*.
+Integration Hub:
 
-[[img-override-scenario-outcome]]
+* Receives the document at Endpoint *E|RecFromC*
+* Attempts to resolve routes
+* Finds Transaction *DT|Y'-to-DT|X-to-E|API*
+* Executes that transaction, which transforms the document to *DT|X*
+* Sends the document to Endpoint *E|API*.
 
-image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
 
 
 ==== Outcome: Document Rejected
 
-Partner *PartA* sends a document of Document Type *DocTypeZ* to Endpoint *RecFromA*. 
-Document Type *DocTypeZ* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
+Partner *P|A* sends a document of Document Type *DT|Z* to Endpoint *E|RecFromA*. 
+Document Type *DT|Z* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
 
 Integration Hub:
 
