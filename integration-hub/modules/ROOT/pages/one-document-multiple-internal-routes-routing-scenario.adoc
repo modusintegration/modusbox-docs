@@ -1,0 +1,145 @@
+= One Document Type, Multiple Internal Routes
+
+In this scenario, your organization receives a document from a Partner. IH has been configured to process the document in two ways:
+
+* Route a copy of the document to an internal API.
+* Route a copy of the document to a destination at which all received documents are stored.
+
+== Relationships
+
+There are two xref:glossary#sectr[Relationships] in this scenario:
+
+YourCompany B2B : Any::
+* Universal B2B Relationship between your organization and any Partner.
+* Contains artifacts used across all partners with whom you do business.
+YourCompany B2B : Partner *A*::
+* Your organization's Relationship with the Partner with whom you are doing business (*PA* in this scenario).
+* Contains artifacts used only with this Partner.
+
+== Relationships
+
+There are two relationships in this scenario:
+
+YourCompany B2B : Any
+Universal relationship between your company and any partner.
+Artifacts used across all partners with whom you do business.
+YourCompany B2B : Partner *A*
+Your relationship with the partner with whom you are doing business (in this case, Partner *A*).
+Contains artifacts used only with this partner.
+
+.One Document, Multiple Routes Routing Scenario Relationships
+[cols="3*"]
+
+|===
+|Relationship|Description|Contains
+
+
+s|<<YourCompany B2B : Any>> 
+|Universal relationship between your company any partner
+|Contains Artifacts used across all partners with whom you do business
+
+s|<<YourCompany B2B : P|A>>
+|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *P|A*)
+|Contains artifacts used only with Partner *P|A*
+
+|===
+
+== Artifacts in YourCompany B2B : Any
+
+* Document *X*
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectd[Document Type]
+|DT|Y
+|Document Type you receive from a Partner
+|xref:document-types[Document Types]
+
+|xref:glossary#secte[Endpoint]
+|*API*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#secte[Backup]
+|*Backup*
+|Endpoint that points to the API that backs up all received documents
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectt[Target Channel ]
+|*X-to-API*
+|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|xref:channels[Channels] 
+
+|===
+
+==== YourCompany B2B : A
+
+
+//==== Configured in YourCompany B2B : PartA
+
+
+[[img-override-routing-scenario-transaction-partner-a]]
+
+image::override-routing-scenario-T|DT|Y-to-DT|X-to-E|API-(P|A).png[img-override-routing-scenario-transaction-partner-a, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|A)"]
+
+//.Override Routing Scenario Artifacts - YourCompany B2B : A
+
+[cols="2, 2, 6, 2"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+|*RecFromA*
+|Endpoint on which to receive documents from Partner *A*
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectd[Document Type]
+|DT|Y
+|Document Type you receive from a Partner
+|xref:document-types[Document Types]
+
+|xref:glossary#sectm[Map]
+|*Y-to-X*
+|Transforms a document of Document Type *Y* to a document of Document Type *X*
+|xref:maps[Maps]
+
+|xref:glossary#sects[Source Channel ]
+|*Y-to-X*
+|Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
+|xref:channels[Channels] 
+
+|xref:glossary#sectt[Target Channel ]
+|*X-to-API*
+|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|xref:channels[Channels] 
+
+|xref:glossary#sect[Transaction] 
+|*Y-to-X-to-API*
+|Combination of the Source Channel *Y-to-X* and the Target Channel *X-to-API*.
+It receives a document of *|Y*, maps it to a document of *X* and then sends it to Endpoint *API*. 
+In this Transaction, 
+the *From* Partner is configured as *A* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+
+== Execution
+
+== ParnetA sends Document Q to Endpoint RecFromA.
+
+* Integration Manager:
+
+** Receives Document Q
+
+** Attempts to resolve routes
+** Finds 2 Transactions DocQ-to-DocC-to-DATA:(PartnerA), and DocQ-Passthrough:(PartnerA)
+** Executes both transactions, 
+
+*** One maps the Document Q to Document C and Sends Document C to Endpoint DATA.
+
+*** One sends the Document Q to the Endpoint Backup.
+
+
+

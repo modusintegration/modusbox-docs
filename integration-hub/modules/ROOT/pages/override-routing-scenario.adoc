@@ -27,17 +27,17 @@ s|<<YourCompany B2B : Any>>
 |Universal relationship between your company any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s|<<YourCompany B2B : P|A>>
-|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *P|A*)
-|Contains artifacts used only with Partner *P|A*
+s|<<YourCompany B2B : P\|A>>
+|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *P\|A*)
+|Contains artifacts used only with Partner *P\|A*
 
-s|<<YourCompany B2B : P|B>>
-|Your organization's relationship with Partner *P|B*
-|Contains artifacts used only with Partner *P|B*
+s|<<YourCompany B2B : P\|B>>
+|Your organization's relationship with Partner *\|B*
+|Contains artifacts used only with Partner *P\|B*
 
-s|<<YourCompany B2B : C>>
-|Your organization's relationship with Partner *P|C*
-|Contains artifacts used only with Partner *P|C*
+s|<<YourCompany B2B : P\C>>
+|Your organization's relationship with Partner *P\|C*
+|Contains artifacts used only with Partner *P\|C*
 
 |===
 
@@ -103,7 +103,7 @@ Therefore, these artifacts, tabulated in <<Override Routing Scenario Artifacts -
 
 [[img-override-routing-scenario-transaction-partner-a]]
 
-image::override-routing-scenario-T|DT|Y-to-DT|X-to-E|API-(P|A).png[img-override-routing-scenario-transaction-partner-a, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|A)"]
+image::override-routing-scenario-T_DT_Y-to-DT_X-to-E_API-(P_A).png[img-override-routing-scenario-transaction-partner-a, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|A)"]
 
 //.Override Routing Scenario Artifacts - YourCompany B2B : A
 
@@ -132,7 +132,7 @@ the *From* Partner is configured as *P\|A* and the *To* Partner as *YourCompany 
 
 [[img-override-routing-scenario-transaction-partner-b]]
 
-image::override-routing-scenario-T|DT|Y-to-DT|X-to-E|API-(P|B).png[img-override-routing-scenario-transaction-partner-b, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|B)"]
+image::override-routing-scenario-T_DT_Y-to-DT_X-to-E_API-(P_B).png[img-override-routing-scenario-transaction-partner-b, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|B)"]
 
 //.Override Routing Scenario Artifacts - YourCompany B2B : PartB
 [cols="2, 2, 6, 2"]
@@ -160,7 +160,7 @@ It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sen
 
 [[img-override-routing-scenario-transaction-partner-c]]
 
-image::override-routing-scenario-T|DT|Y’-to-DT|X-to-E|API-P|C).png[img-override-routing-scenario-transaction-partner-c, title ="Transaction T|DT|Y'-to-DT|X-to-E|API (P|C)"]
+image::override-routing-scenario-T_DT_Y’-to-DT_X-to-E_API-P_C).png[img-override-routing-scenario-transaction-partner-c, title ="Transaction T|DT|Y'-to-DT|X-to-E|API (P|C)"]
 
 //.Override Routing Scenario Artifacts - YourCompany B2B : PartC
 
