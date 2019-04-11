@@ -2,77 +2,126 @@
 
 In this scenario, your organization receives a document from a Partner. IH has been configured to process the document in two ways:
 
-* Map the document 
+* Route a copy of the document to an internal API.
+* Route a copy of the document to a destination at which all received documents are stored.
 
+== Relationships
 
-receive a document of this Document Type, IH routes the document to an internal API. If IH has not been configured to receive a document of this Document Type, IH rejects the document.
+There are two xref:glossary#sectr[Relationships] in this scenario:
 
-Relationships
-There are two Relationships in this scenario:
+YourCompany B2B : Any::
+* Universal B2B Relationship between your organization and any Partner.
+* Contains artifacts used across all partners with whom you do business.
+YourCompany B2B : *PartA*::
+* Your organization's Relationship with the Partner with whom you are doing business (*PA* in this scenario).
+* Contains artifacts used only with this Partner.
 
-== Goal
-
-Here our users want to receive a single document Q from PartnerA, they then want to do two things to it. First they want to Pass it through to a backup that stores all documents they receive. Then they also want to map it once to the internal standard Document C and send it to a backend Database DATA.
-
-== Setup
+== Relationships
 
 There are two relationships in this scenario:
 
-[YourCompany B2B:Any]
+[YourCompany B2B : Any]
 Universal relationship between your company and any partner.
 Artifacts used across all partners with whom you do business.
-[PartnerA:YourCompany B2B]
-Your relationship with the partner with whom you are doing business (in this case, PartnerA).
+[YourCompany B2B : Partner A]
+Your relationship with the partner with whom you are doing business (in this case, Partner *A*).
 Contains artifacts used only with this partner.
 
+.One Document, Multiple Routes Routing Scenario Relationships
+[cols="3*"]
+
+|===
+|Relationship|Description|Contains
 
 
+s|<<YourCompany B2B : Any>> 
+|Universal relationship between your company any partner
+|Contains Artifacts used across all partners with whom you do business
 
-== Artifacts in [YourCompany B2B:Any]
-* Document C
+s|<<YourCompany B2B : P|A>>
+|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *P|A*)
+|Contains artifacts used only with Partner *P|A*
 
-** A document you use internally in your company.
+|===
 
-* Endpoint DATA
+== Artifacts in YourCompany B2B : Any
 
-** The endpoint that points to your internal database.
+* Document *X*
+|===
+|Artifact|Artifact Name|Description|Configured on page
 
-* Endpoint Backup
+|xref:glossary#sectd[Document Type]
+|DT|Y
+|Document Type you receive from a Partner
+|xref:document-types[Document Types]
 
-** The endpoint that points to your backup API that you back up all received documents to. 
+|xref:glossary#secte[Endpoint]
+|*API*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
 
-* Target Channel DocC-to-Data
+|xref:glossary#secte[Backup]
+|*Backup*
+|Endpoint that points to the API that backs up all received documents
+|xref:endpoints[Endpoints] 
 
-** This channel will take the internal document C and send it to Endpoint Data.
+|xref:glossary#sectt[Target Channel ]
+|*X-to-API*
+|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|xref:channels[Channels] 
 
-== [PartnerA:YourCompany B2B]
-* Endpoint RecFromA
+|===
 
-** This is the endpoint on which you expect to receive documents from PartnerA.
+==== YourCompany B2B : A
 
-* Document Q
 
-** A document you expect to receive from your partner.
+//==== Configured in YourCompany B2B : PartA
 
-* Map Q-to-C
 
-** This map will convert the document Q into document C
+[[img-override-routing-scenario-transaction-partner-a]]
 
-* Source Channel DocQ-to-DocC
+image::override-routing-scenario-T|DT|Y-to-DT|X-to-E|API-(P|A).png[img-override-routing-scenario-transaction-partner-a, title ="Transaction T|DT|Y-to-DT|X-to-E|API (P|A)"]
 
-** This source channel will map the document Q into the document C
+//.Override Routing Scenario Artifacts - YourCompany B2B : A
 
-* Source Channel DocQ-Passthrough
+[cols="2, 2, 6, 2"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
 
-** This source channel will pass the Document Q to whatever Target channel is selected.
+|xref:glossary#secte[Endpoint]
+|*RecFromA*
+|Endpoint on which to receive documents from Partner *A*
+|xref:endpoints[Endpoints] 
 
-* Target Channel DocQ-to-Backup
+|xref:glossary#sectd[Document Type]
+|DT|Y
+|Document Type you receive from a Partner
+|xref:document-types[Document Types]
 
-** This source channel will pass the Document Q to the Backup Endpoint
+|xref:glossary#sectm[Map]
+|*Y-to-X*
+|Transforms a document of Document Type *Y* to a document of Document Type *X*
+|xref:maps[Maps]
 
-* Transaction DocQ-to-DocC-to-Data
+|xref:glossary#sects[Source Channel ]
+|*Y-to-X*
+|Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
+|xref:channels[Channels] 
 
-** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
+|xref:glossary#sectt[Target Channel ]
+|*X-to-API*
+|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|xref:channels[Channels] 
+
+|xref:glossary#sect[Transaction] 
+|*Y-to-X-to-API*
+|Combination of the Source Channel *Y-to-X* and the Target Channel *X-to-API*.
+It receives a document of *|Y*, maps it to a document of *X* and then sends it to Endpoint *API*. 
+In this Transaction, 
+the *From* Partner is configured as *A* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
 
 
 
