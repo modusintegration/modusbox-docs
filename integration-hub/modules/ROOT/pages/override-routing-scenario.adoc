@@ -95,7 +95,7 @@ Therefore, these artifacts, tabulated in <<Override Routing Scenario Artifacts -
 
 |===
 
-==== YourCompany B2B : A
+=== YourCompany B2B : A
 
 
 //==== Configured in YourCompany B2B : PartA
@@ -126,7 +126,7 @@ the *From* Partner is configured as *P\|A* and the *To* Partner as *YourCompany 
 
 |===
 
-==== YourCompany B2B : B
+=== YourCompany B2B : B
 
 // ==== Configured in YourCompany B2B : PartB
 
@@ -153,7 +153,7 @@ It receives a document of *DT\|Y*, maps it to a document of *DT\|X* and then sen
 
 |===
 
-==== YourCompany B2B : C
+=== YourCompany B2B : C
 
 
 //==== Configured in YourCompany B2B : PartC
