@@ -9,8 +9,7 @@
 *** xref:basic-routing-scenario.adoc[Basic Routing Scenario]
 *** xref:shared-routing-scenario.adoc[Shared Routing Scenario]
 *** xref:override-routing-scenario.adoc[Override Routing Scenario]
-*** xref:one-document-multiple-internal-routes-routing-scenario.adoc[One Document, Multiple Internal Routes Routing Scenario]
-*** xref:multiple-internal-routes-routing-scenario.adoc[Multiple Internal Routes Routing Scenario]
+*** xref:one-document-type-multiple-internal-routes-routing-scenario.adoc[One Document Type, Multiple Internal Routes Routing Scenario]
 *** xref:multicast-routing-scenario.adoc[Multicast Routing Scenario]
 
 
