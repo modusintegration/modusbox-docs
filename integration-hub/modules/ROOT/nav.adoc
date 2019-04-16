@@ -31,6 +31,9 @@
 
 *** xref:transaction-designer.adoc[Transaction Designer]
 *** xref:document-types.adoc[Document Types]
+*** xref:debatching-incoming-documents.adoc[Debatching Groups of Incoming Documents]
+**** xref:debatching-incoming-x12-documents.adoc[X12]
+**** xref:debatching-incoming-xml-documents.adoc[XML]
 *** xref:endpoints.adoc[Endpoints]
 *** xref:maps.adoc[Maps]
 *** xref:channels.adoc[Channels]
