@@ -1,4 +1,4 @@
-= *PortX JDE Connector for Mule 4 – Demo – Retrieve a UBE’s Job Status*
+= *PortX JD Edwards Connector for Mule 4 – Demo – Retrieve a UBE’s Job Status*
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images\demo_ube_status
 :toc: macro
@@ -28,7 +28,7 @@ This document assumes that you are familiar with Oracle’s _JD Edwards Enterpri
 
 == *Demo - Retrieve a Batch Process's Status*
 
-*NOTE*: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
+NOTE: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
 
 === Creating a new Mule Project 
 
@@ -90,7 +90,7 @@ Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folde
 * Project Root
 * _src/main/resources_
 
-*NOTE:* If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
+NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
 image:image2_demo_ube_status.png[image,width=250,height=446]
 
@@ -243,7 +243,7 @@ Select the _On Error Continue_ scope, and under Type enter _JDE:ERROR_GETTING_JO
 
 image:image29_demo_ube_status.png[image,width=601,height=247]
 
-*NOTE* : The operation error types can be seen when selecting the operation on your canvas, going to _Error Mapping_, and clicking add. You may also map this error to a aplication specific error.
+NOTE : The operation error types can be seen when selecting the operation on your canvas, going to _Error Mapping_, and clicking add. You may also map this error to a aplication specific error.
 
 image:image30_demo_ube_status.png[image,width=258,height=301]
 

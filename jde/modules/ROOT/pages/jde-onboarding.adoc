@@ -1,4 +1,4 @@
-= PortX JDE Connector for Mule 4 - Getting Started Guide
+= PortX JD Edwards Connector for Mule 4 - Getting Started Guide
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images\jde-onboarding
 :toc: macro
@@ -113,7 +113,7 @@ e.g.:
 
 _java -jar JDEToolToBuildLibBundle-1.0.0.jar --destDir "/tmp" –jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" –libDir "/opt/jde/workingDir/ServerFiles" –version "2.0.0-RC1" --localRepo "/home/user/.m2/repository"_
 
-*NOTE* : All libraries in this path will be added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation). See Appendix A for a detailed list of all files required per your Tools Release
+NOTE : All libraries in this path will be added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation). See Appendix A for a detailed list of all files required per your Tools Release
 
 Once completed the resulting bundle will be located at, following the sample above, /tmp/jde-lib-bundle-2.0.0-RC1.jar
 
@@ -151,7 +151,7 @@ To ensure correct operation of all of the JDE Connector features the Enterprise 
 
 Please refer to *JD Edwards EnterpriseOne Tools Interoperability Guide* to check updates, and also provides the different .dll extensions for other platforms.
 
-*NOTE*: The below .dll files, all relate to the _Microsoft Windows_ platform.
+NOTE: The below .dll files, all relate to the _Microsoft Windows_ platform.
 
 This configuration must be done by CNC administrator. Refer to *JD Edwards EnterpriseOne Tools Interoperability Guide*
 
@@ -329,7 +329,7 @@ APPEND=TRUE
 
 == *AnyPoint Studio Project - _PortX JDE Connector_*
 
-*NOTE*: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
+NOTE: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
 
 === Using the Connector
 
@@ -403,7 +403,7 @@ Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folde
 * Project Root
 * _src/main/resources_
 
-*NOTE:* If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
+NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
 image:image3_getting_started.png[image,width=250,height=446]
 

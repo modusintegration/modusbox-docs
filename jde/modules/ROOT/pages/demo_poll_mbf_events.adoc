@@ -1,4 +1,4 @@
-= *PortX JDE Connector for Mule 4 – Demo – Poll Transaction (MBF) Events*
+= *PortX JD Edwards Connector for Mule 4 – Demo – Poll Transaction (MBF) Events*
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images\demo_ube
 :toc: macro
@@ -46,7 +46,7 @@ For more on setting transaction types, please refer to the _Oracle JD Edwards En
 
 == *Demo – Poll Transaction (MBF) Events*
 
-*NOTE*: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
+NOTE: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
 
 === Creating a new Mule Project 
 
@@ -108,7 +108,7 @@ Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folde
 * Project Root
 * _src/main/resources_
 
-*NOTE:* If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
+NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
 image:image6_demo_poll_mbf_events.png[image,width=250,height=446]
 
@@ -283,7 +283,7 @@ image:image41_demo_poll_mbf_events.png[image,width=567,height=376]
 
 After the project has been deployed, you can test you flow by logging into JDE. Go to the _Customer Master Information_ Application (_P03013 ZJDE0002_)
 
-*NOTE:* This needs to be a version that has been configured for interoperability (see the Requirements section of this document)
+NOTE: This needs to be a version that has been configured for interoperability (see the Requirements section of this document)
 
 image:image42_demo_poll_mbf_events.png[image,width=601,height=430]
 
@@ -311,7 +311,7 @@ Select the _On Error Continue_ scope, and under Type enter _JDE:ERROR_PROCESSING
 
 image:image48_demo_poll_mbf_events.png[image,width=447,height=324]
 
-*NOTE* : The operation error types can be seen when selecting the operation on your canvas, going to _Error Mapping_, and clicking add. You may also map this error to a aplication specific error.
+NOTE : The operation error types can be seen when selecting the operation on your canvas, going to _Error Mapping_, and clicking add. You may also map this error to a aplication specific error.
 
 image:image49_demo_poll_mbf_events.png[image,width=250,height=291]
 
