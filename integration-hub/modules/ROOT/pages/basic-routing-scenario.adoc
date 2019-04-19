@@ -13,11 +13,13 @@ There are two xref:glossary#sectr[Relationships] in this scenario:
 [cols="3*"]
 
 |===
-s,a|<<_YourCompany_ B2B : Any>> 
+|Relationship|Description|Contains
+
+s|_YourCompany_ B2B : Any
 |Universal relationship between your company any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s, a|<<_YourCompany_ B2B : PartA>>
+s|_YourCompany_ B2B : PartA
 |Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
 |Contains artifacts used only with Partner *PartA*
 |===
@@ -44,7 +46,7 @@ This section identifies:
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#sectd[Document Type]
-s|Y
+s|X
 |Document Type you use internally in your company
 |xref:document-types.adoc[Document Types]
 
@@ -54,7 +56,7 @@ s|API
 |xref:endpoints.adoc[Endpoints] 
 
 |xref:glossary#sectt[Target Channel]
-s|Y-to-API
+s|X-to-API
 |Channel that sends a document of the internal Document Type *Y* to Endpoint *API*
 |xref:channels.adoc[Channels] 
 
@@ -74,22 +76,22 @@ s|Y-to-API
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sectd[Document Type]
-|*X*
+|*Y*
 |Document Type that includes a document you expect to receive from *PartA*
 |xref:document-types[Document Types]
 
-|xref:glossary:#sectm[Map] 
+|xref:glossary#sectm[Map] 
 |*Y-to-X*
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:maps[Maps]
 
 |xref:glossary#sects[Source Channel]
-|*X-to-Y*
+|*Y-to-X*
 |Includes the process that maps and sends a document of *Y* to a document of *X*
 |xref:channels[Channels] 
 
 |xref:glossary#sect[Transaction] 
-|*X-to-Y-to-API*
+|*Y-to-X-to-API*
 |Combination of the Source Channel *Y-to-X* and the Target Channel *X-to-API*.
 It receives a document of *Y*, maps it to a document of *X* and then sends it to Endpoint *API*. 
 In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
@@ -102,29 +104,59 @@ In this Transaction, the *From* Partner is configured as *PartA* and the *To* Pa
 The outcome of this scenario depends on whether the following artifacts are configured appropriately:
 
 * Partner *PartA*
-* Document Type *X*
 * Document Type *Y*
+* Document Type *X*
 * Endpoint *RecFromA*
 * Endpoint *API*
 * Target Channel *X-to-API*
 * Source Channel *Y-to-X*
 * Transaction *Y-to-X-to-API*
 
+.Basic Routing Scenario Artifact Summary 
+[cols="8*",options="header", e]
+|===
+|Relationship
+7+^|Artifact Type 
+||Partners|Document Types|Maps|Endpoints 
+2+^|Channels|Transactions
+
+5+||Source|Target|
+
+s|_YourCompany_ B2B : Any
+s|
+s|X
+s|
+s|API
+s|
+s|X-to-API
+|
+
+s|_YourCompany_ B2B : PartA
+s|PartA
+s|Y
+s|Y-to-X
+s|RecFromA
+s|Y-to-X
+s|
+s|Y-to-X-to-API
+
+|===
+
 == Outcome: Document Accepted and Routed
 
-All artifacts are correctly configured; IH routes an incoming document of *Y* from Partner *PartA* to Endpoint *RecFromA*.
+All artifacts are correctly configured; IH routes an incoming document of Document Type *Y* from Partner *PartA* to Endpoint *RecFromA*.
 
 Integration Hub:
 
-* Receives a document of Document Type *X*.
+* Receives a document of Document Type *Y*.
 * Attempts to resolve routes.
 ** Finds a Transaction *Y-to-X-to-API* that contains *Y*.
 * Executes Transaction *Y-to-X-to-API*, which transforms the Document from *X* to *Y*.
 * Sends the document to Endpoint *API*.
 
-[[img-basic-scenario-outcome-success]]
+[[img-basic-routing-scenario-outcome-success]]
 
-image::basic-scenario-outcome-success.png[img-basic-scenario-outcome-success, title="Basic Scenario Outcome (Success)"]
+image::basic-routing-scenario-outcome-success.png[img-basic-routing-scenario-outcome-success, title="Basic Routing Scenario Outcome (Success)"]
 
 
 == Outcome: Document Rejected
@@ -139,7 +171,7 @@ Integration Hub:
 * Does not find a corresponding Transaction.
 * Rejects the document.
 
-[[img-basic-scenario-outcome-rejection]]
+[[img-basic-routing-scenario-outcome-rejection]]
 
-image::basic-scenario-outcome-rejection.png[img-basic-scenario-outcome-rejection, title="Basic Scenario Outcome (Rejection)"]
+image::basic-routing-scenario-outcome-rejection.png[img-basic-routing-scenario-outcome-rejection, title="Basic Routing Scenario Outcome (Rejection)"]
 

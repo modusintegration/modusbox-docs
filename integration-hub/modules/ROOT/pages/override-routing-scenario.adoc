@@ -231,12 +231,11 @@ For more information, see <<Outcome Details>>.
 
 s|YourCompany B2B : Any
 s|NA
-s|DT\|Y
-DT\|X
-s|DT\Y-to-DT\X
-s|E\|API
-s|DT\|Y-to-DT\|X
-s|DT\|X-to-E\|API
+s|Y, X
+s|Y-to-X
+s|API
+s|Y-to-X
+s|X-to-API
 |
 
 s|YourCompany B2B : PartA
