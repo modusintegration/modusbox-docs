@@ -27,9 +27,9 @@ s|<<YourCompany B2B : Any>>
 |Universal relationship between your company any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s|<<YourCompany B2B : P\|A>>
-|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *P\|A*)
-|Contains artifacts used only with Partner *P\|A*
+s|<<YourCompany B2B : PartA>>
+|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
+|Contains artifacts used only with Partner *PartA*
 
 s|<<YourCompany B2B : P\|B>>
 |Your organization's relationship with Partner *\|B*
