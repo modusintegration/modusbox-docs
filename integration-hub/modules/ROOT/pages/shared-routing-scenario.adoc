@@ -1,22 +1,29 @@
 = Shared Routing Scenario
 
-In this scenario, you organization wants to receive a document of document X from two partners, Partner A (*PartA*) and Partner B (*PartB*), map it to an internal standard C and send it to a backend database DATA.
+In this scenario, you organization wants to receive a document of from two partners, Partner, map it to an internal standard, and send it to a backend database.
 
-=== Relationships
+== Relationships
 
-There are three relationships in this scenario:
+There are three  xref:glossary#sectr[Relationships] in this scenario:
 
-YourCompany B2B : Any ::
-* Universal relationship between your organization and any partner
-* Contains artifacts used across all partners with whom you do business
+.Basic Routing Scenario Relationships
+[cols="3*"]
 
-YourCompany B2B : PartA ::
-* Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*). 
-* Contains artifacts used only with this partner.
+|===
+|Relationship|Description|Contains
 
-YourCompany B2B : PartB ::
+s|_YourCompany_ B2B : Any
+|Universal relationship between your company any partner
+|Contains Artifacts used across all partners with whom you do business
 
-** Your organization's relationship with the partner with whom you are doing business (in this case, *PartB*). Contains artifacts used only with this partner.
+s|_YourCompany_ B2B : PartA
+|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
+|Contains artifacts used only with Partner *PartA*
+
+s|_YourCompany_ B2B : PartB
+|Your organization's relationship with the partner with whom you are doing business (in this case, *PartB*)
+|Contains artifacts used only with Partner *PartB*
+|===
 
 === Artifacts and Artifact Configuration 
 

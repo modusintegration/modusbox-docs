@@ -1,4 +1,5 @@
 * xref:index.adoc[Integration Hub]
+# * xref:table-test.adoc[Table Test]
 
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
