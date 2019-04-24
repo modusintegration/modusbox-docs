@@ -1,6 +1,6 @@
 = Shared Routing Scenario
 
-In this scenario, you organization wants to receive a document of from two partners, Partner, map it to an internal standard, and send it to a backend database.
+In this scenario, you organization wants to receive a document xref:glossary#sectd[Document] from two xref:glossary#sectp[Partners], map it to an internal standard, and send it to a backend database.
 
 == Relationships
 
@@ -25,121 +25,138 @@ s|_YourCompany_ B2B : PartB
 |Contains artifacts used only with Partner *PartB*
 |===
 
-=== Artifacts and Artifact Configuration 
+[[img-shared-routing-scenario-artifacts]]
+
+image::shared-routing-scenario-artifacts.png[img-shared-routing-scenario-artifacts, title="Shared Routing Scenario Artifacts"]
+
+
+== Artifacts and Artifact Configuration 
 
 This section identifies:
 
 * Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
-* The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*, or *YourCompany B2B : PartB*) in which the artifacts are configured
+* The Relationship (either *__YourCompany__ B2B : Any* or *__YourCompany__ B2B : PartA*, or *__YourCompany__ B2B : PartB*) in which the artifacts are configured
 
 
 //==== Configured in *YourCompany B2B : Any*
 
-.Basic Scenario Artifacts - YourCompany B2B : Any
+.Basic Scenario Artifacts - *_YourCompany_ B2B : Any*
 [cols="4*"]
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#sectd[Document Type]
-|*DocTypeY*
+|Y
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
+h|xref:glossary#sectd[Document Type]
+s|X
+|Document Type you use internally in your company
+|xref:document-types.adoc[Document Types]
+
+
+|xref:glossary#sectm[Map] 
+s|Y-to-X
+|Transforms a document of Document Type *Y* to a document of Document Type *X*
+|xref:maps[Maps]
+
+
+|xref:glossary#sects[Source Channel]
+s|Y-to-X
+|Includes the process that maps and sends a document of *Y* to a document of *X*
+|xref:channels[Channels] 
+
 |xref:glossary#secte[Endpoint]
-|*API*
+s|API
 |Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
+|xref:endpoints[Endpoints]
 
 |xref:glossary#sectt[Target Channel ]
-|*Y-to-API*
+s|Y-to-API
 |Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
 |xref:channels[Channels] 
 
 |===
 
-* Document C
+//==== Configured in *YourCompany B2B : PartA*
 
-** A document you use internally in your company.
-
-* Document Q
-
-** A document you expect to receive from your partner.
-
-* Map Q-to-C
-
-** This map will convert the document Q into document C
-
-* Source Channel DocQ-to-DocC
-
-** This source channel will map a recieved document Q into the document C
-
-* Endpoint DATA
-
-** The endpoint that points to your internal database.
-
-* Target Channel DocC-to-Data
-
-** This channel will take the internal document C and send it to Endpoint Data.
-
-==== [PartnerA:YourCompany B2B]
-
-* Endpoint RecFromA
-
-** This is the endpoint on which you expect to receive documents from PartnerA.
-
-* Transaction DocQ-to-DocC-to-Data:(PartnerA)
-
-** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
-
-==== [PartnerB:YourCompany B2B]
-
-* Endpoint RecFromB
-
-** This is the endpoint on which you expect to receive documents from PartnerB.
-
-* Transaction DocQ-to-DocC-to-Data:(PartnerB)
-
-** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartB and the To Partner set to Your Company B2B.
-
-==== ParnetA sends Document Q to Endpoint RecFromA.
-
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
+.Basic Scenario Artifacts - *_YourCompany_ B2B : PartA*
+[cols="4*"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
 
 
+h|xref:glossary#secte[Endpoint]
+s|RecFromA
+|Endpoint from which you expect to receive documents from *PartA*. 
+|xref:endpoints.adoc[Endpoints] 
 
-==== ParnetB sends Document Q to Endpoint RecFromB.
+h|xref:glossary#sectt[Transaction]
+s|Y-to-X-to-API (PartA)
+|Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
+It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*. 
+In this Transaction, the From Partner is configured as *PartA* and the To Partner as *_YourCompany_ B2B*. 
 
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
+|===
 
 
+//==== Configured in *YourCompany B2B : PartB*
 
-==== The Partner PartC sends Document Q to Endpoint RecFromB,.
+.Basic Scenario Artifacts - *_YourCompany_ B2B : PartB*
+[cols="4*"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+
+h|xref:glossary#secte[Endpoint]
+s|RecFromB
+|Endpoint from which you expect to receive documents from *PartB*. 
+|xref:endpoints.adoc[Endpoints] 
+
+h|xref:glossary#sectt[Transaction]
+s|Y-to-X-to-API (PartB)
+|Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
+It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*. 
+In this Transaction, the From Partner is configured as *PartB* and the To Partner as *_YourCompany_ B2B*. 
+
+|===
+
+
+== Outcomes
+
+=== *PartA* sends Document of Document Type *Y* to Endpoint *RecFromA*
 
 Integration Manager:
 
-* Receives document Q
+* Receives Document *Y*
+** Attempts to resolve routes
+** Finds Transaction *Y-to-X-to-API*
+* Executes that transaction, which maps the transaction to *X*
+*  Sends Document *X* to Endpoint *API*.
 
-**, Attempts to resolve routes
 
-**, Does not find a corresponding transaction.
 
-** Rejects the document.
+=== *PartB* sends Document of Document Type *Y* to Endpoint *RecFromB*
+
+Integration Manager:
+
+* Receives Document *Y*
+* Attempts to resolve routes
+** Finds Transaction *Y-to-X-to-API*
+** Executes that transaction, which maps the transaction to *X*
+*  Sends Document *X* to Endpoint *API*.
+
+
+
+=== PartC sends Document of Document Type *X* to Endpoint *RecFromB*
+
+Integration Manager:
+
+* Receives document X
+* Attempts to resolve routes
+** Does not find a corresponding transaction.
+* Rejects the document
 
 
 
