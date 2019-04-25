@@ -270,7 +270,7 @@ The _PortX_ _JDE Connector_ relies on _Oracle’s Java Dynamic Connector_ to est
 These files are distributed with both _Development Clients_ and/or _Enterprise Server_ modules. Addtional Configuration requirements per file are :
 
 _[.underline]#JDEINTEROP.INI#_
-[source,java]
+[source,ini]
 ----
 [EVENT]
 lockEventsYN=N
@@ -280,7 +280,7 @@ validateEnterpriseServicesUBEName=R0008P_XJDE0001
 ----
 If you need to run the application on CloudHub, you will need to add the section *OCM_SERVERS* with the servers that the JDE Connector will use in the connection. The JDE Servers Names are in the column *OMSRVR* of *F98611* table.
 
-[source,java]
+[source,ini]
 ----
 [OCM_SERVERS]
 jdeserver01=jdeserver01.yourdomain.com
@@ -292,7 +292,7 @@ _[.underline]#JDELOG.PROPERTIES (optional)#_
 
 *NOTE :* See __JD Edwards EnterpriseOne__™ documentation for usage
 
-[source,java]
+[source,ini]
 ----
 [E1LOG]
 FILE=/tmp/jdelog/jderoot.log
@@ -406,6 +406,36 @@ Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folde
 NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
 image:image3_getting_started.png[image,width=250,height=446]
+
+The mule-artifact.json file needs to be updated for each environment as below
+
+[source,json]
+----
+{
+	"minMuleVersion": "4.1.4",
+	"classLoaderModelLoaderDescriptor": {
+		"id": "mule",
+		"attributes": {
+			"exportedResources": [
+				"JDV920/jdeinterop.ini",
+				"JDV920/jdbj.ini",
+				"JDV920/tnsnames.ora",
+				"JDV920/jdelog.properties",
+				"JPY920/jdeinterop.ini",
+				"JPY920/jdbj.ini",
+				"JPY920/tnsnames.ora",
+				"JPY920/jdelog.properties",				
+				"log4j2.xml"
+			],
+			"exportedPackages": [
+				"JDV920",
+				"JPY920"
+			],
+			"includeTestDependencies": "true"
+		}
+	}
+}
+----
 
 === Other Considerations
 

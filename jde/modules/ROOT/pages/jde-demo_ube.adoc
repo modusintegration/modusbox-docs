@@ -94,6 +94,35 @@ NOTE: If there is a requirement to use different configuration files per environ
 
 image:image2_demo_ube.png[image,width=250,height=446]
 
+The _mule-arifact.json_ file needs to be updated per environment as below
+
+[source,json]
+----
+{
+	"minMuleVersion": "4.1.4",
+	"classLoaderModelLoaderDescriptor": {
+		"id": "mule",
+		"attributes": {
+			"exportedResources": [
+				"JDV920/jdeinterop.ini",
+				"JDV920/jdbj.ini",
+				"JDV920/tnsnames.ora",
+				"JDV920/jdelog.properties",
+				"JPY920/jdeinterop.ini",
+				"JPY920/jdbj.ini",
+				"JPY920/tnsnames.ora",
+				"JPY920/jdelog.properties",				
+				"log4j2.xml"
+			],
+			"exportedPackages": [
+				"JDV920",
+				"JPY920"
+			],
+			"includeTestDependencies": "true"
+		}
+	}
+}
+----
 
 === Other Considerations
 

@@ -122,6 +122,36 @@ NOTE: If there is a requirement to use different configuration files per environ
 
 image:image5_demo_poll_edi_events.png[image,width=250,height=446]
 
+The _mule-arifact.json_ file needs to be updated per environment as below
+
+[source,json]
+----
+{
+	"minMuleVersion": "4.1.4",
+	"classLoaderModelLoaderDescriptor": {
+		"id": "mule",
+		"attributes": {
+			"exportedResources": [
+				"JDV920/jdeinterop.ini",
+				"JDV920/jdbj.ini",
+				"JDV920/tnsnames.ora",
+				"JDV920/jdelog.properties",
+				"JPY920/jdeinterop.ini",
+				"JPY920/jdbj.ini",
+				"JPY920/tnsnames.ora",
+				"JPY920/jdelog.properties",				
+				"log4j2.xml"
+			],
+			"exportedPackages": [
+				"JDV920",
+				"JPY920"
+			],
+			"includeTestDependencies": "true"
+		}
+	}
+}
+----
+
 === Other Considerations
 
 To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the _jdelog.properties_, you may add the following _Async Loggers_ to _log4j2.xml_ file.
