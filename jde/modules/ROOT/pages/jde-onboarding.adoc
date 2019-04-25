@@ -34,7 +34,8 @@ This document assumes that you are familiar with Oracle’s _JD Edwards Enterpri
 * Mule 4.1 server Runtime or higher
 * https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java JDK 1.8]
 * https://www.mulesoft.com/lp/dl/studio[AnyPoint Studio™ 7.x or higher]
-* https://maven.apache.org/download.cgi[Maven] 3.3.9 or higher (included in AnyPoint Studio 7.x or higher)
+* https://maven.apache.org/download.cgi[Maven] 3.3.9 or higher (do not use the embedded Maven for AnyPoint Studio)
+** For a easy installation tutorial see https://www.mkyong.com/maven/how-to-install-maven-in-windows/[How to install Maven for Windows]
 * Access to your Oracle’s _JD Edwards EnterpriseOne™_ installation java libraries
 * As the connector is based on Oracle’s JD Edwards EnterpriseOne interoperability solution, the below settings need to be reviewed/changed.
 
@@ -367,7 +368,7 @@ Add the following to you _dependencies_ section :
 <dependency>
 <groupId>com.modus</groupId>
     <artifactId>mule-jde-connector</artifactId>
-    <version>2.0.0-RC1</version>
+    <version>2.0.0-RC3</version>
     <classifier>mule-plugin</classifier>
 </dependency>
 <dependency>
