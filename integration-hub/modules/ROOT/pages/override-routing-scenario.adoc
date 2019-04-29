@@ -22,19 +22,19 @@ There are four xref:glossary#sectr[Relationships] in this scenario. Artifacts ar
 |Relationship|Description|Contains
 
 
-s|<<*_YourCompany_ B2B* : Any>> 
+s|*_YourCompany_ B2B* : Any 
 |Universal relationship between your company any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s|<<*_YourCompany_ B2B* : PartA>>
+s|*_YourCompany_ B2B* : PartA
 |Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
 |Contains artifacts used only with Partner *PartA*
 
-s|<<*_YourCompany_ B2B* : PartB>>
+s|*_YourCompany_ B2B* : PartB
 |Your organization's relationship with Partner *\|B*
 |Contains artifacts used only with Partner *PartB*
 
-s|<<*_YourCompany_ B2B* : ~Pa~rtC>>
+s|*_YourCompany_ B2B* : PartC
 |Your organization's relationship with Partner *PartC*
 |Contains artifacts used only with Partner *PartC*
 
@@ -52,8 +52,6 @@ This tables and flow diagrams in this section identifies:
 
 Artifacts in this Relationship are accessible from all Partner Relationships. 
 Therefore, these artifacts, tabulated in <<Override Routing Scenario Artifacts - *_YourCompany_ B2B* : Any, Table 2>>, appear in each of the Transaction diagrams that follow. 
-
-//==== Configured in **_YourCompany_ B2B* : Any*
 
 .Override Routing Scenario Artifacts - *_YourCompany_ B2B* : Any 
 [cols="4*"]
@@ -94,17 +92,16 @@ Therefore, these artifacts, tabulated in <<Override Routing Scenario Artifacts -
 
 |===
 
-=== *_YourCompany_ B2B* : PartA
-
 
 //==== Configured in *_YourCompany_ B2B* : PartA
 
+=== *_YourCompany_ B2B* : PartA
 
 [[img-override-routing-scenario-artifacts-parta]]
 
-image::override-routing-scenario-artifacts-parta.png[img-override-routing-scenario-artifacts-parta, title="Shared Routing Scenario Artifacts in *_YourCompany_ B2B* : PartA"]
+image::override-routing-scenario-artifacts-parta.png[img-override-routing-scenario-artifacts-parta, title="Override Routing Scenario Artifacts in *_YourCompany_ B2B* : PartA"]
 
-//.Override Routing Scenario Artifacts - *_YourCompany_ B2B* : A
+.Override Routing Scenario Artifacts - *_YourCompany_ B2B* : PartA
 
 [cols="2, 2, 6, 2"]
 |===
@@ -128,6 +125,7 @@ the *From* Partner is configured as *PartA* and the *To* Partner as **_YourCompa
 === *_YourCompany_ B2B* : PartB
 
 // ==== Configured in *_YourCompany_ B2B* : PartB
+
 
 [[img-override-routing-scenario-artifacts-part-b]]
 
@@ -304,7 +302,7 @@ Integration Hub:
 
 ==== PartC sends document (Y') to Endpoint RecFromC
 
-[[img-override-routing-scenario-outcome-partc-success]
+[[img-override-routing-scenario-outcome-partc-success]]
 
 image::override-routing-scenario-outcome-partc-success.png[img-override-routing-scenario-outcome-partc-success, title="Override Routing Scenario Outcome, PartC, Success"]
 
@@ -319,7 +317,7 @@ Integration Hub:
 
 
 
-==== Outcome: Document Rejected
+=== Outcome: Document Rejected
 
 Partner *PartA* sends a document of Document Type *Z* to Endpoint *RecFromA*. 
 Document Type *Z* is not configured in Relationship **_YourCompany_ B2B* : Any*; IHub rejects the document. 

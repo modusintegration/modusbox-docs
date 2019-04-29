@@ -21,7 +21,7 @@ s|_YourCompany_ B2B : Any
 
 s|_YourCompany_ B2B : PartA
 |Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
-|Contains artifacts used only with Partner *PartA*
+|Contains Artifacts used only with Partner *PartA*
 |===
 
 [[img-basic-routing-scenario-artifacts]]
@@ -39,7 +39,7 @@ This section identifies:
 
 //== Configured in *YourCompany B2B : Any*
 
-.Basic Scenario Artifacts - YourCompany B2B : Any
+.Basic Scenario Artifacts - *_YourCompany B2B_ : Any*
 [cols="4*" grid=all]
 
 |===

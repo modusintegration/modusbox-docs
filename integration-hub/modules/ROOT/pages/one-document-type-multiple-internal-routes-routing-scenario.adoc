@@ -17,11 +17,11 @@ There are two relationships in this scenario.
 |Relationship|Description|Contains
 
 
-s|<<YourCompany B2B : Any>> 
+s|*_YourCompany_ B2B : Any* 
 |Universal relationship between your company any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s|<<YourCompany B2B : A>>
+s|*_YourCompany_ B2B : A*
 |Your organization's relationship with the partner with whom you are doing business (in this case, Partner *A*)
 |Contains artifacts used only with Partner *A*
 
@@ -34,7 +34,7 @@ This tables and flow diagrams in this section identifies:
 * Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
 * The Relationship in which the artifacts are configured
 
-=== YourCompany B2B : Any
+=== *_YourCompany B2B_ : Any*
 
 |===
 |Artifact|Artifact Name|Description|Configured on page
@@ -61,7 +61,7 @@ s|X-to-API
 
 |===
 
-=== YourCompany B2B : A
+=== *_YourCompany B2B_ : PartA*
 
 
 //==== Configured in YourCompany B2B : Partner A

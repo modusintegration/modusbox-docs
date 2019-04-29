@@ -25,10 +25,6 @@ s|_YourCompany_ B2B : PartB
 |Contains artifacts used only with Partner *PartB*
 |===
 
-[[img-shared-routing-scenario-artifacts]]
-
-image::shared-routing-scenario-artifacts.png[img-shared-routing-scenario-artifacts, title="Shared Routing Scenario Artifacts"]
-
 
 == Artifacts and Artifact Configuration 
 
@@ -81,6 +77,12 @@ s|Y-to-API
 
 //==== Configured in *YourCompany B2B : PartA*
 
+=== *_YourCompany_ B2B* : PartA
+
+[[img-shared-routing-scenario-artifacts-parta]]
+
+image::shared-routing-scenario-artifacts-parta.png[img-shared-routing-scenario-artifacts-parta, title="Shared Routing Scenario Artifacts in *_YourCompany_ B2B* : PartA"]
+
 .Shared Routing Scenario Artifacts - *_YourCompany_ B2B : PartA*
 [cols="4*"]
 |===
@@ -102,6 +104,13 @@ In this Transaction, the *From Partner* is configured as *PartA* and the *To Par
 
 
 //==== Configured in *YourCompany B2B : PartB*
+
+=== *_YourCompany_ B2B : PartB*
+
+
+[[img-shared-routing-scenario-artifacts-partb]]
+
+image::shared-routing-scenario-artifacts-partb.png[img-shared-routing-scenario-artifacts-partb, title="Shared Routing Scenario Artifacts in *_YourCompany_ B2B* : PartB"]
 
 .Shared Routing Scenario Artifacts - *_YourCompany_ B2B : PartB*
 [cols="4*"]
