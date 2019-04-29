@@ -244,17 +244,19 @@ s|Y-toX-to-API
 
 All artifacts are correctly configured; IH routes an incoming document of Document Type *Y* from Partner *PartA* to Endpoint *RecFromA*.
 
-Integration Hub:
-
-* Receives a document of Document Type *Y*.
-* Attempts to resolve routes.
-** Finds a Transaction *Y-to-X-to-API* that contains *Y*.
-* Executes Transaction *Y-to-X-to-API*, which transforms the Document from *X* to *Y*.
-* Sends the document to Endpoint *API*.
-
 [[img-basic-routing-scenario-outcome-success]]
 
 image::basic-routing-scenario-outcome-success.png[img-basic-routing-scenario-outcome-success, title="Basic Routing Scenario Outcome (Success)"]
+
+Integration Hub:
+
+* Receives a document of Document Type *Y*
+* Attempts to resolve routes
+** Finds a Transaction *Y-to-X-to-API* that contains *Y*.
+* Executes Transaction *Y-to-X-to-API*, which transforms the Document from *X* to *Y*
+* Sends the document to Endpoint *API*.
+
+
 
 
 == Document Rejected
@@ -262,14 +264,16 @@ image::basic-routing-scenario-outcome-success.png[img-basic-routing-scenario-out
 Partner *PartA* sends a document of Document Type *Z* to Endpoint *RecFromA*. 
 Document Type *Z* is not configured in Relationship *_YourCompany_ B2B : Any*; IH rejects the document. 
 
-Integration Hub:
-
-* Receives incoming document.
-* Attempts to resolve Routes.
-* Does not find a corresponding Transaction.
-* Rejects the document.
-
 [[img-basic-routing-scenario-outcome-rejection]]
 
 image::basic-routing-scenario-outcome-rejection.png[img-basic-routing-scenario-outcome-rejection, title="Basic Routing Scenario Outcome (Rejection)"]
+
+Integration Hub:
+
+* Receives incoming document
+* Attempts to resolve Routes
+* Does not find a corresponding Transaction
+* Rejects the document.
+
+
 
