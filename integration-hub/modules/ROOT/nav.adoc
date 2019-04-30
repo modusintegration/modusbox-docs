@@ -7,12 +7,12 @@
 *** xref:tracking.adoc[Tracking]
 
 ** xref:routing-scenarios.adoc[Routing Scenarios]
-*** xref:basic-routing-scenario.adoc[Basic Routing Scenario]
-*** xref:shared-routing-scenario.adoc[Shared Routing Scenario]
-*** xref:override-routing-scenario.adoc[Override Routing Scenario]
-*** xref:one-document-type-multiple-internal-routes-routing-scenario.adoc[One Document Type, Multiple Internal Routes Routing Scenario]
-*** xref:multicast-routing-scenario.adoc[Multicast Routing Scenario]
-*** xref:application-sends-to-partner-routing-scenario.adoc[Application Sends to Partner Routing Scenario]
+*** xref:basic-routing-scenario.adoc[Basic]
+*** xref:shared-routing-scenario.adoc[Shared]
+*** xref:override-routing-scenario.adoc[Override]
+*** xref:multi-route-routing-scenario.adoc[Multi-route]
+*** xref:multicast-routing-scenario.adoc[Multicast]
+*** xref:content-based-routing-routing-scenario.adoc[Content-Based]
 
 
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
