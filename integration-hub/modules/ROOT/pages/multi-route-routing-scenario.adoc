@@ -73,7 +73,7 @@ s|X-to-API
 
 image::multi-route-routing-scenario-transaction-y-passthru.png[img-multi-route-routing-scenario-transaction-y-passthru, title ="Transaction Y (passthru)"]
 
-[[img-multi-route-routing-scenario-transaction-y-to-x-to-api]]
+[[img-multi -route-routing-scenario-transaction-y-to-x-to-api]]
 
 image::multi-route-routing-scenario-transaction-y-to-x-to-api.png[img-multi-route-routing-scenario-transaction-y-to-x-to-api, title ="Transaction Y-to-X-to-API"]
 
