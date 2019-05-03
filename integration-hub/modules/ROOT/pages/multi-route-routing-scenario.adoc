@@ -23,15 +23,15 @@ s|*_YourCompany_ B2B : Any*
 |Universal relationship between your company any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s|*_YourCompany_ B2B : A*
-|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *A*)
-|Contains artifacts used only with Partner *A*
+s|*_YourCompany_ B2B : PartA*
+|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *PartA*)
+|Contains artifacts used only with *PartA*
 
 |===
 
 == Artifacts and Artifact Configuration 
 
-This tables and flow diagrams in this section identifies:
+The tables and flow diagrams in this section identify:
 
 * Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
 * The Relationship in which the artifacts are configured
@@ -66,7 +66,7 @@ s|X-to-API
 === *_YourCompany B2B_ : PartA*
 
 
-//==== Configured in YourCompany B2B : Partner A
+//==== Configured in YourCompany B2B : PartA
 
 
 [[img-multi-route-routing-scenario-transaction-y-passthru]]
@@ -77,7 +77,7 @@ image::multi-route-routing-scenario-transaction-y-passthru.png[img-multi-route-r
 
 image::multi-route-routing-scenario-transaction-y-to-x-to-api.png[img-multi-route-routing-scenario-transaction-y-to-x-to-api, title ="Transaction Y-to-X-to-API"]
 
-//.Override Routing Scenario Artifacts - YourCompany B2B : A
+//.Override Routing Scenario Artifacts - *_YourCompany_ B2B : PartA*
 
 [cols="2, 2, 6, 2"]
 |===
