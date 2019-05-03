@@ -1,57 +1,57 @@
 
 
-= Partner Configuration
+= Partner and Application Configuration
 
-:keywords: portal, partner, manager
+:keywords: portal, partner, application manager
 
 
-To configure a trading partnership using PortX, you must:
+To configure a partner or application relationship using PortX, you must:
 
 . Configure settings for your company
 +
-NOTE: Your company may have been set up during the provisioning process. If so, its name appears at the top of the *Name* list on the Trading Partner Page, identified as *YOUR COMPANY*.
+NOTE: Your company may have been set up during the provisioning process. If so, its name appears at the top of the list on the  xref:img-partners-and-applications[], identified as *YOUR COMPANY*.
 
-. Configure settings for a trading partner
+. Configure settings for a partner.
 
 == Get Started
 
 . xref:index.adoc#start-integration-hub[Start Integration Hub].
 The <<index.adoc#img-integration-hub-start,Transaction Monitoring Page>> appears.
-. In the left-hand navigation pane, click *Partner Configuration*.
-The xref:img-trading-partners[] appears.
+. In the left-hand navigation pane, in the *CONFIGURATION* section, click *Partners and Applications*.
+The xref:img-partners-and-applications[] appears.
 
-[[img-trading-partners]]
-image::trading-partners.png[img-trading-partners,title="Trading Partners Page"]
+[[img-partners-and-applications]]
+image::partners-and-applications.png[img-partners-and-applications,title="Partners and Applications Page"]
 
 [start=2]
 
 == Create and Configure Partners
 
-. On the xref:img-trading-partners[]:
+. On the xref:img-partners-and-applications[]:
 +
-To add or edit settings for the _Home Partner_ (*Your company* on the
-xref:img-trading-partners[]), in the *Name* table, click the name of your company.
+To add or edit settings for the _Home Partner_ (*Your company* on the *Partners* tab of 
+xref:img-partners-and-applications[]), click the name of your company.
 +
-To add a new partner, click *New Partner*.
+To add a new partner, click *Add Partner*.
 +
-To edit settings for an existing trading partner, in the *Name* table, click the name of the partner.
+To edit settings for an existing trading partner, click the name of the partner.
 +
-The xref:img-company-information[] appears.
+The xref:img-partner-information[] appears.
 
 
 
-[[img-company-information]]
-image::company-information.png[img-company-information,title="Company Information Page"]
+[[img-partner-information]]
+image::partner-information.png[img-partner-information,title="Partner Information Page"]
 
 [start=2]
 
-. To add or edit company information, see xref:company-information[Company Information].
+. To add or edit partner information, see xref:partner-information[Partner Information].
 +
-Notice that the left-hand navigation pane of the xref:img-company-information[] includes a number of different types of partner settings.
+Notice that the left-hand navigation pane of the xref:img-partner-information[] includes a number of different types of partner settings.
 To add or edit settings for any of these settings types, click the page name in the left-hand navigation pane. See the following sections for information about the settings on each page.
 
 === Partner Settings
-** xref:company-information.adoc[Company Information]
+** xref:partner-information.adoc[Company Information]
 ** xref:identifiers.adoc[Identifiers]
 
 
@@ -89,10 +89,10 @@ These partners can be imported back into PortX later; see <<Importing Partners>>
 . xref:index.adoc#start-integration-hub[Start Integration Hub].
 The <<index.adoc#img-integration-hub-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, click *Partner Configuration*.
-The xref:img-trading-partners[] appears.
+The xref:img-partners-and-applications[] appears.
 
-. On the xref:img-trading-partners[], in the *Name* table, select the radio button or radio buttons of the partner or partners you want to export. +
-On the xref:img-trading-partners[], the *Promote* and *Export* buttons appear to the left of the *New Partner* button.
+. On the xref:img-partners-and-applications[], in the *Name* table, select the radio button or radio buttons of the partner or partners you want to export. +
+On the xref:img-partners-and-applications[], the *Promote* and *Export* buttons appear to the left of the *New Partner* button.
 . Click the *Export* button. +
 The Export Dialog Box appears; it lists the partners that will be exported.
 Click *Export* to export these partners.
@@ -113,7 +113,7 @@ NOTE: If a specific partner exists in an environment and you import that partner
 
 === To Import a Partner
 
-. On the xref:img-trading-partners[], click *Import* on the top right.
+. On the xref:img-partners-and-applications[], click *Import* on the top right.
 +
 The *Import partners* box appears, displaying a list of environments into which you can import an environment.
 . To continue, select an environment from the *Environment* list, then click *Next*. +
@@ -133,7 +133,7 @@ NOTE: Only users with the appropriate role or permissions will be able to promot
 
 === To Promote a Partner
 
-. On the xref:img-trading-partners[], click the selection box at the left end of the row that corresponds to the partner you want to promote.
+. On the xref:img-partners-and-applications[], click the selection box at the left end of the row that corresponds to the partner you want to promote.
 . Click *Promote* at the top right. +
 The *Promote partners* box opens, displaying the partner to be promoted.
 +

@@ -1,5 +1,281 @@
 = Multicast Routing Scenario 
 
+
+In this scenario, an application sends a payload Document, we want to send that payload to three other Applications. Two of the applications want the un-mapped payload, and the other wants to map the payload to DocumentP before it gets there.
+
+
+=== Relationships
+
+There are seven xref:glossary#sectr[Relationships] in this scenario:
+
+.Override Routing Scenario Relationships
+[cols="3*"]
+
+|===
+|Relationship|Description|Contains
+
+s|A : Any 
+|Universal relationship between Application *A* and any other Application
+|Contains artifacts specific to transactions between *A* and any other Application
+
+s|B : Any
+|Universal relationship between Application *B* and any other Application
+|Contains artifacts specific to transactions between *B* and any other Application
+
+s|C : Any
+|Universal relationship between Application *C* and any other Application
+|Contains artifacts specific to transactions between *C* and any other Application
+
+s|D : Any
+|Universal relationship between Application *D* and any other Application
+|Contains artifacts specific to transactions between *D* and any other Application
+
+s|A : B
+|The relationship between Application *A* and Application *B*. 
+|Contains artifacts used only between these applications.
+
+s|A : C
+|The relationship between Application *A* and Application *C*. 
+|Contains artifacts used only between these applications.
+
+s|A : D
+|The relationship between Application *A* and Application *D*. 
+|Contains artifacts used only between these applications.
+
+|===
+
+
+[[img-multicast-1]]
+
+//Figma Frame 3
+image::multicast-1.png[img-multicast-1, title="Multicast Scenario Artifacts"]
+
+== Artifacts and Artifact Configuration 
+
+This tables and flow diagrams in this section identifies:
+
+* Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
+* The Relationship in which the artifacts are configured
+
+=== A : Any
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+s|RecFromA
+|Endpoint on which you expect to receive documents from Application *A*
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectd[Document Type]
+s|Y
+|Document Type you expect to receive from an application
+|xref:document-types[Document Types]
+
+|xref:glossary#sects[Source Channel]
+s|Y-Passthrough
+|Source channel that passes Document Type *Y* to whatever Target channel is selected
+|xref:channels[Channels] 
+
+|===
+
+=== B : Any
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+s|B
+|Endpoint from which documents are sent to *B*.
+|xref:endpoints[Endpoints] 
+|===
+
+=== C : Any
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+s|C
+|Endpoint from which documents are sent to *C*.
+|xref:endpoints[Endpoints] 
+|===
+
+=== D : Any
+
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+s|D
+|Endpoint from which documents are sent to *D*.
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectd[Document Type]
+s|Z
+|Document Type that *D* wants to receive
+|xref:document-types[Document Types]
+|===
+
+
+==== A : B
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectt[Target Channel]
+s|Q-to-B
+|
+Target channel that passes documents of Document Type *Y* to ApplicationB's Endpoint
+|xref:channels[Channels] 
+
+|xref:glossary#sectt[Transaction]
+s|Y-Passthrough-to-B
+|Combination of  Source Channel *Y-Passthrough* and Target Channel *Y-to-AppB*. 
+When combined (with ?) it becomes a transaction that receives a document Y and then sends it to the endpoint *B*. This transaction has the From Partner set to ApplicationA and the To Partner set to ApplicationB.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+
+
+==== Artifacts in A : C
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectt[Target Channel]
+s|Q-to-C
+|Target channel that passes documents of Document Type *Y* to ApplicationB's Endpoint
+|xref:channels[Channels] 
+
+|xref:glossary#sectt[Transaction]
+s|Y-Passthrough-to-C
+|Combination of the Source Channel *Y-Passthrough* and the Target Channel *Y-to-C*. When combined (with ?) it becomes a transaction that receives a document of Document Type *Q* and then sends it to the endpoint AppC. Has the From Partner set to ApplicationA and the To Partner set to ApplicationC.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+
+==== AppA : AppD
+
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectm[Map]
+s|Y-to-Z
+|Convert the documents of Document Type *Y* into documents of Document Type *X*
+Target channel that passes documents of Document Type *Y* to ApplicationB's Endpoint
+|xref:maps[Maps] 
+
+|xref:glossary#sectt[Transaction]
+s|Y-to-Z-to-D
+|This transaction is the combination of the Source Channel Q-Passthrough and the Target Channel Q-to-P-to-AppD. And when combined it will be a transaction that receives a document Q, maps it to Document P and then sends it to the endpoint AppD. This transaction has the From Partner set to ApplicationA and the To Partner set to ApplicationD.
+
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+== Outcomes
+
+=== Application A sends a Document of Document Type Y to Endpoint RecFromA
+
+[[img-multicast-2]]
+
+image::multicast-2.png[img-multicast-2, title="Multicast Scenario Outcomes"]
+
+
+Integration Hub:
+
+* Receives the document on *RecFromA*
+
+* Attempts to resolve routes
+* Finds three Transactions 
+** *Y-Passthrough-to-B* 
+** *Y-Passthrough-to-C*
+** *Y-to-X-to-D*
+* Executes all transactions, 
+
+** One sends *Y* to *B*.
+
+** One sends *Y* to *C*.
+
+** One maps *Y* to *X* and sends it to the Endpoint AppD.
+
+
+
+////
+= Content below is for cutting and pasting purposes only
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 In this scenario, your organization expects to receive xref:glossary#sectd[document]s of a single xref:glossary#sectd[Document Type] from multiple xref:glossary#sectp[Partner]s. 
 However, 
 
@@ -256,3 +532,4 @@ Integration Hub:
 
 image::basic-scenario-outcome-rejection.png[img-basic-scenario-outcome-rejection, title="Basic Scenario Outcome (Rejection)"]
 
+////

@@ -1,4 +1,5 @@
 * xref:index.adoc[Integration Hub]
+# * xref:table-test.adoc[Table Test]
 
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
@@ -6,12 +7,12 @@
 *** xref:tracking.adoc[Tracking]
 
 ** xref:routing-scenarios.adoc[Routing Scenarios]
-*** xref:basic-routing-scenario.adoc[Basic Routing Scenario]
-*** xref:shared-routing-scenario.adoc[Shared Routing Scenario]
-*** xref:override-routing-scenario.adoc[Override Routing Scenario]
-*** xref:one-document-two-internal-routes-routing-scenario.adoc[One Document, Two Routes Routing Scenario]
-*** xref:multiple-internal-routes-routing-scenario.adoc[Multiple Internal Routes Routing Scenario]
-*** xref:multicast-routing-scenario.adoc[Multicast Routing Scenario]
+*** xref:basic-routing-scenario.adoc[Basic]
+*** xref:shared-routing-scenario.adoc[Shared]
+*** xref:override-routing-scenario.adoc[Override]
+*** xref:multi-route-routing-scenario.adoc[Multi-route]
+*** xref:multicast-routing-scenario.adoc[Multicast]
+*** xref:content-based-routing-routing-scenario.adoc[Content-Based]
 
 
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
@@ -32,6 +33,9 @@
 
 *** xref:transaction-designer.adoc[Transaction Designer]
 *** xref:document-types.adoc[Document Types]
+*** xref:debatching-incoming-documents.adoc[Debatching Groups of Incoming Documents]
+**** xref:debatching-incoming-x12-documents.adoc[X12]
+**** xref:debatching-incoming-xml-documents.adoc[XML]
 *** xref:endpoints.adoc[Endpoints]
 *** xref:maps.adoc[Maps]
 *** xref:channels.adoc[Channels]

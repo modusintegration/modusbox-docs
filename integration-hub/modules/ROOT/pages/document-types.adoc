@@ -3,53 +3,49 @@
 
 Configuring a _document type_ for a partner means configuring settings specific to that document type.
 
-
-
-
-
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/edit-short.adoc[]
 
 [start=3]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Document Types*.
 +
-The <<img-documents>> appears.
+The <<img-document-types>> appears.
 
-[[img-documents]]
+[[img-document-types]]
 
-image::documents.png[img-documents, title="Documents Page"]
+image::document-types.png[img-document-types, title="Document Types Page"]
 
 [start=4]
 
 . From this page, you can:
 
-* <<Edit an Existing Document>>
-* <<Add a New Document>>
+* <<Edit an Existing Document Type>>
+* <<Add a New Document Type>>
 
-== Edit an Existing Document
+== Edit an Existing Document Type
 
-. On the <<img-documents>>, click the document you want to edit.
+. On the <<img-document-types>>, click the Document Type you want to edit.
 +
-The <<img-document-edit>> appears.
+The <<img-document-types-edit>> appears.
 
 
-[[img-document-edit]]
+[[img-document-types-edit]]
 
-image::document-edit.png[img-document-edit, title="Existing Document Page"]
+image::document-types-edit.png[img-document-types-edit, title="Existing Document Types Page"]
 
 . Edit settings as appropriate. +
-For information about editing specific settings, see <<Add a New Document>>.
+For information about editing specific settings, see <<Add a New Document Type>>.
 
 CAUTION: Changing the values for *Name* or *Message Type* may disrupt existing processes that refer to the existing values.
 
-== Add a New Document
+== Add a New Document Type
 
-. Click *New*.
-The <<img-document>> appears.
+. On the <<img-document-types>>, click *New*.
+The <<img-document-type>> appears.
 
-[[img-document]]
+[[img-document-type]]
 
-image::document.png[img-document, title="Document Page"]
+image::document-type.png[img-document-type, title="Document Type Page"]
 
 . Enter settings as appropriate.
 . To add a new property, see <<Document Properties>>.
@@ -552,7 +548,7 @@ These settings, which must be configured independently for each format, enable y
 
 ==== Add New Document Properties
 
-On the <<img-documents>>, click *New Property*. The *Add Property* box appears.
+On the <<img-document-types>>, click *New Property*. The *Add Property* box appears.
 
 [%header,cols="3s,7a"]
 |===

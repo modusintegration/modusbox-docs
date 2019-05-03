@@ -1,0 +1,188 @@
+= Multi-route Routing Scenario
+
+In this scenario, your organization receives a 
+xref:glossary#sectd[Document] from a xref:glossary#sectp[Partner].
+IHub has been configured to process the document in two ways:
+
+* Route a copy of the document to an internal API
+* Route a copy of the document to a destination at which all received documents are stored
+
+== Relationships
+
+There are two relationships in this scenario.
+
+
+.Multi-route Routing Scenario Relationships
+[cols="3*"]
+
+|===
+|Relationship|Description|Contains
+
+
+s|*_YourCompany_ B2B : Any* 
+|Universal relationship between your company any partner
+|Contains Artifacts used across all partners with whom you do business
+
+s|*_YourCompany_ B2B : PartA*
+|Your organization's relationship with the partner with whom you are doing business (in this case, Partner *PartA*)
+|Contains artifacts used only with *PartA*
+
+|===
+
+== Artifacts and Artifact Configuration 
+
+The tables and flow diagrams in this section identify:
+
+* Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
+* The Relationship in which the artifacts are configured
+
+=== *_YourCompany B2B_ : Any*
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#sectd[Document Type]
+s|X
+|Document Type you use internally in your company
+|xref:document-types[Document Types]
+
+|xref:glossary#secte[Endpoint]
+|*API*
+|Endpoint that points to an internal API
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#secte[Endpoint]
+|*Backup*
+|Endpoint that points to the API that backs up all received documents
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectt[Target Channel ]
+s|X-to-API
+|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|xref:channels[Channels] 
+
+|===
+
+=== *_YourCompany B2B_ : PartA*
+
+
+//==== Configured in YourCompany B2B : PartA
+
+
+[[img-multi-route-routing-scenario-transaction-y-passthru]]
+
+image::multi-route-routing-scenario-transaction-y-passthru.png[img-multi-route-routing-scenario-transaction-y-passthru, title ="Transaction Y (passthru)"]
+
+[[img-multi -route-routing-scenario-transaction-y-to-x-to-api]]
+
+image::multi-route-routing-scenario-transaction-y-to-x-to-api.png[img-multi-route-routing-scenario-transaction-y-to-x-to-api, title ="Transaction Y-to-X-to-API"]
+
+//.Override Routing Scenario Artifacts - *_YourCompany_ B2B : PartA*
+
+[cols="2, 2, 6, 2"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#secte[Endpoint]
+s|RecFromA
+|Endpoint on which to receive documents from Partner *A*
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#sectd[Document Type]
+s|Y
+|Document Type you expect to receive from a Partner
+|xref:document-types[Document Types]
+
+|xref:glossary#sectm[Map]
+s|Y-to-X
+|Transforms a document of Document Type *Y* to a document of Document Type *X*
+|xref:maps[Maps]
+
+|xref:glossary#sects[Source Channel ]
+|*Y-to-X*
+|Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
+|xref:channels[Channels] 
+
+|xref:glossary#sects[Source Channel ]
+|*Y (passthru)*
+|Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
+|xref:channels[Channels]
+
+|xref:glossary#sectt[Target Channel ]
+|*X-to-API*
+|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|xref:channels[Channels] 
+
+|xref:glossary#sect[Transaction] 
+|*Y-to-X-to-API*
+|Combination of the Source Channel *Y-to-X* and the Target Channel *X-to-API*.
+It receives a document of *Y*, maps it to a document of *X* and then sends it to Endpoint *API*. 
+In this Transaction, 
+the *From* Partner is configured as *A* and the *To* Partner as *YourCompany B2B*.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+
+== Outcomes
+
+If all artifacts in the following table are configured appropriately, then the outcome of any of a Partners in the scenario sending a document of Document Type *Y* to the Endpoint specific to their relationship with *YourCompany B2B* is that IH will route the document both to that Endpoint and also to a destination at which all received documents are stored. 
+
+If any artifact in the relationship between the partner and *YourCompany B2B* or in *YourCompany B2B : Any* is incorrectly configured (or not configured at all), then IH will reject the document. 
+
+For more information, see <<Outcome Details>>.
+
+.One Document, Multiple Internal Routes Routing Scenario Artifact Summary 
+[cols="8*",options="header", e]
+|===
+|Relationship
+7+^|Artifact Type 
+||Partners|Document Types|Maps|Endpoints 
+2+^|Channels|Transactions
+
+5+||Source|Target|
+
+s|YourCompany B2B : Any
+s|NA
+s|X 
+|None
+s|Backup +
+API
+|None
+s|X-to-API
+|None
+
+s|YourCompany B2B : Partner A
+s|A
+s|Y
+s|Y-to-X
+s|RecFromA
+s|Y-to-X +
+Y (passthru)
+s|X-to-API
+s|Y-to-X-to-API
+
+|===
+
+=== Outcome Details
+
+==== Partner A sends Document Y to Endpoint API
+
+[[img-one-doucment-multiple-internal-routes-routing-scenario-a-sends-x-to-api]]
+
+image::multi-route-routing-scenario-a-sends-x-to-api.png[img-multi-route-routing-scenario-a-sends-x-to-api, title ="Partner A Sends-X-to-API"]
+
+Integration Manager:
+
+* Receives Document *Y*
+* Attempts to resolve routes
+** Finds Two Transactions:
+*** *Y-to-DocC-to-API*
+*** *Y-to-Passthrough*
+* Executes both transactions, 
+** One transaction maps the document to Document Type *X*, then sends it to Endpoint *API*.
+** The other sends the document to the Endpoint *Backup*.
+
+
+

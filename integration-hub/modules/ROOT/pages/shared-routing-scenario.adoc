@@ -1,138 +1,187 @@
 = Shared Routing Scenario
 
-In this scenario, you organization wants to receive a document of document X from two partners, Partner A (*PartA*) and Partner B (*PartB*), map it to an internal standard C and send it to a backend database DATA.
+In this scenario, your organization wants to receive a document xref:glossary#sectd[Document] from two xref:glossary#sectp[Partners], map it to an internal standard, and send it to a backend database.
 
-=== Relationships
+== Relationships
 
-There are three relationships in this scenario:
+There are three  xref:glossary#sectr[Relationships] in this scenario:
 
-YourCompany B2B : Any ::
-* Universal relationship between your organization and any partner
-* Contains artifacts used across all partners with whom you do business
+.Shared Routing Scenario Relationships
+[cols="3*"]
 
-YourCompany B2B : PartA ::
-* Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*). 
-* Contains artifacts used only with this partner.
+|===
+|Relationship|Description|Contains
 
-YourCompany B2B : PartB ::
+s|_YourCompany_ B2B : Any
+|Universal relationship between your company any partner
+|Contains a rtifacts used across all partners with whom you do business
 
-** Your organization's relationship with the partner with whom you are doing business (in this case, *PartB*). Contains artifacts used only with this partner.
+s|_YourCompany_ B2B : PartA
+|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
+|Contains artifacts used only with Partner *PartA*
 
-=== Artifacts and Artifact Configuration 
+s|_YourCompany_ B2B : PartB
+|Your organization's relationship with the partner with whom you are doing business (in this case, *PartB*)
+|Contains artifacts used only with Partner *PartB*
+|===
+
+
+== Artifacts and Artifact Configuration 
 
 This section identifies:
 
 * Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
-* The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*, or *YourCompany B2B : PartB*) in which the artifacts are configured
+* The Relationship (either *__YourCompany__ B2B : Any* or *__YourCompany__ B2B : PartA*, or *__YourCompany__ B2B : PartB*) in which the artifacts are configured
 
 
 //==== Configured in *YourCompany B2B : Any*
 
-.Basic Scenario Artifacts - YourCompany B2B : Any
+.Shared Routing Scenario Artifacts - *_YourCompany_ B2B : Any*
 [cols="4*"]
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#sectd[Document Type]
-|*DocTypeY*
+|Y
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
+h|xref:glossary#sectd[Document Type]
+s|X
+|Document Type you use internally in your company
+|xref:document-types.adoc[Document Types]
+
+
+|xref:glossary#sectm[Map] 
+s|Y-to-X
+|Transforms a document of Document Type *Y* to a document of Document Type *X*
+|xref:maps[Maps]
+
+
+|xref:glossary#sects[Source Channel]
+s|Y-to-X
+|Includes the process that maps and sends a document of *Y* to a document of *X*
+|xref:channels[Channels] 
+
 |xref:glossary#secte[Endpoint]
-|*API*
+s|API
 |Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
+|xref:endpoints[Endpoints]
 
 |xref:glossary#sectt[Target Channel ]
-|*Y-to-API*
-|Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
+s|Y-to-API
+|Channel that sends a document of the internal Document Type Document Type *Y* to Endpoint *API*
 |xref:channels[Channels] 
 
 |===
 
-* Document C
+//==== Configured in *YourCompany B2B : PartA*
 
-** A document you use internally in your company.
+=== *_YourCompany_ B2B* : PartA
 
-* Document Q
+[[img-shared-routing-scenario-artifacts-parta]]
 
-** A document you expect to receive from your partner.
+image::shared-routing-scenario-artifacts-parta.png[img-shared-routing-scenario-artifacts-parta, title="Shared Routing Scenario Artifacts in *_YourCompany_ B2B* : PartA"]
 
-* Map Q-to-C
+.Shared Routing Scenario Artifacts - *_YourCompany_ B2B : PartA*
+[cols="4*"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
 
-** This map will convert the document Q into document C
+h|xref:glossary#secte[Endpoint]
+s|RecFromA
+|Endpoint from which you expect to receive documents from *PartA*. 
+|xref:endpoints.adoc[Endpoints] 
 
-* Source Channel DocQ-to-DocC
+h|xref:glossary#sectt[Transaction]
+s|Y-to-X-to-API (PartA)
+|Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*
+It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*.
+In this Transaction, the *From Partner* is configured as *PartA* and the *To Partner* as *_YourCompany_ B2B*. 
+|xref:transaction-designer.adoc[Transaction Designer] 
 
-** This source channel will map a recieved document Q into the document C
-
-* Endpoint DATA
-
-** The endpoint that points to your internal database.
-
-* Target Channel DocC-to-Data
-
-** This channel will take the internal document C and send it to Endpoint Data.
-
-==== [PartnerA:YourCompany B2B]
-
-* Endpoint RecFromA
-
-** This is the endpoint on which you expect to receive documents from PartnerA.
-
-* Transaction DocQ-to-DocC-to-Data:(PartnerA)
-
-** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
-
-==== [PartnerB:YourCompany B2B]
-
-* Endpoint RecFromB
-
-** This is the endpoint on which you expect to receive documents from PartnerB.
-
-* Transaction DocQ-to-DocC-to-Data:(PartnerB)
-
-** This transaction is the combination of the Source Channel DocQ-to-DocC and the Target Channel DocC-to-Data. And when combined it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATA. This transaction has the From Partner set to PartB and the To Partner set to Your Company B2B.
-
-==== ParnetA sends Document Q to Endpoint RecFromA.
-
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
+|===
 
 
+//==== Configured in *YourCompany B2B : PartB*
 
-==== ParnetB sends Document Q to Endpoint RecFromB.
-
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
+=== *_YourCompany_ B2B : PartB*
 
 
+[[img-shared-routing-scenario-artifacts-partb]]
 
-==== The Partner PartC sends Document Q to Endpoint RecFromB,.
+image::shared-routing-scenario-artifacts-partb.png[img-shared-routing-scenario-artifacts-partb, title="Shared Routing Scenario Artifacts in *_YourCompany_ B2B* : PartB"]
+
+.Shared Routing Scenario Artifacts - *_YourCompany_ B2B : PartB*
+[cols="4*"]
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+
+h|xref:glossary#secte[Endpoint]
+s|RecFromB
+|Endpoint from which you expect to receive documents from *PartB* 
+|xref:endpoints.adoc[Endpoints] 
+
+h|xref:glossary#sectt[Transaction]
+s|Y-to-X-to-API (PartB)
+|Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
+It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*. 
+In this Transaction, the From Partner is configured as *PartB* and the To Partner as *_YourCompany_ B2B*. 
+|xref:transaction-designer.adoc[Transaction Designer] 
+
+
+|===
+
+
+== Outcomes
+
+=== Document Accepted and Routed
+
+==== *PartA* sends Document of Document Type *Y* to Endpoint *RecFromA*
+
+[[img-shared-routing-scenario-outcome-parta-success]]
+
+image::shared-routing-scenario-outcome-parta-success.png[img-shared-routing-scenario-outcome-parta-success, title="Shared Routing Scenario Outcome, PartA, Success"]
 
 Integration Manager:
 
-* Receives document Q
+* Receives Document *Y*
+** Attempts to resolve routes
+** Finds Transaction *Y-to-X-to-API*
+* Executes that transaction, which maps the transaction to *X*
+*  Sends Document *X* to Endpoint *API*.
 
-**, Attempts to resolve routes
+[[img-shared-routing-scenario-outcome-partb-success]]
 
-**, Does not find a corresponding transaction.
+image::shared-routing-scenario-outcome-partb-success.png[img-shared-routing-scenario-outcome-partb-success, title="Shared Routing Scenario Outcome, PartB, Success"]
 
-** Rejects the document.
+==== *PartB* sends Document of Document Type *Y* to Endpoint *RecFromB*
+
+
+
+Integration Manager:
+
+* Receives Document *Y*
+* Attempts to resolve routes
+** Finds Transaction *Y-to-X-to-API*
+** Executes that transaction, which maps the transaction to *X*
+*  Sends Document *X* to Endpoint *API*.
+
+=== Document Rejected
+
+==== PartC sends Document of Document Type *X* to Endpoint *RecFromB*
+
+[[img-shared-routing-scenario-outcome-rejection]]
+
+image::shared-routing-scenario-outcome-rejection.png[img-shared-routing-scenario-outcome-rejection, title="Shared Scenario Outcome (Rejection)"]
+
+Integration Manager:
+
+* Receives document *Y*
+* Attempts to resolve routes
+** Does not find a transaction in which *PartC* is the *From Partner*
+* Rejects the document.
 
 
 
