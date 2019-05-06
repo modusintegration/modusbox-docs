@@ -64,10 +64,10 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 [[sectr]]
 *R*
 
-Relationship: Union of a partner or partners with another partner or partners. Analagous to a programming namespace. 
+Relationship: Union of an actor with another actor or with all actors configured in your impleentation of IH. Analagous to a programming namespace. 
 
 Route:: Connects a source Channel to a Target Channel.
-
+ 
 [[sects]]
 *S*
 
