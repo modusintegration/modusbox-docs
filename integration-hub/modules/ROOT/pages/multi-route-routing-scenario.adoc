@@ -5,7 +5,7 @@ xref:glossary#sectd[Document] from a xref:glossary#sectp[Partner].
 IHub has been configured to process the document in two ways:
 
 * Route a copy of the document to an internal API
-* Route a copy of the document to a destination at which all received documents are stored
+* Route a copy of the document directly to a destination you use to backup received documents. This routing is referred to as *passthru* because it does not require a map.  
 
 == Relationships
 
@@ -68,14 +68,14 @@ s|X-to-API
 
 //==== Configured in YourCompany B2B : PartA
 
+[[img-multi-route-routing-scenario-transaction-y-to-x-to-api]]
+
+image::multi-route-routing-scenario-transaction-y-to-x-to-api.png[img-multi-route-routing-scenario-transaction-y-to-x-to-api, title ="Transaction Y-to-X-to-API"]
 
 [[img-multi-route-routing-scenario-transaction-y-passthru]]
 
 image::multi-route-routing-scenario-transaction-y-passthru.png[img-multi-route-routing-scenario-transaction-y-passthru, title ="Transaction Y (passthru)"]
 
-[[img-multi -route-routing-scenario-transaction-y-to-x-to-api]]
-
-image::multi-route-routing-scenario-transaction-y-to-x-to-api.png[img-multi-route-routing-scenario-transaction-y-to-x-to-api, title ="Transaction Y-to-X-to-API"]
 
 //.Override Routing Scenario Artifacts - *_YourCompany_ B2B : PartA*
 
