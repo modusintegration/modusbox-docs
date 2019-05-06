@@ -209,7 +209,9 @@ Locate the *JDE* Connector, and select Poll Events. Drag this to the canvas.
 
 image:image15_demo_poll_mbf_events.png[image,width=190,height=187]
 
-Drag the connector over to the canvas. Select it and review the properties window. Give it a meaningful name eg. Call _Poll Customer Master Events_. image:image16_demo_poll_mbf_events.png[image,width=601,height=290]
+Drag the connector over to the canvas. Select it and review the properties window. Give it a meaningful name eg. Call _Poll Customer Master Events_.
+
+image:image16_demo_poll_mbf_events.png[image,width=601,height=290]
 
 Under the General section, click on the drop-down for Operation Name, and select Capture Event Transactions.
 
@@ -222,6 +224,21 @@ image:image18_demo_poll_mbf_events.png[image,width=601,height=294]
 Drag the inputs to outputs, or double-click the output parameter to add to your edit window, and change as required.
 
 image:image19_demo_poll_mbf_events.png[image,width=601,height=212]
+
+===== Troubleshooting
+If the operation fails (possibly due to a timeout), you will see the below message
+
+image:Troubleshoot_Timeout.png[image,width=345,height=115]
+
+Please review the timeout settings in _Anypoint Studio_'s Preferences.
+
+To do this go the the _Window_ > _Preferences_ menu
+
+image:Troubleshoot_Preferences.png[image,width=154,height=199]
+
+Go to _Anypoint Studio _ >> _DataSense_ and change the _DataSense Connection Timeout_ setting as below
+
+image:Troubleshoot_AnyPoint_DataSense_Timeout.png[image,width=622,height=551]
 
 === Set Payload Output
 

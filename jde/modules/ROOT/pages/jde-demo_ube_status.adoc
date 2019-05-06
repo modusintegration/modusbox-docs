@@ -230,6 +230,21 @@ Map the query parameter _jobnumber_ to the _Job_ID_ input parameter, and click _
 
 image:image19_demo_ube_status.png[image,width=550,height=264]
 
+===== Troubleshooting
+If the operation fails (possibly due to a timeout), you will see the below message
+
+image:Troubleshoot_Timeout.png[image,width=345,height=115]
+
+Please review the timeout settings in _Anypoint Studio_'s Preferences.
+
+To do this go the the _Window_ > _Preferences_ menu
+
+image:Troubleshoot_Preferences.png[image,width=154,height=199]
+
+Go to _Anypoint Studio _ >> _DataSense_ and change the _DataSense Connection Timeout_ setting as below
+
+image:Troubleshoot_AnyPoint_DataSense_Timeout.png[image,width=622,height=551]
+
 === Set Payload Output
 
 In the Mule Palette, you can either select Core, scroll down to Transformers or type “Payload” in the search bar.
