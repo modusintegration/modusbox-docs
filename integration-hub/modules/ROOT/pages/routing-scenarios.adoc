@@ -2,6 +2,6 @@
 
 Pages in this section present scenarios that identify and illustrate:
 
-* Integration Hub (IH) artifacts
-* How you can configure IH artifacts to implement routing objectives.
+* Integration Hub (IHub) artifacts
+* How you can configure IHub artifacts to implement routing objectives.
 
