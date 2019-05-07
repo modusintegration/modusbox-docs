@@ -14,40 +14,40 @@ There are seven xref:glossary#sectr[Relationships] in this scenario:
 |Relationship|Description|Contains
 
 s|AppA : Any 
-|Universal relationship between Application *A* and any other Application
-|Contains artifacts specific to transactions between *A* and any other Application
+|Universal relationship between Application *AppA* and any other Application
+|Contains artifacts specific to transactions between *AppA* and any other Application
 
 s|AppB : Any
-|Universal relationship between Application *B* and any other Application
-|Contains artifacts specific to transactions between *B* and any other Application
+|Universal relationship between Application *AppB* and any other Application
+|Contains artifacts specific to transactions between *App* and any other Application
 
 s|AppC : Any
-|Universal relationship between Application *C* and any other Application
-|Contains artifacts specific to transactions between *C* and any other Application
+|Universal relationship between Application *AppC* and any other Application
+|Contains artifacts specific to transactions between *AppC* and any other Application
 
 s|AppD : Any
-|Universal relationship between Application *D* and any other Application
-|Contains artifacts specific to transactions between *D* and any other Application
+|Universal relationship between Application *AppD* and any other Application
+|Contains artifacts specific to transactions between *AppD* and any other Application
 
 s|AppA : AppB
-|The relationship between Application *A* and Application *B*. 
+|The relationship between Application *AppA* and Application *AppB*. 
 |Contains artifacts used only between these applications.
 
 s|AppA : AppC
-|The relationship between Application *A* and Application *C*. 
+|The relationship between Application *AppA* and Application *AppC*. 
 |Contains artifacts used only between these applications.
 
 s|AppA : AppD
-|The relationship between Application *A* and Application *D*. 
+|The relationship between Application *AppA* and Application *AppD*. 
 |Contains artifacts used only between these applications.
 
 |===
 
 
-[[img-multicast-1]]
+[[img-multicast-routing-scenario-artifacts]]
 
 //Figma Frame 3
-image::multicast-1.png[img-multicast-1, title="Multicast Scenario Artifacts"]
+image::multicast-routing-scenario-artifacts.png[img-multicast-routing-scenario-artifacts, title="Multicast Scenario Artifacts"]
 
 == Artifacts and Artifact Configuration 
 
@@ -56,14 +56,14 @@ This tables and flow diagrams in this section identifies:
 * Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
 * The Relationship in which the artifacts are configured
 
-=== A : Any
+=== AppA : Any
 
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
 s|AppRecFromA
-|Endpoint on which you expect to receive documents from Application *A*
+|Endpoint on which you expect to receive documents from Application *AppA*
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sectd[Document Type]
@@ -78,29 +78,29 @@ Y-Passthrough
 
 |===
 
-=== B : Any
+=== AppB : Any
 
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
 s|AppB
-|Endpoint from which documents are sent to *B*.
+|Endpoint from which documents are sent to *AppB*.
 |xref:endpoints[Endpoints] 
 |===
 
-=== C : Any
+=== AppC : Any
 
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
 s|AppC
-|Endpoint from which documents are sent to *C*.
+|Endpoint from which documents are sent to *AppC*.
 |xref:endpoints[Endpoints] 
 |===
 
-=== D : Any
+=== AppD : Any
 
 
 |===
@@ -108,31 +108,31 @@ s|AppC
 
 |xref:glossary#secte[Endpoint]
 s|AppD
-|Endpoint from which documents are sent to *D*.
+|Endpoint from which documents are sent to *AppD*.
 |xref:endpoints[Endpoints] 
 
 |xref:glossary#sectd[Document Type]
 s|Z
-|Document Type that *D* wants to receive
+|Document Type that *AppD* wants to receive
 |xref:document-types[Document Types]
 |===
 
 
-==== A : B
+==== AppA : AppB
 
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#sectt[Target Channel]
-s|Q-to-B
+s|Y-to-B
 |
-Target channel that passes documents of Document Type *Y* to ApplicationB's Endpoint
+Target channel that passes documents of Document Type *Y* to AppB's Endpoint
 |xref:channels[Channels] 
 
 |xref:glossary#sectt[Transaction]
 s|Y-Passthrough-to-B
 |Combination of  Source Channel *Y-Passthrough* and Target Channel *Y-to-AppB*. 
-When combined (with ?) it becomes a transaction that receives a document Y and then sends it to the endpoint *B*. This transaction has the From Partner set to ApplicationA and the To Partner set to ApplicationB.
+When combined (with ?) it becomes a transaction that receives a document of Document Type *Y* and then sends it to the endpoint *B*. This transaction has the From Partner set to *AppA* and the To Partner set to **AppB**.
 |xref:transaction-designer[Transaction Designer] 
 
 |===
@@ -140,19 +140,20 @@ When combined (with ?) it becomes a transaction that receives a document Y and t
 
 
 
-==== Artifacts in A : C
+==== Artifacts in AppA : AppC
 
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#sectt[Target Channel]
-s|Q-to-C
-|Target channel that passes documents of Document Type *Y* to ApplicationB's Endpoint
+s|Y-to-X
+|Target channel that passes documents of Document Type *Y* to AppB's Endpoint
 |xref:channels[Channels] 
 
 |xref:glossary#sectt[Transaction]
 s|Y-Passthrough-to-C
-|Combination of the Source Channel *Y-Passthrough* and the Target Channel *Y-to-C*. When combined (with ?) it becomes a transaction that receives a document of Document Type *Q* and then sends it to the endpoint AppC. Has the From Partner set to ApplicationA and the To Partner set to ApplicationC.
+|Combination of the Source Channel *Y-Passthrough* and the Target Channel *Y-to-C*. When combined (with ?) it becomes a transaction that receives a document of Document Type *Q* and then sends it to the endpoint AppC. Has the From Partner set to *AppA* and 
+*To Partner* set to **AppC**.
 |xref:transaction-designer[Transaction Designer] 
 
 |===
@@ -168,12 +169,12 @@ s|Y-Passthrough-to-C
 |xref:glossary#sectm[Map]
 s|Y-to-Z
 |Convert the documents of Document Type *Y* into documents of Document Type *X*
-Target channel that passes documents of Document Type *Y* to ApplicationB's Endpoint
+Target channel that passes documents of Document Type *Y* to **AppB**'s Endpoint
 |xref:maps[Maps] 
 
 |xref:glossary#sectt[Transaction]
-s|AppY-to-Z-to-D
-|This transaction is the combination of the Source Channel Q-Passthrough and the Target Channel Q-to-P-to-AppD. And when combined it will be a transaction that receives a document Q, maps it to Document P and then sends it to the endpoint AppD. This transaction has the From Partner set to ApplicationA and the To Partner set to ApplicationD.
+s|Y-to-X-to-D
+|This transaction is the combination of the Source Channel Y-Passthrough and the Target Channel** Y-to-X-to-AppD**. When combined it will be a transaction that receives a document od Document Type **Y**, maps it to Document *X* and then sends it to the endpoint **AppD**. This transaction has the From Partner set to *AppA* and *To Partner* set to **AppD**.
 
 |xref:transaction-designer[Transaction Designer] 
 
@@ -181,11 +182,11 @@ s|AppY-to-Z-to-D
 
 == Outcomes
 
-=== Application A sends a Document of Document Type Y to Endpoint RecFromA
+=== AppA sends a Document of Document Type Y to Endpoint RecFromA
 
-[[img-multicast-2]]
+[[img-multicast-routing-scenario-outcomes]]
 
-image::multicast-2.png[img-multicast-2, title="Multicast Scenario Outcomes"]
+image::multicast-routing-scenario-outcomes.png[img-multicast-routing-scenario-outcomes, title="Multicast Routing Scenario Outcomes"]
 
 
 Integration Hub:
@@ -197,338 +198,12 @@ Integration Hub:
 ** *Y-Passthrough-to-B* 
 ** *Y-Passthrough-to-C*
 ** *Y-to-X-to-D*
-* Executes all transactions, 
+* Executes all transactions:
 
-** One sends *Y* to *B*.
+** Sends Document of Type *Y* to Endpoint *B*.
 
-** One sends *Y* to *C*.
+** Sends Document of Type *Y* to Endpoint *C*.
 
-** One maps *Y* to *X* and sends it to the Endpoint AppD.
+** Maps Document of Type *Y* to Document Type *X*, then sends it to  Endpoint **AppD**.
 
 
-
-////
-= Content below is for cutting and pasting purposes only
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-In this scenario, your organization expects to receive xref:glossary#sectd[document]s of a single xref:glossary#sectd[Document Type] from multiple xref:glossary#sectp[Partner]s. 
-However, 
-
-as in the xref:basic-routing-scenario.adoc[Basic Routing Scenario].
-
-If IH has been configured to receive a document of this xref:glossary#sectd[Document Type], IH routes the document to an internal API. 
-If IH has not been configured to receive a document of this Document Type, IH rejects the document. 
-
-
-=== Relationships
-
-There are x xref:glossary#sectr[Relationships] in this scenario:
-
-.Override Routing Scenario Relationships
-[cols="3*"]
-
-|===
-|Relationship|Description|Contains
-
-|YourCompany B2B : Any 
-|Universal relationship between any partner and your company
-|Contains Artifacts used across all partners with whom you do business
-
-|YourCompany B2B : PartA 
-|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
-|Contains artifacts used only with this partner
-
-|YourCompany B2B : PartB
-|Your organization's relationship with *PartB*
-|Contains artifacts used only with *PartB*
-
-|YourCompany B2B : PartC
-|Your organization's relationship with *PartC*
-|Contains artifacts used only with *PartC*
-
-|===
-
-
-[[img-override-routing-scenario-artifacts]]
-
-image::override-routing-scenario-artifacts.png[img-override-scenario-artifacts, title="Override Routing Scenario Artifacts"]
-
-
-=== Artifacts and Artifact Configuration 
-
-This section identifies:
-
-* Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
-* The Relationship (either *YourCompany B2B : Any* or *YourCompany B2B : PartA*) in which the artifacts are configured
-
-
-//==== Configured in *YourCompany B2B : Any*
-
-.Override Routing Scenario Artifacts - YourCompany B2B : Any
-[cols="4*"]
-
-|===
-|Artifact|Artifact Name|Description|Configured on page
-
-|xref:glossary#sectd[Document Type]
-|*DocTypeY*
-|Document Type you use internally in your company
-|xref:document-types[Document Types]
-
-|xref:glossary#sectd[Document Type]
-|*DocTypeX*
-|Document Type you use internally in your company
-|xref:document-types[Document Types]
-
-|xref:glossary#sectm[Map]
-|*Map X-to-Y*
-|Transforms a document of Document Type DocTypeX to a document of Document Type DocTypeY
-|xref:maps[Maps]
-
-|xref:glossary#sects[Source Channel ]
-|DocX-to-DocY
-|Channel that  a recieved document Q into the document C
-|xref:channels[Channels] 
-
-
-|xref:glossary#secte[Endpoint]
-|*API*
-|Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
-
-|xref:glossary#sectt[Target Channel ]
-|*Y-to-API*
-|Channel that sends a document of the internal Document Type *DocTypeY* to Endpoint *API*
-|xref:channels[Channels] 
-
-|===
-
-//==== Configured in YourCompany B2B : PartA
-
-.Override Routing Scenario Artifacts - YourCompany B2B : PartA
-
-[cols="2, 2, 6, 2"]
-|===
-|Artifact|Artifact Name|Description|Configured on page
-
-|xref:glossary#secte[Endpoint]
-|*RecFromA*
-|Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
-
-|xref:glossary#sect[Transaction] 
-|*X-to-Y-to-API*
-|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeX-to-API*.
-It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
-|xref:transaction-designer[Transaction Designer] 
-
-|===
-
-
-// ==== Configured in YourCompany B2B : PartB
-
-.Override Routing Scenario Artifacts - YourCompany B2B : PartB
-[cols="2, 2, 6, 2"]
-
-|===
-|Artifact|Artifact Name|Description|Configured on page
-
-|xref:glossary#secte[Endpoint]
-|*RecFromB*
-|Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
-
-|xref:glossary#sect[Transaction] 
-|*X-to-Y-to-API*
-|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeX-to-API*.
-It receives a document of *DocTypeX*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartB* and the *To* Partner as *YourCompany B2B*.
-|xref:transaction-designer[Transaction Designer] 
-
-|===
-
-
-//==== Configured in YourCompany B2B : PartC
-
-.Override Routing Scenario Artifacts - YourCompany B2B : PartC
-
-[cols="2, 2, 6, 2"]
-|===
-|Artifact|Artifact Name|Description|Configured on page
-
-|xref:glossary#secte[Endpoint]
-|*RecFromC*
-|Endpoint that points to an internal API
-|xref:endpoints[Endpoints] 
-
-|xref:glossary#sectd[Document Type]
-|*DocTypeX'*
-|Document Type you expect to receive from this partner that is a variation on the standard for this Document Type. 
-|xref:document-types[Document Types] 
-
-|xref:glossary#sects[Source Channel]
-|*DocTypeX'-to-DocTypeY*
-|Maps *DocTypeQ'* to *DocTypeY*
-|xref:channels[Channels] 
-
-|xref:glossary#sect[Transaction] 
-|*X'-to-Y-to-API*
-|Combination of the Source Channel *DocTypeX-to-DocTypeY* and the Target Channel *DocTypeY-to-API*.
-It receives a document of *DocTypeX'*, maps it to a document of *DocTypeY* and then sends it to Endpoint *API*. In this Transaction, the *From* Partner is configured as *PartC* and the *To* Partner as *YourCompany B2B*.
-|xref:transaction-designer[Transaction Designer] 
-
-|===
-
-
-=== Outcomes
-
-The outcome of this scenario depends on whether the following artifacts are configured appropriately:
-
-* Partner *PartA*
-* Partner *PartB*
-* Partner *PartC*
-* Document Type *DocTypeX*
-* Document Type *DocTypeX'*
-* Document Type *DocTypeY*
-* Endpoint *RecFromA*
-* Endpoint *RecFromB*
-* Endpoint *RecFromC*
-* Endpoint *API*
-* Map *X-to-Y*
-* Map *X'-to-Y*
-* Source Channel *X-to-Y*
-* Source Channel *X'-to-Y*
-* Target Channel *Y-to-API*
-* Transaction *X-to-Y-to-API*
-* Transaction *X'-to-Y-to-API*
-
-=== Outcomes
-
-==== PartA sends Document X to Endpoint RecFromA.
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
-
-[[img-override-scenario-outcome]]
-
-image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
-
-==== PartB sends Document X to Endpoint RecFromB.
-
-* Integration Manager:
-
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-DATA
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint DATA.
-
-[[img-override-scenario-outcome]]
-
-image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
-
-==== PartC sends Document X' to Endpoint RecFromC
-
-Integration Manager:
-
-** Receives Document X'
-
-** Attempts to resolve routes
-** Finds Transaction DocX'-to-DocY-to-API
-** Executes that transaction, which maps the transaction to Document Y
-
-**  Sends Document Y to Endpoint API.
-
-[[img-override-scenario-outcome]]
-
-image::override-routing-scenario-outcome-success.png[img-override-routing-scenario-outcome-success, title="Override Routing Scenario Outcome (Success)"]
-
-
-==== Outcome: Document Rejected
-
-Partner *PartA* sends a document of Document Type *DocTypeZ* to Endpoint *RecFromA*. 
-Document Type *DocTypeZ* is not configured in Relationship *YourCompany B2B : Any*; IH rejects the document. 
-
-Integration Hub:
-
-* Receives incoming document.
-* Attempts to resolve Routes.
-* Does not find a corresponding Transaction.
-* Rejects the document.
-
-[[img-basic-scenario-outcome-rejection]]
-
-image::basic-scenario-outcome-rejection.png[img-basic-scenario-outcome-rejection, title="Basic Scenario Outcome (Rejection)"]
-
-////

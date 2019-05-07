@@ -12,7 +12,8 @@
 *** xref:override-routing-scenario.adoc[Override]
 *** xref:multi-route-routing-scenario.adoc[Multi-route]
 *** xref:multicast-routing-scenario.adoc[Multicast]
-*** xref:content-based-routing-routing-scenario.adoc[Content-Based]
+*** xref:application-sends-to-partner-routing-scenario.adoc[Application Sends to Partner]
+*** xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
 
 
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
