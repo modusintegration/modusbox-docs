@@ -267,9 +267,11 @@ s|Y'-to-X-to-API
 |===
 ////
 
-=== Document Accepted and Routed
+=== Outcome Details
 
-==== Partner *PartA* sends a document of Document Type *Y* to Endpoint *RecFromA*
+==== Document Accepted and Routed
+
+===== Partner *PartA* sends a document of Document Type *Y* to Endpoint *RecFromA*
 
 [[img-override-routing-scenario-outcome-parta-success]]
 
@@ -284,7 +286,7 @@ Integration Hub:
 * Executes *Y-to-X-to-API*, which transforms the document to *X*
 * Sends the document to Endpoint *API*.
 
-==== PartB sends document (Y) to Endpoint RecFromB
+===== PartB sends document (Y) to Endpoint RecFromB
 
 [[img-override-routing-scenario-partb-success]]
 
@@ -300,7 +302,7 @@ Integration Hub:
 * Sends the document to Endpoint *API*.
 
 
-==== PartC sends document (Y') to Endpoint RecFromC
+===== PartC sends document (Y') to Endpoint RecFromC
 
 [[img-override-routing-scenario-outcome-partc-success]]
 
@@ -317,7 +319,7 @@ Integration Hub:
 
 
 
-=== Outcome: Document Rejected
+==== Document Rejected
 
 Partner *PartA* sends a document of Document Type *Z* to Endpoint *RecFromA*. 
 Document Type *Z* is not configured in Relationship **_YourCompany_ B2B* : Any*; IHub rejects the document. 
@@ -329,7 +331,4 @@ Integration Hub:
 * Does not find a corresponding Transaction
 * Rejects the document.
 
-[[img-basic-scenario-outcome-rejection]]
-
-image::basic-scenario-outcome-rejection.png[img-basic-scenario-outcome-rejection, title="Basic Scenario Outcome (Rejection)"]
 

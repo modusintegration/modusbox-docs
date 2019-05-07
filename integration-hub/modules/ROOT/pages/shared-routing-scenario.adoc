@@ -170,7 +170,7 @@ Integration Manager:
 
 === Document Rejected
 
-==== PartC sends Document of Document Type *X* to Endpoint *RecFromB*
+==== PartC sends Document of Document Type *Y* to Endpoint *RecFromB*
 
 [[img-shared-routing-scenario-outcome-rejection]]
 
