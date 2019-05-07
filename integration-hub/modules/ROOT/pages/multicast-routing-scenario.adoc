@@ -1,8 +1,7 @@
 = Multicast Routing Scenario 
 
 
-In this scenario, an application sends a payload Document, we want to send that payload to three other Applications. Two of the applications want the un-mapped payload, and the other wants to map the payload to DocumentP before it gets there.
-
+In this scenario, an application sends a xref:glossary#sectd[Document] to three other Applications. Two of the applications require the Documemt as-sent; the third requires the payload to be mapped.
 
 === Relationships
 
@@ -14,31 +13,31 @@ There are seven xref:glossary#sectr[Relationships] in this scenario:
 |===
 |Relationship|Description|Contains
 
-s|A : Any 
+s|AppA : Any 
 |Universal relationship between Application *A* and any other Application
 |Contains artifacts specific to transactions between *A* and any other Application
 
-s|B : Any
+s|AppB : Any
 |Universal relationship between Application *B* and any other Application
 |Contains artifacts specific to transactions between *B* and any other Application
 
-s|C : Any
+s|AppC : Any
 |Universal relationship between Application *C* and any other Application
 |Contains artifacts specific to transactions between *C* and any other Application
 
-s|D : Any
+s|AppD : Any
 |Universal relationship between Application *D* and any other Application
 |Contains artifacts specific to transactions between *D* and any other Application
 
-s|A : B
+s|AppA : AppB
 |The relationship between Application *A* and Application *B*. 
 |Contains artifacts used only between these applications.
 
-s|A : C
+s|AppA : AppC
 |The relationship between Application *A* and Application *C*. 
 |Contains artifacts used only between these applications.
 
-s|A : D
+s|AppA : AppD
 |The relationship between Application *A* and Application *D*. 
 |Contains artifacts used only between these applications.
 
@@ -63,7 +62,7 @@ This tables and flow diagrams in this section identifies:
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
-s|RecFromA
+s|AppRecFromA
 |Endpoint on which you expect to receive documents from Application *A*
 |xref:endpoints[Endpoints] 
 
@@ -73,7 +72,7 @@ s|Y
 |xref:document-types[Document Types]
 
 |xref:glossary#sects[Source Channel]
-s|Y-Passthrough
+Y-Passthrough
 |Source channel that passes Document Type *Y* to whatever Target channel is selected
 |xref:channels[Channels] 
 
@@ -85,7 +84,7 @@ s|Y-Passthrough
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
-s|B
+s|AppB
 |Endpoint from which documents are sent to *B*.
 |xref:endpoints[Endpoints] 
 |===
@@ -96,7 +95,7 @@ s|B
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
-s|C
+s|AppC
 |Endpoint from which documents are sent to *C*.
 |xref:endpoints[Endpoints] 
 |===
@@ -108,7 +107,7 @@ s|C
 |Artifact|Artifact Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
-s|D
+s|AppD
 |Endpoint from which documents are sent to *D*.
 |xref:endpoints[Endpoints] 
 
@@ -173,7 +172,7 @@ Target channel that passes documents of Document Type *Y* to ApplicationB's Endp
 |xref:maps[Maps] 
 
 |xref:glossary#sectt[Transaction]
-s|Y-to-Z-to-D
+s|AppY-to-Z-to-D
 |This transaction is the combination of the Source Channel Q-Passthrough and the Target Channel Q-to-P-to-AppD. And when combined it will be a transaction that receives a document Q, maps it to Document P and then sends it to the endpoint AppD. This transaction has the From Partner set to ApplicationA and the To Partner set to ApplicationD.
 
 |xref:transaction-designer[Transaction Designer] 
