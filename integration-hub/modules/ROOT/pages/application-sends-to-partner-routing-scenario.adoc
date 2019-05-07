@@ -11,17 +11,17 @@ There are four relationships in this scenario:
 |Relationship|Description|Contains
 
 
-s|A : Any
+s|AppA : Any
 |Universal relationship between Application A and any other Application
 |Contains Artifacts specific to transactions between Application *A* and any other Application.
 
 s|_YourCompany_ B2B : Any
-|Universal relationship between your company any partner
+|Universal relationship between your company and any partner
 |Contains Artifacts used across all partners with whom you do business
 
 s|AppA : _YourCompany_ B2B 
-|Relationship between this applcation and... 
-|Contains Artifacts used...
+|Relationship between this applcation and the Home Partner (*_YourCompany_ B2B*)
+|Contains Artifacts specific to transactions between Application *A* and the Home Partner
 
 s|PartA : _YourCompany_ B2B 
 |Your company's relationship with the partner with whom you are doing business (in this case, *PartA*).
@@ -29,9 +29,9 @@ s|PartA : _YourCompany_ B2B
 
 |===
 
-[[img-Application-to-Partner]]
+[[img-application-to-partner-routing-scenario-artifacts]]
 
-image::Application-to-Partner.png[img-Application-to-Partner"]
+image::application-to-partner-routing-scenario-artifacts.png[img-application-to-partner-routing-scenario-artifacts, "Application-to-Partner Routing Scenario Artifacts]
 
 == Artifacts and Artifact Configuration 
 
@@ -68,18 +68,18 @@ s|X
 |xref:document-types.adoc[Document Types]
 
 |xref:glossary#secte[Endpoint]
-|*Routing Hub*
+|*Router*
 |Endpoint used to route Documents
 |xref:endpoints.adoc[Endpoints] 
 
 |xref:glossary#sectt[Target Channel]
-|*X-to-Hub*
-|Sends Document of Document Type *X* to the Routing Hub. 
+|*X-to-Router*
+|Sends Document of Document Type *X* to IHub 
 |xref:channels.adoc[Channels] 
 
 |xref:glossary#sects[Source Channel]
 |*X-to-Passthru*
-|Sends Document of Document Type *C* to selected Target Channel. 
+|Sends Document of Document Type *X* to selected Target Channel. 
 |xref:channels.adoc[Channels] 
 
 |===
@@ -103,21 +103,34 @@ s|Y-to-X
 |xref:channels.adoc[Channels] 
 
 |xref:glossary#sectt[Transaction]
-|*DocQ-to-DocC-to-HUB*
-|Combination of the Source Channel Q-to-C and the Target Channel C-to-HUB. And when combined it will be a transaction that receives a document Q, maps it to Document C and then sends it to the Routing Hub. This transaction has the From Partner set to ApplicationA and the To Partner set to Your Company B2B..
+|*Y-to-X-to-Router*
+|Combination of the Source Channel *Y-to-X* and the Target Channel **X-to-Router**. Receives a document of Type **Y**, maps it to a document of Type *X*, then sends it to the *Router* Endpoint. This transaction has *From Partner* set to *AppA* and *To Partner* set to **_Your Company_ B2B**.
 |xref:transaction-designer.adoc[Transactions Designer] 
 
 |===
 
 
-[[img-Application-to-Partner-2]]
-
-image::Application-to-Partner-2.png[img-Application-to-Partner-2"]
 
 
 
 
-==== Artifacts in PartnerA:_YourCompany_ B2B
+==== Artifacts in PartA : _YourCompany_ B2B
+
+//=== Configured in AppA : _YourCompany_ B2B
+
+.Application Sends to Partner Routing Scenario Artifacts - *AppA : _YourCompany_ B2B* 
+[cols="4*"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+
+|xref:glossary#secte[Endpoint]
+|*PartA*
+|Endpoint that points to an external Partner
+|xref:endpoints.adoc[Endpoints] 
+
+|===
 
 * Endpoint PartnerA
 
@@ -138,6 +151,13 @@ image::Application-to-Partner-2.png[img-Application-to-Partner-2"]
 * Transaction DocC-to-DocP-to-PartnerA
 
 ** This transaction is the combination of the Source Channel C-Passthrough and the Target Channel DocC-to-DocP-to-PartnerA. And when combined it will be a transaction that receives a document C, maps it to Document P and then sends it to the endpoint PartnerA. This transaction has the From Partner set to Your Company B2B and the To Partner set to PartnerA.
+
+== Outcomes
+
+[[img-application-to-partner-routing-scenario-outcome]]
+
+image::application-to-partner-routing-scenario-outcome.png[img-application-to-partner-routing-scenario-outcome, "Application-to-Partner-Routing-Scenario-Outcome"]
+
 
 ==== ApplicationA sends Document Q to Endpoint RecFromA.
 
