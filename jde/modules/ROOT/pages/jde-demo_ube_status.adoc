@@ -310,3 +310,4 @@ There are additional demo applications with step by step guides available for do
 . Submit a Batch Process
 . Poll Transaction (MBF) Events
 . Poll EDI Events
+ 
