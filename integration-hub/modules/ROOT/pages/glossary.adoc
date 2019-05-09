@@ -16,6 +16,8 @@ API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by 
 
 Application:: Software program or programs that have a role within your organization. 
 
+Artifact:: Software component of the IHub system. 
+
 ////
 [[sectb]]
 *B*

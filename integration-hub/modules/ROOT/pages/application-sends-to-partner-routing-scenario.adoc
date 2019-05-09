@@ -1,19 +1,19 @@
 = Application Sends to Partner
 
 
-In this scenario, an Application sends a Document to a Partner.
+In this scenario, an xref:glossary#secta[Application] sends a xref:glossary#sectd[Document] to a xref:glossary#sectp[Partner].
 
 == Relationships
 
-There are four relationships in this scenario:
+There are four xref:glossary#sectr[Relationships] in this scenario:
 
 |===
 |Relationship|Description|Contains
 
 
 s|AppA : Any
-|Universal relationship between Application A and any other Application
-|Contains Artifacts specific to transactions between Application *A* and any other Application.
+|Universal Relationship between Application A and any other Application
+|Contains xref:glossary#secta[Artifacts] specific to transactions between Application *A* and any other Application.
 
 s|_YourCompany_ B2B : Any
 |Universal relationship between your company and any partner
