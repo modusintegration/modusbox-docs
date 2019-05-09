@@ -1,7 +1,7 @@
 = Multicast Routing Scenario 
 
 
-In this scenario, an application sends a xref:glossary#sectd[Document] to three other Applications. Two of the applications require the Documemt as-sent; the third requires the payload to be mapped.
+In this scenario, an xref:glossary#secta[Application] sends a xref:glossary#sectd[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
 === Relationships
 
@@ -15,31 +15,31 @@ There are seven xref:glossary#sectr[Relationships] in this scenario:
 
 s|AppA : Any 
 |Universal relationship between Application *AppA* and any other Application
-|Contains artifacts specific to transactions between *AppA* and any other Application
+|Artifacts specific to transactions between *AppA* and any other Application
 
 s|AppB : Any
 |Universal relationship between Application *AppB* and any other Application
-|Contains artifacts specific to transactions between *App* and any other Application
+|Artifacts specific to transactions between *AppB* and any other Application
 
 s|AppC : Any
 |Universal relationship between Application *AppC* and any other Application
-|Contains artifacts specific to transactions between *AppC* and any other Application
+|Artifacts specific to transactions between *AppC* and any other Application
 
 s|AppD : Any
 |Universal relationship between Application *AppD* and any other Application
-|Contains artifacts specific to transactions between *AppD* and any other Application
+|Artifacts specific to transactions between *AppD* and any other Application
 
 s|AppA : AppB
 |The relationship between Application *AppA* and Application *AppB*. 
-|Contains artifacts used only between these applications.
+|Artifacts used only between these applications.
 
 s|AppA : AppC
 |The relationship between Application *AppA* and Application *AppC*. 
-|Contains artifacts used only between these applications.
+|Artifacts used only between these applications.
 
 s|AppA : AppD
 |The relationship between Application *AppA* and Application *AppD*. 
-|Contains artifacts used only between these applications.
+|Artifacts used only between these applications.
 
 |===
 
