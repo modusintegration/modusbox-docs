@@ -406,7 +406,7 @@ Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folde
 
 NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
-image:image3_getting_started.png[image,width=250,height=446]
+image::jde-onboarding/image3_getting_started.png[image,width=250,height=446]
 
 The mule-artifact.json file needs to be updated for each environment as below
 
@@ -519,13 +519,13 @@ Save the project. The connector will be ready to process requests.
 
 Locate the *JDE* Connector, and select Call BSFN. Drag this to the canvas.
 
-image:image15_getting_started.png[image,width=332,height=236]
+image::image15_getting_started.png[image,width=332,height=236]
 
 Drag the connector over to the canvas. Select it and review the properties window. Give it a meaningful name eg. Call AddressBookMasterMBF.
 
 Under the General section, click on the drop-down for Business Function Name.
 
-image:image16_getting_started.png[image,width=601,height=305]
+image::image16_getting_started.png[image,width=601,height=305]
 
 *NOTE :* If it is the first time you are selecting a function, this might take a while, as no information has been cached yet. It will need to build a list of all functions available. Please be patient. The status bar (bottom right) will display the following while it is retrieving the metadata.
 
