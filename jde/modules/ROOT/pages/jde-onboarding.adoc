@@ -347,7 +347,7 @@ You can use the connector to
 
 Create a new Mule Project with Mule Server 4.1.1 EE or greater as runtime:
 
-image:image2_getting_started.png[image,width=321,height=423]
+image:jde-onboarding/image2_getting_started.png[image,width=321,height=423]
 
 === Project Dependencies
 
