@@ -19,11 +19,11 @@ s|_YourCompany_ B2B : Any
 |Universal relationship between your company and any partner
 |Contains Artifacts used across all partners with whom you do business
 
-s|AppA : _YourCompany_ B2B 
+s|_YourCompany_ B2B ; AppA
 |Relationship between this applcation and the Home Partner (*_YourCompany_ B2B*)
 |Contains Artifacts specific to transactions between Application *A* and the Home Partner
 
-s|PartA : _YourCompany_ B2B 
+s|_YourCompany_ B2B : PartA
 |Your company's relationship with the partner with whom you are doing business (in this case, *PartA*).
 |Contains artifacts used only with this partner
 
@@ -31,7 +31,7 @@ s|PartA : _YourCompany_ B2B
 
 [[img-application-to-partner-routing-scenario-artifacts]]
 
-image::application-to-partner-routing-scenario-artifacts.png[img-application-to-partner-routing-scenario-artifacts, "Application-to-Partner Routing Scenario Artifacts]
+image::application-to-partner-routing-scenario-artifacts.png[img-application-to-partner-routing-scenario-artifacts, title="Application-to-Partner Routing Scenario Artifacts"]
 
 == Artifacts and Artifact Configuration 
 
@@ -42,7 +42,7 @@ This tables and flow diagrams in this section identifies:
 
 //==== Configured in *AppA : Any*
 
-.Application Sends to Partner Routing Scenario Artifacts - AppA : Any 
+.Application Sends to Partner Routing Scenario Artifacts - *AppA : Any* 
 [cols="4*"]
 
 |===
@@ -84,7 +84,7 @@ s|X
 
 |===
 
-//=== Configured in AppA : _YourCompany_ B2B
+//=== Configured in _YourCompany_ B2B : AppA
 
 .Application Sends to Partner Routing Scenario Artifacts - *AppA : _YourCompany_ B2B* 
 [cols="4*"]
@@ -104,7 +104,7 @@ s|Y-to-X
 
 |xref:glossary#sectt[Transaction]
 |*Y-to-X-to-Router*
-|Combination of the Source Channel *Y-to-X* and the Target Channel **X-to-Router**. Receives a document of Type **Y**, maps it to a document of Type *X*, then sends it to the *Router* Endpoint. This transaction has *From Partner* set to *AppA* and *To Partner* set to **_Your Company_ B2B**.
+|Combination of the Source Channel *Y-to-X* and the Target Channel **X-to-Router**. Receives a document of Type **Y**, maps it to a document of Type *X*, then sends it to the *Router* Endpoint. This transaction has *From Partner* configured as *AppA* and *To Partner* configured as **_Your Company_ B2B**.
 |xref:transaction-designer.adoc[Transactions Designer] 
 
 |===
@@ -114,11 +114,11 @@ s|Y-to-X
 
 
 
-==== Artifacts in PartA : _YourCompany_ B2B
+==== Artifacts in _YourCompany_ B2B : PartA
 
-//=== Configured in AppA : _YourCompany_ B2B
+//=== Configured in _YourCompany_ B2B : AppA
 
-.Application Sends to Partner Routing Scenario Artifacts - *AppA : _YourCompany_ B2B* 
+.Application Sends to Partner Routing Scenario Artifacts - *_YourCompany_ B2B : AppA* 
 [cols="4*"]
 
 |===
@@ -130,27 +130,27 @@ s|Y-to-X
 |Endpoint that points to an external Partner
 |xref:endpoints.adoc[Endpoints] 
 
+|xref:glossary#sectd[Document Type]
+s|Z
+|Document Type your parter expects to receive from your company
+|xref:document-types.adoc[Document Types]
+
+|xref:glossary#sectm[Map]
+s|X-to-Z
+|Transforms a document of Document Type *X* to a Document of Document Type *Z*
+|xref:document-types.adoc[Maps]
+
+|xref:glossary#sectt[Target Channel]
+|*X-to-Z-to-PartA*
+|Maps document of Document Type *X* to Document Type *Y* and sends it to *PartA*
+|xref:channels.adoc[Channels] 
+
+|xref:glossary#sectt[Transaction]
+|*X-to-Z-to-PartA*
+|Sends Document of Document Type *X* to selected Target Channel. 
+|xref:transaction-designer.adoc[Transaction Designer] 
+
 |===
-
-* Endpoint PartnerA
-
-** The endpoint that points to your external partner.
-
-* Document P
-
-** A document that your partner expects to receive from you.
-
-* Map C-to-P
-
-** This map will convert the document C into document P
-
-* Target Channel C-to-P-to-PartnerA
-
-** This target channel will map the Document C to Document P and then pass it to PartnerA's Endpoint
-
-* Transaction DocC-to-DocP-to-PartnerA
-
-** This transaction is the combination of the Source Channel C-Passthrough and the Target Channel DocC-to-DocP-to-PartnerA. And when combined it will be a transaction that receives a document C, maps it to Document P and then sends it to the endpoint PartnerA. This transaction has the From Partner set to Your Company B2B and the To Partner set to PartnerA.
 
 == Outcomes
 
@@ -159,25 +159,17 @@ s|Y-to-X
 image::application-to-partner-routing-scenario-outcome.png[img-application-to-partner-routing-scenario-outcome, "Application-to-Partner-Routing-Scenario-Outcome"]
 
 
-==== ApplicationA sends Document Q to Endpoint RecFromA.
+==== *AppA* sends Document of Document Type *Y* to Endpoint *RecFromA*
 
-* Integration Manager:
+Integration Hub:
 
-** Receives Document Q
-
-** Attempts to resolve routes
-** Finds Transaction DocQ-to-DocC-to-HUB
-** Executes that transaction, which maps the transaction to Document C
-
-**  Sends Document C to Endpoint Routing HUB.
-
-* Integration Manager:
-
-** Receives Document C
-
-** Attempts to resolve routes
-** Finds Transaction DocC-to-DocP-to-PartnerA
-** Executes that transaction, which maps the transaction to Document P
-
-**  Sends Document P to Endpoint PartnerA.
+* Receives Document Y
+* Attempts to resolve routes
+* Finds Transaction *Y-to-X-to-Router*
+* Executes that transaction, which maps the document to Document Type *X*
+* Sends Document *Y* to Endpoint *Router*
+* Attempts to resolve routes
+* Finds Transaction *X-to-Z-to-PartA*
+* Executes that transaction, which maps the document to Document Type *Z*
+* Sends Document *Z* to Endpoint *PartA*
 

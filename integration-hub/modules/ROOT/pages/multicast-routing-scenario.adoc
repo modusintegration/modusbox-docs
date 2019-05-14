@@ -138,51 +138,9 @@ When combined (with ?) it becomes a transaction that receives a document of Docu
 |===
 
 
-
-
-==== Artifacts in AppA : AppC
-
-|===
-|Artifact|Artifact Name|Description|Configured on page
-
-|xref:glossary#sectt[Target Channel]
-s|Y-to-X
-|Target channel that passes documents of Document Type *Y* to AppB's Endpoint
-|xref:channels[Channels] 
-
-|xref:glossary#sectt[Transaction]
-s|Y-Passthrough-to-C
-|Combination of the Source Channel *Y-Passthrough* and the Target Channel *Y-to-C*. When combined (with ?) it becomes a transaction that receives a document of Document Type *Q* and then sends it to the endpoint AppC. Has the From Partner set to *AppA* and 
-*To Partner* set to **AppC**.
-|xref:transaction-designer[Transaction Designer] 
-
-|===
-
-
-
-==== AppA : AppD
-
-
-|===
-|Artifact|Artifact Name|Description|Configured on page
-
-|xref:glossary#sectm[Map]
-s|Y-to-Z
-|Convert the documents of Document Type *Y* into documents of Document Type *X*
-Target channel that passes documents of Document Type *Y* to **AppB**'s Endpoint
-|xref:maps[Maps] 
-
-|xref:glossary#sectt[Transaction]
-s|Y-to-X-to-D
-|This transaction is the combination of the Source Channel Y-Passthrough and the Target Channel** Y-to-X-to-AppD**. When combined it will be a transaction that receives a document od Document Type **Y**, maps it to Document *X* and then sends it to the endpoint **AppD**. This transaction has the From Partner set to *AppA* and *To Partner* set to **AppD**.
-
-|xref:transaction-designer[Transaction Designer] 
-
-|===
-
 == Outcomes
 
-=== AppA sends a Document of Document Type Y to Endpoint RecFromA
+=== AppA sends Document of Document Type Y to Endpoint RecFromA
 
 [[img-multicast-routing-scenario-outcomes]]
 
