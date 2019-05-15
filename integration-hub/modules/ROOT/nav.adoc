@@ -50,11 +50,9 @@
 *** xref:error-codes.adoc[Error Codes]
 *** xref:security.adoc[Security]
 *** xref:lookup-tables.adoc[Lookup Tables]
-////
-ifdef::mule[]
+ifdef::mule-esb[]
 ** xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
 endif::[]
-////
 ** xref:integration-hub-apis.adoc[Integration Hub APIs]
 
 ** xref:glossary.adoc[Glossary]
