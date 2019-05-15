@@ -1,6 +1,6 @@
 = *PortX JD Edwards Connector for Mule 4 – Demo – Poll Transaction (MBF) Events*
 :keywords: add_keywords_separated_by_commas
-:imagesdir: images\demo_ube
+:imagesdir: images
 :toc: macro
 :toclevels: 2
 
@@ -376,8 +376,8 @@ image:image50_demo_poll_mbf_events.png[image,width=442,height=298]
 
 There are additional demo applications with step by step guides available for download. These cover all the basic operations, and are
 
-. Invoke a Business Function
-. Invoke a Business Function with Transaction Processing
-. Submit a Batch Process
-. Retrieve a Batch Process’s Status
-. Poll EDI Events
+. <<demo_getting_started.adoc#,Invoke a Business Function>>
+. <<demo_getting_started.adoc#,Invoke a Business Function with Transaction Processing>>
+. <<demo_ube.adoc#,Submit a Batch Process>> 
+. <<demo_ube_status.adoc#,Retrieve a UBE's status>>
+. <<demo_poll_edi_events.adoc#,Poll EDI Events>>
