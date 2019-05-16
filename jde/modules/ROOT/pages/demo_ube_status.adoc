@@ -3,7 +3,7 @@
 :imagesdir: images
 :toc: macro
 :toclevels: 2
- 
+
 toc::[]
 
 == *Introduction*
@@ -55,13 +55,13 @@ Add the following to you _dependencies_ section :
 <dependency>
 <groupId>com.modus</groupId>
     <artifactId>mule-jde-connector</artifactId>
-    <version>2.0.0-RC1</version>
+    <version>2.0.0</version>
     <classifier>mule-plugin</classifier>
 </dependency>
 <dependency>
     <groupId>com.jdedwards</groupId>
     <artifactId>jde-lib-bundle</artifactId>
-    <version>2.0.0-RC1</version>
+    <version>1.0.0</version>
 </dependency>
 ----
 
@@ -126,7 +126,7 @@ The _mule-arifact.json_ file needs to be updated per environment as below
 === Other Considerations
 
 To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the _jdelog.properties_, you may add the following _Async Loggers_ to _log4j2.xml_ file.
-[source,java]
+[source,xml]
 ----
 _<!-- JDE Connector wire logging -->_
 <AsyncLogger name="org.mule.modules.jde.handle.MuleHandler" level="INFO" />

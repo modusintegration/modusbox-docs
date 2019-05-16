@@ -58,7 +58,7 @@ This document assumes that you are familiar with Oracle’s _JD Edwards Enterpri
 image:demo_getting_started/image1_getting_started.png[image,width=500,height=174]
 
 Add the highlighted arguments to you AnyPointStudio.ini file, located in the AnyPointStudio installation folder (C:\Java\InstallPath\jdk1.8.0_201 is the path where your JDK is installed. Remember to add the \bin)
-[source,java]
+[source,ini]
 ----
 . . .
 -startup
@@ -108,21 +108,21 @@ The _PortX JDE Connector_ makes use of the libraries of the local JDE Tools rele
 .. --_jdbcDriver_ for the full path and filename of the JDBC Driver that applies to you __JD Edwards EnterpriseOne__™ installation.
 .. --_libDir_ for the full path containing your JDE Tool release libraries
 .. --localRepo for the path to your local Maven repository (typically ~/.m2/repository)
-.. --version for the bundle version (2.0.0-RC1 for current release candidate)
+.. --version for the bundle version (1.0.0 for current release candidate)
 
 e.g.:
 
-_java -jar JDEToolToBuildLibBundle-1.0.0.jar --destDir "/tmp" –jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" –libDir "/opt/jde/workingDir/ServerFiles" –version "2.0.0-RC1" --localRepo "/home/user/.m2/repository"_
+_java -jar JDEToolToBuildLibBundle-1.0.0.jar --destDir "/tmp" –jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" –libDir "/opt/jde/workingDir/ServerFiles" –version "1.0.0" --localRepo "/home/user/.m2/repository"_
 
 NOTE : All libraries in this path will be added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation). See Appendix A for a detailed list of all files required per your Tools Release
 
-Once completed the resulting bundle will be located at, following the sample above, /tmp/jde-lib-bundle-2.0.0-RC1.jar
+Once completed the resulting bundle will be located at, following the sample above, /tmp/jde-lib-bundle-1.0.0.jar
 
 === Install the JDE libraries bundle into your Maven repository
 
 . Execute the following to make the bundle available in your Maven Repository
 
-_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-2.0.0-RC1.jar-DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=2.0.0-RC1 -Dpackaging=jar_
+_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.1.jar-DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dpackaging=jar_
 
 === Preparing Maven for PortX - JDE Connector
 
@@ -131,7 +131,7 @@ _mvn install:install-file -Dfile=/tmp/jde-lib-bundle-2.0.0-RC1.jar-DgroupId=com.
 .. In the servers section, add the following:
 .. Replace the user name and password provided to you via email
 
-[source,java]
+[source,xml]
 ----
 <server>
     <id>portx-repository-releases</id>
@@ -158,7 +158,7 @@ This configuration must be done by CNC administrator. Refer to *JD Edwards Enter
 
 . Ensure that sufficient processes are available for the *XML List Kernel*
 
-[source,java]
+[source,ini]
 ----
 [JDENET_KERNEL_DEF16]
 
@@ -172,7 +172,7 @@ numberOfAutoStartProcesses=1
 [start=2]
 . Ensure that sufficient processes are available for the *XML Dispatch Kernel*
 
-[source,java]
+[source,ini]
 ----
 [JDENET_KERNEL_DEF22]
 dispatchDLLName=xmldispatch.dll
@@ -197,7 +197,7 @@ numberOfAutoStartProcesses=0
 [start=4]
 . Ensure that the *LREngine* has a suitable output storage location and sufficient disk allocation
 
-[source,java]
+[source,ini]
 ----
 [LREngine]
 System=C:\JDEdwardsPPack\E920\output 
@@ -208,7 +208,7 @@ Disk_Monitor=YES
 [start=5]
 . Ensure that the XML Kernels are correctly defined
 
-[source,java]
+[source,ini]
 ----
 [XMLLookupInfo]
 XMLRequestType1=list 
@@ -352,7 +352,7 @@ image:demo_getting_started/image2_getting_started.png[image,width=321,height=423
 === Project Dependencies
 
 In you pom.xml, add the following to you _repositories_ section :
-[source,java]
+[source,xml]
 ----
 <repository>
     <id>portx-repository-releases</id>
@@ -363,23 +363,23 @@ In you pom.xml, add the following to you _repositories_ section :
 
 Add the following to you _dependencies_ section :
 
-[source,java]
+[source,xml]
 ----
 <dependency>
 <groupId>com.modus</groupId>
     <artifactId>mule-jde-connector</artifactId>
-    <version>2.0.0-RC3</version>
+    <version>2.0.0</version>
     <classifier>mule-plugin</classifier>
 </dependency>
 <dependency>
     <groupId>com.jdedwards</groupId>
     <artifactId>jde-lib-bundle</artifactId>
-    <version>2.0.0-RC1</version>
+    <version>1.0.0</version>
 </dependency>
 ----
 
 Add or update the following to you _plugins_ section :
-[source,java]
+[source,xml]
 ----
 <plugin>
     <groupId>org.mule.tools.maven</groupId>

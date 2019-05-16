@@ -3,7 +3,7 @@
 :imagesdir: images
 :toc: macro
 :toclevels: 2
- 
+
 toc::[]
 
 == *Introduction*
@@ -39,7 +39,7 @@ image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 === Project Dependencies
 
 In you pom.xml, add the following to you _repositories_ section :
-[source,java]
+[source,xml]
 ----
 <repository>
     <id>portx-repository-releases</id>
@@ -50,23 +50,23 @@ In you pom.xml, add the following to you _repositories_ section :
 
 Add the following to you _dependencies_ section :
 
-[source,java]
+[source,xml]
 ----
 <dependency>
 <groupId>com.modus</groupId>
     <artifactId>mule-jde-connector</artifactId>
-    <version>2.0.0-RC1</version>
+    <version>2.0.0</version>
     <classifier>mule-plugin</classifier>
 </dependency>
 <dependency>
     <groupId>com.jdedwards</groupId>
     <artifactId>jde-lib-bundle</artifactId>
-    <version>2.0.0-RC1</version>
+    <version>1.0.0</version>
 </dependency>
 ----
 
 Add or update the following to you _plugins_ section :
-[source,java]
+[source,xml]
 ----
 <plugin>
     <groupId>org.mule.tools.maven</groupId>
@@ -128,7 +128,7 @@ The _mule-arifact.json_ file needs to be updated per environment as below
 
 To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the _jdelog.properties_, you may add the following _Async Loggers_ to _log4j2.xml_ file.
 
-[source,java]
+[source,xml]
 ----
 <!-- JDE Connector wire logging -->
 <AsyncLogger name="org.mule.modules.jde.handle.MuleHandler" level="INFO" />
@@ -351,7 +351,7 @@ C1 AND (C2 OR (C3 AND C4))
 
 Examples:
 
-[source,java]
+[source,sql]
 ----
 F4211.KCOO = '00001' AND F4211.DOCO > 10332
 F4211.KCOO = '00001' AND F4211.DOCO >= 10332
