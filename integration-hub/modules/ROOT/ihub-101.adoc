@@ -1,0 +1,88 @@
+= Integration Hub 101
+
+Common scenario
+
+Requirments
+
+YourCompany B2B
+PartA
+* certs
+* identifiers
+
+Relationships
+facilitate integration
+aritifacts live inside
+partition
+scope for reuse of artifacts
+
+This scenario
+PartA sends you some kind of doc
+sends to endpoint you setup 
+doc y
+map to doc x (internal)
+maybe x12 to json tps
+internal api endpoint
+
+steps
+
+1. what to do with it when i receive 
+2. where do i want to send it
+
+1 is source channel
+2 is target channel
+
+may have multiple target channels from one source channel
+
+combo of channels is a Transaction - IHub built around these
+
+Transaction is inside o relationship
+
+== Setting up in IHub
+
+Monitoring screen
+Partners and Apps
+Add PartA
+bonus add certs and IDs
+
+Enter AA : PartA
+Enter TD
+Create new transaction
+Reverse from and to
+so partA is sending to 
+Create source channel
+
+source doc, map, target doc
+create source doc y
+possible endpoints
+add new endpoint RecFromA
+http
+port 0.0.0.0
+receive path
+
+new doc
+doc x
+
+new map
+dataweave
+add script
+
+
+new target channel
+existing doc y (x)
+new endpoint
+http
+localhost
+path /api
+
+quick view
+save
+see source channel, target channel, and route success
+
+td - see what happens
+
+
+
+
+
+
+
