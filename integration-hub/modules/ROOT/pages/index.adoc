@@ -5,7 +5,7 @@ Integration Hub provides a single web-based user interface for <<Transaction Mon
 
 == Transaction Monitoring
 
-Because B2B transactions often communicate contractual obligations between companies, it is desirable (and often necessary) to track all transmissions sent or received, storing the  transmission content as well as metadata (such as data and time the transmission was sent or received, the identity of the partner, and success or failure of processing). Integration Hub provides a simple, secure, and integrated mechanism for tracking B2B traHEADnsactions. Uses for this data include:  
+Because B2B transactions often communicate contractual obligations between companies, it is desirable (and often necessary) to track all transmissions sent or received, storing the  transmission content as well as metadata (such as data and time the transmission was sent or received, the identity of the partner, and success or failure of processing). Integration Hub provides a simple, secure, and integrated mechanism for tracking B2B transactions. Uses for this data include:  
 
 * Non-repudiation
 * Correlation of acknowledgments
