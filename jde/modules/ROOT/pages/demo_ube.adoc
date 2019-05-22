@@ -233,7 +233,7 @@ image:demo_ube/troubleshoot_datasense_timeout.png[image,width=622,height=551]
 
 Go to _Anypoint Studio > Tooling_ and change the _Default Connection Timeout_ and _Default Read Timeout_ settings as below
 
-image:demo_ube/troubleshoot_tooling_timeout.png[image,width=622,height=551]
+image:demo_ube/troubleshoot_timeout_tooling.png[image,width=622,height=551]
 
 ==== Setting Parameters
 After the system has retrieved the required metadata, select R0008P_XJDE0001 from the list. The specification metadata will be retrieved from the enterprise server, and put into the project metadata repository.
