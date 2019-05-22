@@ -1,2 +1,3 @@
-* xref:jde.adoc[JD Edwards User Guide]
+* xref:jde.adoc[User Guide]
 
+* xref:demo_getting_started.adoc[Onboarding Guide]
