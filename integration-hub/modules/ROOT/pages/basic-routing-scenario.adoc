@@ -253,7 +253,7 @@ Integration Hub:
 * Receives a document of Document Type *Y*
 * Attempts to resolve routes
 ** Finds a Transaction *Y-to-X-to-API* that contains *Y*.
-* Executes Transaction *Y-to-X-to-API*, which transforms the Document from *X* to *Y*
+* Executes Transaction *Y-to-X-to-API*, which transforms the Document from *Y* to *X*
 * Sends the document to Endpoint *API*.
 
 
