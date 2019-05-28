@@ -44,12 +44,19 @@ Document Definition:: A specific document format that is configured in the syste
 Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
 Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document.  These properties are extracted and stored by the Tracking service.
 
+Document Type:: IHub xref:glosary#secta[artifact] that identifies types of xref:glosary#sectd[document]s based on values such as xref:glosary#sects[standard] and xref:glosary#sectm[message type].
+
 [[secte]]
 *E*
 
-Environment ID:: String that uniquely identifies an xref:access-management/environments[environment].
+Environment ID:: String that uniquely identifies an xref:access-management/environments[Environment].
 
 External Partner:: Any company registered in PortX that is not the Home Partner.
+
+////
+[[sectf]]
+*F*
+////
 
 [[secth]]
 *H*
@@ -64,7 +71,9 @@ Lookup Table:: A table that facilitates transaction processing by associating va
 [[sectm]]
 *M*
 
-Map:: Stores map type (XSLT or DataWeave) and script for transforming from one Document Definition to another Document Definition.
+Map:: Stores map type (XSLT or DataWeave) and script for transforming from one Document Definition to another Document Definition. 
+
+Message Type:: One of several values that together define a xref:glossary#sectd[Document Type].
 
 [[sectp]]
 *P*
@@ -76,9 +85,10 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 [[sectr]]
 *R*
 
-Relationship:: Union of an actor with another actor or with all actors configured in your impleentation of IHub. Analagous to a programming namespace. 
+Relationship:: Union of an actor with another actor or with all actors configured in your impleentation of IHub. 
+Analagous to a programming namespace. 
 
-Route:: Connects a source Channel to a Target Channel.
+Route:: IHub xref:glosary#seca[artifact] that connects a xref:glosary#sects[Source Channel] to a xref:glosary#sect[Target Channel].
  
 [[sects]]
 *S*
@@ -91,15 +101,20 @@ Schema:: The schema is stored with the Document Definition and is one of the fol
 
 Source Channel:: Type of xref:channel.adoc[Channel] specific to the source of a transmission. 
 
+Standard:: One of several values that together define a xref:glossary#sectd[Document Type].
+
+*E*
+
 Standard PortX Field Format:: Describes fields for which valid values can include letters, numbers, or the dash ( *-* ) and underscore ( *_* ) characters.
 
 [[sectt]]
 *T*
 
-Target Channel:: Type of xref:channel.adoc[Channel] specific to the destination of a transmission. 
+Target Channel:: Type of xref:glossary#sectc[Channel] specific to the destination of a transmission. 
 
 
-Transaction:: The end-to-end processing of a single instance of a document from receipt at an endpoint all the way to the desired business service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
+Transaction:: The end-to-end processing of a single instance of a document from receipt at an xref:glosary#secte[Endpoint] all the way to the desired business service.  
+A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
 
