@@ -12,6 +12,8 @@ xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz
 [[secta]]
 *A*
 
+Actor:: An entity, such as a partner, and application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
+
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
 Application:: Software program or programs that have a role within your organization. 
@@ -22,6 +24,12 @@ Artifact:: Software component of the IHub system.
 [[sectb]]
 *B*
 ////
+
+[[sectc]]
+
+Channel:: Grouping of xref:glossary#secta[artifact]s of 
+specific to the source of a transmission. 
+
 
 
 [[sectd]]
@@ -68,7 +76,7 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 [[sectr]]
 *R*
 
-Relationship: Union of an actor with another actor or with all actors configured in your impleentation of IHub. Analagous to a programming namespace. 
+Relationship:: Union of an actor with another actor or with all actors configured in your impleentation of IHub. Analagous to a programming namespace. 
 
 Route:: Connects a source Channel to a Target Channel.
  
@@ -81,11 +89,15 @@ Schema:: The schema is stored with the Document Definition and is one of the fol
 * CSV: (NA)
 * EDI: EDI Schema Language (ESL) file
 
+Source Channel:: Type of xref:channel.adoc[Channel] specific to the source of a transmission. 
 
 Standard PortX Field Format:: Describes fields for which valid values can include letters, numbers, or the dash ( *-* ) and underscore ( *_* ) characters.
 
 [[sectt]]
 *T*
+
+Target Channel:: Type of xref:channel.adoc[Channel] specific to the destination of a transmission. 
+
 
 Transaction:: The end-to-end processing of a single instance of a document from receipt at an endpoint all the way to the desired business service.  A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
 
