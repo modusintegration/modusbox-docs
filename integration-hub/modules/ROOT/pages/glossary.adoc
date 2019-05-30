@@ -49,6 +49,8 @@ Document Type:: IHub xref:glosary#secta[artifact] that identifies types of xref:
 [[secte]]
 *E*
 
+Endpoint:: Entry point to a service, process, queue or topic destination. 
+
 Environment ID:: String that uniquely identifies an xref:access-management/environments[Environment].
 
 External Partner:: Any company registered in PortX that is not the Home Partner.

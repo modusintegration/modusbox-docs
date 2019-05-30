@@ -7,7 +7,8 @@ If IHub has not been configured to receive a document of this Document Type, IHu
 
 == Actors
 
-In this scenario, there is three xref:glossary#secta[Actor]s: 
+In this scenario, there are three xref:glossary#secta[Actor]s: 
+    
 * Partner A (configured as *PartA*)
 * *_YourCompany_ B2B*
 * *Any*
@@ -48,7 +49,7 @@ image::basic-routing-scenario-artifacts.png[img-basic-routing-scenario-artifacts
 //== Configured in *YourCompany B2B : Any*
 
 .Basic Scenario Artifacts - *_YourCompany B2B_ : Any*
-[cols="4*" grid=all]
+[cols="2, 2, 6, 2"]
 
 |===
 h|Artifact|Artifact Name|Description|Configured on page
@@ -57,16 +58,6 @@ h|xref:glossary#sectd[Document Type]
 s|X
 |Document Type you use internally in your company
 |xref:document-types.adoc[Document Types]
-
-h|xref:glossary#sectd[Document Type]
-s|Y
-|Document Type you expect to receive from a partner
-|xref:document-types.adoc[Document Types]
-
-h|xref:glossary#sectm[Map]
-s|Y-to-X
-|Transforms a document of Document Type *Y* to a document of Document Type *X*
-|xref:maps.adoc[Maps]
 
 h|xref:glossary#secte[Endpoint]
 s|API
@@ -134,119 +125,7 @@ If the artifacts in the previous section have been configured correctly, then do
 
 Otherwise, the document will be <<Document Rejected, rejected>>.
 
-////
 
-The outcome of this scenario depends on whether the following artifacts are configured appropriately:
-
-* Partner *PartA*
-* Document Type *Y*
-* Document Type *X*
-* Endpoint *RecFromA*
-* Endpoint *API*
-* Target Channel *X-to-API*
-* Source Channel *Y-to-X*
-* Transaction *Y-to-X-to-API*
-
-////
-
-////
-
-.Basic Routing Scenario Artifact Summary 
-[cols="8*",options="header", e]
-[grid=all]
-|===
-|Relationship
-7+^|Artifact Type 
-||Partners|Document Types|Maps|Endpoints 
-2+^|Channels|Transactions
-
-5+||Source|Target|
-
-h|_YourCompany_ B2B : Any
-s|
-s|X
-s|
-s|API
-s|
-s|X-to-API
-|
-
-h|_YourCompany_ B2B : PartA
-s|PartA
-s|Y
-s|Y-to-X
-s|RecFromA
-s|Y-to-X
-s|
-s|Y-to-X-to-API
-
-||||||||
-||||||||
-||||||||
-||||||||
-|===
-
-
-.Basic Routing Scenario Artifact Summary Version Two 
-[cols="4*",options="header", e]
-[grid=all]
-|===
-|Relationship 2+|Artifact Type|Artifact Name
-
-.7+s|_YourCompany_ B2B : Any
-2+|Partners
-|
-
-2+|Document Type
-s|X
-
-2+|Maps
-|
-
-
-|Endpoints
-|
-|API
-
-.2+|Channels
-|Source
-|
-
-|Target
-s|X-to-API
-
-2+|Transactions
-s|Y-toX-to-API
-
-.7+s|_YourCompany_ B2B : PartA
-2+|Partners
-s|PartA
-
-2+|Document Type
-s|Y
-
-2+|Maps
-s|Y-to-X
-
-
-|Endpoints
-|
-s|API
-
-.2+|Channels
-|Source
-|
-
-|Target
-s|Y-to-X
-
-2+|Transactions
-s|Y-toX-to-API
-
-|===
-
-
-////
 
 == Document Accepted and Routed
 
@@ -258,14 +137,11 @@ image::basic-routing-scenario-outcome-success.png[img-basic-routing-scenario-out
 
 Integration Hub:
 
-* Receives a document of Document Type *Y*
+* Receives a document of Document Type *Y* from Endpoint *RecFromA*
 * Attempts to resolve routes
-** Finds a Transaction *Y-to-X-to-API* that contains *Y*.
+** Finds a Transaction *Y-to-X-to-API* that contains *Y*    
 * Executes Transaction *Y-to-X-to-API*, which transforms the Document from *Y* to *X*
 * Sends the document to Endpoint *API*.
-
-
-
 
 == Document Rejected
 
