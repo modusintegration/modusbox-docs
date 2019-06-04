@@ -139,8 +139,8 @@ Integration Hub:
 
 * Receives a document of Document Type *Y* from Endpoint *RecFromA*
 * Attempts to resolve routes
-** Finds a Transaction *Y-to-X-to-API* that contains *Y*    
-* Executes Transaction *Y-to-X-to-API*, which transforms the Document from *Y* to *X*
+** Finds a Transaction *Y-to-X-to-API* that contains Source Document Type of Document Type *Y*    
+* Executes Transaction *Y-to-X-to-API*, which transforms the Document from Document Type *Y* to Document Type *X*
 * Sends the document to Endpoint *API*.
 
 == Document Rejected
