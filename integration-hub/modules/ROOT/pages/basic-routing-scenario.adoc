@@ -1,11 +1,11 @@
 = Basic Routing Scenario
 
-In this scenario, your organization receives a xref:glossary#sectd[Document] from a xref:glossary#sectp[Partner]. 
+In this scenario, your organization receives a xref:glossary#sectd[document] from a xref:glossary#sectp[Partner]. 
 If IHub has been configured to receive a document of this xref:glossary#sectd[Document Type], IHub routes the document to an internal API. 
 If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
 
 
-== Actors
+== xref:glossary#secta[Actor]s
 
 In this scenario, there are three xref:glossary#secta[Actor]s: 
     
@@ -13,9 +13,9 @@ In this scenario, there are three xref:glossary#secta[Actor]s:
 * *_YourCompany_ B2B*
 * *Any*
 
-== Relationships
+== xref:glossary#sectr[Relationship]s
 
-There are two xref:glossary#sectr[Relationships] in this scenario:
+There are two xref:glossary#sectr[Relationship]s in this scenario:
 
 .Basic Routing Scenario Relationships
 [cols="3*"]
@@ -24,21 +24,21 @@ There are two xref:glossary#sectr[Relationships] in this scenario:
 |Relationship|Description|Contains
 
 s|_YourCompany_ B2B : Any
-|Universal relationship between your company any actor
-|Contains Artifacts used across all partners with whom you do business
+|Universal xref:glossary#sectr[Relationship] between your company and any xref:glossary#secta[Actor]
+|Contains xref:glossary#secta[Artifact]s used across all Partners with whom you do business
 
 s|_YourCompany_ B2B : PartA
-|Your organization's relationship with the partner with whom you are doing business (in this case, *PartA*)
-|Contains Artifacts used only with Partner *PartA*
+|Your organization's xref:glossary#sectr[Relationship] with the Partner with whom you are doing business (in this case, *PartA*)
+|Contains xref:glossary#secta[Artifact]s used only with Partner *PartA*
 |===
 
 
-== Artifacts 
+== xref:glossary#secta[Artifact]s 
 
 This section identifies:
 
-* Artifacts that must be configured in order for the document in this scenario to be routed (that is, not rejected)
-* The Relationship (either *_YourCompany_ B2B : Any* or *_YourCompany B2B_ : PartA*) in which the artifacts are configured
+* xref:glossary#secta[Artifact]s that must be configured in order for the document in this scenario to be routed (that is, not rejected)
+* The xref:glossary#sectr[Relationship] (either *_YourCompany_ B2B : Any* or *_YourCompany B2B_ : PartA*) in which the xref:glossary#secta[Artifact]s are configured
 
 [[img-basic-routing-scenario-artifacts]]
 
@@ -52,32 +52,32 @@ image::basic-routing-scenario-artifacts.png[img-basic-routing-scenario-artifacts
 [cols="2, 2, 6, 2"]
 
 |===
-h|Artifact|Artifact Name|Description|Configured on page
+h|xref:glossary#secta[Artifact]|xref:glossary#secta[Artifact] Name|Description|Configured on page
 
 h|xref:glossary#sectd[Document Type]
 s|X
-|Document Type you use internally in your company
+|xref:glossary#sectd[Document Type] you use internally in your company
 |xref:document-types.adoc[Document Types]
 
 h|xref:glossary#secte[Endpoint]
 s|API
-|Endpoint that points to an internal API
-|xref:endpoints.adoc[Endpoints] 
+|xref:glossary#secte[Endpoint] that points to an internal API
+|xref:xref:glossary#secte[Endpoint]s.adoc[Endpoints] 
 
 h|xref:glossary#sectt[Target Channel]
 s|X-to-API
-|Channel that sends a document of the internal Document Type *X* to Endpoint *API*
+|Channel that sends a document of the internal xref:glossary#sectd[Document Type] *X* to xref:glossary#secte[Endpoint] *API*
 |xref:channels.adoc[Channels] 
 
 h|xref:glossary#secte[RecFromA]
 s|API
-|Endpoint from which you expect to receive documents from *PartA*. 
+|xref:glossary#secte[Endpoint] from which you expect to receive documents from *PartA*. 
 |xref:endpoints.adoc[Endpoints] 
 
 h|xref:glossary#sectt[Transaction]
 s|Y-to-X-to-API
 |Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
-It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*. 
+It receives a document of xref:glossary#sectd[Document Type] *Y*, maps it to a document of xref:glossary#sectd[Document Type] *X* and then sends it to xref:glossary#secte[Endpoint] *API*. 
 In this Transaction, the From Partner is configured as *PartA* and the To Partner as *_YourCompany_ B2B*. 
 
 |===
@@ -88,21 +88,21 @@ In this Transaction, the From Partner is configured as *PartA* and the To Partne
 
 [cols="2, 2, 6, 2"]
 |===
-|Artifact|Artifact Name|Description|Configured on page
+|xref:glossary#secta[Artifact]|xref:glossary#secta[Artifact] Name|Description|Configured on page
 
 |xref:glossary#secte[Endpoint]
 |*RecFromA*
-|Endpoint at which you expect to receive documents from *PartA*
+|xref:glossary#secte[Endpoint] at which you expect to receive documents from *PartA*
 |xref:endpoints.adoc[Endpoints] 
 
 |xref:glossary#sectd[Document Type]
 |*Y*
-|Document Type that includes a document you expect to receive from *PartA*
+|xref:glossary#sectd[Document Type] that includes a document you expect to receive from *PartA*
 |xref:document-types.adoc[Document Types]
 
 |xref:glossary#sectm[Map] 
 |*Y-to-X*
-|Transforms a document of Document Type *Y* to a document of Document Type *X*
+|Transforms a document of xref:glossary#sectd[Document Type] *Y* to a document of xref:glossary#sectd[Document Type] *X*
 |xref:maps.adoc[Maps]
 
 |xref:glossary#sects[Source Channel]
@@ -113,7 +113,7 @@ In this Transaction, the From Partner is configured as *PartA* and the To Partne
 |xref:glossary#sect[Transaction] 
 |*Y-to-X-to-API*
 |Combination of the Source Channel *Y-to-X* and the Target Channel *X-to-API*.
-It receives a document of *Y*, maps it to a document of *X* and then sends it to Endpoint *API*. 
+It receives a document of *Y*, maps it to a document of *X* and then sends it to xref:glossary#secte[Endpoint] *API*. 
 In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
 |xref:transaction-designer.adoc[Transaction Designer] 
 
@@ -121,7 +121,7 @@ In this Transaction, the *From* Partner is configured as *PartA* and the *To* Pa
 
 == Outcomes
 
-If the artifacts in the previous section have been configured correctly, then document discussed above will be <<Document Accepted and Routed, accepted and routed>>. 
+If the xref:glossary#secta[Artifact]s in the previous section have been configured correctly, then document discussed above will be <<Document Accepted and Routed, accepted and routed>>. 
 
 Otherwise, the document will be <<Document Rejected, rejected>>.
 
@@ -129,7 +129,7 @@ Otherwise, the document will be <<Document Rejected, rejected>>.
 
 == Document Accepted and Routed
 
-All artifacts are correctly configured; IHub routes an incoming document of Document Type *Y* from Partner *PartA* to Endpoint *RecFromA*.
+All xref:glossary#secta[Artifact]s are correctly configured; IHub routes an incoming document of xref:glossary#sectd[Document Type] *Y* from Partner *PartA* to xref:glossary#secte[Endpoint] *RecFromA*.
 
 [[img-basic-routing-scenario-outcome-success]]
 
@@ -137,16 +137,16 @@ image::basic-routing-scenario-outcome-success.png[img-basic-routing-scenario-out
 
 Integration Hub:
 
-* Receives a document of Document Type *Y* from Endpoint *RecFromA*
+* Receives a document of xref:glossary#sectd[Document Type] *Y* from xref:glossary#secte[Endpoint] *RecFromA*
 * Attempts to resolve routes
-** Finds a Transaction *Y-to-X-to-API* that contains Source Document Type of Document Type *Y*    
-* Executes Transaction *Y-to-X-to-API*, which transforms the Document from Document Type *Y* to Document Type *X*
-* Sends the document to Endpoint *API*.
+** Finds a Transaction *Y-to-X-to-API* that contains Source xref:glossary#sectd[Document Type] of xref:glossary#sectd[Document Type] *Y*    
+* Executes Transaction *Y-to-X-to-API*, which transforms the Document from xref:glossary#sectd[Document Type] *Y* to xref:glossary#sectd[Document Type] *X*
+* Sends the document to xref:glossary#secte[Endpoint] *API*.
 
 == Document Rejected
 
-Partner *PartA* sends a document of Document Type *Z* to Endpoint *RecFromA*. 
-Document Type *Z* is not configured in Relationship *_YourCompany_ B2B : Any*; IHub rejects the document. 
+Partner *PartA* sends a document of xref:glossary#sectd[Document Type] *Z* to xref:glossary#secte[Endpoint] *RecFromA*. 
+xref:glossary#sectd[Document Type] *Z* is not configured in xref:glossary#sectr[Relationship] *_YourCompany_ B2B : Any*; IHub rejects the document. 
 
 [[img-basic-routing-scenario-outcome-rejection]]
 

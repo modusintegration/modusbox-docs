@@ -36,7 +36,7 @@ specific to the source of a transmission.
 *D*
 
 Document:: An instance of structured payload data being passed through Integration Hub. 
-
++
 Used interchangeably with other terms commonly used in integration-related domains. For example, file, payload, message.
 
 Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
