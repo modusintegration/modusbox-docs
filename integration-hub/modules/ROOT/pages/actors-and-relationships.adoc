@@ -1,17 +1,22 @@
 = Actors and Relationships
 
-An IHub xref:glossary#secta[Actor] is an entity, such as a partner, an application, or *_YourCompany_ B2B* within which you can create xref:glossary#secta[Artifact]s, such as xref:sectd[Document Types] and xref:glossary#secte[Endpoints].
+An IHub xref:glossary#secta[Actor] is an entity within which you can create xref:glossary#secta[Artifact]s, such as xref:sectd[Document Types] and xref:glossary#secte[Endpoints].
 
 You can connect one xref:secta[Actor] to another to form a xref:glossary#sectr[Relationship].
 
-== Types of xref:secta[Actor]s
-
 There are three types of xref:glossary#secta[Actor]s:
 
-=== Partners
+* <<Partners>>
+* <<Applications>>
+* <<YourCompany B2B>>
+
+== Partners
 
 A xref:glossary#sectp[Partner] is a company that exchanges B2B messages, such as *PartA* in xref:basic-routing-scenario.adoc[Basic Routing Scenario]. 
 
-=== Applications
+== Applications
 
-An xref:glossary#secta[Application] is a software program, or group of programs, that have a role within your organization such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario]
+An xref:glossary#secta[Application] is a software program, or group of programs, that have a role within your organization such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario].
+
+== YourCompany B2B
+
