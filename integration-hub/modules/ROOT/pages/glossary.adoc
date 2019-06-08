@@ -12,7 +12,7 @@ xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz
 [[secta]]
 *A*
 
-Actor:: An entity, such as a partner, and application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
+Actor:: An entity, such as a partner, an application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
 
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
@@ -27,8 +27,8 @@ Artifact:: Software component of the IHub system.
 
 [[sectc]]
 
-Channel:: Grouping of xref:glossary#secta[artifact]s of 
-specific to the source of a transmission. 
+Channel:: Grouping of xref:glossary#secta[Artifact]s 
+specific to a transmission. 
 
 
 
@@ -39,12 +39,14 @@ Document:: An instance of structured payload data being passed through Integrati
 +
 Used interchangeably with other terms commonly used in integration-related domains. For example, file, payload, message.
 
+////
 Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
+////
 
 Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
-Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document.  These properties are extracted and stored by the Tracking service.
+Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted and stored by the Tracking service.
 
-Document Type:: IHub xref:glosary#secta[artifact] that identifies types of xref:glosary#sectd[document]s based on values such as xref:glosary#sects[standard] and xref:glosary#sectm[message type].
+Document Type:: IHub xref:glossary#secta[Artifact] that identifies types of xref:glosary#sectd[document]s based on values such as xref:glosary#sects[standard] and xref:glosary#sectm[message type].
 
 [[secte]]
 *E*

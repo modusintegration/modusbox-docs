@@ -5,7 +5,7 @@
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 *** xref:resolution-processes.adoc[Resolution Processes]
 *** xref:tracking.adoc[Tracking]
-
+*** xref:actors-and-relationships.adoc[Actors and Relationships]
 ** xref:routing-scenarios.adoc[Routing Scenarios]
 *** xref:basic-routing-scenario.adoc[Basic]
 *** xref:shared-routing-scenario.adoc[Shared]
