@@ -1,0 +1,67 @@
+= Actors, Relationships, and Artifacts
+
+This page introduces and defines Integration Hub's fundamental building blocks: 
+xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s.
+
+== Actors
+
+An IHub xref:glossary#secta[Actor] is an entity within which you can create xref:glossary#secta[Artifact]s, such as xref:sectd[Document Types] and xref:glossary#secte[Endpoints].
+
+There are four types of xref:glossary#secta[Actor]s:
+
+* <<Partners>>
+* <<Applications>>
+* <<YourCompany B2B>>
+* <<Any>>
+
+
+=== Partners
+
+A xref:glossary#sectp[Partner] is a company that exchanges B2B messages, such as *PartA* in xref:basic-routing-scenario.adoc[Basic Routing Scenario]. 
+
+== Applications
+
+An xref:glossary#secta[Application] is a software program, or group of programs, that have a role within your organization such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario].
+
+=== YourCompany B2B
+
+*_YourCompany_ B2B* is your company's gateway between its internal systems and its <<Partners>>. You can see this actor works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+=== Any
+
+*Any* refers to all application-specific information. You can see this actor works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+== Relationships
+
+You can connect one xref:secta[Actor] to another to form a xref:glossary#sectr[Relationship]. A xref:glossary#sectr[Relationship], then, is the union of an actor with another actor for the purpose of partitioning xref:glossary#secta[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#sectr[Relationship]s: 
+
+* *_YourCompany_ B2B : Any*
+* *_YourCompany_ B2B : PartA*
+
+== Artifacts
+
+An xref:glossary#secta[Artifact] is a software component of the IHub system. 
+
+=== xref:glossary#sectd[Document Type]
+
+Identifies types of xref:glossary#sectd[document]s based on values such as xref:glossary#sects[standard] and xref:glossary#sectm[message type].
+
+=== xref:glossary#secte[Endpoint]
+
+Entry point to a service, process, queue or topic destination. 
+
+=== xref:glossary#sectc[Channel]
+
+Grouping of xref:glossary#secta[Artifact]s 
+specific to a transmission. 
+
+=== xref:glossary#sectm[Map] 
+
+Transforms one xref:glossary#sectd[Document Type] to another xref:glossary#sectd[Document Type].
+
+=== xref:glossary#sect[Transaction]
+
+The end-to-end processing of a single instance of a xref:glossary#sectd[Document] from receipt at an xref:glossary#secte[Endpoint] all the way to the desired business service.  
+
+
+

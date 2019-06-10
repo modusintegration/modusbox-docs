@@ -46,7 +46,7 @@ Document Definition:: A specific document format that is configured in the syste
 Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
 Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted and stored by the Tracking service.
 
-Document Type:: IHub xref:glossary#secta[Artifact] that identifies types of xref:glosary#sectd[document]s based on values such as xref:glosary#sects[standard] and xref:glosary#sectm[message type].
+Document Type:: IHub xref:glossary#secta[Artifact] that identifies types of xref:glossary#sectd[document]s based on values such as xref:glossary#sects[standard] and xref:glossary#sectm[message type].
 
 [[secte]]
 *E*
@@ -75,7 +75,7 @@ Lookup Table:: A table that facilitates transaction processing by associating va
 [[sectm]]
 *M*
 
-Map:: Stores map type (XSLT or DataWeave) and script for transforming from one Document Definition to another Document Definition. 
+Map:: Transforms one Document Type to another Document Type. 
 
 Message Type:: One of several values that together define a xref:glossary#sectd[Document Type].
 
@@ -89,10 +89,10 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 [[sectr]]
 *R*
 
-Relationship:: Union of an actor with another actor or with all actors configured in your impleentation of IHub. 
+Relationship:: Union of an actor with another actor for the purpose of partitioning artifacts.
 Analagous to a programming namespace. 
 
-Route:: IHub xref:glosary#seca[artifact] that connects a xref:glosary#sects[Source Channel] to a xref:glosary#sect[Target Channel].
+Route:: IHub xref:glossary#seca[artifact] that connects a xref:glossary#sects[Source Channel] to a xref:glossary#sect[Target Channel].
  
 [[sects]]
 *S*
@@ -117,7 +117,7 @@ Standard PortX Field Format:: Describes fields for which valid values can includ
 Target Channel:: Type of xref:glossary#sectc[Channel] specific to the destination of a transmission. 
 
 
-Transaction:: The end-to-end processing of a single instance of a document from receipt at an xref:glosary#secte[Endpoint] all the way to the desired business service.  
+Transaction:: The end-to-end processing of a single instance of a xref:glossary#sectd[Document] from receipt at an xref:glossary#secte[Endpoint] all the way to the desired business service.  
 A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
