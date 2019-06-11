@@ -1,24 +1,26 @@
-= Actors, Relationships, and Artifacts
+= xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s
 
 This page introduces and defines Integration Hub's fundamental building blocks: 
 xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s.
 
-== Actors
+== Actor
 
-An IHub xref:glossary#secta[Actor] is an entity that you can pair with another xref:glossary#secta[Actor] to form a 
+An IHub 
+xref:glossary#secta[Actor] 
+is an entity that you can pair with another xref:glossary#secta[Actor] to form a 
 xref:glossary#sectr[Relationship].
 
-////
-within which you can create xref:glossary#secta[Artifact]s, such as xref:sectd[Document Types] and xref:glossary#secte[Endpoints].
-////
+An xref:glossary#secta[Actor] contains  
+xref:glossary#secti[Identifier]s that identify it to IHub, and may contain 
+xref:glossary#sectc[Certificate]s 
+if you add them.
 
 There are four types of xref:glossary#secta[Actor]s:
 
-* <<Partners>>
+* <<Partner-s>>
 * <<Applications>>
 * <<YourCompany B2B>>
 * <<Any>>
-
 
 === Partners
 
@@ -34,16 +36,17 @@ An xref:glossary#secta[Application] is a software program, or group of programs,
 
 === Any
 
-*Any* refers to all application-specific information. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+*Any* refers to all shared application-specific information. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
 
 == xref:glossary#sectr[Relationship]s
 
-You can connect one xref:secta[Actor] to another to form a xref:glossary#sectr[Relationship]. A xref:glossary#sectr[Relationship] is the union of an xref:glossary#secta[Actor] with another xref:glossary#secta[Actor] for the purpose of partitioning xref:glossary#secta[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#sectr[Relationship]s: 
+You can connect one xref:secta[Actor] to another to form a xref:glossary#sectr[Relationship]. A xref:glossary#sectr[Relationship] is the union of an xref:glossary#secta[Actor] with another xref:glossary#secta[Actor] for the purpose of partitioning 
+xref:glossary#secta[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#sectr[Relationship]s: 
 
 *_YourCompany_ B2B : Any* :: Universal xref:glossary#sectr[Relationship] between your company and any xref:glossary#secta[Actor]
 *_YourCompany_ B2B : PartA* :: Your organization's xref:glossary#sectr[Relationship] with the xref:glossary#sectp[Partner] with whom you are doing business (in xref:basic-routing-scenario.adoc[Basic Routing Scenario], this is *PartA*)
 
-== Artifacts
+== xref:glossary#secta[Artifact]s
 
 An xref:glossary#secta[Artifact] is a software component of the IHub system that resides in a xref:glossary#sectr[Relationship]. This section identifies all IHub xref:glossary#secta[Artifact]s.
 
