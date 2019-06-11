@@ -28,7 +28,7 @@ s|_YourCompany_ B2B : Any
 |Contains xref:glossary#secta[Artifact]s used across all Partners with whom you do business
 
 s|_YourCompany_ B2B : PartA
-|Your organization's xref:glossary#sectr[Relationship] with the Partner with whom you are doing business (in this case, *PartA*)
+|Your organization's xref:glossary#sectr[Relationship] with the xref:glossary#sectp[Partner] with whom you are doing business (in this case, *PartA*)
 |Contains xref:glossary#secta[Artifact]s used only with Partner *PartA*
 |===
 
