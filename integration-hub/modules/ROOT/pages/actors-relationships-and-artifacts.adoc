@@ -1,0 +1,77 @@
+= Actors, Relationships, and Artifacts
+
+This page introduces and defines Integration Hub's fundamental building blocks: 
+xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s.
+
+== Actors
+
+An IHub 
+xref:glossary#secta[Actor] 
+is an entity that you can pair with another xref:glossary#secta[Actor] to form a 
+xref:glossary#sectr[Relationship].
+
+An xref:glossary#secta[Actor] contains  
+xref:glossary#secti[Identifier]s that identify it to IHub, and may contain 
+xref:glossary#sectc[Certificate]s 
+if you add them.
+
+There are four types of xref:glossary#secta[Actor]s:
+
+* <<Partners>>
+* <<Applications>>
+* <<YourCompany B2B>>
+* <<Any>>
+
+=== Partners
+
+A xref:glossary#sectp[Partner] is an organization that exchanges B2B xref:glossary#sectd[document]s with your organization, such as *PartA* in xref:basic-routing-scenario.adoc[Basic Routing Scenario]. 
+
+=== Applications
+
+An 
+xref:glossary#secta[Application]
+is a software program, or group of programs, that have a role within your organization, such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario].
+
+=== YourCompany B2B
+
+*_YourCompany_ B2B* is your organization's gateway between its applications and its <<Partners>>. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+=== Any
+
+*Any* refers to all shared application-specific information. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+== Relationships
+
+You can connect one xref:secta[Actor] to another to form a xref:glossary#sectr[Relationship]. A xref:glossary#sectr[Relationship] is the union of an xref:glossary#secta[Actor] with another xref:glossary#secta[Actor] for the purpose of partitioning 
+xref:glossary#secta[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#sectr[Relationship]s: 
+
+*_YourCompany_ B2B : Any* :: Universal xref:glossary#sectr[Relationship] between your company and any xref:glossary#secta[Actor]
+*_YourCompany_ B2B : PartA* :: Your organization's xref:glossary#sectr[Relationship] with the xref:glossary#sectp[Partner] with whom you are doing business (in xref:basic-routing-scenario.adoc[Basic Routing Scenario], this is *PartA*)
+
+== Artifacts
+
+An xref:glossary#secta[Artifact] is a software component of the IHub system that resides in a xref:glossary#sectr[Relationship]. This section identifies all IHub xref:glossary#secta[Artifact]s.
+
+=== xref:glossary#sectd[Document Type]
+
+Identifies types of xref:glossary#sectd[document]s based on values such as xref:glossary#sects[Standard] and xref:glossary#sectm[Message Type].
+
+=== xref:glossary#secte[Endpoint]
+
+Entry point to a service, process, queue or topic destination. 
+
+=== xref:glossary#sectc[Channel]
+
+Grouping of xref:glossary#secta[Artifact]s 
+specific to a transmission. 
+
+=== xref:glossary#sectm[Map] 
+
+Transforms one xref:glossary#sectd[Document Type] to another xref:glossary#sectd[Document Type].
+
+=== xref:glossary#sect[Transaction]
+
+The end-to-end processing of a single instance of a xref:glossary#sectd[document] from receipt at an xref:glossary#secte[Endpoint] all the way to the appropriate business service.  
+
+
+

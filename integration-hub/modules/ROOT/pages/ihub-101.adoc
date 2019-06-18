@@ -39,18 +39,18 @@ xref:glossary#sectt[Target Channel]
 
 
 
+== Actors
 
+* YourCompany B2B
+* PartA
+** certs
+** identifiers
 
-YourCompany B2B
-PartA
-* certs
-* identifiers
-
-Relationships
-facilitate integration
-aritifacts live inside
-partition
-scope for reuse of artifacts
+== Relationships
+*facilitate integration
+* aritifacts live inside
+* partition
+* scope for reuse of artifacts
 
 This scenario
 PartA sends you some kind of doc
@@ -60,7 +60,7 @@ map to doc x (internal)
 maybe x12 to json tps
 internal api endpoint
 
-steps
+== steps
 
 1. what to do with it when i receive 
 2. where do i want to send it
