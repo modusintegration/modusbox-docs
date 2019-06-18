@@ -3,7 +3,7 @@
 This page introduces and defines Integration Hub's fundamental building blocks: 
 xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s.
 
-== Actor
+== Actors
 
 An IHub 
 xref:glossary#secta[Actor] 
