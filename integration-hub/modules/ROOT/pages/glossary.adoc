@@ -12,7 +12,7 @@ xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz
 [[secta]]
 *A*
 
-Actor:: An entity, such as a partner, and application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
+Actor:: An entity, such as a partner, an application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
 
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
@@ -27,8 +27,10 @@ Artifact:: Software component of the IHub system.
 
 [[sectc]]
 
-Channel:: Grouping of xref:glossary#secta[artifact]s of 
-specific to the source of a transmission. 
+Channel:: Grouping of xref:glossary#secta[Artifact]s 
+specific to a transmission. 
+
+Certificate:: A digital file that identifies and authenticates an entity or service. 
 
 
 
@@ -36,18 +38,22 @@ specific to the source of a transmission.
 *D*
 
 Document:: An instance of structured payload data being passed through Integration Hub. 
-
++
 Used interchangeably with other terms commonly used in integration-related domains. For example, file, payload, message.
 
+////
 Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
+////
 
 Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
-Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document.  These properties are extracted and stored by the Tracking service.
+Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted and stored by the Tracking service.
 
-Document Type:: IHub xref:glosary#secta[artifact] that identifies types of xref:glosary#sectd[document]s based on values such as xref:glosary#sects[standard] and xref:glosary#sectm[message type].
+Document Type:: IHub xref:glossary#secta[Artifact] that identifies types of xref:glossary#sectd[document]s based on values such as xref:glossary#sects[standard] and xref:glossary#sectm[message type].
 
 [[secte]]
 *E*
+
+Endpoint:: Entry point to a service, process, queue or topic destination. 
 
 Environment ID:: String that uniquely identifies an xref:access-management/environments[Environment].
 
@@ -63,6 +69,13 @@ External Partner:: Any company registered in PortX that is not the Home Partner.
 
 Home Partner:: The company that is subscribing to Integration Hub, considered the “internal” partner.
 
+[[secti]]
+*I*
+
+Identifier:: Digital file that idenitifes an 
+xref:glossary#secta[Actor] 
+to Integration Hub.
+
 [[sectl]]
 *L*
 
@@ -71,7 +84,7 @@ Lookup Table:: A table that facilitates transaction processing by associating va
 [[sectm]]
 *M*
 
-Map:: Stores map type (XSLT or DataWeave) and script for transforming from one Document Definition to another Document Definition. 
+Map:: Transforms one Document Type to another Document Type. 
 
 Message Type:: One of several values that together define a xref:glossary#sectd[Document Type].
 
@@ -85,10 +98,10 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 [[sectr]]
 *R*
 
-Relationship:: Union of an actor with another actor or with all actors configured in your impleentation of IHub. 
+Relationship:: Union of an actor with another actor for the purpose of partitioning artifacts.
 Analagous to a programming namespace. 
 
-Route:: IHub xref:glosary#seca[artifact] that connects a xref:glosary#sects[Source Channel] to a xref:glosary#sect[Target Channel].
+Route:: IHub xref:glossary#seca[artifact] that connects a xref:glossary#sects[Source Channel] to a xref:glossary#sect[Target Channel].
  
 [[sects]]
 *S*
@@ -113,7 +126,7 @@ Standard PortX Field Format:: Describes fields for which valid values can includ
 Target Channel:: Type of xref:glossary#sectc[Channel] specific to the destination of a transmission. 
 
 
-Transaction:: The end-to-end processing of a single instance of a document from receipt at an xref:glosary#secte[Endpoint] all the way to the desired business service.  
+Transaction:: The end-to-end processing of a single instance of a xref:glossary#sectd[Document] from receipt at an xref:glossary#secte[Endpoint] all the way to the desired business service.  
 A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
