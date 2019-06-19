@@ -375,6 +375,7 @@ Add the following to you _dependencies_ section :
     <groupId>com.jdedwards</groupId>
     <artifactId>jde-lib-bundle</artifactId>
     <version>1.0.0</version>
+    <classifier>mule-4</classifier>
 </dependency>
 ----
 
