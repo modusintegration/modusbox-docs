@@ -1,4 +1,4 @@
-= *PortX JD Edwards Connector for Mule 4 - Getting Started Guide*
+= *PortX JD Edwards Connector for Mule 4 - User Guide*
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
