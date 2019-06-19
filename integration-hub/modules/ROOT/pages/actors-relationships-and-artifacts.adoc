@@ -3,17 +3,18 @@
 This page introduces and defines Integration Hub's fundamental building blocks: 
 xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s.
 
-== Actor
+== Actors
 
 An IHub 
 xref:glossary#secta[Actor] 
 is an entity that you can pair with another xref:glossary#secta[Actor] to form a 
 xref:glossary#sectr[Relationship].
 
-An xref:glossary#secta[Actor] contains  
-xref:glossary#secti[Identifier]s that identify it to IHub, and may contain 
-xref:glossary#sectc[Certificate]s 
-if you add them.
+An xref:glossary#secta[Actor] contains: 
+
+* xref:glossary#secti[Identifier]s that identify it to IHub
+* xref:glossary#sectc[Certificate]s 
+(if you add them)
 
 There are four types of xref:glossary#secta[Actor]s:
 
