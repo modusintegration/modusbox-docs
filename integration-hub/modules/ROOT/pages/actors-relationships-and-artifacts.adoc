@@ -10,10 +10,11 @@ xref:glossary#secta[Actor]
 is an entity that you can pair with another xref:glossary#secta[Actor] to form a 
 xref:glossary#sectr[Relationship].
 
-An xref:glossary#secta[Actor] contains  
-xref:glossary#secti[Identifier]s that identify it to IHub, and may contain 
-xref:glossary#sectc[Certificate]s 
-if you add them.
+An xref:glossary#secta[Actor] contains: 
+
+* xref:glossary#secti[Identifier]s that identify it to IHub
+* xref:glossary#sectc[Certificate]s 
+(if you add them)
 
 There are four types of xref:glossary#secta[Actor]s:
 
