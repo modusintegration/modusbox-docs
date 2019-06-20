@@ -1,17 +1,10 @@
 
 
-= Partner and Application Configuration
+= Actor (Partner and Application) Configuration
 
-:keywords: portal, partner, application manager
+:keywords: portal, actor, partner, application manager
 
 
-To configure a partner or application relationship using PortX, you must:
-
-. Configure settings for your company
-+
-NOTE: Your company may have been set up during the provisioning process. If so, its name appears at the top of the list on the  xref:img-partners-and-applications[], identified as *YOUR COMPANY*.
-
-. Configure settings for a partner.
 
 == Get Started
 
@@ -25,19 +18,26 @@ image::partners-and-applications.png[img-partners-and-applications,title="Partne
 
 [start=2]
 
-== Create and Configure Partners
+== Add or Edit a Partner
 
-. On the xref:img-partners-and-applications[]:
-+
-To add or edit settings for the _Home Partner_ (*Your company* on the *Partners* tab of 
-xref:img-partners-and-applications[]), click the name of your company.
+. On the xref:img-partners-and-applications[]
+
 +
 To add a new partner, click *Add Partner*.
++ 
+To edit information for an existing Partner click the name of the Partner in the *Partners and Applications* list. 
 +
-To edit settings for an existing trading partner, click the name of the partner.
+To edit information for **__YourCompany__ B2B**,  click **__YourCompany__ B2B** in the *Partners and Applications* list.
 +
 The xref:img-partner-information[] appears.
 
+== Add or Edit an Application
+
+. To add a new application, click *Add Application*.
+
++ 
+To edit information for an existing Application, click the name of the Application in the *Partners and Applications* list. 
+The xref:img-application-information[] appears.
 
 
 [[img-partner-information]]
