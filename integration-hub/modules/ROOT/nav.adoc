@@ -21,7 +21,7 @@
 *** xref:central-pane-elements.adoc[Central Pane Elements]
 *** xref:tracking-scenarios.adoc[Tracking Scenarios]
 
-** xref:partner-configuration.adoc[Partner Configuration]
+** xref:partner-configuration.adoc[Actor Configuration]
 
 *** xref:company-information.adoc[Company Information]
 *** xref:identifiers.adoc[Identifiers]
