@@ -1,7 +1,7 @@
 = Actors, Relationships, and Artifacts
 
 This page introduces and defines Integration Hub's fundamental building blocks: 
-xref:glossary#secta[Actor]s, xref:glossary#sectr[Relationship]s, and xref:glossary#secta[Artifact]s.
+xref:glossary#A[Actor]s, xref:glossary#R[Relationship]s, and xref:glossary#A[Artifact]s.
 
 == Actors
 
@@ -20,7 +20,7 @@ There are four types of xref:glossary#secta[Actor]s:
 
 * <<Partners>>
 * <<Applications>>
-* <<YourCompany B2B>>
+* <<your-company-b2b>>
 * <<Any>>
 
 === Partners
@@ -33,7 +33,10 @@ An
 xref:glossary#secta[Application]
 is a software program, or group of programs, that have a role within your organization, such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario].
 
-=== YourCompany B2B
+
+[[your-company-b2b, **_YourCompany_ B2B**]]
+=== _YourCompany_ B2B
+
 
 *_YourCompany_ B2B* is your organization's gateway between its applications and its <<Partners>>. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
 

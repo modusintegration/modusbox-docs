@@ -2,15 +2,14 @@
 
 :keywords: Anypoint B2B PortX
 
-xref:secta[A] xref:sectc[C] xref:sectd[D] xref:secte[E] xref:sectf[F] xref:sectg[G] xref:secth[H] xref:secti[I] xref:sectj[J] xref:sectk[K] xref:sectl[L] xref:sectm[M] xref:sectn[N] xref:secto[O] xref:sectp[P] xref:sectq[Q] xref:sectr[R] xref:sects[S] xref:sectt[T] xref:secty[Y]
+<<A>> <<C>> <<D>> <<E>> <<H>> <<I>>  <<L>> <<M>> <<P>> <<R>> <<S>> <<T>> <<Y>>
 
 ////
-xref:sectb[B]
-xref:sectu[U] xref:sectv[V] xref:sectw[W] xref:sectx[X] xref:secty[Y] xref:sectz[Z]
+<<B>> <<F>> <<G>> <<J>> <<K>> <<N>> <<O>> 
+<<Q>> <<U>> <<V>> <<W>> <<X>> <<Y>> <<Z>>
 ////
 
-[[secta]]
-*A*
+== A
 
 Actor:: An entity, such as a partner, an application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
 
@@ -27,8 +26,7 @@ Artifact:: Software component of the IHub system.
 *B*
 ////
 
-[[sectc]]
-*C*
+== C
 
 Channel:: Grouping of xref:glossary#secta[Artifact]s 
 specific to a transmission. 
@@ -37,8 +35,7 @@ Certificate:: A digital file that identifies and authenticates an entity or serv
 
 
 
-[[sectd]]
-*D*
+== D
 
 Document:: An instance of structured payload data being passed through Integration Hub. 
 +
@@ -53,8 +50,7 @@ Document Properties are configured for Document Definitions.  The user provides 
 
 Document Type:: IHub xref:glossary#secta[Artifact] that identifies types of xref:glossary#sectd[document]s based on values such as xref:glossary#sects[standard] and xref:glossary#sectm[message type].
 
-[[secte]]
-*E*
+== E
 
 Endpoint:: Entry point to a service, process, queue or topic destination. 
 
@@ -67,47 +63,40 @@ External Partner:: Any company registered in PortX that is not the Home Partner.
 *F*
 ////
 
-[[secth]]
-*H*
+== H
 
 Home Partner:: The company that is subscribing to Integration Hub, considered the “internal” partner.
 
-[[secti]]
-*I*
+== I
 
 Identifier:: Digital file that idenitifes an 
 xref:glossary#secta[Actor] 
 to Integration Hub.
 
-[[sectl]]
-*L*
+== L
 
 Lookup Table:: A table that facilitates transaction processing by associating values.
 
-[[sectm]]
-*M*
+== M
 
 Map:: Transforms one Document Type to another Document Type. 
 
 Message Type:: One of several values that together define a xref:glossary#sectd[Document Type].
 
-[[sectp]]
-*P*
+== P
 
 Partner:: A company that exchanges B2B messages; one of the types of IHub xref:glossary#seca[Actor]s. 
 
 Partner Identifier:: A predefined identifier of a particular Partner.  Partner Identifiers have Type and Qualifier that indicate the identifier scheme and Value.
 
-[[sectr]]
-*R*
+== R
 
 Relationship:: Union of an actor with another actor for the purpose of partitioning artifacts.
 Analagous to a programming namespace. 
 
 Route:: IHub xref:glossary#seca[artifact] that connects a xref:glossary#sects[Source Channel] to a xref:glossary#sect[Target Channel].
  
-[[sects]]
-*S*
+== S
 
 Schema:: The schema is stored with the Document Definition and is one of the following depending on the message type:
 
@@ -119,15 +108,11 @@ Source Channel:: Type of xref:channel.adoc[Channel] specific to the source of a 
 
 Standard:: One of several values that together define a xref:glossary#sectd[Document Type].
 
-*E*
-
 Standard PortX Field Format:: Describes fields for which valid values can include letters, numbers, or the dash ( *-* ) and underscore ( *_* ) characters.
 
-[[sectt]]
-*T*
+== T
 
-Target Channel:: Type of <<sectc>> xref:glossary#sectc[Channel] specific to the destination of a transmission. 
-
+Target Channel:: Type of <<C,Channel specific to the destination of a transmission. 
 
 Transaction:: The end-to-end processing of a single instance of a xref:glossary#sectd[Document] from receipt at an xref:glossary#secte[Endpoint] all the way to the desired business service.  
 A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
@@ -138,7 +123,6 @@ Transaction-processing solution:: Functionality that serves as a translation lay
 
 Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-integration-hub[PortX] (PortX)
 
-[[secty]]
-*Y*
+== Y
 
-YourCompany B2b:: *_YourCompany_ B2B* is your organization's gateway between its applications and its xref:glossary#sectp[Partner]s. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its xref:glossary#sectp[Partner]s. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
