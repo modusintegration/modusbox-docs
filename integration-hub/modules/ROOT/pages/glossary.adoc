@@ -2,7 +2,7 @@
 
 :keywords: Anypoint B2B PortX
 
-xref:secta[A] xref:sectc[C] xref:sectd[D] xref:secte[E] xref:sectf[F] xref:sectg[G] xref:secth[H] xref:secti[I] xref:sectj[J] xref:sectk[K] xref:sectl[L] xref:sectm[M] xref:sectn[N] xref:secto[O] xref:sectp[P] xref:sectq[Q] xref:sectr[R] xref:sects[S] xref:sectt[T]
+xref:secta[A] xref:sectc[C] xref:sectd[D] xref:secte[E] xref:sectf[F] xref:sectg[G] xref:secth[H] xref:secti[I] xref:sectj[J] xref:sectk[K] xref:sectl[L] xref:sectm[M] xref:sectn[N] xref:secto[O] xref:sectp[P] xref:sectq[Q] xref:sectr[R] xref:sects[S] xref:sectt[T] xref:secty[Y]
 
 ////
 xref:sectb[B]
@@ -16,6 +16,8 @@ Actor:: An entity, such as a partner, an application, or YourCompany B2B that ca
 
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
+Any:: IHub ref:glossary#secta[Actor] that includes all shared application-specific information. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
 Application:: Software program or programs that have a role within your organization. 
 
 Artifact:: Software component of the IHub system. 
@@ -26,6 +28,7 @@ Artifact:: Software component of the IHub system.
 ////
 
 [[sectc]]
+*C*
 
 Channel:: Grouping of xref:glossary#secta[Artifact]s 
 specific to a transmission. 
@@ -91,7 +94,7 @@ Message Type:: One of several values that together define a xref:glossary#sectd[
 [[sectp]]
 *P*
 
-Partner:: A company that exchanges B2B messages.
+Partner:: A company that exchanges B2B messages; one of the types of IHub xref:glossary#seca[Actor]s. 
 
 Partner Identifier:: A predefined identifier of a particular Partner.  Partner Identifiers have Type and Qualifier that indicate the identifier scheme and Value.
 
@@ -123,7 +126,7 @@ Standard PortX Field Format:: Describes fields for which valid values can includ
 [[sectt]]
 *T*
 
-Target Channel:: Type of xref:glossary#sectc[Channel] specific to the destination of a transmission. 
+Target Channel:: Type of <<sectc>> xref:glossary#sectc[Channel] specific to the destination of a transmission. 
 
 
 Transaction:: The end-to-end processing of a single instance of a xref:glossary#sectd[Document] from receipt at an xref:glossary#secte[Endpoint] all the way to the desired business service.  
@@ -134,3 +137,8 @@ Transaction Definition:: The full configuration that configures how a document i
 Transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
 
 Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-integration-hub[PortX] (PortX)
+
+[[secty]]
+*Y*
+
+YourCompany B2b:: *_YourCompany_ B2B* is your organization's gateway between its applications and its xref:glossary#sectp[Partner]s. You can see how this xref:glossary#secta[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
