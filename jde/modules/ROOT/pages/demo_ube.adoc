@@ -310,13 +310,13 @@ image:demo_ube/image30_demo_ube.png[image,width=506,height=202]
 
 === Defining Data Selection
 
-* The parameter _*_Selection*_ is used to define UBE Data Selection.
+* The parameter _Selection_ is used to define UBE Data Selection.
 * The sentence is similar to a WHERE clause of an SQL statement.
-* The _*_Selection*_ syntax is:
+* The _Selection_ syntax is:
 ** table.column_name operator [value|table.column_name];
 * The table must be a JDE table that belongs to the main view of the UBE.
 * Column Name must be a JDE Data Item Alias.
-* The following operators can be used in the _*_Selection*_ :
+* The following operators can be used in the _Selection_ :
 
 [cols=",",options="header",]
 |===
