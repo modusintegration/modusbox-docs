@@ -1,10 +1,10 @@
 = Shared Routing Scenario
 
-In this scenario, your organization wants to receive a document xref:glossary#sectd[Document] from two xref:glossary#sectp[Partners], map it to an internal standard, and send it to a backend database.
+In this scenario, your organization wants to receive a document xref:glossary#D[Document] from two xref:glossary#P[Partners], map it to an internal standard, and send it to a backend database.
 
 == Relationships
 
-There are three  xref:glossary#sectr[Relationships] in this scenario:
+There are three  xref:glossary#R[Relationships] in this scenario:
 
 .Shared Routing Scenario Relationships
 [cols="3*"]
@@ -41,34 +41,34 @@ This section identifies:
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#sectd[Document Type]
+|xref:glossary#D[Document Type]
 |Y
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
-h|xref:glossary#sectd[Document Type]
+h|xref:glossary#D[Document Type]
 s|X
 |Document Type you use internally in your company
 |xref:document-types.adoc[Document Types]
 
 
-|xref:glossary#sectm[Map] 
+|xref:glossary#M[Map] 
 s|Y-to-X
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:maps[Maps]
 
 
-|xref:glossary#sects[Source Channel]
+|xref:glossary#S[Source Channel]
 s|Y-to-X
 |Includes the process that maps and sends a document of *Y* to a document of *X*
 |xref:channels[Channels] 
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 s|API
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints]
 
-|xref:glossary#sectt[Target Channel ]
+|xref:glossary#T[Target Channel ]
 s|Y-to-API
 |Channel that sends a document of the internal Document Type Document Type *Y* to Endpoint *API*
 |xref:channels[Channels] 
@@ -88,12 +88,12 @@ image::shared-routing-scenario-artifacts-parta.png[img-shared-routing-scenario-a
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-h|xref:glossary#secte[Endpoint]
+h|xref:glossary#E[Endpoint]
 s|RecFromA
 |Endpoint from which you expect to receive documents from *PartA*. 
 |xref:endpoints.adoc[Endpoints] 
 
-h|xref:glossary#sectt[Transaction]
+h|xref:glossary#T[Transaction]
 s|Y-to-X-to-API (PartA)
 |Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*
 It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*.
@@ -118,12 +118,12 @@ image::shared-routing-scenario-artifacts-partb.png[img-shared-routing-scenario-a
 |Artifact|Artifact Name|Description|Configured on page
 
 
-h|xref:glossary#secte[Endpoint]
+h|xref:glossary#E[Endpoint]
 s|RecFromB
 |Endpoint from which you expect to receive documents from *PartB* 
 |xref:endpoints.adoc[Endpoints] 
 
-h|xref:glossary#sectt[Transaction]
+h|xref:glossary#T[Transaction]
 s|Y-to-X-to-API (PartB)
 |Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
 It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*. 

@@ -5,8 +5,8 @@
 
 PortX offers a flexible approach to setting up different kinds of configurations
 for 
-xref:glossary#sectd[Document Type]s,
-xref:glossary#secte[Endpoint]s
+xref:glossary#D[Document Type]s,
+xref:glossary#E[Endpoint]s
 and xref:routes.adoc[routes]. 
 For example, you can configure
 a catch-all document type for a given standard. You can then apply this

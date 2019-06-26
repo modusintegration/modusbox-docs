@@ -39,22 +39,22 @@ This tables and flow diagrams in this section identifies:
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#sectd[Document Type]
+|xref:glossary#D[Document Type]
 s|X
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 |*API*
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 |*Backup*
 |Endpoint that points to the API that backs up all received documents
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#sectt[Target Channel ]
+|xref:glossary#T[Target Channel ]
 s|X-to-API
 |Channel that sends a document of the internal Document Type *X* to Endpoint *API*
 |xref:channels[Channels] 
@@ -81,32 +81,32 @@ image::one-document-multiple-internal-routes-routing-scenario-transaction-y-to-x
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 s|RecFromA
 |Endpoint on which to receive documents from Partner *A*
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#sectd[Document Type]
+|xref:glossary#D[Document Type]
 s|Y
 |Document Type you expect to receive from a Partner
 |xref:document-types[Document Types]
 
-|xref:glossary#sectm[Map]
+|xref:glossary#M[Map]
 s|Y-to-X
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:maps[Maps]
 
-|xref:glossary#sects[Source Channel ]
+|xref:glossary#S[Source Channel ]
 |*Y-to-X*
 |Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
 |xref:channels[Channels] 
 
-|xref:glossary#sects[Source Channel ]
+|xref:glossary#S[Source Channel ]
 |*Y (passthru)*
 |Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
 |xref:channels[Channels]
 
-|xref:glossary#sectt[Target Channel ]
+|xref:glossary#T[Target Channel ]
 |*X-to-API*
 |Channel that sends a document of the internal Document Type *X* to Endpoint *API*
 |xref:channels[Channels] 

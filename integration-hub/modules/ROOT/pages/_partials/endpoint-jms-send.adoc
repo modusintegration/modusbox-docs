@@ -61,7 +61,7 @@ Default: *Queue*
 | Queue Name
 |
 Required?: Yes +
-Type:xref:glossary#sects[Standard APM field format] +
+Type:xref:glossary#S[Standard APM field format] +
 Default: None
 
 
