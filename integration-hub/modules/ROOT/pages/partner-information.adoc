@@ -14,7 +14,7 @@
 
 ** *Contact type* +
 (In the dropdown listbox, select *Technical*, *Business*, or *Both*.)
-. After you enter a contact type, you can enter the following contact-specific information. All fields are xref:glossary#S[standard PortX field format].
+. After you enter a contact type, you can enter the following contact-specific information. All fields are xref:glossary#s[standard PortX field format].
 
 ** *First Name*
 ** *Last Name*

@@ -1,11 +1,11 @@
 = Application-Sends-to-Partner
 
 
-In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
+In this scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to a xref:glossary#p[Partner].
 
 == Relationships
 
-There are four xref:glossary#R[Relationships] in this scenario:
+There are four xref:glossary#r[Relationships] in this scenario:
 
 |===
 |Relationship|Description|Contains
@@ -13,7 +13,7 @@ There are four xref:glossary#R[Relationships] in this scenario:
 
 s|AppA : Any
 |Universal Relationship between Application A and any other Application
-|Contains xref:glossary#A[Artifacts] specific to transactions between Application *A* and any other Application.
+|Contains xref:glossary#a[Artifacts] specific to transactions between Application *A* and any other Application.
 
 s|_YourCompany_ B2B : Any
 |Universal relationship between your company and any partner
@@ -48,7 +48,7 @@ This tables and flow diagrams in this section identifies:
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#D[Document Type]
+|xref:glossary#d[Document Type]
 s|Y
 |Document Type you expect to receive from this Application
 |xref:document-types.adoc[Document Types]
@@ -62,22 +62,22 @@ s|Y
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#D[Document Type]
+|xref:glossary#d[Document Type]
 s|X
 |Document Type your company uses internally
 |xref:document-types.adoc[Document Types]
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 |*Router*
 |Endpoint used to route Documents
 |xref:endpoints.adoc[Endpoints] 
 
-|xref:glossary#T[Target Channel]
+|xref:glossary#t[Target Channel]
 |*X-to-Router*
 |Sends Document of Document Type *X* to IHub 
 |xref:channels.adoc[Channels] 
 
-|xref:glossary#S[Source Channel]
+|xref:glossary#s[Source Channel]
 |*X-to-Passthru*
 |Sends Document of Document Type *X* to selected Target Channel. 
 |xref:channels.adoc[Channels] 
@@ -92,17 +92,17 @@ s|X
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#M[Map]
+|xref:glossary#m[Map]
 s|Y-to-X
 |Transforms a document of Document Type *Y* to a Document of Document Type *X*
 |xref:document-types.adoc[Maps]
 
-|xref:glossary#S[Source Channel]
+|xref:glossary#s[Source Channel]
 |*Y-to-X*
 |Maps document of Document Type *Y* to a Document of Document Type *X*.
 |xref:channels.adoc[Channels] 
 
-|xref:glossary#T[Transaction]
+|xref:glossary#t[Transaction]
 |*Y-to-X-to-Router*
 |Combination of the Source Channel *Y-to-X* and the Target Channel **X-to-Router**. Receives a document of Type **Y**, maps it to a document of Type *X*, then sends it to the *Router* Endpoint. This transaction has *From Partner* configured as *AppA* and *To Partner* configured as **_Your Company_ B2B**.
 |xref:transaction-designer.adoc[Transactions Designer] 
@@ -125,27 +125,27 @@ s|Y-to-X
 |Artifact|Artifact Name|Description|Configured on page
 
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 |*PartA*
 |Endpoint that points to an external Partner
 |xref:endpoints.adoc[Endpoints] 
 
-|xref:glossary#D[Document Type]
+|xref:glossary#d[Document Type]
 s|Z
 |Document Type your parter expects to receive from your company
 |xref:document-types.adoc[Document Types]
 
-|xref:glossary#M[Map]
+|xref:glossary#m[Map]
 s|X-to-Z
 |Transforms a document of Document Type *X* to a Document of Document Type *Z*
 |xref:document-types.adoc[Maps]
 
-|xref:glossary#T[Target Channel]
+|xref:glossary#t[Target Channel]
 |*X-to-Z-to-PartA*
 |Maps document of Document Type *X* to Document Type *Y* and sends it to *PartA*
 |xref:channels.adoc[Channels] 
 
-|xref:glossary#T[Transaction]
+|xref:glossary#t[Transaction]
 |*X-to-Z-to-PartA*
 |Sends Document of Document Type *X* to selected Target Channel. 
 |xref:transaction-designer.adoc[Transaction Designer] 

@@ -1,13 +1,13 @@
 = Content-Based Routing Scenario
 
-In this scenario, your organization receives a xref:glossary#D[Document] from a xref:glossary#P[Partner]. 
-If IHub has been configured to receive a document of this xref:glossary#D[Document Type], IHub routes the document to an internal API. 
+In this scenario, your organization receives a xref:glossary#d[Document] from a xref:glossary#p[Partner]. 
+If IHub has been configured to receive a document of this xref:glossary#d[Document Type], IHub routes the document to an internal API. 
 If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
 
 
 == Relationships
 
-There are two xref:glossary#R[Relationships] in this scenario:
+There are two xref:glossary#r[Relationships] in this scenario:
 
 .Content-Based Routing Scenario Relationships
 [cols="3*"]
@@ -44,37 +44,37 @@ This section identifies:
 |===
 h|Artifact|Artifact Name|Description|Configured on page
 
-h|xref:glossary#D[Document Type]
+h|xref:glossary#d[Document Type]
 s|X
 |Document Type you use internally in your company
 |xref:document-types.adoc[Document Types]
 
-h|xref:glossary#D[Document Type]
+h|xref:glossary#d[Document Type]
 s|Y
 |Document Type you expect to receive from a partner
 |xref:document-types.adoc[Document Types]
 
-h|xref:glossary#M[Map]
+h|xref:glossary#m[Map]
 s|Y-to-X
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:document-types.adoc[Maps]
 
-h|xref:glossary#E[Endpoint]
+h|xref:glossary#e[Endpoint]
 s|API
 |Endpoint that points to an internal API
 |xref:endpoints.adoc[Endpoints] 
 
-h|xref:glossary#T[Target Channel]
+h|xref:glossary#t[Target Channel]
 s|X-to-API
 |Channel that sends a document of the internal Document Type *X* to Endpoint *API*
 |xref:channels.adoc[Channels] 
 
-h|xref:glossary#E[RecFromA]
+h|xref:glossary#e[RecFromA]
 s|API
 |Endpoint from which you expect to receive documents from *PartA*. 
 |xref:endpoints.adoc[Endpoints] 
 
-h|xref:glossary#T[Transaction]
+h|xref:glossary#t[Transaction]
 s|Y-to-X-to-API
 |Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
 It receives a document of Document Type *Y*, maps it to a document of Document Type *X* and then sends it to Endpoint *API*. 
@@ -90,22 +90,22 @@ In this Transaction, the From Partner is configured as *PartA* and the To Partne
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 |*RecFromA*
 |Endpoint at which you expect to receive documents from *PartA*
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#D[Document Type]
+|xref:glossary#d[Document Type]
 |*Y*
 |Document Type that includes a document you expect to receive from *PartA*
 |xref:document-types[Document Types]
 
-|xref:glossary#M[Map] 
+|xref:glossary#m[Map] 
 |*Y-to-X*
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:maps[Maps]
 
-|xref:glossary#S[Source Channel]
+|xref:glossary#s[Source Channel]
 |*Y-to-X*
 |Includes the process that maps and sends a document of *Y* to a document of *X*
 |xref:channels[Channels] 

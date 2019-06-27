@@ -1,11 +1,11 @@
 = Multicast Routing Scenario 
 
 
-In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
+In this scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
 === Relationships
 
-There are seven xref:glossary#R[Relationships] in this scenario:
+There are seven xref:glossary#r[Relationships] in this scenario:
 
 .Override Routing Scenario Relationships
 [cols="3*"]
@@ -61,17 +61,17 @@ This tables and flow diagrams in this section identifies:
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 s|AppRecFromA
 |Endpoint on which you expect to receive documents from Application *AppA*
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#D[Document Type]
+|xref:glossary#d[Document Type]
 s|Y
 |Document Type you expect to receive from an application
 |xref:document-types[Document Types]
 
-|xref:glossary#S[Source Channel]
+|xref:glossary#s[Source Channel]
 Y-Passthrough
 |Source channel that passes Document Type *Y* to whatever Target channel is selected
 |xref:channels[Channels] 
@@ -83,7 +83,7 @@ Y-Passthrough
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 s|AppB
 |Endpoint from which documents are sent to *AppB*.
 |xref:endpoints[Endpoints] 
@@ -94,7 +94,7 @@ s|AppB
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 s|AppC
 |Endpoint from which documents are sent to *AppC*.
 |xref:endpoints[Endpoints] 
@@ -106,12 +106,12 @@ s|AppC
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#E[Endpoint]
+|xref:glossary#e[Endpoint]
 s|AppD
 |Endpoint from which documents are sent to *AppD*.
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#D[Document Type]
+|xref:glossary#d[Document Type]
 s|Z
 |Document Type that *AppD* wants to receive
 |xref:document-types[Document Types]
@@ -123,13 +123,13 @@ s|Z
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#T[Target Channel]
+|xref:glossary#t[Target Channel]
 s|Y-to-B
 |
 Target channel that passes documents of Document Type *Y* to AppB's Endpoint
 |xref:channels[Channels] 
 
-|xref:glossary#T[Transaction]
+|xref:glossary#t[Transaction]
 s|Y-Passthrough-to-B
 |Combination of  Source Channel *Y-Passthrough* and Target Channel *Y-to-AppB*. 
 When combined (with ?) it becomes a transaction that receives a document of Document Type *Y* and then sends it to the endpoint *B*. This transaction has the From Partner set to *AppA* and the To Partner set to **AppB**.
