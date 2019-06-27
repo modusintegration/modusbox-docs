@@ -1,18 +1,18 @@
 = Override Routing Scenario
 
-In this scenario, your organization expects to receive xref:glossary#sectd[document]s of a single xref:glossary#sectd[Document Type] from multiple xref:glossary#sectp[Partner]s.
+In this scenario, your organization expects to receive xref:glossary#D[document]s of a single xref:glossary#D[Document Type] from multiple xref:glossary#P[Partner]s.
 
 
-If IHub has been configured to receive a document of this xref:glossary#sectd[Document Type], IHub routes the document to an internal API. 
+If IHub has been configured to receive a document of this xref:glossary#D[Document Type], IHub routes the document to an internal API. 
 
-However, one partner uses a variation of the Document Type, so you must override the standard xref:glossary#sectm[Map] that you use to transform that partner's Document Type to your internal Document Type before routing.
+However, one partner uses a variation of the Document Type, so you must override the standard xref:glossary#M[Map] that you use to transform that partner's Document Type to your internal Document Type before routing.
 
 If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
 
 
 == Relationships
 
-There are four xref:glossary#sectr[Relationships] in this scenario. Artifacts are distributed among the relationships according to how they are used. For example, the internal Endpoint *API* is used in all scenarios, so it is configured in the **_YourCompany_ B2B* : Any* Relationship. The Endpoints *RecFromA*, *RecFromB,* and *RecFromC* are used only by specific partners; therefore they are configured in the relationships that correspond to those partners. 
+There are four xref:glossary#R[Relationships] in this scenario. Artifacts are distributed among the relationships according to how they are used. For example, the internal Endpoint *API* is used in all scenarios, so it is configured in the **_YourCompany_ B2B* : Any* Relationship. The Endpoints *RecFromA*, *RecFromB,* and *RecFromC* are used only by specific partners; therefore they are configured in the relationships that correspond to those partners. 
 <<Override Routing Scenario Relationships, Table 1>> describes these Relationships and identifies their contents.
 
 .Override Routing Scenario Relationships
@@ -59,33 +59,33 @@ Therefore, these artifacts, tabulated in <<Override Routing Scenario Artifacts -
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#sectd[Document Type]
+|xref:glossary#D[Document Type]
 |Y
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
-|xref:glossary#sectd[Document Type]
+|xref:glossary#D[Document Type]
 |*X*
 |Document Type you use internally in your company
 |xref:document-types[Document Types]
 
-|xref:glossary#sectm[Map]
+|xref:glossary#M[Map]
 |*Y-to-X*
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:maps[Maps]
 
-|xref:glossary#sects[Source Channel ]
+|xref:glossary#S[Source Channel ]
 |*Y-to-X*
 |Channel that transforms a document of Document Type *Y* into a document of Document Type *X*
 |xref:channels[Channels] 
 
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 |*API*
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#sectt[Target Channel ]
+|xref:glossary#T[Target Channel ]
 |*X-to-API*
 |Channel that sends a document of the internal Document Type *X* to Endpoint *API*
 |xref:channels[Channels] 
@@ -107,7 +107,7 @@ image::override-routing-scenario-artifacts-parta.png[img-override-routing-scenar
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 |*RecFromA*
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints] 
@@ -137,7 +137,7 @@ image::override-routing-scenario-artifacts-partb.png[img-override-routing-scenar
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 |*RecFromB*
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints] 
@@ -165,17 +165,17 @@ image::override-routing-scenario-artifacts-partc.png[img-override-routing-scenar
 |===
 |Artifact|Artifact NamDescription|Configured on page
 
-|xref:glossary#secte[Endpoint]
+|xref:glossary#E[Endpoint]
 |*RecFromC*
 |Endpoint that points to an internal API
 |xref:endpoints[Endpoints] 
 
-|xref:glossary#sectd[Document Type]
+|xref:glossary#D[Document Type]
 |*Y'*
 |Document Type you expect to receive from this partner that is a variation on the standard for this Document Type. 
 |xref:document-types[Document Types] 
 
-|xref:glossary#sects[Source Channel]
+|xref:glossary#S[Source Channel]
 |*Y'-to-X*
 |Maps document of *Y'* to document of *X*
 |xref:channels[Channels] 
