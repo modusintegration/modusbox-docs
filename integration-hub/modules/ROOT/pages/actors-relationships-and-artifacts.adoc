@@ -1,22 +1,22 @@
 = Actors, Relationships, and Artifacts
 
 This page introduces and defines Integration Hub's fundamental building blocks: 
-xref:glossary#A[Actor]s, xref:glossary#R[Relationship]s, and xref:glossary#A[Artifact]s.
+xref:glossary#a[Actor]s, xref:glossary#r[Relationship]s, and xref:glossary#a[Artifact]s.
 
 == Actors
 
 An IHub 
-xref:glossary#A[Actor] 
-is an entity that you can pair with another xref:glossary#A[Actor] to form a 
-xref:glossary#R[Relationship].
+xref:glossary#a[Actor] 
+is an entity that you can pair with another xref:glossary#a[Actor] to form a 
+xref:glossary#r[Relationship].
 
-An xref:glossary#A[Actor] contains: 
+An xref:glossary#a[Actor] contains: 
 
-* xref:glossary#I[Identifier]s that identify it to IHub
-* xref:glossary#C[Certificate]s 
+* xref:glossary#i[Identifier]s that identify it to IHub
+* xref:glossary#c[Certificate]s 
 (if you add them)
 
-There are four types of xref:glossary#A[Actor]s:
+There are four types of xref:glossary#a[Actor]s:
 
 * <<Partners>>
 * <<Applications>>
@@ -25,12 +25,12 @@ There are four types of xref:glossary#A[Actor]s:
 
 === Partners
 
-A xref:glossary#P[Partner] is an organization that exchanges B2B xref:glossary#D[document]s with your organization, such as *PartA* in xref:basic-routing-scenario.adoc[Basic Routing Scenario]. 
+A xref:glossary#p[Partner] is an organization that exchanges B2B xref:glossary#d[document]s with your organization, such as *PartA* in xref:basic-routing-scenario.adoc[Basic Routing Scenario]. 
 
 === Applications
 
 An 
-xref:glossary#A[Application]
+xref:glossary#a[Application]
 is a software program, or group of programs, that have a role within your organization, such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario].
 
 
@@ -38,44 +38,44 @@ is a software program, or group of programs, that have a role within your organi
 === _YourCompany_ B2B
 
 
-*_YourCompany_ B2B* is your organization's gateway between its applications and its <<Partners>>. You can see how this xref:glossary#A[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+*_YourCompany_ B2B* is your organization's gateway between its applications and its <<Partners>>. You can see how this xref:glossary#a[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
 
 === Any
 
-*Any* refers to all shared application-specific information. You can see how this xref:glossary#A[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+*Any* refers to all shared application-specific information. You can see how this xref:glossary#a[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
 
 == Relationships
 
-You can connect one xref:secta[Actor] to another to form a xref:glossary#R[Relationship]. A xref:glossary#R[Relationship] is the union of an xref:glossary#A[Actor] with another xref:glossary#A[Actor] for the purpose of partitioning 
-xref:glossary#A[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#R[Relationship]s: 
+You can connect one xref:secta[Actor] to another to form a xref:glossary#r[Relationship]. A xref:glossary#r[Relationship] is the union of an xref:glossary#a[Actor] with another xref:glossary#a[Actor] for the purpose of partitioning 
+xref:glossary#a[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#r[Relationship]s: 
 
-*_YourCompany_ B2B : Any* :: Universal xref:glossary#R[Relationship] between your company and any xref:glossary#A[Actor]
-*_YourCompany_ B2B : PartA* :: Your organization's xref:glossary#R[Relationship] with the xref:glossary#P[Partner] with whom you are doing business (in xref:basic-routing-scenario.adoc[Basic Routing Scenario], this is *PartA*)
+*_YourCompany_ B2B : Any* :: Universal xref:glossary#r[Relationship] between your company and any xref:glossary#a[Actor]
+*_YourCompany_ B2B : PartA* :: Your organization's xref:glossary#r[Relationship] with the xref:glossary#p[Partner] with whom you are doing business (in xref:basic-routing-scenario.adoc[Basic Routing Scenario], this is *PartA*)
 
 == Artifacts
 
-An xref:glossary#A[Artifact] is a software component of the IHub system that resides in a xref:glossary#R[Relationship]. This section identifies all IHub xref:glossary#A[Artifact]s.
+An xref:glossary#a[Artifact] is a software component of the IHub system that resides in a xref:glossary#r[Relationship]. This section identifies all IHub xref:glossary#a[Artifact]s.
 
-=== xref:glossary#D[Document Type]
+=== xref:glossary#d[Document Type]
 
-Identifies types of xref:glossary#D[document]s based on values such as xref:glossary#S[Standard] and xref:glossary#M[Message Type].
+Identifies types of xref:glossary#d[document]s based on values such as xref:glossary#s[Standard] and xref:glossary#m[Message Type].
 
-=== xref:glossary#E[Endpoint]
+=== xref:glossary#e[Endpoint]
 
 Entry point to a service, process, queue or topic destination. 
 
-=== xref:glossary#C[Channel]
+=== xref:glossary#c[Channel]
 
-Grouping of xref:glossary#A[Artifact]s 
+Grouping of xref:glossary#a[Artifact]s 
 specific to a transmission. 
 
-=== xref:glossary#M[Map] 
+=== xref:glossary#m[Map] 
 
-Transforms one xref:glossary#D[Document Type] to another xref:glossary#D[Document Type].
+Transforms one xref:glossary#d[Document Type] to another xref:glossary#d[Document Type].
 
 === xref:glossary#sect[Transaction]
 
-The end-to-end processing of a single instance of a xref:glossary#D[document] from receipt at an xref:glossary#E[Endpoint] all the way to the appropriate business service.  
+The end-to-end processing of a single instance of a xref:glossary#d[document] from receipt at an xref:glossary#e[Endpoint] all the way to the appropriate business service.  
 
 
 
