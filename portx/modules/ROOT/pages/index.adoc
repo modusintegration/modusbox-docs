@@ -44,7 +44,7 @@ endif::[]
 
 == Getting Started
 
-For conceptual information, see xref:key-concepts[Key Concepts].
+For conceptual information, see xref:integration-hub:ROOT:key-concepts.adoc[Key Concepts].
 
 ////
 ifdef::mule[]

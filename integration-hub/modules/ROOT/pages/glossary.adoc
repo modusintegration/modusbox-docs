@@ -11,11 +11,11 @@
 
 == A
 
-Actor:: An entity, such as a partner, an application, or YourCompany B2B that can form a xref:sectr[Relationship] with another Actor for the purpose of partitioning artifacts.
+Actor:: An entity, such as a partner, an application, or YourCompany B2B that can form a <<R,Relationship>> with another Actor for the purpose of partitioning artifacts.
 
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
-Any:: IHub ref:glossary#secta[Actor] that includes all shared application-specific information. You can see how this xref:glossary#a[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+Any:: IHub <<A,Actor>> that includes all shared application-specific information. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
 
 Application:: Software program or programs that have a role within your organization. 
 
@@ -28,7 +28,8 @@ Artifact:: Software component of the IHub system.
 
 == C
 
-Channel:: Grouping of xref:glossary#a[Artifact]s 
+
+Channel:: Grouping of <<A,Artifact>>s 
 specific to a transmission. 
 
 Certificate:: A digital file that identifies and authenticates an entity or service. 
@@ -48,13 +49,15 @@ Document Definition:: A specific document format that is configured in the syste
 Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
 Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted and stored by the Tracking service.
 
-Document Type:: IHub xref:glossary#a[Artifact] that identifies types of xref:glossary#d[document]s based on values such as xref:glossary#s[standard] and xref:glossary#m[message type].
+Document Type:: IHub <<A,Artifact>> that identifies types of <<D,document>>s based on values such as <<S,standard>> and <<M,message type>>.
 
 == E
 
-Endpoint:: Entry point to a service, process, queue or topic destination. 
+Endpoint:: Entry point to a service, process, queue or topic destination.
 
-Environment ID:: String that uniquely identifies an xref:access-management/environments[Environment].
+Environment:: Grouping of IHub users, created by an IHub administrator as appropriate with respect to organizational structure.
+
+Environment ID:: String that uniquely identifies an IHub environment.
 
 External Partner:: Any company registered in PortX that is not the Home Partner.
 
@@ -70,7 +73,8 @@ Home Partner:: The company that is subscribing to Integration Hub, considered th
 == I
 
 Identifier:: Digital file that idenitifes an 
-xref:glossary#a[Actor] 
+
+<<A,Actor>> 
 to Integration Hub.
 
 == L
@@ -81,11 +85,12 @@ Lookup Table:: A table that facilitates transaction processing by associating va
 
 Map:: Transforms one Document Type to another Document Type. 
 
-Message Type:: One of several values that together define a xref:glossary#d[Document Type].
+
+Message Type:: One of several values that together define a <<D,Document Type>>.
 
 == P
 
-Partner:: A company that exchanges B2B messages; one of the types of IHub xref:glossary#seca[Actor]s. 
+Partner:: A company that exchanges B2B messages; one of the types of IHub <<A,Actor>>s. 
 
 Partner Identifier:: A predefined identifier of a particular Partner.  Partner Identifiers have Type and Qualifier that indicate the identifier scheme and Value.
 
@@ -94,7 +99,7 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 Relationship:: Union of an actor with another actor for the purpose of partitioning artifacts.
 Analagous to a programming namespace. 
 
-Route:: IHub xref:glossary#seca[artifact] that connects a xref:glossary#s[Source Channel] to a xref:glossary#sect[Target Channel].
+Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
  
 == S
 
@@ -104,17 +109,18 @@ Schema:: The schema is stored with the Document Definition and is one of the fol
 * CSV: (NA)
 * EDI: EDI Schema Language (ESL) file
 
-Source Channel:: Type of xref:channel.adoc[Channel] specific to the source of a transmission. 
+Source Channel:: Type of <<C, Channel>> specific to the source of a transmission. 
 
-Standard:: One of several values that together define a xref:glossary#d[Document Type].
+Standard:: One of several values that together define a <<D,Document Type>>.
 
 Standard PortX Field Format:: Describes fields for which valid values can include letters, numbers, or the dash ( *-* ) and underscore ( *_* ) characters.
 
 == T
 
-Target Channel:: Type of <<C,Channel specific to the destination of a transmission. 
+Target Channel:: Type of <<C,Channel>> specific to the destination of a transmission. 
 
-Transaction:: The end-to-end processing of a single instance of a xref:glossary#d[Document] from receipt at an xref:glossary#e[Endpoint] all the way to the desired business service.  
+Transaction:: The end-to-end processing of a single instance of a <<D,Document] from receipt at an <<E,Endpoint] all the way to the desired business service.  
+
 A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
@@ -125,4 +131,5 @@ Transaction-Processing Framework:: B2B transaction-processing solution that enab
 
 == Y
 
-YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its xref:glossary#p[Partner]s. You can see how this xref:glossary#a[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its <<P,Partner>>s. You can see how this <<A,Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
