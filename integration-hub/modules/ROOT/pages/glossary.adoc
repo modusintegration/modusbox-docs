@@ -54,7 +54,7 @@ Document Type:: IHub <<A,Artifact>> that identifies types of <<D,document>>s bas
 
 Endpoint:: Entry point to a service, process, queue or topic destination.
 
-Environment:: Grouping of IHub users, created by an IHub administrator as appropriate with respect to organizational structure.
+Environment:: Unit of IHub access management that facilitates partitioning of <<A,Artifact>>s, so that a given artifact (and the configuration with which it is associated) exists only in the environment in which it is created.
 
 Environment ID:: String that uniquely identifies an IHub environment.
 
