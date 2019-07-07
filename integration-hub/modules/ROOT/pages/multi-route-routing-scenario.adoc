@@ -1,4 +1,4 @@
-= Multi-route Routing Scenario
+= Multi-Route Routing Scenario
 
 In this scenario, your organization receives a 
 xref:glossary#D[Document] from a xref:glossary#P[Partner].
@@ -6,6 +6,12 @@ IHub has been configured to process the document in two ways:
 
 * Route a copy of the document to an internal API
 * Route a copy of the document directly to a destination you use to backup received documents. This routing is referred to as *passthru* because it does not require a map.  
+
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
 
 == Relationships
 
@@ -29,7 +35,7 @@ s|*_YourCompany_ B2B : PartA*
 
 |===
 
-== Artifacts and Artifact Configuration 
+== xref:glossary#A[Artifact]s 
 
 The tables and flow diagrams in this section identify:
 

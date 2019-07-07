@@ -1,7 +1,7 @@
 = Transaction-Processing Framework
 
 A xref:glossary#sectb[B2B transaction-processing solution] serves as a translation layer between internal xref:glossary#A[Application]s
- and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
+ and the formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
 
 xref:glossary#sectb[_PortX Transaction Processing Framework_] enables developers to build a single set of 
 ifdef::mule[]
@@ -10,7 +10,7 @@ endif::[]
 components that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
 Thus, non-programmers such as data analysts can use IHub to onboard new trading partner relationships and support new transaction types without having to develop, test, or deploy new components.
 
-This page identifies high-level framework components and their roles in end-to-end transaction processing.
+This page identifies high-level framework components and their roles in end-to-end transaction processing. For more detailed information about how IHub works, see  xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
 
 == Functional Architecture
 
@@ -141,6 +141,9 @@ The replay flow coordinates replaying transactions. It polls the Tracking servic
 . Tracks the fact that the transaction has been replayed.
 . Updates the TPM service to indicate that the replay is complete
 
+
+////
+
 == Information Architecture: PortX-Configurable Entities and Terms
 PortX stores the configuration data shown in xref:img-b2b-transaction[] in order to support the dynamic processing of different transaction types for different trading partners.
 
@@ -237,7 +240,9 @@ Inbound transaction::  A transaction between an external partner and the home or
 Outbound transaction:: A transaction between the home organization and an external partner, initiated by the home organization.
 
 ////
+////
 Inbound versus Outbound is always used to denote direction of documents being exchanged between partners. A document from an external partner to the home organization is considered Inbound. A document sent from the home organization to an external partner is considered Outbound.
+////
 ////
 xref:img-inbound-outbound[] depicts the relationships between these configuration entities relative to the processing of inbound or outbound transactions:
 
@@ -276,3 +281,4 @@ The PortX user interface enables xref:partner-configuration.adoc[partner configu
 * Search and view results of processed transactions.
 * View end-to-end processing that occurred for a transaction.
 * Manually cause the replay of failed transactions.
+////
