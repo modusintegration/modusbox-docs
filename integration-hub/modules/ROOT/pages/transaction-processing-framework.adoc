@@ -16,7 +16,7 @@ This page identifies high-level framework components and their roles in end-to-e
 
 B2B transaction processing typically proceeds through some combination of the stages shown in xref:img-functional-architecture[].
 
-NOTE: Processing stages and their sequence can vary between implementations.
+NOTE: Processing stages and their sequence may vary from implementation to implementation.
 
 [[img-functional-architecture]]
 image::functional-architecture.png[img-functional-architecture,title="Functional Architecture"]
@@ -76,7 +76,7 @@ For example:
 
 This includes, but is not limited to correlation logic for matching acknowledgements to original messages and identifying duplicate messages.
 
-==== integration hub Connector
+==== Integration Hub Connector
 The integration hub Connector runs inside the ESB and coordinates all interaction with the PortX APIs (TPM and Tracking).
 
 ////
@@ -84,9 +84,11 @@ The integration hub Connector runs inside the ESB and coordinates all interactio
 The Object Store is a distributed cache in the ESB that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. integration hub Connector manages this caching.
 ////
 
+
+
 === Transaction-Processing Stages
 
-PortX provides a Routing Engine engineered to meet the needs of most customer scenarios. We also allow for extensibility where needed...
+PortX provides a routing engine designed to meet the needs of most customer scenarios. We also allow for extensibility where needed...
 
 NOTE: At this time the flows identified below must be developed by the customer. PortX may provide these components as part of the product in the future. However, in order to provide full extensibility and customization, the option will remain for customers to provide their own implementations.
 
