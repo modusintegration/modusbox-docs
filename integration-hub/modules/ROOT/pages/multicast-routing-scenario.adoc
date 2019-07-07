@@ -3,6 +3,12 @@
 
 In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+
 === Relationships
 
 There are seven xref:glossary#R[Relationships] in this scenario:
@@ -49,9 +55,9 @@ s|AppA : AppD
 //Figma Frame 3
 image::multicast-routing-scenario-artifacts.png[img-multicast-routing-scenario-artifacts, title="Multicast Scenario Artifacts"]
 
-== Artifacts and Artifact Configuration 
+== xref:glossary#A[Artifact]s 
 
-This tables and flow diagrams in this section identifies:
+The tables and flow diagrams in this section identify:
 
 * Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
 * The Relationship in which the artifacts are configured

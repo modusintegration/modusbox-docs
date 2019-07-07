@@ -2,6 +2,22 @@
 
 In this scenario, your organization wants to receive a document xref:glossary#D[Document] from two xref:glossary#P[Partners], map it to an internal standard, and send it to a backend database.
 
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+
+== xref:glossary#A[Actor]s
+
+In this scenario, there are three xref:glossary#A[Actor]s: 
+    
+* Partner A (configured as *PartA*)
+* Partner B (configured as *PartB*)
+* *_YourCompany_ B2B*
+* *Any*
+
+
 == Relationships
 
 There are three  xref:glossary#R[Relationships] in this scenario:
@@ -26,7 +42,7 @@ s|_YourCompany_ B2B : PartB
 |===
 
 
-== Artifacts and Artifact Configuration 
+== xref:glossary#A[Artifact]s 
 
 This section identifies:
 
