@@ -6,14 +6,15 @@ Payload:: The content of the message
 
 Metadata:: Data about the message
 
-The xref:b2b-transaction-processing-framework.adoc#integration-hub-connector[Integration Hub Connector] posts:
+The 
+xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
+posts:
 
 * Metadata from
-xref:b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
+the Routing Engine
 to the xref:b2b-transaction-processing-framework#tracking-api[Tracking API]
 * Payload data within
-xref:b2b-transaction-processing-framework#customer-built-flows[Customer-Built Flows]
- to Tracking Data Storage.
+the Routing Engine to Tracking Data Storage.
 
 The customer then uses xref:index.adoc[Integration Hub] to request and view metadata and payload data, a process which includes the xref:b2b-transaction-processing-framework#tpmapi[Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
 

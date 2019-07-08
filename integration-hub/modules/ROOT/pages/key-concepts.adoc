@@ -5,7 +5,8 @@
 The following pages explain key Integration Hub concepts:
 
 * xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
-* xref:resolution-processes.adoc[Resolution Processes]
 * xref:tracking.adoc[Tracking]
+* xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]
+
 
 For more information, see xref:index.adoc[Integration Hub].

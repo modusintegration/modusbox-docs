@@ -1,11 +1,11 @@
 * xref:index.adoc[Integration Hub]
-# * xref:table-test.adoc[Table Test]
 
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
-*** xref:resolution-processes.adoc[Resolution Processes]
+
 *** xref:tracking.adoc[Tracking]
 *** xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]
+
 ** xref:routing-scenarios.adoc[Routing Scenarios]
 *** xref:basic-routing-scenario.adoc[Basic]
 *** xref:shared-routing-scenario.adoc[Shared]
@@ -58,3 +58,7 @@ endif::[]
 ** xref:integration-hub-apis.adoc[Integration Hub APIs]
 
 ** xref:glossary.adoc[Glossary]
+
+////
+*** xref:resolution-processes.adoc[Resolution Processes]
+////

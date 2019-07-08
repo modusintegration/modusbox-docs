@@ -1,4 +1,4 @@
-= Application-Sends-to-Partner
+= Application-Sends-to-Partner Routing Scenario
 
 
 In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
