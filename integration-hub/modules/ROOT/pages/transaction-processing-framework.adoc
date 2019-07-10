@@ -1,9 +1,9 @@
 = Transaction-Processing Framework
 
-A xref:glossary#sectb[B2B transaction-processing solution] serves as a routing and translation layer between internal xref:glossary#A[Application]s
+A xref:glossary#sectb[transaction-processing solution] serves as a routing and translation layer between internal xref:glossary#A[Application]s
  and the formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
 
-A significant feature of xref:glossary#sectb[_PortX Transaction Processing Framework_] is its xref:glosary#sectr[Routing Engine]. The IHub Routing Engine 
+A significant feature of xref:glossary#sectb[_PortX Transaction Processing Framework_] is the Integration Hub xref:glosary#R[Routing Engine]. The Routing Engine 
 ifdef::mule[]
 is a Mule application that
 endif::[]
@@ -29,27 +29,27 @@ Each incoming transaction from a partner or internal system is delivered through
 Using data that may be inside a document or in incoming metadata (such as HTTP headers or filenames), this stage identifies the partner and the transaction type, then uses these to retrieve corresponding processing details from IHub. These details include:
 
 * xref:endpoints.adoc[Endpoint] to which the transformed message is to be delivered
-* <<Schema>> to use for validation
-* <<Map>> to transform the message into the required target format
+* xref:schema.adoc[Schema] to use for validation
+* xref:map.adoc[Map] to transform the message into the required target format
 
 === Transform
 
 Each incoming message is translated into a message format appropriate for the target service being invoked. This translation is performed dynamically using a <<Map>> retrieved from the xref:tpmapi[Trading Partner Management (TPM) API].
 
 === Validate
-Makes sure the required data is present in the required format. This validation is performed dynamically using a <<Schema>> retrieved from the xref:tpmapi[TPM API].
+Makes sure the required data is present in the required format. This validation is performed dynamically using a xref:schema.adoc[Schema] retrieved from the xref:tpmapi[TPM API].
 
 === Deliver
 Using endpoint configuration data retrieved from the xref:tpmapi[TPM API] the flow dynamically delivers the message to the Business Service endpoint address.
 
 == Technical Architecture
 
-xref:img-b2b-message-processing-framework[] shows the primary components of the framework and how these components interact to process B2B transactions.
+xref:img-transaction-processing-framework[] shows the primary components of the framework and how these components interact to process B2B transactions.
 Component definitions follow the diagram.
 
 
-[[img-b2b-message-processing-framework]]
-image::b2b-message-processing-framework.png[img-b2b-message-processing-framework,title="Conceptual View of B2B Message Processing Framework"]
+[[img-transaction-processing-framework]]
+image::transaction-processing-framework.png[img-transaction-processing-framework,title="Conceptual View of Transaction Processing Framework"]
 
 === Components
 
