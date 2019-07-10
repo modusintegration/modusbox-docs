@@ -71,7 +71,7 @@ Home Partner:: The company that is subscribing to Integration Hub, considered th
 
 == I
 
-Identifier:: Digital file that idenitifes an 
+Identifier:: Value that idenitifes an 
 <<A,Actor>> 
 to Integration Hub.
 
@@ -97,7 +97,16 @@ Relationship:: Union of an actor with another actor for the purpose of partition
 Analagous to a programming namespace. 
 
 Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
- 
+
+Routing Engine:: 
+ifdef::mule-esb[]
+Mule application
+endif::[]
+ifndef::mule-esb[]
+Application
+endif::[]
+that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
+
 == S
 
 Schema:: The schema is stored with the Document Definition and is one of the following depending on the message type:
