@@ -595,7 +595,7 @@ You can download the example source that was created in the Getting Started Guid
 
 There are additional demo applications with step by step guides available for download. These cover all the basic operations, and are :
 
-. <<demo_getting_started.adoc#,Invoke a Business Function with Transaction Processing>>
+. <<jde.adoc#,Invoke a Business Function with Transaction Processing>>
 . <<demo_ube.adoc#,Submit a Batch Process>> 
 . <<demo_ube_status.adoc#,Retrieve a Batch Process’s Status>>
 . <<demo_poll_mbf_events.adoc#,Poll MBF Events>>

@@ -1,7 +1,7 @@
 name: jde
 title: JD Edwards Connector
 version: 'latest'
-start_page: ROOT:demo_getting_started.adoc
+start_page: ROOT:jde.adoc
 nav:
 - modules/ROOT/nav.adoc
 

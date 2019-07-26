@@ -377,8 +377,7 @@ image:demo_poll_mbf_events/image50_demo_poll_mbf_events.png[image,width=442,heig
 
 There are additional demo applications with step by step guides available for download. These cover all the basic operations, and are
 
-. <<demo_getting_started.adoc#,Invoke a Business Function>>
-. <<demo_getting_started.adoc#,Invoke a Business Function with Transaction Processing>>
+. <<jde.adoc#,Invoke a Business Function>>
 . <<demo_ube.adoc#,Submit a Batch Process>> 
 . <<demo_ube_status.adoc#,Retrieve a Batch Process’s Status>>
 . <<demo_poll_edi_events.adoc#,Poll EDI Events>>
