@@ -1,4 +1,3 @@
-* xref:demo_getting_started.adoc[Onboarding Guide]
 * xref:demo_ube.adoc[Demo - Submitting a Batch Job / Report]
 * xref:demo_ube_status.adoc[Demo - Retrieve a Batch Job's status ]
 * xref:demo_getting_started.adoc[Demo - Polling for EDI Events]
