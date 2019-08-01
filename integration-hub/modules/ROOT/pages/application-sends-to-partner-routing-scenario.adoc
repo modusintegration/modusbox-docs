@@ -9,6 +9,11 @@ xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts
 
 xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
 
+* Application A (configured as *AppA*)
+* Partner A (configured as *PartA*)
+* *_YourCompany_ B2B*
+* *Any*
+
 == Relationships
 
 There are four xref:glossary#R[Relationships] in this scenario:

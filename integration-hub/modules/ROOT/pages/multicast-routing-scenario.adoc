@@ -9,6 +9,17 @@ xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts
 
 xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
 
+== xref:glossary#A[Actor]s
+
+In this scenario, there are three xref:glossary#A[Actor]s: 
+    
+* Application A (configured as *AppA*)
+* Application B (configured as *AppB*)
+* Application C (configured as *AppC*)
+* Application D (configured as *AppD*)
+* *_YourCompany_ B2B*
+* *Any*
+
 === Relationships
 
 There are seven xref:glossary#R[Relationships] in this scenario:

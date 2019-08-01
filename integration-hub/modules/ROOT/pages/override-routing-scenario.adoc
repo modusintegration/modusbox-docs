@@ -57,7 +57,7 @@ s|*_YourCompany_ B2B* : PartC
 |===
 
 
-== Artifacts and Artifact Configuration 
+== Artifacts
 
 This tables and flow diagrams in this section identifies:
 

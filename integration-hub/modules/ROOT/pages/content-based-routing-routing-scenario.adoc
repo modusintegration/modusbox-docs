@@ -1,19 +1,22 @@
 = Content-Based-Routing Routing Scenario
 
-Here we have a Partner PartnerA who is sending us a Document Q. Depending on the size of a property in that document we want to either send that document to an endpoint DATABig or an endpoint DATASmall.
+In this scenario, your organization receives a xref:glossary#D[document] from a xref:glossary#P[Partner]. 
 
-
-////
-In this scenario, your organization receives a xref:glossary#D[Document] from a xref:glossary#P[Partner]. 
-If IHub has been configured to receive a document of this xref:glossary#D[Document Type], IHub routes the document to an internal API. 
-If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
-////
+Depending on the size of a property in that document we want to either send that document to an endpoint *DataBig* or an endpoint **DataSmall**. 
 
 == Background Reading
 
 xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
 
 xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+
+== xref:glossary#A[Actor]s
+
+In this scenario, there are three xref:glossary#A[Actor]s: 
+    
+* Partner A (configured as *PartA*)
+* *_YourCompany_ B2B*
+* *Any*
 
 == Relationships
 
@@ -98,6 +101,7 @@ h|xref:glossary#T[Transaction]
 s|Y-to-X-to-DATASmall
 |Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
 This transaction is the combination of the Source Channel Y-to-S and the Target Channel X-to-DATASmall. It also has a filter that checks for some propertyA to be Less Than 10. If a Document Y matches this filter then it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATASmall. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B. 
+|xref:transaction-designer.adoc[Transaction Designer] 
 
 |===
 
@@ -109,76 +113,71 @@ This transaction is the combination of the Source Channel Y-to-S and the Target 
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-|xref:glossary#E[Endpoint]
-|*RecFromA*
-|Endpoint at which you expect to receive documents from *PartA*
-|xref:endpoints[Endpoints] 
+h|xref:glossary#E[Endpoint]
+s|RecFromA
+|Endpoint on which you expect to receive documents from PartnerA.
+|xref:endpoints.adoc[Endpoints]
 
-|xref:glossary#D[Document Type]
-|*Y*
-|Document Type that includes a document you expect to receive from *PartA*
-|xref:document-types[Document Types]
+h|xref:glossary#T[Transaction]
+s|Transaction DocY-to-DocX-to-DataSmall
+|Combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataSmall. It also has a filter that checks for some propertyA to be Less Than 10. If a Document Q matches this filter then it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATASmall. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
+|xref:transaction-designer.adoc[Transaction Designer] 
 
-|xref:glossary#M[Map] 
-|*Y-to-X*
-|Transforms a document of Document Type *Y* to a document of Document Type *X*
-|xref:maps[Maps]
 
-|xref:glossary#S[Source Channel]
-|*Y-to-X*
-|Includes the process that maps and sends a document of *Y* to a document of *X*
-|xref:channels[Channels] 
-
-|xref:glossary#sect[Transaction] 
-|*Y-to-X-to-API*
-|Combination of the Source Channel *Y-to-X* and the Target Channel *X-to-API*.
-It receives a document of *Y*, maps it to a document of *X* and then sends it to Endpoint *API*. 
-In this Transaction, the *From* Partner is configured as *PartA* and the *To* Partner as *YourCompany B2B*.
-|xref:transaction-designer[Transaction Designer] 
+h|xref:glossary#T[Transaction]
+s|DocY-to-DocX-to-DataBig
+|This transaction is the combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataBig. It also has a filter that checks for some propertyA to be Greater Than or Equal to 10. If a Document Q matches this filter then it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATABig. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
+|xref:transaction-designer.adoc[Transaction Designer] 
 
 |===
 
 == Outcomes
 
-If the artifacts in the previous section have been configured correctly, then document discussed above will be <<Document Accepted and Routed, accepted and routed>>. 
+=== PartnerA sends DocY to Endpoint RecFromA. with PropertyA = 5
 
-Otherwise, the document will be <<Document Rejected, rejected>>.
+[[img-cbr-routing-scenario-outcome-route-to-small]]
 
-
-== Document Accepted and Routed
-
-All artifacts are correctly configured; IHub routes an incoming document of Document Type *Y* from Partner *PartA* to Endpoint *RecFromA*.
-
-[[img-content-based-routing-scenario-outcome-success]]
-
-image::content-based-routing-scenario-outcome-success.png[img-content-based-routing-scenario-outcome-success, title="Content-Based Routing Scenario Outcome (Success)"]
+image::cbr-routing-scenario-outcome-route-to-small.png[img-cbr-routing-scenario-outcome-route-to-small, title="Content-Based Routing Routing Scenario Outcome, Route to DataSmall"]
 
 Integration Hub:
 
-* Receives a document of Document Type *Y*
+* Receives DocY
 * Attempts to resolve routes
-** Finds a Transaction *Y-to-X-to-API* that contains *Y*.
-* Executes Transaction *Y-to-X-to-API*, which transforms the Document from *X* to *Y*
-* Sends the document to Endpoint *API*.
+* Finds two Transactions DocY-to-DocX-to-DataSmall and DocY-to-DocX-to-DataBig
+* Evaluates Filters
+*** Checks PropertyA for Value
+*** Finds PropertyA < 10
+** Executes that transaction, which maps the transaction to Document X
 
+**  Sends Document X to Endpoint DATASmall.
 
+=== PartA sends Document Q to Endpoint RecFromA. with PropertyA = 12
 
+[[img-cbr-routing-scenario-outcome-route-to-big]]
 
-== Document Rejected
+image::cbr-routing-scenario-outcome-route-to-big.png[img-cbr-routing-scenario-outcome-route-to-big, title="Content-Based-Routing Routing Scenario Outcome, Route to DataBig"]
 
-Partner *PartA* sends a document of Document Type *Z* to Endpoint *RecFromA*. 
-Document Type *Z* is not configured in Relationship *_YourCompany_ B2B : Any*; IHub rejects the document. 
+Integration Manager:
 
-[[img-content-based-routing-scenario-outcome-rejection]]
+* Receives DocY
+* Attempts to resolve routes
+* Finds two Transactions DocY-to-DocX-to-DataSmall and DocY-to-DocX-to-DataBig
+* Evaluates Filters
+** Checks PropertyA for Value
+** Finds PropertyA > 10
+* Executes that transaction, which maps the transaction to DocX
+* Sends DocX to Endpoint DATABig.
 
-image::content-based-routing-scenario-outcome-rejection.png[img-content-based-routing-scenario-outcome-rejection, title="Content-Based Routing Scenario Outcome (Rejection)"]
+=== PartA sends DocY to Endpoint RecFromA. with PropertyA = 10
 
-Integration Hub:
+Integration Manager:
 
-* Receives incoming document
-* Attempts to resolve Routes
-* Does not find a corresponding Transaction
-* Rejects the document.
+* Receives Document Q
+* Attempts to resolve routes
+* Finds two Transactions DocY-to-DocX-to-DATASmall and DocY-to-DocX-to-DATABig
+* Evaluates Filters
+** Checks PropertyA for Value
 
-
-
+** Finds PropertyA = 10
+* Executes that transaction, which maps the transaction to Document X
+*  Sends Document X to Endpoint DATABig.
