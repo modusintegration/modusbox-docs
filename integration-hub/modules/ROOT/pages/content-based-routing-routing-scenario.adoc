@@ -92,17 +92,6 @@ s|X-to-DATABig
 |Channel that sends a document of the internal Document Type *X* to Endpoint *DATABig*
 |xref:channels.adoc[Channels] 
 
-h|xref:glossary#E[Endpoint]
-s|RecFromA
-|Endpoint from which you expect to receive documents from *PartA*. 
-|xref:endpoints.adoc[Endpoints] 
-
-h|xref:glossary#T[Transaction]
-s|Y-to-X-to-DATASmall
-|Combination of Source Channel *Y-to-X* and  Target Channel *X-to-API*.
-This transaction is the combination of the Source Channel Y-to-S and the Target Channel X-to-DATASmall. It also has a filter that checks for some propertyA to be Less Than 10. If a Document Y matches this filter then it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATASmall. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B. 
-|xref:transaction-designer.adoc[Transaction Designer] 
-
 |===
 
 //== Configured in _YourCompany_ B2B : PartA
