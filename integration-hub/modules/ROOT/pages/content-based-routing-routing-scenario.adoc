@@ -120,13 +120,17 @@ s|RecFromA
 
 h|xref:glossary#T[Transaction]
 s|Transaction DocY-to-DocX-to-DataSmall
-|Combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataSmall. It also has a filter that checks for some propertyA to be Less Than 10. If a Document Q matches this filter then it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATASmall. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
+|Combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataSmall. 
+It includes a filter that evaluates whether a *propertyA* is less Than *10*. If a Document Type *DocY* matches this filter then it will be a transaction that receives *DocY*, maps it to  and then sends it to the database *DATASmall*. This transaction has the From Partner set to *PartA* and the *To Partner* set to *YourCompanyB2B*.
 |xref:transaction-designer.adoc[Transaction Designer] 
 
 
 h|xref:glossary#T[Transaction]
 s|DocY-to-DocX-to-DataBig
-|This transaction is the combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataBig. It also has a filter that checks for some propertyA to be Greater Than or Equal to 10. If a Document Q matches this filter then it will be a transaction that receives a document Q maps it to document C and then sends it to the database DATABig. This transaction has the From Partner set to PartA and the To Partner set to Your Company B2B.
+|This transaction is the combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataBig. 
+
+It includes a filter that evaluates whether a *propertyA* is greater than or equal to *10*. If a Document Type *DocY* matches this filter then it will be a transaction that receives *DocY*, maps it to  and then sends it to the database *DATABig*. This transaction has the *From Partner* set to *PartA* and the *To Partner* set to *YourCompanyB2B*.
+
 |xref:transaction-designer.adoc[Transaction Designer] 
 
 |===
