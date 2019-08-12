@@ -144,7 +144,7 @@ Integration Hub:
 
 **  Sends Document X to Endpoint DATASmall.
 
-=== PartA sends Document Q to Endpoint RecFromA. with PropertyA = 12
+=== PartA sends Document Y to Endpoint RecFromA. with PropertyA = 12
 
 [[img-cbr-routing-scenario-outcome-route-to-big]]
 
