@@ -1,4 +1,4 @@
-= Application-Sends-to-Partner Routing Scenario
+= AChained Transactions Routing Scenario
 
 
 In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
@@ -40,9 +40,9 @@ s|_YourCompany_ B2B : PartA
 
 |===
 
-[[img-application-to-partner-routing-scenario-artifacts]]
+[[img-chained-transactions-routing-scenario-artifacts]]
 
-image::application-to-partner-routing-scenario-artifacts.png[img-application-to-partner-routing-scenario-artifacts, title="Application-to-Partner Routing Scenario Artifacts"]
+image::chained-transactions-routing-scenario-artifacts.png[img-chained-transactions-routing-scenario-artifacts, title="Chained Transactions Routing Scenario Artifacts"]
 
 == xref:glossary#A[Artifact]s 
 
@@ -165,9 +165,9 @@ s|X-to-Z
 
 == Outcomes
 
-[[img-application-to-partner-routing-scenario-outcome]]
+[[img-chained-transactions-routing-scenario-outcome]]
 
-image::application-to-partner-routing-scenario-outcome.png[img-application-to-partner-routing-scenario-outcome, "Application-to-Partner-Routing-Scenario-Outcome"]
+image::chained-transactions-routing-scenario-outcome.png[img-chained-transactions-routing-scenario-outcome, "chained-transactions-Routing-Scenario-Outcome"]
 
 
 ==== *AppA* sends Document of Document Type *Y* to Endpoint *RecFromA*
