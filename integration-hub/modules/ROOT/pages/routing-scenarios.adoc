@@ -5,6 +5,14 @@ Pages in this section present examples of scenarios that identify and illustrate
 * Integration Hub (IHub) xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]
 * How you can configure these IHub components to implement routing objectives.
 
+
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works. 
+
+
 == xref:basic-routing-scenario.adoc[Basic]
 
 [[img-basic-routing-scenario-overview]]
@@ -95,9 +103,9 @@ An Application sends a document to a Partner.
 
 == xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing] 
 
-[[img-basic-routing-scenario-overview]]
+[[img-content-based-routing-routing-scenario-overview]]
 
-image::basic-routing-scenario-overview.png[img-basic-routing-scenario-overview, title="Basic Routing Scenario Overview"]
+image::content-based-routing-routing-scenario-overview.png[img-content-based-routing-routing-scenario-overview, title="Content-Based Routing Routing Scenario Overview"]
 
 Scenario::
 A Document Type is sent to a specific Transaction or Endpoint based on the content contained inside the Document or on the Endpoint.

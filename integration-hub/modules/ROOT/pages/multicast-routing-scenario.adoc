@@ -3,6 +3,11 @@
 
 In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
+
+[[img-multicast-routing-scenario-overview]]
+
+image::multicast-routing-scenario-overview.png[img-multicast-routing-scenario-overview, title="Multicast Routing Scenario Overview"]
+
 == Background Reading
 
 xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 

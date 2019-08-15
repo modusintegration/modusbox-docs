@@ -7,6 +7,10 @@ IHub has been configured to process the document in two ways:
 * Route a copy of the document to an internal API
 * Route a copy of the document directly to a destination you use to backup received documents. This routing is referred to as *passthru* because it does not require a map.  
 
+[[img-multi-route-routing-scenario-overview]]
+
+image::multi-route-routing-scenario-overview.png[img-multi-route-routing-scenario-overview, title="Multi-Route Routing Scenario Overview"]
+
 == Background Reading
 
 xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 

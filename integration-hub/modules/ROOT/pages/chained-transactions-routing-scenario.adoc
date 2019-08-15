@@ -1,7 +1,11 @@
-= AChained Transactions Routing Scenario
+= Chained Transactions Routing Scenario
 
 
 In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
+
+[[img-chained-transactions-routing-scenario-overview]]
+
+image::chained-transactions-routing-scenario-overview.png[img-chained-transactions-routing-scenario-overview, title="Chained Transactions Routing Scenario Overview"]
 
 == Background Reading
 

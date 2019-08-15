@@ -4,6 +4,11 @@ In this scenario, your organization receives a xref:glossary#D[document] from a 
 
 Depending on the size of a property in that document we want to either send that document to an endpoint *DataBig* or an endpoint **DataSmall**. 
 
+[[img-content-based-routing-routing-scenario-overview]]
+
+image::content-based-routing-routing-scenario-overview.png[img-content-based-routing-routing-scenario-overview, title="Content-Based Routing Routing Scenario Overview"]
+
+
 == Background Reading
 
 xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
