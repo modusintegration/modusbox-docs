@@ -1,7 +1,7 @@
 = Chained Transactions Routing Scenario
 
 
-In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
+In this example of a chained-transactions routing scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
 
 [[img-chained-transactions-routing-scenario-overview]]
 

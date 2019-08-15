@@ -1,6 +1,6 @@
 = Content-Based-Routing Routing Scenario
 
-In this scenario, your organization receives a xref:glossary#D[document] from a xref:glossary#P[Partner]. 
+In this example of a content-based routing routing scenario, your organization receives a xref:glossary#D[document] from a xref:glossary#P[Partner]. 
 
 Depending on the size of a property in that document we want to either send that document to an endpoint *DataBig* or an endpoint **DataSmall**. 
 

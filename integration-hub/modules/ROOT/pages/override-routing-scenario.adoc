@@ -1,6 +1,6 @@
 = Override Routing Scenario
 
-In this scenario, your organization expects to receive xref:glossary#D[document]s of a single xref:glossary#D[Document Type] from multiple xref:glossary#P[Partner]s.
+In this example of an override routing scenario, your organization expects to receive xref:glossary#D[document]s of a single xref:glossary#D[Document Type] from multiple xref:glossary#P[Partner]s.
 
 
 If IHub has been configured to receive a document of this xref:glossary#D[Document Type], IHub routes the document to an internal API. 

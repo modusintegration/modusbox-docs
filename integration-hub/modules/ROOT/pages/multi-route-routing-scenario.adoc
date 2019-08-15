@@ -1,6 +1,6 @@
 = Multi-Route Routing Scenario
 
-In this scenario, your organization receives a 
+In this example of a multi-route routing scenario, your organization receives a 
 xref:glossary#D[Document] from a xref:glossary#P[Partner].
 IHub has been configured to process the document in two ways:
 

@@ -1,6 +1,6 @@
 = Basic Routing Scenario
 
-In this scenario, your organization receives a xref:glossary#D[document] from a xref:glossary#P[Partner]. 
+In this example of a basic routing scenario, your organization receives a xref:glossary#D[document] from a xref:glossary#P[Partner]. 
 If IHub has been configured to receive a xref:glossary#D[document] of this xref:glossary#D[Document Type], IHub routes the xref:glossary#D[document] to an internal API. 
 If IHub has not been configured to receive a xref:glossary#D[document] of this xref:glossary#D[Document Type], IHub rejects the document. 
 

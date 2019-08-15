@@ -1,7 +1,7 @@
 = Multicast Routing Scenario 
 
 
-In this scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
+In this example of a multicast routing scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
 
 [[img-multicast-routing-scenario-overview]]
