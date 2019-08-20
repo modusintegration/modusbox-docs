@@ -1,6 +1,6 @@
 name: jde
 title: JD Edwards Connector
-version: 'latest'
+version: 'JDE for Mule 3'
 start_page: ROOT:jde.adoc
 nav:
 - modules/ROOT/nav.adoc
