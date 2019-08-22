@@ -29,15 +29,15 @@ Each incoming transaction from a partner or internal system is delivered through
 Using data that may be inside a document or in incoming metadata (such as HTTP headers or filenames), this stage identifies the partner and the transaction type, then uses these to retrieve corresponding processing details from IHub. These details include:
 
 * xref:endpoints.adoc[Endpoint] to which the transformed message is to be delivered
-* xref:schema.adoc[Schema] to use for validation
-* xref:map.adoc[Map] to transform the message into the required target format
+* Schema to use for validation
+* xref:maps.adoc[Map] to transform the message into the required target format
 
 === Transform
 
-Each incoming message is translated into a message format appropriate for the target service being invoked. This translation is performed dynamically using a <<Map>> retrieved from the xref:tpmapi[Trading Partner Management (TPM) API].
+Each incoming message is translated into a message format appropriate for the target service being invoked. This translation is performed dynamically using a xref:maps.adoc[Map] retrieved from the xref:tpmapi[Trading Partner Management (TPM) API].
 
 === Validate
-Makes sure the required data is present in the required format. This validation is performed dynamically using a xref:schema.adoc[Schema] retrieved from the xref:tpmapi[TPM API].
+Makes sure the required data is present in the required format. This validation is performed dynamically using a Schema retrieved from the xref:tpmapi[TPM API].
 
 === Deliver
 Using endpoint configuration data retrieved from the xref:tpmapi[TPM API] the flow dynamically delivers the message to the Business Service endpoint address.
@@ -104,7 +104,8 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 ==== Resolve Stage
 
 * Pulls together from the message and any transport headers the needed metadata fields for identifying the specific document type.
-* Passes the metadata fields to the TPM service to look up the document type and associated configuration settings (<<Map>>, <<Schema>>, target <<Endpoint>>) and adds this information to the context headers that travel with the message to be used by later stages.
+* Passes the metadata fields to the TPM service to look up the document type and associated configuration settings 
+(xref:maps.adoc[Map], Schema, target xref:endpoint.adoc[Endpoint]) and adds this information to the context headers that travel with the message to be used by later stages.
 * Passes the message to the next processing stage.
 
 ==== Transform Stage
