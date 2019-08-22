@@ -105,7 +105,7 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 
 * Pulls together from the message and any transport headers the needed metadata fields for identifying the specific document type.
 * Passes the metadata fields to the TPM service to look up the document type and associated configuration settings 
-(xref:maps.adoc[Map], Schema, target xref:endpoint.adoc[Endpoint]) and adds this information to the context headers that travel with the message to be used by later stages.
+(xref:maps.adoc[Map], Schema, target xref:endpoints.adoc[Endpoint]) and adds this information to the context headers that travel with the message to be used by later stages.
 * Passes the message to the next processing stage.
 
 ==== Transform Stage
