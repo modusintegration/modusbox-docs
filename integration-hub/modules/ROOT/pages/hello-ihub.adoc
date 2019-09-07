@@ -10,8 +10,13 @@ This tutorial:
 
 == Use case
 
-_FastBoards_ is a manufacturer of premium skateboards used by Olympians and professional X-gamers. Because of their premium quality and growing customer base, they are growing very quickly in terms of volume and acquisitions.
-That means they need to be very agile with integration between multiple systems and rapid implementation. FastBoards uses SAP as their ERP system and is currently integrated with legacy mainframe systems. But the new IT leadership realizes and feels the need to modernize the infrastructure and decided to add Salesforce as their CRM and Magento as their ECOM platform. With the growing number acquisitions, the number of systems required to connect with SAP also keeps growing. FastBoards also needs to connect to their Business partners, where GearCo is their retailer and RoundWheels is their supplier/vendor.
+_FastBoards_ is a manufacturer of premium skateboards used by Olympians and professional X-gamers. 
+Because of their premium quality and growing customer base, they are growing very quickly in terms of volume and acquisitions.
+That means they need to be very agile with integration between multiple systems and rapid implementation. 
+FastBoards uses SAP as their ERP system and is currently integrated with legacy mainframe systems. 
+But the new IT leadership realizes and feels the need to modernize the infrastructure and decided to add Salesforce as their CRM and Magento as their ECOM platform. 
+With the growing number acquisitions, the number of systems required to connect with SAP also keeps growing. 
+FastBoards also needs to connect to their Business partners, where GearCo is their retailer and RoundWheels is their supplier/vendor.
 
 [[img-use-cases, Use Cases Page]]
 
