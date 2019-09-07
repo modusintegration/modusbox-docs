@@ -3,4 +3,5 @@
 * xref:demo_ube_status.adoc[Demo - Retrieve a Batch Job's status ]
 * xref:demo_poll_mbf_events.adoc[Demo - Polling for EDI Events]
 * xref:demo_poll_mbf_events.adoc[Demo - Polling for Master Business Function Events]
-* xref:jde-api.adoc[API docs]
+* link:http://modusintegration.github.io/mule-connector-jde/[API Documentation]
+* xref:jde-api.adoc[API Documentation (local)]
