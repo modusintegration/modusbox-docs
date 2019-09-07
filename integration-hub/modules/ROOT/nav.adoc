@@ -16,6 +16,8 @@
 *** xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
 
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
+
+** xref:integration-hub:ROOT:hello-ihub.adoc[Tutorial]
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
 *** xref:central-pane-elements.adoc[Central Pane Elements]
 *** xref:tracking-scenarios.adoc[Tracking Scenarios]

@@ -1,4 +1,4 @@
-= Welcome to Integration Hub
+= Hello Integration Hub
 
 This tutorial:
 
@@ -18,9 +18,9 @@ But the new IT leadership realizes and feels the need to modernize the infrastru
 With the growing number acquisitions, the number of systems required to connect with SAP also keeps growing. 
 FastBoards also needs to connect to their Business partners, where GearCo is their retailer and RoundWheels is their supplier/vendor.
 
-[[img-use-cases, Use Cases Page]]
+[[img-use-cases, Use Cases]]
 
-image::use-cases.png[img-use-cases, title="Use Cases Page"]
+image::tutorial/use-cases.png[img-use-cases, title="Use Cases"]
 
 In this tutorial, we cover the following scenarios
 
@@ -28,96 +28,110 @@ When a shipment is ready, SAP populates a Shipment IDOC ( ZDELVRY03_620) messag
 
 === SAP to Legacy
 
-When ZDELIVERY_620 message is received, It needs to be transformed to Legacy system API format in JSON.
-The message is then sent to the System API endpoint.
-Does not require any filter operation
+* When ZDELIVERY_620 message is received, it needs to be transformed to Legacy system API format in JSON.
+* The message is then sent to the System API endpoint.
+*  not require any filter operation
 
-SAP to Salesforce
-When ZDELIVERY_620 message is received, it needs to be transformed to SalesForce system API format in JSON 
-The message is then sent to the System API endpoint.
-No filter
-SAP to E-Commerce
+=== SAP to Salesforce
+
+* When ZDELIVERY_620 message is received, it needs to be transformed to SalesForce system API format in JSON 
+* The message is then sent to the System API endpoint.
+* No filter
+
+=== SAP to E-Commerce
+
 When ZDELIVERY_620 message is received, it needs to be transformed to E-commerce system API format in JSON.
 The message is then sent to the System API endpoint.
 Does not require any filter operation
-SAP to GearCo (B2B Partner)
-When ZDELIVERY_620 message is received, it is also intended to be sent out as X12 856 to GearCo
-Transform and Render to EDI X12 856 ( ASN ) for GearCo.
-Route the message to the designated partner endpoint.
-  The message will only be sent to B2B process the message content indicates EDI message indicates the partner GearCo
+
+=== SAP to GearCo (B2B Partner)
+
+* When ZDELIVERY_620 message is received, it is also intended to be sent out as X12 856 to GearCo
+** Transform and Render to EDI X12 856 ( ASN ) for GearCo.
+* Route the message to the designated partner endpoint.
+* The message will only be sent to B2B process the message content indicates EDI message indicates the partner GearCo
+
+_Where do these steps go?_
 Integration Hub initial setup
 Routing engine setup
 SAP to Salesforce integration 
+
+
 In this example, we are configuring SAP to Salesforce integration. Rest of the application can be integrated just the same.
 
-Before you Begin
-
+== Before you Begin
 
 Verify that you have the following:
 
-Anypoint Platform user account with Integration Hub access
+* Anypoint Platform user account with Integration Hub access
 
+** URL: https://tpm-service-release-8.dev.portx.io/portal
 
-
-URL: https://tpm-service-release-8.dev.portx.io/portal
-
-User Name: demo@modusbox.com
-Password: SMiarbY2!
+** User Name: demo@modusbox.com
+** Password: SMiarbY2!
 
 
 If you are unable to access Integration Hub, see your PortX account administrator for assistance, or to set up a trial account.
 
 
-Anypoint Studio with Mule 3.9.1
+** Anypoint Studio with Mule 3.9.1
 
 Download Tutorial Materials
 Tutorial Artifacts: Integration HUB Artifacts
 
 
 
-Integration Hub Initial Setup
-Create an S3 bucket for Integration Hub persistence
-Specify authentication for S3 persistence 
-Retrieve API key (Please make sure to create API only for your environment. Please read and follow the warnings given)
-Follow instructions to retrieve the environment and retrieve the environment id for your environment
-Routing engine setup
-Download the latest from Git Hub
-Update the Settings file XML with latest modus jfrog creds
-Update the property file with the following
-Update the Properties with files with PortX api, tracker and environment Id and api key
-Retrieve the Environment id and API key for the PortX environment to which you are trying to connect
-Get the S3 configuration and update
-Update the Partner name
-Make sure application property/ muleproject.xml is updated with the correct environment and tenant information
+== Integration Hub Initial Setup
+
+. Create an S3 bucket for Integration Hub persistence
+. Specify authentication for S3 persistence 
+. Retrieve API key (Please make sure to create API only for your environment. Please read and follow the warnings given)
+. Follow instructions to retrieve the environment and retrieve the environment id for your environment
 
 
-Get Started
-Configure SAP
-Open PortX Integration Hub. On the left-hand menu, click Partners and Applications.
-Click Add Application. 
+== Routing engine setup
+
+. Download the latest from Git Hub
+. Update the Settings file XML with latest modus jfrog creds
+. Update the property file with the following
+. Update the Properties with files with PortX api, tracker and environment Id and api key
+. Retrieve the Environment id and API key for the PortX environment to which you are trying to connect
+. Get the S3 configuration and update
+. Update the Partner name
+, Make sure application property/ muleproject.xml is updated with the correct environment and tenant information
 
 
-Figure 2: Create App
+== Get Started
+
+. Configure SAP
+. Open PortX Integration Hub. On the left-hand menu, click Partners and Applications.
+. Click Add Application. 
+
+
+[[img-create-app, Create App]]
+image::tutorial/tba.png[img-create-app, title="Create App"]
 
 
 
-Enter Application Name (SAP)  and contact information 
-Click save
-On the left-hand menu click on View Relationships. Select SAP ↔ *Any 
+. Enter Application Name (SAP)  and contact information 
+. Click save
+. On the left-hand menu click on View Relationships. 
+. Select SAP ↔ *Any 
 
-Figure 2: Relationships
+[[img-relationships, Relationships]]
+image::tutorial/tba.png[img-relationships, title="Relationships"]
 
 This will allow you to define all the artifacts/resources that pertain to domain SAP.
-Click Transaction Design  on the right-hand side menu and click Create template.
 
+. Click Transaction Design  on the right-hand side menu and click Create template.
 
-Figure 3: Transaction Designer
-
+[[img-td, Transaction Designer]]
+image::tutorial/tba.png[img-td, title="Transaction Designer"]
 
 This will open up empty Transaction view
 
-
-Figure 4: Empty transaction view
+[[img-new-transaction, New Transaction]]
+image::tutorial/tba.png[img-new-transaction, title="New Transaction"]
 
 On the Source Channel click Create New Channel.
 
