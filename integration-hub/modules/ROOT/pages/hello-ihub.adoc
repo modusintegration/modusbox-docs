@@ -1,0 +1,270 @@
+= Welcome to Integration Hub
+
+This tutorial:
+
+* Illustrates the role Integration Hub plays in enterprise integration.
+
+* Introduces Transaction Designer, an Integration Hub feature that enables you to design the elements of a transaction from beginning to end.
+
+* Provides instructions for using Transaction Designer to configure Integration Hub so that you can simulate a transaction and see how Integration Hub processes it.
+
+== Use case
+
+_FastBoards_ is a manufacturer of premium skateboards used by Olympians and professional X-gamers. Because of their premium quality and growing customer base, they are growing very quickly in terms of volume and acquisitions.
+That means they need to be very agile with integration between multiple systems and rapid implementation. FastBoards uses SAP as their ERP system and is currently integrated with legacy mainframe systems. But the new IT leadership realizes and feels the need to modernize the infrastructure and decided to add Salesforce as their CRM and Magento as their ECOM platform. With the growing number acquisitions, the number of systems required to connect with SAP also keeps growing. FastBoards also needs to connect to their Business partners, where GearCo is their retailer and RoundWheels is their supplier/vendor.
+
+[[img-use-cases, Use Cases Page]]
+
+image::use-cases.png[img-use-cases, title="Use Cases Page"]
+
+In this tutorial, we cover the following scenarios
+
+When a shipment is ready, SAP populates a Shipment IDOC ( ZDELVRY03_620) message. This needs to be broadcasted to all the connected systems (LEGACY mainframe, Salesforce and E-commerce platform). Since FastWheels management realizes the importance of API-led architecture, the System APIs for each of the underlying systems are already present.
+
+=== SAP to Legacy
+
+When ZDELIVERY_620 message is received, It needs to be transformed to Legacy system API format in JSON.
+The message is then sent to the System API endpoint.
+Does not require any filter operation
+
+SAP to Salesforce
+When ZDELIVERY_620 message is received, it needs to be transformed to SalesForce system API format in JSON 
+The message is then sent to the System API endpoint.
+No filter
+SAP to E-Commerce
+When ZDELIVERY_620 message is received, it needs to be transformed to E-commerce system API format in JSON.
+The message is then sent to the System API endpoint.
+Does not require any filter operation
+SAP to GearCo (B2B Partner)
+When ZDELIVERY_620 message is received, it is also intended to be sent out as X12 856 to GearCo
+Transform and Render to EDI X12 856 ( ASN ) for GearCo.
+Route the message to the designated partner endpoint.
+  The message will only be sent to B2B process the message content indicates EDI message indicates the partner GearCo
+Integration Hub initial setup
+Routing engine setup
+SAP to Salesforce integration 
+In this example, we are configuring SAP to Salesforce integration. Rest of the application can be integrated just the same.
+
+Before you Begin
+
+
+Verify that you have the following:
+
+Anypoint Platform user account with Integration Hub access
+
+
+
+URL: https://tpm-service-release-8.dev.portx.io/portal
+
+User Name: demo@modusbox.com
+Password: SMiarbY2!
+
+
+If you are unable to access Integration Hub, see your PortX account administrator for assistance, or to set up a trial account.
+
+
+Anypoint Studio with Mule 3.9.1
+
+Download Tutorial Materials
+Tutorial Artifacts: Integration HUB Artifacts
+
+
+
+Integration Hub Initial Setup
+Create an S3 bucket for Integration Hub persistence
+Specify authentication for S3 persistence 
+Retrieve API key (Please make sure to create API only for your environment. Please read and follow the warnings given)
+Follow instructions to retrieve the environment and retrieve the environment id for your environment
+Routing engine setup
+Download the latest from Git Hub
+Update the Settings file XML with latest modus jfrog creds
+Update the property file with the following
+Update the Properties with files with PortX api, tracker and environment Id and api key
+Retrieve the Environment id and API key for the PortX environment to which you are trying to connect
+Get the S3 configuration and update
+Update the Partner name
+Make sure application property/ muleproject.xml is updated with the correct environment and tenant information
+
+
+Get Started
+Configure SAP
+Open PortX Integration Hub. On the left-hand menu, click Partners and Applications.
+Click Add Application. 
+
+
+Figure 2: Create App
+
+
+
+Enter Application Name (SAP)  and contact information 
+Click save
+On the left-hand menu click on View Relationships. Select SAP ↔ *Any 
+
+Figure 2: Relationships
+
+This will allow you to define all the artifacts/resources that pertain to domain SAP.
+Click Transaction Design  on the right-hand side menu and click Create template.
+
+
+Figure 3: Transaction Designer
+
+
+This will open up empty Transaction view
+
+
+Figure 4: Empty transaction view
+
+On the Source Channel click Create New Channel.
+
+
+.Figure 5: Create Source Channel
+
+
+Click on New Document
+
+
+Figure 6: Create Document
+
+
+This should open Create Document window
+No need to enter a name, it will be autogenerated
+Select XML as the standard
+Leave namespace empty
+Enter root node of the XML document as message type in our case enter ZDELVRY03_620
+Go to the property tab and click on Add Property
+
+
+Figure 7: Add document property
+
+Select EDIProcess-Demo if property not added you can add new property
+in the Property Source Type  select Document
+In Path enter Xpath of the field you want to promote, in our case /ZDELVRY03_620/IDOC/EDI_DC40/TABNAM
+Click on Save Property 
+Save the document which will take you back to the transaction template creation page
+
+
+Figure 8: Document property View
+Click on Save Template
+The template can be used to define all the integration that involves message type ZDELVRY03_620 from SAP
+Now it is time to add a Receive endpoint to receive the shipment from SAP
+In relationship SAP ↔*Any, Click on Endpoints
+
+Figure 9: Endpoints
+
+Click on new
+
+
+Figure 10: Create Endpoints 1
+
+Select protocol as HTTP
+Type: Receive
+Protocol Affinity: None
+Uncheck Uses Persistence Settings and Default for SAP : Any
+Let the Global Configuration Settings unchanged
+In the Operation Settings section
+
+
+Figure 10: Create endpoint 2
+
+Host : 0.0.0.0
+Port: 8089
+Path: /pxhub/sap/api/v1/shipment
+Allowed methods: POST
+In the Properties tab
+Click on New Property
+
+
+Figure 11: Endpoint properties
+
+Property Type: From Partner Identifier
+Property Source Type: Constant
+Path: SAP 
+Click Save button on the endpoint
+
+
+Create and configure application SalesForce 
+Click on View Relationships, select Salesforce ↔ *Any
+On the lefthand menu click on the Document Types
+
+
+Figure 12: Create an Application/Domain level document type for the target application
+
+Click on new
+
+
+Select JSON as standard
+
+
+Figure 13: Create Target application/Domain Document yype
+
+Enter SalesforceShipment as message type 
+Save
+On the left-hand menu, click on Endpoints
+Click on New
+Select the protocol as HTTP
+Type: HTTP
+Uncheck Uses Persistence Settings and Default for SAP : Any
+Let the Global Configuration Settings unchanged
+In the Operation Settings section
+Host : routing-engine-demo-api.us-w2.cloudhub.io
+Port: 80
+Path: demoapps/system/api/shipments
+Method: POST
+In the Authentication section
+Set Type : None
+
+
+Configure Shipment Transaction from SAP to SalesForce
+Now that we have the reusable component configured, it is time to set up a Shipment transaction from SAP to SalesForce
+
+On the Left-hand Menu,, navigate to Relationships
+Select Applications Tab
+Click on Add Relationship
+
+
+
+
+Figure 14: Create Transaction
+
+Set the applications to SAP and SalesForce
+Click on Submit
+On the relationship SAP ↔ Salesforce
+Navigate to Transaction designer and click on Start From Template
+Select the template created 
+
+
+Figure 15: Create a transaction from Template
+
+This gets the source channel pre-populated
+
+
+
+Figure 16: Prepopulated Source Channel in transaction
+
+
+On the target channel, click on Create New Channel
+
+
+Figure 17: Added Source and Target documents in Target Channel
+
+On the source document click on Existing Document
+Select XML-ZDELVRY03_620:(SAP:Any) generated earlier ( Add link )
+On the Target Document click on select Existing Document 
+Select JSON-SalesforceShipment:(Salesforce:Any)
+On the map click on New Map. 
+The Source Document and Target Document will be prepopulated
+In the Mapping Type select Dataweave
+Click on the Script and upload JSON Target Dataweave.dwl  from the artifacts folder
+Click Save
+On the Endpoint
+Click on Existing
+
+
+
+Figure 19: Select send endpoint
+
+Select one created earlier in Salesforce:ANY name spaceHTTP-SEND:(Salesforce:Any)
+Click Save
+
+
+Figure 20: Completed Target channel
