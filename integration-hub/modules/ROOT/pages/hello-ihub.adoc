@@ -285,7 +285,7 @@ The Source Document and Target Document will be prepopulated
 image::tutorial/tba.png[img-select-send-endpoint, title="Select Send Endpoint"]
 
 . Select one created earlier in Salesforce:ANY name spaceHTTP-SEND:(Salesforce:Any)
-. Click Save
+. Click *Save*
 
-[[img-completed-target channel, Completed Target Channel]]
-image::tutorial/tba.png[img-Completed Target channel, title="Completed Target Channel"]
+[[img-completed-target-channel, Completed Target Channel]]
+image::tutorial/tba.png[img-completed-target-channel, title="Completed Target Channel"]
