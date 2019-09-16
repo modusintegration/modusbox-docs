@@ -65,19 +65,20 @@ Verify that you have the following:
 
 * Anypoint Platform user account with Integration Hub access
 
-** URL: https://tpm-service-release-8.dev.portx.io/portal
+* URL: https://tpm-service-release-8.dev.portx.io/portal
 
-** User Name: demo@modusbox.com
-** Password: SMiarbY2!
+_This is the account I use for documenting the UI. Are we sure we want to make the credentials public?_
+
+* User Name: demo@modusbox.com
+* Password: SMiarbY2!
 
 
 If you are unable to access Integration Hub, see your PortX account administrator for assistance, or to set up a trial account.
 
 
-** Anypoint Studio with Mule 3.9.1
-
-Download Tutorial Materials
-Tutorial Artifacts: Integration HUB Artifacts
+* Anypoint Studio with Mule 3.9.1
+* link:https://modusbox.atlassian.net/wiki/download/attachments/344719433/Json%20Target%20Dataweave.dwl?api=v2Json[Target Dataweave.dwl]
+* link:https://modusbox.atlassian.net/wiki/download/attachments/344719433/PortX%20Workshop.postman_collection.json?api=v2[PortX Workshop.postman_collection.json]
 
 
 
@@ -92,7 +93,7 @@ Tutorial Artifacts: Integration HUB Artifacts
 == Routing engine setup
 
 . Download the latest from Git Hub
-. Update the Settings file XML with latest modus jfrog creds
+. Update the _(which?)_ Settings file XML with latest modus jfrog creds
 . Update the property file with the following
 . Update the Properties with files with PortX api, tracker and environment Id and api key
 . Retrieve the Environment id and API key for the PortX environment to which you are trying to connect
