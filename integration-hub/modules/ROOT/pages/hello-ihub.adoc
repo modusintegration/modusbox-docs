@@ -51,7 +51,8 @@ Does not require any filter operation
 * Route the message to the designated partner endpoint.
 * The message will only be sent to B2B process the message content indicates EDI message indicates the partner GearCo
 
-_Where do these steps go?_
+_<Where do the following steps go?>_
+
 Integration Hub initial setup
 Routing engine setup
 SAP to Salesforce integration 
