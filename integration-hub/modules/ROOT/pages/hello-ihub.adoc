@@ -76,8 +76,6 @@ Verify that you have the following:
 ** Password: SMiarbY2! +
 If you are unable to access Integration Hub, see your PortX account administrator for assistance, or to set up a trial account.
 
-If you are unable to access Integration Hub, see your PortX account administrator for assistance, or to set up a trial account.
-
 * Anypoint Studio with Mule 3.9.1
 
 * Download IHub Tutorial Materials 
