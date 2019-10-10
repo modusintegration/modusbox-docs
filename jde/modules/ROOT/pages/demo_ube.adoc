@@ -208,11 +208,11 @@ image:demo_ube/image13_demo_ube.png[image,width=331,height=232]
 
 Drag the connector over to the canvas. Select it and review the properties window. Give it a meaningful name eg. Submit R0008P_XJDE0001.
 
-Under the General section, click on the drop-down for UBE Name
+Under the General section, click on the drop-down for UBE Name, and type in the Batch Job and version you want to call in the __BatchJob_Version__ format eg. R0008P_XJDE0001
 
 image:demo_ube/image14_demo_ube.png[image,width=601,height=253]
 
-*NOTE :* If it is the first time you are selecting a UBE, this might take a while, as no information has been cached yet. It will need to build a list of all UBEs available. Please be patient. The status bar (bottom right) will display the following while it is retrieving the metadata.
+*NOTE :* If it is the first time you are selecting a UBE, this might take a while, as no information has been cached yet. Please be patient. The status bar (bottom right) will display the following while it is retrieving the metadata.
 
 image:demo_ube/image15_demo_ube.png[image,width=307,height=30]
 
