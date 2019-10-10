@@ -17,9 +17,9 @@ xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts
 
 xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
 
-== xref:glossary#A[Actor]s
+== xref:glossary#a[Actor]s
 
-In this scenario, there are three xref:glossary#A[Actor]s: 
+In this scenario, there are three xref:glossary#a[Actor]s: 
     
 * Partner A (configured as *PartA*)
 * *_YourCompany_ B2B*
@@ -47,7 +47,7 @@ s|*_YourCompany_ B2B : PartA*
 
 |===
 
-== xref:glossary#A[Artifact]s 
+== xref:glossary#a[Artifact]s 
 
 The tables and flow diagrams in this section identify:
 

@@ -1,7 +1,7 @@
 = Multicast Routing Scenario 
 
 
-In this example of a multicast routing scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
+In this example of a multicast routing scenario, an xref:glossary#a[Application] sends a xref:glossary#D[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
 
 [[img-multicast-routing-scenario-overview]]
@@ -14,9 +14,9 @@ xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts
 
 xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
 
-== xref:glossary#A[Actor]s
+== xref:glossary#a[Actor]s
 
-In this scenario, there are three xref:glossary#A[Actor]s: 
+In this scenario, there are three xref:glossary#a[Actor]s: 
     
 * Application A (configured as *AppA*)
 * Application B (configured as *AppB*)
@@ -71,7 +71,7 @@ s|AppA : AppD
 //Figma Frame 3
 image::multicast-routing-scenario-artifacts.png[img-multicast-routing-scenario-artifacts, title="Multicast Scenario Artifacts"]
 
-== xref:glossary#A[Artifact]s 
+== xref:glossary#a[Artifact]s 
 
 The tables and flow diagrams in this section identify:
 

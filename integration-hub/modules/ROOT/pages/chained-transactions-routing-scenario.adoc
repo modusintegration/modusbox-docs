@@ -1,7 +1,7 @@
 = Chained Transactions Routing Scenario
 
 
-In this example of a chained-transactions routing scenario, an xref:glossary#A[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
+In this example of a chained-transactions routing scenario, an xref:glossary#a[Application] sends a xref:glossary#D[Document] to a xref:glossary#P[Partner].
 
 [[img-chained-transactions-routing-scenario-overview]]
 
@@ -28,7 +28,7 @@ There are four xref:glossary#R[Relationships] in this scenario:
 
 s|AppA : Any
 |Universal Relationship between Application A and any other Application
-|Contains xref:glossary#A[Artifacts] specific to transactions between Application *A* and any other Application.
+|Contains xref:glossary#a[Artifacts] specific to transactions between Application *A* and any other Application.
 
 s|_YourCompany_ B2B : Any
 |Universal relationship between your company and any partner
@@ -48,7 +48,7 @@ s|_YourCompany_ B2B : PartA
 
 image::chained-transactions-routing-scenario-artifacts.png[img-chained-transactions-routing-scenario-artifacts, title="Chained Transactions Routing Scenario Artifacts"]
 
-== xref:glossary#A[Artifact]s 
+== xref:glossary#a[Artifact]s 
 
 This tables and flow diagrams in this section identifies:
 

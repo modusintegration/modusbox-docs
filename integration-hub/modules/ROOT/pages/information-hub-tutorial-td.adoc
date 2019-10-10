@@ -445,7 +445,7 @@ In order to identify your Integration Hub environment and its API Key to Anypoin
 
 === Identify or Create an API Key
 
-In order to connect your application to Integration Hub, you must enter an xref:glossary#A[API Key] and environment Id.
+In order to connect your application to Integration Hub, you must enter an xref:glossary#a[API Key] and environment Id.
 
 If you have an existing API Key, use it. If you do not know the API Key, consult your organization's Integration Hub administrator.
 
