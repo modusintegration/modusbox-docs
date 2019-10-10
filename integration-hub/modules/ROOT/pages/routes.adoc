@@ -44,7 +44,7 @@ image::route.png[img-route, title="Route Page"]
 |Name
 |Type a name for this channel.
 
-Valid values:: xref:glossary#S[Standard PortX field format]
+Valid values:: xref:glossary#s[Standard PortX field format]
 
 
 |===

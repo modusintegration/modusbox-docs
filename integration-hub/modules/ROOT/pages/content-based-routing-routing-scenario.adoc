@@ -1,6 +1,6 @@
 = Content-Based-Routing Routing Scenario
 
-In this example of a content-based routing routing scenario, your organization receives a xref:glossary#D[document] from a xref:glossary#P[Partner]. 
+In this example of a content-based routing routing scenario, your organization receives a xref:glossary#d[document] from a xref:glossary#p[Partner]. 
 
 Depending on the size of a property in that document we want to either send that document to an endpoint *DataBig* or an endpoint **DataSmall**. 
 
@@ -25,7 +25,7 @@ In this scenario, there are three xref:glossary#a[Actor]s:
 
 == Relationships
 
-There are two xref:glossary#R[Relationships] in this scenario:
+There are two xref:glossary#r[Relationships] in this scenario:
 
 .Content-Based Routing Scenario Relationships
 [cols="3*"]
@@ -62,37 +62,37 @@ This section identifies:
 |===
 h|Artifact|Artifact Name|Description|Configured on page
 
-h|xref:glossary#D[Document Type]
+h|xref:glossary#d[Document Type]
 s|X
 |Document Type you use internally in your company
 |xref:document-types.adoc[Document Types]
 
-h|xref:glossary#D[Document Type]
+h|xref:glossary#d[Document Type]
 s|Y
 |Document Type you expect to receive from a partner
 |xref:document-types.adoc[Document Types]
 
-h|xref:glossary#M[Map]
+h|xref:glossary#m[Map]
 s|Y-to-X
 |Transforms a document of Document Type *Y* to a document of Document Type *X*
 |xref:document-types.adoc[Maps]
 
-h|xref:glossary#E[Endpoint]
+h|xref:glossary#e[Endpoint]
 s|DATASmall
 |Endpoint that points to your internal database for Small type
 |xref:endpoints.adoc[Endpoints] 
 
-h|xref:glossary#E[Endpoint]
+h|xref:glossary#e[Endpoint]
 s|DATABig
 |Endpoint that points to your internal database for Big type
 |xref:endpoints.adoc[Endpoints]
 
-h|xref:glossary#T[Target Channel]
+h|xref:glossary#t[Target Channel]
 s|X-to-DATASmall
 |Channel that sends a document of the internal Document Type *X* to Endpoint *DATASmall*
 |xref:channels.adoc[Channels] 
 
-h|xref:glossary#T[Target Channel]
+h|xref:glossary#t[Target Channel]
 s|X-to-DATABig
 |Channel that sends a document of the internal Document Type *X* to Endpoint *DATABig*
 |xref:channels.adoc[Channels] 
@@ -107,19 +107,19 @@ s|X-to-DATABig
 |===
 |Artifact|Artifact Name|Description|Configured on page
 
-h|xref:glossary#E[Endpoint]
+h|xref:glossary#e[Endpoint]
 s|RecFromA
 |Endpoint on which you expect to receive documents from PartnerA.
 |xref:endpoints.adoc[Endpoints]
 
-h|xref:glossary#T[Transaction]
+h|xref:glossary#t[Transaction]
 s|Transaction DocY-to-DocX-to-DataSmall
 |Combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataSmall. 
 It includes a filter that evaluates whether a *propertyA* is less Than *10*. If a Document Type *DocY* matches this filter then it will be a transaction that receives *DocY*, maps it to  and then sends it to the database *DATASmall*. This transaction has the From Partner set to *PartA* and the *To Partner* set to *YourCompanyB2B*.
 |xref:transaction-designer.adoc[Transaction Designer] 
 
 
-h|xref:glossary#T[Transaction]
+h|xref:glossary#t[Transaction]
 s|DocY-to-DocX-to-DataBig
 |This transaction is the combination of the Source Channel DocY-to-DocX and the Target Channel DocX-to-DataBig. 
 

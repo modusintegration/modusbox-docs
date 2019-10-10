@@ -2,12 +2,12 @@
 
 Goals :: 
 * Receive a
-xref:glossary#D[Document] 
+xref:glossary#d[Document] 
 from a 
-xref:glossary#P[Partner]
-* xref:glossary#M[Map] 
+xref:glossary#p[Partner]
+* xref:glossary#m[Map] 
 the document from your Partner's
-xref:glossary#D[Document Type]
+xref:glossary#d[Document Type]
 to an internal (to your company) Document Type 
 * Send the document to an internal database
 
@@ -15,23 +15,23 @@ Steps ::
 
 * Create Partner *PartA*
 * Enter 
-xref:glossary#R[Relationship]
+xref:glossary#r[Relationship]
 *GearCo B2B : PartA*
 * Create new 
-xref:glossary#T[Transaction] 
+xref:glossary#t[Transaction] 
 ** Create 
-xref:glossary#S[Source Channel] 
+xref:glossary#s[Source Channel] 
 *** Create 
-xref:glossary#D[Document Type] *Y*
+xref:glossary#d[Document Type] *Y*
 **** Add 
-xref:glossary#E[Endpoint] *RecFromA*
+xref:glossary#e[Endpoint] *RecFromA*
 *** Create 
-xref:glossary#D[Document Type] 
+xref:glossary#d[Document Type] 
 *X*
 *** Create 
-xref:glossary#M[Map] 
+xref:glossary#m[Map] 
 ** Create 
-xref:glossary#T[Target Channel] 
+xref:glossary#t[Target Channel] 
 *** Select Document Type *X* for *Source Document*
 *** Create new Endpoint 
 
