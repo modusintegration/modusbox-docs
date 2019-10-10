@@ -75,7 +75,7 @@ The _PortX JDE Connector_ makes use of the libraries of the local JDE Tools rele
 
 e.g.:
 
-_java -jar JDEToolToBuildLibBundle-1.0.0.jar --destDir "/tmp" –jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" –libDir "/opt/jde/workingDir/ServerFiles" –version "1.0.0" --localRepo "/home/user/.m2/repository"_
+_java -jar JDELibrariesBundleBuilderTool-1.0.0.jar --destDir "/tmp" --jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" --libDir "/opt/jde/workingDir/ServerFiles" --version "1.0.0" --localRepo "/home/user/.m2/repository"_
 
 NOTE : All libraries in this path will be added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation). See Appendix A for a detailed list of all files required per your Tools Release
 
@@ -85,7 +85,7 @@ Once completed the resulting bundle will be located at, following the sample abo
 
 . Execute the following to make the bundle available in your Maven Repository
 
-_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.1.jar-DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dpackaging=jar_
+_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar-DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dclassifier=mule-4 -Dpackaging=jar_
 
 === Preparing Maven for PortX - JDE Connector
 
@@ -147,7 +147,7 @@ numberOfAutoStartProcesses=1
 [start=3]
 . Ensure that sufficient processes are available for the *XML Service Kernel*
 
-[source,java]
+[source,ini]
 ----
 [JDENET_KERNEL_DEF24]
 krnlName=XML Service KERNEL 
@@ -252,6 +252,15 @@ There is addtional configurations needed inside JDEINTEROP.INI. You need to add 
 |(Optional) This is the UBE used to validate the connection.
 |===
 
+eg.
+[source,ini]
+----
+[EVENT]
+lockEventsYN=N
+specialEDITables=<F470462>
+validateEnterpriseServicesWith=BOTH
+validateEnterpriseServicesUBEName=R0008P_XJDE0001
+----
 If you need to run the application on CloudHub, you will need to add the section OCM_SERVERS with the servers that the JDE Connector will use in the connection. The JDE Servers Names are in the column OMSRVR of F98611 table. To add these servers on the OCM_SERVERS section you will need to follow this format is simple: JDE Server Name = FQDN or IP
 
 *[OCM_SERVERS]*
@@ -263,16 +272,6 @@ If you need to run the application on CloudHub, you will need to add the section
 |jdeserver02=10.168.45.1
 |The JDE Connector will use the IP 10.168.45.1 for each reference to jdeserver02
 |===
-
-eg.
-[source,ini]
-----
-[EVENT]
-lockEventsYN=N
-specialEDITables=<F470462>
-validateEnterpriseServicesWith=BOTH
-validateEnterpriseServicesUBEName=R0008P_XJDE0001
-----
 
 [source,ini]
 ----
@@ -415,11 +414,10 @@ The mule-artifact.json file needs to be updated for each environment as below
 				"JDV920/jdeinterop.ini",
 				"JDV920/jdbj.ini",
 				"JDV920/tnsnames.ora",
-				"JDV920/jdelog.properties",
 				"JPY920/jdeinterop.ini",
 				"JPY920/jdbj.ini",
 				"JPY920/tnsnames.ora",
-				"JPY920/jdelog.properties",				
+				"jdelog.properties",				
 				"log4j2.xml"
 			],
 			"exportedPackages": [
@@ -435,7 +433,7 @@ The mule-artifact.json file needs to be updated for each environment as below
 === Other Considerations
 
 To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the _jdelog.properties_, you may add the following _Async Loggers_ to _log4j2.xml_ file.
-[source,java]
+[source,xml]
 ----
 <AsyncLogger name="org.mule.modules.jde.internal.JDEConnector" level="DEBUG" />
 <AsyncLogger name="org.mule.modules.jde.api.MuleHandler" level="DEBUG" />

@@ -90,6 +90,7 @@ Add the following to you _dependencies_ section :
     <groupId>com.jdedwards</groupId>
     <artifactId>jde-lib-bundle</artifactId>
     <version>1.0.0</version>
+    <classifier>mule-4</classifier>
 </dependency>
 ----
 
@@ -136,11 +137,10 @@ The _mule-arifact.json_ file needs to be updated per environment as below
 				"JDV920/jdeinterop.ini",
 				"JDV920/jdbj.ini",
 				"JDV920/tnsnames.ora",
-				"JDV920/jdelog.properties",
 				"JPY920/jdeinterop.ini",
 				"JPY920/jdbj.ini",
 				"JPY920/tnsnames.ora",
-				"JPY920/jdelog.properties",				
+				"jdelog.properties",
 				"log4j2.xml"
 			],
 			"exportedPackages": [
