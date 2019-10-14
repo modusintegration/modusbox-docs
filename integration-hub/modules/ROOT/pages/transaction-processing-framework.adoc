@@ -1,6 +1,6 @@
 = Transaction-Processing Framework
 
-A xref:glossary#sectb[transaction-processing solution] serves as a routing and translation layer between internal xref:glossary#A[Application]s
+A xref:glossary#sectb[transaction-processing solution] serves as a routing and translation layer between internal xref:glossary#a[Application]s
  and the formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
 
 A significant feature of xref:glossary#sectb[_PortX Transaction Processing Framework_] is the Integration Hub xref:glosary#R[Routing Engine]. The Routing Engine 

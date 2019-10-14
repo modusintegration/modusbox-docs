@@ -62,6 +62,7 @@ Add the following to you _dependencies_ section :
     <groupId>com.jdedwards</groupId>
     <artifactId>jde-lib-bundle</artifactId>
     <version>1.0.0</version>
+    <classifier>mule-4</classifier>
 </dependency>
 ----
 
@@ -107,11 +108,10 @@ The _mule-arifact.json_ file needs to be updated per environment as below
 				"JDV920/jdeinterop.ini",
 				"JDV920/jdbj.ini",
 				"JDV920/tnsnames.ora",
-				"JDV920/jdelog.properties",
 				"JPY920/jdeinterop.ini",
 				"JPY920/jdbj.ini",
 				"JPY920/tnsnames.ora",
-				"JPY920/jdelog.properties",				
+				"jdelog.properties",
 				"log4j2.xml"
 			],
 			"exportedPackages": [
@@ -208,11 +208,11 @@ image:demo_ube/image13_demo_ube.png[image,width=331,height=232]
 
 Drag the connector over to the canvas. Select it and review the properties window. Give it a meaningful name eg. Submit R0008P_XJDE0001.
 
-Under the General section, click on the drop-down for UBE Name
+Under the General section, click on the drop-down for UBE Name, and type in the Batch Job and version you want to call in the __BatchJob_Version__ format eg. R0008P_XJDE0001
 
 image:demo_ube/image14_demo_ube.png[image,width=601,height=253]
 
-*NOTE :* If it is the first time you are selecting a UBE, this might take a while, as no information has been cached yet. It will need to build a list of all UBEs available. Please be patient. The status bar (bottom right) will display the following while it is retrieving the metadata.
+*NOTE :* If it is the first time you are selecting a UBE, this might take a while, as no information has been cached yet. Please be patient. The status bar (bottom right) will display the following while it is retrieving the metadata.
 
 image:demo_ube/image15_demo_ube.png[image,width=307,height=30]
 
