@@ -6,8 +6,14 @@ https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[Get started w
 
 == Day 1: Basic Routing 
 
+=== Morning (Level One)
+
 * Intro text (Ian)
-* Film video of Basic Routing Scenario (Cooper)
+* Basic Routing (one relationship, existing))
+
+=== Afternoon (Level Two)
+* Intro text (Ian)
+* Film Walkthrough video of Basic Routing
 * xref:basic-routing-scenario.adoc[Basic Routing Scenario Walkthrough]
 
 == Day 2: Shared Routing 
