@@ -1,0 +1,60 @@
+= Six Days to Success with Integration Hub
+
+Welcome to the Integration Hub learning curve! We've created demonstrations of scenarios and examples to show you how to use IHub, and tutorials that enable you to put IHub to use yourself. 
+
+https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[Get started with this video].
+
+== Day 1: Basic Routing 
+
+=== Morning (Level One)
+
+* Intro text (Ian)
+* Basic Routing (one relationship, existing))
+
+=== Afternoon (Level Two)
+* Intro text (Ian)
+* Film Walkthrough video of Basic Routing
+* xref:basic-routing-scenario.adoc[Basic Routing Scenario Walkthrough]
+
+== Day 2: Shared Routing 
+
+* Intro text (Ian)
+* Film video of Shared Routing Scenario (Cooper)
+* xref:shared-routing-scenario.adoc[Shared Routing Scenario Walkthrough]
+
+== Day 3: Override Routing
+
+* Intro text (Ian) 
+* Film video of Override Routing Scenario (Cooper)
+* xref:override-routing-scenario.adoc[Override
+Override Routing Scenario Walkthrough]
+
+== Day 4: Multicast Routing
+
+* Intro text (Ian) 
+* Film video of Multiroute or Multicast Routing Scenario (Cooper)
+* xref:multicast-routing-scenario.adoc[Multicast Routing Scenario Walkthrough]
+
+== Day 5: Chained Routing
+
+* Intro text (Ian) 
+* Film video of Chained Routing Scenario (Cooper)
+* xref:chained-transactions-routing-scenario.adoc[Chained Transactions Scenario Walkthrough]
+
+== Day 6: Advanced Topics
+
+* xref:multi-route-routing-scenario.adoc[Multi-route]
+* xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
+
+
+
+////
+** xref:routing-scenarios.adoc[Routing Scenarios]
+*** xref:basic-routing-scenario.adoc[Basic]
+*** xref:shared-routing-scenario.adoc[Shared]
+*** xref:override-routing-scenario.adoc[Override]
+*** xref:multi-route-routing-scenario.adoc[Multi-route]
+*** xref:multicast-routing-scenario.adoc[Multicast]
+*** xref:chained-transactions-routing-scenario.adoc[Chained Transactions]
+*** xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
+////
