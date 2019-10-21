@@ -31,7 +31,7 @@ A xref:glossary#p[Partner] is an organization that exchanges B2B xref:glossary#d
 
 An 
 xref:glossary#a[Application]
-is a software program, or group of programs, that have a role within your organization, such as *AppA* in xref:application-sends-to-partner-routing-scenario.adoc[Application-Sends-to-Partner Routing Scenario].
+is a software program, or group of programs, that have a role within your organization, such as *AppA* in xref:chained-transactions-routing-scenario.adoc[Chained Transactions Routing Scenario].
 
 
 [[your-company-b2b, **_YourCompany_ B2B**]]

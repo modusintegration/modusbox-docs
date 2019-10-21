@@ -1,7 +1,13 @@
 = Integration Hub
 :keywords: b2b, introduction, portal, partner, manager
 
-Integration Hub provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+Integration Hub provides a single web-based user interface for the key elements of service and partner management:
+
+* <<Transaction Monitoring>>
+* <<Partner Configuration>>
+* <<Administration>>. 
+
+link:six-days.adoc[Learn how you can deploy Integration Hub in Six Days].
 
 == Transaction Monitoring
 

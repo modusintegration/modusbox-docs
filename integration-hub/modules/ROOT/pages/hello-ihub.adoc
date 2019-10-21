@@ -10,7 +10,7 @@ This tutorial:
 
 == Use case
 
-_FastBoards_ is a manufacturer of premium skateboards used by Olympians and professional X-gamers. 
+_FastBoards_ is a manufacturer of high quality, low cost skateboards. 
 Because of their premium quality and growing customer base, they are growing very quickly in terms of volume and acquisitions.
 That means they need to be very agile with integration between multiple systems and rapid implementation. 
 FastBoards uses SAP as their ERP system and is currently integrated with legacy mainframe systems. 
@@ -22,43 +22,48 @@ FastBoards also needs to connect to their Business partners, where GearCo is the
 
 image::tutorial/use-cases.png[img-use-cases, title="Use Cases"]
 
-In this tutorial, we cover the following scenarios
+In this tutorial, we work with the following scenarios:
 
-When a shipment is ready, SAP populates a Shipment IDOC ( ZDELVRY03_620) message. This needs to be broadcasted to all the connected systems (LEGACY mainframe, Salesforce and E-commerce platform). Since FastWheels management realizes the importance of API-led architecture, the System APIs for each of the underlying systems are already present.
+When a shipment is ready, SAP populates a Shipment IDOC ( *ZDELVRY03_620*) message. 
+This needs to be broadcasted to all the connected systems (LEGACY mainframe, Salesforce and E-commerce platforms). 
+Since FastWheels management realizes the importance of API-led architecture, the System APIs for each of the underlying systems are already present.
 
 === SAP to Legacy
 
-* When ZDELIVERY_620 message is received, it needs to be transformed to Legacy system API format in JSON.
+* When a *ZDELIVERY_620* message is received, it needs to be transformed to Legacy system API format in JSON.
 * The message is then sent to the System API endpoint.
-*  not require any filter operation
+* Does not require any filter operation
 
 === SAP to Salesforce
 
-* When ZDELIVERY_620 message is received, it needs to be transformed to SalesForce system API format in JSON 
+* When a *ZDELIVERY_620* message is received, it needs to be transformed to SalesForce system API format in JSON 
 * The message is then sent to the System API endpoint.
-* No filter
+* Does not require any filter operation
 
 === SAP to E-Commerce
 
-When ZDELIVERY_620 message is received, it needs to be transformed to E-commerce system API format in JSON.
-The message is then sent to the System API endpoint.
-Does not require any filter operation
+* When a *ZDELIVERY_620* message is received, it needs to be transformed to E-commerce system API format in JSON.
+* The message is then sent to the System API endpoint.
+* Does not require any filter operation
 
 === SAP to GearCo (B2B Partner)
 
-* When ZDELIVERY_620 message is received, it is also intended to be sent out as X12 856 to GearCo
+* When a *ZDELIVERY_620* message is received, it is  sent out as an *X12 856* message to GearCo, as follows:
 ** Transform and Render to EDI X12 856 ( ASN ) for GearCo.
-* Route the message to the designated partner endpoint.
-* The message will only be sent to B2B process the message content indicates EDI message indicates the partner GearCo
+** Route the message to the designated partner endpoint.
+* The message:
+** Will only be sent to B2B process
+** Content indicates EDI message
+** Indicates the partner is GearCo
 
-_<Where do the following steps go?>_
+This process consists of these steps:
 
-Integration Hub initial setup
-Routing engine setup
-SAP to Salesforce integration 
+* Integration Hub initial setup
+* Routing engine setup
+* SAP to Salesforce integration 
 
 
-In this example, we are configuring SAP to Salesforce integration. Rest of the application can be integrated just the same.
+In this example, we configure the SAP to Salesforce integration. The other applications can be similarly integrated.
 
 == Before you Begin
 
@@ -67,21 +72,13 @@ Verify that you have the following:
 * Anypoint Platform user account with Integration Hub access
 
 * URL: https://tpm-service-release-8.dev.portx.io/portal
-
-_This is the account I use for documenting the UI. Are we sure we want to make the credentials public?_
-
-* User Name: demo@modusbox.com
-* Password: SMiarbY2!
-
-
+** User Name: demo@modusbox.com
+** Password: SMiarbY2! +
 If you are unable to access Integration Hub, see your PortX account administrator for assistance, or to set up a trial account.
 
-
 * Anypoint Studio with Mule 3.9.1
-* link:https://modusbox.atlassian.net/wiki/download/attachments/344719433/Json%20Target%20Dataweave.dwl?api=v2Json[Target Dataweave.dwl]
-* link:https://modusbox.atlassian.net/wiki/download/attachments/344719433/PortX%20Workshop.postman_collection.json?api=v2[PortX Workshop.postman_collection.json]
 
-
+* Download IHub Tutorial Materials 
 
 == Integration Hub Initial Setup
 
