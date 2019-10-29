@@ -23,11 +23,10 @@ https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[Get started w
 We start with one of the most common scenarios in digital integration: Receiving, mapping, and sending a document from a partner to an internal endpoint. 
 
 
-xref:day-1-walkthru.adoc[This walkthrough] tells the story of the scenario in a webpage.
 
 https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[This video tells the story of this scenario, YouTube-style].
 
-xref:day-1-tutorial.adoc[This tutorial] provides step-by-step instructions for implementing this scenario in your organization. 
+xref:day-one-tutorial.adoc[This tutorial] provides step-by-step instructions for implementing this scenario in your organization. 
 
 == Day Two: Basic Routing, EDI-style 
 
