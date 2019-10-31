@@ -1,8 +1,0 @@
-name: release-notes
-version: 'latest'
-title: Release Notes
-start_page: ROOT:release-notes.adoc
-nav:
-- modules/ROOT/nav.adoc
-
-

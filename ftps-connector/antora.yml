@@ -1,8 +1,0 @@
-name: ftps-connector
-title: FTPS Connector
-version: 'latest'
-start_page: ROOT:ftps-connector.adoc
-nav:
-- modules/ROOT/nav.adoc
-
-

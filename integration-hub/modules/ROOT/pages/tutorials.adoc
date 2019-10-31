@@ -1,9 +1,0 @@
-= Tutorials
-
-== Latest Versions
-
-* xref:integration-hub-tutorial-td.adoc[Designing an AS2 and EDI X12 Purchase Order Transaction]
-
-== Versions 1.0 - 1.23.0
-
-* xref:transaction-tracking-walkthrough.adoc[Transaction Tracking Walkthrough]
