@@ -15,39 +15,5 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 
 === xref:integration-hub:ROOT:index.adoc[Integration Hub]
 
-===  xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 === xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
-=== xref:jde:ROOT:jde.adoc[JD Edwards Connector]
-=== xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
-=== xref:release-notes:ROOT:release-notes.adoc[Release Notes]
 
-== Requirements
-
-ifdef::other-esb[]
-=== ESB
-
-For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
-
-* xref:integration-hub::index.adoc[Integration Hub]
-* xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
-endif::[]
-ifdef::mule[]
-
-=== Mulesoft
-
-* xref:integration-hub:ROOT:index.adoc[Integration Hub (Mulesoft)]
-* xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector (Mulesoft)]
-* xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
-* xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
-endif::[]
-
-
-== Getting Started
-
-For conceptual information, see xref:integration-hub:ROOT:key-concepts.adoc[Key Concepts].
-
-////
-ifdef::mule[]
-To see Integration Hub in action, see xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
-endif::[]
-////

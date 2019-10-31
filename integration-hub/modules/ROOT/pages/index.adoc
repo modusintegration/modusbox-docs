@@ -1,7 +1,7 @@
 = Integration Hub
 :keywords: b2b, introduction, portal, partner, manager
 
-Integration Hub provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+Integration Hub provides a single web-based user interface for <<Transaction Monitoring>> and <<Partner Configuration>>.
 
 == Transaction Monitoring
 
@@ -12,7 +12,7 @@ Because B2B transactions often communicate contractual obligations between compa
 * Error correction
 * Auditing
 
-For more information, see xref:transaction-monitoring.adoc[Jordan - just see if you can recreate this link - it's okay if the page to which you link contains only a header].
+For more information, see xref:transaction-monitoring.adoc[Transaction Monitoring].
 
 == Partner Configuration
 
