@@ -1,6 +1,6 @@
 name: portx
 title: PortX
-version: 'latest'
+version: 'prove-it'
 start_page: ROOT:index.adoc
 nav:
 - modules/ROOT/nav.adoc

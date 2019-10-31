@@ -1,6 +1,6 @@
 name: as2-connector
 title: AS2 Connector
-version: 'latest'
+version: 'prove-it'
 start_page: ROOT:as2-connector.adoc
 nav:
 - modules/ROOT/nav.adoc
