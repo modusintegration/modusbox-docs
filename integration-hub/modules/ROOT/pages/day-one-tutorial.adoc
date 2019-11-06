@@ -85,6 +85,8 @@ The xref:img-relationships[] appears.
 [[img-relationships]]
 image::relationships.png[img-relationships,title="Relationships Page"]
 
+Note that a Relationship has been created between *GearCo B2B* and *PartA*.
+
 
 == Verify the Relationship
 
