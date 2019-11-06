@@ -99,10 +99,10 @@ Analagous to a programming namespace.
 Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
 
 Routing Engine:: 
-ifdef::mule-esb[]
+ifdef::mule[]
 Mule application
 endif::[]
-ifndef::mule-esb[]
+ifndef::mule[]
 Application
 endif::[]
 that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
