@@ -81,15 +81,22 @@ At this point, it might be appropriate to add Identifiers, Certificates, or both
 The xref:img-partners-and-applications[] reappears. Note that *PartA* now appears in the partner list. 
 . In the left pane, click *Relationships*. 
 The xref:img-relationships[] appears. 
-
++
 [[img-relationships]]
 image::relationships.png[img-relationships,title="Relationships Page"]
++
+Note that a xref:glossary#sectr[Relationship] has been created between 
+*GearCo B2B* and *PartA*
+xref:glossary#sectr[Relationship].
+. Click the new *GearCo B2B* and *PartA*
+xref:glossary#sectr[Relationship].
++
+The xref:img-transaction-designer[] appears. 
++
+[[img-transaction-designer]]
+image::transaction-designer.png[img-transaction-designer,title="Transaction-Designer Page"]
 
-Note that a Relationship has been created between *GearCo B2B* and *PartA*.
-
-
-== Verify the Relationship
-
+== Create a Transaction
 
 == Design a Target Channel
 
