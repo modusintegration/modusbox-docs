@@ -98,6 +98,13 @@ image::transaction-designer.png[img-transaction-designer,title="Transaction-Desi
 
 == Create a Transaction
 
+. Click *New*.
++
+The xref:img-transaction-workspace[] appears. 
++
+[[img-transaction-workspace]]
+image::transaction-workspace.png[img-transaction-workspace,title="Transaction Workspace Page"]
+
 == Design a Target Channel
 
 A _channel_ provides a means of specifying, for a given partner:
