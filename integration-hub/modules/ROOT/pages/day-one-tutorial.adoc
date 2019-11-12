@@ -1,6 +1,7 @@
 = Day One Tutorial
 
 
+////
 This tutorial:
 
 * Illustrates the role PortX Integration Hub (IHub) plays in B2B transaction processing. 
@@ -41,6 +42,8 @@ NOTE: If you are unable to access IHub, see your MuleSoft account administrator 
 
 . Download xref: https://drive.google.com/open?id=1ZqNUazJHoBJ5Xj25L9OXEXYRilrsdkTH[IHub Tutorial Materials].
 . Click *PortX Integration Hub Tutorial Materials.zip* to expand it.
+
+////
 
 == Get Started
 
@@ -88,7 +91,7 @@ image::relationships.png[img-relationships,title="Relationships Page"]
 Note that a xref:glossary#sectr[Relationship] has been created between 
 *GearCo B2B* and *PartA*
 xref:glossary#sectr[Relationship].
-. Click the new *GearCo B2B* and *PartA*
+. Click the new *GearCo B2B* and *PartA* 
 xref:glossary#sectr[Relationship].
 +
 The xref:img-transaction-designer[] appears. 
@@ -104,6 +107,15 @@ The xref:img-transaction-workspace[] appears.
 +
 [[img-transaction-workspace]]
 image::transaction-workspace.png[img-transaction-workspace,title="Transaction Workspace Page"]
+
+. On the xref:img-transaction-workspace[], in the From Partner card, click the dropdown arrow. 
++
+The Partner Dropdown List appears. 
++
+. From the Partner Dropdown List appears, select *PartA*.
++
+The values in the From Partner and To Partner cards change. 
+
 
 == Design a Target Channel
 
@@ -235,20 +247,7 @@ The <<img-endpoints>> appears.
 
 
 
-== Design a Source Channel
 
-
-* <<Start Transaction Designer>>
-* <<Create the Source Channel>>
-* <<Create the Source Document>>
-* <<Create the Buyer Receive Endpoint>>
-* <<Configure the Map>>
-* <<Add the Target Channel>>
-
-
-==== Start Transaction Designer
-
-include::_sources/tutorial/buyer/start-td-acme.adoc[]
 
 === Create the Source Channel
 
@@ -410,6 +409,14 @@ The <<img-td-designs-acme>> appears.
 [[img-td-designs-acme]]
 
 image::partner/td-designs-acme.png[img-td-designs-acme, title="Transaction Designer Page"]
+
+
+
+
+
+////
+
+== Design a Source Channel
 
 == Configure an S3 Bucket (optional)
 
