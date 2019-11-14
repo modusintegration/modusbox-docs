@@ -97,7 +97,7 @@ xref:glossary#sectr[Relationship].
 The xref:img-transaction-designer[] appears. 
 +
 [[img-transaction-designer]]
-image::transaction-designer.png[img-transaction-designer,title="Transaction-Designer Page"]
+image::transaction-designer.png[img-transaction-designer,title="Transaction Designer Page"]
 
 == Create a Transaction
 
