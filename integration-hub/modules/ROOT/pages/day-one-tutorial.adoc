@@ -117,7 +117,7 @@ The Partner Dropdown List appears.
 The values in the From Partner and To Partner cards change. 
 
 
-== Design a Target Channel
+== Create a Source Channel
 
 A _channel_ provides a means of specifying, for a given partner:
 
@@ -126,15 +126,79 @@ Document:: As created in xref:document-types[Document Types] or in xref:transact
 Document Map:: As created in xref:maps[Maps] or in xref:transaction-designer[Transaction Designer]
 Endpoint:: As created in xref:endpoints[Endpoints] or in xref:transaction-designer[Transaction Designer]
 
-In this section, you create a template for any transaction in which you receive a purchase order from a partner and send it to your HTTP endpoint. Later, in <<Design a Source Channel>>, you will use this template as the starting point from which you configure a transaction specific to receiving a purchase order from AcmeHomeSupply.
 
-==== Start Transaction Designer
+. Click *Create New Channel*.
+. Click *Create New Document*.
++
+The Source Document Page appears. 
+. In the *Standard* box, click *XML*.
++
+XML-specific boxes appear.
+. In the *Root Node* box, type *Y*.
+. Click *Save*.
++
+The Source Channel card, populated with information based on what you added in the previous steps. 
+Note that an *Incomplete* icon appears under *Resolutions*. 
+. Click *Possible Endpoints*. 
++
+The Source Document Page appears, opened at the *Resolutions* tab.  
+. Click *Add New Endpoint*.
++
+The Endpoint Page appears. 
+. From the dropdown list in the *Protocol* box, select *HTTP*.
+. If the *Uses Reusable Endpoint* checkbox is selected, de-select it.
+. Scroll down (on the Source Document Page) to *Operation Settings*.
++
+Complete the settings in this section with the values provided to you by your PortX administrator. 
++
+The Source Document Page re-appears, now including the information for the endpoint you added in the previous step.
++
+Not that the *Incomplete* icon appears alongside the new Endpoint. Click the dropdown arrow next to the Endpoint. 
++
+Two new rows of information appear, indicating that the *From Partner Identifier* and the *To Partner Identifier* are unknown.
+. Click the View Properties icon. 
++
+The Linked Endpoint Properties Page appears.
+. Click *New Property*.
++
+The *Add Property* Page appears.
+. In the *Property Type* box, begin typing *To Partner Identifier*. When the *To Partner Identifier* option appears, click it. 
+. Click in the *Property Source Type* box. 
++
+A dropdown list appears.
+. Select *Inbound Properties*.
+. In the *Path* box, type *toPartnerIdentifier*.
+. Click *Save Property*.
++ 
+The Linked Endpoint Properties Page appears, displaying the Property Type you have just added.
+. Click *New Property*.
++
+The *Add Property* Page appears.
+. In the *Property Type* box, begin typing *From Partner Identifier*. When the *From Partner Identifier* option appears, click it. 
+. Click in the *Property Source Type* box. 
++
+A dropdown list appears.
+. Select *Inbound Properties*.
+. In the *Path* box, type *fromPartnerIdentifier*.
+. Click *Save Property*.
++ 
+The Linked Endpoint Properties Page appears, displaying the Property Type you have just added.
+. Click *Save*.
++
+The *Source Document Page reappears.
++
+Note that now all route resolve.
+. Click Save.
++
+The Transaction Design Page appears.
 
-include::_sources/tutorial/supplier/start-td-aaz.adoc[]
 
-=== Create the Target Channel
 
-include::_sources/tutorial/supplier/td-target-channel-aaz.adoc[]
+. 
+
+
+
+
 
 
 === Create the Source Document Type for the Target Channel
@@ -247,6 +311,12 @@ The <<img-endpoints>> appears.
 
 
 
+* <<Start Transaction Designer>>
+* <<Create the Source Channel>>
+* <<Create the Source Document>>
+* <<Create the Buyer Receive Endpoint>>
+* <<Configure the Map>>
+* <<Add the Target Channel>>
 
 
 === Create the Source Channel
