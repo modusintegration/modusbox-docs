@@ -62,7 +62,8 @@ image::partners-and-applications.png[img-partners-and-applications,title="Partne
 
 This tutorial works with two partners:
 
-* *GearCo B2B*, a fictional skateboard retailer, also identified on the xref:img-partner-configuration[] as *YOUR COMPANY*.
+* *GearCo B2B*, a fictional skateboard retailer, also identified on the xref:img-partners-and-applications[] 
+as *YOUR COMPANY*.
 
 NOTE: In your copy of IHub, *YOUR COMPANY* is probably not named *GearCo B2B*. However, for illustration purposes, we refer to *YOUR COMPANY* as *GearCo B2B* throughout this tutorial. If you want to change the name of *YOUR COMPANY* to *GearCo B2B*, see xref:partner-configuration#create-and-configure-partners[Create and Configure Partners]. However, the tutorial will work without making this change.
 
@@ -192,24 +193,53 @@ Note that now all route resolve.
 +
 The Transaction Design Page appears.
 
-
-
-. 
-
-
-
-
-
-
-=== Create the Source Document Type for the Target Channel
+=== Create the Target Document Type for the Source Channel
 
 The terms  _document_, _file_, and _message_ are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term document to represent these instances.
 
 IHub enables you to categorize and configure specific _Document Types_. In this section, you create a Source Document Type for the Target Channel.
 
-==== To Create the Source Document Type for the Target Channel
+. On the xref:img-transaction-workspace[], in the Source Channel Card, click *Add Map*.   
++
+The Source Channel Card expands to display the xref:img-target-document-card[]. 
++
+[[img-target-document-card]]
+image::target-document-card.png[img-target-document-card,title="Source Channel Card with Target Document Card"]
 
-include::_sources/tutorial/supplier/td-target-channel-source-doc-aaz.adoc[]
+. On the xref:img-target-document-card[], click *New Document*. 
++
+The 
+xref:img-target-document-page[] 
+appears.
+
+[[img-target-document-page]]
+image::target-document-page.png[img-target-document-page,title="Target Document Page"]
+
+. On the xref:img-target-document-page[], in the *Standard* box, click the drop-down arrow.
+. Select *JSON*. 
+. In the *Message Type* box, type *x*.
+. Click *Save*.
++
+The xref:img-target-document-card[] reappears.
++
+NOTE: The borders of the Source Document and Target Document Cards are red, and  Warning symbol appears adjacent to the *Save Draft* box. If you hover over the symbol, "There is 1 issdue to resolve".
+. Click the Warning symbol.
++
+The Configuration Conflicts Page appears, displaying the message 
+[.text-center]
+Source Channel: the Source Document and the Target document are different. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 === Configure Endpoints
