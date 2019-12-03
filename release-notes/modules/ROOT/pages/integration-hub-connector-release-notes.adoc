@@ -3,8 +3,9 @@
 
 == Version 7.0.0 - 1 August, 2018
 
-This is the initial release of this product as PortX Integration Hub Connector, so there are no release notes. Look to this page for notes about future releases. 
+This is the initial release of this product as PortX Integration Hub Connector. 
 
+Supported Mule Version: 3.9.0
 
 
 
