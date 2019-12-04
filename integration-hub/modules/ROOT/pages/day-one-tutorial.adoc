@@ -102,20 +102,22 @@ image::transaction-designer.png[img-transaction-designer,title="Transaction Desi
 
 == Create a Transaction
 
+=== To create a transaction
+
 . Click *New*.
 +
 The xref:img-transaction-workspace[] appears. 
 +
-[[img-transaction-workspace]]
-image::transaction-workspace.png[img-transaction-workspace,title="Transaction Workspace Page"]
+[[img-transaction-design]]
+image::transaction-design.png[img-transaction-design,title="Transaction Design Page"]
 
-. On the xref:img-transaction-workspace[], in the From Partner card, click the dropdown arrow. 
+. On the xref:img-transaction-workspace[], in the From Partner Card, click the dropdown arrow. 
 +
 The Partner Dropdown List appears. 
 +
 . From the Partner Dropdown List appears, select *PartA*.
 +
-The values in the From Partner and To Partner cards change. 
+The values in the From Partner and To Partner Cards change. 
 
 
 == Create a Source Channel
@@ -127,22 +129,32 @@ Document:: As created in xref:document-types[Document Types] or in xref:transact
 Document Map:: As created in xref:maps[Maps] or in xref:transaction-designer[Transaction Designer]
 Endpoint:: As created in xref:endpoints[Endpoints] or in xref:transaction-designer[Transaction Designer]
 
+=== To create a source channel
 
-. Click *Create New Channel*.
-. Click *Create New Document*.
+. On the xref:img-transaction-workspace[], on the Source Channel Card, click *Create New Channel*.
 +
-The Source Document Page appears. 
+The xref:img-transaction-workspace[] displays the Source Document and Map Cards. 
+
+=== To create a source document
+
+. On the Source Document Card, click *New Document*.
++
+The Source Document Overlay appears. 
+
 . In the *Standard* box, click *XML*.
 +
 XML-specific boxes appear.
 . In the *Root Node* box, type *Y*.
 . Click *Save*.
 +
-The Source Channel card, populated with information based on what you added in the previous steps. 
+The xref:img-transaction-workspace[] appears, populated with information based on what you added in the previous steps. 
 Note that an *Incomplete* icon appears under *Resolutions*. 
+
+=== Add a new endpoint
+
 . Click *Possible Endpoints*. 
 +
-The Source Document Page appears, opened at the *Resolutions* tab.  
+The Source Document Ovelay appears, opened at the *Resolutions* tab.  
 . Click *Add New Endpoint*.
 +
 The Endpoint Page appears. 
