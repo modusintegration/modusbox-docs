@@ -106,12 +106,12 @@ image::transaction-designer.png[img-transaction-designer,title="Transaction Desi
 
 . Click *New*.
 +
-The xref:img-transaction-workspace[] appears. 
+The xref:img-transaction-design[] appears. 
 +
 [[img-transaction-design]]
 image::transaction-design.png[img-transaction-design,title="Transaction Design Page"]
 
-. On the xref:img-transaction-workspace[], in the From Partner Card, click the dropdown arrow. 
+. On the xref:img-transaction-design[], in the From Partner Card, click the dropdown arrow. 
 +
 The Partner Dropdown List appears. 
 +
@@ -124,22 +124,29 @@ The values in the From Partner and To Partner Cards change.
 
 A _channel_ provides a means of specifying, for a given partner:
 
-Type:: Source or Target, As created in xref:maps[Channels] or in xref:transaction-designer[Transaction Designer]. Source Channel settings are always specific to the origin of a document. Target Channel settings are always specific to the destination.
-Document:: As created in xref:document-types[Document Types] or in xref:transaction-designer[Transaction Designer]
-Document Map:: As created in xref:maps[Maps] or in xref:transaction-designer[Transaction Designer]
+Type:: Source or Target, As created in xref:maps[Channels] or in xref:transaction-designer[Transaction Designer]. Source Channel settings are always specific to the origin of a Document Type. Target Channel settings are always specific to the destination.
+Document Type:: As created in xref:document-types[Document Types] or in xref:transaction-designer[Transaction Designer]
+Map:: As created in xref:maps[Maps] or in xref:transaction-designer[Transaction Designer]
 Endpoint:: As created in xref:endpoints[Endpoints] or in xref:transaction-designer[Transaction Designer]
 
 === To create a source channel
 
-. On the xref:img-transaction-workspace[], on the Source Channel Card, click *Create New Channel*.
+. On the xref:img-transaction-design[], on the Source Channel Card, click *Create New Channel*.
 +
-The xref:img-transaction-workspace[] displays the Source Document and Map Cards. 
+The xref:img-transaction-design[] displays the Source Document Type and Map Cards.
 
-=== To create a source document
 
-. On the Source Document Card, click *New Document*.
+[[img-td-new-source-channel]]
+image::td-new-source-channel.png[img-td-new-source-channel,title="Transaction Design Page, Source Channel Card, Source Document Type and Map Cards"]
+
+=== To create a source Document Type
+
+. On the Source Document Type Card, click *New Document Type*.
 +
-The Source Document Overlay appears. 
+The xref:img-td-new-source-document-type[Source Document Type Overlay] appears.
+
+[[img-td-new-source-document-type]]
+image::td-new-source-document-type.png[img-td-new-source-document-type,title="Transaction Design Page, Source Document Type Overlay"]
 
 . In the *Standard* box, click *XML*.
 +
@@ -147,34 +154,71 @@ XML-specific boxes appear.
 . In the *Root Node* box, type *Y*.
 . Click *Save*.
 +
-The xref:img-transaction-workspace[] appears, populated with information based on what you added in the previous steps. 
-Note that an *Incomplete* icon appears under *Resolutions*. 
+The xref:img-td-incomplete-source-document-type[] appears, populated with information based on what you added in the previous steps. 
++
+[[img-td-incomplete-source-document-type]]
+image::td-incomplete-source-document-type.png[img-td-incomplete-source-document-type,title="Transaction Design Page, Incomplete Source Document Type"]
+
+Note that an *Incomplete* icon appears under *Resolutions*. This means that IHub doesn't know how to resolve this Document Type when it receives it. For more information, procede to the next section. 
 
 === Add a new endpoint
 
 . Click *Possible Endpoints*. 
 +
-The Source Document Ovelay appears, opened at the *Resolutions* tab.  
+The 
+xref:img-td-incomplete-source-document-type[Source Document -type Overlay] 
+appears, opened at the *Resolutions* tab.  
++
+[[img-td-route-resolution-properties]]
+image::td-route-resolution-properties.png[img-td-route-resolution-properties,title="Transaction Design Page, Source Document -type Overlay, Route Resolution Properties"]
+
 . Click *Add New Endpoint*.
 +
-The Endpoint Page appears. 
+The 
+xref:img-td-endpoint[Endpoint Overlay] 
+appears. 
++
+[[img-td-endpoint]]
+image::td-endpoint.png[img-td-endpoint,title="Transaction Design Page, Endpoint Overlay"]
+
 . From the dropdown list in the *Protocol* box, select *HTTP*.
 . If the *Uses Reusable Endpoint* checkbox is selected, de-select it.
-. Scroll down (on the Source Document Page) to *Operation Settings*.
+. Scroll down (on the xref:img-td-endpoint[Endpoint Overlay]) 
+ to *Operation Settings*.
 +
 Complete the settings in this section with the values provided to you by your PortX administrator. 
+. Click *Save*.
 +
-The Source Document Page re-appears, now including the information for the endpoint you added in the previous step.
+The 
+xref:img-td-source-document-type-endpoint[Source Document -type Overlay] 
+re-appears, now including the information for the endpoint you added in the previous step.
 +
-Not that the *Incomplete* icon appears alongside the new Endpoint. Click the dropdown arrow next to the Endpoint. 
+[[img-td-source-document-type-endpoint]]
+image::td-source-document-type-endpoint.png[img-td-source-document-type-endpoint,title="Transaction Design Page, Source DocumentType Overlay, Endpoint Added"]
 +
-Two new rows of information appear, indicating that the *From Partner Identifier* and the *To Partner Identifier* are unknown.
-. Click the View Properties icon. 
+Note that the *Incomplete* icon appears alongside the new Endpoint. 
+. Click the dropdown arrow next to the Endpoint. 
 +
-The Linked Endpoint Properties Page appears.
-. Click *New Property*.
+xref:td-source-document-type-endpoint-properties[Two new rows of information]
+appear, indicating that the *From Partner Identifier* and the *To Partner Identifier* are unknown.
+. On the xref:td-source-document-type-endpoint-properties[], click the View Properties icon. 
 +
-The *Add Property* Page appears.
+The 
+xref:img-td-source-document-type-linked-endpoint-properties[Linked Endpoint Properties Overlay] appears.
++
+[[img-td-source-document-type-linked-endpoint-properties]]
+image::td-source-document-type-linked-endpoint-properties.png[img-td-source-document-type-linked-endpoint-properties,title="Transaction Design Page, Source Document -type Overlay, Linked Endpoint Properties"]
+
+
+=== Add Endpoint Properties
+
+. On the xref:img-td-source-document-type-linked-endpoint-properties[], 
+click *New Property*.
++
+The xref:img-td-source-document-type-add-endpoint-property[Add Property Overlay] appears.
+[[img-td-source-document-type-add-endpoint-property]]
+image::td-source-document-type-add-endpoint-property.png[img-td-source-document-type-add-endpoint-property,title="Transaction Design Page, Source Document Type, Endpoint Property Overlay"]
+
 . In the *Property Type* box, begin typing *To Partner Identifier*. When the *To Partner Identifier* option appears, click it. 
 . Click in the *Property Source Type* box. 
 +
@@ -183,10 +227,15 @@ A dropdown list appears.
 . In the *Path* box, type *toPartnerIdentifier*.
 . Click *Save Property*.
 + 
-The Linked Endpoint Properties Page appears, displaying the Property Type you have just added.
+The 
+xref:img-td-source-document-type-added-endpoint-property[Linked Endpoint Properties Overlay]
+reappears, displaying the Property Type you have just added.
+=
+[[img-td-source-document-type-added-endpoint-property]]
+image::td-source-document-type-added-endpoint-property.png[img-td-source-document-type-added-endpoint-property,title="Transaction Design Page, Source Document Type, Linked Endpoint Properties Overlay, Property Added"]
 . Click *New Property*.
 +
-The *Add Property* Page appears.
+The xref:img-td-source-document-type-add-endpoint-property[Add Property Overlay] appears.
 . In the *Property Type* box, begin typing *From Partner Identifier*. When the *From Partner Identifier* option appears, click it. 
 . Click in the *Property Source Type* box. 
 +
@@ -195,15 +244,29 @@ A dropdown list appears.
 . In the *Path* box, type *fromPartnerIdentifier*.
 . Click *Save Property*.
 + 
-The Linked Endpoint Properties Page appears, displaying the Property Type you have just added.
+The 
+xref:img-td-source-document-type-linked-endpoint-properties-2[Linked Endpoint Properties Overlay] 
+reappears, displaying the Property Type you have just added.
++
+[[img-td-source-document-type-added-endpoint-property-2]]
+image::td-source-document-type-added-endpoint-property-2.png[img-td-source-document-type-added-endpoint-property-2,title="Transaction Design Page, Source Document Type Overlay, Linked Endpoint Properties"]
 . Click *Save*.
 +
-The *Source Document Page reappears.
+The 
+xref:img-td-route-resolution-properties-resolved[Source Document Type Overlay] 
+reappears, again opened at the *Resolutions* tab.  
 +
-Note that now all route resolve.
+[[img-td-route-resolution-properties-resolved]]
+image::td-route-resolution-properties-resolved.png[img-td-route-resolution-properties-resolved,title="Transaction Design Page, Source Document Type Overlay, Route Resolution Properties Resolved"]
++
+Note that now all routes resolve.
 . Click Save.
 +
-The Transaction Design Page appears.
+The 
+xref:img-td-source-channel-source-document-type-complete[Transaction Design Page] reappears.
++
+[[img-td-source-channel-source-document-type-complete]]
+image::td-source-channel-source-document-type-complete.png[img-td-source-channel-source-document-type-complete,title="Transaction Design Page, Source Channel, Source Document Type Complete"]
 
 === Create the Target Document Type for the Source Channel
 
@@ -211,35 +274,67 @@ The terms  _document_, _file_, and _message_ are used interchangeably in the B2B
 
 IHub enables you to categorize and configure specific _Document Types_. In this section, you create a Source Document Type for the Target Channel.
 
-. On the xref:img-transaction-workspace[], in the Source Channel Card, click *Add Map*.   
+. On the xref:img-td-source-channel-source-document-type-complete[Transaction Design Page], in the Source Channel Card, click *Add Map*.   
 +
-The Source Channel Card expands to display the xref:img-target-document-card[]. 
+The Source Channel Card expands to display the xref:img-td-source-channel-target-document-type-card[]. 
 +
-[[img-target-document-card]]
-image::target-document-card.png[img-target-document-card,title="Source Channel Card with Target Document Card"]
+[[img-td-source-channel-target-document-type-card]]
+image::td-source-channel-target-document-card.png[img-source-channel-target-document-type-card,title="Source Channel Card with Target Document Type Card"]
 
-. On the xref:img-target-document-card[], click *New Document*. 
+. On the xref:img-td-source-channel-target-document-type-card[], click *New Document*. 
 +
 The 
-xref:img-target-document-page[] 
+xref:img-td-source-channel-target-document-type-overlay[] 
 appears.
 
-[[img-target-document-page]]
-image::target-document-page.png[img-target-document-page,title="Target Document Page"]
+[[img-td-source-channel-target-document-type-overlay]]
+image::td-source-channel-target-document-type-overlay.png[img-td-source-channel-target-document-type-overlay,title="Source Channel,Target Document Type Overlay"]
 
-. On the xref:img-target-document-page[], in the *Standard* box, click the drop-down arrow.
+. On the xref:img-source-channel-target-document-type-overlay[], in the *Standard* box, click the drop-down arrow.
 . Select *JSON*. 
-. In the *Message Type* box, type *x*.
+. In the *Message Type* box, type *X*.
 . Click *Save*.
 +
-The xref:img-target-document-card[] reappears.
+The xref:td-source-channel-target-document-type-added[] reappears, now showing the target document type you added.
 +
-NOTE: The borders of the Source Document and Target Document Cards are red, and  Warning symbol appears adjacent to the *Save Draft* box. If you hover over the symbol, "There is 1 issdue to resolve".
+[[img-td-source-channel-target-document-type-added]]
+image::td-source-channel-target-document-type-added.png[img-td-source-channel-target-document-type-added,title="Transaction Designer,Source Channel, Target Document Type Added"]
++
+NOTE: The borders of the Source Document Type and Target Document Type Cards are red, and  Warning symbol appears adjacent to the *Save Draft* box. If you hover over the symbol, "There is 1 issue to resolve".
 . Click the Warning symbol.
 +
-The Configuration Conflicts Page appears, displaying the message 
-[.text-center]
-Source Channel: the Source Document and the Target document are different. 
+The Configuration Conflicts Page appears, displaying the message: 
+
+//[.text-center]
+
+[source]
+*Source Channel: the Source Document and the Target document are different.* 
+
+=== Create a Map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
