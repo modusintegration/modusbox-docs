@@ -353,7 +353,7 @@ image::td-transaction-design-page-source-channel-complete.png[img-td-transaction
 . On the xref:img-td-transaction-design-page-source-channel-complete[Transaction Design Page], on the Target Channel Card, click *Create New Channel*.
 +
 The Target Channel Card expands to show the Source Document Type, Map, and Endpoint Cards.
-
++
 [[img-td-transaction-design-page-target-channel-card]]
 image::td-transaction-design-page-target-channel-card.png[img-td-transaction-design-page-target-channel-card,title="Transaction Design Page, Target Channel Card"]
 
@@ -371,63 +371,43 @@ image::td-transaction-design-page-target-channel-card-source-document-autopopula
 +
 Note that IHub populates the new Source Document based on the choices you made for the Target Document in the Source Channel.
 
-=== Create an Endpoint for the Target Channel
-
-. On the xref:img-td-transaction-design-page-target-channel-card-source-document-autopopulated[Endpoint Card], click *New Endpoint*.
-
-The xref:img-td-transaction-design-page-target-channel-card-endpoint-overlay[] appears.
-[]
-
-
-[[img-td-transaction-design-page-target-channel-card-endpoint-overlay]]
-image::td-transaction-design-page-target-channel-card-endpoint-overlay[img-td-transaction-design-page-target-channel-card-endpoint-overlay,title="Target Channel Card, Endpoint Overlay"]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=== Configure Endpoints
+=== Endpoints
 
 An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture.
 In IHub, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
-==== Configure the Target Endpoint
+==== Create an Endpoint for the Target Channel
 
-include::_sources/tutorial/supplier/td-target-channel-endpoint-aaz.adoc[]
+. On the xref:img-td-transaction-design-page-target-channel-card-source-document-autopopulated[Endpoint Card], click *New Endpoint*.
++
+The xref:img-td-transaction-design-page-target-channel-card-endpoint-overlay[] appears.
++
+[[img-td-transaction-design-page-target-channel-card-endpoint-overlay]]
+image::td-transaction-design-page-target-channel-card-endpoint-overlay.png[img-td-transaction-design-page-target-channel-card-endpoint-overlay,title="Target Channel Card, Endpoint Overlay"]
+
+. From the dropdown list in the *Protocol* box, select *HTTP*.
+. If the *Uses Reusable Endpoint* checkbox is selected, de-select it.
+. Scroll down (on the xref:img-td-endpoint[Endpoint Overlay]) 
+ to *Operation Settings*.
++
+Complete the settings in this section with the values provided to you by your PortX administrator. 
+. Click *Save*.
++
+The xref:img-td-transaction-design-page-target-channel-complete[Transaction Design Page] reappears.
+
+
+[[img-td-transaction-design-page-target-channel-complete]]
+image::td-transaction-design-page-target-channel-complete.png[img-td-transaction-design-page-target-channel-complete,title="Transaction Design Page, Target Channel complete"]
+
+
+
+
+
+
+
+
+
+
 
 
 === Save the Transaction
