@@ -139,7 +139,7 @@ The xref:img-transaction-design[] displays the Source Document Type and Map Card
 [[img-td-new-source-channel]]
 image::td-new-source-channel.png[img-td-new-source-channel,title="Transaction Design Page, Source Channel Card, Source Document Type and Map Cards"]
 
-=== To create a source Document Type
+=== To create a Source Document Type
 
 . On the Source Document Type Card, click *New Document Type*.
 +
@@ -190,11 +190,11 @@ Complete the settings in this section with the values provided to you by your Po
 . Click *Save*.
 +
 The 
-xref:img-td-source-document-type-endpoint[Source Document -type Overlay] 
+xref:img-td-source-document-type-endpoint[Source Document Type Overlay] 
 re-appears, now including the information for the endpoint you added in the previous step.
 +
 [[img-td-source-document-type-endpoint]]
-image::td-source-document-type-endpoint.png[img-td-source-document-type-endpoint,title="Transaction Design Page, Source DocumentType Overlay, Endpoint Added"]
+image::td-source-document-type-endpoint.png[img-td-source-document-type-endpoint,title="Transaction Design Page, Source Document Type Overlay, Endpoint Added"]
 +
 Note that the *Incomplete* icon appears alongside the new Endpoint. 
 . Click the dropdown arrow next to the Endpoint. 
@@ -207,7 +207,7 @@ The
 xref:img-td-source-document-type-linked-endpoint-properties[Linked Endpoint Properties Overlay] appears.
 +
 [[img-td-source-document-type-linked-endpoint-properties]]
-image::td-source-document-type-linked-endpoint-properties.png[img-td-source-document-type-linked-endpoint-properties,title="Transaction Design Page, Source Document -type Overlay, Linked Endpoint Properties"]
+image::td-source-document-type-linked-endpoint-properties.png[img-td-source-document-type-linked-endpoint-properties,title="Transaction Design Page, Source Document Type Overlay, Linked Endpoint Properties"]
 
 
 === Add Endpoint Properties
@@ -270,7 +270,7 @@ image::td-source-channel-source-document-type-complete.png[img-td-source-channel
 
 === Create the Target Document Type for the Source Channel
 
-The terms  _document_, _file_, and _message_ are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term document to represent these instances.
+The terms _document_, _file_, and _message_ are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term document to represent these instances.
 
 IHub enables you to categorize and configure specific _Document Types_. In this section, you create a Source Document Type for the Target Channel.
 
@@ -279,7 +279,7 @@ IHub enables you to categorize and configure specific _Document Types_. In this 
 The Source Channel Card expands to display the xref:img-td-source-channel-target-document-type-card[]. 
 +
 [[img-td-source-channel-target-document-type-card]]
-image::td-source-channel-target-document-card.png[img-source-channel-target-document-type-card,title="Source Channel Card with Target Document Type Card"]
+image::td-source-channel-target-document-type-card.png[img-source-channel-target-document-type-card,title="Source Channel Card with Target Document Type Card"]
 
 . On the xref:img-td-source-channel-target-document-type-card[], click *New Document*. 
 +
@@ -290,27 +290,98 @@ appears.
 [[img-td-source-channel-target-document-type-overlay]]
 image::td-source-channel-target-document-type-overlay.png[img-td-source-channel-target-document-type-overlay,title="Source Channel,Target Document Type Overlay"]
 
-. On the xref:img-source-channel-target-document-type-overlay[], in the *Standard* box, click the drop-down arrow.
+. On the xref:img-td-source-channel-target-document-type-overlay[], in the *Standard* box, click the drop-down arrow.
 . Select *JSON*. 
 . In the *Message Type* box, type *X*.
 . Click *Save*.
 +
-The xref:td-source-channel-target-document-type-added[] reappears, now showing the target document type you added.
+The 
+xref:img-td-source-channel-target-document-type-added[]
+reappears, now showing the target document type you added.
 +
 [[img-td-source-channel-target-document-type-added]]
-image::td-source-channel-target-document-type-added.png[img-td-source-channel-target-document-type-added,title="Transaction Designer,Source Channel, Target Document Type Added"]
+image::td-source-channel-target-document-type-added.png[img-td-source-channel-target-document-type-added,title="Transaction Design Page, Source Channel, Target Document Type Added"]
 +
-NOTE: The borders of the Source Document Type and Target Document Type Cards are red, and  Warning symbol appears adjacent to the *Save Draft* box. If you hover over the symbol, "There is 1 issue to resolve".
+NOTE: The borders of the Source Document Type and Target Document Type Cards are red, and a Warning symbol appears adjacent to the *Save Draft* box. If you hover over the symbol, "There is 1 issue to resolve" appears.
 . Click the Warning symbol.
 +
-The Configuration Conflicts Page appears, displaying the message: 
-
-//[.text-center]
-
+The Configuration Conflicts  appears, displaying the message: 
++
+[.text-center]
 [source]
-*Source Channel: the Source Document and the Target document are different.* 
+Source Channel: the Source Document and the Target document are different.=
++
+. Click *Close*.
 
-=== Create a Map
+=== To Create a Map
+
+. On the 
+xref:img-td-source-channel-target-document-type-added[]
+, click *New Map*.
++
+The xref:img-td-map[] appears, open to the *Configuration* tab.
++
+[[img-td-map]]
+image::td-map.png[[img-td-map,title="Map Overlay"]]
++
+Note that the appropriate Document Types appear in the appropriate boxes. 
+. In the *Mapping Type*, click the Dropdown arrow.
+. Select *DataWeave*.
+. In the left-hand pane, click *Script*.
++
+The xref:img-td-map[] opens to the *Script* tab.
+. In the *Script File* box, click *Choose File* twice.
++
+A file selection window appears.
++
+Select the appropriate script.
++
+NOTE: The filename extension for Dataweave scripts must be *.dwl*.
++
+
+. Click *Save*.
++
+The 
+xref:img-td-transaction-design-page-source-channel-complete[]
+appears. 
++
+[[img-td-transaction-design-page-source-channel-complete]]
+image::td-transaction-design-page-source-channel-complete.png[img-td-transaction-design-page-source-channel-complete,title="Transaction Design Page, Source Channel Complete"]
+
+== Create Target Channel
+
+. On the xref:img-td-transaction-design-page-source-channel-complete[Transaction Design Page], on the Target Channel Card, click *Create New Channel*.
++
+The Target Channel Card expands to show the Source Document Type, Map, and Endpoint Cards.
+
+[[img-td-transaction-design-page-target-channel-card]]
+image::td-transaction-design-page-target-channel-card.png[img-td-transaction-design-page-target-channel-card,title="Transaction Design Page, Target Channel Card"]
+
+=== Create Source Document for the Target Channel
+
+. On the
+xref:img-td-transaction-design-page-target-channel-card[], on the Source Document Card,  click *Auto-Populate-Document*.
++
+The 
+xref:img-td-transaction-design-page-target-channel-card-source-document-autopopulated[]
+appears. 
++
+[[img-td-transaction-design-page-target-channel-card-source-document-autopopulated]]
+image::td-transaction-design-page-target-channel-card-source-document-autopopulated.png[img-td-transaction-design-page-target-channel-card-source-document-autopopulated,title="Transaction Design Page, Target Channel Card, Source Document Autopopulated"]
++
+Note that IHub populates the new Source Document based on the choices you made for the Target Document in the Source Channel.
+
+=== Create an Endpoint for the Target Channel
+
+. On the xref:img-td-transaction-design-page-target-channel-card-source-document-autopopulated[Endpoint Card], click *New Endpoint*.
+
+The xref:img-td-transaction-design-page-target-channel-card-endpoint-overlay[] appears.
+[]
+
+
+[[img-td-transaction-design-page-target-channel-card-endpoint-overlay]]
+image::td-transaction-design-page-target-channel-card-endpoint-overlay[img-td-transaction-design-page-target-channel-card-endpoint-overlay,title="Target Channel Card, Endpoint Overlay"]
+
 
 
 
