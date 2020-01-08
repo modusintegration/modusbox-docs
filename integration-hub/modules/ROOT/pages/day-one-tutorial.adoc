@@ -407,7 +407,7 @@ image::td-transaction-design-page-target-channel-complete.png[img-td-transaction
 
 
 
-
+////
 
 
 === Save the Transaction
@@ -610,7 +610,6 @@ In the *Maps* folder, select *IHub-tutorial-850_4010_IN.dwl*.
 *IHub-tutorial-850_4010_IN.dwl* appears in the *Schema* box.
 . Click *Save*.
 
-////
 . To view the map, click *View*.
 +
 The Schema Content Window appears.
@@ -623,17 +622,13 @@ To move on, click *Close*.
 The <<img-td-new-map-acme>> appears.
 . Click *Close*.
 +
-////
 
 The Source Channel in-progress Page appears.
 
-////
 
 [[img-td-source-channel-in-progress-map-added-script-added-acme]]
 
 image::partner/td-source-channel-in-progress-map-added-script-added-acme.png[img-td-source-channel-in-progress-map-added-script-added-acme, title="Source Channel in-progress"]
-
-////
 
 
 === Add the Target Channel
@@ -669,7 +664,7 @@ The <<img-td-designs-acme>> appears.
 image::partner/td-designs-acme.png[img-td-designs-acme, title="Transaction Designer Page"]
 
 
-
+////
 
 
 ////

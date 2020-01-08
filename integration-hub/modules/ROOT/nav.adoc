@@ -1,6 +1,6 @@
 * xref:index.adoc[Integration Hub]
 
-** xref:six-days.adoc[Six Days to Success]
+** xref:seven-days.adoc[Seven Days to Success]
 
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
