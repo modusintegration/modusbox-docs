@@ -204,7 +204,7 @@ appear, indicating that the *From Partner Identifier* and the *To Partner Identi
 . On the xref:td-source-document-type-endpoint-properties[], click the View Properties icon. 
 +
 The 
-xref:img-td-source-document-type-linked-endpoint-properties[Linked Endpoint Properties Overlay] appears.
+xref:img-td-source-document-type-linked-endpoint[Linked Endpoint Properties Overlay] appears.
 +
 [[img-td-source-document-type-linked-endpoint-properties]]
 image::td-source-document-type-linked-endpoint-properties.png[img-td-source-document-type-linked-endpoint-properties,title="Transaction Design Page, Source Document Type Overlay, Linked Endpoint Properties"]
@@ -316,8 +316,7 @@ Source Channel: the Source Document and the Target document are different.=
 === To Create a Map
 
 . On the 
-xref:img-td-source-channel-target-document-type-added[]
-, click *New Map*.
+xref:img-td-source-channel-target-document-type-added[], click *New Map*.
 +
 The xref:img-td-map[] appears, open to the *Configuration* tab.
 +
