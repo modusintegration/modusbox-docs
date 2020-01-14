@@ -21,6 +21,7 @@ You will use IHub to:
 * <<Create a Target Channel>>
 ** <<Create a Source Document for the Target Channel>>
 ** <<Create an Endpoint for the Target Channel>>
+* <<Quick-View the Transaction>>
 
 
 
@@ -398,3 +399,19 @@ The xref:img-td-transaction-design-page-target-channel-complete[Transaction Desi
 [[img-td-transaction-design-page-target-channel-complete]]
 image::td-transaction-design-page-target-channel-complete.png[img-td-transaction-design-page-target-channel-complete,title="Transaction Design Page, Target Channel complete"]
 
+== Quick-View the Transaction
+
+. On the xref:img-td-transaction-design-page-target-channel-complete[Transaction Design Page], click *Quick View*. 
++
+The xref:img-td-quick-view[] appears.
++
+[[img-td-quick-view]]
+image::td-quick-view.png[img-td-quick-view,title="Transaction Quick View"]
++
+. The xref:img-td-quick-view[] enables you to see the entire transaction from end to end, and, if necessary, make changes.
+. Click Save
+. The Save Transactions Overlay appears, indicating the Source Channel, Target Channel, and Route were created. 
+
+== Simulating the Transaction
+
+To simulate and monitor the transaction, see Simulating and Monitoring the Transaction. 
