@@ -30,32 +30,46 @@ xref:day-one-tutorial.adoc[This tutorial] provides step-by-step instructions for
 
 == Day Two: Basic Routing, EDI-style 
 
-* Intro text (Ian)
+In this example of a basic routing scenario, your organization receives a xref:glossary#d[document] from a xref:glossary#p[Partner]. 
+If IHub has been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], IHub routes the xref:glossary#d[document] to an internal API. 
+If IHub has not been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], IHub rejects the document. 
+
 * Film Walkthrough video of Basic Routing
 * xref:basic-routing-scenario.adoc[Basic Routing Scenario Walkthrough]
 
 == Day Three: Shared Routing 
 
-* Intro text (Ian)
+On Day Three, we In this example of a shared routing scenario, your organization wants to receive a document xref:glossary#d[Document] from two xref:glossary#p[Partners], map it to an internal standard, and send it to a backend database.
+
 * Film video of Shared Routing Scenario (Cooper)
 * xref:shared-routing-scenario.adoc[Shared Routing Scenario Walkthrough]
 
 == Day Four: Override Routing
 
-* Intro text (Ian) 
+In this example of an override routing scenario, your organization expects to receive xref:glossary#d[document]s of a single xref:glossary#d[Document Type] from multiple xref:glossary#p[Partner]s.
+
+
+If IHub has been configured to receive a document of this xref:glossary#d[Document Type], IHub routes the document to an internal API. 
+
+However, one partner uses a variation of the Document Type, so you must override the standard xref:glossary#m[Map] that you use to transform that partner's Document Type to your internal Document Type before routing.
+
+If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
+
 * Film video of Override Routing Scenario (Cooper)
 * xref:override-routing-scenario.adoc[Override
 Override Routing Scenario Walkthrough]
 
 == Day Five: Multicast Routing
 
-* Intro text (Ian) 
+In this example of a multicast routing scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
+
 * Film video of Multiroute or Multicast Routing Scenario (Cooper)
 * xref:multicast-routing-scenario.adoc[Multicast Routing Scenario Walkthrough]
 
 == Day Six: Chained Routing
 
-* Intro text (Ian) 
+In this example of a chained-transactions routing scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to a xref:glossary#p[Partner].
+
 * Film video of Chained Routing Scenario (Cooper)
 * xref:chained-transactions-routing-scenario.adoc[Chained Transactions Scenario Walkthrough]
 
