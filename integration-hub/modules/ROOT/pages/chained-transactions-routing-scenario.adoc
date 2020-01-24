@@ -129,7 +129,7 @@ s|Y-to-X
 
 
 
-==== Artifacts in _YourCompany_ B2B : PartA
+=== Artifacts in _YourCompany_ B2B : PartA
 
 //=== Configured in _YourCompany_ B2B : AppA
 
@@ -174,7 +174,7 @@ s|X-to-Z
 image::chained-transactions-routing-scenario-outcome.png[img-chained-transactions-routing-scenario-outcome, "chained-transactions-Routing-Scenario-Outcome"]
 
 
-==== *AppA* sends Document of Document Type *Y* to Endpoint *RecFromA*
+=== *AppA* sends Document of Document Type *Y* to Endpoint *RecFromA*
 
 Integration Hub:
 

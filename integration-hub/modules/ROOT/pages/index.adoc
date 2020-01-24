@@ -109,5 +109,3 @@ PortX roles include the following:
 |Assigned per Business Group. Has privileges in all environments in the Business Group.
 
 |===
-
-////

@@ -43,11 +43,11 @@ NOTE: If you are unable to access Integration Hub, see your PortX account admini
 . xref:index.adoc#start-integration-hub[Start Integration Hub].
 If you are logging in for the first time, you will see a pop up window in which you will be prompted to select *Company* and *Business Group*. 
 The <<index.adoc#img-integration-hub-start,Transaction Monitoring Page>> appears.
-. In the left-hand navigation pane, click *Partner Configuration*.
-The xref:img-trading-partners[] appears.
+. In the left-hand navigation pane, click *Partners and Applications*.
+The xref:img-partners-and-applications[] appears.
 
-[[img-trading-partners]]
-image::trading-partners.png[img-trading-partners,title="Trading Partners Page"]
+[[img-partners-and-applications]]
+image::partners-and-applications.png[img-partners-and-applications,title="Partners and Applications Page"]
 
 
 == Configure a Supplier
@@ -564,7 +564,7 @@ image::transmission-payload.png[img-transmission-payload, title="Transmission Pa
 
 == Troubleshooting
 
-include::_partials/tutorial/troubleshooting.adoc[]
+Note: this file is no longer in the dir -  partials-tutorial-troubleshooting.adoc
 
 == More Information
 

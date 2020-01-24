@@ -564,7 +564,7 @@ image::transmission-payload.png[img-transmission-payload, title="Transmission Pa
 
 == Troubleshooting
 
-include::_partials/tutorial/troubleshooting.adoc[]
+Note: this file is no longer in the dir -  partials-tutorial-troubleshooting.adoc
 
 == More Information
 
