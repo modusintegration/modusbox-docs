@@ -1,28 +1,21 @@
 = Seven Days to Integration Hub Mastery
 
-Welcome to Integration Hub! We've created a week-long digital integration tour with Captain Cooper, an IHub expert. Meet Cooper and get started with with IHub concepts in https://ihub-concepts[this video].
+Welcome to Integration Hub! In order to get you started using IHub to integrate partners and applications, we've created a week-long digital integration tour with an IHub expert. Meet the expert and get started with with IHub concepts in https://ihub-concepts[this video].
 
+https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[Get started with this video]. Once you've watched it, you're ready to take the tour. 
 
-Daily activities consist of:
+On Day One, we show you:
 
-* A _video_ in which an IHub expert reiterates scenario concepts and shows you the actual IHub screens that enable this example of the scenario to work.
+* A _video_ in which our expert reiterates scenario concepts and shows you the actual IHub screens that enable an example of a basic routing scenario to work.
 
 * A _tutorial_ that provides step-by-step instructions for implementing this example of the scenario in your environment.
 
-After Day One, each day also stops by a _walkthrough_ that illustrates the broader concepts of the scenario. 
-
-
-
-
-
-https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[Get started with this video].
+After Day One, we replace the tutorial with a _functional overview_ that illustrates the broader concepts of the scenario. 
 
 == Day One: Basic Routing 
 
 
 We start with one of the most common scenarios in digital integration: Receiving, mapping, and sending a document from a partner to an internal endpoint. 
-
-
 
 https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[This video tells the story of this scenario, YouTube-style].
 
@@ -30,23 +23,35 @@ xref:day-one-tutorial.adoc[This tutorial] provides step-by-step instructions for
 
 == Day Two: Basic Routing, EDI-style 
 
-On Day Two, we take a look at an example of a basic routing scenario, your organization receives a xref:glossary#d[document] from a xref:glossary#p[Partner]. 
+On Day Two, we take a look at an example of an EDI-centric basic routing scenario, in which your organization receives a xref:glossary#d[document] from a xref:glossary#p[Partner]. 
 If IHub has been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], IHub routes the xref:glossary#d[document] to an internal API. 
 If IHub has not been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], IHub rejects the document. 
 
-* xref:basic-routing-scenario.adoc[Overview]
-* Basic Routing Video
+So it looks like this:
+
+[[img-basic-routing-scenario-overview]]
+
+image::basic-routing-scenario-overview.png[img-basic-routing-scenario-overview, title="Day Two: Basic Routing"]
+
+See how it works in this xref:basic-routing-scenario.adoc[functional overview] while you watch this 
+xref:video[[insert video]].
 
 == Day Three: Shared Routing 
 
-On Day Three, we In this example of a shared routing scenario, your organization wants to receive a document xref:glossary#d[Document] from two xref:glossary#p[Partners], map it to an internal standard, and send it to a backend database.
+On Day Three, in this example of a shared routing scenario, your organization wants to receive a document xref:glossary#d[Document] from two xref:glossary#p[Partners], map it to an internal standard, and send it to a backend database.
 
-* Film video of Shared Routing Scenario (Cooper)
-* xref:shared-routing-scenario.adoc[Shared Routing Scenario Walkthrough]
+So it looks like this:
+
+[[img-shared-routing-scenario-overview]]
+
+image::shared-routing-scenario-overview.png[img-shared-routing-scenario-overview, title="Day Three: Shared Routing"]
+
+See how it works in this xref:shared-routing-scenario.adoc[functional overview] while you watch this 
+xref:video[[insert video]].
 
 == Day Four: Override Routing
 
-In this example of an override routing scenario, your organization expects to receive xref:glossary#d[document]s of a single xref:glossary#d[Document Type] from multiple xref:glossary#p[Partner]s.
+On Day Four, in this example of an override routing scenario, your organization expects to receive xref:glossary#d[document]s of a single xref:glossary#d[Document Type] from multiple xref:glossary#p[Partner]s.
 
 
 If IHub has been configured to receive a document of this xref:glossary#d[Document Type], IHub routes the document to an internal API. 
@@ -55,28 +60,48 @@ However, one partner uses a variation of the Document Type, so you must override
 
 If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
 
-* Film video of Override Routing Scenario (Cooper)
-* xref:override-routing-scenario.adoc[Override
-Override Routing Scenario Walkthrough]
+So it looks like this:
+
+
+[[img-override-routing-scenario-overview]]
+
+image::override-routing-scenario-overview.png[img-override-routing-scenario-overview, title="Day Four: Override Routing"]
+
+See how it works in this xref:override-routing-scenario.adoc[functional overview] while you watch this 
+xref:video[[insert video]].
 
 == Day Five: Multicast Routing
 
-In this example of a multicast routing scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
+On Day Five, we look at an example of a multicast routing scenario. An xref:glossary#a[Application] sends a xref:glossary#d[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
 
-* Film video of Multiroute or Multicast Routing Scenario (Cooper)
-* xref:multicast-routing-scenario.adoc[Multicast Routing Scenario Walkthrough]
+So it looks like this:
+
+
+[[img-multicast-routing-scenario-overview]]
+
+image::multicast-routing-scenario-overview.png[img-multicast-routing-scenario-overview, title="Day Five: Multicast Routing"]
+
+See how it works in this xref:multicast-routing-scenario.adoc[functional overview] while you watch this 
+xref:video[[insert video]].
 
 == Day Six: Chained Routing
 
-In this example of a chained-transactions routing scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to a xref:glossary#p[Partner].
+On Day Six, we look at an example of a chained-transactions routing scenario. An xref:glossary#a[Application] sends a xref:glossary#d[Document] to a xref:glossary#p[Partner].
 
-* Film video of Chained Routing Scenario (Cooper)
-* xref:chained-transactions-routing-scenario.adoc[Chained Transactions Scenario Walkthrough]
+It looks like this: 
+
+[[img-chained-transactions-routing-scenario-overview]]
+
+image::chained-transactions-routing-scenario-overview.png[img-chained-transactions-routing-scenario-overview, title="Day Six: Chained Transactions"]
+
+See how it works in this xref:chained-transactions-routing-scenario.adoc[functional overview] while you watch this 
+xref:video[[insert video]].
 
 == Day Seven: Advanced Topics
 
-* xref:multi-route-routing-scenario.adoc[Multi-route]
-* xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
+Day Seven. Relax! If you've come this far, you are ready to join the ranks of an international group of professional who are using IHub to integrate applications and partners.
+
+If you're hungry for more, take the next steps by learning xref:multi-route-routing-scenario.adoc[Multi-route] and xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing] scenarios. 
 
 
 
