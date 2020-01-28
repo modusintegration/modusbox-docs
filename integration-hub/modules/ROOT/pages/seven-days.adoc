@@ -1,12 +1,13 @@
 = Seven Days to Integration Hub Mastery
 
-Welcome to Integration Hub! In order to get you started using IHub to integrate partners and applications, we've created a week-long digital integration tour with an IHub expert. Meet the expert and get started with with IHub concepts in https://ihub-concepts[this video].
+:figure-caption!:
 
-https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[Get started with this video]. Once you've watched it, you're ready to take the tour. 
+
+Welcome to Integration Hub! In order to get you started using IHub to integrate partners and applications, we've created a week-long digital integration tour with an IHub expert. Meet the expert and get started with IHub concepts in http://tbd[this video]. Once you've watched it, you're ready to take the tour. 
 
 On Day One, we show you:
 
-* A _video_ in which our expert reiterates scenario concepts and shows you the actual IHub screens that enable an example of a basic routing scenario to work.
+* A _video_ in which our expert identifies scenario concepts and shows you the actual IHub screens that enable an example of a basic routing scenario to work.
 
 * A _tutorial_ that provides step-by-step instructions for implementing this example of the scenario in your environment.
 
