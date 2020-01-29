@@ -1,9 +1,6 @@
 * xref:index.adoc[Integration Hub]
 
-////
-** xref:seven-days.adoc[Seven Days to Success]
-////
-
+** xref:seven-days.adoc[Seven Days to Integration Hub Mastery]
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 
@@ -46,9 +43,15 @@
 *** xref:maps.adoc[Maps]
 *** xref:channels.adoc[Channels]
 *** xref:routes.adoc[Routes]
+
+////
+
 *** xref:partner-conversations.adoc[Partner Conversations]
 *** xref:rosettanet-pips.adoc[RosettaNet PIPs]
 *** xref:rosettanet-agreements.adoc[RosettaNet Agreements]
+
+////
+
 **  xref:administration.adoc[Administration]
 *** xref:environments.adoc[Environments]
 *** xref:error-codes.adoc[Error Codes]
