@@ -1,7 +1,6 @@
 = Shared Routing Scenario
 
-In this example of a shared routing scenario, your organization wants to receive a document xref:glossary#d[Document] from two xref:glossary#p[Partners], map it to an internal standard, and send it to a backend database.
-
+In this example of a shared routing scenario, your organization wants to receive the same xref:glossary#d[Document Type] *Y* from two xref:glossary#p[Partners], map it to an internal standard Document Type *X*, and send it to a backend API.
 
 [[img-shared-routing-scenario-overview]]
 
