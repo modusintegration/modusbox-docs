@@ -169,6 +169,6 @@ image::tm-payload-minimized.png[img-tm-payload-minimized, title="Transaction Mon
 
 . To view another payload, repeat Steps 2-5. 
 +
-. To view the mimized payload, click the payload tab. 
+. To view the minimized payload, click the payload tab. 
 
 
