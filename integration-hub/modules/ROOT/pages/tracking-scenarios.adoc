@@ -123,7 +123,7 @@ If you need to find out more information about a document, or to see where it fi
 
 [[img-tm-start]]
 
-image::tm-start.png[img-tm-start, title="Transaction Monitoring Page, Filtered"]
+image::tm-start-arrow.png[img-tm-start, title="Transaction Monitoring Page, Filtered"]
 
 [step=2]
 
@@ -143,7 +143,7 @@ The element (in this case, an 850 document) appears.
 
 [[img-tm-850]]
 
-image::tm-850.png[img-tm-850, title="Transaction Monitoring Page, 850"]
+image::tm-850-arrow.png[img-tm-850, title="Transaction Monitoring Page, 850"]
 
 [start=4] 
 
@@ -169,6 +169,6 @@ image::tm-payload-minimized.png[img-tm-payload-minimized, title="Transaction Mon
 
 . To view another payload, repeat Steps 2-5. 
 +
-. To view the mimized payload, click the payload tab. 
+. To view the minimized payload, click the payload tab. 
 
 

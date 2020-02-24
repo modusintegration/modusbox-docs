@@ -6,9 +6,9 @@ It leverages the power of Oracle's Java Dynamic Connector and XML List to provid
 
 link:/http://modusintegration.github.io/mule-connector-JDE/[JDE Connector user guide].
 
-== JD Edwards™ Connector 2.0.0 - June 20, 2019
+== Version 2.0.0 - 20 June 2019
 
-=== Version 2.0.0 Compatibility
+=== Compatibility
 
 [width="100%", cols=",", options="header"]
 |===
@@ -33,11 +33,11 @@ link:/http://modusintegration.github.io/mule-connector-JDE/[JDE Connector user g
 * Poll EDI Events.
 * Log out.
 
-=== Version 2.0.0 Fixed in this Release
+=== Fixed in this Release
 
 None
 
-=== Version 2.0.0 Known Issues
+=== Known Issues
 
 None
 

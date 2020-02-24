@@ -1,7 +1,7 @@
 = Integration Hub Connector Release Notes
 :keywords: connector, release notes, 
 
-== Version 7.0.0 - 1 August, 2018
+== Version 7.0.0 - 1 August 2018
 
 This is the initial release of this product as PortX Integration Hub Connector, so there are no release notes. Look to this page for notes about future releases. 
 
