@@ -39,7 +39,7 @@ xref:video[[insert video]].
 
 == Day Three: Shared Routing 
 
-On Day Three, in this example of a shared routing scenario, your organization wants to receive the same xref:glossary#d[Document Type] *Y* from two xref:glossary#p[Partners], map it to an internal standard Document Type *X*, and send it to a backend API.
+On Day Three, in this example of a shared routing scenario, your organization wants to receive the same xref:glossary#d[Document Type] *Y* from two different xref:glossary#p[Partners], map it to an internal standard Document Type *X*, and send it to a backend API.
 
 
 So it looks like this:
