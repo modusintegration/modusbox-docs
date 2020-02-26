@@ -1,7 +1,7 @@
 = Integration Hub Release Notes
 :keywords: b2b, release notes
 
-== Version 1.27.0  - 1 August 2018
+== Version 1.27.0  - 1 August 2019
 
 === Browser Support
 
