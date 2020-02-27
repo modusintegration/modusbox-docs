@@ -1,6 +1,6 @@
 = Transaction Designer
 
-_Transaction Designer_ is an PortX feature that enables you to design the _elements_ of a transaction. Transaction elements include:
+_Transaction Designer_ is a PortX feature that enables you to design the _elements_ of a transaction. Transaction elements include:
 
 * Document Types
 * Endpoints
@@ -8,7 +8,7 @@ _Transaction Designer_ is an PortX feature that enables you to design the _eleme
 * Maps
 
 
-Transaction Designer enables you to configure these elements from a central page that displays the elements along with their completion status, and what steps may remain in order to complete them. To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:apm-tutorial-td[PortX Tutorial: Designing a Transaction].
+Transaction Designer enables you to configure these elements from a central page that displays the elements along with their completion status, and what steps may remain in order to complete them. To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:hello-ihub.adoc[PortX Tutorial: Designing a Transaction].
 
 
 include::{partialsdir}/edit-settings.adoc[]

@@ -1,7 +1,13 @@
 = Integration Hub
 :keywords: b2b, introduction, portal, partner, manager
 
-Integration Hub provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+Integration Hub provides a single web-based user interface for the key elements of service and partner management:
+
+* <<Transaction Monitoring>>
+* <<Partner Configuration>>
+* <<Administration>>. 
+
+link:seven-days.adoc[Become an IHub Pro in Seven Days].
 
 == Transaction Monitoring
 
@@ -103,5 +109,3 @@ PortX roles include the following:
 |Assigned per Business Group. Has privileges in all environments in the Business Group.
 
 |===
-
-////

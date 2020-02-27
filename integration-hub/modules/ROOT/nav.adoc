@@ -1,5 +1,6 @@
 * xref:index.adoc[Integration Hub]
 
+** xref:seven-days.adoc[Seven Days to Integration Hub Mastery]
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 
@@ -16,6 +17,8 @@
 *** xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
 
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
+
+** xref:integration-hub:ROOT:hello-ihub.adoc[Tutorial]
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
 *** xref:central-pane-elements.adoc[Central Pane Elements]
 *** xref:tracking-scenarios.adoc[Tracking Scenarios]
@@ -40,20 +43,21 @@
 *** xref:maps.adoc[Maps]
 *** xref:channels.adoc[Channels]
 *** xref:routes.adoc[Routes]
+
+////
+
 *** xref:partner-conversations.adoc[Partner Conversations]
 *** xref:rosettanet-pips.adoc[RosettaNet PIPs]
 *** xref:rosettanet-agreements.adoc[RosettaNet Agreements]
+
+////
 
 **  xref:administration.adoc[Administration]
 *** xref:environments.adoc[Environments]
 *** xref:error-codes.adoc[Error Codes]
 *** xref:security.adoc[Security]
 *** xref:lookup-tables.adoc[Lookup Tables]
-////
-ifdef::mule[]
-** xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
-endif::[]
-////
+
 ** xref:integration-hub-apis.adoc[Integration Hub APIs]
 
 ** xref:glossary.adoc[Glossary]

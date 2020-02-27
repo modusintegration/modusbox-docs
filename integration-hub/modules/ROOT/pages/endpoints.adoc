@@ -29,8 +29,7 @@ image::endpoint-settings.png[img-endpoint-settings, title="Endpoint Page"]
 
 . To edit the Endpoint Name, Protocol, or Type, go to xref:choose[Choose Endpoint Name, Protocol, and Type].
 +
-To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings
->>.
+To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings>>.
 
 == Add a New Endpoint
 

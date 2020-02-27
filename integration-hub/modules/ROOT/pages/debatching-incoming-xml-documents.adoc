@@ -121,3 +121,4 @@ Thus, whenever this partner receives a document of the type you created in <<Cre
 Note that, in <<img-document-type-parents-tab>>, automatic debatching is selected for the GS Document Type, and a shredding path is configured; if you were to view the corresponding page and tab for the GS and ISA documents, you would see that they are also configured in this manner. Thus, when this ISA Document Type is received, it will automatically debatch from an ISA containing a GS containing _x_ 850s to _x_ separate ISAs, each containing a GS and an 850, as shown in <<img-isa-gs-st-debatching>>.
 
 
+////
