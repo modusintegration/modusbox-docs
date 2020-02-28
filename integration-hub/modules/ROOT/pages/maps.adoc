@@ -45,6 +45,7 @@ The <<img-map>> appears.
 image::map.png[img-map, title="Map Page"]
 
 [%header,cols="3s,7a"]
+.Map Settings
 |===
 |Setting |Description
 
@@ -66,6 +67,7 @@ None
 When you click either the Source Document or the Target Document box, the Pick document selection page appears. You can select from available documents.
 
 [%header,cols="3s,7a"]
+.Map Settings
 |===
 |Setting |Description
 
