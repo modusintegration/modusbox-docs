@@ -10,11 +10,12 @@ Integration Hub supports the following browsers:
 * Firefox (latest version)
 * Chrome (latest version)
 
-New in This Release: 
+=== New in This Release  
 
 * When creating an X12 Functional Group Header (GS) segment, selecting the Children tab no longer generates a blank screen.
 * Users may now set or unset *receiverIdentifierID* and *senderIdentifierID* fields in X12 ISA and GS segments
 * In X12 Document Format settings, the Segment separator now defaults to the tilde character (*~*) character, and the Data Element separator defaults to the asterisk character (*****).
+* Performance enhancements.
 
 === Compatibility
 
