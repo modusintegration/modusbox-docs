@@ -764,6 +764,7 @@ Copy these files:
 * Spec_JAR.jar
 * System_JAR.jar
 * SystemInterfaces_JAR.jar
+* xerces.jar
 * xmlparserv2.jar
 
 ==== Tools Releases 9.1 prior Update 4
@@ -779,7 +780,7 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector_JAR.jar
+* Connector.jar
 * EventProcessor_JAR.jar
 * Generator.jar
 * JdbjBase_JAR.jar
@@ -795,6 +796,8 @@ Copy these files:
 * Spec_JAR.jar
 * System_JAR.jar
 * SystemInterfaces_JAR.jar
+* xalan.jar
+* xerces.jar
 * xmlparserv2.jar
 
 ==== Tools Releases 9.1 Update 4 and later updates
@@ -831,6 +834,7 @@ Copy these files:
 * Spec_JAR.jar
 * System_JAR.jar
 * SystemInterfaces_JAR.jar
+* xerces.jar
 * xml-apis.jar
 * xmlparserv2.jar
 
