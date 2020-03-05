@@ -226,7 +226,7 @@ Drag the inputs to outputs, or double-click the output parameter to add to your 
 
 image:demo_poll_mbf_events/image19_demo_poll_mbf_events.png[image,width=601,height=212]
 
-===== Troubleshooting
+=== Troubleshooting
 If the operation fails (possibly due to a timeout), you will see the below message
 
 image:demo_poll_mbf_events/troubleshoot_timeout_message.png[image,width=345,height=115]
