@@ -765,9 +765,9 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * j2ee1_3.jar
 * JdbjBase_JAR.jar
 * JdbjInterfaces_JAR.jar
@@ -799,9 +799,9 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * JdbjBase_JAR.jar
 * JdbjInterfaces_JAR.jar
 * JdeNet_JAR.jar
@@ -831,11 +831,11 @@ Copy these files:
 * BusinessLogicServices_JAR.jar
 * castor.jar
 * commons-codec.jar
-* commons-lang.jar
+* commons-lang.jar / commons-lang2.6.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator_JAR.jar
+* Generator.jar / Generator_JAR.jar
 * httpclient.jar
 * httpcore.jar
 * httpmime.jar
@@ -869,11 +869,11 @@ Copy these files:
 * BusinessLogicServices_JAR.jar
 * commons-codec.jar
 * castor.jar
-* commons-lang.jar
+* commons-lang.jar / commons-lang2.6.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * httpclient.jar
 * httpcore.jar
 * httpmime.jar
