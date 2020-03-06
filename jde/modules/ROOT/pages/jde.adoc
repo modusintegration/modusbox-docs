@@ -607,33 +607,38 @@ There are additional demo applications with step by step guides available for do
 ==== Creating a support user
 To log a support ticket, you will require a support portal user. If you do not already have one, you can follow the below steps to create a new user.
 
-. In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer 
+In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer 
 
 image:demo_getting_started/support_newuser01.png[image,width=652,height=1209]
 
-. Click _Sign up_
+Click _Sign up_
+
 image:demo_getting_started/support_newuser02.png[image,width=453,height=407]
 
-. Enter your email address, and click on _Send Link_. This will send a confirmation email to the specified email address.
+Enter your email address, and click on _Send Link_. This will send a confirmation email to the specified email address.
 
-. Go to you inbox and click on _Sign up_
+Go to you inbox and click on _Sign up_
+
 image:demo_getting_started/support_newuser03.png[image,width=303,height=824]
 
-. Enter your full name and choose a password, and click _Sign up_
+Enter your full name and choose a password, and click _Sign up_
+
 image:demo_getting_started/support_newuser04.png[image,width=449,height=401]
 
 ==== Logging a support ticket
 To log a support ticket, you will require a support portal user. If you do not already have one, you can follow the below steps to create a new user.
 
-. In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer 
-. Log into you support user account (see the _Creating a support user_ section above)
-. Click _Modusbox PortX Support_
+In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer, log into you support user account (see the _Creating a support user_ section above)
+
+Click _Modusbox PortX Support_
+
 image:demo_getting_started/support_newticket01.png[image,width=449,height=647]
 
-. Click _Enter Support Request_
+Click _Enter Support Request_
+
 image:demo_getting_started/support_newticket02.png[image,width=404,height=655]
 
-. Enter your support request detail. 
+Enter your support request detail. 
 
 *NOTE :*  Keep in mind that we will always ask your for your configuration files, and the related log files (see _Support Required Files_ secion below), so to service the ticket more efficiently, it is always import to attach these when creating the ticket
 image:demo_getting_started/support_newticket03.png[image,width=910,height=681]
@@ -675,19 +680,33 @@ The resulting json responses should be saved in separate, clearly identified fil
 
 In the below request urls, you will need to replace the below values with the relevant detail from your JDE Instances.
 
-* {sm-host} with the server manager host name
-* {sm-port} with the server manager port
-* {instance} (where applicable) with the instance name of the server JD Edwards EnterpriseOne Server Manager instance the request is being executed for.
+* _sm-host_ with the server manager host name
+* _sm-port_ with the server manager port
+* _instance_ (where applicable) with the instance name of the server JD Edwards EnterpriseOne Server Manager instance the request is being executed for.
 
 ===== Requests
 * Global
-** Instances Detail: http://{sm-host}:{sm-port}/manage/mgmtrestservice/instancesinfo
+** Instances Detail: 
+
+    http://sm-host:sm-port/manage/mgmtrestservice/instancesinfo
+
 * Enterprise Server instance (Required for each Enterprise Server instance)
-** Configuration Summary by instance: http://{sm-host}:{sm-port}/manage/mgmtrestservice/configsummary?instanceName={instance}
-** Ini Configuration by Instance: http://{sm-host}:{sm-port}/manage/mgmtrestservice/iniconfig?instanceName={instance}
+** Configuration Summary by instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/configsummary?instanceName=instance
+    
+** Ini Configuration by Instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/iniconfig?instanceName=instance
+    
 * HTML/JAS Server instance (Required for each HTML/JAS instance)
-** Configuration Summary by instance: http://{sm-host}:{sm-port}/manage/mgmtrestservice/configsummary?instanceName={instance}
-** Ini Configuration by Instance: http://{sm-host}:{sm-port}/manage/mgmtrestservice/iniconfig?instanceName={instance}
+** Configuration Summary by instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/configsummary?instanceName=instance
+    
+** Ini Configuration by Instance:     
+
+    http://sm-host:sm-port/manage/mgmtrestservice/iniconfig?instanceName=instance
 
 *NOTE :* You will need to click Refresh Headers to add the encoded credentials to the request header if you haven’t already done so (see below)
 
@@ -706,11 +725,11 @@ To retrieve your JD Edwards System Configuration for tools releases before 9.2.1
 . Log into the Server where your HTML/Jas Instance is running
 . Navigate to the directory/folder where your Server Manager Agent is installed
 eg. /u01/Oracle/jde_home/SCFHA or X:\Oracle\jde_home\SCFHA (example only, your’s may differ)
-. Under the SCFHA folder/directory, navigate to targets/{web-instance-name}/config/
-. Attach the following files to us for review (rename them to {filename}_server.ini as not to conflict with the files in your Mule project)
+. Under the SCFHA folder/directory, navigate to targets/_web-instance-name_/config/
+. Attach the following files to us for review (rename them to _filename_ _server.ini as not to conflict with the files in your Mule project)
 * jdbj.ini (rename to _jdbj_server.ini_)
 * jdeinterop.ini (rename to _jdeinterop_server.ini_)
-* tnsnames.ora (if using an Oracle database)(rename to _jdbj_server.ini_)
+* tnsnames.ora (rename to _jdbj_server.ini_)
 
 == *Appendix A : Required Files*
 
@@ -722,7 +741,7 @@ In most cases, it is best to get your configuration files from the relevant envi
 
 These files will be located in the JD Edwards Server Manager Agent's config folder relating to the HTML/JAS instance
 
-eg. /u01/Oracle/SCFHA/jde_home/targets/{instanceName}/config
+eg. /u01/Oracle/SCFHA/jde_home/targets/_instanceName_/config
 
 * The required files are
 ** jdbi.ini
@@ -730,7 +749,7 @@ eg. /u01/Oracle/SCFHA/jde_home/targets/{instanceName}/config
 ** tnsnames.ora (if using an Oracle database)
 ** jdelog.properties
 
-where {instanceName} is the HTML/JAS instance name for the relevant environment.
+where _instanceName_ is the HTML/JAS instance name for the relevant environment.
 
 === Required JARs by Tools Release
 ==== Tools Release 8.98
@@ -746,9 +765,9 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * j2ee1_3.jar
 * JdbjBase_JAR.jar
 * JdbjInterfaces_JAR.jar
@@ -780,9 +799,9 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * JdbjBase_JAR.jar
 * JdbjInterfaces_JAR.jar
 * JdeNet_JAR.jar
@@ -812,11 +831,11 @@ Copy these files:
 * BusinessLogicServices_JAR.jar
 * castor.jar
 * commons-codec.jar
-* commons-lang2.6.jar
+* commons-lang.jar / commons-lang2.6.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator_JAR.jar
+* Generator.jar / Generator_JAR.jar
 * httpclient.jar
 * httpcore.jar
 * httpmime.jar
@@ -850,11 +869,11 @@ Copy these files:
 * BusinessLogicServices_JAR.jar
 * commons-codec.jar
 * castor.jar
-* commons-lang2.6.jar
+* commons-lang.jar / commons-lang2.6.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * httpclient.jar
 * httpcore.jar
 * httpmime.jar
