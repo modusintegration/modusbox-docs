@@ -7,7 +7,7 @@ Integration Hub provides a single web-based user interface for the key elements 
 * <<Partner Configuration>>
 * <<Administration>>. 
 
-link:seven-days.adoc[Become an IHub Pro in Seven Days].
+xref:seven-days.adoc[Become an IHub Pro in Seven Days].
 
 == Transaction Monitoring
 

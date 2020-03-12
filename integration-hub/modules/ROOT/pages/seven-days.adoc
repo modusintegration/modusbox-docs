@@ -3,7 +3,7 @@
 :figure-caption!:
 
 
-Welcome to Integration Hub! In order to get you started using IHub to integrate partners and applications, we've created a week-long digital integration tour with an IHub expert. Meet the expert and get started with IHub concepts in http://tbd[this video]. Once you've watched it, you're ready to take the tour. 
+Welcome to Integration Hub! In order to get you started using IHub to integrate partners and applications, we've created a week-long digital integration tour with an IHub expert. Meet the expert and get started with IHub concepts in xref:day-0-video[this video]. Once you've watched it, you're ready to take the tour. 
 
 On Day One, we show you:
 
