@@ -12,7 +12,7 @@ Integration Hub supports the following browsers:
 
 === New in This Release 
 
-* API Keys are now generated on a per environment basis only.
+* API Keys are now generated on a per-environment basis only.
 * On the Relationships Page, you may now click the directional arrow so that it indicates that the From Partner is on the left and the To Partner is on the right. 
 * Text that appears on Configuration Pages is now selectable (so that you may copy it); all text on a page may be selected by pressing Ctrl-**a**. 
 * On the Transaction Monitor Page:
