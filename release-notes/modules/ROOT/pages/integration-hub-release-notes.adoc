@@ -14,9 +14,7 @@ Integration Hub supports the following browsers:
 
 * API Keys are now generated on a per environment basis only.
 * On the Relationships Page, you may now click the directional arrow so that it indicates that the From Partner is on the left and the To Partner is on the right. 
-* Text that appears on Configuration Pages:
-** Is now selectable (so that you may copy it).
-** May all be selected by pressing Ctrl-**a**. 
+* Text that appears on Configuration Pages is now selectable (so that you may copy it); all text on a page may be selected by pressing Ctrl-**a**. 
 * On the Transaction Monitor Page:
 ** The Transaction Detail Pane is now hidden when no transaction is selected. 
 ** You may now add a custom column in order to view a specific property across multiple rows. To use this feature, select the *Show Custom Column* box.
