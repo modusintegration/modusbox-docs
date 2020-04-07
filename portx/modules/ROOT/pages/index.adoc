@@ -4,6 +4,9 @@ PortX streamlines data flow between you, your partners, and your applications wi
 ifdef::mule[]
 the Mulesoft Enterprise Service Bus (ESB).
 endif::[]
+ifdef::camel[]
+Apache Camel 3.__x__.
+endif::[]
 ifdef::other-esb[]
 an Enterprise Service Bus (ESB). 
 endif::[]
@@ -19,6 +22,7 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 === xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 === xref:jde:ROOT:jde.adoc[JD Edwards Connector]
 === xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+=== xref:x12-translator:ROOT:getting-started.adoc[X12 Translator]
 === xref:release-notes:ROOT:release-notes.adoc[Release Notes]
 
 == Requirements
