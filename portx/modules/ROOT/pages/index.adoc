@@ -1,4 +1,4 @@
-= PortX(TM): Managing, Connecting and Integrating Partners and Applications
+= PortX(TM): yo
  
 PortX streamlines data flow between you, your partners, and your applications with products designed for use with 
 ifdef::mule[]
