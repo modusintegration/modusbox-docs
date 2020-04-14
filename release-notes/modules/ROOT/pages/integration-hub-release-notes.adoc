@@ -1,7 +1,63 @@
 = Integration Hub Release Notes
 :keywords: b2b, release notes
 
-== Version 1.27.0  - 1 August 2018
+== Version 1.29.0 - 7 March 2020
+
+=== Browser Support
+
+Integration Hub supports the following browsers:
+
+* Firefox (latest version)
+* Chrome (latest version)
+
+=== New in This Release 
+
+* API Keys are now generated on a per-environment basis only.
+* On the Relationships Page, you may now click the directional arrow so that it indicates that the From Partner is on the left and the To Partner is on the right. 
+* Text that appears on Configuration Pages is now selectable (so that you may copy it); all text on a page may be selected by pressing Ctrl-**a**. 
+* On the Transaction Monitor Page:
+** The Transaction Detail Pane is now hidden when no transaction is selected. 
+** You may now add a custom column in order to view a specific property across multiple rows. To use this feature, select the *Show Custom Column* box.
+* The *Create* button replaces the *New* button on all relevant pages. 
+* Partners and Services now appear in correspondence to the management mode you are using. 
+
+=== Compatibility
+
+Compatible with:
+
+* X12 Module 1.2.1
+* EDIFACT Module 1.2.1
+* Integration Hub Connector 3.0.x
+* FTPS Connector 1.0.8
+* AS2 Connector 2.0.1
+
+== Version 1.28.0 - 2 March 2020
+
+=== Browser Support
+
+Integration Hub supports the following browsers:
+
+* Firefox (latest version)
+* Chrome (latest version)
+
+=== New in This Release  
+
+* When creating an X12 Functional Group Header (GS) segment, selecting the Children tab no longer generates a blank screen.
+* Users may now set or unset *receiverIdentifierID* and *senderIdentifierID* fields in X12 ISA and GS segments.
+* In X12 Document Format settings, the Segment separator now defaults to the tilde character (*~*) character, and the Data Element separator defaults to the asterisk character (*****).
+* Performance enhancements.
+
+=== Compatibility
+
+Compatible with:
+
+* X12 Module 1.2.1
+* EDIFACT Module 1.2.1
+* Integration Hub Connector 3.0.x
+* FTPS Connector 1.0.8
+* AS2 Connector 2.0.1
+
+== Version 1.27.0  - 1 August 2019
 
 === Browser Support
 

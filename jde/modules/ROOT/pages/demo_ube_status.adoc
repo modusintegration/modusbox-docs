@@ -230,7 +230,7 @@ Map the query parameter _jobnumber_ to the _Job_ID_ input parameter, and click _
 
 image:demo_ube_status/image19_demo_ube_status.png[image,width=550,height=264]
 
-===== Troubleshooting
+=== Troubleshooting
 If the operation fails (possibly due to a timeout), you will see the below message
 
 image:demo_ube_status/troubleshoot_timeout_message.png[image,width=345,height=115]

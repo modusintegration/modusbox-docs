@@ -230,7 +230,7 @@ Under the General section, click on the drop-down for Operation Name, and select
 
 image:demo_poll_edi_events/image16_demo_poll_edi_events.png[image,width=589,height=302]
 
-===== Troubleshooting
+==== Troubleshooting
 If the operation fails (possibly due to a timeout), you will see the below message
 
 image:demo_poll_edi_events/troubleshoot_timeout_message.png[image,width=345,height=115]

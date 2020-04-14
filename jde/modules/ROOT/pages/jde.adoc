@@ -77,7 +77,9 @@ e.g.:
 
 _java -jar JDELibrariesBundleBuilderTool-1.0.0.jar --destDir "/tmp" --jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" --libDir "/opt/jde/workingDir/ServerFiles" --version "1.0.0" --localRepo "/home/user/.m2/repository"_
 
-NOTE : All libraries in this path will be added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation). See Appendix A for a detailed list of all files required per your Tools Release
+NOTE : All libraries in this path will be added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation).
+
+See Appendix A] for a detailed list of all files required per your Tools Release
 
 Once completed the resulting bundle will be located at, following the sample above, /tmp/jde-lib-bundle-1.0.0.jar
 
@@ -85,7 +87,7 @@ Once completed the resulting bundle will be located at, following the sample abo
 
 . Execute the following to make the bundle available in your Maven Repository
 
-_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar-DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dclassifier=mule-4 -Dpackaging=jar_
+_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dclassifier=mule-4 -Dpackaging=jar_
 
 === Preparing Maven for PortX - JDE Connector
 
@@ -599,9 +601,158 @@ There are additional demo applications with step by step guides available for do
 . <<demo_poll_mbf_events.adoc#,Poll MBF Events>>
 . <<demo_poll_edi_events.adoc#,Poll EDI Events>>
 
-== *Appendix A : Required JARs by Tools Release*
+== *_PortX JDE Connector_ – Support*
+=== Support Portal
 
-=== Tools Release 8.98
+==== Creating a support user
+To log a support ticket, you will require a support portal user. If you do not already have one, you can follow the below steps to create a new user.
+
+In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer 
+
+image:demo_getting_started/support_newuser01.png[image,width=652,height=1209]
+
+Click _Sign up_
+
+image:demo_getting_started/support_newuser02.png[image,width=453,height=407]
+
+Enter your email address, and click on _Send Link_. This will send a confirmation email to the specified email address.
+
+Go to you inbox and click on _Sign up_
+
+image:demo_getting_started/support_newuser03.png[image,width=303,height=824]
+
+Enter your full name and choose a password, and click _Sign up_
+
+image:demo_getting_started/support_newuser04.png[image,width=449,height=401]
+
+==== Logging a support ticket
+To log a support ticket, you will require a support portal user. If you do not already have one, you can follow the below steps to create a new user.
+
+In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer, log into you support user account (see the _Creating a support user_ section above)
+
+Click _Modusbox PortX Support_
+
+image:demo_getting_started/support_newticket01.png[image,width=449,height=647]
+
+Click _Enter Support Request_
+
+image:demo_getting_started/support_newticket02.png[image,width=404,height=655]
+
+Enter your support request detail. 
+
+*NOTE :*  Keep in mind that we will always ask your for your configuration files, and the related log files (see _Support Required Files_ secion below), so to service the ticket more efficiently, it is always import to attach these when creating the ticket
+image:demo_getting_started/support_newticket03.png[image,width=910,height=681]
+
+=== Support Required Files
+
+It is important to remember that we will always request your mule application's jde configuration files, and any relevant log files.
+
+To most effectively handle your support ticket, you can attach these when creating the ticket. The files that will always be required are :
+
+* jdbj.ini
+* jdeinterop.ini
+* tnsnames.ora (if using an Oracle database)
+* Relevant JDE log files (as created per your jdelog.properties file)
+* Relevant Mule log files
+
+=== Support Optional/Helpful Files
+
+In some cases we might request the configuration files for the environment in question. To obtain these, you will most likely need the assistance of _JD Edwards CNC Administrator_
+
+==== JDE Tools Release 9.2.1 onwards
+
+To retrieve your JD Edwards System Configuration for tools releases from 9.2.1 and above, you will need the following information 
+
+* _JD Edwards EnterpriseOne Server Manager_
+** host name 
+** port
+** username (user only requires view permissions)
+** password
+* Rest client (eg, POSTMAN from Chrome Apps)
+
+===== Getting your JD Edwards Configuration
+
+The following requests need to be executed, to retrieve your JDE configuration from _JD Edwards EnterpriseOne Server Manager_
+
+Using a Rest Client, execute the below requests using basic authentication and the server manager user’s credentials (The default admin user is usually jde_admin)
+
+The resulting json responses should be saved in separate, clearly identified files and returned to us for review. You are free to remove any sensitive information (eg. passwords) from the json files, before you send them to us.
+
+In the below request urls, you will need to replace the below values with the relevant detail from your JDE Instances.
+
+* _sm-host_ with the server manager host name
+* _sm-port_ with the server manager port
+* _instance_ (where applicable) with the instance name of the server JD Edwards EnterpriseOne Server Manager instance the request is being executed for.
+
+===== Requests
+* Global
+** Instances Detail: 
+
+    http://sm-host:sm-port/manage/mgmtrestservice/instancesinfo
+
+* Enterprise Server instance (Required for each Enterprise Server instance)
+** Configuration Summary by instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/configsummary?instanceName=instance
+    
+** Ini Configuration by Instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/iniconfig?instanceName=instance
+    
+* HTML/JAS Server instance (Required for each HTML/JAS instance)
+** Configuration Summary by instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/configsummary?instanceName=instance
+    
+** Ini Configuration by Instance:     
+
+    http://sm-host:sm-port/manage/mgmtrestservice/iniconfig?instanceName=instance
+
+*NOTE :* You will need to click Refresh Headers to add the encoded credentials to the request header if you haven’t already done so (see below)
+
+image:demo_getting_started/postman1.png[image,width=700,height=344]
+
+The result should be similar to the image below.
+
+image:demo_getting_started/postman2.png[image,width=700,height=224]
+
+==== JDE Tools Releases before 9.2.1.0
+To retrieve your JD Edwards System Configuration for tools releases before 9.2.1, you will need the following
+
+* Server (OS Level) access to you HTML/Jas instance
+
+===== Getting your JD Edwards Configuration
+. Log into the Server where your HTML/Jas Instance is running
+. Navigate to the directory/folder where your Server Manager Agent is installed
+eg. /u01/Oracle/jde_home/SCFHA or X:\Oracle\jde_home\SCFHA (example only, your’s may differ)
+. Under the SCFHA folder/directory, navigate to targets/_web-instance-name_/config/
+. Attach the following files to us for review (rename them to _filename_ _server.ini as not to conflict with the files in your Mule project)
+* jdbj.ini (rename to _jdbj_server.ini_)
+* jdeinterop.ini (rename to _jdeinterop_server.ini_)
+* tnsnames.ora (rename to _jdbj_server.ini_)
+
+== *Appendix A : Required Files*
+
+=== Required Configuration Files
+
+You will most likely need the assistance of _JD Edwards CNC Administrator_ to acquire these files
+
+In most cases, it is best to get your configuration files from the relevant environment's HTML/JAS server. 
+
+These files will be located in the JD Edwards Server Manager Agent's config folder relating to the HTML/JAS instance
+
+eg. /u01/Oracle/SCFHA/jde_home/targets/_instanceName_/config
+
+* The required files are
+** jdbi.ini
+** jdeinterop.ini
+** tnsnames.ora (if using an Oracle database)
+** jdelog.properties
+
+where _instanceName_ is the HTML/JAS instance name for the relevant environment.
+
+=== Required JARs by Tools Release
+==== Tools Release 8.98
 
 Copy these files:
 
@@ -614,9 +765,9 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * j2ee1_3.jar
 * JdbjBase_JAR.jar
 * JdbjInterfaces_JAR.jar
@@ -632,9 +783,10 @@ Copy these files:
 * Spec_JAR.jar
 * System_JAR.jar
 * SystemInterfaces_JAR.jar
+* xerces.jar
 * xmlparserv2.jar
 
-=== Tools Releases 9.1 prior Update 4
+==== Tools Releases 9.1 prior Update 4
 
 Copy these files:
 
@@ -647,9 +799,9 @@ Copy these files:
 * castor.jar
 * commons-httpclient-3.0.jar
 * commons-logging.jar
-* Connector_JAR.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * JdbjBase_JAR.jar
 * JdbjInterfaces_JAR.jar
 * JdeNet_JAR.jar
@@ -663,9 +815,11 @@ Copy these files:
 * Spec_JAR.jar
 * System_JAR.jar
 * SystemInterfaces_JAR.jar
+* xalan.jar
+* xerces.jar
 * xmlparserv2.jar
 
-=== Tools Releases 9.1 Update 4 and later updates
+==== Tools Releases 9.1 Update 4 and later updates
 
 Copy these files:
 
@@ -677,11 +831,11 @@ Copy these files:
 * BusinessLogicServices_JAR.jar
 * castor.jar
 * commons-codec.jar
-* commons-lang2.6.jar
+* commons-lang.jar / commons-lang2.6.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator_JAR.jar
+* Generator.jar / Generator_JAR.jar
 * httpclient.jar
 * httpcore.jar
 * httpmime.jar
@@ -699,10 +853,11 @@ Copy these files:
 * Spec_JAR.jar
 * System_JAR.jar
 * SystemInterfaces_JAR.jar
+* xerces.jar
 * xml-apis.jar
 * xmlparserv2.jar
 
-=== Tools Releases 9.2 and later
+==== Tools Releases 9.2 and later
 
 Copy these files:
 
@@ -714,11 +869,11 @@ Copy these files:
 * BusinessLogicServices_JAR.jar
 * commons-codec.jar
 * castor.jar
-* commons-lang2.6.jar
+* commons-lang.jar / commons-lang2.6.jar
 * commons-logging.jar
-* Connector.jar
+* Connector.jar / Connector_JAR.jar
 * EventProcessor_JAR.jar
-* Generator.jar
+* Generator.jar / Generator_JAR.jar
 * httpclient.jar
 * httpcore.jar
 * httpmime.jar
