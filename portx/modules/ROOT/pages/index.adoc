@@ -29,6 +29,14 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 
 == Requirements
 
+ifdef::camel[]
+=== ESB
+
+For information about products built to power integration on Apache Camel 3.__x__, see these libraries:
+
+* xref:integration-hub::index.adoc[Integration Hub]
+* xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
+endif::[]
 ifdef::other-esb[]
 === ESB
 
