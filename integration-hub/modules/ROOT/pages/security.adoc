@@ -18,7 +18,17 @@ image::security.png[img-security, title="Security Page"]
 
 == Create a New API Key
 
-WARNING: The API Key is used by any client application across your entire Master xref:access-management/organization[Organization] that communicates with PortX. Therefore, before you create a new API Key, coordinate with your organization's MuleSoft administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
+WARNING: The API Key is used by any client application across your entire Master xref:access-management/organization[Organization] that communicates with PortX. Therefore, before you create a new API Key, coordinate with your organization's
+ifdef::mule[]
+MuleSoft
+endif::[]
+ifdef::camel[]
+Apache Camel 3.__x__
+endif::[]
+ifdef::generic[]
+Enterprise Service Bus (ESB). 
+endif::[]
+administrator to ensure that none of your organization's processes are using an existing API Key because, if they are, creating a new API Key will cause them to cease functioning. In that case, instead of creating a new API Key, use the existing API Key.
 
 . On the <<img-security>>, click *Create a new API key*.
 +
