@@ -36,21 +36,6 @@ xref:key-concepts.adoc[Key Concepts].
 
 In the most common scenario, PortX is used in conjunction with an Enterprise Service Bus (ESB), Integration Hub Connector, and other connectors. Find information about this and other PortX use cases in xref:examples.adoc[Examples].
 
-
-////
-
-. link:https://anypoint.mulesoft.com/apiplatform.adoc[Sign up] to use Anypoint Platform.
-. Log into Anypoint Platform.
-The xref:img-anypoint-platform-application-selection[] appears.
-
-[[img-anypoint-platform-application-selection]]
-image::anypoint-platform-application-selection.png[img-anypoint-platform-application-selection,title="Anypoint Platform Application Selection Page"]
-
-[start=3]
-
-. On the Anypoint Platform application selection screen, in the *Manage* drop-down listbox, click *Integration Hub*.
-////
-
 == Start Integration Hub
 
 . Login to PortX.
