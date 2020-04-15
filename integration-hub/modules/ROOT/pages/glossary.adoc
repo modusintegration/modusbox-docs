@@ -98,11 +98,13 @@ Analagous to a programming namespace.
 
 Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
 
-Routing Engine:: 
+Routing Engine::
+ifdef::camel[]
+Apache Camel 3.__x__ application
 ifdef::mule[]
 Mule application
 endif::[]
-ifndef::mule[]
+ifdef::other-esb[]
 Application
 endif::[]
 that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
@@ -132,7 +134,7 @@ Transaction Definition:: The full configuration that configures how a document i
 
 Transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
 
-Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-integration-hub[PortX] (PortX)
+Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of  flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-integration-hub[PortX] (PortX)
 
 == Y
 
