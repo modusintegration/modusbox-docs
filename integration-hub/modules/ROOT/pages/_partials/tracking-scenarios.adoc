@@ -1,12 +1,12 @@
 = Tracking Scenarios
 :keywords: Anypoint b2b Integration Hub concepts
 
-This section identifies scenarios in which Integration Hub (APM) is useful to track B2B exchanges. A basic knowledge of APM is assumed; see xref:anypoint-integration-hub[Integration Hub] for more information.
+This section identifies scenarios in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:anypoint-integration-hub[Integration Hub] for more information.
 
 
 == Replaying an Incomplete Transaction
 
-On the xref:monitor-b2b-transactions[B2B Transactions Page], the Transactions View includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
+On the xref:transaction-monitoring[ Transaction Monitor Page], the Transactions View includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
 
 Green checkmark:: Indicates a complete transaction.
 Red exclamation point (*!*):: Indicates a transaction has one or more errors that prevented completion.
@@ -21,7 +21,7 @@ Possible errors include:
 
 NOTE: Only replay transactions after resolving the issue or issues that caused the error.
 
-For more information, see "Transactions View" inxref:transaction-monitoring[Transaction Monitoring].
+For more information, see "Transactions View" in xref:transaction-monitoring[Transaction Monitoring].
 
 == To Replay a Transaction
 
@@ -53,16 +53,16 @@ If you need to continue replaying the transaction, you can do so with the same r
 
 == Common Errors
 
-If you see an atypical number of errors of a similar nature, you can review all of them simultaneously.
+If you encounter multiple errors, you can review all of them simultaneously on the Dashboard.
 
-The *Dashboard* at the top of the xref:transaction-monitoring[Transaction Monitoring] provides a summary of what has happened in a given timeframe (the default is the current day) including how many errors have been detected during that timeframe.
+The *Dashboard* at the top of the xref:transaction-monitoring[Transaction Monitoring] page provides a summary of what has happened in a given timeframe (the default is the current day) including how many errors have been detected during that timeframe.
 
-== To View Error Information in the Dashboard
+== View Error Information in the Dashboard
 
 . Hover over different slices of the Errors Pie Chart to see what types of errors have occurred.
 . To see information for a given error type, click one of the slices.
 +
-The Error View appears, showing only the error type over which you were hovering.
+The Error View appears, showing only the error type you selected.
 +
 This enables you to look for a pattern among these errors that will facilitate a solution to the errors. This is useful when transactions are failing. but you can't ascertain the solution by just looking at the transactions themselves.
 +

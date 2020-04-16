@@ -1,16 +1,20 @@
 
 = Transaction Monitoring
 
-PortX enables you to monitor B2B _transaction_ data.
+PortX Transaction Monitor enables you to monitor B2B transaction data.
+
 A transaction is the full set of end-to-end events (including transmissions, documents, and errors) involved in processing a transmission.
 
-You can:
+In Transaction Monitor you can filter and review:
 
-* Filter to find the specific transaction data for which you are looking
-* Review and monitor errors and acknowledgements.
-* Search for metadata
+* _Transactions_
+* _Transmissions_
+* _Errors_ and _Acknowledgements_.
+* _Documents_
+* _Partner Conversations_
 
-This page identifies the PortX components you use to monitor transactions; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
+
+The following identifies the components of the Transaction Monitor page; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
 
 == Get Started
 
@@ -23,7 +27,7 @@ image::transaction-monitoring.png[img-transaction-monitoring, title="Transaction
 
 [step=2]
 
-. By default, this page presents data for today's transactions.
+. By default, the Transaction Monitoring page presents data for today's transactions.
 +
 To change the time period, see xref:central-pane-elements#overview-for-em-timeframe-em-dropdown-list[Overview for _timeframe_ Dropdown List].
 +
@@ -35,21 +39,41 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
-Anypoint Platform Header:: At the top of every page.
+Portx Top Bar Menu:: 
+* Business Organizaion
+* Company
+* Business Group
+* User: Login/Logout
+
+Timeframe Dropdown List::
+To change the time period, see xref:central-pane-elements#overview-for-em-timeframe-em-dropdown-list[Overview for _timeframe_ Dropdown List].
+
+
+Central Pane:: Presents content views associated with Transaction Monitor. +
+See xref:central-pane-elements.adoc[Central Pane Elements] for more information.
+
+////
+Anypoint Platform Header:: At the top of every page you will see:
 * Menu on the left enables you to switch to other Anypoint applications.
 * *?* button provides access to support resources.
 * _Master Organization_ name appears at top right. For more information, see xref:access-management/organization[Organization].
+//// 
+Navigation Sidebar (left):: Use this sidebar to select PortX components:
+* Monitoring
+** Transaction Monitor
+* Configuration
+** Relationships
+** Partners and Applications
+* Administration
 
-Navigation Sidebar (left):: Use this sidebar to move from page to page.
-
+////
 Top Bar::
 * Fixed on scroll
 * Provides all action buttons associated with any selection you might have made.
-
+* User Name Login/Logout
+////
 Detail Sidebar (right)::
+* Hidden when no transaction is selected.
 * Provides the details of what you have selected in the Central Pane.
 * Most IDs have a copy button to the far right of them.
 ** Clicking on this will add the ID to your clip board.
-
-Central Pane:: Presents content associated with the selection in the Navigation Sidebar. +
-For information about elements that can appear within this pane, see xref:central-pane-elements.adoc[Central Pane elements].

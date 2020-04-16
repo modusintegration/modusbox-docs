@@ -2,7 +2,7 @@
 
 == Dashboard
 
-* Top of Central Pane
+* Located at the top of the Central Pane
 * Provides data for the timeframe you select in the <<Overview for _timeframe_ Dropdown List>> at the upper left.
 
 === Overview for _timeframe_ Dropdown List
@@ -14,7 +14,7 @@ Enables you to present data specific to the following timeframes:
 * *This Week*
 * *This Month*
 
-The default is *Today*.
+The default setting is *Today*.
 
 
 
@@ -22,12 +22,12 @@ The default is *Today*.
 
 Between the <<Overview for _timeframe_ Dropdown List>> and the <<View Dropdown List>>, Dashboard Data is presented in two forms:
 
-Numerical form:: The actual number
+Numerical form:: The actual number.
 
 Pie chart::
-* A representation of the data as a percentage of all data of that type over that time frame. It is split by the different sections of said data.
+* A representation of the data as a percentage of all data of that type over that time frame. It is split into different sections of said data.
 * When you hover over or click on a section of the error pie chart, the section illuminates and provides the number corresponding to that section.
-* When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data
+* When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data.
 
 === View Dropdown List
 
@@ -42,7 +42,7 @@ The type of data that appears in the <<Content Area>> depends on the menu option
 
 === Filter Bar
 
-* Enables users to filter the results of a view.
+* Enables you to filter the results of a view.
 * Consists of Dropdown Filter lists that enable you to specify the criteria by which you want to filter.
 * Which specific Dropdown Filter Lists appear depends on the value in the <<View Dropdown List>>.
 * Any of the type-able fields will auto-filter as you type into them. In some cases, copying and pasting the value may be helpful.
@@ -56,7 +56,7 @@ The Filter List appears.
 
 ==== To Clear All Filters
 
-. In the Filter Bar, click the *Clear Filters* button.
+. At the top right side of the Filter Bar, click  *Reset Filters* .
 
 
 === Content Area
@@ -69,3 +69,4 @@ The following views are possible:
 * xref:transmissions-view[Transmissions View]
 * xref:errors-view[Errors View]
 * xref:documents-view[Documents View]
+* xref:partner-conversations-view[Partner Conversations View]
