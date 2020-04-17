@@ -27,16 +27,22 @@ The <<img-endpoint-settings-a>> appears. The settings that appear depend on the 
 [[img-endpoint-settings-a]]
 image::endpoint-settings.png[img-endpoint-settings, title="Endpoint Page"]
 
+////
+
 . To edit the Endpoint Name, Protocol, or Type, go to xref:choose[Choose Endpoint Name, Protocol, and Type].
 +
 To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings
 >>.
 
+////
+
 == Add a New Endpoint
 
 . On the <<img-endpoints>>, click *New*.
 +
-The <<img-endpoint-add>> appears.
+The Add New Endpoint Page appears.
+
+////
 +
 [[img-endpoint-add]]
 image::endpoint.png[img-endpoint-add, title="Add New Endpoint Page"]
@@ -47,9 +53,7 @@ NOTE: If you are working with other partners, you can change an existing endpoin
 
 === [[choose]]Choose Endpoint Name, Protocol and Type
 
-//// 
 Commented out endpoint-add image? It shows up in Dan's reports if commented out? kris 7/2/2017
-////
 
 . On the <<img-endpoint-add>>, enter the appropriate settings.
 +
@@ -121,3 +125,4 @@ None
 |Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
 
 |===
+////

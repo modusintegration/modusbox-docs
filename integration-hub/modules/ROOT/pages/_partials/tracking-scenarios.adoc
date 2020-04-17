@@ -1,7 +1,7 @@
 = Tracking Scenarios
 :keywords: Anypoint b2b Integration Hub concepts
 
-This section identifies scenarios in which Integration Hub (APM) is useful to track B2B exchanges. A basic knowledge of APM is assumed; see xref:anypoint-integration-hub[Integration Hub] for more information.
+This section identifies scenarios in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of IHub is assumed; see xref:anypoint-integration-hub[Integration Hub] for more information.
 
 
 == Replaying an Incomplete Transaction

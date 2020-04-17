@@ -127,7 +127,7 @@ Standard PortX Field Format:: Describes fields for which valid values can includ
 
 Target Channel:: Type of <<C,Channel>> specific to the destination of a transmission. 
 
-Transaction:: The end-to-end processing of a single instance of a <<D,Document] from receipt at an <<E,Endpoint] all the way to the desired business service.  
+Transaction:: The end-to-end processing of a single instance of a <<D,Document>> from receipt at an <<E,Endpoint>> all the way to the desired business service.  
 A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
@@ -138,4 +138,4 @@ Transaction-Processing Framework:: B2B transaction-processing solution that enab
 
 == Y
 
-YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its <<P,Partner>>s. You can see how this <<A,Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its <<P,Partner>>s. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].

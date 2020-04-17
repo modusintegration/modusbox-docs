@@ -17,7 +17,7 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 == PortX Components
 
 === xref:integration-hub:ROOT:index.adoc[Integration Hub]
-
+ifdef::mule[]
 ===  xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 === xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 === xref:jde:ROOT:jde.adoc[JD Edwards Connector]
@@ -25,6 +25,7 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 ////
 === xref:x12-translator:ROOT:getting-started.adoc[X12 Translator]
 ////
+endif::mule[]
 === xref:release-notes:ROOT:release-notes.adoc[Release Notes]
 
 == Requirements

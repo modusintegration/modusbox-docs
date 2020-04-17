@@ -35,11 +35,12 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
+ifdef::mule[]
 Anypoint Platform Header:: At the top of every page.
 * Menu on the left enables you to switch to other Anypoint applications.
 * *?* button provides access to support resources.
 * _Master Organization_ name appears at top right. For more information, see xref:access-management/organization[Organization].
-
+endif::mule[]
 Navigation Sidebar (left):: Use this sidebar to move from page to page.
 
 Top Bar::
