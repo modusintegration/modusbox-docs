@@ -119,7 +119,7 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 ==== Transform Stage
 
 * Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
-* Does any necessary data translation, such as resolving partner values to your company's values using xref:lookup-tables.adoc[lookup tables], functions, and flows.
+* Does any necessary data translation, such as resolving partner values to your company's values using functions, and flows.
 * Uses the Integration Hub Connector to track the mapped, canonical version of the message.
 * Passes the updated message body to the next processing stage.
 
