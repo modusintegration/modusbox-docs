@@ -1,7 +1,3 @@
-
-
-== Get Started
-
 . xref:index.adoc#start-integration-hub[Start Integration Hub].
 The <<index.adoc#img-integration-hub-start,Transaction Monitoring Page>> appears.
 . In the left-hand navigation pane, in the *CONFIGURATION* section, click *Partners and Applications*.
