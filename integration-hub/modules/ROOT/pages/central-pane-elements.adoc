@@ -1,11 +1,11 @@
 = Central Pane Elements
 
-== Dashboard
+=== Dashboard
 
 * Top of the Central Pane
-* Provides data for the timeframe you select in the <<Overview for _timeframe_ Dropdown List>> at the upper left.
+* Provides data for the timeframe you select in the <<Timeframe Dropdown List>> at the upper left.
 
-=== Overview for _Timeframe_ Dropdown List
+=== Timeframe Dropdown List
 
 Enables you to present transaction data specific to the following timeframes:
 
@@ -16,15 +16,10 @@ Enables you to present transaction data specific to the following timeframes:
 
 The default setting is *Today*.
 
-=== Refresh Data
-
-To the left of the <<Overview for _timeframe_ Dropdown List>> you can refresh transaction data by clicking the *Refresh Data* button.
-
-
 
 === Dashboard Data
 
-Between the _Timeframe_ Dropdown List and the <<View Dropdown List>>, Dashboard Data is presented in two forms:
+Between the <<Timeframe Dropdown List>> and the <<View Dropdown List>>, dashboard data is presented in two forms:
 
 Numerical form:: The actual number.
 
@@ -33,6 +28,10 @@ Pie chart::
 * When you hover over or click on a section of the error pie chart, the section illuminates and provides the number corresponding to that section.
 * When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data in the <<Content Area>>.
 * Data types include _Transmissions_, _Transactions_, _Errors_, _Partners + Applications_.
+
+==== Refresh Data
+
+To the left of the <<Timeframe Dropdown List>> you can refresh the data on the page by clicking *Refresh Data*.
 
 === View Dropdown List
 
@@ -65,12 +64,21 @@ The Filter List appears.
 . At the top right side of the Filter Bar, click  *Reset Filters* .
 
 
-=== Content Area
+== Content Area
 
 A table appears in the lower part of the Central Pane. Table column headings depend on  on the choices you make in the <<Overview for _timeframe_ Dropdown List>> and the <<View Dropdown List>>.
 
 The following views are possible:
 
+include::{partialsdir}/transactions-view.adoc[]
+
+include::{partialsdir}/transmissions-view.adoc[]
+
+include::{partialsdir}/errors-view.adoc[]
+
+include::{partialsdir}/documents-view.adoc[]
+
+include::{partialsdir}/partner-conversations-view.adoc[]
 
 
 * xref:transactions-view.adoc[Transactions View]

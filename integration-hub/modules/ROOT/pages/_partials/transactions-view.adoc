@@ -1,10 +1,6 @@
-= Transactions View
+== Transactions View
 
 The Transactions View is the default view for B2B Transactions page.
-
-== Content Area
-
-The Content Area displays a table consisting of rows, each of which presents data specific to a transaction.
 
 ===  Transaction rows
 

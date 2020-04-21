@@ -1,6 +1,6 @@
-= Errors View
+== Errors View
 
-== Content Area
+=== Content Area
 Each row has 5 columns
 
 From:: What partner the error came from
@@ -39,7 +39,7 @@ Error ID::
 Enter a specific error identifier.
 
 
-=== To show all errors
+==== To show all errors
 Click *Clear filters*.
 
 === Top Bar

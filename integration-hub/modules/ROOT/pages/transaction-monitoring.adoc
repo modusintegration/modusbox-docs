@@ -3,18 +3,18 @@
 
 PortX Transaction Monitor enables you to monitor B2B _transaction_ data.
 
-A transaction is the full set of end-to-end events (including transmissions, documents, and errors) involved in processing a transmission.
+A transaction is the full set of end-to-end events involved in processing a transmission.
 
 In the Transaction Monitor you can filter and review:
 
-* _Transactions_
-* _Transmissions_
-* _Errors_ and _Acknowledgements_.
-* _Documents_
-* _Partner Conversations_
+* xref:central-pane-elements#Transactions-View[Transactions]
+* xref:central-pane-elements#Transmissios-view[Transmissions]
+* xref:central-pane-elements#errors-view[Errors and Acknowledgements]
+* xref:central-pane-elements#documents-view[Documents]
+* xref:central-pane-elements#partner-conversations-view[Partner Conversations]
 
 
-The following page identifies the components of the Transaction Monitor; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
+The following page identifies components of the Transaction Monitoring Page; see also xref:central-pane-elements.adoc[Central Pane Elements] and xref:tracking-scenarios.adoc[Tracking Scenarios].
 
 == Get Started
 
@@ -29,7 +29,7 @@ image::transaction-monitoring.png[img-transaction-monitoring, title="Transaction
 
 . By default, the Transaction Monitoring page presents data for today's transactions.
 +
-To change the time period, see xref:central-pane-elements#overview-for-em-timeframe-em-dropdown-list[Overview for _timeframe_ Dropdown List].
+To change the time period, see xref:central-pane-elements#overview-for-em-timeframe-em-dropdown-list[Timeframe Dropdown List].
 +
 To change the type of data displayed, see xref:central-pane-elements#view-dropdown-list[View Dropdown List].
 
@@ -39,7 +39,7 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
-Portx Top Bar Menu:: When you login to PortX a menu prompt appears asking you to search or select your _Company_ and _Business Group_. These selections can be changed at any time in the PortX Top Bar Menu.
+Portx Top Bar Menu:: When loggin-in to PortX a menu prompt appears, asking you to search for or select your _Company_ and _Business Group_. These selections can be changed at any time in the PortX Top Bar Menu.
 
 * Company
 * Business Group
