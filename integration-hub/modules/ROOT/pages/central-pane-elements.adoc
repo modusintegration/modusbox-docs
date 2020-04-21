@@ -3,18 +3,16 @@
 === Dashboard
 
 * Top of the Central Pane
-* Provides data for the timeframe you select in the <<Timeframe Dropdown List>> at the upper left.
+* Provides data for the timeframe you select in the <<Timeframe Dropdown List>>.
 
 === Timeframe Dropdown List
 
-Enables you to present transaction data specific to the following timeframes:
+Located in the upper left of the Central Pane, this enables you to present transaction data specific to the following timeframes:
 
-* *Today*
+* *Today* (Default)
 * *Past 48 Hours*
 * *This Week*
 * *This Month*
-
-The default setting is *Today*.
 
 
 === Dashboard Data
@@ -24,7 +22,7 @@ Between the <<Timeframe Dropdown List>> and the <<View Dropdown List>>, dashboar
 Numerical form:: The actual number.
 
 Pie chart::
-* A representation of transaction data as a percentage of all data of the selected type over the selected time frame. It is split into different sections of transaction data.
+* A representation of the data as a percentage of all data over the selected time frame. It is split into different sections of transaction data.
 * When you hover over or click on a section of the error pie chart, the section illuminates and provides the number corresponding to that section.
 * When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data in the <<Content Area>>.
 * Data types include _Transmissions_, _Transactions_, _Errors_, _Partners + Applications_.
@@ -80,9 +78,3 @@ include::{partialsdir}/documents-view.adoc[]
 
 include::{partialsdir}/partner-conversations-view.adoc[]
 
-
-* xref:transactions-view.adoc[Transactions View]
-* xref:transmissions-view.adoc[Transmissions View]
-* xref:errors-view.adoc[Errors View]
-* xref:documents-view.adoc[Documents View]
-* xref:partner-conversations-view.adoc[Partner Conversations View]
