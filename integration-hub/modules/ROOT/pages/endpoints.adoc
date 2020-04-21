@@ -30,8 +30,7 @@ image::endpoint-settings.png[img-endpoint-settings, title="Endpoint Page"]
 
 . To edit the Endpoint Name, Protocol, or Type, go to xref:choose[Choose Endpoint Name, Protocol, and Type].
 +
-To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings
->>.
+To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings>>.
 
 
 == Add a New Endpoint
@@ -146,10 +145,12 @@ Choose the section that corresponds to the Protocol-Type of the Endpoint for whi
 * <<HTTP Receive Settings>>
 * <<JMS Send Settings>>
 * <<JMS Receive Settings>>
+////
 * <<SMTP Send Settings>>
 * <<POP3 Receive Settings>>
 * <<IMAP Receive Settings>>
 * <<RNIF Settings>>
+////
 
 === To Save Endpoint Settings
 
@@ -221,7 +222,9 @@ include::{partialsdir}/endpoint-http-send.adoc[]
 include::{partialsdir}/endpoint-http-receive.adoc[]
 include::{partialsdir}/endpoint-jms-send.adoc[]
 include::{partialsdir}/endpoint-jms-receive.adoc[]
+////
 include::{partialsdir}/endpoint-smtp-send.adoc[]
 include::{partialsdir}/endpoint-pop3-receive.adoc[]
 include::{partialsdir}/endpoint-imap-receive.adoc[]
 include::{partialsdir}/endpoint-rnif.adoc[]
+////
