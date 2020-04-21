@@ -32,6 +32,9 @@ Error Source::
 * Errors
 * Document
 
+Relationship:: 
+Select the application or partner between which the error occurs.
+
 Error ID::
 Enter a specific error identifier.
 

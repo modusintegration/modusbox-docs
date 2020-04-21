@@ -1,11 +1,11 @@
 
 = Transaction Monitoring
 
-PortX Transaction Monitor enables you to monitor B2B transaction data.
+PortX Transaction Monitor enables you to monitor B2B _transaction_ data.
 
 A transaction is the full set of end-to-end events (including transmissions, documents, and errors) involved in processing a transmission.
 
-In Transaction Monitor you can filter and review:
+In the Transaction Monitor you can filter and review:
 
 * _Transactions_
 * _Transmissions_
@@ -14,7 +14,7 @@ In Transaction Monitor you can filter and review:
 * _Partner Conversations_
 
 
-The following identifies the components of the Transaction Monitor page; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
+The following page identifies the components of the Transaction Monitor; see also xref:tracking-scenarios.adoc[Tracking Scenarios].
 
 == Get Started
 
@@ -39,8 +39,8 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
-Portx Top Bar Menu:: 
-* Business Organizaion
+Portx Top Bar Menu:: When you login to PortX a menu prompt appears asking you to search or select your _Company_ and _Business Group_. These selections can be changed at any time in the PortX Top Bar Menu.
+
 * Company
 * Business Group
 * User: Login/Logout
