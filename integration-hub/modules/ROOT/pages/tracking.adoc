@@ -13,11 +13,11 @@ posts:
 
 * Metadata from
 the Routing Engine
-to the xref:b2b-transaction-processing-framework#tracking-api[Tracking API]
+to the Tracking API
 * Payload data within
 the Routing Engine to Tracking Data Storage.
 
-The customer then uses xref:index.adoc[Integration Hub] to request and view metadata and payload data, a process which includes the xref:b2b-transaction-processing-framework#tpmapi[Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
+The customer then uses xref:index.adoc[Integration Hub] to request and view metadata and payload data, a process which includes the Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
 endif::camel[]
 
 
