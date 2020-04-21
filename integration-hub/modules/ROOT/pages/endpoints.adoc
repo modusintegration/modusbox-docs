@@ -121,4 +121,3 @@ None
 |Select this box if you want the choices you make for this endpoint to apply to all endpoints for this partner.
 
 |===
-////
