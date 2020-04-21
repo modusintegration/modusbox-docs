@@ -1,6 +1,6 @@
-== Partner Conversations View
+= Partner Conversations View
 
-=== Content Area
+== Content Area
 Each row has 5 columns
 
 Business Process Name:: The _inbound_ or _outbound_ component definition.
@@ -43,7 +43,7 @@ Relationship::
 Select the application or partner between which the conversation occurs.
 
 
-==== To show all partner conversations
+=== To show all partner conversations
 Click *Reset Filters*.
 
 
