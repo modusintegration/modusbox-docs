@@ -1,35 +1,63 @@
 == Errors View
+The errors view presents data on errors you may incur in xref:transaction-monitoring.adoc[Transaction Monitor].
 
 === Content Area
-Each row has 5 columns
+Each row has 4 columns
 
-From:: What partner the error came from
-To:: Who it was going to
-Date:: Date and time at which the error occurred
-Error Code:: Code associated with the error
+. *From:* What partner the error came from
+. *To:* Who the data was going to
+. *Date:* Date and time at which the error occurred
+. *Error Code:* Code associated with the error
 
-=== Detail Pane
-Displays detailed information specific to the error code
+=== Detail Pane (Right)
+Hidden when no error is selected and contains:
+
+* Error Message icon:fa fa-file-code-o[role="blue"]
+* Error ID icon:fa fa-plus-square-o[role="blue"]
+* Source
+* Source ID icon:fa fa-plus-square-o[role="blue"]
+
+==== Action Icons
+* The _copy_ icon icon:fa fa-plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The _file code_ icon icon:fa fa-file-code-o[role="blue"] opens a detailed error message
+
+==== Buttons
+* A *Transaction* icon:fa fa-exchange[] button will appear when an error is selected.
+** This will take you to the *Transaction* view and highlight this specific error.
+
 
 === Filters
-
 You can filter errors based on:
 
 Date::
+In the <<Timeframe Dropdown List>> filter by:
 * Today
 * Past 48 Hours
-* This Week
-* This Month
+* 1 Week
+* 1 Month
+* Custom Range
 
 From:: Select a date from calendar; only errors that occurred after that date will appear.
 To:: Select a date from calendar; only errors that occurred before that date will appear.
 
-Error code / type:: For example, *4- Languishing*
+View::
+In the <<View Dropdown List>> filter by:
+* Both
+* Partners
+* Applications
+
+Error code / type:: Examples:
+* 0- Unknown
+* 1- Duplicate
+* 2- FA
+* 3- TA
+* 4- Laguishing
+* 5- Exception
+* 6- Parse Error
 
 Error Source::
 * Transmission
 * Transaction
-* Errors
 * Document
 
 Relationship:: 
@@ -39,8 +67,11 @@ Error ID::
 Enter a specific error identifier.
 
 
-==== To show all errors
-Click *Clear filters*.
+Reset Filters::
+To show all errors
+click *Reset filters* in the upper right of the Filter Bar.
 
+////
 === Top Bar
 * *Related error source* button will appear when a row is selected. This will allow you to view the transaction, transmission, or document associated with the error.
+////

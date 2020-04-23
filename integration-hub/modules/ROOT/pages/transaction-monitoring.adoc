@@ -8,7 +8,7 @@ A transaction is the full set of end-to-end events involved in processing a tran
 In the Transaction Monitor you can filter and review:
 
 * xref:central-pane-elements#Transactions-View[Transactions]
-* xref:central-pane-elements#Transmissios-view[Transmissions]
+* xref:central-pane-elements#Transmissions-view[Transmissions]
 * xref:central-pane-elements#errors-view[Errors and Acknowledgements]
 * xref:central-pane-elements#documents-view[Documents]
 * xref:central-pane-elements#partner-conversations-view[Partner Conversations]
@@ -39,17 +39,18 @@ To change the type of data displayed, see xref:central-pane-elements#view-dropdo
 
 The <<img-transaction-monitoring>> consists of the following elements:
 
-Portx Top Bar Menu:: When loggin-in to PortX a menu prompt appears, asking you to search for or select your _Company_ and _Business Group_. These selections can be changed at any time in the PortX Top Bar Menu.
+PortX Top Bar Menu:: Located at the top of the page. The following selections can be changed at any time in the PortX Top Bar Menu.
 
 * Company
+* Organization 
 * Business Group
-* User: Login/Logout
+* User: _Login/Logout_
 
-Timeframe Dropdown List::
-To change the time period, see xref:central-pane-elements#overview-for-em-timeframe-em-dropdown-list[Overview for _timeframe_ Dropdown List].
+Timeframe Dropdown List:: Located below the PortX Top Bar Menu.
+To change the time period, see xref:central-pane-elements#timeframe-dropdown-list[Timeframe Dropdown List].
 
 
-Central Pane:: Presents content views associated with Transaction Monitor. +
+Central Pane:: Located below the Timeframe Dropdown List, this presents content views associated with Transaction Monitor. +
 See xref:central-pane-elements.adoc[Central Pane Elements] for more information.
 
 ////
@@ -73,7 +74,7 @@ Top Bar::
 * User Name Login/Logout
 ////
 Detail Sidebar (right)::
-* Hidden when no transaction is selected.
-* Provides the details of what you have selected in the Central Pane.
+* Hidden when no event is selected in the Content Area.
+* Provides the details of what you have selected in the xref:central-pane-elements.adoc[Centeral Pane Content Area].
 * Most IDs have a copy button to the far right of them.
-** Clicking on this will add the ID to your clip board.
+** Clicking on this will add the ID to your clipboard.

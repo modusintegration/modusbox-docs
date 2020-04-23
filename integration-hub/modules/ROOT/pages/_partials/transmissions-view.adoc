@@ -1,38 +1,64 @@
 == Transmissions View
+The transmissions view presents data on each transmission between applications and partners in xref:transaction-monitoring[Transaction Monitor].
 
 === Content Area
-Each row has 6 columns:
+Each row has 5 columns:
 
-From:: Who the transmission came from
-To:: Who it was sent to
-Date:: Date and time at which the event occurred
-Direction:: Either *Inbound* or *Outbound*
-Transmission Type:: What it was sent over
-Label:: Any label associated with the transmission
+. *From:* Who the transmission came from
+. *To:* Who the transmission was sent to
+. *Date:* Date and time at which the transmission occurred
+. *Transmission Type:* What protocol the transmission was sent over
+. *Label:* Any label associated with the transmission
 
-=== Detail Pane
-* Contains information about the transmission
-* The Message payload is viewable through a link provided
-* All IDs can be copied through the copy button to the right of it
+=== Detail Pane (Right)
+Hidden when no transmission is selected and contains:
+
+* From 
+* Transmission Type
+* Date
+* The Message payload icon:fa fa-share[role="blue"] 
+* Status
+* Transmission IDs icon:fa fa-plus-square-o[role="blue"]
+
+==== Action Icons
+* The _copy_ icon icon:fa fa-plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The _share_ icon icon:fa fa-share[role="blue"] opens a detail pane that shows the complete message payload.
+This pane allows you to:
+** Copy Payload URL
+** Download 
+** Copy content to clipboard
+
+==== Buttons
+* A *Transaction* icon:fa fa-exchange[] button will appear when a transmission is selected
+** This will take you to the *Transaction* view and highlight this specific transmission
 
 === Filters
-Direction:: Inbound or Outbound
-Partner:: Pick the partner associated with the transmission
-File Name:: Enter in part or all of a file name
-Transport:: Pick the transport the transmission was sent over
+You can filter transmissions based on:
 
 Date::
+In the <<Timeframe Dropdown List>> filter by:
 * Today
 * Past 48 Hours
-* This Week
-* This Month
+* 1 Week
+* 1 Month
+* Custom Range
 
-From:: Select a date from calendar; only errors that occurred after that date will appear.
-To:: Select a date from calendar; only errors that occurred before that date will appear.
+View::
+In the <<View Dropdown List>> filter by:
+* Both
+* Partners
+* Applications
+////
+Direction:: Inbound or Outbound
+////
+Relationship:: Choose the partner or application associated with the transmission
+File Name:: Enter in part or all of a file name
+Transport:: Choose the transport your transmission was sent over
+Transmission ID:: Allows you to filter for a transmission by entering the ID
 
-==== To show all transmissions
-Click *Clear filters*.
+From:: Select this column to organize transmissons coming from a partner or application to another.
+To:: Select this column to organize transmissions going to a partner or application from another.
 
-=== Top Bar
-* A *Transaction* button will appear when a transmission is selected
-** This will take you to the *Transaction* view and highlight this specific transmission
+==== To Show all Transmissions
+Click *Reset Filters* in the top right of the <<Filter Bar>>
+

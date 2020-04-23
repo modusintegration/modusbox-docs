@@ -4,6 +4,7 @@
 
 * Top of the Central Pane
 * Provides data for the timeframe you select in the <<Timeframe Dropdown List>>.
+* Contains a *Refresh Data* button in the upper left, to refresh all page data.
 
 === Timeframe Dropdown List
 
@@ -25,29 +26,23 @@ Pie chart::
 * A representation of the data as a percentage of all data over the selected time frame.
 * When you hover over or click on a section of the pie chart, the section illuminates and provides the number corresponding to that section.
 * When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data in the <<Content Area>>.
-* Data types include _Transmissions_, _Transactions_, _Errors_, _Partners + Applications_.
-
-==== Refresh Data
-
-To the left of the <<Timeframe Dropdown List>> you can refresh the data on the page by clicking *Refresh Data*.
 
 === View Dropdown List
 
-This menu, just above the <<Filter Bar>>, presents the following view options:
+This menu, above the <<Filter Bar>>, presents the following view options:
 
 * <<Transactions View>>
 * <<Transmissions View>>
 * <<Errors View>>
 * <<Documents View>>
-* <<Partner Conversations View>>
 
-The type of data that appears in the <<Content Area>> depends on the menu option you choose in the _View Dropdown List_.
+The type of data that appears in the <<Content Area>> depends on the menu option you choose in the <<View Dropdown List>>.
 
 === Filter Bar
+Located below the <<View Dropdown List>>, this enables you to filter the results of a content view.
 
-* Enables you to filter the results of a view.
 * Consists of Dropdown Filter lists that enable you to specify the criteria by which you want to filter.
-* Which specific Dropdown Filter Lists appear depends on the value in the <<View Dropdown List>>.
+* Which specific Dropdown Filter Lists appear depends on your selection in the <<View Dropdown List>>.
 * Any of the type-able fields will auto-filter as you type into them. In some cases, copying and pasting the value may be helpful.
 
 ==== To Clear a Filter
@@ -55,16 +50,16 @@ The type of data that appears in the <<Content Area>> depends on the menu option
 . Click the Dropdown Filter List you want to clear.
 +
 The Filter List appears.
-. At the top right of the Filter List, click the *clear* button.
+. At the top right of the Filter List, click the *Reset* button.
 
 ==== To Clear All Filters
 
-. At the top right side of the Filter Bar, click  *Reset Filters* .
+At the top right side of the Filter Bar, click  *Reset Filters* .
 
 
 == Content Area
 
-A table appears in the lower part of the Central Pane. Table column headings depend on  on the choices you make in the <<Overview for _timeframe_ Dropdown List>> and the <<View Dropdown List>>.
+A table appears in the lower part of the Central Pane. Table column headings depend on the choices you make in the <<Timeframe Dropdown List>> and the <<View Dropdown List>>.
 
 The following views are possible:
 
@@ -76,5 +71,4 @@ include::{partialsdir}/errors-view.adoc[]
 
 include::{partialsdir}/documents-view.adoc[]
 
-include::{partialsdir}/partner-conversations-view.adoc[]
 
