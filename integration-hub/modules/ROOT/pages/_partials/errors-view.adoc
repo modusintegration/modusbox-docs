@@ -1,52 +1,50 @@
 == Errors View
-The errors view presents data on errors you may incur in xref:transaction-monitoring.adoc[Transaction Monitor].
+:icons: font
+The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
 
-=== Content Area
-Each row has 4 columns
+=== Content
+Each row has 4 columns:
 
-. *From:* What partner the error came from
-. *To:* Who the data was going to
+. *From:* Who the transaction came from
+. *To:* Who the transaction was going to
 . *Date:* Date and time at which the error occurred
 . *Error Code:* Code associated with the error
 
 === Error Detail Pane (Right)
-Hidden when no error is selected and contains:
+This pane is hidden when no error is selected. It contains:
 
-* Error Message icon:fa fa-file-code-o[role="blue"]
-* Error ID icon:fa fa-plus-square-o[role="blue"]
+* Error Message icon:file-code-o[role="blue"]
+* Error ID icon:plus-square-o[role="blue"]
 * Source
-* Source ID icon:fa fa-plus-square-o[role="blue"]
+* Source ID icon:plus-square-o[role="blue"]
 
 ==== Action Icons
-* The _copy_ icon icon:fa fa-plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
-* The _file code_ icon icon:fa fa-file-code-o[role="blue"] opens a detailed error message
+* The copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The file code icon icon:file-code-o[role="blue"] opens a detailed error message
 
 ==== Buttons
-* A *Transaction* icon:fa fa-exchange[] button will appear when an error is selected.
-** This will take you to the *Transaction* view and highlight this specific error.
+* A *Transaction* icon:exchange[] button will appear when an error is selected.
+** This will take you to the <<Transaction View>> and highlights this specific error.
 
 
 === Filters
 You can filter errors based on:
 
 Date::
-In the <<Timeframe Dropdown List>> filter by:
 * Today
 * Past 48 Hours
 * 1 Week
 * 1 Month
 * Custom Range
+** *From*: Select a date from the calendar; only errors that occurred after that date will appear.
+** *To*: Select a date from calendar; only errors that occurred before that date will appear
 
-From:: Select a date from calendar; only errors that occurred after that date will appear.
-To:: Select a date from calendar; only errors that occurred before that date will appear.
-
-View::
-In the <<View Dropdown List>> filter by:
+Viewing::
 * Both
 * Partners
 * Applications
 
-Error code / type:: Examples:
+Error code::
 * 0- Unknown
 * 1- Duplicate
 * 2- FA
@@ -67,11 +65,6 @@ Error ID::
 Enter a specific error identifier.
 
 
-Reset Filters::
-To show all errors
-click *Reset filters* in the upper right of the Filter Bar.
+==== To Show all Errors
 
-////
-=== Top Bar
-* *Related error source* button will appear when a row is selected. This will allow you to view the transaction, transmission, or document associated with the error.
-////
+Click icon:trash-o[role="blue"] [blue]#Reset Filters# in the top right.

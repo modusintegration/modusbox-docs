@@ -1,26 +1,27 @@
 == Documents View
+:icons: font
 The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor]
 
-=== Content Area
+=== Content
 Each row has 6 columns:
 
-. *From*: Who the document was sent _from_
+. *From*: Who the document was sent from
 
-. *To*: Who the document was sent _to_
+. *To*: Who the document was sent to
 
-. *Date*: _Date and time_ at which the document was sent
+. *Date*: Date and time at which the document was sent
 
-. *Standard*: The _standard protocol_ used to send the document
+. *Standard*: The standard used to send the document
 
 . *Message Type*: The type of message that was sent
 
 . *Label*: Information describing the document
 
 === Document Detail Pane (Right)
-Hidden when no document is selected and contains:
+This pane is hidden when no document is selected. It contains:
 
-* Document ID icon:fa fa-plus-square-o[role="blue"]
-* Document Definiton ID icon:fa fa-plus-square-o[role="blue"]
+* Document ID icon:plus-square-o[role="blue"]
+* Document Definiton ID icon:plus-square-o[role="blue"]
 * Standard
 * Version
 * Message Type
@@ -28,51 +29,44 @@ Hidden when no document is selected and contains:
 * To
 * Date
 * Duplicate Quiry
-* Message Payload icon:fa fa-share[role="blue"]
-* Partnership ID icon:fa fa-plus-square-o[role="blue"]
+* Message Payload icon:share[role="blue"]
+* Partnership ID icon:plus-square-o[role="blue"]
 
 ==== Action Icons
-* The _copy_ icon icon:fa fa-plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
-* The _share_ icon icon:fa fa-share[role="blue"] opens a detail pane that shows the complete message payload.
+* The copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The share icon icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:
 ** Copy Payload URL
 ** Download 
 ** Copy content to clipboard
 
 ==== Buttons
-* A *Transaction* icon:fa fa-exchange[] button will appear when a document is selected
-** This will take you to the *Transaction* view and highlight this specific document
+* A *Transaction* icon:exchange[] button will appear when a document is selected
+** This will take you to the <<Transaction view>> and highlight this specific document
 
 === Filters
+You can filter documents based on:
 
 Date::
-In the <<Timeframe Dropdown List>> you can filter by:
 * Today
 * Past 48 Hours
 * 1 Week
 * 1 Month
 * Custom Range
-From:: Select a date from calendar; only errors that occurred after that date will appear.
-To:: Select a date from calendar; only errors that occurred before that date will appear
+** *From*: Select a date from the calendar; only documents that occurred after that date will appear.
+** *To*: Select a date from calendar; only documents that occurred before that date will appear
 
 View::
-In the <<View Dropdown List>> filter by:
 * Both
 * Partners
 * Applications
-////
-Direction:: Inbound or Outbound
-////
-Partner:: Filter by the Partner that is associated with the document
-Message Type:: Filter for message type field containing string
-Property Name:: Filter for document having property name
-Property Value:: Filter for document having property value containing string
-Standard:: Filter by the standard
-Document ID:: Filter by document id
 
-==== To show all documents
-Click *Clear filters*.
+Relationship:: Select the partner or application that is associated with the document
+Message Type:: Enter the message type found in the <<Document Detail Pane (Right)>>
+Property Name:: Select the document property name from the dropdown list
+Property Value:: Enter the document property value found in the <<Document Detail Pane (Right)>>
+Standard:: Select the document standard protocol from the dropdown list
+Document ID:: Enter the document ID found in the <<Document Detail Pane (Right)>>
 
-=== Top Bar
-* A *Transaction* button will appear when a document is selected
-** This will take you to the *Transaction* view and highlight this specific document
+==== To Show all Documents
+Click [blue]#*Reset filters*# in the top right.

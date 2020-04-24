@@ -1,24 +1,26 @@
 = Central Pane Elements
+:icons: font
 
-=== Dashboard
+== Dashboard
+Located at the top of the Central Pane, the Dashboard:
 
-* Top of the Central Pane
 * Provides data for the timeframe you select in the <<Timeframe Dropdown List>>.
-* Contains a *Refresh Data* button in the upper left, to refresh all page data.
+* Contains a icon:refresh[role="blue"] [blue]#Refresh Data# button in the upper left allowing you to refresh all page data.
 
-=== Timeframe Dropdown List
+== Timeframe Dropdown List
 
 Located in the upper left of the Central Pane, this enables you to present transaction data specific to the following timeframes:
 
 * *Today* (Default)
 * *Past 48 Hours*
-* *This Week*
-* *This Month*
+* *1 Week*
+* *1 Month*
+* *Custom Range*
 
 
-=== Dashboard Data
+== Dashboard Data
 
-Between the <<Timeframe Dropdown List>> and the <<View Dropdown List>>, dashboard data is presented in two forms:
+Between the <<Dashboard>> and the <<View Dropdown List>>, dashboard data is presented in two forms:
 
 Numerical form:: The actual number.
 
@@ -26,8 +28,9 @@ Pie chart::
 * A representation of the data as a percentage of all data over the selected time frame.
 * When you hover over or click on a section of the pie chart, the section illuminates and provides the number corresponding to that section.
 * When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data in the <<Content Area>>.
+* Click *Overview* in the top left, to either raise or collapse your Dashboard Data on the screen
 
-=== View Dropdown List
+== View Dropdown List
 
 This menu, above the <<Filter Bar>>, presents the following view options:
 
@@ -38,30 +41,35 @@ This menu, above the <<Filter Bar>>, presents the following view options:
 
 The type of data that appears in the <<Content Area>> depends on the menu option you choose in the <<View Dropdown List>>.
 
-=== Filter Bar
+== Filter Bar
 Located below the <<View Dropdown List>>, this enables you to filter the results of a content view.
 
 * Consists of Dropdown Filter lists that enable you to specify the criteria by which you want to filter.
 * Which specific Dropdown Filter Lists appear depends on your selection in the <<View Dropdown List>>.
 * Any of the type-able fields will auto-filter as you type into them. In some cases, copying and pasting the value may be helpful.
+* Features a Viewing filter allowing you to choose:
+** Both
+** Partners
+** Applications
+* Includes a icon:trash-o[role="blue"] [blue]#Reset Filters# button in the top right.
 
-==== To Clear a Filter
+=== To Reset a Filter
 
 . Click the Dropdown Filter List you want to clear.
 +
 The Filter List appears.
-. At the top right of the Filter List, click the *Reset* button.
+. At the top right of the Filter List, click the [blue]#Reset# button.
 
-==== To Clear All Filters
+=== To Reset all Filters
 
-At the top right side of the Filter Bar, click  *Reset Filters* .
+At the top right side of the Filter Bar, click icon:trash-o[role="blue"] [blue]#Reset Filters#
 
 
 == Content Area
 
-A table appears in the lower part of the Central Pane. Table column headings depend on the choices you make in the <<Timeframe Dropdown List>> and the <<View Dropdown List>>.
+A table appears below the Central Pane. Table column headings depend on the choices you make in the <<Timeframe Dropdown List>> and the <<View Dropdown List>>.
 
-The following views are possible:
+The following Content Views are possible:
 
 include::{partialsdir}/transactions-view.adoc[]
 

@@ -1,7 +1,7 @@
 
 = Transaction Monitoring
 
-PortX Transaction Monitor enables you to monitor B2B _transaction_ data.
+PortX Transaction Monitor enables you to monitor B2B transaction data.
 
 A transaction is the full set of end-to-end events involved in processing a transmission.
 
@@ -44,7 +44,7 @@ PortX Top Bar Menu:: Located at the top of the page. The following selections ca
 * Company
 * Organization 
 * Business Group
-* User: _Login/Logout_
+* User: Sign out
 
 Timeframe Dropdown List:: Located below the PortX Top Bar Menu.
 To change the time period, see xref:central-pane-elements#timeframe-dropdown-list[Timeframe Dropdown List].
