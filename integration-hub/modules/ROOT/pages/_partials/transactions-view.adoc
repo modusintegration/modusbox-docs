@@ -1,48 +1,50 @@
-=== Transactions View
+== Transactions View
 
 
-The Transactions View is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor Page].
+The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor Page].
 
-====  Content Area
+===  Content Area
 
 In the content area, each row has 10 columns which present data about each transaction.
 
-Column 1 (Replay Indicator):: This column presents a _grey circle_ at the top allowing you to select all incomplete transactions in the content area, following your set filter paramaters.
-* Allows you to select all incomplete transactions.
-* Allows you to select individual incomplete transactions.
+Column 1 (Replay Indicator):: This column presents a _grey circle_ icon:fa fa-circle-o[] at the top of the column allowing you to select all incomplete transactions in the content area below for replay. 
+You can also select indivdual incomplete transactions in this column for replay.
 
-Once selected, you may replay your incomplete transaction(s) by clicking the blue *Replay* button in the top right of the page.
+Select incomplete transaction(s) and you may replay by clicking the blue [blue]#*Replay*# button in the top right of the <<Filter Bar>>.
 
 Column 2 (Status Indicator):: 
-Contains the symbols icon:fa fa-check[role="green"]  or  icon:fa fa-exclamation-triangle[role="red"].
+This column contains the symbols icon:fa fa-check[role="green"]  or  icon:fa fa-exclamation-triangle[role="red"].
 * A _green checkmark_ icon:fa fa-check[role="green"] means the transaction was successful
-* A _red_ icon:fa fa-exclamation-triangle[role="red"] means that an error occurred somewhere in the transaction.
+* A _red caution sign_ icon:fa fa-exclamation-triangle[role="red"] means that an error occurred somewhere in the transaction.
 
 Column 3 (Replay Status Indicator)::
-This column contains symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:fa fa-undo[]
-* An _orange clock_ icon:fa fa-clock-o[role="red"] meaning  a replay is requested and currently being replayed.
-* A _blue partial circle with an arrowhead_ icon:fa fa-repeat[role="blue"]  which means that the transaction has been replayed.
-* A gray partial circle with an arrowhead pointing left icon:fa fa-undo[], which means that the transaction is a replay of another transaction
+This column contains the symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:fa fa-undo[]
+* An _orange clock_ icon:fa fa-clock-o[role="red"] means a replay is requested and currently being processed.
+* A _blue partial circle with an arrowhead pointing right_ icon:fa fa-repeat[role="blue"] means that the transaction has been replayed.
+* A _gray partial circle with an arrowhead pointing left_ icon:fa fa-undo[], means that the transaction is a replay of another transaction
 
-
-////
-Replay Status:: This column contains symbols :
-* A blue partial circle with an arrowhead pointing right, which means that the transaction has been replayed
-* A gray partial circle with an arrowhead pointing left, which means that the transaction is a replay of another transaction
-* A gray circle with two sequential arrows, which means the transaction is currently being replayed
-* An empty gray circle indicating the transaction can be replayed.
-////
-Column 4 (Proceeding Transaction):: This column contains symbols:
+Column 4 (Proceeding Transaction Type)::
+This column contains symbols indicating the _preceding_ transaction type.
 * 
-Column 5 (Next Transaction)::
+* 
+* 
+* 
+Column 5 (Next Transaction Type)::
+This column contains symbols indicating the _next_ transaction type.
+* 
+* 
+* 
+* 
 
-Column 4 (Status):: A detailed transaction status ide 
+Column 6 (Status):: A detailed transaction status label
 
-Column 3 (From):: The partner from whom the transaction originated
+Column 7 (Name):: A detailed transaction label
 
-Column 4 (To):: To whom the transaction was destined
+Column 8 (From):: From whom the transaction originated
 
-Column 5 (Date):: Date and time at which the transaction occurred
+Column 9 (To):: To whom the transaction is destined
+
+Column 10 (Date):: Date and time at which the transaction occurred
 
 ==== Transaction Event Rows
 
@@ -51,42 +53,64 @@ To view detailed information for the events that comprise a transaction, click a
 From:: Partner from whom the event originated
 To:: Partner to whom the event was sent
 Type:: Event type
-Direction:: Either *Inbound* or *Outbound*
 Date:: Date and time at which the event occurred
 Label:: Indicates what happened in the event
 
-==== Transaction Detail Pane
-This pane appears on the right side of the page. In addition to information displayed in the <<Transaction row>>, it displays the *Transaction ID*.
+=== Transaction Detail Pane (Right)
+Hidden when no transaction is selected and contains:
 
-If a transaction has been replayed, a *view replays* link appears, enabling you to view replays for the transaction.
-icon:fa fa-clock-o[role=#FFA500]
+* Preceding transaction ID and Link
+* Next transaction ID and Link
+* From
+* To
+* Date
+* Transaction ID icon:fa fa-plus-square-o[role="blue"] 
+
+==== Action Icons
+* The _copy_ icon icon:fa fa-plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+
+==== Links
+* Click [blue]#*View Preceding Transaction*# to see the preceding transaction
+* Click [blue]#*View Next Transaction*# to see the next transaction
+
+If a transaction has been replayed icon:fa fa-repeat[role="blue"] a [blue]#View replays# link appears. 
+
+* Click the [blue]#View replays# link to view transaction replays
+
+If a transaction is a replay of a transaction icon:fa fa-undo[] a [blue]#View original# link appears.
+
+* Click the [blue]#View original# link to view the original transaction
+
+** Additionally you can copy the Original Transaction ID by clicking the copy icon:fa fa-plus-square-o[role="blue"] action icon.
+
 
 ==== Filters
 
 You can filter transactions based on:
 
-Date::
+Date of Transaction::
 * Today
 * Past 48 Hours
 * 1 Week
 * 1 Month
-* Custom Range
 
-Viewing::
+* Custom Range
+** *From*: Select a date from the calendar; only transactions that occurred after that date will appear.
+** *To*: Select a date from calendar; only transactions that occurred before that date will appear
+
+View::
 In the <<View Dropdown List>> filter by:
 * Both
 * Partners
 * Applications
 
-From:: Select a date from calendar; only transactions that occurred after that date will appear.
-To:: Select a date from calendar; only transactions that occurred before that date will appear.
+Relationship:: Filter by the application or partner between which the transaction occurs.
+* Choose the Partner or Application from the dropdown menu
 
-Relationship:: The application or partner between which the transaction occurs. For more information, see xref:partner-configuration[Partner Configuration].
-Transaction ID:: ID that you enter. When a Transaction ID filter is set, you can choose to include the replayed transactions originated from that Transaction ID.
+Transaction ID:: Filter by individual Transaction ID.
+* You can view replays of this Transaction ID by clicking [blue]#View replays# in the <<Transaction Detail Pane (Right)>>.
 
 
-==== To show all transactions
-Click *Reset filters*.
+==== To Show all Transactions
+Click [blue]#*Reset filters*# at the top right of the Filters Bar.
 
-==== Top Bar
-* The *Replay* button will appear if the transaction you have selected can be replayed.

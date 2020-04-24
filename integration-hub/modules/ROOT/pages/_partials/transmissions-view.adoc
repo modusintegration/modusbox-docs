@@ -10,7 +10,7 @@ Each row has 5 columns:
 . *Transmission Type:* What protocol the transmission was sent over
 . *Label:* Any label associated with the transmission
 
-=== Detail Pane (Right)
+=== Transmission Detail Pane (Right)
 Hidden when no transmission is selected and contains:
 
 * From 

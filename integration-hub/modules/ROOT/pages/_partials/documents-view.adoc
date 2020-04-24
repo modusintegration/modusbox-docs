@@ -16,8 +16,8 @@ Each row has 6 columns:
 
 . *Label*: Information describing the document
 
-=== Detail Pane (Right)
-Hidden when no document is selected, and contains:
+=== Document Detail Pane (Right)
+Hidden when no document is selected and contains:
 
 * Document ID icon:fa fa-plus-square-o[role="blue"]
 * Document Definiton ID icon:fa fa-plus-square-o[role="blue"]

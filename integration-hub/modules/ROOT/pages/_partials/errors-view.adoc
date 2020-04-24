@@ -9,7 +9,7 @@ Each row has 4 columns
 . *Date:* Date and time at which the error occurred
 . *Error Code:* Code associated with the error
 
-=== Detail Pane (Right)
+=== Error Detail Pane (Right)
 Hidden when no error is selected and contains:
 
 * Error Message icon:fa fa-file-code-o[role="blue"]
