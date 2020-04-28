@@ -6,7 +6,7 @@ The transactions view is the default view for the xref::transaction-monitoring.a
 Each row has 10 columns:
 
 Column 1 (Replay Indicator):: This column presents a grey circle icon:circle-o[] at the top of the column allowing you to select all incomplete transactions in the content area below. 
-You can also select indivdual incomplete transactions in this column.
+You can also select individual incomplete transactions in this column.
 
 * Select incomplete transaction(s) and you may replay that transaction by clicking the blue [blue]#*Replay*# button in the top right of the filter Bar.
 
@@ -40,7 +40,7 @@ Hover over each icon for details on the Transaction type.
 
 Column 6 (Status):: This column provides a detailed transaction status label.
 
-Column 7 (Name):: This column provides the name of th transaction.
+Column 7 (Name):: This column provides the name of the transaction.
 
 Column 8 (From):: This column indicates who the transaction originated from.
 
@@ -69,7 +69,7 @@ Hidden when no transaction is selected, this pane includes:
 * Transaction ID icon:plus-square-o[role="blue"] 
 
 ==== Action Icons
-* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
 
 ==== Links
 * Click [blue]#*View Preceding Transaction*# to see the preceding transaction
@@ -100,7 +100,7 @@ Date of Transaction::
 ** *To*: Select a date from calendar; only transactions that occurred before that date will appear
 
 View::
-In the <<central-pane-elements.adoc#View Dropdown List, View Dropdown List>> filter by:
+In the xref:central-pane-elements#View-Dropdown-List[View Dropdown List] filter by:
 * Both
 * Partners
 * Applications

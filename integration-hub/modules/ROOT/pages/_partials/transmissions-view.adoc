@@ -22,7 +22,7 @@ This pane is hidden when no transmission is selected. It contains:
 * Transmission IDs icon:plus-square-o[role="blue"]
 
 ==== Action Icons
-* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
 * The blue share icon icon:share[role="blue"] opens a detail page that shows the complete message payload.
 This detail page allows you to:
 ** Copy Payload URL

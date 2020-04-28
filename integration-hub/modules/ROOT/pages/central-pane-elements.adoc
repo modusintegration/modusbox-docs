@@ -27,7 +27,7 @@ Numerical form:: The actual number.
 Pie chart::
 * A representation of the data as a percentage of all data over the selected time frame.
 * When you hover over or click on a section of the pie chart, the section illuminates and provides the number corresponding to that section.
-* When you click a section of the piechart, the content area will apply necessary filters to display the corresponding data in the <<Content Area>>.
+* When you click a section of the pie chart, the content area will apply necessary filters to display the corresponding data in the <<Content Area>>.
 * Click *Overview* in the top left, to either raise or collapse your Dashboard Data on the screen
 
 == View Dropdown List
