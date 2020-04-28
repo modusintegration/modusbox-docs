@@ -7,8 +7,8 @@ A transaction is the full set of end-to-end events involved in processing a tran
 
 In the Transaction Monitor you can filter and review:
 
-* xref:central-pane-elements#Transactions-View[Transactions]
-* xref:central-pane-elements#Transmissions-view[Transmissions]
+* xref:central-pane-elements#transactions-view[Transactions]
+* xref:central-pane-elements#transmissions-view[Transmissions]
 * xref:central-pane-elements#errors-view[Errors and Acknowledgements]
 * xref:central-pane-elements#documents-view[Documents]
 

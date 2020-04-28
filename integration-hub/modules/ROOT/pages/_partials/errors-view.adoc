@@ -24,7 +24,7 @@ This pane is hidden when no error is selected. It contains:
 
 ==== Buttons
 * A *Transaction* icon:exchange[] button will appear when an error is selected.
-** This will take you to the <<transactions-view.adoc#Transaction View,Transaction View>> and highlights this specific error.
+** This will take you to the xref:transactions-view.adoc[Transactions View] and highlights this specific error.
 
 
 === Filters
