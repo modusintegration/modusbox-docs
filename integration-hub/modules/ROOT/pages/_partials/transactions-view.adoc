@@ -1,25 +1,25 @@
 == Transactions View
-:icons: font
 The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
+
 
 === Content
 Each row has 10 columns:
 
-Column 1 (Replay Indicator):: This column presents a grey circle icon:fa fa-circle-o[] at the top of the column allowing you to select all incomplete transactions in the content area below. 
+Column 1 (Replay Indicator):: This column presents a grey circle icon:circle-o[] at the top of the column allowing you to select all incomplete transactions in the content area below. 
 You can also select indivdual incomplete transactions in this column.
 
-* Select incomplete transaction(s) and you may replay by clicking the blue [blue]#Replay# button in the top right of the <<Filter Bar>>.
+* Select incomplete transaction(s) and you may replay that transaction by clicking the blue [blue]#*Replay*# button in the top right of the filter Bar.
 
 Column 2 (Status Indicator):: 
-This column contains the symbols icon:check[role="green"]  or  icon:exclamation-triangle[role="red"].
+This column contains the following symbols:
 * A green checkmark icon:check[role="green"] means the transaction was successful
 * A red caution sign icon:exclamation-triangle[role="red"] means that an error occurred somewhere in the transaction.
 
 Column 3 (Replay Status Indicator)::
-This column contains the symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:undo[]
+This column contains the following symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:undo[]
 * An orange clock icon:clock-o[role="red"] means a replay is requested and currently being processed.
-* A blue partial circle with an arrowhead pointing right icon:repeat[role="blue"] means that the transaction has been replayed.
-* A gray partial circle with an arrowhead pointing left icon:undo[], means that the transaction is a replay of another transaction
+* A blue partial circle with an arrowhead pointing right, icon:repeat[role="blue"] means that the transaction has been replayed.
+* A gray partial circle with an arrowhead pointing left icon:undo[], means that the transaction is a replay of another transaction.
 
 Column 4 (Proceeding Transaction Type)::
 This column contains symbols indicating the preceding transaction type.
@@ -69,21 +69,21 @@ Hidden when no transaction is selected, this pane includes:
 * Transaction ID icon:plus-square-o[role="blue"] 
 
 ==== Action Icons
-* The copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
 
 ==== Links
 * Click [blue]#*View Preceding Transaction*# to see the preceding transaction
 * Click [blue]#*View Next Transaction*# to see the next transaction
 
-If a transaction has been replayed icon:repeat[role="blue"] a [blue]#View replays# link appears. 
+If a transaction has been replayed icon:repeat[role="blue"] a blue [blue]#*View replays*# link appears. 
 
-* Click the [blue]#View replays# link to view transaction replays
+* Click the [blue]#*View replays*# link to view transaction replays
 
-If a transaction is a replay of a transaction icon:undo[] a [blue]#View original# link appears.
+If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View original*# link appears.
 
-* Click the [blue]#View original# link to view the original transaction
+* Click the blue [blue]#*View original*# link to view the original transaction
 
-** Additionally you can copy the Original Transaction ID by clicking the copy icon:plus-square-o[role="blue"] action icon next to it.
+** Additionally you can copy the Original Transaction ID by clicking the blue copy icon:plus-square-o[role="blue"] action icon next to it.
 
 
 === Filters
@@ -100,7 +100,7 @@ Date of Transaction::
 ** *To*: Select a date from calendar; only transactions that occurred before that date will appear
 
 View::
-In the <<View Dropdown List>> filter by:
+In the <<central-pane-elements.adoc#View Dropdown List, View Dropdown List>> filter by:
 * Both
 * Partners
 * Applications
@@ -109,9 +109,9 @@ Relationship:: Filter by the application or partner between which the transactio
 * Choose the Partner or Application from the dropdown menu
 
 Transaction ID:: Filter by individual Transaction ID.
-* You can view replays of this Transaction ID by clicking [blue]#View replays# in the <<Transaction Detail Pane (Right)>>.
+* You can view replays of this Transaction ID by clicking [blue]#*View replays*# in the <<Transaction Detail Pane (Right)>>.
 
 
 ==== To Show all Transactions
-Click icon:trash-o[role="blue"] [blue]#Reset Filters# in the top right.
+Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.
 

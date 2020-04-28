@@ -1,21 +1,21 @@
 == Documents View
 :icons: font
-The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor]
+The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor].
 
 === Content
 Each row has 6 columns:
 
-. *From*: Who the document was sent from
+. *From*: Who the document was sent from.
 
-. *To*: Who the document was sent to
+. *To*: Who the document was sent to.
 
-. *Date*: Date and time at which the document was sent
+. *Date*: Date and time at which the document was sent.
 
-. *Standard*: The standard used to send the document
+. *Standard*: The standard used to send the document.
 
-. *Message Type*: The type of message that was sent
+. *Message Type*: The type of message that was sent.
 
-. *Label*: Information describing the document
+. *Label*: Detail information describing the document.
 
 === Document Detail Pane (Right)
 This pane is hidden when no document is selected. It contains:
@@ -33,8 +33,8 @@ This pane is hidden when no document is selected. It contains:
 * Partnership ID icon:plus-square-o[role="blue"]
 
 ==== Action Icons
-* The copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
-* The share icon icon:share[role="blue"] opens a detail pane that shows the complete message payload.
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue share icon icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:
 ** Copy Payload URL
 ** Download 
@@ -42,7 +42,7 @@ This pane allows you to:
 
 ==== Buttons
 * A *Transaction* icon:exchange[] button will appear when a document is selected
-** This will take you to the <<Transaction view>> and highlight this specific document
+** This will take you to the <<transactions-view.adoc#Transaction View,Transaction View>> and highlight this specific document
 
 === Filters
 You can filter documents based on:

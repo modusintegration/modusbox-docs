@@ -2,14 +2,14 @@
 :icons: font
 
 == Dashboard
-Located at the top of the Central Pane, the Dashboard:
+Located at the top of the xref:transaction-monitoring.adoc#Central-Pane[Central Pane], the Dashboard:
 
 * Provides data for the timeframe you select in the <<Timeframe Dropdown List>>.
-* Contains a icon:refresh[role="blue"] [blue]#Refresh Data# button in the upper left allowing you to refresh all page data.
+* Contains a icon:refresh[role="blue"] [blue]#*Refresh Data*# button in the upper left allowing you to refresh all page data.
 
 == Timeframe Dropdown List
 
-Located in the upper left of the Central Pane, this enables you to present transaction data specific to the following timeframes:
+Located in the upper left of the xref:transaction-monitoring.adoc#Central-Pane[Central Pane], this enables you to present transaction data specific to the following timeframes:
 
 * *Today* (Default)
 * *Past 48 Hours*
@@ -58,11 +58,11 @@ Located below the <<View Dropdown List>>, this enables you to filter the results
 . Click the Dropdown Filter List you want to clear.
 +
 The Filter List appears.
-. At the top right of the Filter List, click the [blue]#Reset# button.
+. At the top right of the Filter List, click the [blue]#*Reset*# button.
 
 === To Reset all Filters
 
-At the top right side of the Filter Bar, click icon:trash-o[role="blue"] [blue]#Reset Filters#
+At the top right side of the Filter Bar, click icon:trash-o[role="blue"] [blue]#*Reset Filters*#
 
 
 == Content Area

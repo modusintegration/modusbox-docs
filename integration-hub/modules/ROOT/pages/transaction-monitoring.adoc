@@ -11,7 +11,6 @@ In the Transaction Monitor you can filter and review:
 * xref:central-pane-elements#Transmissions-view[Transmissions]
 * xref:central-pane-elements#errors-view[Errors and Acknowledgements]
 * xref:central-pane-elements#documents-view[Documents]
-* xref:central-pane-elements#partner-conversations-view[Partner Conversations]
 
 
 The following page identifies components of the Transaction Monitoring Page; see also xref:central-pane-elements.adoc[Central Pane Elements] and xref:tracking-scenarios.adoc[Tracking Scenarios].
@@ -29,7 +28,7 @@ image::transaction-monitoring.png[img-transaction-monitoring, title="Transaction
 
 . By default, the Transaction Monitoring page presents data for today's transactions.
 +
-To change the time period, see xref:central-pane-elements#overview-for-em-timeframe-em-dropdown-list[Timeframe Dropdown List].
+To change the time period, see xref:central-pane-elements#timeframe-dropdown-list[Timeframe Dropdown List].
 +
 To change the type of data displayed, see xref:central-pane-elements#view-dropdown-list[View Dropdown List].
 
@@ -67,12 +66,6 @@ Navigation Sidebar (left):: Use this sidebar to select PortX components:
 ** Partners and Applications
 * Administration
 
-////
-Top Bar::
-* Fixed on scroll
-* Provides all action buttons associated with any selection you might have made.
-* User Name Login/Logout
-////
 Detail Sidebar (right)::
 * Hidden when no event is selected in the Content Area.
 * Provides the details of what you have selected in the xref:central-pane-elements.adoc[Centeral Pane Content Area].

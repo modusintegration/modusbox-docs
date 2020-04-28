@@ -19,12 +19,12 @@ This pane is hidden when no error is selected. It contains:
 * Source ID icon:plus-square-o[role="blue"]
 
 ==== Action Icons
-* The copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
-* The file code icon icon:file-code-o[role="blue"] opens a detailed error message
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue file code icon icon:file-code-o[role="blue"] opens a detailed error message
 
 ==== Buttons
 * A *Transaction* icon:exchange[] button will appear when an error is selected.
-** This will take you to the <<Transaction View>> and highlights this specific error.
+** This will take you to the <<transactions-view.adoc#Transaction View,Transaction View>> and highlights this specific error.
 
 
 === Filters
@@ -67,4 +67,4 @@ Enter a specific error identifier.
 
 ==== To Show all Errors
 
-Click icon:trash-o[role="blue"] [blue]#Reset Filters# in the top right.
+Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.
