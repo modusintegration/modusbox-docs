@@ -31,7 +31,7 @@ This detail page allows you to:
 
 ==== Buttons
 * A *Transaction* icon:exchange[] button will appear when a transmission is selected
-** This will take you to the <<transactions-view.adoc#Transaction View,Transaction View>> and highlight this specific transmission
+** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific transmission
 
 === Filters
 You can filter transmissions based on:

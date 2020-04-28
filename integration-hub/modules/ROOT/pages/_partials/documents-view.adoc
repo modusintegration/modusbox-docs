@@ -42,7 +42,7 @@ This pane allows you to:
 
 ==== Buttons
 * A *Transaction* icon:exchange[] button will appear when a document is selected
-** This will take you to the <<transactions-view.adoc#Transaction View,Transaction View>> and highlight this specific document
+** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific document
 
 === Filters
 You can filter documents based on:
