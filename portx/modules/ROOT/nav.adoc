@@ -1,4 +1,4 @@
-* xref:index.adoc[PortX Documentation]
+* xref:index.adoc[About PortX]
 ** xref:integration-hub:ROOT:index.adoc[Integration Hub]
 ifdef::mule[]
 ** xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]

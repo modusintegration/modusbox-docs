@@ -6,13 +6,13 @@ A xref:glossary#sectb[transaction-processing solution] serves as a routing and t
 A significant feature of xref:glossary#sectb[_PortX Transaction Processing Framework_] is the Integration Hub xref:glossary#sectr[Routing Engine]. 
 The Routing Engine is 
 ifdef::mule[]
-a Mulesoft Enterprise Service Bus (ESB).
+a Mulesoft Enterprise Service Bus (ESB)
 endif::[]
 ifdef::camel[]
-an Apache Camel 3.__x__.
+an Apache Camel 3.__x__
 endif::[]
-ifdef::other-esb[]
-an Enterprise Service Bus (ESB). 
+ifdef::omni[]
+an Enterprise Service Bus (ESB)
 endif::[]
 application that
 can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].

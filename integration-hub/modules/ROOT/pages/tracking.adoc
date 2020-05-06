@@ -6,7 +6,7 @@ Payload:: The content of the message
 
 Metadata:: Data about the message
 
-ifndef::camel[]
+ifdef::mule[]
 The 
 xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 posts:
@@ -18,7 +18,7 @@ to the Tracking API
 the Routing Engine to Tracking Data Storage.
 
 The customer then uses xref:index.adoc[Integration Hub] to request and view metadata and payload data, a process which includes the Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
-endif::camel[]
+endif::mule[]
 
 
 [[img-tracking-storage-and-retrieval]]

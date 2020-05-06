@@ -7,7 +7,7 @@ endif::[]
 ifdef::camel[]
 Apache Camel 3.__x__.
 endif::[]
-ifdef::generic[]
+ifdef::omni[]
 an Enterprise Service Bus (ESB). 
 endif::[]
 
@@ -37,7 +37,7 @@ For information about products built to power integration on Apache Camel 3.__x_
 
 * xref:integration-hub::index.adoc[Integration Hub]
 endif::[]
-ifdef::generic[]
+ifdef::omni[]
 === ESB
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
@@ -54,7 +54,6 @@ ifdef::mule[]
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 * xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
 endif::[]
-
 
 == Getting Started
 

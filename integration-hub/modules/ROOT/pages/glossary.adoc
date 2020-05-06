@@ -104,7 +104,7 @@ Apache Camel 3.__x__ application
 ifdef::mule[]
 Mule application
 endif::[]
-ifdef::other-esb[]
+ifdef::omni[]
 Application
 endif::[]
 that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
