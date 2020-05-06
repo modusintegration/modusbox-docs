@@ -5,7 +5,7 @@ In Transacion Monitor you can track Documents as they travel through Ihub from e
 See also; xref:central-pane-elements.adoc#documents-view[Documents View] for more information.
 
 === Track in Transactions View
-Tracking a document in xref:transactions-view.adoc[Transactions View] is a useful way to quickly find detailed information on a document, such as:
+Tracking a document in xref:central-pane-elements.adoc#transactions-view[Transactions View] is a useful way to quickly find detailed information on a document, such as:
 
 * Document ID
 * Standard used 

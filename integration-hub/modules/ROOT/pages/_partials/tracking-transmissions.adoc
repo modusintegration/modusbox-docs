@@ -1,4 +1,3 @@
-
 == Tracking Transmissions 
 Transaction Monitor allows you to track transmissions as they travel from end to end through Ihub.  
 
@@ -11,7 +10,7 @@ Start::
 . Hover over different slices of the Transmissions Pie Chart to see what types of transmissions have occurred.
 . To see information for a given transmission type, click one of the slices.
 +
-The xref:transmissions-view.adoc[Transmissions View] appears, showing only the transmission type you selected in the xref:central-pane-elements#content-area[Content Area].
+The Transmissions View appears, showing only the transmission type you selected in the Content Area.
 
 === Track in Transactions View
 Tracking a transmission in Transactions View is a useful way to quickly find detailed information on a transmission, such as:
@@ -110,7 +109,7 @@ Apply additional filters such as *Transport* to further track transmissions. A t
 
 Start::
 
-. Select the *Transmissions* in the View Dropdown List.
+. Select *Transmissions* in the View Dropdown List.
 + 
 The Transmissions View appears.
 . Click on the *Transport* tab in the Filter Bar.
@@ -122,9 +121,9 @@ Only transmissions of your selected transport type appear in the Content Area.
 
 ==== Transport Problem Identification
 
-If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter (such as Relationship) in the xref:transmissions-view.adoc[Transmissions View]. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
+If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter (such as Relationship) in the Transmissions View. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
 
-You can find additional relevant information in the xref:transmissions-view.adoc#transmissions-detail-pane[Transmissions Detail Pane] to the right. In the Detail Pane, you can see what happened with individual transactions with which transmissions were involved through the *Transaction* navigation button in the upper corner.
+You can find additional relevant information in the Transmissions Detail Pane to the right. In the Detail Pane, you can see what happened with individual transactions with which transmissions were involved through the *Transaction* navigation button in the upper corner.
 
 This allows you to follow transactions through their entire cycle, and if necessary replay them through the *Replay* button.
 

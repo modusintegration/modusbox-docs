@@ -10,7 +10,7 @@ Start::
 . Hover over different slices of the Transactions Pie Chart to see what types of transactions have occurred.
 . To see information for a given transaction type, click one of the slices.
 +
-The xref:transactions-view.adoc[Transactions View] appears, showing only the transaction type you selected.
+The appears, showing only the transaction type you selected.
 
 === Track in Transactions View
 Use Transactions View to quickly filter content and track transactions.
@@ -36,7 +36,7 @@ Only this transaction appears in the Content Area.
 + 
 The Transaction Detail Pane appears.
 
-=== Detail Pane
+==== Detail Pane
 The Transaction Detail Pane includes:
 
 * Who the transaction is From
