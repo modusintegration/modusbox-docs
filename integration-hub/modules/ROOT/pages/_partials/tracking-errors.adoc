@@ -1,7 +1,9 @@
 == Tracking Errors
-If you encounter errors in Transaction Monitor, you can review, assess, and replay these errors by tracking them in Ihub.
+If you encounter errors in Transaction Monitor, you can review, assess, and replay these errors by tracking them in Ihub. Start by tracking individual errors in Transactions View, and continue by tracking multiple errors in Errors View.
 
-See also; xref:central-pane-elements.adoc#errors.view[Errors View] for more information. 
+See xref:central-pane-elements.adoc#errors.view[Errors View] for more information. 
+
+To replay a transaction, see xref:tracking-examples.adoc#replaying-an-incomplete-transaction[Replaying an Incomplete Transaction].
 
 === Track in the Dashboard
 
@@ -15,17 +17,17 @@ The Errors View appears, showing only the error type you selected.
 This enables you to look for a pattern among these errors that help facilitate a solution. This is useful when transactions are failing. but you can't ascertain the solution by just looking at the transactions themselves.
 
 === Track in Transaction View
-Follow these steps to review an error in Transactions View.
+Follow these steps to track errors in Transactions View.
 
 Start::
-. Select *Transactions* in the View Dropdown List
+. Select *Transactions* in the View Dropdown List.
 +  
 The Transactions View appears.
 
-. In the Timeframe Dropdown List, choose a timeframe that matches the timeframe of the transaction event.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the error event(s).
 + 
 Only transactions of that timeframe appear in the Content Area.
-. Check the *Only Having Errors* checkbox in the Fitler Bar.
+. Check the *Only Having Errors* checkbox in the Filter Bar.
 +
 Only errors appear in the Content Area.
 . Locate the error in the Content Area, or <<Track by Relationship>>.
@@ -63,15 +65,15 @@ See xref:tracking-examples.adoc#replaying-an-incomplete-transaction[Replaying an
 ==== Track by Relationship
 
 Start::
-. Select Transactions View in the View Dropdown List
+. Select *Transactions* in the View Dropdown List.
 +
 The Transactions View appears.
 . Click on the transaction that failed to play in the Content Area.
 . Note the _From_ and _To_ variables in the Transaction.
-. Click on *Errors* in the View DropDown List.
+. Select *Errors* in the View Dropdown List.
 +
 The Errors View appears.
-. Click on *Relationship* in the Filter Bar.
+. Click the *Relationship* tab in the Filter Bar.
 +
 The Relationship Filter Dropdown list appears.
 . Enter the _From_ and _To_ variables of the transaction in the dropdown list.
@@ -80,11 +82,9 @@ Only errors of this relationship appear in the Content Area.
 
 See xref:tracking-examples.adoc#replaying-an-incomplete-transaction[Replaying an Incomplete Transaction] for instructions to replay a transaction.
 
-NOTE: You can always use the *Reset Filters* button to get back to the full view.
-
 ==== Track by Error ID
 
-. Select the *Transactions View* in the View Dropdown List.
+. Select *Transactions* in the View Dropdown List.
 + 
 The Transactions View appears.
 . Click on the transaction that contains the error.
@@ -92,43 +92,43 @@ The Transactions View appears.
 The Transaction Event Rows appear.
 . Click on the Error Event in the Transaction Event Rows.
 + 
-The Error Detal Pane appears.
+The Error Detail Pane appears.
 . In the Detail Pane, click the blue copy icon next to the *Error ID*.
-. Click *Errors* in the View Dropdown List
+. Select *Errors* in the View Dropdown List.
 +
 The Errors View appears.
 . Paste the Error ID in the *Error ID* tab on the Filter Bar.
 +
 Only this error appears in the Content Area below.
 
-Save Error ID's while reviewing Transactions, and use them to track specific errors in the Errors View. 
+* Save Error ID's while reviewing transactions, and use them to track specific errors in the Errors View. 
 
 NOTE: You can always use the *Reset Filters* button to get back to the full view.
 
 === Track in Errors View
 Use the Errors View to track and compare multiple errors.
-It may be useful to first collect information from the Error Detail Pane to assist in tracking errors by employing filters.
+It may be useful to first collect information from the Error Detail Pane by tracking in Transactions View, to assist with tracking errors in Errors View.
 
 Viewing Filter::
-If you wish to filter all errors in the Content Area by partner or application, select the following buttons in the Filter Bar.
+Use the Viewing Filter to batch all errors in the Content Area by partner or application, select one of the following buttons in the Filter Bar.
 
-** Both
+** Both (Default)
 ** Partners
 ** Applications
 
 ==== Track by Error Code
-Use the Error Code to determine where multiple errors of a specific type are occuring.
+Use the Error Code to determine where multiple errors of a specific error type are occurring.
 
 Start::
 . Select *Errors* in the View Dropdown List.
 +
 The Errors View appears.
-. Enter an error code in the *Error Code* tab.
+. Enter the error code in the *Error Code* tab.
 + 
 Only errors of that code type appear in the Content Area.
 
 ==== Track by Error Source
-You can filter and track errors from the following source types:
+Use the Error Source filter to track errors from the following source types:
 
 * Transaction
 * Transmission
@@ -137,18 +137,18 @@ You can filter and track errors from the following source types:
 //-
 Start::
 
-. Select *Errors* in the View Dropdown List
+. Select *Errors* in the View Dropdown List.
 +
 The Errors View appears.
 . Click the *Error Source* tab in the Filter Bar.
 + 
-The Error Source dropdown list appears.
-. Click on the *Error Source*
+The Error Source Dropdown List appears.
+. Click on the *Error Source*.
 +
 Only errors of this source type appear in the Content Area.
 
-==== Track by Relationshp (Your Company B2B)
-Use the Relationship filter to track errors between Actors (partners or applications). This filter is useful in that it allows you to assess multiple errors that may occur between Your Company and a specific Actor.
+==== Track by Relationship (Your Company B2B)
+Use the Relationship filter to track errors between Actors (partners or applications). This filter is useful in that it allows you to track multiple errors that may occur between Your Company and a specific Actor.
 
 . Select *Errors* in the View Dropdown List.
 +
@@ -156,12 +156,13 @@ The Errors View appears.
 . Click the *Relationship* tab in the Filter Bar.
 +
 The Relationship Dropdown List appears.
-. In the dropdown list select _Your Company_ on the left an _Actor_ on the right.
+. In the dropdown list select Your Company and the Actor.
 +
 Only errors of this relationship appear in the Content Area below.
 
-You can view errors associated with other actor relationships by setting new values in the Relationship Filter.
+* You can view errors associated with other actor relationships by setting new values in the Relationship Filter.
 
+//-
 Relationship Filter Settings ::
 
 * Application -> Partner
@@ -170,7 +171,7 @@ Relationship Filter Settings ::
 * Your Company -> Application
 * Your Company -> Partner
 
-You can then apply additional filters to <<Track by Error Source>> and <<Track by Error Code>> to further review and assess errors. 
+You can then apply additional filters to <<Track by Error Source>> and <<Track by Error Code>> to further review and track errors. 
 
 NOTE: You can always use the *Reset Filters* button to get back to the full view.
 

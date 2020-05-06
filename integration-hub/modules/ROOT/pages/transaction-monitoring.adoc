@@ -13,7 +13,7 @@ In the Transaction Monitor you can filter and review:
 * xref:central-pane-elements#documents-view[Documents]
 
 
-The following page identifies components of the Transaction Monitoring Page; see also xref:central-pane-elements.adoc[Central Pane Elements] and xref:tracking-scenarios.adoc[Tracking Scenarios].
+The following page identifies components of the Transaction Monitoring Page; see also xref:central-pane-elements.adoc[Central Pane Elements] and xref:tracking-examples.adoc[Tracking Examples].
 
 == Get Started
 

@@ -1,14 +1,14 @@
 == Tracking Documents
 
-In Transacion Monitor you can track Documents as they travel through Ihub from end to end as a complete document flow.
+In Transacion Monitor you can track Documents as they travel through Ihub from end to end as a complete document flow. Start by tracking individual documents from Transactions view, and continue by tracking multiple documents in Documents View.
 
-See also; xref:central-pane-elements.adoc#documents-view[Documents View] for more information.
+See also xref:central-pane-elements.adoc#documents-view[Documents View] for more information.
 
 === Track in Transactions View
 Tracking a document in xref:central-pane-elements.adoc#transactions-view[Transactions View] is a useful way to quickly find detailed information on a document, such as:
 
 * Document ID
-* Standard used 
+* Standard Used 
 * Document Version
 * Message Type
 * Date received
@@ -31,7 +31,7 @@ Only transactions of that timeframe appear in the Content Area.
 . Click on *Relationship* in the Filter Bar.
 +
 The Relationship dropdown list appears.
-. Select the *Actor* and *Your Company* in the Relationship Dropdown List.
+. In the Relationship Dropdown List, select *Your Company* and the *Actor*.
 + 
 Only transactions of this relationship appear in the Content Area.
 . Click on the Transaction.
@@ -41,7 +41,21 @@ The Transaction Event Rows appear.
 + 
 The Document Detail Pane appears.
 
-Note:: You can view documents of other actor relationships by setting new values in the Relationship Filter.
+//-
+* You can view documents of other actor relationships by setting different values in the Relationship Filter.
+
+//-
+Relationship Filter Settings::
+
+* Application <-→ Partner
+
+* Partner <-→ Partner
+
+* Application <-→ Application
+
+* Your Company <-→ Application
+
+* Your Company <-→ Partner
 
 ==== Detail Pane
 Use the Document Detail Pane to note the Following:
@@ -61,17 +75,16 @@ NOTE: You can always use the *Reset Filters* button to get back to the full view
 In some cases, a partner requests information on a document. Follow these steps to use the Documents View to track document information.
 
 Viewing Filter::
-If you wish to filter all documents in the Content Area by partner or application, select the following buttons in the Filter Bar.
-
-** Both
-** Partners
-** Applications
+Use the Viewing filter to batch documents by Actor Type. Select one of the following buttons.
+* Both (Default)
+* Partners
+* Applications
 
 Start::
 . Select *Documents* from the View Dropdown List.
 +
 The Documents View appears.
-. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s)
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).
 . In the *Document ID* filter, enter the Document ID that the partner provided you.
 +
 Only that document appears in the Content Area.
@@ -97,7 +110,7 @@ Click the *Transaction* button in the Detail Pane, to return to the original tra
 
 ==== Track by Property Name and Property Value
 Start::
-. Select *Documents* in the View Dropdown List
+. Select *Documents* in the View Dropdown List.
 +
 The Documents View appears.
 . In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).
@@ -114,7 +127,7 @@ Documents with that property appear in the Content Area.
 
 ==== Track by Document Standard
 Start::
-. Select *Documents* in the View Dropdown List
+. Select *Documents* in the View Dropdown List.
 +
 The Documents View appears.
 . In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).

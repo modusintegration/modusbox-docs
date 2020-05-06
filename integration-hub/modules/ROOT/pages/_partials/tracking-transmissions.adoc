@@ -1,10 +1,10 @@
 == Tracking Transmissions 
-Transaction Monitor allows you to track transmissions as they travel from end to end through Ihub.  
+Transaction Monitor allows you to track transmissions as they travel from end to end through Ihub. Start by tracking individual transmissions in Transactions View, and continue by tracking multiple transmissions in Transmissions View.
 
 See also xref:central-pane-elements.adoc#transmissions-view[Transmissions View] for more information.
 
 === Track in the Dashboard
-The xref:central-pane-elements.adoc#dashboard[Dashboard] at the top of the xref:transaction-monitoring.adoc[Transaction Monitoring Page] provides a data summary of what has happened in a given timeframe (the default setting is current day) including how many transmissions have been detected during that timeframe.
+The xref:central-pane-elements.adoc#dashboard[Dashboard] at the top of the xref:transaction-monitoring.adoc[Transaction Monitoring Page] provides a data summary of events in a given timeframe (the default setting is current day) including how many transmissions have been detected during that timeframe.
 
 Start::
 . Hover over different slices of the Transmissions Pie Chart to see what types of transmissions have occurred.
@@ -25,10 +25,10 @@ Tracking a transmission in Transactions View is a useful way to quickly find det
 //-
 
 Start::
-. Click on the *Transactions* view from the View Dropdown List
+. Select *Transactions* in the View Dropdown List.
 + 
-The Transactions View Appears
-. In the Timeframe Dropdown List, choose a timeframe that matches the timeframe of the transmission event.
+The Transactions View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the transmission event(s).
 + 
 Only transactions of that timeframe appear in the Content Area.
 . Click on the transaction containing the transmission.
@@ -42,7 +42,7 @@ The Transmission Detail Pane appears.
 Use information in the Transmission Detail Pane to facilitate and manage the transmission.
 
 Complete Message Payload::
-. Click the blue arrow next to *Message Payload* in the Detail Pane
+. Click the blue arrow next to *Message Payload* in the Detail Pane.
 +
 The complete Message Payload appears with the following options:
 
@@ -54,7 +54,7 @@ The complete Message Payload appears with the following options:
 
 Transmission ID::
 . In the Detail Pane, click the blue copy icon next to Transmission ID. 
-. Save the Transmission ID to quickly access the Transmission in Transmissions View.
+. Copy the Transmission ID to quickly access the transmission in Transmissions View.
 
 NOTE: You can always use the *Reset Filters* button to get back to the full view.
 
@@ -66,59 +66,60 @@ Tracking in xref:central-pane-elements.adoc#transmissions-view[Transmissions Vie
 * Transport
 * Transmission ID
 
-Use these filters to compare transmissions and locate specific transmissions in Ihub.
+Use these filters to compare transmissions and track specific transmissions in Ihub.
 
 Viewing Filter::
-Apply the Viewing filter at any time to batch transmissions by Actor Type in the xref:central-pane-elements.adoc#content-area[Content Area]. You may select the following buttons in the xref:central-pane-elements#filter-bar[Filter Bar].
-* Both
+Use the Viewing filter to batch transmissions by Actor Type. Select one of the following buttons.
+* Both (Default)
 * Partners
 * Applications
 
 ==== Track by Relationship (Your Company B2B)
-Use the Relationship filter to track trasmissions between Actors (partners or applications). This filter is useful in that it allows you to assess multiple transmissions that occur between Your Company and specific Actors.
+Use the Relationship filter to track transmissions between Actors (partners or applications). This filter is useful in that it allows you to view multiple transmissions that occur between Your Company and a specific Actor.
 
 Start::
-. Select the *Transmissions* in the xref:central-pane-elements#view-dropdown-list[View Dropdown List].
+. Select *Transmissions* in the View Dropdown List.
 +
 The Transmissions View appears.
-. In the Timeframe Dropdown List, choose a timeframe that matches the timeframe of the transmission event.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the transmission event(s).
 + 
 Only transmissions of that timeframe appear in the Content Area.
 . Click the *Relationship* tab in the Filter Bar.
-. In the dropdown list select Your Company on the left and an Actor on the right.
++
+The Relationship Dropdown List appears.
+. In the Relationship Dropdown List select *Your Company* and the *Actor*.
 +
 Only transmissions of this relationship appear in the Content Area.
 
-You can view transmissions of other actor relationships by setting new values in the Relationship Filter.
+NOTE: You can view transmissions of other actor relationships by setting different values in the Relationship Filter.
 
 Relationship Filter Settings::
 
-* Application -> Partner
-* Partner -> Partner
-* Application -> Application
-* Your Company -> Application
-* Your Company -> Partner
+* Application <--> Partner
+* Partner <--> Partner
+* Application <--> Application
+* Your Company <--> Application
+* Your Company <--> Partner
 
 //-
 
-* Click the *Transaction* button in the Transmission Detail Pane at the top right to view the transaction with which this transmission is associated. 
+* Click the *Transaction* button in the Transmission Detail Pane at the top right to view the transaction with which a transmission is associated. 
 
 ==== Track by Transport
 
-Apply additional filters such as *Transport* to further track transmissions. A transport indicates the way in which a transmission is recieved and/or sent. The type of transport a transmission uses depends on the map that a transmission uses, as it travels from end-to-end in Ihub.
+Apply additional filters such as the Transport Filter to further track transmissions.
 
 Start::
-
 . Select *Transmissions* in the View Dropdown List.
 + 
 The Transmissions View appears.
 . Click on the *Transport* tab in the Filter Bar.
 +
 The Transport Dropdown List Appears.
-. Select a *Transport* from the dropdown list.
+. Select a *Transport* from the Transport Dropdown List.
 +
-Only transmissions of your selected transport type appear in the Content Area.
-
+Only transmissions of that transport type appear in the Content Area.
+////
 ==== Transport Problem Identification
 
 If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter (such as Relationship) in the Transmissions View. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
@@ -127,8 +128,10 @@ You can find additional relevant information in the Transmissions Detail Pane to
 
 This allows you to follow transactions through their entire cycle, and if necessary replay them through the *Replay* button.
 
+See xref:tracking-examples.adoc#replaying-an-incomplete-transaction[Replaying an Incomplete Transaction] for more information.
+////
 ==== Track by Transmission ID
-Use the Trasmission ID Filter to quickly track a transmission.
+Use the Transmission ID Filter to quickly track a transmission.
 
 . Select *Transmissions* in the View Dropdown List.
 +
@@ -138,12 +141,16 @@ The Transmissions View appears.
 +
 Only the transmission you enter appears in the Content Area.
 
-The Transmissions Detail Pane populates with information that is likely relevant the partner's request.
+==== Detail Pane 
+. In Transmissions View, click on the transmission.
++ 
+The Transmission Detail Pane appears.
 
-To copy a long string for partner use::
-. click the blue *copy* icon to the right of the string.
-+
-Additional relevant information can be found using the various filter and sort possibilities this view presents.
+//-
+
+Copy Long Strings of Data ::
+. Click the blue *copy* icon to the right of the string.
+
 
 //-
 

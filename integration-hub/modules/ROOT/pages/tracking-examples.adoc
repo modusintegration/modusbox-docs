@@ -4,17 +4,17 @@
 PortX Transaction Monitor enables you to monitor B2B transaction data traveling through Integration Hub.
 This section identifies examples in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:index.adoc[Integration Hub] for more information.
 
-In Transaction Monitor you can track events in the following ways.
+Transaction Monitor allows you to track events. An event is defined as the type of data that travels through Ihub. Track events under the following tracking categories.
 
 * <<Tracking Transactions>> 
 * <<Tracking Transmissions>>
 * <<Tracking Errors>>
 * <<Tracking Documents>>
 
-If a transaction does not play, see <<Replaying an Incomplete Transaction>>.
+For information on replaying a transaction see <<Replaying an Incomplete Transaction>>. 
 
 
-The following page identifies components of the Transaction Monitoring Page; see also xref:central-pane-elements.adoc[Central Pane Elements] for more information.
+This page identifies components of the Transaction Monitoring Page; see also xref:central-pane-elements.adoc[Central Pane Elements] for more information.
 
 == Get Started
 
@@ -33,8 +33,9 @@ To change the time period, see xref:central-pane-elements#timeframe-dropdown-lis
 +
 To change the type of data displayed, see xref:central-pane-elements#view-dropdown-list[View Dropdown List].
 
+////
 This section identifies examples in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:index.adoc[Integration Hub] for more information.
-
+////
 include::{partialsdir}/replaying-an-incomplete-transaction.adoc[]
 
 include::{partialsdir}/tracking-transactions.adoc[]
