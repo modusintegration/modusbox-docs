@@ -2,6 +2,8 @@
 :icons: font
 The transmissions view presents data on each transmission between applications and partners in xref:transaction-monitoring[Transaction Monitor].
 
+For more information on transmissions see xref:tracking-examples.adoc#tracking-transmissions[Tracking Examples]
+
 === Content
 Each row has 5 columns:
 

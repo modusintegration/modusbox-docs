@@ -2,6 +2,8 @@
 :icons: font
 The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
 
+For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Examples].
+
 === Content
 Each row has 4 columns:
 

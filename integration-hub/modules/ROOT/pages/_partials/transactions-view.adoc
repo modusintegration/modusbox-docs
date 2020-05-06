@@ -1,6 +1,7 @@
 == Transactions View
 The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
 
+For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Examples].
 
 === Content
 Each row has 10 columns:
@@ -10,16 +11,18 @@ You can also select individual incomplete transactions in this column.
 
 * Select incomplete transaction(s) and you may replay that transaction by clicking the blue [blue]#*Replay*# button in the top right of the filter Bar.
 
-Column 2 (Status Indicator):: 
+Column 2 (Status):: 
 This column contains the following symbols:
 * A green checkmark icon:check[role="green"] means the transaction was successful
 * A red caution sign icon:exclamation-triangle[role="red"] means that an error occurred somewhere in the transaction.
 
-Column 3 (Replay Status Indicator)::
+Column 3 (Replay Status)::
 This column contains the following symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:undo[]
 * An orange clock icon:clock-o[role="red"] means a replay is requested and currently being processed.
 * A blue partial circle with an arrowhead pointing right, icon:repeat[role="blue"] means that the transaction has been replayed.
 * A gray partial circle with an arrowhead pointing left icon:undo[], means that the transaction is a replay of another transaction.
+
+See xref:tracking-scenarios.adoc[Tracking Scenarios] for information on replaying transactions.
 
 Column 4 (Proceeding Transaction Type)::
 This column contains symbols indicating the preceding transaction type.
@@ -85,6 +88,7 @@ If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View or
 
 ** Additionally you can copy the Original Transaction ID by clicking the blue copy icon:plus-square-o[role="blue"] action icon next to it.
 
+See xref:tracking-scenarios.adoc[Tracking Scenarios] for more information on replaying transactions.
 
 === Filters
 

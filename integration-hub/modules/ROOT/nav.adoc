@@ -18,7 +18,7 @@
 ** xref:integration-hub:ROOT:examples.adoc[Examples]
 ** xref:transaction-monitoring.adoc[Transaction Monitoring]
 *** xref:central-pane-elements.adoc[Central Pane Elements]
-*** xref:tracking-scenarios.adoc[Tracking Scenarios]
+*** xref:tracking-examples.adoc[Tracking Examples]
 
 ** xref:partner-configuration.adoc[Actor Configuration]
 

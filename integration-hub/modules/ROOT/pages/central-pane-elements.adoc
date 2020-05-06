@@ -7,7 +7,7 @@ Located at the top of the xref:transaction-monitoring.adoc#Central-Pane[Central 
 * Provides data for the timeframe you select in the <<Timeframe Dropdown List>>.
 * Contains a icon:refresh[role="blue"] [blue]#*Refresh Data*# button in the upper left allowing you to refresh all page data.
 
-== Timeframe Dropdown List
+=== Timeframe Dropdown List
 
 Located in the upper left of the xref:transaction-monitoring.adoc#Central-Pane[Central Pane], this enables you to present transaction data specific to the following timeframes:
 
@@ -18,7 +18,7 @@ Located in the upper left of the xref:transaction-monitoring.adoc#Central-Pane[C
 * *Custom Range*
 
 
-== Dashboard Data
+=== Dashboard Data
 
 Between the <<Dashboard>> and the <<View Dropdown List>>, dashboard data is presented in two forms:
 
