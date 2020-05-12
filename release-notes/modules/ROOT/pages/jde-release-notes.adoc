@@ -4,7 +4,7 @@
 _JD Edwards Connector_ aims to provide integration from and to Oracle’s _JD Edwards™ EnterpriseOne™_.
 It leverages the power of Oracle's Java Dynamic Connector and XML List to provide interoperability with Oracle’s _JD Edwards EnterpriseOne™_ and external systems.
 
-link:/http://modusintegration.github.io/mule-connector-JDE/[JDE Connector user guide].
+These release notes accompany xref:jde:ROOT:jde.adoc[JD Edwards Connector User Guide].
 
 == Version 2.0.0 - 20 June 2019
 

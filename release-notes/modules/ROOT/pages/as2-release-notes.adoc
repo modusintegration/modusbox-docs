@@ -3,6 +3,8 @@
 
 == Version 1.0.0 - Apr 20, 2020
 
+These release notes accompany the xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector User Guide].
+
 === Compatibility
 
 Supported Mule Runtime Versions: Mule 4 and greater
