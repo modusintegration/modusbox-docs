@@ -9,6 +9,12 @@ Release notes for version 3.0.0 of the FTPS connector.
 These release notes accompany the xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector User Guide]. 
 Compatible Mule versions have been changed from 3.6.x and later to 3.7 and later.
 
+=== New Features
+
+* Read operation now includes support for disabling auto-delete
+* Connector is now available 
+
+
 === Compatibility
 
 [%header%autowidth.spread]
@@ -16,6 +22,8 @@ Compatible Mule versions have been changed from 3.6.x and later to 3.7 and later
 |Software |Version
 |Mule Runtime | Mule Runtime Enterprise Edition 3.7.0 and later
 |===
+
+NOTE: Use of this connector is subject to this updated license agreement <insert url>.
 
 == 2.0.2
 
