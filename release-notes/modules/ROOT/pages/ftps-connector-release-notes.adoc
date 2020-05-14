@@ -11,9 +11,7 @@ Compatible Mule versions have been changed from 3.6.x and later to 3.7 and later
 
 === New Features
 
-* Read operation now includes support for disabling auto-delete
-* Connector is now available 
-
+Read operation now includes support for disabling auto-delete.
 
 === Compatibility
 
