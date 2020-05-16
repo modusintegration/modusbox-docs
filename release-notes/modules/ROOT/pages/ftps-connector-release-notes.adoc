@@ -21,8 +21,6 @@ Read operation now includes support for disabling auto-delete.
 |Mule Runtime | Mule Runtime Enterprise Edition 3.7.0 and later
 |===
 
-NOTE: Use of this connector is subject to this updated license agreement <insert url>.
-
 == 2.0.2
 
 *February 21, 2018*
