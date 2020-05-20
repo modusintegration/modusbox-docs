@@ -101,6 +101,7 @@ Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target
 Routing Engine::
 ifdef::camel[]
 Apache Camel 3.__x__ application
+endif::[]
 ifdef::mule[]
 Mule application
 endif::[]
