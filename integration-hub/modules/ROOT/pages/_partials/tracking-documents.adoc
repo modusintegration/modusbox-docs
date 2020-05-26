@@ -1,0 +1,145 @@
+== Tracking Documents
+
+In Transacion Monitor you can track Documents as they travel through Ihub from end to end as a complete document flow. Start by tracking individual documents from Transactions view, and continue by tracking multiple documents in Documents View.
+
+See also xref:central-pane-elements.adoc#documents-view[Documents View] for more information.
+
+=== Track in Transactions View
+Tracking a document in xref:central-pane-elements.adoc#transactions-view[Transactions View] is a useful way to quickly find detailed information on a document, such as:
+
+* Document ID
+* Standard Used 
+* Document Version
+* Message Type
+* Date received
+* Is it a Duplicate?
+* Message Payload
+* Partnership ID
+
+//-
+
+==== Track by Relationship (Your Company B2B)
+Use the Relationship Filter to track documents from an Actor (partner or application) to Your Company.
+
+Start::
+. Select *Transactions* in the View Dropdown List.
++
+The Transactions View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).
++ 
+Only transactions of that timeframe appear in the Content Area.
+. Click on *Relationship* in the Filter Bar.
++
+The Relationship dropdown list appears.
+. In the Relationship Dropdown List, select *Your Company* and the *Actor*.
++ 
+Only transactions of this relationship appear in the Content Area.
+. Click on the Transaction.
++ 
+The Transaction Event Rows appear.
+. Click on the *Document Event* from the Transaction Event Rows.
++ 
+The Document Detail Pane appears.
+
+//-
+* You can view documents of other actor relationships by setting different values in the Relationship Filter.
+
+//-
+Relationship Filter Settings::
+
+* Application <-→ Partner
+
+* Partner <-→ Partner
+
+* Application <-→ Application
+
+* Your Company <-→ Application
+
+* Your Company <-→ Partner
+
+==== Detail Pane
+Use the Document Detail Pane to note the Following:
+
+* Document ID
+* Standard used 
+* Version
+* Message Type
+* Date received
+* Is it a Duplicate?
+* Message Payload
+* Partnership ID
+
+NOTE: You can always use the *Reset Filters* button to get back to the full view.
+
+=== Track in Documents View
+In some cases, a partner requests information on a document. Follow these steps to use the Documents View to track document information.
+
+Viewing Filter::
+Use the Viewing filter to batch documents by Actor Type. Select one of the following buttons.
+* Both (Default)
+* Partners
+* Applications
+
+Start::
+. Select *Documents* from the View Dropdown List.
++
+The Documents View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).
+. In the *Document ID* filter, enter the Document ID that the partner provided you.
++
+Only that document appears in the Content Area.
+. Click on the document.
++
+The Document Detail Pane populates with information relevant to the partner's request.
++
+Copy a Long String::
+To assist your partner, copy a long string of information from the Detail Pane for their use.
+. Click the blue *copy* icon to the right of the string.
+. Save the copy in a document for your partner.
+
+Search Properties::
+In the Detail Pane you can search for properties.
+. Populate the Properties search bar with a property.
++
+The Detail Pane filters by property.
+
+* Click the blue *copy* icon to the right of a string, to copy document properties.
+
+//-
+Click the *Transaction* button in the Detail Pane, to return to the original transaction in Transactions View.
+
+==== Track by Property Name and Property Value
+Start::
+. Select *Documents* in the View Dropdown List.
++
+The Documents View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).
+. Click on *Property Name* in the Filter Bar.
++
+The Property Name Dropdown List appears.
+. Click on the Property Name you are tracking with.
+* Example: Interchange Control Number (system)
++
+Documents with that property appear in the Content Area.
+. Enter a Property Value that is valid to the Property Name, in the *Property Value* tab on the Filter Bar.
+* Example: Number (Nine Digits) 
+. Only Documents with that Property Name and Property Value appear in the Content Area.
+
+==== Track by Document Standard
+Start::
+. Select *Documents* in the View Dropdown List.
++
+The Documents View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the document event(s).
+. Click on *Standard* in the Filter Bar.
++ 
+The Standard Dropdown List appears.
+. Click on the Standard.
+* Example: X12
++
+Only documents with that standard appear in the Content Area.
+
+//-
+Apply other filters such as: Property Name, Property Value, and Relationship to further track documents in the Documents View.
+
+NOTE: You can always use the *Reset Filters* button to get back to the full view.
