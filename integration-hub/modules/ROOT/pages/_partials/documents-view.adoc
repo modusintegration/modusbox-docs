@@ -1,8 +1,8 @@
 == Documents View
 :icons: font
 The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor].
-
 For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Examples].
+
 
 === Content
 Each row has 6 columns:
@@ -35,6 +35,7 @@ This pane is hidden when no document is selected. It contains:
 * Partnership ID icon:plus-square-o[role="blue"]
 
 ==== Action Icons
+
 * The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
 * The blue share icon icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:

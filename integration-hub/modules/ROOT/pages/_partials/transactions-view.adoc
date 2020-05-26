@@ -1,7 +1,7 @@
 == Transactions View
 The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
-
 For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Examples].
+
 
 === Content
 Each row has 10 columns:
@@ -22,7 +22,7 @@ This column contains the following symbols: icon:fa fa-clock-o[role="red"] icon:
 * A blue partial circle with an arrowhead pointing right, icon:repeat[role="blue"] means that the transaction has been replayed.
 * A gray partial circle with an arrowhead pointing left icon:undo[], means that the transaction is a replay of another transaction.
 
-See xref:tracking-scenarios.adoc[Tracking Scenarios] for information on replaying transactions.
+See xref:replaying-an-incomplete-transaction.adoc[Replaying an Incomplete Transaction] for information on replaying transactions.
 
 Column 4 (Proceeding Transaction Type)::
 This column contains symbols indicating the preceding transaction type.
@@ -88,7 +88,7 @@ If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View or
 
 ** Additionally you can copy the Original Transaction ID by clicking the blue copy icon:plus-square-o[role="blue"] action icon next to it.
 
-See xref:tracking-scenarios.adoc[Tracking Scenarios] for more information on replaying transactions.
+See xref:replaying-an-incomplete-transaction.adoc[Replaying an Incomplete Transaction] for information on replaying transactions.
 
 === Filters
 
@@ -105,6 +105,7 @@ Date of Transaction::
 
 View::
 In the xref:central-pane-elements#View-Dropdown-List[View Dropdown List] filter by:
+
 * Both
 * Partners
 * Applications

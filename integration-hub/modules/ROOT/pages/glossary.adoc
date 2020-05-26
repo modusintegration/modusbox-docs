@@ -98,11 +98,14 @@ Analagous to a programming namespace.
 
 Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
 
-Routing Engine:: 
+Routing Engine::
+ifdef::camel[]
+Apache Camel 3.__x__ application
+endif::[]
 ifdef::mule[]
 Mule application
 endif::[]
-ifndef::mule[]
+ifdef::omni[]
 Application
 endif::[]
 that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
@@ -125,15 +128,15 @@ Standard PortX Field Format:: Describes fields for which valid values can includ
 
 Target Channel:: Type of <<C,Channel>> specific to the destination of a transmission. 
 
-Transaction:: The end-to-end processing of a single instance of a <<D,Document] from receipt at an <<E,Endpoint] all the way to the desired business service.  
+Transaction:: The end-to-end processing of a single instance of a <<D,Document>> from receipt at an <<E,Endpoint>> all the way to the desired business service.  
 A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
 
 Transaction Definition:: The full configuration that configures how a document is processed between two partners.
 
 Transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
 
-Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of xref:mule-user-guide[Mule Runtime] flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-integration-hub[PortX] (PortX)
+Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of  flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-integration-hub[PortX] (PortX)
 
 == Y
 
-YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its <<P,Partner>>s. You can see how this <<A,Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its <<P,Partner>>s. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].

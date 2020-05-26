@@ -1,10 +1,9 @@
 // Release Notes TOC File
 
 ** xref:integration-hub-release-notes.adoc[Integration Hub Release Notes]
+ifdef::mule[]
 ** xref:integration-hub-connector-release-notes.adoc[Integration Hub Connector Release Notes]
+** xref:as2-release-notes.adoc[AS2 Connector Release Notes]
+** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes]
 ** xref:jde-release-notes.adoc[JD Edwards Connector Release Notes]
-
-////
-# ** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes (for Mule 4)]
-# ** xref:as2-connector-release-notes.adoc[AS2 Connector Release Notes]
-////
+endif::mule[]

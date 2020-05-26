@@ -7,7 +7,7 @@ endif::[]
 ifdef::camel[]
 Apache Camel 3.__x__.
 endif::[]
-ifdef::other-esb[]
+ifdef::omni[]
 an Enterprise Service Bus (ESB). 
 endif::[]
 
@@ -17,26 +17,38 @@ PortX facilitates fast, secure, and reliable transaction processing without the 
 == PortX Components
 
 === xref:integration-hub:ROOT:index.adoc[Integration Hub]
-
+ifdef::mule[]
 ===  xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 === xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
-=== xref:jde:ROOT:jde.adoc[JD Edwards Connector]
 === xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
 ////
 === xref:x12-translator:ROOT:getting-started.adoc[X12 Translator]
 ////
+=== xref:jde:ROOT:jde.adoc[JD Edwards Connector]
+////
+=== xref:x12-translator:ROOT:getting-started.adoc[X12 Translator]
+////
+endif::mule[]
+
 === xref:release-notes:ROOT:release-notes.adoc[Release Notes]
 
 == Requirements
 
-ifdef::other-esb[]
+ifdef::camel[]
+=== ESB
+
+For information about products built to power integration on Apache Camel 3.__x__, see these libraries:
+
+* xref:integration-hub::index.adoc[Integration Hub]
+endif::[]
+ifdef::omni[]
 === ESB
 
 For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
 
 * xref:integration-hub::index.adoc[Integration Hub]
-* xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
 endif::[]
+
 ifdef::mule[]
 
 === Mulesoft
@@ -46,7 +58,6 @@ ifdef::mule[]
 * xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 * xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
 endif::[]
-
 
 == Getting Started
 

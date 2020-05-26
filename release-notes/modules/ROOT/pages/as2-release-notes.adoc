@@ -1,0 +1,20 @@
+= AS2 Connector Release Notes
+:keywords: as2, connector, b2b, release notes
+
+== Version 1.0.0 - Apr 20, 2020
+
+These release notes accompany the xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector User Guide].
+
+=== Compatibility
+
+Supported Mule Runtime Versions: Mule 4 and greater
+Tested against: 4.0.0 and 4.1.1
+
+=== New Features and Functionality
+
+* Send operation no longer requires a previous HTTP Request Configuration to be created 
+
+=== Known Issues
+
+* PortX support is not yet included
+* HTTPS support for asynchronous receipts is not yet supported

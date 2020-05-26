@@ -1,15 +1,7 @@
-
-
-== Get Started
-
 . xref:index.adoc#start-integration-hub[Start Integration Hub].
-The <<transaction-monitoring.adoc#img-transaction-monitoring, Transaction Monitoring Page>> appears.
+The <<index.adoc#img-integration-hub-start,Transaction Monitoring Page>> appears.
+. In the left-hand navigation pane, in the *CONFIGURATION* section, click *Partners and Applications*.
+The xref:img-partners-and-applications[] appears.
 
-. In the left-hand navigation pane, click *Configuration*. The <<partners-and-applications.adoc#partners-and-applications , Trading Partners Page>> appears.
-+
-To edit or add settings for your company, in the *Name* table,
-click the name of your company.
-+
-To edit or add settings for an existing trading partner, in the *Name* table, click the name of the partner.
-+
-The <<partner-configuration.adoc#img-partner-information, Partner Information Page>> appears.
+[[img-partners-and-applications]]
+image::partners-and-applications.png[img-partners-and-applications,title="Partners and Applications Page"]

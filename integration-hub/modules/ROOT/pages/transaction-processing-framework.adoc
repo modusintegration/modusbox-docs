@@ -20,21 +20,19 @@ The xref:glossary#secb[Transaction-processing solution] serves the following com
  
 == Routing Engine
 A key feature of the xref:glossary#sectb[Transaction-Processing Framework] is the Integration Hub xref:glossary#sectr[Routing Engine]. 
-
-
-
+The Routing Engine is 
 ifdef::mule[]
-Mule 
+a Mulesoft Enterprise Service Bus (ESB)
 endif::[]
-
 ifdef::camel[]
-Camel
+an Apache Camel 3.__x__
 endif::[]
-
+ifdef::omni[]
+an Enterprise Service Bus (ESB)
+endif::[]
 The xref:glossary#sectb[Routing Engine] processes a wide range of transmissions from different partners, dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
-
+application that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
 The xref:glossary#sectb[Routing Engine] allows non-programmers in your orginization such as data analysts to use IHub, and onboard new trading partner relationships by supporting their transaction configurations without having to develop, test, or deploy custom made components.
-
 For more detailed information about how IHub works, see  xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
 
 == Functional Architecture
@@ -137,7 +135,7 @@ Receive flows are activated dynamically by a Receive Endpoint listener flow whic
 ==== Transform Stage
 
 * Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
-* Does any necessary data translation, such as resolving partner values to your company's values using xref:lookup-tables.adoc[lookup tables], functions, and flows.
+* Does any necessary data translation, such as resolving partner values to your company's values using functions, and flows.
 * Uses the Integration Hub Connector to track the mapped, canonical version of the message.
 * Passes the updated message body to the next processing stage.
 

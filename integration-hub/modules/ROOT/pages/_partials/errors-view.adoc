@@ -1,7 +1,6 @@
 == Errors View
 :icons: font
 The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
-
 For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Examples].
 
 === Content
@@ -21,7 +20,8 @@ This pane is hidden when no error is selected. It contains:
 * Source ID icon:plus-square-o[role="blue"]
 
 ==== Action Icons
-* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
+
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
 * The blue file code icon icon:file-code-o[role="blue"] opens a detailed error message
 
 ==== Buttons
@@ -51,7 +51,7 @@ Error code::
 * 1- Duplicate
 * 2- FA
 * 3- TA
-* 4- Languishing
+* 4- Laguishing
 * 5- Exception
 * 6- Parse Error
 

@@ -3,7 +3,6 @@
 
 This section identifies examples in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:integration-hub.adoc[Integration Hub] for more information.
 
-
 == Replaying an Incomplete Transaction
 
 On the xref:transaction-monitoring.adoc[Transaction Monitor Page], the xref:central-pane-elements.adoc#transactions-view[Transactions View] includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:

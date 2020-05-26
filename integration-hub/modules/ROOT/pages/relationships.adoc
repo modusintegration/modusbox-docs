@@ -12,6 +12,8 @@ The <<img-relationships>> appears.
 
 image::relationships.png[img-relationships, title="Relationships Page"]
 
+////
+
 [start=4]
 
 . From this page, you can:
@@ -20,7 +22,6 @@ image::relationships.png[img-relationships, title="Relationships Page"]
 
 == Edit Relationship Settings
 
-////
 . On the <<img-relationships>>, click the value in the *Type* column of the identifier you want to edit.
 +
 The <<img-identifier-edit>> appears.
@@ -64,5 +65,4 @@ More identifier boxes appear. The specific boxes that appear depend on your choi
 The *Certificate Name*, *Expiration* and *Thumbprint* fields populate when an AS2 certificate is uploaded.
 . If this partner has a http://www.dnb.com/duns-number.html[unique nine-digit DUNS (data universal number system) number], enter it in the *DUNS Number* box.
 . Click *Save* to save your entries.
-////
 ////

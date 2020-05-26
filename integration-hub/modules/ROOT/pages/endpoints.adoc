@@ -27,16 +27,17 @@ The <<img-endpoint-settings-a>> appears. The settings that appear depend on the 
 [[img-endpoint-settings-a]]
 image::endpoint-settings.png[img-endpoint-settings, title="Endpoint Page"]
 
+
 . To edit the Endpoint Name, Protocol, or Type, go to xref:choose[Choose Endpoint Name, Protocol, and Type].
 +
-To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings
->>.
+To edit settings specific to the existing Name, Protocol, and Type, go to the appropriate Protocol-Type combination in <<Protocol/Type-Specific Endpoint Settings>>.
+
 
 == Add a New Endpoint
 
 . On the <<img-endpoints>>, click *New*.
 +
-The <<img-endpoint-add>> appears.
+The Add New Endpoint Page appears.
 +
 [[img-endpoint-add]]
 image::endpoint.png[img-endpoint-add, title="Add New Endpoint Page"]
@@ -47,9 +48,7 @@ NOTE: If you are working with other partners, you can change an existing endpoin
 
 === [[choose]]Choose Endpoint Name, Protocol and Type
 
-//// 
 Commented out endpoint-add image? It shows up in Dan's reports if commented out? kris 7/2/2017
-////
 
 . On the <<img-endpoint-add>>, enter the appropriate settings.
 +
@@ -122,7 +121,6 @@ None
 
 |===
 +
-////
 When you have entered settings for *Name*, *Protocol* and *Type*, additional settings specific to the protocol-type combination appear; the <<img-endpoint-add>> becomes the <<img-endpoint-settings-b>>. For  information about the additional settings, go to the appropriate Protocol-Type combination in <<To Enter Protocol/Type-Specific Endpoint Settings>>.
 +
 [[img-endpoint-settings-b]]
@@ -147,10 +145,12 @@ Choose the section that corresponds to the Protocol-Type of the Endpoint for whi
 * <<HTTP Receive Settings>>
 * <<JMS Send Settings>>
 * <<JMS Receive Settings>>
+////
 * <<SMTP Send Settings>>
 * <<POP3 Receive Settings>>
 * <<IMAP Receive Settings>>
 * <<RNIF Settings>>
+////
 
 === To Save Endpoint Settings
 
@@ -222,6 +222,7 @@ include::{partialsdir}/endpoint-http-send.adoc[]
 include::{partialsdir}/endpoint-http-receive.adoc[]
 include::{partialsdir}/endpoint-jms-send.adoc[]
 include::{partialsdir}/endpoint-jms-receive.adoc[]
+////
 include::{partialsdir}/endpoint-smtp-send.adoc[]
 include::{partialsdir}/endpoint-pop3-receive.adoc[]
 include::{partialsdir}/endpoint-imap-receive.adoc[]

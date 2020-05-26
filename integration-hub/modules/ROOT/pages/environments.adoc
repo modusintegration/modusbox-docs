@@ -1,4 +1,5 @@
 = Environments
+
 include::{partialsdir}/edit-settings.adoc[]
 [start=3]
 
@@ -9,6 +10,8 @@ The xref:img-environments[] appears.
 [[img-environments]]
 image::environments.png[img-environments,title="Environments Page"]
 
+ifdef::mule[]
 == Get Environment Information
 
 The information on the <<img-environments>> is required when using xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector].
+ifndef::mule[]
