@@ -41,9 +41,6 @@
 *** xref:channels.adoc[Channels]
 *** xref:routes.adoc[Routes]
 *** xref:partner-conversations.adoc[Partner Conversations]
-*** xref:rosettanet-pips.adoc[RosettaNet PIPs]
-*** xref:rosettanet-agreements.adoc[RosettaNet Agreements]
-
 **  xref:administration.adoc[Administration]
 *** xref:environments.adoc[Environments]
 *** xref:error-codes.adoc[Error Codes]
