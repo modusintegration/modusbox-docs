@@ -1,0 +1,47 @@
+
+== Replaying an Incomplete Transaction
+
+On the Transaction Monitor Page, the xref:central-pane-elements.adoc#transactions-view[Transactions View] includes a table in which each row corresponds to a transaction.  The first column shows transaction completion status, as follows:
+
+Green checkmark:: Indicates a complete transaction.
+Red exclamation point (*!*):: Indicates a transaction has one or more errors that prevented completion.
+
+After you identify and fix the cause of the error that prevented the transaction from completing, you can re-run the transaction.
+
+Possible errors include:
+
+* Server down
+* Dependency (for example, a map or code element) has changed
+* Required data is absent
+
+NOTE: Only replay transactions after resolving the issue or issues that caused the error.
+
+=== To Replay a Transaction
+
+. Click the row corresponding to the transaction you want to replay.
++
+NOTE: For a transaction to replay, the third (Replay Status) column must be blank or contain a gray partial circle, but must not contain a blue partial circle.
++
+A blue *Replay* button appears in the top xref:central-pane-elements.adoc#dashboard[Dashboard].
++
+. Click the blue *Replay* button.
++
+The button becomes unclickable, and a message that the transaction is being replayed appears in its place.
++
+Once the transaction has been replayed, the blue replay circle appears in the Replay Status Column of the transaction that you replayed.
++
+. To see if the replayed transaction succeeded or failed, click the replayed transaction.
++
+. In the xref:central-pane-elements.adoc#transaction-detail-pane[Transaction Detail Pane], a link to *view replays* appears.
++
+This automatically filters the content area by *Transaction ID*, so that only transactions that are replays of the original transaction appear.
++
+If the replayed transaction fails again, repeat this process until the replay completes.
++
+You can always view a list of all of your transactions that have been replayed from a given original transaction, by clicking the *view replays* link in the Transaction Detail Pane for any transaction in which the blue replay circle appears in the Replay Status Column.
++
+When viewing a replayed transaction, you can click the *view original* button in the Detail Pane to return to the first transaction.
++
+Once the replay succeeds, a green check appears next to the replayed transaction.
+
+NOTE: You can continue replaying the transaction, with the same replay button, but you will be alerted with a warning before you can continue. This is to prevent unnecessary replays from happening.
