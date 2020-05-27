@@ -20,9 +20,10 @@ the Routing Engine to Tracking Data Storage.
 The customer then uses xref:index.adoc[Integration Hub] to request and view metadata and payload data, a process which includes the Trading Partner Management API] and Tracking Data Storage. xref:img-tracking-storage-and-retrieval[] illustrates this process
 endif::mule[]
 
-
+////
 [[img-tracking-storage-and-retrieval]]
 image::tracking-storage-and-retrieval.png[img-tracking-storage-and-retrieval,title="Tracking: Storage and Retrieval"]
+////
 
 == Payload Tracking
 
