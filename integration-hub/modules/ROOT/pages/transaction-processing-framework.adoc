@@ -1,9 +1,25 @@
 = Transaction-Processing Framework
 
-A xref:glossary#sectb[transaction-processing solution] serves as a routing and translation layer between internal xref:glossary#a[Application]s
- and the formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies. Because a company cannot typically dictate that all its trading partners adhere to a single configuration, it is often necessary to develop custom solutions for each trading partner. When custom software development is required for each trading partner, the effort and time required to onboard new trading partners increases dramatically, thereby limiting the business relationships a company can pursue.
+Typacally, businesses find it necessary to develop custom B2B transaction-processing configuraitons for their trading partners. When develpoing custom configurations, the cost, effort, and time required to onboard new trading partners increases, thereby limiting the business relationships your company can pursue. The following explains how the PortX Transaction-Processing Framework works to dynamically process B2B transactions across a multitude of common formats and protocols.
 
-A significant feature of xref:glossary#sectb[_PortX Transaction Processing Framework_] is the Integration Hub xref:glossary#sectr[Routing Engine]. 
+== Transaction-Processing Solution
+
+Portx Integration Hub includes a  xref:glossary#sectb[Transaction-processing solution] which serves as a routing and translation layer between your internal xref:glossary#a[Application]s
+ and the following common formats, along with others.
+ 
+ * X12 
+ * EDIFACT 
+ * XML 
+ * CSV 
+ 
+ 
+The xref:glossary#secb[Transaction-processing solution] serves the following common transport protocols, along with others.
+ 
+ * AS2
+ * FTP/S
+ 
+== Routing Engine
+A key feature of the xref:glossary#sectb[Transaction-Processing Framework] is the Integration Hub xref:glossary#sectr[Routing Engine]. 
 The Routing Engine is 
 ifdef::mule[]
 a Mulesoft Enterprise Service Bus (ESB)
@@ -14,16 +30,14 @@ endif::[]
 ifdef::omni[]
 an Enterprise Service Bus (ESB)
 endif::[]
-application that
-can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
-
-Thus, non-programmers such as data analysts can use IHub to onboard new trading partner relationships and support new transaction types without having to develop, test, or deploy new components.
-
-This page identifies high-level framework components and their roles in end-to-end transaction processing. For more detailed information about how IHub works, see  xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
+The xref:glossary#sectb[Routing Engine] processes a wide range of transmissions from different partners, dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
+application that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[Integration Hub].
+The xref:glossary#sectb[Routing Engine] allows non-programmers in your orginization such as data analysts to use IHub, and onboard new trading partner relationships by supporting their transaction configurations without having to develop, test, or deploy custom made components.
+For more detailed information about how IHub works, see  xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
 
 == Functional Architecture
 
-B2B transaction processing typically proceeds through some combination of the stages shown in xref:img-functional-architecture[].
+B2B transaction processing proceeds through a combination of the stages shown in xref:img-functional-architecture[].
 
 NOTE: Processing stages and their sequence may vary from implementation to implementation.
 
@@ -31,10 +45,11 @@ NOTE: Processing stages and their sequence may vary from implementation to imple
 image::functional-architecture.png[img-functional-architecture,title="Functional Architecture"]
 === Receive
 
-Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints.adoc[Endpoint] configured to receive the message.
+Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints.adoc[Endpoint] that is configured to receive the message.
 
 === Resolve
-Using data that may be inside a document or in incoming metadata (such as HTTP headers or filenames), this stage identifies the partner and the transaction type, then uses these to retrieve corresponding processing details from IHub. These details include:
+
+This stage identifies the partner and the transaction type using data inside a document or in the incoming metadata (such as HTTP headers or filenames), then retrieves corresponding processing details from IHub. These details include:
 
 * xref:endpoints.adoc[Endpoint] to which the transformed message is to be delivered
 * Schema to use for validation
@@ -42,18 +57,19 @@ Using data that may be inside a document or in incoming metadata (such as HTTP h
 
 === Transform
 
-Each incoming message is translated into a message format appropriate for the target service being invoked. This translation is performed dynamically using a xref:maps.adoc[Map] retrieved from the xref:tpmapi[Trading Partner Management (TPM) API].
+This stage translates each message into the appropriate format for the target service being invoked. This translation is performed dynamically by retriving a xref:maps.adoc[Map] from the xref:tpmapi[Trading Partner Management (TPM) API].
 
 === Parse and Validate
-Makes sure the required data is present in the required format. This validation is performed dynamically using a Schema retrieved from the xref:tpmapi[TPM API].
+
+This stage confirms that incoming data is configured in the correct format. Validation is then performed using a Schema retrieved from the xref:tpmapi[TPM API].
 
 === Deliver
-Using endpoint configuration data retrieved from the xref:tpmapi[TPM API] the flow dynamically delivers the message to the Business Service endpoint address.
+
+This stage uses Endpoint configuration data retrieved from the xref:tpmapi[TPM API] to deliver the message to an Endpoint address.
 
 == Technical Architecture
 
-xref:img-transaction-processing-framework[] shows the primary components of the framework and how these components interact to process B2B transactions.
-Component definitions follow the diagram.
+The following xref:img-transaction-processing-framework[] shows the primary components and how these components interact to process B2B transactions.
 
 
 [[img-transaction-processing-framework]]
@@ -63,18 +79,18 @@ image::transaction-processing-framework.png[img-transaction-processing-framework
 
 ==== PortX
 xref:portx:ROOT:index.adoc[PortX] (PortX)
-is the B2B Transaction Processing Framework user interface, enabling you to:
+is the B2B Transaction Processing user interface, enabling you to:
 
 * xref:partner-configuration[Configure how B2B transactions are processed]
 * xref:transaction-monitoring[Monitor and manage processed transactions]
 
 [[tpmapi]]
-===== Trading Partner Management (TPM) API
+==== Trading Partner Management (TPM) API
 
-The Trading Partner Management (TPM) API manages storage and retrieval of configuration data for partners, including the details for processing their transactions.
+The Trading Partner Management (TPM) API manages the storage and retrieval of configuration data for your trading partners, including the details for processing transactions.
 
-===== Tracking API
-The Tracking API manages storage and retrieval of metadata from processed transactions. +
+==== Tracking API
+The Tracking API manages the storage and retrieval of metadata from your processed transactions. +
 For example:
 
 * Sender
@@ -86,7 +102,7 @@ For example:
 This includes, but is not limited to correlation logic for matching acknowledgements to original messages and identifying duplicate messages.
 
 ==== Integration Hub Connector
-The integration hub Connector runs inside the ESB and coordinates all interaction with the PortX APIs (TPM and Tracking).
+The integration Hub Connector runs inside an ESB and coordinates all interactions that ESB has with PortX APIs' TPM and Tracking.
 
 ////
 ==== Object Store
