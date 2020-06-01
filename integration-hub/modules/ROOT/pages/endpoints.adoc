@@ -38,10 +38,10 @@ To edit settings specific to the existing Name, Protocol, and Type, go to the ap
 . On the <<img-endpoints>>, click *New*.
 +
 The Add New Endpoint Page appears.
-////
+
 [[img-endpoint-add]]
-image::endpoint.png[img-endpoint-add, title="Add New Endpoint Page"]
-////
+image::endpoint-add.png[img-endpoint-add, title="Add New Endpoint Page"]
+
 . Go to xref:choose[Choose Endpoint Name, Protocol, and Type].
 +
 NOTE: If you are working with other partners, you can change an existing endpoint, but you cannot add a new endpoint.
@@ -128,7 +128,7 @@ image::endpoint-settings.png[img-endpoint-settings, title="Endpoint Page"]
 
 For a given endpoint, the values you select for *Protocol* and *Type* determine which additional settings appear. These additional settings are a subset of the settings provided in the corresponding
 ifdef::mule[]
-xref:mule-user-guide/v/3.8/anypoint-connectors[Anypoint Connector].
+https://docs.mulesoft.com/mule-runtime/3.9/http-request-connector[Anypoint Connector].
 endif::[]
 ifndef::mule[]
 connector.
