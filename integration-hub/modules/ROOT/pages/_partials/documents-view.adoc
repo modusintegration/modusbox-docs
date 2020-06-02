@@ -3,6 +3,8 @@
 The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor].
 For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Examples].
 
+[[img-documents-view]]
+image::documents-view.png[img-documents-view,title="Documents View"]
 
 === Content
 Each row has 6 columns:
