@@ -24,7 +24,7 @@ This column contains the following symbols: icon:fa fa-clock-o[role="red"] icon:
 * A blue partial circle with an arrowhead pointing right, icon:repeat[role="blue"] means that the transaction has been replayed.
 * A gray partial circle with an arrowhead pointing left icon:undo[], means that the transaction is a replay of another transaction.
 
-See xref:replaying-an-incomplete-transaction.adoc[Replaying an Incomplete Transaction] for information on replaying transactions.
+See xref:tracking-examples.adoc#Replaying-an-Incomplete-Transaction[Replaying an Incomplete Transaction] for information on replaying transactions.
 
 Column 4 (Proceeding Transaction Type)::
 This column contains symbols indicating the preceding transaction type.
@@ -90,7 +90,7 @@ If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View or
 
 ** Additionally you can copy the Original Transaction ID by clicking the blue copy icon:plus-square-o[role="blue"] action icon next to it.
 
-See xref:replaying-an-incomplete-transaction.adoc[Replaying an Incomplete Transaction] for information on replaying transactions.
+See xref:tracking-examples.adoc#Replaying-an-Incomplete-Transaction[Replaying an Incomplete Transaction] for information on replaying transactions.
 
 === Filters
 
