@@ -1,7 +1,7 @@
 == HTTP Send Settings
 
 ifdef::mule[]
-These settings are a subset of those in link:/mule-user-guide/v/3.9/http-request-connector[HTTP Request Connector].
+These settings are a subset of those in https://docs.mulesoft.com/mule-user-guide/v/3.9/http-request-connector[HTTP Request Connector].
 endif::[]
 
 === Global Config
