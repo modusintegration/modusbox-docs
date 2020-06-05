@@ -2,7 +2,7 @@
 
 ifdef::mule[]
 These settings are a subset of those in
-http://docs.mulesoft.com/mule-user-guide/v/3.9/http-listener-connector[HTTP Listener Connector].
+http://mule-user-guide/v/3.9/http-listener-connector[HTTP Listener Connector].
 endif::[]
 
 
