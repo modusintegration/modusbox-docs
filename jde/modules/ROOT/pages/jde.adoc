@@ -1,16 +1,18 @@
-= *PortX JD Edwards Connector for Mule 4 - User Guide*
+= PortX JD Edwards Connector for Mule 4
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
 :toclevels: 2
 
+////
 toc::[]
-
-== *Introduction*
+////
+== Introduction
 
 The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution, and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
 
-In this guide you will accomplish the following scenarios:
+////
+This User Guide provides information to accomplish the following scenarios.
 
 * Log into _JD Edwards EnterpriseOne™_
 * Invoke a Business Function (BSFN) on the server by passing its parameters.
@@ -20,8 +22,9 @@ In this guide you will accomplish the following scenarios:
 * Poll Events.
 * Poll EDI Events.
 * Log out.
+////
+The _PortX_ _JDE Connector_ allows you to discover functions by name, providing you with full access to all Business Function signatures.
 
-With the _PortX_ _JDE Connector_ you can discover functions by name, providing you with full access to all Business Function signatures.
 The _PortX_ _JDE Connector_ manages a cache repository for all functional metadata used at least once.
 
 The results of a Function Call are injected into the flow as a Map containing key-value pairs with the invocation’s output values. This approach gives you the freedom of choice to construct complex flows and manage custom exception strategies.
@@ -31,13 +34,12 @@ The results of a Function Call are injected into the flow as a Map containing ke
 A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, _Mule 4_, and the Mule https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
 === Requirements
-
-* Mule 4.1 server Runtime or higher
+* Mule 4.1 server runtime, or higher.
 * https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java JDK 1.8]
 * https://www.mulesoft.com/lp/dl/studio[AnyPoint Studio™ 7.x or higher]
 * https://maven.apache.org/download.cgi[Maven] 3.3.9 or higher (do not use the embedded Maven for AnyPoint Studio)
 ** For an easy installation tutorial see https://www.mkyong.com/maven/how-to-install-maven-in-windows/[How to install Maven for Windows]
-* Access to your _JD Edwards EnterpriseOne™_ installation java libraries
+* Access to your _JD Edwards EnterpriseOne™_ installation java libraries.
 
 === Configuration Settings
 * As the connector is based on Oracle’s _JD Edwards EnterpriseOne™_ interoperability solution, the below settings must be reviewed/changed.
@@ -51,14 +53,13 @@ A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, _Mule 4_, and
 This configuration is done by the CNC Administrator for your _JD Edwards EnterpriseOne™_ system. For more information, refer to the https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_]
 
 === Compatibility
-
 Oracle’s _JD Edwards EnterpriseOne™_ Tools Release 8.98 Update 4 and onwards.
 
-== *Preliminary Setup*
+== Preliminary Setup
 
-In addition to the requirements listed in the Prerequisites section, a Library Bundle is required to establish a connection to the JDE Enterprise Server. 
+In addition to the <<Prerequisites>> and <<Requirements>>, a Library Bundle is required to establish a connection to the JDE Enterprise Server. 
 
-NOTE: This bundle can be reused in other applications and only needs to be created once.
+NOTE: This bundle can be reused in other applications. It only needs to be created once.
 
 This adapter is a bundle of JAR files that comes with the _JD Edwards EnterpriseOne_™ distribution.
 
@@ -66,12 +67,12 @@ This adapter is a bundle of JAR files that comes with the _JD Edwards Enterprise
 
 The following steps illustrate how to create the Library Bundle connector component. This bundle is included in the flow that connects with the JDE Enterprise Server for _your_ specific _JD Edwards EnterpriseOne_™ Tools Release.
 
-The _PortX JDE Connector_ uses the libraries of the local JDE Tools release. In order to simplify dependency management for the Mule 4 application, you need to package JDE libraries together into a library bundle using the provided _JDE Libraries Bundle Builder Tool._
+The _PortX JDE Connector_ uses the libraries of youe local JDE Tools release. In order to simplify dependency management for the Mule 4 application, you need to package JDE libraries together into a library bundle using the provided _JDE Libraries Bundle Builder Tool._
 
 
 . Download the https://portx.jfrog.io/portx/tools/JDELibrariesBundleBuilderTool.zip[JDE Libraries bundle builder tool] using your username and password as credentials
 . Execute _java -jar JDELibrariesBundleBuilderTool-1.0.0.jar_ with the following parameters (from terminal / command prompt)
-. The following parameters apply
+. The following parameters apply:
 [loweralpha]
 .. --_destDir_ for the path where the bundle will be created.
 .. --_jdbcDriver_ for the full path and filename of the JDBC Driver that applies to you _JD Edwards EnterpriseOne_™ installation.
@@ -87,20 +88,21 @@ NOTE: All libraries in this path are added to the library. It is recommended tha
 
 See <<Appendix A>> for a detailed list of files required per your Tools Release.
 
-Once completed the resulting bundle will be located at, (following the sample above) */tmp/jde-lib-bundle-1.0.0.jar*
+Once completed the resulting bundle is located at, (following the sample above) _/tmp/jde-lib-bundle-1.0.0.jar_.
 
 === Install JDE Libraries Bundle into Maven Repository
 
 Execute the following command to make the Library Bundle available in your Maven repository.
+
 [source]
-_mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dclassifier=mule-4 -Dpackaging=jar_
+mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dclassifier=mule-4 -Dpackaging=jar
 
 === Preparing Maven for PortX - JDE Connector
 
-. Update your settings.xml file (~*/.m2* path)
+. Update your *Settings.xml* file (~*/.m2* path)
 [loweralpha]
 .. In the servers section, add the following.
-.. Replace the username and password, provided to you via email.
+.. Replace the *Username* and *Password*, provided to you via email.
 
 [source,xml]
 ----
@@ -113,7 +115,7 @@ _mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jde
 
 === Add PortX JDE License to Mule Runtime
 
-_PortX JDE Connector_ license can be added one of two ways.
+Your  _PortX JDE Connector_ license can be added one of two ways.
 
 * Copy the license file in the project folder *src/main/resources*.
 * Copy the license file to Mule installation folder *mule/conf*.
@@ -225,9 +227,9 @@ XMLKernelReply7=1
 
 === Enterprise Server Connection Considerations
 
-Enable Predefined JDENET Ports in *JDE.INI*::
+Enable Predefined *JDENET* Ports in *JDE.INI*.
 
-* When there is a firewall between the Mulesoft ESB and the Enterprise Server, set the *PredfinedJDENETPorts* setting to *1* in the *JDE.INI* file of the Enterprise Server.
+When there is a firewall between the Mulesoft ESB and the Enterprise Server, set the *PredfinedJDENETPorts* setting to *1* in the *JDE.INI* file of the Enterprise Server.
 
 This setting enables the *JDENET* network process to use a predefined range of *TCP/IP* ports. This port range starts at the port number that is specified by *serviceNameListen* and ends at the port that is calculated by the equation *serviceNameListen = maxNetProcesses - 1*. 
 
@@ -246,11 +248,11 @@ NOTE: It is recommended that these files are copied from the server to the devel
 * jdelog.properties
 * tnsnames.ora _(for Oracle RDBMS based installations only)_
 
-These files are distributed with both _Development Clients_ and/or _Enterprise Server_ modules. Additional configuration requirements per file are :
+These files are distributed with both Development Clients and/or Enterprise Server modules. 
 
-*_[.underline]#JDEINTEROP.INI#_*
+There are additional configurations needed inside *JDEINTEROP.INI*. 
 
-There are addtional configurations needed inside *JDEINTEROP.INI*. You need to add the following:
+Add the following:
 
 *[EVENT]*
 |===
@@ -268,7 +270,7 @@ There are addtional configurations needed inside *JDEINTEROP.INI*. You need to a
 |(Optional) This is the UBE used to validate the connection.
 |===
 
-eg.
+Eample:
 [source,ini]
 ----
 [EVENT]
@@ -277,9 +279,11 @@ specialEDITables=<F470462>
 validateEnterpriseServicesWith=BOTH
 validateEnterpriseServicesUBEName=R0008P_XJDE0001
 ----
-If you are required to run the application on CloudHub, you need to add the section *OCM_SERVERS* with the servers that the JDE Connector uses in the connection. The JDE Servers *Names* are in the column *OMSRVR* of *F98611* table. 
+If you are required to run the application on _CloudHub_, you need to add the section *OCM_SERVERS* with the servers that the _JDE Connector_ uses in the connection. The JDE Servers *Names* are in the column *OMSRVR* of *F98611* table. 
 
-To add these servers on the *OCM_SERVERS* section, follow this format: *JDE Server Name = FQDN or IP*
+To add these servers on the *OCM_SERVERS* section, follow this format: 
+
+* JDE Server Name = FQDN or IP
 
 *[OCM_SERVERS]*
 |===
@@ -353,7 +357,7 @@ Use the connector to:
 * Get Outbound Events from a JD Edwards Application.
 * Get EDI Event from EDI Application.
 
-=== Creating a new Mule Project 
+=== Creating a New Mule Project 
 
 Create a new Mule Project with Mule Server 4.1.1 EE or greater as runtime.
 
@@ -417,7 +421,7 @@ image:demo_getting_started/image2_getting_started.png[image,width=321,height=423
 Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folders within the project:
 
 * Project *Root*
-* *_src/main/resources_*
+* _src/main/resources_
 
 NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
@@ -505,7 +509,7 @@ The following message appears.
 
 image:demo_getting_started/image8_getting_started.png[image,width=513,height=135]
 
-=== Creating a HTTP Listener for your flow
+=== Creating a HTTP Listener for Your Flow
 
 This use case example creates a simple flow to get the address book name from the *Address Book table (A/B)*, invoking the *Master Business Function (MBF)* on _Oracle’s JDE EnterpriseOne_™ Server.
 
@@ -656,15 +660,13 @@ image:demo_getting_started/image25_getting_started.png[image,width=567,height=37
 
 image:demo_getting_started/image26_getting_started.png[image,width=601,height=88]
 
-== _PortX JDE Connector_ – Demo Applications
+== _PortX JDE Connector_ – Applications
 
 === Example Project
 
 You can download the example source that was created in the Getting Started Guide from
 
 === Additional Demos
-
-The following additional demo applications have step by step guides available for download, and cover all basic operations:
 
 * <<jde.adoc#,Invoke a Business Function with Transaction Processing>>
 * <<demo_ube.adoc#,Submit a Batch Process>> 
@@ -677,7 +679,7 @@ The following additional demo applications have step by step guides available fo
 
 Creating a Support User::
 
-To log a support ticket, a support portal user account is required. If you do not already have one, you can follow these steps to create a new user.
+To log a support ticket, a support portal user account is required. If you do not already have one, follow these steps to create a new user.
 
 . In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer 
 
@@ -705,7 +707,8 @@ image:demo_getting_started/support_newuser03.png[image,width=303,height=824]
 
 [start=5]
 
-. Enter your *Full Name*, choose a *Password*, and click *Sign Up*.
+. Enter your *Full Name*, and choose a *Password*. 
+. Click *Sign Up*.
 
 image:demo_getting_started/support_newuser04.png[image,width=449,height=401]
 
@@ -1018,7 +1021,7 @@ There are four common parameters used to invoke a Business Function:
 
 In Mule 4, all thrown errors  are displayed in the *Type* selection of the Error Handler. Select the errors you want to handle, and process them. 
 
-NOTE: All JD Edwards related errors will start with *JDE:*
+NOTE: All JD Edwards related errors start with *JDE:*
 
 image:demo_getting_started/image1_ctl.png[image,width=563,height=446]
 
@@ -1088,9 +1091,16 @@ This is an example of *CallObjectErrorItem* object:
 * To override the default precedence you need to use parenthesis as
 ** *C1* AND (*C2* OR *C3*)
 ** The sentence only accepts one level of parenthesis.
-*** For example, this is a valid sentence because the maximum level of Parenthesis opened is 1. _C1 AND (C2 OR C3) AND (C4 OR C5)_.
 
-This is an invalid sentences because the maximum level of Parenthesis opened is 2. _C1 AND (C2 OR (C3 AND C4))_
+*Structure*:
+
+Valid Sentence (maximum level of Parenthesis opened is 1).
+
+_C1 AND (C2 OR C3) AND (C4 OR C5)_.
+
+Invalid Sentences (the maximum level of Parenthesis opened is 2).
+
+_C1 AND (C2 OR (C3 AND C4))_
 
 Examples:
 

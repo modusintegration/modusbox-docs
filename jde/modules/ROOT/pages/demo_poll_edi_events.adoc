@@ -6,31 +6,39 @@
 
 toc::[]
 
-== *Introduction*
+== Introduction
 
-The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution to a broader extent, and uses the power of Oracle’s Java Dynamic Connector to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
+The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
 
-After reading this guide, you should be able to poll for EDI events created on the EnterpriseOne server
+The following guide explains how to poll for EDI Events created on the EnterpriseOne server.
 
-At design time, the _PortX JDE Connector_ allows you to discover functions by name providing full access to all Business Function signatures. Given that discovery is a heavy duty process, the Connector manages a cache repository for all function’s metadata used at least once.
+The _PortX JDE Connector_ allows you to discover functions by name, providing full access to all Business Function signatures. The Connector manages a cache repository for all function’s metadata used at least once.
 
-The results of a function call will be injected into the flow as a Map containing key-value pairs with the invocation’s output values. This approach gives the end user freedom of choice to construct complex flows and manage custom exception strategies.
+The results of a function call are injected into the flow as a Map containing key-value pairs with the invocation’s output values. This approach allows you to construct complex flows and manage custom exception strategies.
+
 
 Furthermore, you can have all functions in the flow, processing within the same transaction, and commit or rollback all changes.
 
 === Prerequisites
 
-This document assumes that you are familiar with Oracle’s _JD Edwards EnterpriseOne™_ basics, Mule the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface.
+A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
 === Requirements
 
-*Review the* link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
+Review the link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
 
-It’s important to read the guide: *JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide*
+See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information.
 
-JDE outbound transactions requires that you set a _Processing Option_ specifying the EDI information.
+JDE outbound transactions require that you set a _Processing Option_ specifying EDI information.
 
-For example, generate an Order Acknowledgment (855/ORDSP) document, it is necessary to setup it’s processing options to enable interoperability. To do this you will need to log into JDE, and change the processing options for this application. Firstly, we need to determine which version of the Print Invoices (R42565) is being used. To do this, we will need to review the processing options.
+The following is an example:
+
+To Generate an Order Acknowledgment (*855/ORDSP*) document, you  must setup its processing options to enable interoperability. 
+
+. Log into JDE, and change the processing options for this application. 
+
+. Determine which version of the Print Invoices (*R42565*) is being used. 
+. Review the processing options.
 
 image:demo_poll_edi_events/image1_demo_poll_edi_events.png[image,width=482,height=437]
 
@@ -38,7 +46,7 @@ image:demo_poll_edi_events/image2_demo_poll_edi_events.png[image,width=478,heigh
 
 The last configuration that is needed is inform to JDE connector the EDI outbound:
 
-Using *_Flat File Cross-Reference_ (_P47002_)* form *_Work With Flat File Cross-Reference_* adds the following record:
+. Using Flat File Cross-Reference (*P47002*) form, the *Work With Flat File Cross-Reference* adds the following record:
 
 image:demo_poll_edi_events/image3_demo_poll_edi_events.png[image,width=601,height=312]
 
@@ -52,21 +60,21 @@ image:demo_poll_edi_events/image3_demo_poll_edi_events.png[image,width=601,heigh
 |F4715 |8 |Detail Text
 |===
 
-For more on setting transaction types, please refer to the _Oracle JD Edwards EnterpriseOne_ documentation
+Refer to the link:https://docs.oracle.com/cd/E64610_01/index.htm[_Oracle JD Edwards EnterpriseOne_] documentation for more information.
 
-== *Demo – Poll EDI Events*
+== Poll EDI Events
 
-NOTE: It is recommended that you update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
+NOTE: Update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
 
-=== Creating a new Mule Project 
+=== Creating a New Mule Project 
 
-Create a new Mule Project with Mule Server 4.1.1 EE or greater as runtime:
+Create a new Mule project with Mule Server 4.1.1 EE or greater as runtime:
 
 image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,height=463]
 
 === Project Dependencies
 
-In you pom.xml, add the following to you _repositories_ section :
+. In your *pom.xml* file, add the following to you *repositories section*.
 [source,xml]
 ----
 <repository>
@@ -75,8 +83,8 @@ In you pom.xml, add the following to you _repositories_ section :
     <url>https://portx.jfrog.io/portx/portx-releases</url>
 </repository>
 ----
-
-Add the following to you _dependencies_ section :
+[start=2]
+. Add the following to you *dependencies* section.
 
 [source,xml]
 ----
@@ -93,8 +101,9 @@ Add the following to you _dependencies_ section :
     <classifier>mule-4</classifier>
 </dependency>
 ----
+[start=3]
 
-Add or update the following to you _plugins_ section :
+. Add or update the following to you *plugins* section.
 [source,xml]
 ----
 <plugin>
@@ -115,16 +124,16 @@ Add or update the following to you _plugins_ section :
 
 === Required files
 
-Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folders within the project:
+Copy your _JD Edwards EntrpriseOne™_ configuration files to the following folders within your project.
 
-* Project Root
-* _src/main/resources_
+* Project *Root*
+* *_src/main/resources_*
 
-NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
+NOTE: If the requirement is to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
 image:demo_poll_edi_events/image5_demo_poll_edi_events.png[image,width=250,height=446]
 
-The _mule-arifact.json_ file needs to be updated per environment as below
+The *mule-arifact.json* file needs to be updated per environment as shown below.
 
 [source,json]
 ----
@@ -155,7 +164,7 @@ The _mule-arifact.json_ file needs to be updated per environment as below
 
 === Other Considerations
 
-To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the _jdelog.properties_, you may add the following _Async Loggers_ to _log4j2.xml_ file.
+To redirect the _JD Edwards EntrpriseOne™_ Logger to the Mule Logger (to see JDE activity in both consoles and JDE files defined in the *jdelog.properties*), you may add the following _Async Loggers_ to *log4j2.xml* file.
 
 [source,xml]
 <!-- JDE Connector wire logging -->
@@ -176,176 +185,254 @@ _mvn clean install_
 
 === Configure the Global Element
 
-To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector (read more about Global Elements).
+To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
 
-Open the Mule flow for the project, and select the Global Elements tab at the bottom of the Editor Window.
+. Open the Mule flow for the project, and select the *Global Elements* tab at the bottom of the Editor Window.
 
 image:demo_poll_edi_events/image6_demo_poll_edi_events.png[image,width=515,height=273]
 
-Click Create
+[start=2]
+
+. Click *Create*.
 
 image:demo_poll_edi_events/image7_demo_poll_edi_events.png[image,width=511,height=312]
 
-Type “JDE” in the filter edit box, and select “JDE Config”. Click OK
+[start=3]
+
+. Type *JDE* in the filter edit box, and select *JDE Config*.
+. Click *OK*.
 
 image:demo_poll_edi_events/image8_demo_poll_edi_events.png[image,width=386,height=390]
 
-On the _General_ tab, enter the required credential and environment
+[start=4]
+
+. On the *General* tab, enter the required credential and environment.
 
 image:demo_poll_edi_events/image9_demo_poll_edi_events.png[image,width=378,height=383]
 
-Click _Test Connection._ You should see the following message appear.
+[start=5]
+
+. Click *Test Connection*.
+
+The following message appears.
 
 image:demo_poll_edi_events/image10_demo_poll_edi_events.png[image,width=513,height=135]
 
-You are now ready to start using the _PortX JDE Connector_ in your project
+You are now ready to start using the _PortX JDE Connector_ in your project.
 
-=== Creating a Scheduler for your flow
+=== Creating a Scheduler for Your Flow
 
-*NOTE :* This use case example will create a simple flow to poll for outbound events coming from an application that uses a _*Print Invoices (R42565)*_ to generate a Order Acknowledgement (855/ORDSP) EDI document, and write these to files (Please check the requirements section earlier in the document for setup details)
+This use case example create a simple flow to poll for outbound events coming from an application that uses *Print Invoices* (*R42565*) to generate a *Order Acknowledgement (855/ORDSP)* EDI document, and write these to files.
 
-Go back to the _Message Flow_ tab
+See <<Requirements>> setup details.
+
+. Go to the *Message Flow* tab.
 
 image:demo_poll_edi_events/image11_demo_poll_edi_events.png[image,width=601,height=457]
 
-From the Mule Palette (typically top right), select _Scheduler_, and drag it to the canvas
+[start=2]
+
+. From the Mule Palette (top right), select *Scheduler*, and drag it to the canvas.
 
 image:demo_poll_edi_events/image12_demo_poll_edi_events.png[image,width=295,height=278]
 
-Select the _Scheduler_ component from the canvas, and inspect the properties window, and change the Frequency to 2 Minutes
+[start=2]
+
+. Select the *Scheduler* component from the canvas, and inspect the properties window, and change the Frequency to *2min*.
 
 image:demo_poll_edi_events/image13_demo_poll_edi_events.png[image,width=498,height=336]
 
 === Poll for EDI Events
 
-Locate the *JDE* Connector, and select _Edi outbound_. Drag this to the canvas.
+. Locate the *JDE* Connector, and select *Edi outbound*.
+. Drag this to the canvas.
 
 image:demo_poll_edi_events/image14_demo_poll_edi_events.png[image,width=221,height=191]
 
-Drag the connector over to the canvas. Select it and review the properties window. Give it a meaningful name eg. Call _Poll Order Acknowledgement EDI_.
+[start=3]
+
+. Drag the connector over to the canvas. 
+. Select the connector and review the properties window.
+. Give it a meaningful name (eg. Call _Poll Order Acknowledgement EDI_).
 
 image:demo_poll_edi_events/image15_demo_poll_edi_events.png[image,width=410,height=258]
 
-Under the General section, click on the drop-down for Operation Name, and select Capture EDI Transactions.
+[start=6]
+
+. Under the *General* section, click the drop-down for *Operation Name*, and select *Capture EDI Transactions*.
 
 image:demo_poll_edi_events/image16_demo_poll_edi_events.png[image,width=589,height=302]
 
-==== Troubleshooting
-If the operation fails (possibly due to a timeout), you will see the below message
+=== Troubleshooting
+If the operation fails (possibly due to a timeout), the following message appears.
 
 image:demo_poll_edi_events/troubleshoot_timeout_message.png[image,width=345,height=115]
 
-Please review the timeout settings in _Anypoint Studio_'s Preferences.
+Review the *timeout* settings in _Anypoint Studio_'s *Preferences*.
 
-To do this go the the _Window > Preferences_ menu
+. Go the the *Window > Preferences* menu.
 
 image:demo_poll_edi_events/troubleshoot_preferences_menu.png[image,width=154,height=199]
 
-Go to _Anypoint Studio > DataSense_ and change the _DataSense Connection Timeout_ setting as below
+[start=2]
+
+. Go to *Anypoint Studio > DataSense* and change the *DataSense Connection Timeout* setting as shown below.
 
 image:demo_poll_edi_events/troubleshoot_datasense_timeout.png[image,width=622,height=551]
 
-Go to _Anypoint Studio > Tooling_ and change the _Default Connection Timeout_ and _Default Read Timeout_ settings as below
+[start=3]
+
+. Go to *Anypoint Studio > Tooling* and change the *Default Connection Timeout* and *Default Read Timeout* settings as shown below.
 
 image:demo_poll_edi_events/troubleshoot_timeout_tooling.png[image,width=622,height=551]
 
-==== Setting Parameters
+=== Setting Parameters
 
-You may now assign the input parameters. You can do this by either entering the payload values manually, or via the “Show Graphical View” button.
+. Assign the input parameters, by either entering the payload values manually, or via the *Show Graphical View* button.
 
 image:demo_poll_edi_events/image17_demo_poll_edi_events.png[image,width=601,height=292]
+[start=2]
 
-Drag the inputs to outputs, or double-click the output parameter to add to your edit window, and change as required.
+. Drag the inputs to outputs, or double-click the output parameter to add to your edit window, and change as required.
 
 image:demo_poll_edi_events/image18_demo_poll_edi_events.png[image,width=601,height=179]
 
 === Set Payload Output
 
-In the Mule Palette, you can either select Core, scroll down to Transformers or type “Payload” in the search bar.
+. In the Mule Palette, either select *Core*, scroll down to *Transformers* or type *Payload* in the search bar.
 
 image:demo_poll_edi_events/image19_demo_poll_edi_events.png[image,width=277,height=209]
 
-Drag and drop the _Set Payload_ to your canvas.
+[start=2]
+
+. Drag and drop the *Set Payload* to your canvas.
 
 image:demo_poll_edi_events/image20_demo_poll_edi_events.png[image,width=365,height=192]
 
-Select the _Set Payload_ component, and review the properties.
+[start=3]
+
+. Select the *Set Payload* component, and review the properties.
 
 image:demo_poll_edi_events/image21_demo_poll_edi_events.png[image,width=601,height=157]
+[start=4]
 
-Change the payload to reflect the desired output, and save the project
+. Change the *Payload* to reflect the desired output, and save your project.
 
 image:demo_poll_edi_events/image22_demo_poll_edi_events.png[image,width=601,height=216]
 
-On the _MIME Type_ tab, select _application/xml_
+[start=5]
+
+. On the *MIME Type* tab, select *application/xml*.
 
 image:demo_poll_edi_events/image23_demo_poll_edi_events.png[image,width=399,height=216]
 
-Next we need to check that Transactions were polled, and exist. From the Mule Palette, Select and drag the _Choice_ component.
+
+Check that the Transactions were polled. 
+
+. From the Mule Palette, select and drag the *Choice* component.
 
 image:demo_poll_edi_events/image24_demo_poll_edi_events.png[image,width=344,height=255]
 
 image:demo_poll_edi_events/image25_demo_poll_edi_events.png[image,width=600,height=259]
 
-Select the _When_ statement, and review the properties. Enter the below expression to check that transactions exist.
+[start=2]
+
+. Select the *When* statement, and review the properties.
+. Enter the following expression to check that the transactions exist.
 
 image:demo_poll_edi_events/image26_demo_poll_edi_events.png[image,width=545,height=170]
 
-We also want to see when the Scheduler returned no transactions, so we will add a logger to the _Default_ condition. From you Mule Palette, drag the logger component to the canvas
+Check to see when the Scheduler returned no transactions.
+Add a logger to the *Default* condition. 
+
+. From you Mule Palette, drag the *logger* component to the canvas.
 
 image:demo_poll_edi_events/image27_demo_poll_edi_events.png[image,width=306,height=254]
 
-Select and review the properties, and enter an appropriate message
+[start=2]
+
+. Select and review the properties, and enter an appropriate message.
 
 image:demo_poll_edi_events/image28_demo_poll_edi_events.png[image,width=601,height=520]
 
-If transactions were retrieved (_When_ condition is true) we need to iterate over all the transactions that have been retrieved. For this we will drag the _For Each_ component from out palette, to our canvas.
+If transactions are retrieved (*When* condition is true), iterate over all transactions that are retrieved.
+
+. Drag the *For Each* component from the *out* palette, to your canvas.
 
 image:demo_poll_edi_events/image29_demo_poll_edi_events.png[image,width=207,height=259]
 
-Select the component, and review the properties.
+[start=2]
+
+. Select the component, and review the properties.
 
 image:demo_poll_edi_events/image30_demo_poll_edi_events.png[image,width=601,height=265]
 
-In Collection enter the Transaction Collection as below
+[start=3]
+
+. In *Collection* enter the *Transaction Collection* as shown below.
 
 image:demo_poll_edi_events/image31_demo_poll_edi_events.png[image,width=542,height=265]
 
-Now drag the Set Variable component to your canvas, select and review the properties
+[start=4]
+
+. Drag the *Set Variable* component to your canvas.
+. Select and review the properties.
 
 image:demo_poll_edi_events/image32_demo_poll_edi_events.png[image,width=601,height=274]
 
-Set the variable name and click on _Show Graphical View_
+[start=5]
+
+. Set the *Variable Name*.
+. Click *Show Graphical View*.
 
 image:demo_poll_edi_events/image33_demo_poll_edi_events.png[image,width=601,height=236]
 
-Set the Variable value to the filename we want to create, and click on _Done._
+[start=6]
+
+. Set the *Variable* value to the filename you want to create.
+. Click *Done*.
 
 image:demo_poll_edi_events/image34_demo_poll_edi_events.png[image,width=600,height=194]
 
-From your Mule Palette, drag the X12 EDI > Write component to your canvas.
+[start=8]
 
-NOTE: If you do not have it, you will need to download it from _AnyPoint Exchange_
+. From your Mule Palette, drag the *X12 EDI > Write* component to your canvas.
+
+NOTE: If you do not have *X12 EDI> Write* component, must download it from _AnyPoint Exchange_.
 
 image:demo_poll_edi_events/image35_demo_poll_edi_events.png[image,width=274,height=225]
 
-Review it and create a connector configuration by clicking on the _Add_ button
+[start=9]
+
+. Review your component.
+. Create a Connector Configuration by clicking the *Add* button.
 
 image:demo_poll_edi_events/image36_demo_poll_edi_events.png[image,width=601,height=225]
 
-Change schema definitions to inline, click add and enter the required schema (this points to a schema file. You might need to download it if you do not have it)
+Change schema definitions to *inline*.
+
+. Click *Add* and enter the required schema (this points to a schema file).
+
+NOTE: Download schema if you do not have it.
 
 image:demo_poll_edi_events/image37_demo_poll_edi_events.png[image,width=344,height=348]
 
-On the _Identity_ Tab, enter the details as required, and click OK
+[start=2]
+
+. On the *Identity* Tab, enter the details as required.
+. Click *OK*
 
 image:demo_poll_edi_events/image38_demo_poll_edi_events.png[image,width=351,height=356]
 
-Click the _Show Graphical View_ button
+[start=4]
+
+. Click the *Show Graphical View* button.
 
 image:demo_poll_edi_events/image39_demo_poll_edi_events.png[image,width=601,height=226]
 
-Enter the Payload as required
+[start=5]
+
+. Enter the *Payload* as required.
 
 [source,json]
 %dw 2.0
@@ -420,75 +507,98 @@ output application/java
         }
 }
 
-From your Mule Palette, Select the _File > Write_ component, and drag it to the canvas
+[start=6]
+
+. From your Mule Palette, Select the *File > Write* component, and drag it to your canvas.
 
 image:demo_poll_edi_events/image40_demo_poll_edi_events.png[image,width=298,height=268]
 
 image:demo_poll_edi_events/image41_demo_poll_edi_events.png[image,width=601,height=252]
 
-Select and review the Properties. Under the Basic Settings, Click the _Add_ button next to _Connector configuration_.
+Select and review the *Properties*.
+
+. Under the *Basic Settings*, click the *Add* button next to *Connector Configuration*.
 
 image:demo_poll_edi_events/image42_demo_poll_edi_events.png[image,width=601,height=294]
 
-In the _Working_ Directory field, enter the path where you want to write the file to, and click OK.
+[start=2]
+
+. In the *Working* Directory field, enter the path where you want to write the file to.
+. Click *OK*.
 
 image:demo_poll_edi_events/image43_demo_poll_edi_events.png[image,width=601,height=607]
 
-Under the _General_ section, click the _Switch to expression_ button, and enter the variable name.
+[start=4]
+
+. Under the *General* section, click the *Switch to Expression* button.
+. Enter the *Variable Name*.
 
 image:demo_poll_edi_events/image44_demo_poll_edi_events.png[image,width=596,height=292]
 
 === Testing the Mule Flow
 
-To Test your flow, you need to start the Mule application. Go to the _Run_ menu, and select _Run_.
+To test your flow, start the Mule application. 
+
+. Go to the *Run* menu, and select *Run*.
 
 image:demo_poll_edi_events/image45_demo_poll_edi_events.png[image,width=567,height=376]
 
-After the project has been deployed, you can test you flow by logging into JDE. Go to the _Customer Master Information_ Application (_P03013 ZJDE0002_)
+[start=2]
 
-NOTE: This needs to be a version that has been configured for interoperability (see the Requirements section of this document)
+. After your project is deployed, log into _JDE_.
+
+. Go to the *Customer Master Information* Application (*P03013 ZJDE0002*)
+
+NOTE: Use a version of JDE that is configured for interoperability. 
+See <<Requirements>> for more information.
 
 image:demo_poll_edi_events/image46_demo_poll_edi_events.png[image,width=601,height=430]
 
-Make a change to the customer, and check your output path for a created file.
+[start=2]
+
+. Make a change to the customer, and check your output path for a created file.
 
 image:demo_poll_edi_events/image47_demo_poll_edi_events.png[image,width=601,height=98]
 
-The Transaction XML has been write to the file.
+The *Transaction XML* is written to the file.
 
 image:demo_poll_edi_events/image48_demo_poll_edi_events.png[image,width=315,height=280]
 
-=== Handling exceptions
+=== Handling Exceptions
 
-From your Mule Pallete, select and drag the _Error Handler_ to your canvas
+. From your Mule Pallete, select and drag the *Error Handler* to your canvas.
 
 image:demo_poll_edi_events/image49_demo_poll_edi_events.png[image,width=294,height=334]
 
 image:demo_poll_edi_events/image50_demo_poll_edi_events.png[image,width=601,height=424]
 
-Now select and drag the _On Error Continue_ into the _Error Handler_
+[start=2]
+
+. Select and drag *On Error Continue* into the *Error Handler*.
 
 image:demo_poll_edi_events/image51_demo_poll_edi_events.png[image,width=247,height=129]
 
-Select the _On Error Continue_ scope, and under Type enter _JDE:ERROR_PROCESSING_POLL_EVENT_
+[start=3]
+
+. Select the *On Error Continue* scope, and under *Type* enter JDE:ERROR_PROCESSING_POLL_EVENT.
 
 image:demo_poll_edi_events/image52_demo_poll_edi_events.png[image,width=447,height=324]
 
-NOTE : The operation error types can be seen when selecting the operation on your canvas, going to _Error Mapping_, and clicking add. You may also map this error to a aplication specific error.
+NOTE: Operation error types are visable when you select the operation on your canvas by going to *Error Mapping*, and clicking *Add*. You may also map this error to an application specific error.
 
 image:demo_poll_edi_events/image53_demo_poll_edi_events.png[image,width=250,height=291]
 
-Drag the _Set Payload_ component to the _Error Handler_, and set an appropriate message
+[start=4]
+
+. Drag the *Set Payload* component to the *Error Handler*, and set an appropriate message.
 
 image:demo_poll_edi_events/image54_demo_poll_edi_events.png[image,width=442,height=298]
 
-== *PortX JDE Connector – Demo Projects*
+== PortX JDE Connector – Demo Projects
 
-=== Additional Demos
+=== Additional Examples
 
-There are additional demo applications with step by step guides available for download. These cover all the basic operations, and are
-
-. <<jde.adoc#,Invoke a Business Function>>
-. <<demo_ube.adoc#,Submit a Batch Process>> 
-. <<demo_ube_status.adoc#,Retrieve a Batch Process’s Status>>
-. <<demo_poll_mbf_events.adoc#,Poll MBF Events>>
+* <<jde.adoc#,Invoke a Business Function>>
+* <<demo_ube.adoc#,Submit a Batch Process>> 
+* <<demo_ube_status.adoc#,Retrieve a Batch Process’s Status>>
+* <<demo_poll_mbf_events.adoc#,Poll MBF Events>>
