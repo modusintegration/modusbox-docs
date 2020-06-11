@@ -1,9 +1,75 @@
 * xref:index.adoc[About PortX]
-** xref:integration-hub:ROOT:index.adoc[Integration Hub]
+
+////
+** xref:portx:ROOT:index.adoc[PortX]
+////
+
+** xref:key-concepts.adoc[Key Concepts]
+*** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
+
+*** xref:tracking.adoc[Tracking]
+*** xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]
+
+** xref:routing-scenarios.adoc[Routing Scenarios]
+*** xref:basic-routing-scenario.adoc[Basic]
+*** xref:shared-routing-scenario.adoc[Shared]
+*** xref:override-routing-scenario.adoc[Override]
+*** xref:multi-route-routing-scenario.adoc[Multi-route]
+*** xref:multicast-routing-scenario.adoc[Multicast]
+*** xref:chained-transactions-routing-scenario.adoc[Chained Transactions]
+*** xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing]
+
+** xref:portx:ROOT:examples.adoc[Examples]
+** xref:transaction-monitoring.adoc[Transaction Monitoring]
+*** xref:central-pane-elements.adoc[Central Pane Elements]
+*** xref:tracking-examples.adoc[Tracking Examples]
+
+** xref:partner-configuration.adoc[Actor Configuration]
+
+*** xref:company-information.adoc[Company Information]
+*** xref:identifiers.adoc[Identifiers]
+*** xref:availability.adoc[Availability]
+*** xref:certificate.adoc[Certificate]
+
+*** xref:x12-settings.adoc[X12 Settings]
+*** xref:edifact-settings.adoc[EDIFACT Settings]
+*** xref:csv-settings.adoc[CSV Settings]
+
+*** xref:transaction-designer.adoc[Transaction Designer]
+*** xref:document-types.adoc[Document Types]
+*** xref:debatching-incoming-documents.adoc[Debatching Groups of Incoming Documents]
+**** xref:debatching-incoming-x12-documents.adoc[X12]
+**** xref:debatching-incoming-xml-documents.adoc[XML]
+*** xref:endpoints.adoc[Endpoints]
+*** xref:maps.adoc[Maps]
+*** xref:channels.adoc[Channels]
+*** xref:routes.adoc[Routes]
+*** xref:partner-conversations.adoc[Partner Conversations]
+**  xref:administration.adoc[Administration]
+*** xref:environments.adoc[Environments]
+*** xref:error-codes.adoc[Error Codes]
+*** xref:security.adoc[Security]
+////
 ifdef::mule[]
-** xref:integration-hub-connector:ROOT:integration-hub-connector.adoc[Integration Hub Connector]
+** xref:portx-tutorial-td.adoc[PortX Tutorial: Designing a Transaction]
+endif::[]
+////
+** xref:portx-apis.adoc[PortX APIs]
+
+** xref:glossary.adoc[Glossary]
+
+////
+*** xref:resolution-processes.adoc[Resolution Processes]
+////
+
+
+
+
+ifdef::mule[]
+** xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector]
 ** xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 ** xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
 ** xref:jde:ROOT:jde.adoc[JDE Connector]
 endif::mule[]
+
 ** xref:release-notes:ROOT:release-notes.adoc[Release Notes]

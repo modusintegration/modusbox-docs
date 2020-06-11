@@ -1,0 +1,142 @@
+= PortX Glossary
+
+:keywords: Anypoint B2B PortX
+
+<<A>> <<C>> <<D>> <<E>> <<H>> <<I>>  <<L>> <<M>> <<P>> <<R>> <<S>> <<T>> <<Y>>
+
+////
+<<B>> <<F>> <<G>> <<J>> <<K>> <<N>> <<O>> 
+<<Q>> <<U>> <<V>> <<W>> <<X>> <<Y>> <<Z>>
+////
+
+== A
+
+Actor:: An entity, such as a partner, an application, or YourCompany B2B that can form a <<R,Relationship>> with another Actor for the purpose of partitioning artifacts.
+
+API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
+
+Any:: IHub <<A,Actor>> that includes all shared application-specific information. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+Application:: Software program or programs that have a role within your organization. 
+
+Artifact:: Software component of the IHub system. 
+
+////
+[[sectb]]
+*B*
+////
+
+== C
+
+Channel:: Grouping of <<A,Artifact>>s 
+specific to a transmission. 
+
+Certificate:: A digital file that identifies and authenticates an entity or service. 
+
+
+
+== D
+
+Document:: An instance of structured payload data being passed through PortX. 
++
+Used interchangeably with other terms commonly used in integration-related domains. For example, file, payload, message.
+
+////
+Document Definition:: A specific document format that is configured in the system.  A Document Definition is identified by the following pieces of information: Partner, Standard, Version, and Message Type. Schemas, Maps, and Document Properties are associated with a Document Definition.
+////
+
+Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
+Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted and stored by the Tracking service.
+
+Document Type:: IHub <<A,Artifact>> that identifies types of <<D,document>>s based on values such as <<S,standard>> and <<M,message type>>.
+
+== E
+
+Endpoint:: Entry point to a service, process, queue or topic destination.
+
+Environment:: Unit of IHub access management that facilitates partitioning of <<A,Artifact>>s, so that a given artifact (and the configuration with which it is associated) exists only in the environment in which it is created.
+
+Environment ID:: String that uniquely identifies an IHub environment.
+
+External Partner:: Any company registered in PortX that is not the Home Partner.
+
+////
+[[sectf]]
+*F*
+////
+
+== H
+
+Home Partner:: The company that is subscribing to PortX, considered the “internal” partner.
+
+== I
+
+Identifier:: Value that idenitifes an 
+<<A,Actor>> 
+to PortX.
+
+== L
+
+Lookup Table:: A table that facilitates transaction processing by associating values.
+
+== M
+
+Map:: Transforms one Document Type to another Document Type. 
+
+Message Type:: One of several values that together define a <<D,Document Type>>.
+
+== P
+
+Partner:: A company that exchanges B2B messages; one of the types of IHub <<A,Actor>>s. 
+
+Partner Identifier:: A predefined identifier of a particular Partner.  Partner Identifiers have Type and Qualifier that indicate the identifier scheme and Value.
+
+== R
+
+Relationship:: Union of an actor with another actor for the purpose of partitioning artifacts.
+Analagous to a programming namespace. 
+
+Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
+
+Routing Engine::
+ifdef::camel[]
+Apache Camel 3.__x__ application
+endif::[]
+ifdef::mule[]
+Mule application
+endif::[]
+ifdef::omni[]
+Application
+endif::[]
+that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[PortX].
+
+== S
+
+Schema:: The schema is stored with the Document Definition and is one of the following depending on the message type:
+
+* XML: XSD file
+* CSV: (NA)
+* EDI: EDI Schema Language (ESL) file
+
+Source Channel:: Type of <<C, Channel>> specific to the source of a transmission. 
+
+Standard:: One of several values that together define a <<D,Document Type>>.
+
+Standard PortX Field Format:: Describes fields for which valid values can include letters, numbers, or the dash ( *-* ) and underscore ( *_* ) characters.
+
+== T
+
+Target Channel:: Type of <<C,Channel>> specific to the destination of a transmission. 
+
+Transaction:: The end-to-end processing of a single instance of a <<D,Document>> from receipt at an <<E,Endpoint>> all the way to the desired business service.  
+A *TransactionId* can be used to find metadata and persisted payloads for the transaction at each stage.
+
+Transaction Definition:: The full configuration that configures how a document is processed between two partners.
+
+Transaction-processing solution:: Functionality that serves as a translation layer between internal systems and the various formats (X12, EDIFACT, XML, CSV, and others) and transport protocols (AS2, FTP/S, and others) commonly used in electronic transactions between companies.
+
+Transaction-Processing Framework:: B2B transaction-processing solution that enables developers to build a single set of  flows that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:anypoint-portx[PortX] (PortX)
+
+== Y
+
+YourCompany B2B:: *_YourCompany_ B2B* is your organization's gateway between its applications and its <<P,Partner>>s. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].

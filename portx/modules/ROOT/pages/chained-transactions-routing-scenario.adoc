@@ -1,0 +1,190 @@
+= Chained Transactions Routing Scenario
+
+
+In this example of a chained-transactions routing scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to a xref:glossary#p[Partner].
+
+[[img-chained-transactions-routing-scenario-overview]]
+
+image::chained-transactions-routing-scenario-overview.png[img-chained-transactions-routing-scenario-overview, title="Chained Transactions Routing Scenario Overview"]
+
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+
+* Application A (configured as *AppA*)
+* Partner A (configured as *PartA*)
+* *_YourCompany_ B2B*
+* *Any*
+
+== Relationships
+
+There are four xref:glossary#r[Relationships] in this scenario:
+
+|===
+|Relationship|Description|Contains
+
+
+s|AppA : Any
+|Universal Relationship between Application A and any other Application
+|Contains xref:glossary#a[Artifacts] specific to transactions between Application *A* and any other Application.
+
+s|_YourCompany_ B2B : Any
+|Universal relationship between your company and any partner
+|Contains Artifacts used across all partners with whom you do business
+
+s|_YourCompany_ B2B ; AppA
+|Relationship between this applcation and the Home Partner (*_YourCompany_ B2B*)
+|Contains Artifacts specific to transactions between Application *A* and the Home Partner
+
+s|_YourCompany_ B2B : PartA
+|Your company's relationship with the partner with whom you are doing business (in this case, *PartA*).
+|Contains artifacts used only with this partner
+
+|===
+
+[[img-chained-transactions-routing-scenario-artifacts]]
+
+image::chained-transactions-routing-scenario-artifacts.png[img-chained-transactions-routing-scenario-artifacts, title="Chained Transactions Routing Scenario Artifacts"]
+
+== xref:glossary#a[Artifact]s 
+
+This tables and flow diagrams in this section identifies:
+
+* Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
+* The Relationship in which the artifacts are configured
+
+//==== Configured in *AppA : Any*
+
+.Application Sends to Partner Routing Scenario Artifacts - *AppA : Any* 
+[cols="4*"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#d[Document Type]
+s|Y
+|Document Type you expect to receive from this Application
+|xref:document-types.adoc[Document Types]
+|===
+
+//==== Configured in *_YourCompany_ B2B : Any*
+
+.Application Sends to Partner Routing Scenario Artifacts - *_YourCompany_ B2B : Any* 
+[cols="4*"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#d[Document Type]
+s|X
+|Document Type your company uses internally
+|xref:document-types.adoc[Document Types]
+
+|xref:glossary#e[Endpoint]
+|*Router*
+|Endpoint used to route Documents
+|xref:endpoints.adoc[Endpoints] 
+
+|xref:glossary#t[Target Channel]
+|*X-to-Router*
+|Sends Document of Document Type *X* to IHub 
+|xref:channels.adoc[Channels] 
+
+|xref:glossary#s[Source Channel]
+|*X-to-Passthru*
+|Sends Document of Document Type *X* to selected Target Channel. 
+|xref:channels.adoc[Channels] 
+
+|===
+
+//=== Configured in _YourCompany_ B2B : AppA
+
+.Application Sends to Partner Routing Scenario Artifacts - *AppA : _YourCompany_ B2B* 
+[cols="4*"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#m[Map]
+s|Y-to-X
+|Transforms a document of Document Type *Y* to a Document of Document Type *X*
+|xref:document-types.adoc[Maps]
+
+|xref:glossary#s[Source Channel]
+|*Y-to-X*
+|Maps document of Document Type *Y* to a Document of Document Type *X*.
+|xref:channels.adoc[Channels] 
+
+|xref:glossary#t[Transaction]
+|*Y-to-X-to-Router*
+|Combination of the Source Channel *Y-to-X* and the Target Channel **X-to-Router**. Receives a document of Type **Y**, maps it to a document of Type *X*, then sends it to the *Router* Endpoint. This transaction has *From Partner* configured as *AppA* and *To Partner* configured as **_Your Company_ B2B**.
+|xref:transaction-designer.adoc[Transactions Designer] 
+
+|===
+
+
+
+
+
+
+=== Artifacts in _YourCompany_ B2B : PartA
+
+//=== Configured in _YourCompany_ B2B : AppA
+
+.Application Sends to Partner Routing Scenario Artifacts - *_YourCompany_ B2B : AppA* 
+[cols="4*"]
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+
+|xref:glossary#e[Endpoint]
+|*PartA*
+|Endpoint that points to an external Partner
+|xref:endpoints.adoc[Endpoints] 
+
+|xref:glossary#d[Document Type]
+s|Z
+|Document Type your parter expects to receive from your company
+|xref:document-types.adoc[Document Types]
+
+|xref:glossary#m[Map]
+s|X-to-Z
+|Transforms a document of Document Type *X* to a Document of Document Type *Z*
+|xref:document-types.adoc[Maps]
+
+|xref:glossary#t[Target Channel]
+|*X-to-Z-to-PartA*
+|Maps document of Document Type *X* to Document Type *Y* and sends it to *PartA*
+|xref:channels.adoc[Channels] 
+
+|xref:glossary#t[Transaction]
+|*X-to-Z-to-PartA*
+|Sends Document of Document Type *X* to selected Target Channel. 
+|xref:transaction-designer.adoc[Transaction Designer] 
+
+|===
+
+== Outcomes
+
+[[img-chained-transactions-routing-scenario-outcome]]
+
+image::chained-transactions-routing-scenario-outcome.png[img-chained-transactions-routing-scenario-outcome, "chained-transactions-Routing-Scenario-Outcome"]
+
+
+=== *AppA* sends Document of Document Type *Y* to Endpoint *RecFromA*
+
+PortX:
+
+* Receives Document Y
+* Attempts to resolve routes
+* Finds Transaction *Y-to-X-to-Router*
+* Executes that transaction, which maps the document to Document Type *X*
+* Sends Document *Y* to Endpoint *Router*
+* Attempts to resolve routes
+* Finds Transaction *X-to-Z-to-PartA*
+* Executes that transaction, which maps the document to Document Type *Z*
+* Sends Document *Z* to Endpoint *PartA*
+

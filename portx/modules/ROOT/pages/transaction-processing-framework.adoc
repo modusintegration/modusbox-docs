@@ -1,0 +1,310 @@
+= Transaction-Processing Framework
+
+Typacally, businesses find it necessary to develop custom B2B transaction-processing configuraitons for their trading partners. When develpoing custom configurations, the cost, effort, and time required to onboard new trading partners increases, thereby limiting the business relationships your company can pursue. The following explains how the PortX Transaction-Processing Framework works to dynamically process B2B transactions across a multitude of common formats and protocols.
+
+== Transaction-Processing Solution
+
+Portx PortX includes a  xref:glossary#sectb[Transaction-processing solution] which serves as a routing and translation layer between your internal xref:glossary#a[Application]s
+ and the following common formats, along with others.
+ 
+ * X12 
+ * EDIFACT 
+ * XML 
+ * CSV 
+ 
+ 
+The xref:glossary#secb[Transaction-processing solution] serves the following common transport protocols, along with others.
+ 
+ * AS2
+ * FTP/S
+ 
+== Routing Engine
+A key feature of the xref:glossary#sectb[Transaction-Processing Framework] is the PortX xref:glossary#sectr[Routing Engine]. 
+The Routing Engine is 
+ifdef::mule[]
+a Mulesoft Enterprise Service Bus (ESB)
+endif::[]
+ifdef::camel[]
+an Apache Camel 3.__x__
+endif::[]
+ifdef::omni[]
+an Enterprise Service Bus (ESB)
+endif::[]
+The xref:glossary#sectb[Routing Engine] processes a wide range of transmissions from different partners, dynamically applying rules and configuration data stored in xref:index.adoc[PortX].
+application that can process a wide range of messages from many different partners by dynamically applying rules and configuration data stored in xref:index.adoc[PortX].
+The xref:glossary#sectb[Routing Engine] allows non-programmers in your orginization such as data analysts to use IHub, and onboard new trading partner relationships by supporting their transaction configurations without having to develop, test, or deploy custom made components.
+For more detailed information about how IHub works, see  xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
+
+== Functional Architecture
+
+B2B transaction processing proceeds through a combination of the stages shown in xref:img-functional-architecture[].
+
+NOTE: Processing stages and their sequence may vary from implementation to implementation.
+
+[[img-functional-architecture]]
+image::functional-architecture.png[img-functional-architecture,title="Functional Architecture"]
+=== Receive
+
+Each incoming transaction from a partner or internal system is delivered through a transport protocol xref:endpoints.adoc[Endpoint] that is configured to receive the message.
+
+=== Resolve
+
+This stage identifies the partner and the transaction type using data inside a document or in the incoming metadata (such as HTTP headers or filenames), then retrieves corresponding processing details from IHub. These details include:
+
+* xref:endpoints.adoc[Endpoint] to which the transformed message is to be delivered
+* Schema to use for validation
+* xref:maps.adoc[Map] to transform the message into the required target format
+
+=== Transform
+
+This stage translates each message into the appropriate format for the target service being invoked. This translation is performed dynamically by retriving a xref:maps.adoc[Map] from the xref:tpmapi[Trading Partner Management (TPM) API].
+
+=== Parse and Validate
+
+This stage confirms that incoming data is configured in the correct format. Validation is then performed using a Schema retrieved from the xref:tpmapi[TPM API].
+
+=== Deliver
+
+This stage uses Endpoint configuration data retrieved from the xref:tpmapi[TPM API] to deliver the message to an Endpoint address.
+
+== Technical Architecture
+
+The following xref:img-transaction-processing-framework[] shows the primary components and how these components interact to process B2B transactions.
+
+
+[[img-transaction-processing-framework]]
+image::transaction-processing-framework.png[img-transaction-processing-framework,title="Conceptual View of Transaction Processing Framework"]
+
+=== Components
+
+==== PortX
+xref:portx:ROOT:index.adoc[PortX] (PortX)
+is the B2B Transaction Processing user interface, enabling you to:
+
+* xref:partner-configuration[Configure how B2B transactions are processed]
+* xref:transaction-monitoring[Monitor and manage processed transactions]
+
+[[tpmapi]]
+==== Trading Partner Management (TPM) API
+
+The Trading Partner Management (TPM) API manages the storage and retrieval of configuration data for your trading partners, including the details for processing transactions.
+
+==== Tracking API
+The Tracking API manages the storage and retrieval of metadata from your processed transactions. +
+For example:
+
+* Sender
+* Receiver
+* Time stamps
+* Message type
+* Acknowledgement status
+
+This includes, but is not limited to correlation logic for matching acknowledgements to original messages and identifying duplicate messages.
+
+==== PortX Connector
+The PortX Connector runs inside an ESB and coordinates all interactions that ESB has with PortX APIs' TPM and Tracking.
+
+////
+==== Object Store
+The Object Store is a distributed cache in the ESB that replicates data across nodes in a cluster. TPM configuration data, once retrieved, is cached in the Object Store. Caching minimizes calls to the TPM Service, thereby improving performance and reliability. PortX Connector manages this caching.
+////
+
+
+
+=== Transaction-Processing Stages
+
+PortX provides a routing engine designed to meet the needs of most customer scenarios. We also allow for extensibility where needed...
+
+NOTE: At this time the flows identified below must be developed by the customer. PortX may provide these components as part of the product in the future. However, in order to provide full extensibility and customization, the option will remain for customers to provide their own implementations.
+
+==== Receive Stages
+Each receive endpoint corresponds to a component that consists of the appropriate protocol connector and the appropriate endpoint configuration. After receiving a message over a particular protocol, each receive flow:
+
+* Tracks the message using the PortX Connector in order to persist a copy of the message as it was received from the partner.
+* Places a queue message with headers populated with any important metadata from the inbound protocol, such as transport headers and filenames, on the Resolve queue.
+
+Receive flows are activated dynamically by a Receive Endpoint listener flow which polls the TPM system for the list of endpoints that should be active. This flow creates a specific endpoint for each flow based on a template for the required transport protocol. It then dynamically instantiates that flow into the ESB and starts it, so that the required connector endpoint is active and listening for messages.
+
+==== Resolve Stage
+
+* Pulls together from the message and any transport headers the needed metadata fields for identifying the specific document type.
+* Passes the metadata fields to the TPM service to look up the document type and associated configuration settings 
+(xref:maps.adoc[Map], Schema, target xref:endpoints.adoc[Endpoint]) and adds this information to the context headers that travel with the message to be used by later stages.
+* Passes the message to the next processing stage.
+
+==== Transform Stage
+
+* Dynamically applies the configured mapping script from the context header to translate the message into the canonical format for the target Business Service.
+* Does any necessary data translation, such as resolving partner values to your company's values using functions, and flows.
+* Uses the PortX Connector to track the mapped, canonical version of the message.
+* Passes the updated message body to the next processing stage.
+
+==== Validate Stage
+
+* Dynamically applies the configured schema script to validate that the message is in the required format.
+* Uses the PortX Connector to track the validation result for the message.
+* Passes the message to the next processing stage.
+
+==== Deliver Stage
+
+* Invokes the target service by passing the transformed message to the configured transport endpoint.
+* Uses the PortX Connector to track the result from the target service.
+
+==== Message Payload Persistence Stage
+This is an optional flow that can be implemented to store message payloads at various stages. It receives a message from the PortX Connector, persists that message payload to the desired data store, and returns a URL that can be used to retrieve the message later using the Message Payload Retrieval Stage. The URL is stored in the related tracking data stored in the Tracking API in PortX and displayed to the user in the context of the transaction. Clicking this link will invoke the Message Payload Retrieval Stage and display the message payload in a pop-up window.
+
+==== Message Payload Retrieval API 
+The Message Payload Retrieval API Stage is used to retrieve the message payload with a URL (which contains the specific transactionId of the message to be retrieved).
+
+==== Business Service APIs
+For each target internal service, there is typically a component that exposes a REST-based API and communicates with the backend system using the appropriate connector or connectors. These Business Service APIs are not technically part of the B2B system, but are often part of the overall solution.
+
+==== Replay Stage
+The replay flow coordinates replaying transactions. It polls the Tracking service for transactions that have been marked for replay. When it finds transactions that need to be replayed it:
+
+. Pulls the original message body and headers from the Tracking API and the Message Payload Retrieval API.
+. Constructs a new message with the original payload and headers and passes it to the Resolve flow to reprocess the transaction.
+. Tracks the fact that the transaction has been replayed.
+. Updates the TPM service to indicate that the replay is complete
+
+
+////
+
+== Information Architecture: PortX-Configurable Entities and Terms
+PortX stores the configuration data shown in xref:img-b2b-transaction[] in order to support the dynamic processing of different transaction types for different trading partners.
+
+[[img-b2b-transaction]]
+image::b2b-transaction.png[img-b2b-transaction,title="B2B Transaction"]
+
+=== Partner
+Represents an external company with which your company does business. Your company itself is also considered a Partner.
+
+=== Partnership
+The relationship between your company and an external company with which your company does business. Your company itself is also considered a Partner, and there is a special partnership called the “Home Org” in PortX.
+
+=== Partner Identifier
+A predefined identifier of a specific Partner. There are several types of Partner Identifiers used in B2B transactions and configurable in PortX. For example, for EDI X12 documents there are ISA identifiers, which are used in EDI interchanges to identify the sender and receiver. AS2 is another type of identifier, used in AS2 transmissions.
+
+=== Endpoint
+
+A _receive endpoint_ is a URL to which a document can be sent.
+
+A _send endpoint_ is a URL from which a document can be sent.
+
+For information about how endpoints are created, see xref:resolution-processes.adoc#endpoint-resolution[Endpoint Resolution].
+
+=== Document, Message, File
+These terms are used interchangeably in the B2B world to reflect an instance of a structured payload being passed through a system to convey information about a transaction. For consistency, we use the term _document_ to represent these instances.
+
+=== Document Type
+xref:document-types.adoc[Document Types] are configured in PortX. A given document type
+is identified by the following pieces of information:
+
+* Standard
+** Examples: X12, EDIFACT, XML, CSV, JSON
+* Version
+** X12 (Examples: 4010, 5010)
+** RosettaNet (Example: PIP3B3v11.12.00
+
+NOTE: For standards that don’t have version, such as XML and CSV, *Version* is not part of the Document Type configuration.
+
+* Message Type
+** X12 - 850, 855, 856, etc.F
+** RosettaNet - 3B3
+** XML - root node name, namespace
+** CSV, JSON - Name given to the transaction, not necessarily contained in the message
+
+=== Document Properties
+Document Properties are data fields that are extracted from received documents for the purpose of searching, correlation, TPM resolution, or duplicate checking. Document Properties are configured for Document Types. The user provides the Name of the property and the Path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted from the document by the Tracking API and stored to be used later for the purposes mentioned above.
+
+=== Schema
+The schema is stored with the <<Document Type>>. It is one of the following, depending on the message type:
+
+[%header,cols="3s,7a"]
+|===
+|Message Type
+|Schema type
+
+|XML
+|XSD file
+|CSV
+|NA
+|EDI
+|EDI Schema Language (ESL) file
+|JSON
+|JSON Schema
+|===
+
+=== Map
+
+Script for transforming one <<Document Type>> to another <<Document Type>>.
+
+=== Source Channel
+Details pertaining to how to receive a particular document. _Receive_ is relative to the B2B Transaction Processing flows. For example:
+
+* An inbound transaction would have a Source Channel that receives a Document from an external partner.
+* An outbound transaction would have a Source Channel that receives a document from an internal system.
+
+=== Target Channel
+Details pertaining to how a particular document is sent. _Sent_ is relative to the B2B Transaction Processing flows. For example:
+
+* An inbound transaction would have a Target Channel that sends a document to an internal system.
+* An outbound transaction would have a Target Channel that sends a document to an external partner.
+
+=== Route
+Connects a Source Channel to a Target Channel.
+
+=== Transaction
+Denotes the end-to-end processing of a single instance of a document from the receipt at an endpoint all the way to the desired destination. A TransactionId can be used to find metadata and persisted payloads for the transaction at each stage.
+
+=== Directional Processing
+
+Transactions are either _inbound_ or _outbound_.
+
+Inbound transaction::  A transaction between an external partner and the home organization, initiated by the external partner.
+
+Outbound transaction:: A transaction between the home organization and an external partner, initiated by the home organization.
+
+////
+////
+Inbound versus Outbound is always used to denote direction of documents being exchanged between partners. A document from an external partner to the home organization is considered Inbound. A document sent from the home organization to an external partner is considered Outbound.
+////
+////
+xref:img-inbound-outbound[] depicts the relationships between these configuration entities relative to the processing of inbound or outbound transactions:
+
+[[img-inbound-outbound]]
+image::inbound-outbound.png[img-inbound-outbound,title="B2B Directional Processing"]
+NOTE: In the interest of illustrating a range of usage scenarios, the architecture shown in xref:img-inbound-outbound[] depicts configuration details that may not appear in a specific scenario.
+
+A common practice is to map each incoming document to a standard internal format, (often called the _canonical_ format). If the target system accepts this format, there is no need to apply a second map. That is, a map can be configured for the Source Channel to transform into the canonical format, and there is no map needed for the Target Channel. However, if there are multiple Target Channels for a given Source Channel, there may be a need to apply an additional map in one of the Target Channels; in that case two different maps would be applied.
+
+For an outbound transaction, the document might originate in the canonical format, so there may not be a map required in the Source Channel. However there would be one in the Target Channel to map to the desired format of the external partner.
+
+== User Interface
+
+The PortX user interface enables xref:partner-configuration.adoc[partner configuration], xref:administration.adoc[administration] and detailed xref:transaction-monitoring.adoc[transaction monitoring].
+
+=== xref:partner-configuration.adoc[Partner Configuration]
+
+* Format Defaults
+** xref:x12-settings.adoc[X12 Settings]
+** xref:edifact-settings.adoc[EDIFACT Settings]
+** xref:csv-settings.adoc[CSV Settings]
+* xref:document-types.adoc[Document Types]
+* xref:endpoints.adoc[Endpoints]
+* xref:maps.adoc[Maps]
+* xref:channels.adoc[Channels]
+* xref:routes.adoc[Routes]
+* xref:partner-conversations.adoc[Partner Conversations]
+
+=== xref:administration.adoc[Administration]
+* xref:environments.adoc[Environments]
+* xref:error-codes.adoc[Error Codes]
+* xref:security.adoc[Security]
+* xref:lookup-tables.adoc[Lookup Tables]
+
+=== xref:transaction-monitoring[Transaction Monitoring]
+* Search and view results of processed transactions.
+* View end-to-end processing that occurred for a transaction.
+* Manually cause the replay of failed transactions.
+////

@@ -1,0 +1,189 @@
+= Multicast Routing Scenario 
+
+
+In this example of a multicast routing scenario, an xref:glossary#a[Application] sends a xref:glossary#d[Document] to three other Applications. Two of the Applications require the Document as-sent; the third requires the payload to be mapped.
+
+
+[[img-multicast-routing-scenario-overview]]
+
+image::multicast-routing-scenario-overview.png[img-multicast-routing-scenario-overview, title="Multicast Routing Scenario Overview"]
+
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+
+== xref:glossary#a[Actor]s
+
+In this scenario, there are three xref:glossary#a[Actor]s: 
+    
+* Application A (configured as *AppA*)
+* Application B (configured as *AppB*)
+* Application C (configured as *AppC*)
+* Application D (configured as *AppD*)
+* *_YourCompany_ B2B*
+* *Any*
+
+=== Relationships
+
+There are seven xref:glossary#r[Relationships] in this scenario:
+
+.Override Routing Scenario Relationships
+[cols="3*"]
+
+|===
+|Relationship|Description|Contains
+
+s|AppA : Any 
+|Universal relationship between Application *AppA* and any other Application
+|Artifacts specific to transactions between *AppA* and any other Application
+
+s|AppB : Any
+|Universal relationship between Application *AppB* and any other Application
+|Artifacts specific to transactions between *AppB* and any other Application
+
+s|AppC : Any
+|Universal relationship between Application *AppC* and any other Application
+|Artifacts specific to transactions between *AppC* and any other Application
+
+s|AppD : Any
+|Universal relationship between Application *AppD* and any other Application
+|Artifacts specific to transactions between *AppD* and any other Application
+
+s|AppA : AppB
+|The relationship between Application *AppA* and Application *AppB*. 
+|Artifacts used only between these applications.
+
+s|AppA : AppC
+|The relationship between Application *AppA* and Application *AppC*. 
+|Artifacts used only between these applications.
+
+s|AppA : AppD
+|The relationship between Application *AppA* and Application *AppD*. 
+|Artifacts used only between these applications.
+
+|===
+
+
+[[img-multicast-routing-scenario-artifacts]]
+
+//Figma Frame 3
+image::multicast-routing-scenario-artifacts.png[img-multicast-routing-scenario-artifacts, title="Multicast Scenario Artifacts"]
+
+== xref:glossary#a[Artifact]s 
+
+The tables and flow diagrams in this section identify:
+
+* Artifacts that must be configured in order for a given document to be routed (that is, not rejected)
+* The Relationship in which the artifacts are configured
+
+=== AppA : Any
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#e[Endpoint]
+s|AppRecFromA
+|Endpoint on which you expect to receive documents from Application *AppA*
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#d[Document Type]
+s|Y
+|Document Type you expect to receive from an application
+|xref:document-types[Document Types]
+
+|xref:glossary#s[Source Channel]
+Y-Passthrough
+|Source channel that passes Document Type *Y* to whatever Target channel is selected
+|xref:channels[Channels] 
+
+|===
+
+=== AppB : Any
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#e[Endpoint]
+s|AppB
+|Endpoint from which documents are sent to *AppB*.
+|xref:endpoints[Endpoints] 
+|===
+
+=== AppC : Any
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#e[Endpoint]
+s|AppC
+|Endpoint from which documents are sent to *AppC*.
+|xref:endpoints[Endpoints] 
+|===
+
+=== AppD : Any
+
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#e[Endpoint]
+s|AppD
+|Endpoint from which documents are sent to *AppD*.
+|xref:endpoints[Endpoints] 
+
+|xref:glossary#d[Document Type]
+s|Z
+|Document Type that *AppD* wants to receive
+|xref:document-types[Document Types]
+|===
+
+
+==== AppA : AppB
+
+|===
+|Artifact|Artifact Name|Description|Configured on page
+
+|xref:glossary#t[Target Channel]
+s|Y-to-B
+|
+Target channel that passes documents of Document Type *Y* to AppB's Endpoint
+|xref:channels[Channels] 
+
+|xref:glossary#t[Transaction]
+s|Y-Passthrough-to-B
+|Combination of  Source Channel *Y-Passthrough* and Target Channel *Y-to-AppB*. 
+When combined (with ?) it becomes a transaction that receives a document of Document Type *Y* and then sends it to the endpoint *B*. This transaction has the From Partner set to *AppA* and the To Partner set to **AppB**.
+|xref:transaction-designer[Transaction Designer] 
+
+|===
+
+
+== Outcomes
+
+=== AppA sends Document of Document Type Y to Endpoint RecFromA
+
+[[img-multicast-routing-scenario-outcomes]]
+
+image::multicast-routing-scenario-outcomes.png[img-multicast-routing-scenario-outcomes, title="Multicast Routing Scenario Outcomes"]
+
+
+PortX:
+
+* Receives the document on *RecFromA*
+
+* Attempts to resolve routes
+* Finds three Transactions 
+** *Y-Passthrough-to-B* 
+** *Y-Passthrough-to-C*
+** *Y-to-X-to-D*
+* Executes all transactions:
+
+** Sends Document of Type *Y* to Endpoint *B*.
+
+** Sends Document of Type *Y* to Endpoint *C*.
+
+** Maps Document of Type *Y* to Document Type *X*, then sends it to  Endpoint **AppD**.
+
+

@@ -1,11 +1,11 @@
-= Integration Hub Release Notes
+= PortX Release Notes
 :keywords: b2b, release notes
 
 == Version 1.29.0 - 7 March 2020
 
 === Browser Support
 
-Integration Hub supports the following browsers:
+PortX supports the following browsers:
 
 * Firefox (latest version)
 * Chrome (latest version)
@@ -27,7 +27,7 @@ Compatible with:
 
 * X12 Module 1.2.1
 * EDIFACT Module 1.2.1
-* Integration Hub Connector 3.0.x
+* PortX Connector 3.0.x
 * FTPS Connector 1.0.8
 * AS2 Connector 2.0.1
 
@@ -35,7 +35,7 @@ Compatible with:
 
 === Browser Support
 
-Integration Hub supports the following browsers:
+PortX supports the following browsers:
 
 * Firefox (latest version)
 * Chrome (latest version)
@@ -53,7 +53,7 @@ Compatible with:
 
 * X12 Module 1.2.1
 * EDIFACT Module 1.2.1
-* Integration Hub Connector 3.0.x
+* PortX Connector 3.0.x
 * FTPS Connector 1.0.8
 * AS2 Connector 2.0.1
 
@@ -61,7 +61,7 @@ Compatible with:
 
 === Browser Support
 
-Integration Hub supports the following browsers:
+PortX supports the following browsers:
 
 * Firefox (latest version)
 * Chrome (latest version)
@@ -72,12 +72,12 @@ Compatible with:
 
 * X12 Module 1.2.1
 * EDIFACT Module 1.2.1
-* Integration Hub Connector 3.0.x
+* PortX Connector 3.0.x
 * FTPS Connector 1.0.8
 * AS2 Connector 2.0.1
 
 == Related Information
 
-* xref:integration-hub:ROOT:index.adoc[Integration Hub]
-* xref:integration-hub:ROOT:transaction-monitoring.adoc[Transaction Monitoring]
-* xref:integration-hub:ROOT:partner-configuration.adoc[Partner Configuration]
+* xref:portx:ROOT:index.adoc[PortX]
+* xref:portx:ROOT:transaction-monitoring.adoc[Transaction Monitoring]
+* xref:portx:ROOT:partner-configuration.adoc[Partner Configuration]

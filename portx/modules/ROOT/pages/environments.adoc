@@ -1,0 +1,17 @@
+= Environments
+
+include::{partialsdir}/edit-settings.adoc[]
+[start=3]
+
+. On the Administration Page, in the left hand navigation pane, click *Environments*.
++
+The xref:img-environments[] appears.
+
+[[img-environments]]
+image::environments.png[img-environments,title="Environments Page"]
+
+ifdef::mule[]
+== Get Environment Information
+
+The information on the <<img-environments>> is required when using xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector].
+ifndef::mule[]

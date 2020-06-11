@@ -1,0 +1,114 @@
+= Routing Scenarios
+
+Pages in this section present examples of scenarios that identify and illustrate:
+
+* PortX (IHub) xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]
+* How you can configure these IHub components to implement routing objectives.
+
+
+== Background Reading
+
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works. 
+
+
+== xref:basic-routing-scenario.adoc[Basic]
+
+[[img-basic-routing-scenario-overview]]
+
+image::basic-routing-scenario-overview.png[img-basic-routing-scenario-overview, title="Basic Routing Scenario Overview"]
+
+Scenario::
+Transmit document from one actor to another by configuring a transaction.
+
+xref:basic-routing-scenario.adoc[Example]::
+Your organization receives a document from a Partner. If IHub has been configured to receive a document of this Document Type, IHub routes the document to an internal API. If IHub has not been configured to receive a document of this Document Type, IHub rejects the document.
+
+== xref:shared-routing-scenario.adoc[Shared]
+
+[[img-shared-routing-scenario-overview]]
+
+image::shared-routing-scenario-overview.png[img-shared-routing-scenario-overview, title="Shared Routing Scenario Overview"]
+
+Scenario::
+Same action as in xref:basic-routing-scenario.adoc[Basic], but configured in a manner that facilitates the document type going to or coming from multiple Partners.
+
+xref:shared-routing-scenario.adoc[Example]::
+
+
+Your organization wants to receive a document Document from two Partners, map it to an internal standard, and send it to a backend database.
+
+== xref:override-routing-scenario.adoc[Override]
+
+[[img-override-routing-scenario-overview]]
+
+image::override-routing-scenario-overview.png[img-override-routing-scenario-overview, title="Override Routing Scenario Overview"]
+
+Scenario::
+Many Partners use the same Document Type, so that you can reuse a configuration across those partners. This scenario takes into account the possibilityt that some Partners may have slightly different Document Types, requiring the use of a different map.
+
+
+xref:override-routing-scenario.adoc[Example]::
+Your organization expects to receive documents of a single Document Type from multiple Partners.
+
+If IHub has been configured to receive a document of this Document Type, IHub routes the document to an internal API.
+
+However, one partner uses a variation of the Document Type, so you must override the standard Map that you use to transform that partner’s Document Type to your internal Document Type before routing.
+
+If IHub has not been configured to receive a document of this Document Type, IHub rejects the document.
+
+== xref:multi-route-routing-scenario.adoc[Multi-Route]
+
+[[img-multi-route-routing-scenario-overview]]
+
+image::multi-route-routing-scenario-overview.png[img-multi-route-routing-scenario-overview, title="Multi-Route Routing Scenario Overview"]
+
+Scenario::
+A single Document Type is processed by more than one Transaction.
+
+xref:multi-route-routing-scenario.adoc[Example]::
+
+Your organization receives a document from a partner.
+IHub has been configured to process the document in two ways:
+
+* Route a copy of the document to an internal API
+* Route a copy of the document directly to a destination you use to backup received documents. This routing is referred to as *passthru* because it does not require a map.  
+
+== xref:multicast-routing-scenario.adoc[Multicast]
+
+[[img-multicast-routing-scenario-overview]]
+
+image::multicast-routing-scenario-overview.png[img-multicast-routing-scenario-overview, title="Multicast Routing Scenario Overview"]
+
+Scenario:: 
+A Document Type has no *To* field; therefore, it is sent to all Relationships that have Transactions including the Document Type. 
+
+
+xref:multicast-routing-scenario.adoc[Example]:: 
+An Application sends a document to three other Applications. Two of the Applications require the document as-sent; the third requires the payload to be mapped.
+
+== xref:chained-transactions-routing-scenario.adoc[Chained Transactions]
+
+[[img-chained-transactions-routing-scenario-overview]]
+
+image::chained-transactions-routing-scenario-overview.png[img-chained-transactions-routing-scenario-overview, title="Chained Transactions Routing Scenario Overview"]
+
+Scenario::
+A Document Type is exchanged between Applications and Partners, where the data is separated into each domain.
+
+
+xref:chained-transactions-routing-scenario.adoc[Example]::
+An Application sends a document to a Partner.
+
+== xref:content-based-routing-routing-scenario.adoc[Content-Based-Routing] 
+
+[[img-content-based-routing-routing-scenario-overview]]
+
+image::content-based-routing-routing-scenario-overview.png[img-content-based-routing-routing-scenario-overview, title="Content-Based Routing Routing Scenario Overview"]
+
+Scenario::
+A Document Type is sent to a specific Transaction or Endpoint based on the content contained inside the Document or on the Endpoint.
+
+xref:content-based-routing-routing-scenario.adoc[Example]::
+Your organization receives a document from a Partner. Depending on the size of a property in that document, PortX routes the document to an endpoint DataBig or an endpoint DataSmall.
