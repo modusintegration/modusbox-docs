@@ -64,7 +64,7 @@ image:demo_poll_mbf_events/image5_demo_poll_mbf_events.png[image,width=321,heigh
 
 === Project Dependencies
 
-In your *pom.xml*, add the following to you *repositories* section :
+. In your *pom.xml* add the following to you *Repositories* section :
 [source,xml]
 ----
 <repository>
@@ -74,7 +74,9 @@ In your *pom.xml*, add the following to you *repositories* section :
 </repository>
 ----
 
-Add the following to your *dependencies* section :
+[start=2]
+
+. Add the following to your *Dependencies* section :
 
 [source,xml]
 ----
@@ -91,8 +93,9 @@ Add the following to your *dependencies* section :
     <classifier>mule-4</classifier>
 </dependency>
 ----
+[start=3]
 
-Add or update the following to your *plugins* section :
+. Add or update the following to your *Plugins* section :
 [source,xml]
 ----
 <plugin>
@@ -122,7 +125,7 @@ NOTE: If there is a requirement to use different configuration files per environ
 
 image:demo_poll_mbf_events/image6_demo_poll_mbf_events.png[image,width=250,height=446]
 
-The *mule-arifact.json* file needs to be updated per environment as follows.
+The *mule-arifact.json* file must be updated per environment as follows.
 
 [source,json]
 ----
@@ -153,7 +156,7 @@ The *mule-arifact.json* file needs to be updated per environment as follows.
 
 === Other Considerations
 
-To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the *jdelog.properties*, you may add the following *Async Loggers* to *log4j2.xml* file.
+To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the *jdelog.properties*), add the following *Async Loggers* to *log4j2.xml* file.
 
 [source,xml]
 <!-- JDE Connector wire logging -->
@@ -165,7 +168,7 @@ To redirect the _JD Edwards EntrpriseOne™_ Logger to Mule Logger (allowing you
 If you are having trouble resolving all dependencies,
 
 . Shut down AnyPoint Studio.
-. Run the following command in the project *Root* folder from the terminal/command prompt.
+. Run the following command in the project *ROOT* folder from the terminal/command prompt.
 
 [source]
 mvn clean install
@@ -177,7 +180,7 @@ mvn clean install
 
 To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
 
-. Open the Mule flow for your project, and select the *Global Elements* tab at the bottom of the Editor Window.
+. Open the Mule flow for your project and select the *Global Elements* tab at the bottom of the Editor Window.
 
 image:demo_poll_mbf_events/image7_demo_poll_mbf_events.png[image,width=515,height=273]
 
@@ -189,7 +192,7 @@ image:demo_poll_mbf_events/image8_demo_poll_mbf_events.png[image,width=511,heigh
 
 [start=3]
 
-. Type "JDE" in the filter edit box, and select *JDE Config*.
+. Type *JDE* in the filter edit box and select *JDE Config*.
 . Click *OK*.
 
 image:demo_poll_mbf_events/image9_demo_poll_mbf_events.png[image,width=386,height=390]
@@ -222,19 +225,20 @@ image:demo_poll_mbf_events/image12_demo_poll_mbf_events.png[image,width=601,heig
 
 [start=2]
 
-. From the Mule Palette (top right), select *Scheduler*, and drag it to the canvas.
+. From the Mule Palette (top right), select *Scheduler* and drag it to the canvas.
 
 image:demo_poll_mbf_events/image13_demo_poll_mbf_events.png[image,width=295,height=278]
 
 [start=3]
 
-. Select the *Scheduler* component from the canvas, and inspect the properties window, and change the *Frequency* to *2min*.
+. Select the *Scheduler* component from the canvas and inspect the properties window.
+. Change the *Frequency* to *2min*.
 
 image:demo_poll_mbf_events/image14_demo_poll_mbf_events.png[image,width=569,height=268]
 
 === Poll for Transaction (MBF) Events
 
-. Locate the _JDE Connector_, and select *Poll Events*. 
+. Locate the _JDE Connector_ and select *Poll Events*. 
 . Drag this to the canvas.
 
 image:demo_poll_mbf_events/image15_demo_poll_mbf_events.png[image,width=190,height=187]
@@ -261,7 +265,7 @@ image:demo_poll_mbf_events/image17_demo_poll_mbf_events.png[image,width=601,heig
 image:demo_poll_mbf_events/image18_demo_poll_mbf_events.png[image,width=601,height=294]
 [start=9]
 
-. Drag the inputs to outputs, or double-click the *output parameter* to add to your edit window, and change as required.
+. Drag the inputs to outputs, or double-click the *output parameter* to add to your edit window and change as required.
 
 image:demo_poll_mbf_events/image19_demo_poll_mbf_events.png[image,width=601,height=212]
 
@@ -302,13 +306,13 @@ image:demo_poll_mbf_events/image21_demo_poll_mbf_events.png[image,width=360,heig
 
 [start=3]
 
-. Select the *Set Payload* component, and review the properties.
+. Select the *Set Payload* component and review the *Properties*.
 
 image:demo_poll_mbf_events/image22_demo_poll_mbf_events.png[image,width=601,height=157]
 
 [start=4]
 
-. Change the payload to reflect the desired output, and save the project
+. Change the payload to reflect the desired output and save the project.
 
 image:demo_poll_mbf_events/image23_demo_poll_mbf_events.png[image,width=601,height=245]
 
@@ -318,7 +322,7 @@ image:demo_poll_mbf_events/image23_demo_poll_mbf_events.png[image,width=601,heig
 
 image:demo_poll_mbf_events/image24_demo_poll_mbf_events.png[image,width=399,height=216]
 
-Check that Transactions are polled, and exist. 
+Check that Transactions are polled and exist. 
 
 . From the Mule Palette, select and drag the *Choice* component.
 
@@ -328,7 +332,7 @@ image:demo_poll_mbf_events/image26_demo_poll_mbf_events.png[image,width=578,heig
 
 [start=2]
 
-. Select the *When* statement, and review the properties.
+. Select the *When* statement and review the properties.
 . Enter the following expression to check that transactions exist.
 
 image:demo_poll_mbf_events/image27_demo_poll_mbf_events.png[image,width=545,height=170]
@@ -343,32 +347,32 @@ image:demo_poll_mbf_events/image28_demo_poll_mbf_events.png[image,width=306,heig
 
 [start=3]
 
-. Select and review the properties, and enter an appropriate message.
+. Select and review the properties and enter an appropriate message.
 
 image:demo_poll_mbf_events/image29_demo_poll_mbf_events.png[image,width=601,height=529]
 
-If transactions are retrieved (*When* condition is true) we need to iterate over all transactions that have been retrieved.
+If transactions are retrieved (*When* condition is true), iterate over all transactions that have been retrieved.
 
-. Drag the *For Each* component from the palette, to your canvas.
+. Drag the *For Each* component from the palette to your canvas.
 
 image:demo_poll_mbf_events/image30_demo_poll_mbf_events.png[image,width=207,height=259]
 
 [start=2] 
 
-. Select the component, and review the properties.
+. Select the *Component* and review the *Properties*.
 
 image:demo_poll_mbf_events/image31_demo_poll_mbf_events.png[image,width=601,height=251]
 
 [start=3]
 
-. In *Collection* enter the *Transaction Collection* as demonstrated below.
+. In *Collection*, enter the *Transaction Collection* as demonstrated below.
 
 image:demo_poll_mbf_events/image32_demo_poll_mbf_events.png[image,width=542,height=265]
 
 [start=4]
 
 . Drag the *Set Variable* component to your canvas.
-. Select and review the properties.
+. Select and review the *Properties*.
 
 image:demo_poll_mbf_events/image33_demo_poll_mbf_events.png[image,width=601,height=283]
 
@@ -388,7 +392,7 @@ image:demo_poll_mbf_events/image35_demo_poll_mbf_events.png[image,width=601,heig
 
 [start=7]
 
-. From your Mule Palette, select the *File > Write* component, and drag it to the canvas.
+. From your Mule Palette, select the *File > Write* component and drag it to the canvas.
 
 image:demo_poll_mbf_events/image36_demo_poll_mbf_events.png[image,width=298,height=268]
 
@@ -411,7 +415,7 @@ image:demo_poll_mbf_events/image39_demo_poll_mbf_events.png[image,width=601,heig
 
 [start=11]
 
-. Under the *General* section, click the *Switch to Expression* button, and enter the *Variable Name*.
+. Under the *General* section, click the *Switch to Expression* button and enter the *Variable Name*.
 
 image:demo_poll_mbf_events/image40_demo_poll_mbf_events.png[image,width=596,height=292]
 
@@ -419,7 +423,7 @@ image:demo_poll_mbf_events/image40_demo_poll_mbf_events.png[image,width=596,heig
 
 To test your flow, start the Mule Application.
 
-. Go to the *Run menu*, and select *Run*.
+. Go to the *Run menu* and select *Run*.
 
 image:demo_poll_mbf_events/image41_demo_poll_mbf_events.png[image,width=567,height=376]
 
@@ -433,7 +437,7 @@ image:demo_poll_mbf_events/image42_demo_poll_mbf_events.png[image,width=601,heig
 
 [start=2]
 
-. Make a change to the *customer*, and check your output path for a created file.
+. Make a change to the *customer* and check your output path for a created file.
 
 image:demo_poll_mbf_events/image43_demo_poll_mbf_events.png[image,width=601,height=98]
 
@@ -467,7 +471,7 @@ image:demo_poll_mbf_events/image49_demo_poll_mbf_events.png[image,width=250,heig
 
 [start=4]
 
-. Drag the *Set Payload* component to the *Error Handler*, and set an appropriate message.
+. Drag the *Set Payload* component to the *Error Handler* and set an appropriate message.
 
 image:demo_poll_mbf_events/image50_demo_poll_mbf_events.png[image,width=442,height=298]
 

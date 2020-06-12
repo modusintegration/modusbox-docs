@@ -10,7 +10,7 @@ toc::[]
 
 The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
 
-The following guide, explains how to submut a batch process on the server.
+The following guide explains how to submit a batch process on the server.
 
 The _PortX JDE Connector_ allows you to discover functions by name, providing full access to all Business Function signatures. The Connector manages a cache repository for all function’s metadata used at least once.
 
@@ -24,7 +24,7 @@ A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, the and
 
 === Requirements
 
-* Review the link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
+Review the link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
 
 == Submit a Batch Process
 
@@ -38,7 +38,7 @@ image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 
 === Project Dependencies
 
-. In you *pom.xml*, add the following to you *repositories* section.
+. In your *pom.xml*, add the following to you *repositories* section.
 [source,xml]
 ----
 <repository>
@@ -49,7 +49,7 @@ image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 ----
 [start=2]
 
-. Add the following to you *dependencies* section.
+. Add the following to your *dependencies* section.
 
 [source,xml]
 ----
@@ -68,7 +68,7 @@ image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 ----
 [start=3]
 
-. Add or update the following to you *plugins* section.
+. Add or update the following to your *plugins* section.
 
 [source,xml]
 ----
@@ -154,7 +154,7 @@ mvn clean install
 
 To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
 
-. Open the Mule flow for your project, and select the *Global Elements* tab at the bottom of the *Editor Window*.
+. Open the Mule flow for your project and select the *Global Elements* tab at the bottom of the *Editor Window*.
 
 image:demo_ube/image3_demo_ube.png[image,width=515,height=273]
 [start=2]
@@ -165,7 +165,7 @@ image:demo_ube/image4_demo_ube.png[image,width=511,height=312]
 
 [start=3]
 
-. Type *JDE* in the filter edit box, and select *JDE Config*. 
+. Type *JDE* in the filter edit box and select *JDE Config*. 
 . Click *OK*.
 
 image:demo_ube/image5_demo_ube.png[image,width=386,height=390]
@@ -202,7 +202,7 @@ image:demo_ube/image9_demo_ube.png[image,width=263,height=286]
 
 [start=3]
 
-. Select the *HTTP Listener* component from your canvas, and inspect the *Properties* window.
+. Select the *HTTP Listener* component from your canvas and inspect the *Properties* window.
 
 image:demo_ube/image10_demo_ube.png[image,width=655,height=390]
 
@@ -249,7 +249,7 @@ NOTE: If this the first time you are selecting a *UBE*, the process  may take so
 image:demo_ube/image15_demo_ube.png[image,width=307,height=30]
 
 === Troubleshooting
-If the operation fails (possibly due to a timeout), the follwing message appears.
+If the operation fails (possibly due to a timeout), the following message appears.
 
 image:demo_ube/troubleshoot_timeout_message.png[image,width=345,height=115]
 
@@ -288,7 +288,7 @@ image:demo_ube/image16_demo_ube.png[image,width=586,height=225]
 
 [start=3]
 
-. Drag the inputs to outputs, or double-click the output parameter to add to your edit window, and change as required. 
+. Drag the inputs to outputs or double-click the output parameter to add to your edit window and change as required. 
 
 Examples:
 
@@ -314,13 +314,13 @@ image:demo_ube/image19_demo_ube.png[image,width=280,height=262]
 
 [start=3]
 
-. Select the *Set Payload* component, and review the *Properties*.
+. Select the *Set Payload* component and review the *Properties*.
 
 image:demo_ube/image20_demo_ube.png[image,width=601,height=157]
 
 [start=4]
 
-. Change the payload to reflect the desired output, and save the project.
+. Change the payload to reflect the desired output and save the project.
 
 image:demo_ube/image21_demo_ube.png[image,width=601,height=174]
 
@@ -330,7 +330,7 @@ To Test your flow:
 
 . Start your Mule application.
 
-. Go to the *Run* menu, and select *Run*.
+. Go to the *Run* menu and select *Run*.
 
 image:demo_ube/image22_demo_ube.png[image,width=461,height=305]
 
@@ -358,7 +358,7 @@ image:demo_ube/image27_demo_ube.png[image,width=220,height=118]
 
 [start=3]
 
-. Select the *On Error Continue* scope, and under *Type* enter:
+. Select the *On Error Continue* scope and under *Type* enter:
 
 *JDE:ERROR_SUBMITTING_UBE*
 
@@ -370,7 +370,7 @@ image:demo_ube/image29_demo_ube.png[image,width=231,height=268]
 
 [start=4]
 
-. Drag the *Set Payload* component to the *Error Handler*, and set an appropriate message.
+. Drag the *Set Payload* component to the *Error Handler* and set an appropriate message.
 
 image:demo_ube/image30_demo_ube.png[image,width=506,height=202]
 
@@ -403,7 +403,7 @@ image:demo_ube/image30_demo_ube.png[image,width=506,height=202]
 * The values can be *literals* or other *table columns*.
 * *Literals* can be *String or Number*.
 * The *sentence* can include the *AND and/or* the *OR* conditions
-* To override the *default precedence* you need to use parenthesis as
+* To override the *default precedence*, you need to use parenthesis as
 ** *C1 AND (C2 OR C3)*
 ** The sentence only accepts one level of Parenthesis.
 

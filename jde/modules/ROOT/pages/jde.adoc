@@ -4,25 +4,24 @@
 :toc: macro
 :toclevels: 2
 
-////
 toc::[]
-////
+
 == Introduction
 
 The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution, and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
 
-////
 This User Guide provides information to accomplish the following scenarios.
 
 * Log into _JD Edwards EnterpriseOne™_
-* Invoke a Business Function (BSFN) on the server by passing its parameters.
-* Invoke a Business Function (BSFN) on the server using Transaction Processing.
-* Invoke a UBE by name.
-* Check a UBE call status asynchronously.
-* Poll Events.
-* Poll EDI Events.
+* <<Invoke Business Functions>> (BSFN) on the server by passing its parameters.
+* <<Invoke Business Functions>> (BSFN) on the server using Transaction Processing.
+* Invoke a xref:demo_ube.adoc[UBE] by name.
+* Check a xref:demo_ube_status.adoc [UBE Call Status] asynchronously.
+* xref:demo_poll_mfb_events.adoc [Poll MFB Events].
+* xref:demo_poll_edi_events.adoc [Poll EDI Events].
 * Log out.
-////
+
+
 The _PortX_ _JDE Connector_ allows you to discover functions by name, providing you with full access to all Business Function signatures.
 
 The _PortX_ _JDE Connector_ manages a cache repository for all functional metadata used at least once.
@@ -88,7 +87,7 @@ NOTE: All libraries in this path are added to the library. It is recommended tha
 
 See <<Appendix A>> for a detailed list of files required per your Tools Release.
 
-Once completed the resulting bundle is located at, (following the sample above) _/tmp/jde-lib-bundle-1.0.0.jar_.
+Once completed the resulting bundle is located at (following the sample above) _/tmp/jde-lib-bundle-1.0.0.jar_.
 
 === Install JDE Libraries Bundle into Maven Repository
 
@@ -101,8 +100,8 @@ mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jded
 
 . Update your *Settings.xml* file (~*/.m2* path)
 [loweralpha]
-.. In the servers section, add the following.
-.. Replace the *Username* and *Password*, provided to you via email.
+.. In the servers section add the following.
+.. Replace the *Username* and *Password* provided to you via email.
 
 [source,xml]
 ----
@@ -126,7 +125,7 @@ To ensure the correct operation of all JDE Connector features, the Enterprise Se
 
 Please refer to https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_] to check updates, and locate different *.dll* extensions for other platforms.
 
-NOTE: The following *.dll* files, all relate to the _Microsoft Windows_ platform.
+NOTE: The following *.dll* files all relate to the _Microsoft Windows_ platform.
 
 This configuration must be done by your CNC administrator. Refer to https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_]
 
@@ -279,7 +278,7 @@ specialEDITables=<F470462>
 validateEnterpriseServicesWith=BOTH
 validateEnterpriseServicesUBEName=R0008P_XJDE0001
 ----
-If you are required to run the application on _CloudHub_, you need to add the section *OCM_SERVERS* with the servers that the _JDE Connector_ uses in the connection. The JDE Servers *Names* are in the column *OMSRVR* of *F98611* table. 
+If you are required to run the application on _CloudHub_, add the section *OCM_SERVERS* with the servers that the _JDE Connector_ uses in the connection. The JDE Servers *Names* are in the column *OMSRVR* of *F98611* table. 
 
 To add these servers on the *OCM_SERVERS* section, follow this format: 
 
@@ -365,7 +364,7 @@ image:demo_getting_started/image2_getting_started.png[image,width=321,height=423
 
 === Project Dependencies
 
-. In you pom.xml, add the following to your *repositories* section.
+. In your *pom.xml* add the following to your *Repositories* section.
 [source,xml]
 
 ----
@@ -377,7 +376,7 @@ image:demo_getting_started/image2_getting_started.png[image,width=321,height=423
 ----
 [start=2]
 
-. Add the following to your *dependencies* section.
+. Add the following to your *Dependencies* section.
 
 [source,xml]
 ----
@@ -396,7 +395,7 @@ image:demo_getting_started/image2_getting_started.png[image,width=321,height=423
 ----
 [start=3]
 
-. Add or update the following to you *plugins* section.
+. Add or update the following to your *Plugins* section.
 
 [source,xml]
 ----
@@ -421,7 +420,7 @@ image:demo_getting_started/image2_getting_started.png[image,width=321,height=423
 Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folders within the project:
 
 * Project *Root*
-* _src/main/resources_
+* *_src/main/resources_*
 
 NOTE: If there is a requirement to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
 
@@ -469,7 +468,7 @@ To redirect the _JD Edwards EntrpriseOne™_ Logger to the Mule Logger (allowing
 If you experience trouble resolving all dependencies:
 
 . Shut down _AnyPoint Studio_
-. Run the following command in the project root folder from the terminal/command prompt,
+. Run the following command in the project ROOT folder from the terminal/command prompt,
 [source]
 mvn clean install
 
@@ -480,7 +479,7 @@ mvn clean install
 
 To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
 
-. Open the Mule flow for your project, and select the *Global Elements* tab at the bottom of the Editor Window.
+. Open the Mule flow for your project and select the *Global Elements* tab at the bottom of the Editor Window.
 
 
 image:demo_getting_started/image4_getting_started.png[image,width=515,height=273]
@@ -491,7 +490,7 @@ image:demo_getting_started/image4_getting_started.png[image,width=515,height=273
 image:demo_getting_started/image5_getting_started.png[image,width=511,height=312]
 
 [start=3]
-. Type *JDE* in the filter edit box, and select *JDE Config*. 
+. Type *JDE* in the filter edit box and select *JDE Config*. 
 . Click *OK*.
 
 image:demo_getting_started/image6_getting_started.png[image,width=386,height=390]
@@ -524,7 +523,7 @@ image:demo_getting_started/image9_getting_started.png[image,width=615,height=459
 image:demo_getting_started/image10_getting_started.png[image,width=263,height=286]
 [start=3]
 
-. Select the *HTTP Listener* component from the canvas, and inspect the properties window.
+. Select the *HTTP Listener* component from the canvas and inspect the *Properties* window.
 
 image:demo_getting_started/image11_getting_started.png[image,width=655,height=390]
 
@@ -544,7 +543,7 @@ image:demo_getting_started/image13_getting_started.png[image,width=641,height=34
 
 [start=7]
 
-. Click the *MIME Type* link, and add a parameter for *addressno*.
+. Click the *MIME Type* link and add a parameter for *addressno*.
 
 image:demo_getting_started/image14_getting_started.png[image,width=601,height=229]
 
@@ -584,7 +583,7 @@ If the operation fails (possibly due to a timeout), the following message appear
 
 image:demo_getting_started/troubleshoot_timeout_message.png[image,width=345,height=115]
 
-Please review the timeout settings in _Anypoint Studio_'s *Preferences*.
+Review the timeout settings in _Anypoint Studio_'s *Preferences*.
 
 
 . Go the *Window > Preferences* menu.
@@ -626,7 +625,7 @@ image:demo_getting_started/image20_getting_started.png[image,width=601,height=27
 
 === Set Payload Output
 
-. In the Mule Palette, you can either select *Core* and scroll down to *Transformers*, or type *Payload* in the search bar.
+. In the Mule Palette you can either select *Core* and scroll down to *Transformers*, or type *Payload* in the search bar.
 
 image:demo_getting_started/image21_getting_started.png[image,width=325,height=246]
 [start=2]
@@ -637,12 +636,12 @@ image:demo_getting_started/image22_getting_started.png[image,width=332,height=21
 
 [start=3]
 
-. Select the *Set Payload* component, and review the properties.
+. Select the *Set Payload* component and review the properties.
 
 image:demo_getting_started/image23_getting_started.png[image,width=601,height=157]
 [start=4]
 
-. Change the payload to reflect your desired output, and save the project
+. Change the payload to reflect your desired output and save the project
 
 image:demo_getting_started/image24_getting_started.png[image,width=601,height=178]
 
@@ -650,7 +649,7 @@ image:demo_getting_started/image24_getting_started.png[image,width=601,height=17
 
 To test your flow, start the Mule application.
 
-. Go to the *Run* menu, and select *Run*.
+. Go to the *Run* menu and select *Run*.
 
 image:demo_getting_started/image25_getting_started.png[image,width=567,height=376]
 
@@ -695,19 +694,19 @@ image:demo_getting_started/support_newuser02.png[image,width=453,height=407]
 
 [start=3]
 
-. Enter your email address, and click *Send Link*.
+. Enter your email address and click *Send Link*.
 
 A confirmation email is sent to your specified email address.
 
 [start=4]
-. Locate the email in your inbox, and click *Sign up*.
+. Locate the email in your inbox and click *Sign up*.
 
 
 image:demo_getting_started/support_newuser03.png[image,width=303,height=824]
 
 [start=5]
 
-. Enter your *Full Name*, and choose a *Password*. 
+. Enter your *Full Name* and choose a *Password*. 
 . Click *Sign Up*.
 
 image:demo_getting_started/support_newuser04.png[image,width=449,height=401]
@@ -730,7 +729,7 @@ image:demo_getting_started/support_newticket02.png[image,width=404,height=655]
 
 Enter your support request details. 
 
-NOTE: Keep in mind that we always for your configuration files, and the related log files (see <<Support Required Files>>). To service your ticket more effectively, attach these files when creating your ticket.
+NOTE: Keep in mind that we request your configuration files, and the related log files (see <<Support Required Files>>). To service your ticket more effectively, attach these files when creating your ticket.
 
 image:demo_getting_started/support_newticket03.png[image,width=910,height=681]
 
@@ -763,7 +762,7 @@ To retrieve your *JD Edwards System Configuration* for tools releases from 9.2.1
 
 === Getting your JD Edwards Configuration
 
-The following requests must be executed, to retrieve your JDE configuration from _JD Edwards EnterpriseOne Server Manager_.
+The following requests must be executed to retrieve your JDE configuration from _JD Edwards EnterpriseOne Server Manager_.
 
 Using a *Rest Client*, execute the below requests using basic authentication and the server manager user’s credentials (The default admin user is usually *jde_admin*).
 

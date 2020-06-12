@@ -33,7 +33,7 @@ JDE outbound transactions require that you set a _Processing Option_ specifyin
 
 The following is an example:
 
-To Generate an Order Acknowledgment (*855/ORDSP*) document, you  must setup its processing options to enable interoperability. 
+To Generate an Order Acknowledgment (*855/ORDSP*) document, you must setup its processing options to enable interoperability. 
 
 . Log into JDE, and change the processing options for this application. 
 
@@ -64,7 +64,7 @@ Refer to the link:https://docs.oracle.com/cd/E64610_01/index.htm[_Oracle JD Edwa
 
 == Poll EDI Events
 
-NOTE: Update AnyPoint Studio before starting with a _PortX JDE Connector_ project.
+NOTE: Ensure that you update your AnyPoint Studio before starting with a _PortX JDE Connector_ project.
 
 === Creating a New Mule Project 
 
@@ -74,7 +74,7 @@ image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,heigh
 
 === Project Dependencies
 
-. In your *pom.xml* file, add the following to you *repositories section*.
+. In your *pom.xml* file, add the following to you *Repositories* section.
 [source,xml]
 ----
 <repository>
@@ -84,7 +84,7 @@ image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,heigh
 </repository>
 ----
 [start=2]
-. Add the following to you *dependencies* section.
+. Add the following to your *Dependencies* section.
 
 [source,xml]
 ----
@@ -103,7 +103,7 @@ image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,heigh
 ----
 [start=3]
 
-. Add or update the following to you *plugins* section.
+. Add or update the following to your *Plugins* section.
 [source,xml]
 ----
 <plugin>
@@ -178,7 +178,8 @@ If you are having trouble resolving all dependencies,
 . Shut down AnyPoint Studio
 . Run the following command in the project root folder from the terminal/command prompt,
 
-_mvn clean install_
+[source]
+mvn clean install
 
 [start=3]
 . Open AnyPoint Studio and check dependencies again.
