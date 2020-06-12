@@ -1,5 +1,5 @@
 == Tracking Errors
-If you encounter errors in Transaction Monitor, you can review, assess, and replay these errors by tracking them in Ihub. Start by tracking individual errors in Transactions View, and continue by tracking multiple errors in Errors View.
+If you encounter errors in Transaction Monitor, you can review, assess, and replay these errors by tracking them in PortX. Start by tracking individual errors in Transactions View, and continue by tracking multiple errors in Errors View.
 
 See xref:central-pane-elements.adoc#errors.view[Errors View] for more information. 
 

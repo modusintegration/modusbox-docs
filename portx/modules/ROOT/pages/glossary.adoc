@@ -15,11 +15,11 @@ Actor:: An entity, such as a partner, an application, or YourCompany B2B that ca
 
 API Key:: 32-bit alphanumeric universal unique identifier (UUID) string used by client applications to communicate with PortX. Be sure you fully understand how this key is used before you create it.
 
-Any:: IHub <<A,Actor>> that includes all shared application-specific information. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+Any:: PortX <<A,Actor>> that includes all shared application-specific information. You can see how this <<A,Actor>> works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
 
 Application:: Software program or programs that have a role within your organization. 
 
-Artifact:: Software component of the IHub system. 
+Artifact:: Software component of the PortX system. 
 
 ////
 [[sectb]]
@@ -48,15 +48,15 @@ Document Definition:: A specific document format that is configured in the syste
 Document properties:: Document properties are data fields that are extracted from received documents for the purpose of correlation, duplicate checking, and searching in the B2B Transactions screen.  
 Document Properties are configured for Document Definitions.  The user provides the Name of the property and the path (XPath for XML, JSONPath for others) for retrieving the property from the document. These properties are extracted and stored by the Tracking service.
 
-Document Type:: IHub <<A,Artifact>> that identifies types of <<D,document>>s based on values such as <<S,standard>> and <<M,message type>>.
+Document Type:: PortX <<A,Artifact>> that identifies types of <<D,document>>s based on values such as <<S,standard>> and <<M,message type>>.
 
 == E
 
 Endpoint:: Entry point to a service, process, queue or topic destination.
 
-Environment:: Unit of IHub access management that facilitates partitioning of <<A,Artifact>>s, so that a given artifact (and the configuration with which it is associated) exists only in the environment in which it is created.
+Environment:: Unit of PortX access management that facilitates partitioning of <<A,Artifact>>s, so that a given artifact (and the configuration with which it is associated) exists only in the environment in which it is created.
 
-Environment ID:: String that uniquely identifies an IHub environment.
+Environment ID:: String that uniquely identifies an PortX environment.
 
 External Partner:: Any company registered in PortX that is not the Home Partner.
 
@@ -87,7 +87,7 @@ Message Type:: One of several values that together define a <<D,Document Type>>.
 
 == P
 
-Partner:: A company that exchanges B2B messages; one of the types of IHub <<A,Actor>>s. 
+Partner:: A company that exchanges B2B messages; one of the types of PortX <<A,Actor>>s. 
 
 Partner Identifier:: A predefined identifier of a particular Partner.  Partner Identifiers have Type and Qualifier that indicate the identifier scheme and Value.
 
@@ -96,7 +96,7 @@ Partner Identifier:: A predefined identifier of a particular Partner.  Partner I
 Relationship:: Union of an actor with another actor for the purpose of partitioning artifacts.
 Analagous to a programming namespace. 
 
-Route:: IHub <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
+Route:: PortX <<A,Artifact>> that connects a <<S,Source Channel>> to a <<T,Target Channel>>.
 
 Routing Engine::
 ifdef::camel[]

@@ -2,7 +2,7 @@
 
 In this example of a multi-route routing scenario, your organization receives a 
 xref:glossary#d[Document] from a xref:glossary#p[Partner].
-IHub has been configured to process the document in two ways:
+PortX has been configured to process the document in two ways:
 
 * Route a copy of the document to an internal API
 * Route a copy of the document directly to a destination you use to backup received documents. This routing is referred to as *passthru* because it does not require a map.  
@@ -13,9 +13,9 @@ image::multi-route-routing-scenario-overview.png[img-multi-route-routing-scenari
 
 == Background Reading
 
-xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational PortX terminology. 
 
-xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how PortX works.
 
 == xref:glossary#a[Actor]s
 
@@ -145,9 +145,9 @@ the *From* Partner is configured as *A* and the *To* Partner as *YourCompany B2B
 
 == Outcomes
 
-If all artifacts in the following table are configured appropriately, then the outcome of any of a Partners in the scenario sending a document of Document Type *Y* to the Endpoint specific to their relationship with *YourCompany B2B* is that IHub will route the document both to that Endpoint and also to a destination at which all received documents are stored. 
+If all artifacts in the following table are configured appropriately, then the outcome of any of a Partners in the scenario sending a document of Document Type *Y* to the Endpoint specific to their relationship with *YourCompany B2B* is that PortX will route the document both to that Endpoint and also to a destination at which all received documents are stored. 
 
-If any artifact in the relationship between the partner and *YourCompany B2B* or in *YourCompany B2B : Any* is incorrectly configured (or not configured at all), then IHub will reject the document. 
+If any artifact in the relationship between the partner and *YourCompany B2B* or in *YourCompany B2B : Any* is incorrectly configured (or not configured at all), then PortX will reject the document. 
 
 For more information, see <<Outcome Details>>.
 

@@ -1,6 +1,6 @@
 == Get Started
 
-. xref:index.adoc#start-integration-hub[Start Integration Hub].
+. xref:index.adoc#start-integration-hub[Start PortX].
 The <<transaction-monitoring.adoc#img-transaction-monitoring, Transaction Monitoring Page>> appears.
 
 . In the left-hand navigation pane, click *Partners and Applications*. The <<partner-configuration.adoc#img-trading-partners, Trading Partners Page>> appears.

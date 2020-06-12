@@ -23,7 +23,7 @@ idea
 deled
 
 
-  C:\Users\Ian\Documents\Work\modusbox-docs\portx\modules\ROOT\pages\hello-ihub.adoc (1 hit)
+  C:\Users\Ian\Documents\Work\modusbox-docs\portx\modules\ROOT\pages\hello-PortX.adoc (1 hit)
 	Line 71: Anypoint Studio with Mule 3.9.1
   C:\Users\Ian\Documents\Work\modusbox-docs\portx\modules\ROOT\pages\information-hub-tutorial-td.adoc (7 hits)
 	Line 35: * Anypoint Studio with Mule 3.9.1

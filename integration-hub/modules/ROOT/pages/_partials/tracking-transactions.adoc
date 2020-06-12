@@ -1,5 +1,5 @@
 == Tracking Transactions
-Tracking transactions is a primary function of analyzing B2B communications in Ihub. You can use the Transactions View as your starting page to track events in Ihub.
+Tracking transactions is a primary function of analyzing B2B communications in PortX. You can use the Transactions View as your starting page to track events in PortX.
 
 See also xref:central-pane-elements.adoc#transactions-view[Transactions View] for more information.
 

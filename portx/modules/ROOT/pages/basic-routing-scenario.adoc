@@ -1,8 +1,8 @@
 = Basic Routing Scenario
 
 In this example of a basic routing scenario, your organization receives a xref:glossary#d[document] from a xref:glossary#p[Partner]. 
-If IHub has been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], IHub routes the xref:glossary#d[document] to an internal API. 
-If IHub has not been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], IHub rejects the document. 
+If PortX has been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], PortX routes the xref:glossary#d[document] to an internal API. 
+If PortX has not been configured to receive a xref:glossary#d[document] of this xref:glossary#d[Document Type], PortX rejects the document. 
 
 
 [[img-basic-routing-scenario-overview]]
@@ -12,9 +12,9 @@ image::basic-routing-scenario-overview.png[img-basic-routing-scenario-overview, 
 
 == Background Reading
 
-xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational PortX terminology. 
 
-xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works. 
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how PortX works. 
 
 
 == xref:glossary#a[Actor]s
@@ -141,7 +141,7 @@ Otherwise, the xref:glossary#d[document] will be <<document-rejected,rejected>>.
 
 == xref:glossary#d[Document] Accepted and Routed
 
-All xref:glossary#a[Artifact]s are correctly configured; IHub routes an incoming xref:glossary#d[document] of xref:glossary#d[Document Type] *Y* from Partner *PartA* to xref:glossary#e[Endpoint] *RecFromA*.
+All xref:glossary#a[Artifact]s are correctly configured; PortX routes an incoming xref:glossary#d[document] of xref:glossary#d[Document Type] *Y* from Partner *PartA* to xref:glossary#e[Endpoint] *RecFromA*.
 
 [[img-basic-routing-scenario-outcome-success]]
 
@@ -158,7 +158,7 @@ PortX:
 == xref:glossary#d[Document] Rejected
 
 Partner *PartA* sends a xref:glossary#d[document] of xref:glossary#d[Document Type] *Z* to xref:glossary#e[Endpoint] *RecFromA*. 
-xref:glossary#d[Document Type] *Z* is not configured in xref:glossary#r[Relationship] *_YourCompany_ B2B : Any*; IHub rejects the document. 
+xref:glossary#d[Document Type] *Z* is not configured in xref:glossary#r[Relationship] *_YourCompany_ B2B : Any*; PortX rejects the document. 
 
 [[img-basic-routing-scenario-outcome-rejection]]
 

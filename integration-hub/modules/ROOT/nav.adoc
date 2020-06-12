@@ -1,4 +1,4 @@
-* xref:index.adoc[Integration Hub]
+* xref:index.adoc[PortX]
 
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
@@ -47,10 +47,10 @@
 *** xref:security.adoc[Security]
 ////
 ifdef::mule[]
-** xref:integration-hub-tutorial-td.adoc[Integration Hub Tutorial: Designing a Transaction]
+** xref:integration-hub-tutorial-td.adoc[PortX Tutorial: Designing a Transaction]
 endif::[]
 ////
-** xref:integration-hub-apis.adoc[Integration Hub APIs]
+** xref:integration-hub-apis.adoc[PortX APIs]
 
 ** xref:glossary.adoc[Glossary]
 

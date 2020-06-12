@@ -10,9 +10,9 @@ image::shared-routing-scenario-overview.png[img-shared-routing-scenario-overview
 
 == Background Reading
 
-xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational PortX terminology. 
 
-xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how PortX works.
 
 == xref:glossary#a[Actor]s
 

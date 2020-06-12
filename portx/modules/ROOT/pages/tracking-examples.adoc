@@ -2,9 +2,9 @@
 :keywords: Anypoint b2b PortX concepts
 
 PortX Transaction Monitor enables you to monitor B2B transaction data traveling through PortX.
-This section identifies examples in which PortX (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:index.adoc[PortX] for more information.
+This section identifies examples in which PortX (PortX) is useful to track B2B exchanges. A basic knowledge of PortX is assumed; see xref:index.adoc[PortX] for more information.
 
-Transaction Monitor allows you to track events. An event is defined as the type of data that travels through Ihub. Track events under the following tracking categories.
+Transaction Monitor allows you to track events. An event is defined as the type of data that travels through PortX. Track events under the following tracking categories.
 
 * <<Tracking Transactions>> 
 * <<Tracking Transmissions>>
@@ -34,7 +34,7 @@ To change the time period, see xref:central-pane-elements#timeframe-dropdown-lis
 To change the type of data displayed, see xref:central-pane-elements#view-dropdown-list[View Dropdown List].
 
 ////
-This section identifies examples in which PortX (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:index.adoc[PortX] for more information.
+This section identifies examples in which PortX (PortX) is useful to track B2B exchanges. A basic knowledge of PortX is assumed; see xref:index.adoc[PortX] for more information.
 ////
 include::{partialsdir}/replaying-an-incomplete-transaction.adoc[]
 

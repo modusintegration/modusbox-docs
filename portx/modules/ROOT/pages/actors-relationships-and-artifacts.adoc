@@ -5,14 +5,14 @@ xref:glossary#a[Actor]s, xref:glossary#r[Relationship]s, and xref:glossary#a[Art
 
 == Actors
 
-An IHub 
+An PortX 
 xref:glossary#a[Actor] 
 is an entity that you can pair with another xref:glossary#a[Actor] to form a 
 xref:glossary#r[Relationship].
 
 An xref:glossary#a[Actor] contains: 
 
-* xref:glossary#i[Identifier]s that identify it to IHub
+* xref:glossary#i[Identifier]s that identify it to PortX
 * xref:glossary#c[Certificate]s 
 (if you add them)
 
@@ -54,7 +54,7 @@ xref:glossary#a[Artifact]s. For example, xref:basic-routing-scenario#relationshi
 
 == Artifacts
 
-An xref:glossary#a[Artifact] is a software component of the IHub system that resides in a xref:glossary#r[Relationship]. This section identifies all IHub xref:glossary#a[Artifact]s.
+An xref:glossary#a[Artifact] is a software component of the PortX system that resides in a xref:glossary#r[Relationship]. This section identifies all PortX xref:glossary#a[Artifact]s.
 
 === xref:glossary#d[Document Type]
 

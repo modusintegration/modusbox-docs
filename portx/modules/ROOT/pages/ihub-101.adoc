@@ -70,11 +70,11 @@ internal api endpoint
 
 may have multiple target channels from one source channel
 
-combo of channels is a Transaction - IHub built around these
+combo of channels is a Transaction - PortX built around these
 
 Transaction is inside o relationship
 
-== Setting up in IHub
+== Setting up in PortX
 
 Monitoring screen
 Partners and Apps

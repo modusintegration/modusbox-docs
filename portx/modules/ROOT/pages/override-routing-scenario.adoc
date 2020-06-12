@@ -3,11 +3,11 @@
 In this example of an override routing scenario, your organization expects to receive xref:glossary#d[document]s of a single xref:glossary#d[Document Type] from multiple xref:glossary#p[Partner]s.
 
 
-If IHub has been configured to receive a document of this xref:glossary#d[Document Type], IHub routes the document to an internal API. 
+If PortX has been configured to receive a document of this xref:glossary#d[Document Type], PortX routes the document to an internal API. 
 
 However, one partner uses a variation of the Document Type, so you must override the standard xref:glossary#m[Map] that you use to transform that partner's Document Type to your internal Document Type before routing.
 
-If IHub has not been configured to receive a document of this Document Type, IHub rejects the document. 
+If PortX has not been configured to receive a document of this Document Type, PortX rejects the document. 
 
 [[img-override-routing-scenario-overview]]
 
@@ -16,9 +16,9 @@ image::override-routing-scenario-overview.png[img-override-routing-scenario-over
 
 == Background Reading
 
-xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational PortX terminology. 
 
-xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how PortX works.
 
 == xref:glossary#a[Actor]s
 
@@ -211,9 +211,9 @@ It receives a document of *Y'*, maps it to a document of *X* and then sends it t
 
 == Outcomes
 
-If all artifacts in the following table are configured appropriately, then the outcome of any of the partners in the scenario sending a document of *Y* to the Endpoint specific to their relationship with **_YourCompany_ B2B** is that IHub will route the document to that Endpoint. 
+If all artifacts in the following table are configured appropriately, then the outcome of any of the partners in the scenario sending a document of *Y* to the Endpoint specific to their relationship with **_YourCompany_ B2B** is that PortX will route the document to that Endpoint. 
 
-If any artifact in the relationship between the partner and **_YourCompany_ B2B** or in **_YourCompany_ B2B* : Any* is incorrectly configured (or not configured at all), then IHub will reject the document. 
+If any artifact in the relationship between the partner and **_YourCompany_ B2B** or in **_YourCompany_ B2B* : Any* is incorrectly configured (or not configured at all), then PortX will reject the document. 
 
 For more information, see <<Outcome Details>>.
 
@@ -343,7 +343,7 @@ PortX:
 ==== Document Rejected
 
 Partner *PartA* sends a document of Document Type *Z* to Endpoint *RecFromA*. 
-Document Type *Z* is not configured in Relationship **_YourCompany_ B2B* : Any*; IHub rejects the document. 
+Document Type *Z* is not configured in Relationship **_YourCompany_ B2B* : Any*; PortX rejects the document. 
 
 PortX:
 

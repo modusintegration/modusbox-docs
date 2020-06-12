@@ -1,6 +1,6 @@
 == Tracking Documents
 
-In Transacion Monitor you can track Documents as they travel through Ihub from end to end as a complete document flow. Start by tracking individual documents from Transactions view, and continue by tracking multiple documents in Documents View.
+In Transacion Monitor you can track Documents as they travel through PortX from end to end as a complete document flow. Start by tracking individual documents from Transactions view, and continue by tracking multiple documents in Documents View.
 
 See also xref:central-pane-elements.adoc#documents-view[Documents View] for more information.
 

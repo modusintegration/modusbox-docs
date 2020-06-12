@@ -9,9 +9,9 @@ image::chained-transactions-routing-scenario-overview.png[img-chained-transactio
 
 == Background Reading
 
-xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational IHub terminology. 
+xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts]:: Introduces foundational PortX terminology. 
 
-xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how IHub works.
+xref:transaction-processing-framework.adoc[Transaction-Processing Framework]:: Explains how PortX works.
 
 * Application A (configured as *AppA*)
 * Partner A (configured as *PartA*)
@@ -89,7 +89,7 @@ s|X
 
 |xref:glossary#t[Target Channel]
 |*X-to-Router*
-|Sends Document of Document Type *X* to IHub 
+|Sends Document of Document Type *X* to PortX 
 |xref:channels.adoc[Channels] 
 
 |xref:glossary#s[Source Channel]

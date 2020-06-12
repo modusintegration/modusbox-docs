@@ -1,5 +1,5 @@
 == Tracking Transmissions 
-Transaction Monitor allows you to track transmissions as they travel from end to end through Ihub. Start by tracking individual transmissions in Transactions View, and continue by tracking multiple transmissions in Transmissions View.
+Transaction Monitor allows you to track transmissions as they travel from end to end through PortX. Start by tracking individual transmissions in Transactions View, and continue by tracking multiple transmissions in Transmissions View.
 
 See also xref:central-pane-elements.adoc#transmissions-view[Transmissions View] for more information.
 
@@ -66,7 +66,7 @@ Tracking in xref:central-pane-elements.adoc#transmissions-view[Transmissions Vie
 * Transport
 * Transmission ID
 
-Use these filters to compare transmissions and track specific transmissions in Ihub.
+Use these filters to compare transmissions and track specific transmissions in PortX.
 
 Viewing Filter::
 Use the Viewing filter to batch transmissions by Actor Type. Select one of the following buttons.

@@ -1,7 +1,7 @@
 = Tracking Examples
 :keywords: Anypoint b2b PortX concepts
 
-This section identifies examples in which PortX (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:portx.adoc[PortX] for more information.
+This section identifies examples in which PortX (PortX) is useful to track B2B exchanges. A basic knowledge of PortX is assumed; see xref:portx.adoc[PortX] for more information.
 
 == Replaying an Incomplete Transaction
 
@@ -134,7 +134,7 @@ Only errors of that source type appear in the Content Area below.
 Combigne the *Error Source* Filter with parameters set in the xref:central-pane-elements.adoc#timeframe-dropdown-list[Timeframe Dropdown List] to track errors of this source over time.
 
 == Tracking Transmissions 
-Transaction monitor allows you to track transmissions. Tracking a transmission is useful in that it allows you analyze the flow in which documents are traveling through Ihub.  
+Transaction monitor allows you to track transmissions. Tracking a transmission is useful in that it allows you analyze the flow in which documents are traveling through PortX.  
 
 
 === Filtering by Transport
