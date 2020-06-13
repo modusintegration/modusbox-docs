@@ -4,7 +4,9 @@
 :toc: macro
 :toclevels: 2
 
+////
 toc::[]
+////
 
 == Introduction
 
@@ -21,7 +23,7 @@ Furthermore, you can have all functions in the flow, processing within the same 
 
 === Prerequisites
 
-A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
+A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, and https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
 === Requirements
 
@@ -205,13 +207,13 @@ image:demo_poll_edi_events/image7_demo_poll_edi_events.png[image,width=511,heigh
 
 image:demo_poll_edi_events/image8_demo_poll_edi_events.png[image,width=386,height=390]
 
-[start=4]
+[start=5]
 
 . On the *General* tab, enter the required credential and environment.
 
 image:demo_poll_edi_events/image9_demo_poll_edi_events.png[image,width=378,height=383]
 
-[start=5]
+[start=6]
 
 . Click *Test Connection*.
 

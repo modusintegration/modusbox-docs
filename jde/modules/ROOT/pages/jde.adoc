@@ -4,7 +4,9 @@
 :toc: macro
 :toclevels: 2
 
+////
 toc::[]
+////
 
 == Introduction
 
@@ -16,9 +18,9 @@ This User Guide provides information to accomplish the following scenarios.
 * <<Invoke Business Functions>> (BSFN) on the server by passing its parameters.
 * <<Invoke Business Functions>> (BSFN) on the server using Transaction Processing.
 * Invoke a xref:demo_ube.adoc[UBE] by name.
-* Check a xref:demo_ube_status.adoc [UBE Call Status] asynchronously.
-* xref:demo_poll_mfb_events.adoc [Poll MFB Events].
-* xref:demo_poll_edi_events.adoc [Poll EDI Events].
+* Check a xref:demo_ube_status.adoc[UBE Call Status] asynchronously.
+* xref:demo_poll_mbf_events.adoc[Poll MFB Events].
+* xref:demo_poll_edi_events.adoc[Poll EDI Events].
 * Log out.
 
 
@@ -38,18 +40,18 @@ A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, _Mule 4_, and
 * https://www.mulesoft.com/lp/dl/studio[AnyPoint Studio™ 7.x or higher]
 * https://maven.apache.org/download.cgi[Maven] 3.3.9 or higher (do not use the embedded Maven for AnyPoint Studio)
 ** For an easy installation tutorial see https://www.mkyong.com/maven/how-to-install-maven-in-windows/[How to install Maven for Windows]
-* Access to your _JD Edwards EnterpriseOne™_ installation java libraries.
+* Access to your _JD Edwards EnterpriseOne™_ installation java libraries
 
-=== Configuration Settings
-* As the connector is based on Oracle’s _JD Edwards EnterpriseOne™_ interoperability solution, the below settings must be reviewed/changed.
+==== *Configuration Settings*
+As the connector is based on Oracle’s _JD Edwards EnterpriseOne™_ interoperability solution, the following settings must be reviewed/changed.
 
-** XML Dispatch Kernel
-** The XML CallObject kernel
-** The XML Transaction kernel
-** The XML List kernel
-** XML LookupInfo section XML Request type 7 inside jde.ini To activate Submit UBE.
+* XML *Dispatch* Kernel
+* The XML *CallObject* kernel
+* The XML *Transaction* kernel
+* The XML *List* kernel
+* XML *LookupInfo* section XML Request type 7 inside *jde.ini* (To activate *Submit* UBE).
 
-This configuration is done by the CNC Administrator for your _JD Edwards EnterpriseOne™_ system. For more information, refer to the https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_]
+This configuration is done by the CNC Administrator for your _JD Edwards EnterpriseOne™_ system. For more information, refer to the https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_].
 
 === Compatibility
 Oracle’s _JD Edwards EnterpriseOne™_ Tools Release 8.98 Update 4 and onwards.
@@ -85,7 +87,7 @@ _java -jar JDELibrariesBundleBuilderTool-1.0.0.jar --destDir "/tmp" --jdbcDriver
 
 NOTE: All libraries in this path are added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation.
 
-See <<Appendix A>> for a detailed list of files required per your Tools Release.
+See *Appendix A* for a detailed list of files required per your Tools Release.
 
 Once completed the resulting bundle is located at (following the sample above) _/tmp/jde-lib-bundle-1.0.0.jar_.
 
@@ -114,7 +116,7 @@ mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jded
 
 === Add PortX JDE License to Mule Runtime
 
-Your  _PortX JDE Connector_ license can be added one of two ways.
+Your _PortX JDE Connector_ license can be added one of two ways.
 
 * Copy the license file in the project folder *src/main/resources*.
 * Copy the license file to Mule installation folder *mule/conf*.
@@ -143,7 +145,7 @@ numberOfAutoStartProcesses=1
 ----
 
 [start=2]
-. Ensure that sufficient processes are available for the *XML Dispatch Kernel*.
+. Ensure that sufficient processes are available for the XML *Dispatch* Kernel.
 
 [source,ini]
 ----
@@ -155,7 +157,7 @@ numberOfAutoStartProcesses=1
 ----
 
 [start=3]
-. Ensure that sufficient processes are available for the *XML Service Kernel*.
+. Ensure that sufficient processes are available for the XML *Service* Kernel.
 
 [source,ini]
 ----
@@ -179,7 +181,7 @@ Disk_Monitor=YES
 ----
 
 [start=5]
-. Ensure that the *XML Kernels* are correctly defined.
+. Ensure that the XML Kernels are correctly defined.
 
 [source,ini]
 ----
@@ -226,11 +228,11 @@ XMLKernelReply7=1
 
 === Enterprise Server Connection Considerations
 
-Enable Predefined *JDENET* Ports in *JDE.INI*.
+Enable Predefined JDENET Ports in *JDE.INI*.
 
 When there is a firewall between the Mulesoft ESB and the Enterprise Server, set the *PredfinedJDENETPorts* setting to *1* in the *JDE.INI* file of the Enterprise Server.
 
-This setting enables the *JDENET* network process to use a predefined range of *TCP/IP* ports. This port range starts at the port number that is specified by *serviceNameListen* and ends at the port that is calculated by the equation *serviceNameListen = maxNetProcesses - 1*. 
+This setting enables the JDENET network process to use a predefined range of TCP/IP ports. This port range starts at the port number that is specified by serviceNameListen and ends at the port that is calculated by the equation serviceNameListen = maxNetProcesses - 1. 
 
 You must open these ports in a firewall setup to successfully connect the Mulesoft ESB to the Enterprise Server.
 
@@ -266,7 +268,7 @@ Add the following:
 |(Optional) This option is used by the Test Connection to Validate Enterprise Servicies. The values are *BSFN, UBE, BOTH or NONE*.
 
 |validateEnterpriseServicesUBEName=R0008P_XJDE0001
-|(Optional) This is the UBE used to validate the connection.
+|(Optional) This is the *UBE* used to validate the connection.
 |===
 
 Eample:
@@ -280,9 +282,9 @@ validateEnterpriseServicesUBEName=R0008P_XJDE0001
 ----
 If you are required to run the application on _CloudHub_, add the section *OCM_SERVERS* with the servers that the _JDE Connector_ uses in the connection. The JDE Servers *Names* are in the column *OMSRVR* of *F98611* table. 
 
-To add these servers on the *OCM_SERVERS* section, follow this format: 
+Follow this format to add these servers on the *OCM_SERVERS* section.
 
-* JDE Server Name = FQDN or IP
+* JDE Server Name = *FQDN* or *IP*
 
 *[OCM_SERVERS]*
 |===
@@ -485,7 +487,7 @@ To use the _PortX JDE Connector_ in your Mule application, you must configure a 
 image:demo_getting_started/image4_getting_started.png[image,width=515,height=273]
 
 [start=2]
-. Click Create.
+. Click *Create*.
 
 image:demo_getting_started/image5_getting_started.png[image,width=511,height=312]
 
@@ -497,7 +499,7 @@ image:demo_getting_started/image6_getting_started.png[image,width=386,height=390
 
 [start=5]
 
-. On the *General* tab, enter the required credential and environment.
+. On the *General* tab, enter the required *Credentials* and *Environment*.
 
 image:demo_getting_started/image7_getting_started.png[image,width=378,height=383]
 
@@ -518,7 +520,7 @@ image:demo_getting_started/image9_getting_started.png[image,width=615,height=459
 
 [start=2]
 
-. From the Mule Palette (top right), select *HTTP*, and drag Listener to the canvas.
+. From the Mule Palette (top right), select *HTTP*, and drag *Listener* to the canvas.
 
 image:demo_getting_started/image10_getting_started.png[image,width=263,height=286]
 [start=3]
@@ -528,9 +530,9 @@ image:demo_getting_started/image10_getting_started.png[image,width=263,height=28
 image:demo_getting_started/image11_getting_started.png[image,width=655,height=390]
 
 
-The connector requires a Connector Configuration. 
+The JDE connector requires a Connector Configuration. 
 [start=4]
-. Click *Add* to create a connector configuration.
+. Click *Add* to create a Connector Configuration.
 
 . Give the *HTTP endpoint* a more descriptive name (eg: *get-AddressBookName-http-endpoint*) and press *OK* to go back to the global HTTP endpoint dialog box.
 
@@ -549,7 +551,7 @@ image:demo_getting_started/image14_getting_started.png[image,width=601,height=22
 
 [start=8]
 
-. Save the project. 
+. Save your project. 
 
 The connector is ready to process requests.
 
@@ -564,7 +566,7 @@ image:demo_getting_started/image15_getting_started.png[image,width=332,height=23
 [start=3]
 
 . Drag the connector over to the canvas.
-. Select it and review the properties window.
+. Select it and review the *Properties* window.
 . Give it a meaningful name (eg. Call *AddressBookMasterMBF*).
 
 . Under *General*, click on the drop-down for *Business Function Name*.
@@ -636,12 +638,13 @@ image:demo_getting_started/image22_getting_started.png[image,width=332,height=21
 
 [start=3]
 
-. Select the *Set Payload* component and review the properties.
+. Select the *Set Payload* component and review the *Properties*.
 
 image:demo_getting_started/image23_getting_started.png[image,width=601,height=157]
 [start=4]
 
-. Change the payload to reflect your desired output and save the project
+. Change the payload to reflect your desired output.
+. Save your project.
 
 image:demo_getting_started/image24_getting_started.png[image,width=601,height=178]
 
@@ -663,7 +666,7 @@ image:demo_getting_started/image26_getting_started.png[image,width=601,height=88
 
 === Example Project
 
-You can download the example source that was created in the Getting Started Guide from
+You can download the example source that was created in the Getting Started Guide here: https://modusintegration.github.io/mule-connector-jde/2.0.0/demo/demo-portx-jde-bsfn.zip[Download].
 
 === Additional Demos
 
@@ -680,7 +683,7 @@ Creating a Support User::
 
 To log a support ticket, a support portal user account is required. If you do not already have one, follow these steps to create a new user.
 
-. In a web browser, go to https://modusbox.atlassian.net/servicedesk/customer 
+. In a web browser, go to: https://modusbox.atlassian.net/servicedesk/customer 
 
 
 image:demo_getting_started/support_newuser01.png[image,width=652,height=1209]
@@ -774,7 +777,7 @@ In the below request urls, you must replace the following values with the releva
 * *_sm-port_* with the server manager port
 * *_instance_* (where applicable) with the instance name of the server JD Edwards EnterpriseOne Server Manager instance the request is being executed for.
 
-===== Requests
+==== Requests
 * Global
 ** Instances Detail: 
 
@@ -1095,11 +1098,11 @@ This is an example of *CallObjectErrorItem* object:
 
 Valid Sentence (maximum level of Parenthesis opened is 1).
 
-_C1 AND (C2 OR C3) AND (C4 OR C5)_.
+* _C1 AND (C2 OR C3) AND (C4 OR C5)_
 
 Invalid Sentences (the maximum level of Parenthesis opened is 2).
 
-_C1 AND (C2 OR (C3 AND C4))_
+* _C1 AND (C2 OR (C3 AND C4))_
 
 Examples:
 

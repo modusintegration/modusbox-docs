@@ -4,7 +4,9 @@
 :toc: macro
 :toclevels: 2
 
+////
 toc::[]
+////
 
 == Introduction
 

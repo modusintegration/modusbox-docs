@@ -4,13 +4,15 @@
 :toc: macro
 :toclevels: 2
 
+////
 toc::[]
+////
 
 == Introduction
 
 The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
 
-The following guide explains how to submit a batch process on the server.
+The following guide explains how to submit a batch process on the _JD Edwards EnterpriseOne™_ server.
 
 The _PortX JDE Connector_ allows you to discover functions by name, providing full access to all Business Function signatures. The Connector manages a cache repository for all function’s metadata used at least once.
 
@@ -24,7 +26,7 @@ A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, the and
 
 === Requirements
 
-Review the link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
+Review the link:/[_PortX JDE Connector for Mule 4 – Getting Started Guide_] for a detailed list of requirements and setup prerequisites.
 
 == Submit a Batch Process
 
@@ -409,13 +411,13 @@ image:demo_ube/image30_demo_ube.png[image,width=506,height=202]
 
 Example:
 
-* Valid Sentence (maximum level of Parenthesis opened is 1).
+Valid Sentence (maximum level of Parenthesis opened is 1).
 
-C1 AND (C2 OR C3) AND (C4 OR C5)
+* _C1 AND (C2 OR C3) AND (C4 OR C5)_
 
-* Invalid Sentence (maximum level of Parenthesis opened is 2).
+Invalid Sentence (maximum level of Parenthesis opened is 2).
 
-C1 AND (C2 OR (C3 AND C4))
+* _C1 AND (C2 OR (C3 AND C4))_
 
 Examples:
 
