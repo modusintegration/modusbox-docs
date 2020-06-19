@@ -1,9 +1,10 @@
 // Release Notes TOC File
 
-** xref:integration-hub-release-notes.adoc[Integration Hub Release Notes]
+** xref:portx-release-notes.adoc[PortX Release Notes]
 ifdef::mule[]
-** xref:integration-hub-connector-release-notes.adoc[Integration Hub Connector Release Notes]
+** xref:portx-connector-release-notes.adoc[PortX Connector Release Notes]
 ** xref:as2-release-notes.adoc[AS2 Connector Release Notes]
 ** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes]
+** xref:x12-translator-release-notes.adoc[X12 Translator Release Notes]
 ** xref:jde-release-notes.adoc[JD Edwards Connector Release Notes]
 endif::mule[]

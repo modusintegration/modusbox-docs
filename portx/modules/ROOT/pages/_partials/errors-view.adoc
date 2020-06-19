@@ -1,0 +1,72 @@
+== Errors View
+:icons: font
+The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
+For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Examples].
+
+=== Content
+Each row has 4 columns:
+
+. *From:* Who the transaction came from
+. *To:* Who the transaction was going to
+. *Date:* Date and time at which the error occurred
+. *Error Code:* Code associated with the error
+
+=== Error Detail Pane (Right)
+This pane is hidden when no error is selected. It contains:
+
+* Error Message icon:file-code-o[role="blue"]
+* Error ID icon:plus-square-o[role="blue"]
+* Source
+* Source ID icon:plus-square-o[role="blue"]
+
+==== Action Icons
+
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue file code icon icon:file-code-o[role="blue"] opens a detailed error message
+
+==== Buttons
+* A *Transaction* icon:exchange[] button will appear when an error is selected.
+** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
+
+
+=== Filters
+You can filter errors based on:
+
+Date::
+* Today
+* Past 48 Hours
+* 1 Week
+* 1 Month
+* Custom Range
+** *From*: Select a date from the calendar; only errors that occurred after that date will appear.
+** *To*: Select a date from calendar; only errors that occurred before that date will appear
+
+Viewing::
+* Both
+* Partners
+* Applications
+
+Error code::
+* 0- Unknown
+* 1- Duplicate
+* 2- FA
+* 3- TA
+* 4- Laguishing
+* 5- Exception
+* 6- Parse Error
+
+Error Source::
+* Transmission
+* Transaction
+* Document
+
+Relationship:: 
+Select the application or partner between which the error occurs.
+
+Error ID::
+Enter a specific error identifier.
+
+
+==== To Show all Errors
+
+Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.
