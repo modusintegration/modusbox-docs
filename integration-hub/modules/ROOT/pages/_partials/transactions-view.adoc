@@ -2,7 +2,9 @@
 The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
 For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Examples].
 
+[[img-transaction-monitoring]]
 
+image::transaction-monitoring.png[img-transaction-monitoring, title="Transactions View"]
 === Content
 Each row has 10 columns:
 
