@@ -1,1 +1,0 @@
-include::{partialsdir}/tracking-scenarios.adoc[]
