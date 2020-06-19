@@ -1,7 +1,7 @@
 = Tracking Examples
 :keywords: Anypoint b2b Integration Hub concepts
 
-This section identifies examples in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:integration-hub.adoc[Integration Hub] for more information.
+This section identifies examples in which Integration Hub (IHub) is useful to track B2B exchanges. A basic knowledge of Ihub is assumed; see xref:index.adoc[Integration Hub] for more information.
 
 == Replaying an Incomplete Transaction
 
@@ -40,7 +40,7 @@ Once the transaction has been replayed, the blue replay circle appears in the Re
 +
 . In the Transaction Detail Pane, a link to *view replays* appears.
 +
-This automatically filters the content area in xref:transactions-view.adoc[Transactions View] by *Transaction ID*, so that only transactions that are replays of the original transaction appear.
+This automatically filters the content area in xref:central-pane-elements.adoc#transactions-view[Transactions View] by *Transaction ID*, so that only transactions that are replays of the original transaction appear.
 +
 If the replayed transaction fails again, repeat this process until the replay completes.
 +
@@ -61,16 +61,16 @@ The xref:central-pane-elements.adoc#dashboard[Dashboard] at the top of the xref:
 . Hover over different slices of the Errors Pie Chart to see what types of errors have occurred.
 . To see information for a given error type, click one of the slices.
 +
-The xref:errors-view.adoc[Errors View] appears, showing only the error type you selected.
+The xref:central-pane-elements#errors-view[Errors View] appears, showing only the error type you selected.
 +
 This enables you to look for a pattern among these errors that will facilitate a solution to the errors. This is useful when transactions are failing. but you can't ascertain the solution by just looking at the transactions themselves.
 + 
 * The *Transaction* button in the Error Detail Pane at the top right enables you to view the transactions with which these errors are associated.
 
 === View Error information from the Detail Pane
-. Select the xref:errors-viw.adoc[Errors View] from the Central Pane
+. Select the xref:central-pane-elements.adoc#errors-view[Errors View] from the Central Pane
 + 
-The xref:errors-view.adoc#error-detail-pane[Error Detail Pane] opens on the right.
+The xref:central-pane-elements.adoc#error-detial-pane-(Right)[Error Detail Pane] opens on the right.
 . Click the blue file code icon next to the Error Message.
 + 
 An error message appears.
@@ -160,9 +160,9 @@ Only transmissions of that transport type appear in the Content Area.
 
 ==== Transport Problem Identification
 
-If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter (such as Relationship) in combination with the xref:transmissions-view.adoc[Transmissions View]. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
+If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter (such as Relationship) in combination with the xref:central-pane-elements.adoc#transmissions-view[Transmissions View]. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
 
-You can find additional relevant information in the xref:transmissions-view.adoc#transmissions-detail-pane[Transmissions Detail Pane] to the right. In the Detail Pane, you can see what happened with individual transactions with which transmissions were involved through a navigation button in the upper corner.
+You can find additional relevant information in the xref:central-pane-elements.adoc#transmissions-detail-pane-(Right)[Transmissions Detail Pane] to the right. In the Detail Pane, you can see what happened with individual transactions with which transmissions were involved through a navigation button in the upper corner.
 
 This allows you to follow transactions through their entire cycle, and if necessary replay them through the *Replay* button.
 
