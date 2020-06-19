@@ -3,6 +3,9 @@
 The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
 For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Examples].
 
+[[img-errors-view]]
+image::errors-view.png[img-errors-view,title="Errors View"]
+
 === Content
 Each row has 4 columns:
 

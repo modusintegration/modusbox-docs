@@ -24,13 +24,13 @@ The <<img-transaction-monitoring>> appears.
 
 image::transaction-monitoring.png[img-transaction-monitoring, title="Transaction Monitoring Page"]
 
-[step=2]
+[start=2]
 
 . By default, the Transaction Monitoring page presents data for today's transactions.
 +
-To change the time period, see xref:central-pane-elements#timeframe-dropdown-list[Timeframe Dropdown List].
+* To change the time period, see xref:central-pane-elements#timeframe-dropdown-list[Timeframe Dropdown List].
 +
-To change the type of data displayed, see xref:central-pane-elements#view-dropdown-list[View Dropdown List].
+* To change the type of data displayed, see xref:central-pane-elements#view-dropdown-list[View Dropdown List].
 
 
 == Page Elements
