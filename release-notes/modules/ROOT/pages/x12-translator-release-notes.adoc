@@ -1,0 +1,20 @@
+= ModusBox X12 Parser Release Notes
+Version: 0.95 Release Candidate
+
+== Overview
+
+We’ve built the X12 translator that is included with the Modusbox Integration Hub to be easy to use and robust while still giving you access to modern integration solutions. 
+It provides businesses the ability to automate X12 messages without compromise.
+
+* **Easy**: The X12 Parser for PortX was built to alleviate IT bottlenecks by offering an intuitive solution that EDI analysts can work with directly.
+* **Advanced**: Designed to support flexible validation rules, such as those required by WEDI-SNIP and VICS.
+* **Performant**: Performance was an important design consideration during development. Our X12 Parser can process EDI transactions in milliseconds under heavy loads.
+* **Robust**: Handles large EDI files, up to 3 gigabytes.
+* **Customizable** The parser ships with schemas for all of the standard X12 messages. Schemas can be customized for specific partners if needed.
+
+This release is the first release candidate for the final version.
+
+== What’s New
+
+
+== Known Issues

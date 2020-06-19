@@ -1,7 +1,10 @@
 = PortX
 :keywords: b2b, introduction, portal, partner, manager
+////
+include::{partialsdir}/symbols.adoc[]
+////
 
-PortX provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
+{product} provides a single web-based user interface for <<Transaction Monitoring>>, <<Partner Configuration>>, and <<Administration>>.
 
 == Transaction Monitoring
 
