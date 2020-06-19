@@ -1,0 +1,55 @@
+. On the xref:img-trading-partners[], click *GearCo*.
++
+The xref:img-company-information-gearco[] appears.
+
+[[img-company-information-gearco, Company Information Page]]
+
+image::yc/company-information-gearco.png[img-company-information-yc, title="Company Information Page"]
+
+[start=2]
+
+. In the *Partners* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Identifiers*.
++
+The <<img-identifiers-gearco>> appears.
+
+[[img-identifiers-gearco, Identifiers Page]]
+
+image::yc/identifiers-gearco.png[img-identifiers-gearco, title="Identifiers Page"]
+
+[start=3]
+
+. On the <<img-identifiers-gearco>>, click *New*.
++
+The <<img-identifier-new>> appears.
+
+[[img-identifier-new, New Identifier Page]]
+
+image::identifier-new.png[img-identifier-new, title="New Identifier Page"]
+
+[start=4]
+
+. In the *Type* box, click the down-arrow.
++
+A list of identifier types appears.
+. From the list, select *X12-ISA*.
++
+More identifier boxes appear.
++
+(The specific boxes that appear depend on your choice in this step.)
+. In the *Interchange ID Qualifier (ISA)* listbox, click the down-arrow.
++
+A list of qualifiers appears.
+. *GearCo* and *AcmeHomeSupply* do not use standards-based identifiers, so *ZZ (Mutually Defined)* is the appropriate choice.
+. In the *Interchange ID (ISA)* box, type *GearCo*.
++
+
+. Click *Save* to save the new identifier.
++
+The <<img-identifiers-x12-added-gearco>> appears.
+
+
+[[img-identifiers-x12-added-gearco, Identifiers Page (Identifier Added)]]
+
+image::yc/identifiers-x12-added-gearco.png[img-identifiers-x12-added-gearco, title="Identifiers Page (X12-ISA Identifier Added)"]
+
+Note that the Identifier you added in the preceding steps (*X12-ISA*) now appears.

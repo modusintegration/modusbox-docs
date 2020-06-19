@@ -1,0 +1,70 @@
+= PortX(TM): Managing, Connecting and Integrating Partners and Applications
+
+PortX streamlines data flow between you, your partners, and your applications with products designed for use with 
+ifdef::mule[]
+the Mulesoft Enterprise Service Bus (ESB).
+endif::[]
+ifdef::camel[]
+Apache Camel 3.__x__.
+endif::[]
+ifdef::omni[]
+an Enterprise Service Bus (ESB). 
+endif::[]
+
+PortX facilitates fast, secure, and reliable transaction processing without the developer overhead typically required to achieve it.
+
+
+== PortX Components
+
+=== xref:portx:ROOT:index.adoc[PortX]
+ifdef::mule[]
+===  xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector]
+=== xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
+=== xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+////
+=== xref:x12-translator:ROOT:getting-started.adoc[X12 Translator]
+////
+=== xref:jde:ROOT:jde.adoc[JD Edwards Connector]
+////
+=== xref:x12-translator:ROOT:getting-started.adoc[X12 Translator]
+////
+endif::mule[]
+
+=== xref:release-notes:ROOT:release-notes.adoc[Release Notes]
+
+== Requirements
+
+ifdef::camel[]
+=== ESB
+
+For information about products built to power integration on Apache Camel 3.__x__, see these libraries:
+
+* xref:portx::index.adoc[PortX]
+endif::[]
+ifdef::omni[]
+=== ESB
+
+For information about products built to power integration on most Enterprise Service Bus platforms, see these libraries:
+
+* xref:portx::index.adoc[PortX]
+endif::[]
+
+ifdef::mule[]
+
+=== Mulesoft
+
+* xref:portx:ROOT:index.adoc[PortX (Mulesoft)]
+* xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector (Mulesoft)]
+* xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
+* xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+endif::[]
+
+== Getting Started
+
+For conceptual information, see xref:portx:ROOT:key-concepts.adoc[Key Concepts].
+
+////
+ifdef::mule[]
+To see PortX in action, see xref:portx-tutorial-td.adoc[PortX Tutorial: Designing a Transaction]
+endif::[]
+////

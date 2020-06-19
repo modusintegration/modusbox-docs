@@ -1,0 +1,106 @@
+= Partner Conversations
+
+When you create a  _Partner Conversation_, you establish a sequence of events between your company and a trading partner. You can track each event in the sequence of the conversation as it proceeds from the first event to the last.
+
+This page provides instructing for creating and editing Partner Conversations. For information about tracking Conversations, see  xref:transaction-monitoring[Transaction Monitoring].
+
+include::{partialsdir}/edit-settings.adoc[]
+
+[start=3]
+
+. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Partner Conversations*.
++
+The <<img-partner-conversations>> appears.
+
+[[img-partner-conversations]]
+
+
+[start=4]
+
+. From this page, you can:
+
+* <<Add a New Partner Conversation>>
+* <<Edit an Existing Partner Conversation>>
+
+== Edit an Existing Partner Conversation
+
+. On the <<img-partner-conversations>>, click the Partner Conversation you want to edit.
++
+The Partner Conversation-Edit Page appears.
+
+
+[start=2]
+
+. On the Partner Conversation-Edit Page, you can:
+* <<Add a New Step>>
+* <<Edit an Existing Step>>
+
+== Add a New Partner Conversation
+
+. On the Partner Conversation Page, click *New*.
++
+The Partner Conversation Page appears.
+
+
+[start=2]
+
+. In the *Name* box, type a name for this process.
+. Click *Save*.
++
+The Partner Conversation Steps Page appears.
+
+
+== Add a New Step
+. On the Partner Conversation Steps Page, in the *Steps* section, click *New*. +
+The Partner Conversation Define-Step Page appears.
+
+
+[start=2]
+
+ . In the *Direction* dropdown listbox, click the down-arrowhead, then click either *INBOUND* or *OUTBOUND*.
+
+ . Click the *Document Definition* box.
++
+The *Pick a document* box appears.
+
+. In the *Pick a document* box, click the row that corresponds to the document for which you want to define a process, then click *Use selected*.
++
+The Partner Conversation Steps Page reappears, with the direction and document you selected in the preceding steps shown.
+. Click *Save* to save the definition.
++
+The Partner Conversation Step-Added Page appears.
+
+
+== Add Additional Steps
+
+. On the Partner Conversation Step-Added Page, click *New*.
++
+The Partner Conversation Add-Another-Step-Page appears.
+
+[start=2]
+
+. Enter values for direction and definition, as in the previous steps.
+
+. In the *Document Definition Properties* dropdown listbox, click the down-arrowhead, then select a property.
++
+NOTE: For a property to appear in this list, it must have been defined in xref:document-types[Document Types].
+
+. In the *Other Document Definition Properties* dropdown listbox, click the down-arrowhead, then select a property.
++
+NOTE: For a property to appear in this list, it must have been defined in xref:document-types[Document Types].
+
+. In the *New Correlation Type Name* box, enter a name for this correlation type, then click *Create*.
+. Click *Save*. +
+The Partner Conversation Step-Added Page appears.
++
+To add another step, repeat the previous steps.
+
+== Edit an Existing Step
+
+. On the Partner Conversation-Edit Page, in the *Step* column, click the number that corresponds to the step you want to edit.
++
+The Partner Conversation Define-Step Page appears.
+. Edit information that pertains to the step as appropriate.
++
+For more information, see <<Add a New Step>>.
+. Click *Save*.

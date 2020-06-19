@@ -1,8 +1,0 @@
-name: integration-hub-connector
-title: Integration Hub Connector
-version: 'latest'
-start_page: ROOT:integration-hub-connector.adoc
-nav:
-- modules/ROOT/nav.adoc
-
-

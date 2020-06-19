@@ -1,0 +1,7 @@
+= Format Defaults
+
+You can provide defaults for these formats:
+
+* xref:x12-settings[X12 Settings]
+* xref:edifact-settings[EDIFACT Settings]
+* xref:csv-settings[CSV Settings]

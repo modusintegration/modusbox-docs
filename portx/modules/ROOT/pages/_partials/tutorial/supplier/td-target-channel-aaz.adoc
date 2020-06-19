@@ -1,0 +1,9 @@
+// Create Target Channel
+
+. On the Navigation Menu, Click Target Channel <<img-td-new-gearco>>, and then click *Create New Channel*.
++
+The <<img-td-new-gearco>> displays the <<img-td-target-channel-in-progress-gearco>>.
+
+[[img-td-target-channel-in-progress-gearco]]
+
+image::yc/td-target-channel-in-progress-gearco.png[img-td-target-channel-in-progress-gearco, title="Target Channel In-Progress Page"]

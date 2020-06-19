@@ -1,0 +1,159 @@
+== Tracking Transmissions 
+Transaction Monitor allows you to track transmissions as they travel from end to end through PortX. Start by tracking individual transmissions in Transactions View, and continue by tracking multiple transmissions in Transmissions View.
+
+See also xref:central-pane-elements.adoc#transmissions-view[Transmissions View] for more information.
+
+=== Track in the Dashboard
+The xref:central-pane-elements.adoc#dashboard[Dashboard] at the top of the xref:transaction-monitoring.adoc[Transaction Monitoring Page] provides a data summary of events in a given timeframe (the default setting is current day) including how many transmissions have been detected during that timeframe.
+
+Start::
+. Hover over different slices of the Transmissions Pie Chart to see what types of transmissions have occurred.
+. To see information for a given transmission type, click one of the slices.
++
+The Transmissions View appears, showing only the transmission type you selected in the Content Area.
+
+=== Track in Transactions View
+Tracking a transmission in Transactions View is a useful way to quickly find detailed information on a transmission, such as:
+
+* Who it is From 
+* The Transmission Type
+* The Message Payload
+* The Status
+* The Transmission ID
+* The Partnership ID
+
+//-
+
+Start::
+. Select *Transactions* in the View Dropdown List.
++ 
+The Transactions View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the transmission event(s).
++ 
+Only transactions of that timeframe appear in the Content Area.
+. Click on the transaction containing the transmission.
++
+The Transaction Event Rows appear.
+. Click on the Transmission Event from the Transaction Event Rows.
++ 
+The Transmission Detail Pane appears.
+
+==== Detail Pane
+Use information in the Transmission Detail Pane to facilitate and manage the transmission.
+
+Complete Message Payload::
+. Click the blue arrow next to *Message Payload* in the Detail Pane.
++
+The complete Message Payload appears with the following options:
+
+* Download
+* Copy Content  
+* Copy Payload URl
+* Minimize
+* Close
+
+Transmission ID::
+. In the Detail Pane, click the blue copy icon next to Transmission ID. 
+. Copy the Transmission ID to quickly access the transmission in Transmissions View.
+
+NOTE: You can always use the *Reset Filters* button to get back to the full view.
+
+=== Track in Transmissions View
+Tracking in xref:central-pane-elements.adoc#transmissions-view[Transmissions View] allows you to apply various filters such as:
+
+* Relationship
+* File Name
+* Transport
+* Transmission ID
+
+Use these filters to compare transmissions and track specific transmissions in PortX.
+
+Viewing Filter::
+Use the Viewing filter to batch transmissions by Actor Type. Select one of the following buttons.
+* Both (Default)
+* Partners
+* Applications
+
+==== Track by Relationship (Your Company B2B)
+Use the Relationship filter to track transmissions between Actors (partners or applications). This filter is useful in that it allows you to view multiple transmissions that occur between Your Company and a specific Actor.
+
+Start::
+. Select *Transmissions* in the View Dropdown List.
++
+The Transmissions View appears.
+. In the Timeframe Dropdown List, choose an appropriate timeframe that includes the time of the transmission event(s).
++ 
+Only transmissions of that timeframe appear in the Content Area.
+. Click the *Relationship* tab in the Filter Bar.
++
+The Relationship Dropdown List appears.
+. In the Relationship Dropdown List select *Your Company* and the *Actor*.
++
+Only transmissions of this relationship appear in the Content Area.
+
+NOTE: You can view transmissions of other actor relationships by setting different values in the Relationship Filter.
+
+Relationship Filter Settings::
+
+* Application <--> Partner
+* Partner <--> Partner
+* Application <--> Application
+* Your Company <--> Application
+* Your Company <--> Partner
+
+//-
+
+* Click the *Transaction* button in the Transmission Detail Pane at the top right to view the transaction with which a transmission is associated. 
+
+==== Track by Transport
+
+Apply additional filters such as the Transport Filter to further track transmissions.
+
+Start::
+. Select *Transmissions* in the View Dropdown List.
++ 
+The Transmissions View appears.
+. Click on the *Transport* tab in the Filter Bar.
++
+The Transport Dropdown List Appears.
+. Select a *Transport* from the Transport Dropdown List.
++
+Only transmissions of that transport type appear in the Content Area.
+////
+==== Transport Problem Identification
+
+If you notice that you are getting a large number of errors from a single type of transport, you can sort your transmissions using a filter (such as Relationship) in the Transmissions View. The filter allows you to view a given transport type and see the differences between those that failed and those that succeeded.
+
+You can find additional relevant information in the Transmissions Detail Pane to the right. In the Detail Pane, you can see what happened with individual transactions with which transmissions were involved through the *Transaction* navigation button in the upper corner.
+
+This allows you to follow transactions through their entire cycle, and if necessary replay them through the *Replay* button.
+
+See xref:tracking-examples.adoc#replaying-an-incomplete-transaction[Replaying an Incomplete Transaction] for more information.
+////
+==== Track by Transmission ID
+Use the Transmission ID Filter to quickly track a transmission.
+
+. Select *Transmissions* in the View Dropdown List.
++
+The Transmissions View appears.
++
+. In the *Transmission ID* filter, enter the Transmission ID.
++
+Only the transmission you enter appears in the Content Area.
+
+==== Detail Pane 
+. In Transmissions View, click on the transmission.
++ 
+The Transmission Detail Pane appears.
+
+//-
+
+Copy Long Strings of Data ::
+. Click the blue *copy* icon to the right of the string.
+
+
+//-
+
+* Click the *Transaction* button in the Transmission Detail Pane at the top right to view the transaction with which this transmission is associated. 
+
+NOTE: You can always use the *Reset Filters* button to get back to the full view.

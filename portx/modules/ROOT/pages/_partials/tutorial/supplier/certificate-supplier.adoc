@@ -1,0 +1,40 @@
+// Upload Supplier Certificate
+
+. On the <<img-identifiers-x12-added-gearco>>, in the left-hand navigation pane, in the *USER INFO* section, click *Certificate*.
++
+The xref:img-certificates[] appears.
+
+[[img-certificates, Certificates Page]]
+
+image::certificates.png[img-certificates, title="Certificates Page"]
+
+[start=2]
+. Click *New* button. 
++
+The xref:img-certificate[] appears. 
+
+[[img-certificate, Add New Certificate Page]]
+
+image::certificate.png[img-certificate, title="New Certificate Page"]
+[start=3]
+. Click *Choose File*.
++
+A file selection window specific to the operating system of the computer you are using appears.
+. In the selection window, navigate to the folder to which you downloaded the tutorial materials in <<Download Tutorial Materials>>.
+. In the Certificates folder, select *HomeOrg.p12*. 
++
+*HomeOrg.p12* appears in the Certificate box. 
++
+The xref:img-certificate[] refreshes, displaying details of the uploaded certificate.
+
+. In the *Used with Partner* box, select *GearCo*.
+. In the *Certificate Purpose* box, select *AS2*.
+
+
+NOTE: Check the expiration date of certificate to make sure it is not expired. 
+
+[start=6]
+. Click *Save*.
++
+The xref:img-certificates[] appears.
+
