@@ -1,0 +1,11 @@
+= PortX Connector Release Notes
+:keywords: connector, release notes, 
+
+== Version 7.0.0 - 1 August 2018
+
+This is the initial release of this product as PortX PortX Connector. 
+
+Supported Mule Version: 3.9.0
+
+
+

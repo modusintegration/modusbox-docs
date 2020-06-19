@@ -1,0 +1,7 @@
+= Partners
+
+You can configure the following for a :
+
+* xref:company-information[Company Information]
+* xref:identifiers[Identifiers]
+* xref:administration[Administration] (Home partner only)

@@ -1,0 +1,9 @@
+= Configuration
+
+You can configure:
+
+* xref:document-types[Document Types]
+* xref:endpoints[Endpoints]
+* xref:maps[Maps]
+* xref:channels[Channels]
+* xref:routes[Routes]

@@ -1,0 +1,9 @@
+== Get Started
+
+NOTE: These settings are editable for your company (as identified on the
+<<partner-configuration.adoc#img-trading-partners,Trading Partners Page>>) only.
+
+. link:portx#start-portx[Start APM].
+When the <<index.adoc#img-portx-start,Transaction Monitoring Page>> appears, return to this page and procede to the next step.
+. In the left-hand navigation pane, click *Administration*. The
+Administration Page appears.
