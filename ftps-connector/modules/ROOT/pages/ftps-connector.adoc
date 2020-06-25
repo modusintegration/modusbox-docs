@@ -1,22 +1,21 @@
 = FTPS Connector
 :keywords: b2b, ftps, connector
 
-The FTPS Connector allows you to send and receive data over the FTPS protocol.
-
 == Introduction
 
-The FTPS Connector allows you to send and receive files over FTP on top of a TLS/SSL connection.
+The FTPS Connector allows you to send and receive data over the FTPS protocol. With the FTPS Connector, you can send and receive files over FTP on top of a TLS/SSL connection.
 
-After reading this page you should be able to accomplish the following:
+Follow these instructional guidelines to accomplish the following:
 
 * Install the FTPS Connector.
 * Configure the FTPS Connector to fit your needs.
-* Build a Hello World project.
+* Build a Hello World example project.
 * Run the example project.
 
 == Prerequisites
 
-This document assumes that you are familiar with Mule and the Anypoint Studio interface. Furthermore, it is assumed that you are familiar with FTPS.
+A familiar understanding of Mule,
+https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface and FTPS is assumed.
 
 === Namespace
 
@@ -34,30 +33,34 @@ http://www.mulesoft.org/schema/mule/ftps http://www.mulesoft.org/schema/mule/ftp
 * Mule 3.6.0+ server Runtime
 * Anypoint Studio March 2015 onwards
 
-== Installing and Configuring
+== Installation
 
 === Installing the FTPS Connector in Anypoint Studio
 
-. In Anypoint Studio, click the Exchange icon in the Studio taskbar.
-. Click Login in Anypoint Exchange.
-. Search for the connector and click Install.
+. In Anypoint Studio, click the *Exchange* icon in the Studio Taskbar.
+. Click *Login* in Anypoint Exchange.
+. Search for the connector and click *Install*.
 . Follow the prompts to install the connector.
 
-When Studio has an update, a message displays in the lower right corner, which you can click to install the update.
+NOTE: When Anypoint Studio has an update, a message displays in the lower right corner, which you can click to install the update.
 
 === Using the FTPS Module via Maven
 
-If you wish to use the FTPS Module in conjunction with Maven, please follow the instructions link:http://modusintegration.github.io/mule-connector-ftps/[here].
+If you deside to use the FTPS Module in conjunction with Maven, follow the instructions link:http://modusintegration.github.io/mule-connector-ftps/[here].
 
-=== Configuring
+== Configuration
 
-To configure the FTPS connector, determine your endpoint configuration needs. See the Hello World application below for a configuration example.
+To configure the FTPS Connector, determine your endpoint configuration needs. See the xref:use-case-example.adoc[Hello World] use case example for a configuration example.
 
+////
 === Updating From an Older Version
 
 This is currently the first version of the connector.
+////
 
-== Using This Connector
+== FTPS Connector Use Cases
+
+See the xref:use-case-example.adoc[Hello World] use case example for information on how to use and configure the FTPS connector.
 
 === Use Cases
 
@@ -69,9 +72,11 @@ This is currently the first version of the connector.
 === Tips
 
 * Use passive mode whenever possible. It is easier to set up from the client’s perspective.
-* Polling the server is possible from the FTPS connector itself; there’s no need to use a Poll component. This is useful when waiting for a given file to be published by others.
+* Polling the server is possible from the FTPS connector itself; there is no need to use a Poll component. This is useful when waiting for a given file to be published by others.
 * The FTPS Connector supports compression out-of-the-box. If your FTP server supports deflate mode (known as “mode z”), the FTPS Connector detects this feature and enters compression mode for you.
 
+
+////
 == Example Use Case - Hello World
 
 The following examples explain the FTPS Connector configuration options for sending and receiving files.
@@ -215,3 +220,4 @@ The above screenshot shows that the files are saved in our local /tmp directory.
 
 *Step 8* +
 Save your changes and run the application. The application reads files from the server matching the filename pattern and saves them locally under the same filename they had on the server.
+////
