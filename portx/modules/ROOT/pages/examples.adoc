@@ -36,5 +36,6 @@ include::{partialsdir}/promotion-scenarios.adoc[leveloffset=+1]
 
 // removed image PromoteIDsOffCertsOn kris 7/1/2017
 
-
+////
 include::{partialsdir}/tracking-scenarios.adoc[leveloffset=+1]
+////
