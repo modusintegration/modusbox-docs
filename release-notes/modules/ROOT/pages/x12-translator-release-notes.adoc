@@ -1,7 +1,8 @@
 = ModusBox X12 Translator Release Notes
 
-== Version 1.0.0
-<insert date>
+== Version 1.0.0 - June 1, 2020
+
+These release notes accompany the xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator User Guide].
 
 We’ve built the X12 Translator that is included with PortX to be easy to use, extensible, and scalable while still giving you access to modern integration solutions. It provides businesses the ability to automate X12 messages without compromise.
 
