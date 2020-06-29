@@ -2,7 +2,7 @@
 
 The following use case example demonstrates the FTPS Connector configuration options for sending and receiving files.
 
-Learn How To: ::
+Learn how to: ::
 * Receive a file over FTPS
 * Write a file on the server over FTPS
 * Receive one or more files over FTPS filtering by wildcard pattern
@@ -42,7 +42,7 @@ image:b2b_ftps_connector_05.png[b2b_ftps_connector_05]
 * Set the *Port* the FTP server is listening to (control channel). 
 * Set whether you prefer *Active* or *Passive* connection modes.
 
-* Fill in the blanks in the *Advanced* tab if choosing Active mode. 
+* Fill in the blanks in the Advanced tab if choosing *Active mode*. 
 * If you want to use Explicit mode, select *EXPLICIT* in the _Encryption mode_ field. 
 
 * The _Streaming_ option is suitable for large files; instead of reading the contents to a byte array in memory; an input stream is passed as the  payload to the next component in the flow.
@@ -74,9 +74,9 @@ File contents are passed to the next processor in the flow.
 image:b2b_ftps_connector_07.png[b2b_ftps_connector_07]
 
 * *Basic Settings*  +
-Select the *Read* operation.
+** Select the *Read* operation.
 * *General Options*  +
-Enter the path and filename of the file you aim to read from the server. In this case the transfer is _modus-test-read.txt_ which is located at the _/demo_ directory of the FTP user that is set.
+** Enter the path and filename of the file you aim to read from the server. In this case the transfer is _modus-test-read.txt_ which is located at the _/demo_ directory of the FTP user that is set.
 * **Post-processing**  +
 After a file is read, the connector attempts to delete it from the server unless _Move to Directory_ is set to an existing location on the server. This field is optional.
 * *Polling*  +
