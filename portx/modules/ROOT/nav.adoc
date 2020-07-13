@@ -64,13 +64,14 @@ endif::[]
 
 
 
+** xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector]
 
 ifdef::mule[]
-** xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector]
 ** xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 ** xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
-** xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator]
 ** xref:jde:ROOT:jde.adoc[JDE Connector]
 endif::mule[]
+
+** xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator]
 
 ** xref:release-notes:ROOT:release-notes.adoc[Release Notes]
