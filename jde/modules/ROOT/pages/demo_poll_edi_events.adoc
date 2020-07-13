@@ -45,10 +45,11 @@ To Generate an Order Acknowledgment (*855/ORDSP*) document, you must setup its p
 image:demo_poll_edi_events/image1_demo_poll_edi_events.png[image,width=482,height=437]
 
 image:demo_poll_edi_events/image2_demo_poll_edi_events.png[image,width=478,height=455]
+[start=4]
 
-The last configuration that is needed is inform to JDE connector the EDI outbound:
+. The last configuration that is needed is inform to JDE connector the EDI outbound.
 
-. Using Flat File Cross-Reference (*P47002*) form, the *Work With Flat File Cross-Reference* adds the following record:
+Using Flat File Cross-Reference (*P47002*) form, the *Work With Flat File Cross-Reference* adds the following record:
 
 image:demo_poll_edi_events/image3_demo_poll_edi_events.png[image,width=601,height=312]
 
@@ -239,7 +240,7 @@ image:demo_poll_edi_events/image11_demo_poll_edi_events.png[image,width=601,heig
 
 image:demo_poll_edi_events/image12_demo_poll_edi_events.png[image,width=295,height=278]
 
-[start=2]
+[start=3]
 
 . Select the *Scheduler* component from the canvas, and inspect the properties window, and change the Frequency to *2min*.
 
@@ -254,7 +255,7 @@ image:demo_poll_edi_events/image14_demo_poll_edi_events.png[image,width=221,heig
 
 [start=3]
 
-. Drag the connector over to the canvas. 
+. Drag the *JDE* connector over to the canvas. 
 . Select the connector and review the properties window.
 . Give it a meaningful name (eg. Call _Poll Order Acknowledgement EDI_).
 
@@ -329,7 +330,6 @@ image:demo_poll_edi_events/image22_demo_poll_edi_events.png[image,width=601,heig
 
 image:demo_poll_edi_events/image23_demo_poll_edi_events.png[image,width=399,height=216]
 
-
 Check that the Transactions were polled. 
 
 . From the Mule Palette, select and drag the *Choice* component.
@@ -346,13 +346,14 @@ image:demo_poll_edi_events/image25_demo_poll_edi_events.png[image,width=600,heig
 image:demo_poll_edi_events/image26_demo_poll_edi_events.png[image,width=545,height=170]
 
 Check to see when the Scheduler returned no transactions.
-Add a logger to the *Default* condition. 
+
+. Add a logger to the *Default* condition. 
 
 . From you Mule Palette, drag the *logger* component to the canvas.
 
 image:demo_poll_edi_events/image27_demo_poll_edi_events.png[image,width=306,height=254]
 
-[start=2]
+[start=3]
 
 . Select and review the properties, and enter an appropriate message.
 
