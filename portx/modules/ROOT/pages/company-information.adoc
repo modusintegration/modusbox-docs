@@ -1,16 +1,18 @@
-= Partner Information
+= Company Information
 
 == Enter Partner Information
 
 === Add a New Partner
 
-. On the Partner Information Page, if you are adding a new partner, enter the name of the partner in the *Partner Name* box.
+. On the Partners and Applications Page, click *Add Partner*.
+. Enter the name of the partner in the *Partner Name* box.
 . Click the *Save* bar.
 
 == Enter Contact Information
-
+////
 . The name of the partner you selected on the Trading Partners Page (or added on this page, as a new partner) appears in the *Partner Name* box. If appropriate, you can change it.
-. In the *Contacts* section of the *Partner information* page, enter the following:
+////
+. In the *Partner Information* page enter the following:
 
 ** *Contact type* +
 (In the dropdown listbox, select *Technical*, *Business*, or *Both*.)
