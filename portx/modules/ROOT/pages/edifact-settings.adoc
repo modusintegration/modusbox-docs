@@ -3,11 +3,14 @@
 
 EDIFACT (Electronic Data Interchange For Administration, Commerce and Transport) provides a set of standard messages which allow multi-country and multi-industry business document exchanges. EDIFACT is widely used across Europe.
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 
 [start=3]
 
-. In the *FORMAT DEFAULTS* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *EDIFACT*.
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
+
+. In the *FORMAT DEFAULTS* section of the left-hand navigation pane, click *EDIFACT*.
 +
 The <<img-edifact-settings>> appears.
 
@@ -15,6 +18,7 @@ The <<img-edifact-settings>> appears.
 
 image::edifact-settings.png[img-edifact-settings, title="EDIFACT Settings Page"]
 
+Use the following settings to assist in populating each field based on your requirements.
 
 * xref:edifact-identity-settings.adoc[EDIFACT Identity Settings]
 * xref:edifact-settings-inbound-(read).adoc[EDIFACT Inbound (Read) Settings]

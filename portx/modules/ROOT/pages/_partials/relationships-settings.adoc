@@ -1,0 +1,7 @@
+. xref:index.adoc#start-portx[Start PortX].
+The <<index.adoc#img-portx-start,Transaction Monitoring Page>> appears.
+. In the left-hand navigation pane, in the *CONFIGURATION* section, click *Relationships*.
+The xref:img-relationships[] appears.
+
+[[img-relationships]]
+image::relationships.png[img-relationships,title="Relationships Page"]

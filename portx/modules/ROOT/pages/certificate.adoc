@@ -1,12 +1,17 @@
 = Certificate
 
-The <<img-certificate>> enables you to upload an AS2 or RNIF certificate for the partner you selected on the <<partner-configuration.adoc#img-trading-partners, Trading Partners Page>>.
+The <<img-certificate>> enables you to upload an AS2 or RNIF certificate for the partner you selected on the <<partner-configuration.adoc#img-trading-partners, Partners and Applications Page>>.
 
 include::{partialsdir}/edit-settings.adoc[]
 
 [start=3]
 
-. In the *Partners* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Certificate*.
+. On the Partners and Applications page, select the partner from the list that you are adding a certificate.
+
+The Partner Information Page appears.
+
+[start=4]
+. In the the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Partner Information Page>>, click *Certificates*.
 +
 The <<img-certificates>> appears.
 
@@ -15,7 +20,7 @@ The <<img-certificates>> appears.
 image::certificates.png[img-certificates, title="Certificates Page"]
 
 
-[start=4]
+[start=5]
 
 . On the <<img-certificates>>, to edit an existing certificate, click the row that corresponds to the certificate you want to edit.
 +
@@ -27,7 +32,7 @@ The <<img-certificate>> appears.
 
 image::certificate.png[img-certificate, title="Certificate Page"]
 
-[start=5]
+[start=6]
 
 . Click *Choose File*, then select the certificate file you want to upload.
 . Click *Upload Certificate* to upload the certificate.

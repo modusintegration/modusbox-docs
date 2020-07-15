@@ -2,11 +2,14 @@
 
 X12 standards define the structure, format, and content of business transactions conducted through Electronic Data Interchange (EDI) and are used in conjunction with AS2 or FTPS as transport for these documents.
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 
 [start=3]
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
 
-. In the *FORMAT DEFAULTS* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *X12*.
+
+. In the *FORMAT DEFAULTS* section of the left-hand navigation pane, click *X12*.
 +
 The <<img-x12-settings>> appears.
 
@@ -14,6 +17,7 @@ The <<img-x12-settings>> appears.
 
 image::x12-settings.png[img-x12-settings,title="X12 Settings Page"]
 
+Use the following settings to assist in populating each field based on your requirements.
 
 * xref:x12-identity-settings.adoc[X12 Identity Settings]
 * xref:x12-inbound-(read)-settings.adoc[X12 Inbound (Read) Settings]

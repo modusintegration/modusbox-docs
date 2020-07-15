@@ -2,10 +2,14 @@
 
 You can configure windows (periods of time) during which partners or transactions are on-hold or inactive.
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Availability*.
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
+
+[start=4]
+. In the *Relationship Info* section of the left-hand navigation pane, click *Availability*.
 +
 The <<img-availability>> appears.
 
@@ -44,16 +48,17 @@ image::transaction-status-window-add.png[img-transaction-status-window-add, titl
 [start=2]
 
 . On the <<img-transaction-status-window-add>>, in the *Type* box, click the down-arrow to expose the drop-down list.
-. From the drop-down list, to create an on-hold window, click *ON-HOLD*. + To create an inactive window, click *INACTIVE*.
+. From the drop-down list, to create an on-hold window, click *ON-HOLD*. +
+To create an inactive window, click *INACTIVE*.
 . Use the calendars and dropdown lists in the Time Bar to identify the start and end dates and times for the window.
 . To add a channel, in the *Channel* section, click *Add Channel*. +
-The Pick a Channel Window appears.
-. Select a channel, then click *Use selected*.
+The Pick a Channel window appears.
+. Select a channel.
 . Click *Save* to save the window.
 
 == To Edit an On-Hold or Inactive Window
 
-. On the <<img-availability>>, in the section that corresponds to the type of window you want to edit, identify the window you wan to edit and click it. +
+. On the <<img-availability>>, in the section that corresponds to the type of window you want to edit, identify the window you want to edit and click it. +
 The  appropriate page appears.
 . On the page, make changes as appropriate.
 . Click *Save* to save your changes.
