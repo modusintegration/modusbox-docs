@@ -3,10 +3,12 @@
 
 Configuring a _route_ for a partner enables you to specify:
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Routes*.
+. In the *CONFIGURATION* section of the left-hand navigation pane, click *Routes*.
 +
 The <<img-routes>> appears.
 

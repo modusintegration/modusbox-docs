@@ -4,14 +4,18 @@
 A _channel_ provides a means of specifying, for a given partner:
 
 Type:: Source or Target
-Document:: As created in xref:document-types[Document Types]
-Document Map:: As created in xref:maps[Maps]
-Endpoint:: As created in xref:endpoints[Endpoints]
+Document:: As created in xref:document-types[Document Types].
+Document Map:: As created in xref:maps[Maps].
+Endpoint:: As created in xref:endpoints[Endpoints].
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
+
 [start=3]
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Channels*.
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
+
+. In the *CONFIGURATION* section of the left-hand navigation pane, click *Channels*.
 +
 The <<img-channels>> appears.
 
@@ -19,7 +23,7 @@ The <<img-channels>> appears.
 
 image::channels.png[img-channels, title="Channels Page"]
 
-[start=4]
+[start=5]
 
 . From this page, you can:
 
@@ -40,7 +44,7 @@ The <<img-channel>> appears.
 
 [[img-channel]]
 
-image::channel.png[img-channel, title="Channel Page"]
+image::channel.png[img-channel, title="Channel Designer Page"]
 
 
 [%header,cols="3s,7a"]
@@ -106,5 +110,6 @@ No
 // Valid values:: <Documentation in progress>
 
 Default::
+None
 
 |===

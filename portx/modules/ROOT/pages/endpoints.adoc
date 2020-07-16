@@ -3,10 +3,13 @@
 An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In PortX, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 
 [start=3]
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Endpoints*.
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
+
+. In the *CONFIGURATION* section of the left-hand navigation pane, click *Endpoints*.
 +
 The <<img-endpoints>> appears.
 +

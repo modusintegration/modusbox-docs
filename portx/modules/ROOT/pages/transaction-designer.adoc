@@ -11,10 +11,13 @@ _Transaction Designer_ is an PortX feature that enables you to design the _eleme
 Transaction Designer enables you to configure these elements from a central page that displays the elements along with their completion status, and what steps may remain in order to complete them. To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:apm-tutorial-td[PortX Tutorial: Designing a Transaction].
 
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Transaction Designer*.
+. Select a relationship with partners and/or applications, from the list. +
+Alternatively, you can use the Filter Bar to search for a relationship. 
+
+. In the *CONFIGURATION* section of the left-hand navigation pane, click *Transaction Designs*.
 +
 The <<img-transaction-designer>> appears.
 
@@ -22,7 +25,7 @@ The <<img-transaction-designer>> appears.
 
 image::transaction-designer.png[img-transaction-designer, title=Transaction Designer Page]
 
-[start=4]
+[start=5]
 
 . From this page, you can:
 
