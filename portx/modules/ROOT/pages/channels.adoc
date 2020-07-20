@@ -1,12 +1,12 @@
 = Channels
 
 
-A _channel_ provides a means of specifying, for a given partner:
+A _channel_ provides a means of specifying connection for a given partner.
 
 Type:: Source or Target
 Document:: As created in xref:document-types[Document Types].
 Document Map:: As created in xref:maps[Maps].
-Endpoint:: As created in xref:endpoints[Endpoints].
+Endpoint:: As created in xref:endpoints[Endpoints]
 
 include::{partialsdir}/relationships-settings.adoc[]
 
@@ -35,6 +35,22 @@ image::channels.png[img-channels, title="Channels Page"]
 . On the <<img-channels>>, click the channel you want to edit.
 +
 The <<img-channel>> appears.
+
+
+=== Edit Source Document Configuraiton
+. Click on the grey pencil icon in top right of the Source Document Window.
+. Edit the Source Document Type to your prefrences. Use configuration settings found in xref:document-types.adoc[Document Types] for help.
+
+=== Edit Source Document Schema 
+. Click the *Schema* button located in the Source Document window in the Channel Designer. 
+. Choose a new *Schema File* to upload.
+
+=== Add Source Document Properties
+. Click the *Properties* button located in the Source Document window.
+. Click *New Property* to add a property to the Source Document.
+
+=== Edit Map Script
+. Click 
 
 == Add a New Channel
 
@@ -80,7 +96,7 @@ None
 | Document
 
 | Required?::
-No
+Yes
 
 ////
 Valid values:: <Documentation in progress>

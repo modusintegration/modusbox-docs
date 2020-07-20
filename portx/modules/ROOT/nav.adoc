@@ -44,7 +44,7 @@
 *** xref:maps.adoc[Maps]
 *** xref:channels.adoc[Channels]
 *** xref:routes.adoc[Routes]
-*** xref:partner-conversations.adoc[Partner Conversations]
+
 **  xref:administration.adoc[Administration]
 *** xref:environments.adoc[Environments]
 *** xref:error-codes.adoc[Error Codes]
