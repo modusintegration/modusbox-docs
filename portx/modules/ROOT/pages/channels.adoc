@@ -1,7 +1,8 @@
 = Channels
 
+A _channel_ provides a means of specifying the connection for a given partner. You can use the channel designer to visually craft and edit channels with pre-configured settings in Portx.
 
-A _channel_ provides a means of specifying connection for a given partner.
+Channel designer allows you specify:
 
 Type:: Source or Target
 Document:: As created in xref:document-types[Document Types].
@@ -37,27 +38,45 @@ image::channels.png[img-channels, title="Channels Page"]
 The <<img-channel>> appears.
 
 
-=== Edit Source Document Configuraiton
-. Click on the grey pencil icon in top right of the Source Document Window.
-. Edit the Source Document Type to your prefrences. Use configuration settings found in xref:document-types.adoc[Document Types] for help.
+=== Edit a Source Channel
+. Select the Source Channel you want to edit from the Channels Page.
++ 
+The Channel Designer Page appears.
 
-=== Edit Source Document Schema 
-. Click the *Schema* button located in the Source Document window in the Channel Designer. 
-. Choose a new *Schema File* to upload.
+. You may select and edit:
 
-=== Add Source Document Properties
-. Click the *Properties* button located in the Source Document window.
-. Click *New Property* to add a property to the Source Document.
+* *Source Document*
+* *Map*
+* *Target Document*
 
-=== Edit Map Script
-. Click 
+Use configuration settings found in xref:document-types.adoc[Document Types] to configure your Source and Target Document.
+
+Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
+
+=== Edit a Target Channel
+. Select the Target Channel you want to edit from the Channels Page.
++
+The Chanel Designer Page appears.
+
+. You may select and edit:
+
+* *Source Document*
+* *Map*
+* *Endpoint*
+
+Use configuration settings found in xref:document-types.adoc[Document Types] to configure your Source Document.
+
+Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
+
+Use configuration settings found in xref:endpoints.adoc[Endpoints] to configure your Endpoint.
 
 == Add a New Channel
 
-. On the <<img-channels>>, click *New*.
+. On the <<img-channel>>, click *New*.
 +
 The <<img-channel>> appears.
 
+The following settings are configuration requirements.
 [[img-channel]]
 
 image::channel.png[img-channel, title="Channel Designer Page"]
