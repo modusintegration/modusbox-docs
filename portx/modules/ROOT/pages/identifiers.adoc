@@ -11,7 +11,7 @@ include::{partialsdir}/edit-settings.adoc[]
 
 If you click *Add Partner*, complete the steps outlined in the xref:company-information.adoc[Company Information Page] before continuing.
 
-If you select a *Partner* from the list, continue on to select *Identifiers* from the left-hand navigation pane. 
+If you select a *Partner* from the list, continue on and select *Identifiers* from the left-hand navigation pane. 
 
 
 The <<img-identifiers>> appears.

@@ -34,7 +34,11 @@ image::maps.png[img-maps, title="Maps Page"]
 
 . On the <<img-maps>>, click the map you want to edit.
 +
-The <<img-map>> appears.
+The <<img-map-settings-page>> appears.
+
+[[img-map-settings-page]]
+
+image::map-settings.png[img-map-settings-page, title="Map Settings Page"]
 
 == Add a New Map
 
@@ -44,7 +48,7 @@ The <<img-map>> appears.
 
 [[img-map]]
 
-image::map.png[img-map, title="Map Page"]
+image::map-add.png[img-map, title="Map Page"]
 
 [%header,cols="3s,7a"]
 |===

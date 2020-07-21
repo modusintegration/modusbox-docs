@@ -77,7 +77,7 @@ The <<img-channel>> appears.
 The following settings are configuration requirements.
 [[img-channel]]
 
-image::channel.png[img-channel, title="Channel Designer Page"]
+image::channel-designer.png[img-channel, title="Channel Designer Page"]
 
 
 [%header,cols="3s,7a"]

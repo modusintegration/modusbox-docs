@@ -1,5 +1,8 @@
 = Company Information
 
+include::{partialsdir}/edit-settings.adoc[]
+
+
 == Enter Partner Information
 
 === Add a New Partner
@@ -12,7 +15,12 @@
 ////
 . The name of the partner you selected on the Trading Partners Page (or added on this page, as a new partner) appears in the *Partner Name* box. If appropriate, you can change it.
 ////
-. In the *Partner Information* page enter the following:
+
+[[img-partner-information, Partner Information Page]]
+
+image::partner-information.png[img-partner-information, title="Partner Information Page"]
+
+. In the Partner Information page enter the following:
 
 ** *Contact type* +
 (In the dropdown listbox, select *Technical*, *Business*, or *Both*.)
