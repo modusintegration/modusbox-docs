@@ -24,8 +24,6 @@ The <<img-channels>> appears.
 
 image::channels.png[img-channels, title="Channels Page"]
 
-[start=5]
-
 . From this page, you can:
 
 * <<Edit an Existing Channel>>
