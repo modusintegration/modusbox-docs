@@ -29,17 +29,10 @@ image::channels.png[img-channels, title="Channels Page"]
 * <<Edit an Existing Channel>>
 * <<Add a New Channel>>
 
-== Edit an Existing Channel
-
-. On the <<img-channels>>, click the channel you want to edit.
-+
-The <<img-channel>> appears.
-
-
-=== Edit a Source Channel
-. Select the Source Channel you want to edit from the Channels Page.
+== Edit a Source Channel
+. Select the Source Channel you want to edit from the <<img-channels>>.
 + 
-The Channel Designer Page appears.
+The <<img-channel>> appears.
 
 . You may select and edit:
 
@@ -51,10 +44,10 @@ Use configuration settings found in xref:document-types.adoc[Document Types] to 
 
 Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
 
-=== Edit a Target Channel
-. Select the Target Channel you want to edit from the Channels Page.
+== Edit a Target Channel
+. Select the Target Channel you want to edit from the <<img-channels>>.
 +
-The Chanel Designer Page appears.
+The <<img-channel>> appears.
 
 . You may select and edit:
 
