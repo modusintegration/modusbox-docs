@@ -26,7 +26,8 @@ image::channels.png[img-channels, title="Channels Page"]
 
 . From this page, you can:
 
-* <<Edit an Existing Channel>>
+* <<Edit a Source Channel>>
+* <<Edit a Target Channel>>
 * <<Add a New Channel>>
 
 == Edit a Source Channel
