@@ -1,4 +1,4 @@
-= *PortX JD Edwards Connector for Mule 4 – Demo – Poll EDI Events*
+= *PortX JD Edwards Connector for Mule 4 – Poll EDI Events*
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
