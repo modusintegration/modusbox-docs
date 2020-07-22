@@ -1,0 +1,17 @@
+= ModusBox X12 Translator Release Notes
+
+== Version 1.0.0 - June 1, 2020
+
+These release notes accompany the xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator User Guide].
+
+We’ve built the X12 Translator that is included with PortX to be easy to use, extensible, and scalable while still giving you access to modern integration solutions. It provides businesses the ability to automate X12 messages without compromise.
+
+* **Easy**: The X12 Translator for PortX is built to alleviate IT bottlenecks by offering an intuitive solution that EDI analysts can work with directly.
+* **Advanced**: Designed to support flexible validation rules, such as those required by WEDI-SNIP and VICS.
+* **Extensible**: programmers can easily augment the translator's read and write logic to suit their requirements. Outside of PortX,  organisations can connect the Translator with their IT systems.
+* **Performant**: Performance was an important design consideration during development. 
+Our X12 Translator can process EDI transactions in milliseconds under heavy loads.
+* **Standards-Compliant**: Leverages standards like DFDL, RelaxNG, and JSON which means users don't have to learn proprietary technologies.
+* **Robust**: Handles large EDI files.
+* **Customizable**: The Translator ships with schemas for all of the standard X12 messages. 
+Schemas can be customized for specific partners if needed.

@@ -1,0 +1,81 @@
+= Actors, Relationships, and Artifacts
+
+This page introduces and defines PortX's fundamental building blocks: 
+xref:glossary#a[Actor]s, xref:glossary#r[Relationship]s, and xref:glossary#a[Artifact]s.
+
+== Actors
+
+An PortX 
+xref:glossary#a[Actor] 
+is an entity that you can pair with another xref:glossary#a[Actor] to form a 
+xref:glossary#r[Relationship].
+
+An xref:glossary#a[Actor] contains: 
+
+* xref:glossary#i[Identifier]s that identify it to PortX
+* xref:glossary#c[Certificate]s 
+(if you add them)
+
+There are four types of xref:glossary#a[Actor]s:
+
+* <<Partners>>
+* <<Applications>>
+* <<your-company-b2b>>
+* <<Any>>
+
+=== Partners
+
+A xref:glossary#p[Partner] is an organization that exchanges B2B xref:glossary#d[document]s with your organization, such as *PartA* in xref:basic-routing-scenario.adoc[Basic Routing Scenario]. 
+
+=== Applications
+
+An 
+xref:glossary#a[Application]
+is a software program, or group of programs, that have a role within your organization, such as *AppA* in xref:chained-transactions-routing-scenario.adoc[Chained Transactions Routing Scenario].
+
+
+[[your-company-b2b, **_YourCompany_ B2B**]]
+=== _YourCompany_ B2B
+
+
+*_YourCompany_ B2B* is your organization's gateway between its applications and its <<Partners>>. You can see how this xref:glossary#a[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+=== Any
+
+*Any* refers to all shared application-specific information. You can see how this xref:glossary#a[Actor] works in xref:basic-routing-scenario.adoc[Basic Routing Scenario].
+
+== Relationships
+
+You can connect one xref:secta[Actor] to another to form a xref:glossary#r[Relationship]. A xref:glossary#r[Relationship] is the union of an xref:glossary#a[Actor] with another xref:glossary#a[Actor] for the purpose of partitioning 
+xref:glossary#a[Artifact]s. For example, xref:basic-routing-scenario#relationships.adoc[Basic Routing Scenario] illustrates the use of two xref:glossary#r[Relationship]s: 
+
+*_YourCompany_ B2B : Any* :: Universal xref:glossary#r[Relationship] between your company and any xref:glossary#a[Actor]
+*_YourCompany_ B2B : PartA* :: Your organization's xref:glossary#r[Relationship] with the xref:glossary#p[Partner] with whom you are doing business (in xref:basic-routing-scenario.adoc[Basic Routing Scenario], this is *PartA*)
+
+== Artifacts
+
+An xref:glossary#a[Artifact] is a software component of the PortX system that resides in a xref:glossary#r[Relationship]. This section identifies all PortX xref:glossary#a[Artifact]s.
+
+=== xref:glossary#d[Document Type]
+
+Identifies types of xref:glossary#d[document]s based on values such as xref:glossary#s[Standard] and xref:glossary#m[Message Type].
+
+=== xref:glossary#e[Endpoint]
+
+Entry point to a service, process, queue or topic destination. 
+
+=== xref:glossary#c[Channel]
+
+Grouping of xref:glossary#a[Artifact]s 
+specific to a transmission. 
+
+=== xref:glossary#m[Map] 
+
+Transforms one xref:glossary#d[Document Type] to another xref:glossary#d[Document Type].
+
+=== xref:glossary#t[Transaction]
+
+The end-to-end processing of a single instance of a xref:glossary#d[document] from receipt at an xref:glossary#e[Endpoint] all the way to the appropriate business service.  
+
+
+
