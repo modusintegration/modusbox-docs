@@ -1,20 +1,17 @@
-= ModusBox X12 Parser Release Notes
-Version: 0.95 Release Candidate
+= ModusBox X12 Translator Release Notes
 
-== Overview
+== Version 1.0.0 - June 1, 2020
 
-We’ve built the X12 translator that is included with the Modusbox Integration Hub to be easy to use and robust while still giving you access to modern integration solutions. 
-It provides businesses the ability to automate X12 messages without compromise.
+These release notes accompany the xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator User Guide].
 
-* **Easy**: The X12 Parser for PortX was built to alleviate IT bottlenecks by offering an intuitive solution that EDI analysts can work with directly.
+We’ve built the X12 Translator that is included with PortX to be easy to use, extensible, and scalable while still giving you access to modern integration solutions. It provides businesses the ability to automate X12 messages without compromise.
+
+* **Easy**: The X12 Translator for PortX is built to alleviate IT bottlenecks by offering an intuitive solution that EDI analysts can work with directly.
 * **Advanced**: Designed to support flexible validation rules, such as those required by WEDI-SNIP and VICS.
-* **Performant**: Performance was an important design consideration during development. Our X12 Parser can process EDI transactions in milliseconds under heavy loads.
-* **Robust**: Handles large EDI files, up to 3 gigabytes.
-* **Customizable** The parser ships with schemas for all of the standard X12 messages. Schemas can be customized for specific partners if needed.
-
-This release is the first release candidate for the final version.
-
-== What’s New
-
-
-== Known Issues
+* **Extensible**: programmers can easily augment the translator's read and write logic to suit their requirements. Outside of PortX,  organisations can connect the Translator with their IT systems.
+* **Performant**: Performance was an important design consideration during development. 
+Our X12 Translator can process EDI transactions in milliseconds under heavy loads.
+* **Standards-Compliant**: Leverages standards like DFDL, RelaxNG, and JSON which means users don't have to learn proprietary technologies.
+* **Robust**: Handles large EDI files.
+* **Customizable**: The Translator ships with schemas for all of the standard X12 messages. 
+Schemas can be customized for specific partners if needed.
