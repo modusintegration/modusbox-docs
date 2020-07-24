@@ -7,32 +7,32 @@ For more information on documents see xref:tracking-examples.adoc#tracking-docum
 === Content
 Each row has 6 columns:
 
-. *From*: Who the document was sent from.
+. *From*- Who the document was sent from.
 
-. *To*: Who the document was sent to.
+. *To*- Who the document was sent to.
 
-. *Date*: Date and time at which the document was sent.
+. *Date*- Date and time at which the document was sent.
 
-. *Standard*: The standard used to send the document.
+. *Standard*- The standard used to send the document.
 
-. *Message Type*: The type of message that was sent.
+. *Message Type*- The type of message that was sent.
 
-. *Label*: Detail information describing the document.
+. *Label*- Detail information describing the document.
 
 === Document Detail Pane (Right)
 This pane is hidden when no document is selected. It contains:
 
-* *Document ID* icon:plus-square-o[role="blue"]: Unique copyable document identification.
-* *Document Definiton ID*: Unique copyable document definition identification. icon:plus-square-o[role="blue"]
-* *Standard*: The document standard used.
-* *Version*: The version of the document.
-* *Message Type*: The type/reason for the message.
-* *From*: Who the document is from.
-* *To*: Who the document is to.
-* *Date*: Date the document was sent.
-* *Duplicate Quiry*: Indicating if a document is a duplicate.
-* *Message Payload*: icon:share[role="blue"]Link to payload url and payload content
-* *Partnership ID*: icon:plus-square-o[role="blue"]Unique copyable partnership identification.
+* *Document ID*- Unique copyable document identification.
+* *Document Definiton ID*- Unique copyable document definition identification. icon:plus-square-o[role="blue"]
+* *Standard*- The document standard used.
+* *Version*- The version of the document.
+* *Message Type*- The type/reason for the message.
+* *From*- Who the document is from.
+* *To*- Who the document is to.
+* *Date*- Date the document was sent.
+* *Duplicate Quiry*- Indicating if a document is a duplicate.
+* *Message Payload*- icon:share[role="blue"]Link to payload url and payload content
+* *Partnership ID*- icon:plus-square-o[role="blue"]Unique copyable partnership identification.
 
 ==== *Detail Pane Action Icons*
 

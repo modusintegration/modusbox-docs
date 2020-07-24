@@ -6,18 +6,18 @@ For more information on errors see xref:tracking-examples.adoc#tracking-errors[T
 === Content
 Each row has 4 columns:
 
-. *From:* Who the transaction came from
-. *To:* Who the transaction was going to
-. *Date:* Date and time at which the error occurred
-. *Error Code:* Code associated with the error
+. *From-* Who the transaction came from
+. *To-* Who the transaction was going to
+. *Date-* Date and time at which the error occurred
+. *Error Code-* Code associated with the error
 
 === Error Detail Pane (Right)
 This pane is hidden when no error is selected. It contains:
 
-* *Error Message*: icon:file-code-o[role="blue"]Detailed message of the error.
-* *Error ID* icon:plus-square-o[role="blue"]Unique copyable error identification.
-* *Source:* Source of the error.
-* *Source ID*: Unique copyable error source identification.
+* *Error Message*- icon:file-code-o[role="blue"]Detailed message of the error.
+* *Error ID*- icon:plus-square-o[role="blue"]Unique copyable error identification.
+* *Source-* Source of the error.
+* *Source ID*- Unique copyable error source identification.
 
 ==== *Detail Pane Action Icons*
 

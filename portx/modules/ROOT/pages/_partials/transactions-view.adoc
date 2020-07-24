@@ -53,21 +53,21 @@ Column 10 (Date):: This column indicates the date and time at which the transact
 
 To view detailed information for the events that comprise a transaction, click anywhere in a transaction row. A new table appears beneath the transaction row. Events appear in inverse chronological order (oldest first). Details include:
 
-From:: Partner or Application from whom the event originated
-To:: Partner or Application to whom the event was sent
-Type:: Event type
-Date:: Date and time at which the event occurred
-Label:: Type of event action in the transaction  
+* *From*- Partner or Application from whom the event originated
+* *To*- Partner or Application to whom the event was sent
+* *Type*- Event type
+* *Date*- Date and time at which the event occurred
+* *Label*- Type of event action in the transaction  
 
 === *Transaction Detail Pane (Right)*
 Hidden when no transaction is selected, this pane includes:
 
-* *Preceding transaction*: Preceding transaction type.
-* *Next transaction*: Next transaction type.
-* *From*: Who the transaction is from.
-* *To*: Who the transaction is sent to.
-* *Date*: The date of the transaction.
-* *Transaction ID*: icon:plus-square-o[role="blue"] Unique copyable transaction identifier. 
+* *Preceding transaction*- Preceding transaction type.
+* *Next transaction*- Next transaction type.
+* *From*- Who the transaction is from.
+* *To*- Who the transaction is sent to.
+* *Date*- The date of the transaction.
+* *Transaction ID*- icon:plus-square-o[role="blue"] Unique copyable transaction identifier. 
 
 ==== *Detail Pane Action Icons*
 * Click the blue *Copy* icon next to Transaction ID to copy it.
