@@ -63,7 +63,7 @@ To view detailed information for the events that comprise a transaction, click a
 * *Date*- Date and time at which the event occurred
 * *Label*- Type of event action in the transaction  
 
-=== *Transaction Detail Pane (Right)*
+=== Transaction Detail Pane (Right)
 Hidden when no transaction is selected, this pane includes:
 
 * *Preceding transaction*- Preceding transaction type.
