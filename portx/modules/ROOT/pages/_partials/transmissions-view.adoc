@@ -30,7 +30,7 @@ This pane is hidden when no transmission is selected. It contains:
 * *MDN Content*: Content type and content of message.
 * *"____" Message ID*: Unique copyable message identification labeled by the transport used.
 
-=== Detail Pane Action Icons
+==== *Detail Pane Action Icons*
 * The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
 * The *blue arrow icon* icon:share[role="blue"] opens a detail page that shows the complete message payload.
 This detail page allows you to:

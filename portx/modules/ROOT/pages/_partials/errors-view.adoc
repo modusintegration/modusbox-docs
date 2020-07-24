@@ -19,12 +19,12 @@ This pane is hidden when no error is selected. It contains:
 * *Source:* Source of the error.
 * *Source ID*: Unique copyable error source identification.
 
-=== Detail Pane Action Icons
+==== *Detail Pane Action Icons*
 
 * The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard.
 * The *blue file code icon* icon:file-code-o[role="blue"] opens a detailed error message.
 
-=== Buttons
+==== *Buttons*
 * A *Transaction* icon:exchange[] button will appear when an error is selected.
 +
 This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.

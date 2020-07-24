@@ -59,7 +59,7 @@ Type:: Event type
 Date:: Date and time at which the event occurred
 Label:: Type of event action in the transaction  
 
-=== Transaction Detail Pane (Right)
+=== *Transaction Detail Pane (Right)*
 Hidden when no transaction is selected, this pane includes:
 
 * *Preceding transaction*: Preceding transaction type.
@@ -69,10 +69,10 @@ Hidden when no transaction is selected, this pane includes:
 * *Date*: The date of the transaction.
 * *Transaction ID*: icon:plus-square-o[role="blue"] Unique copyable transaction identifier. 
 
-=== Detail Pane Action Icons
+==== *Detail Pane Action Icons*
 * Click the blue *Copy* icon next to Transaction ID to copy it.
 
-=== Detail Pane Links
+==== *Detail Pane Links*
 * Click [blue]#*View Preceding Transaction*# to see the preceding transaction
 * Click [blue]#*View Next Transaction*# to see the next transaction
 

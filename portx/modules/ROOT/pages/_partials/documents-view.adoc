@@ -34,7 +34,7 @@ This pane is hidden when no document is selected. It contains:
 * *Message Payload*: icon:share[role="blue"]Link to payload url and payload content
 * *Partnership ID*: icon:plus-square-o[role="blue"]Unique copyable partnership identification.
 
-=== Detail Pane Action Icons
+==== *Detail Pane Action Icons*
 
 * The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
 * The *blue share icon* icon:share[role="blue"] opens a detail pane that shows the complete message payload.
@@ -43,7 +43,7 @@ This pane allows you to:
 ** Download Content
 ** Copy content to clipboard
 
-=== Buttons
+==== *Buttons*
 * A *Transaction* icon:exchange[] button will appear when a document is selected
 ** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific document
 
