@@ -14,19 +14,20 @@ Each row has 4 columns:
 === Error Detail Pane (Right)
 This pane is hidden when no error is selected. It contains:
 
-* Error Message icon:file-code-o[role="blue"]
-* Error ID icon:plus-square-o[role="blue"]
-* Source
-* Source ID icon:plus-square-o[role="blue"]
+* *Error Message*: icon:file-code-o[role="blue"]Detailed message of the error.
+* *Error ID* icon:plus-square-o[role="blue"]Unique copyable error identification.
+* *Source:* Source of the error.
+* *Source ID*: Unique copyable error source identification.
 
-==== Action Icons
+=== Detail Pane Action Icons
 
-* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
-* The blue file code icon icon:file-code-o[role="blue"] opens a detailed error message
+* The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard.
+* The *blue file code icon* icon:file-code-o[role="blue"] opens a detailed error message.
 
-==== Buttons
+=== Buttons
 * A *Transaction* icon:exchange[] button will appear when an error is selected.
-** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
++
+This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
 
 
 === Filters
@@ -67,6 +68,6 @@ Error ID::
 Enter a specific error identifier.
 
 
-==== To Show all Errors
+==== *Show all Errors*
 
 Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.

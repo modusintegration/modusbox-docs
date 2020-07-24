@@ -22,28 +22,28 @@ Each row has 6 columns:
 === Document Detail Pane (Right)
 This pane is hidden when no document is selected. It contains:
 
-* Document ID icon:plus-square-o[role="blue"]
-* Document Definiton ID icon:plus-square-o[role="blue"]
-* Standard
-* Version
-* Message Type
-* From
-* To
-* Date
-* Duplicate Quiry
-* Message Payload icon:share[role="blue"]
-* Partnership ID icon:plus-square-o[role="blue"]
+* *Document ID* icon:plus-square-o[role="blue"]: Unique copyable document identification.
+* *Document Definiton ID*: Unique copyable document definition identification. icon:plus-square-o[role="blue"]
+* *Standard*: The document standard used.
+* *Version*: The version of the document.
+* *Message Type*: The type/reason for the message.
+* *From*: Who the document is from.
+* *To*: Who the document is to.
+* *Date*: Date the document was sent.
+* *Duplicate Quiry*: Indicating if a document is a duplicate.
+* *Message Payload*: icon:share[role="blue"]Link to payload url and payload content
+* *Partnership ID*: icon:plus-square-o[role="blue"]Unique copyable partnership identification.
 
-==== Action Icons
+=== Detail Pane Action Icons
 
-* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
-* The blue share icon icon:share[role="blue"] opens a detail pane that shows the complete message payload.
+* The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
+* The *blue share icon* icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:
 ** Copy Payload URL
-** Download 
+** Download Content
 ** Copy content to clipboard
 
-==== Buttons
+=== Buttons
 * A *Transaction* icon:exchange[] button will appear when a document is selected
 ** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific document
 
@@ -64,12 +64,12 @@ View::
 * Partners
 * Applications
 
-Relationship:: Select the partner or application that is associated with the document
-Message Type:: Enter the message type found in the <<Document Detail Pane (Right)>>
-Property Name:: Select the document property name from the dropdown list
-Property Value:: Enter the document property value found in the <<Document Detail Pane (Right)>>
-Standard:: Select the document standard protocol from the dropdown list
-Document ID:: Enter the document ID found in the <<Document Detail Pane (Right)>>
+Relationship:: Select the partner or application that is associated with the document.
+Message Type:: Enter the message type found in the <<Document Detail Pane (Right)>>.
+Property Name:: Select the document property name from the dropdown list.
+Property Value:: Enter the document property value found in the <<Document Detail Pane (Right)>>.
+Standard:: Select the document standard protocol from the dropdown list.
+Document ID:: Enter the document ID found in the <<Document Detail Pane (Right)>>.
 
-==== To Show all Documents
+==== *Show all Documents*
 Click [blue]#*Reset filters*# in the top right.
