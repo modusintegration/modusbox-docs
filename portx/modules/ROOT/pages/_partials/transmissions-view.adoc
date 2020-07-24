@@ -1,4 +1,8 @@
 == Transmissions View
+[[img-transmissions-view, Transmissions View]]
+
+image::transmissions-view.png[img-transmissions-view, title="Transmissions View"]
+
 :icons: font
 The transmissions view presents data on each transmission between applications and partners in xref:transaction-monitoring[Transaction Monitor].
 For more information on transmissions see xref:tracking-examples.adoc#tracking-transmissions[Tracking Examples].

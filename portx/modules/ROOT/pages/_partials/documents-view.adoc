@@ -1,4 +1,8 @@
 == Documents View
+[[img-documents-view, Documents View]]
+
+image::documents-view.png[img-documents-view, title="Documents View"]
+
 :icons: font
 The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor].
 For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Examples].

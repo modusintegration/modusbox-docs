@@ -1,4 +1,9 @@
 == Errors View
+
+[[img-errors-view, Errors View]]
+
+image::errors-view.png[img-errors-view, title="Errors View"]
+
 :icons: font
 The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
 For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Examples].
