@@ -1,54 +1,37 @@
-= *PortX JD Edwards Connector for Mule 4 – Poll EDI Events*
+= Polling for EDI Events
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
 :toclevels: 2
 
-////
-toc::[]
-////
 
-== Introduction
+The following guide explains how to Poll for EDI Events created on the JD Edwards EnterpriseOne server.
 
-The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
+== Getting Started
+* Review the xref:jde.adoc#prerequisites[PortX JDE Connector for Mule 4 - Prerequisites] for a detailed list of requirements and setup prerequisites.
 
-The following guide explains how to poll for EDI Events created on the EnterpriseOne server.
+* See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
 
-The _PortX JDE Connector_ allows you to discover functions by name, providing full access to all Business Function signatures. The Connector manages a cache repository for all function’s metadata used at least once.
+* JDE outbound transactions require that you set a _Processing Option_ specifying EDI information.
 
-The results of a function call are injected into the flow as a Map containing key-value pairs with the invocation’s output values. This approach allows you to construct complex flows and manage custom exception strategies.
-
-
-Furthermore, you can have all functions in the flow, processing within the same transaction, and commit or rollback all changes.
-
-=== Prerequisites
-
-A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, and https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
-
-=== Requirements
-
-Review the link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
-
-See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information.
-
-JDE outbound transactions require that you set a _Processing Option_ specifying EDI information.
-
-The following is an example:
-
+=== Setup Processing Option
 To Generate an Order Acknowledgment (*855/ORDSP*) document, you must setup its processing options to enable interoperability. 
 
 . Log into JDE, and change the processing options for this application. 
 
 . Determine which version of the Print Invoices (*R42565*) is being used. 
-. Review the processing options.
+
 
 image:demo_poll_edi_events/image1_demo_poll_edi_events.png[image,width=482,height=437]
+
+[start=3]
+. Review the processing options.
 
 image:demo_poll_edi_events/image2_demo_poll_edi_events.png[image,width=478,height=455]
 [start=4]
 
 . The last configuration that is needed is inform to JDE connector the EDI outbound.
-
++
 Using Flat File Cross-Reference (*P47002*) form, the *Work With Flat File Cross-Reference* adds the following record:
 
 image:demo_poll_edi_events/image3_demo_poll_edi_events.png[image,width=601,height=312]
@@ -63,21 +46,21 @@ image:demo_poll_edi_events/image3_demo_poll_edi_events.png[image,width=601,heigh
 |F4715 |8 |Detail Text
 |===
 
-Refer to the link:https://docs.oracle.com/cd/E64610_01/index.htm[_Oracle JD Edwards EnterpriseOne_] documentation for more information.
+Refer to the link:https://docs.oracle.com/cd/E64610_01/index.htm[Oracle JD Edwards EnterpriseOne] documentation for more information.
 
 == Poll EDI Events
 
-NOTE: Ensure that you update your AnyPoint Studio before starting with a _PortX JDE Connector_ project.
+NOTE: Ensure that you update AnyPoint Studio before starting a PortX JDE Connector project.
 
 === Creating a New Mule Project 
 
-Create a new Mule project with Mule Server 4.1.1 EE or greater as runtime:
+. Create a new Mule project with Mule Server 4.1.1 EE or greater as runtime:
 
 image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,height=463]
 
-=== Project Dependencies
+==== *Setting Project Dependencies*
 
-. In your *pom.xml* file, add the following to you *Repositories* section.
+. In your *pom.xml* file, add the following to your *Repositories* section.
 [source,xml]
 ----
 <repository>
@@ -106,7 +89,7 @@ image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,heigh
 ----
 [start=3]
 
-. Add or update the following to your *Plugins* section.
+. Add the following to your *Plugins* section.
 [source,xml]
 ----
 <plugin>
@@ -125,18 +108,19 @@ image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,heigh
 </plugin>
 ----
 
-=== Required files
+==== *Required files*
 
-Copy your _JD Edwards EntrpriseOne™_ configuration files to the following folders within your project.
+. Copy your JD Edwards EntrpriseOne™ configuration files to the following folders within your project.
 
 * Project *Root*
-* *_src/main/resources_*
+* *src/main/resources*
 
-NOTE: If the requirement is to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
+NOTE: If the requirement is to use different configuration files per environment, you may create separate folders under *src/main/resources* corresponding to each environment as shown below.
 
 image:demo_poll_edi_events/image5_demo_poll_edi_events.png[image,width=250,height=446]
+[start=2]
 
-The *mule-arifact.json* file needs to be updated per environment as shown below.
+. The *mule-arifact.json* file needs to be updated per environment as shown below.
 
 [source,json]
 ----
@@ -165,18 +149,18 @@ The *mule-arifact.json* file needs to be updated per environment as shown below.
 }
 ----
 
-=== Other Considerations
+==== *Other Considerations*
 
-To redirect the _JD Edwards EntrpriseOne™_ Logger to the Mule Logger (to see JDE activity in both consoles and JDE files defined in the *jdelog.properties*), you may add the following _Async Loggers_ to *log4j2.xml* file.
+To redirect the JD Edwards EntrpriseOne™ Logger to the Mule Logger (to see JDE activity in both consoles and JDE files defined in the *jdelog.properties*), you may add the following _Async Loggers_ to *log4j2.xml* file.
 
 [source,xml]
 <!-- JDE Connector wire logging -->
 <AsyncLogger name="org.mule.modules.jde.handle.MuleHandler" level="INFO" />
 <AsyncLogger name="org.mule.modules.jde.JDEConnector" level="INFO" />
 
-=== Troubleshooting
+==== *Troubleshooting*
 
-If you are having trouble resolving all dependencies,
+If you are having trouble resolving all dependencies:
 
 . Shut down AnyPoint Studio
 . Run the following command in the project root folder from the terminal/command prompt,
@@ -189,7 +173,7 @@ mvn clean install
 
 === Configure the Global Element
 
-To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
+To use the PortX JDE Connector in your Mule application, you must configure a global element that can be used by the connector.
 
 . Open the Mule flow for the project, and select the *Global Elements* tab at the bottom of the Editor Window.
 
@@ -222,7 +206,7 @@ The following message appears.
 
 image:demo_poll_edi_events/image10_demo_poll_edi_events.png[image,width=513,height=135]
 
-You are now ready to start using the _PortX JDE Connector_ in your project.
+You are now ready to start using the PortX JDE Connector in your project.
 
 === Creating a Scheduler for Your Flow
 
@@ -267,12 +251,12 @@ image:demo_poll_edi_events/image15_demo_poll_edi_events.png[image,width=410,heig
 
 image:demo_poll_edi_events/image16_demo_poll_edi_events.png[image,width=589,height=302]
 
-=== Troubleshooting
+==== *Troubleshooting*
 If the operation fails (possibly due to a timeout), the following message appears.
 
 image:demo_poll_edi_events/troubleshoot_timeout_message.png[image,width=345,height=115]
 
-Review the *timeout* settings in _Anypoint Studio_'s *Preferences*.
+Review the *timeout* settings in Anypoint Studio's *Preferences*.
 
 . Go the the *Window > Preferences* menu.
 
@@ -301,7 +285,7 @@ image:demo_poll_edi_events/image17_demo_poll_edi_events.png[image,width=601,heig
 
 image:demo_poll_edi_events/image18_demo_poll_edi_events.png[image,width=601,height=179]
 
-=== Set Payload Output
+==== *Set Payload Output*
 
 . In the Mule Palette, either select *Core*, scroll down to *Transformers* or type *Payload* in the search bar.
 
@@ -330,7 +314,7 @@ image:demo_poll_edi_events/image22_demo_poll_edi_events.png[image,width=601,heig
 
 image:demo_poll_edi_events/image23_demo_poll_edi_events.png[image,width=399,height=216]
 
-Check that the Transactions were polled. 
+==== *Check Transactions were Polled* 
 
 . From the Mule Palette, select and drag the *Choice* component.
 
@@ -359,7 +343,8 @@ image:demo_poll_edi_events/image27_demo_poll_edi_events.png[image,width=306,heig
 
 image:demo_poll_edi_events/image28_demo_poll_edi_events.png[image,width=601,height=520]
 
-If transactions are retrieved (*When* condition is true), iterate over all transactions that are retrieved.
+=== Iterate Over Retrieved Transactions
+This step applies if transactions are retrieved (the _When_ condition is true). 
 
 . Drag the *For Each* component from the *out* palette, to your canvas.
 
@@ -384,36 +369,36 @@ image:demo_poll_edi_events/image31_demo_poll_edi_events.png[image,width=542,heig
 
 image:demo_poll_edi_events/image32_demo_poll_edi_events.png[image,width=601,height=274]
 
-[start=5]
+[start=6]
 
 . Set the *Variable Name*.
 . Click *Show Graphical View*.
 
 image:demo_poll_edi_events/image33_demo_poll_edi_events.png[image,width=601,height=236]
 
-[start=6]
+[start=8]
 
 . Set the *Variable* value to the filename you want to create.
 . Click *Done*.
 
 image:demo_poll_edi_events/image34_demo_poll_edi_events.png[image,width=600,height=194]
 
-[start=8]
+[start=10]
 
 . From your Mule Palette, drag the *X12 EDI > Write* component to your canvas.
 
-NOTE: If you do not have *X12 EDI> Write* component, must download it from _AnyPoint Exchange_.
+NOTE: If you do not have *X12 EDI> Write* component, you must download it from AnyPoint Exchange.
 
 image:demo_poll_edi_events/image35_demo_poll_edi_events.png[image,width=274,height=225]
 
-[start=9]
+[start=11]
 
 . Review your component.
 . Create a Connector Configuration by clicking the *Add* button.
 
 image:demo_poll_edi_events/image36_demo_poll_edi_events.png[image,width=601,height=225]
 
-Change schema definitions to *inline*.
+=== Change Schema Definitions to Inline
 
 . Click *Add* and enter the required schema (this points to a schema file).
 
@@ -549,7 +534,7 @@ image:demo_poll_edi_events/image45_demo_poll_edi_events.png[image,width=567,heig
 
 [start=2]
 
-. After your project is deployed, log into _JDE_.
+. After your project is deployed, log into JDE.
 
 . Go to the *Customer Master Information* Application (*P03013 ZJDE0002*)
 
@@ -557,8 +542,7 @@ NOTE: Use a version of JDE that is configured for interoperability.
 See <<Requirements>> for more information.
 
 image:demo_poll_edi_events/image46_demo_poll_edi_events.png[image,width=601,height=430]
-
-[start=2]
+[start=4]
 
 . Make a change to the customer, and check your output path for a created file.
 
@@ -598,9 +582,7 @@ image:demo_poll_edi_events/image53_demo_poll_edi_events.png[image,width=250,heig
 
 image:demo_poll_edi_events/image54_demo_poll_edi_events.png[image,width=442,height=298]
 
-== PortX JDE Connector – Demo Projects
-
-=== Additional Examples
+== Additional PortX JDE Connector Projects
 
 * <<jde.adoc#,Invoke a Business Function>>
 * <<demo_ube.adoc#,Submit a Batch Process>> 
