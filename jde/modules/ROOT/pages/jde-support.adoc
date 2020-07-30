@@ -1,0 +1,86 @@
+= PortX JDE Connector – Support
+
+The following page provides information to access PortX support resources.
+
+== Support Portal
+
+To log a support ticket, a support portal user account is required. If you do not already have one, follow these steps to create a new user.
+
+. In a web browser, go to: https://modusbox.atlassian.net/servicedesk/customer 
++
+The Log in to ModusBox Support Center page appears.
+
+
+image:demo_getting_started/support_newuser01.png[image,width=652,height=1209]
+
+[start=2]
+
+. Click *Sign up*.
++
+The Sign up window appears.
+
+image:demo_getting_started/support_newuser02.png[image,width=453,height=407]
+
+[start=3]
+
+. Enter your email address and click *Send Link*.
++
+A confirmation email is sent to your specified email address.
+
+[start=4]
+. Locate the email in your inbox and click *Sign up*.
++ 
+The Sign up window appears.
+
+image:demo_getting_started/support_newuser03.png[image,width=303,height=824]
+
+[start=5]
+
+. Enter your *Full Name* and choose a *Password*. 
+. Click *Sign Up*.
+
+image:demo_getting_started/support_newuser04.png[image,width=449,height=401]
+
+You are now signed up for PortX Support.
+
+=== Logging a Support Ticket
+Logging a support ticket reqires a support portal user account. See <<Support Portal>> to setup your account. 
+
+. Enter the ModusBox Support Portal.
++
+The Support Center Welcome page appears.
+. Click *Modusbox PortX Support*.
+
+
+image:demo_getting_started/support_newticket01.png[image,width=449,height=647]
+
+[start=2]
+
+. When prompted, click *Enter Support Request*.
+
+image:demo_getting_started/support_newticket02.png[image,width=404,height=655]
+
+
+The ModusBox PortX Support page appears.
+[start=3]
+. Enter your support request details. 
+
+NOTE: Keep in mind that we request your configuration files, and the related log files (see <<Support Required Files>>). To service your ticket more effectively, attach these files when creating your ticket.
+
+image:demo_getting_started/support_newticket03.png[image,width=910,height=681]
+
+=== Support Required Files
+
+To effectively service your support request, we request your mule application's *JDE configuration files*, and any relevant *log files*.
+
+Attach these files when creating your ticket:
+
+* *jdbj.ini*
+* *jdeinterop.ini*
+* *tnsnames.ora (if using an Oracle database)*
+* *Relevant JDE log files (as created per your jdelog.properties file)*
+* *Relevant Mule log files*
+
+=== Support Optional/Helpful Files
+
+In some cases we request the configuration files for the environment in question. To obtain these, seek the assistance of your JD Edwards CNC Administrator.

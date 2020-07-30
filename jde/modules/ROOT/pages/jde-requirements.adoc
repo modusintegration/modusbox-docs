@@ -1,0 +1,24 @@
+= Requirements
+
+A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, _Mule 4_, and the Mule https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
+
+* Mule 4.1 server runtime, or higher.
+* https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java JDK 1.8]
+* https://www.mulesoft.com/lp/dl/studio[AnyPoint Studio™ 7.x or higher]
+* https://maven.apache.org/download.cgi[Maven] 3.3.9 or higher (do not use the embedded Maven for AnyPoint Studio)
+** For an easy installation tutorial see https://www.mkyong.com/maven/how-to-install-maven-in-windows/[How to install Maven for Windows]
+* Access to your _JD Edwards EnterpriseOne™_ installation java libraries
+
+== Configuration Settings
+As the connector is based on Oracle’s _JD Edwards EnterpriseOne™_ interoperability solution, the following settings must be reviewed/changed:
+
+* XML *Dispatch* Kernel
+* The XML *CallObject* kernel
+* The XML *Transaction* kernel
+* The XML *List* kernel
+* XML *LookupInfo* section XML Request type 7 inside *jde.ini* (To activate *Submit* UBE).
+
+This configuration is done by the CNC Administrator for your _JD Edwards EnterpriseOne™_ system. For more information, refer to the https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_].
+
+== Compatibility
+Oracle’s _JD Edwards EnterpriseOne™_ Tools Release 8.98 Update 4 and onwards.

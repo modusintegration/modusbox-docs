@@ -8,13 +8,13 @@
 The following guide explains how to Poll for EDI Events created on the JD Edwards EnterpriseOne server.
 
 == Getting Started
-* Review the xref:jde.adoc#prerequisites[PortX JDE Connector for Mule 4 - Prerequisites] for a detailed list of requirements and setup prerequisites.
-
+* Review the xref:jde-requirements.adoc[Reqirements].
+* Review the xref:jde-preliminary-setup.adoc[Preliminary Setup].
 * See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
 
-* JDE outbound transactions require that you set a _Processing Option_ specifying EDI information.
-
 === Setup Processing Option
+JDE outbound transactions require that you set a _Processing Option_ specifying EDI information.
+
 To Generate an Order Acknowledgment (*855/ORDSP*) document, you must setup its processing options to enable interoperability. 
 
 . Log into JDE, and change the processing options for this application. 
@@ -30,11 +30,12 @@ image:demo_poll_edi_events/image1_demo_poll_edi_events.png[image,width=482,heigh
 image:demo_poll_edi_events/image2_demo_poll_edi_events.png[image,width=478,height=455]
 [start=4]
 
-. The last configuration that is needed is inform to JDE connector the EDI outbound.
-+
-Using Flat File Cross-Reference (*P47002*) form, the *Work With Flat File Cross-Reference* adds the following record:
+. Inform to JDE connector the *EDI outbound*.
+
 
 image:demo_poll_edi_events/image3_demo_poll_edi_events.png[image,width=601,height=312]
+
+Using Flat File Cross-Reference (*P47002*) form, the *Work With Flat File Cross-Reference* adds the following record:
 
 [cols=",,",options="header",]
 |===
@@ -54,7 +55,7 @@ NOTE: Ensure that you update AnyPoint Studio before starting a PortX JDE Connect
 
 === Creating a New Mule Project 
 
-. Create a new Mule project with Mule Server 4.1.1 EE or greater as runtime:
+. Create a new Mule Project with Mule Server 4.1.1 EE or greater as runtime.
 
 image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,height=463]
 

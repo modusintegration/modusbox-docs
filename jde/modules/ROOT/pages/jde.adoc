@@ -4,10 +4,6 @@
 :toc: macro
 :toclevels: 2
 
-////
-toc::[]
-////
-
 == Introduction
 
 The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution, and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.

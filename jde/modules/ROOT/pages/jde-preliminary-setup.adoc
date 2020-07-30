@@ -1,0 +1,284 @@
+= Preliminary Setup
+
+In addition to the PortX JDE Connector <<Requirements>>, a Library Bundle is required to establish a connection to the JDE Enterprise Server. This adapter is a bundle of JAR files that comes with the JD Edwards EnterpriseOne™ distribution.
+
+NOTE: This bundle can be reused in other applications.
+
+== Creating JDE Library Bundle
+
+The following steps illustrate how to create the Library Bundle connector component. This bundle is included in the flow that connects with the JDE Enterprise Server for _your_ specific JD Edwards EnterpriseOne™ Tools Release.
+
+The _PortX JDE Connector_ uses the libraries of youe local JDE Tools release. In order to simplify dependency management for the Mule 4 application, you need to package JDE libraries together into a library bundle using the provided JDE Libraries Bundle Builder Tool.
+
+
+. Download the https://portx.jfrog.io/portx/tools/JDELibrariesBundleBuilderTool.zip[JDE Libraries bundle builder tool] using your username and password as credentials
+. Execute *java -jar JDELibrariesBundleBuilderTool-1.0.0.jar* with the following parameters (from terminal / command prompt)
+. The following parameters apply:
+[loweralpha]
+.. --*destDir* for the path where the bundle will be created.
+.. --*jdbcDriver* for the full path and filename of the JDBC Driver that applies to you JD Edwards EnterpriseOne™ installation.
+.. --*libDir* for the full path containing your JDE Tool release libraries
+.. --*localRepo* for the path to your local Maven repository (typically ~/.m2/repository)
+.. --*version* for the bundle version (1.0.0 for current release candidate)
+
+e.g.:
+
+*java -jar JDELibrariesBundleBuilderTool-1.0.0.jar --destDir "/tmp" --jdbcDriver "/opt/jde/JDBC_Vendor_Drivers/ojdbc7.jar" --libDir "/opt/jde/workingDir/ServerFiles" --version "1.0.0" --localRepo "/home/user/.m2/repository"*
+
+NOTE: All libraries in this path are added to the library. It is recommended that you copy the required JARs as per your Tools Release, from the libraries path of either the __JD Edwards EnterpriseOne__™ Enterprise Server, or a Development Client that has been installed from your __JD Edwards EnterpriseOne__™ Enterprise Server installation.
+
+See xref:jde-appendix-a.adoc[Appendix A] for a detailed list of files required per your Tools Release.
+
+Once completed the resulting bundle is located at (following the sample above) */tmp/jde-lib-bundle-1.0.0.jar*.
+
+== Install JDE Libraries Bundle into Maven Repository
+
+Execute the following command to make the Library Bundle available in your Maven repository.
+
+[source]
+mvn install:install-file -Dfile=/tmp/jde-lib-bundle-1.0.0.jar -DgroupId=com.jdedwards -DartifactId=jde-lib-bundle -Dversion=1.0.0 -Dclassifier=mule-4 -Dpackaging=jar
+
+== Preparing Maven for PortX - JDE Connector
+
+. Update your *Settings.xml* file (~*/.m2* path)
+[loweralpha]
+.. In the servers section add the following.
+.. Replace the *Username* and *Password* provided to you via email.
+
+[source,xml]
+----
+<server>
+    <id>portx-repository-releases</id>
+    <username>youruser</username>
+    <password>yourpassword</password>
+</server>
+----
+
+== Add PortX JDE License to Mule Runtime
+
+Your _PortX JDE Connector_ license can be added one of two ways.
+
+* Copy the license file in the project folder *src/main/resources*.
+* Copy the license file to Mule installation folder *mule/conf*.
+
+== __JD Edwards EnterpriseOne__™ Server Configuration Requirements
+
+To ensure the correct operation of all JDE Connector features, the Enterprise Server requires the following *jde.ini* file settings:
+
+Please refer to https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_] to check updates, and locate different *.dll* extensions for other platforms.
+
+NOTE: The following *.dll* files all relate to the _Microsoft Windows_ platform.
+
+This configuration must be done by your CNC administrator. Refer to https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_]
+
+. Ensure that sufficient processes are available for the *XML List Kernel*.
+
+[source,ini]
+----
+[JDENET_KERNEL_DEF16]
+
+krnlName=XML List Kernel 
+dispatchDLLName=xmllist.dll 
+dispatchDLLFunction=_XMLListDispatch@28 
+maxNumberOfProcesses=3 
+numberOfAutoStartProcesses=1
+----
+
+[start=2]
+. Ensure that sufficient processes are available for the XML *Dispatch* Kernel.
+
+[source,ini]
+----
+[JDENET_KERNEL_DEF22]
+dispatchDLLName=xmldispatch.dll
+dispatchDLLFunction=_XMLDispatch@28 
+maxNumberOfProcesses=1 
+numberOfAutoStartProcesses=1
+----
+
+[start=3]
+. Ensure that sufficient processes are available for the XML *Service* Kernel.
+
+[source,ini]
+----
+[JDENET_KERNEL_DEF24]
+krnlName=XML Service KERNEL 
+dispatchDLLName=xmlservice.dll 
+dispatchDLLFunction=_XMLServiceDispatch@28 
+maxNumberOfProcesses=1 
+numberOfAutoStartProcesses=0
+----
+
+[start=4]
+. Ensure that the *LREngine* has a suitable output storage location and sufficient disk allocation.
+
+[source,ini]
+----
+[LREngine]
+System=C:\JDEdwardsPPack\E920\output 
+Repository_Size=20 
+Disk_Monitor=YES
+----
+
+[start=5]
+. Ensure that the XML Kernels are correctly defined.
+
+[source,ini]
+----
+[XMLLookupInfo]
+XMLRequestType1=list 
+XMLKernelMessageRange1=5257 
+XMLKernelHostName1=local 
+XMLKernelPort1=0
+
+XMLRequestType2=callmethod 
+XMLKernelMessageRange2=920 
+XMLKernelHostName2=local 
+XMLKernelPort2=0
+
+XMLRequestType3=trans 
+XMLKernelMessageRange3=5001 
+XMLKernelHostName3=local 
+XMLKernelPort3=0
+
+XMLRequestType4=JDEMSGWFINTEROP 
+XMLKernelMessageRange4=4003 
+XMLKernelHostName4=local 
+XMLKernelPort4=0 
+XMLKernelReply4=0
+
+XMLRequestType5=xapicallmethod 
+XMLKernelMessageRange5=14251 
+XMLKernelHostName5=local 
+XMLKernelPort5=0 
+XMLKernelReply5=0
+
+XMLRequestType6=realTimeEvent 
+XMLKernelMessageRange6=14251 
+XMLKernelHostName6=local 
+XMLKernelPort6=0 
+XMLKernelReply6=0
+
+XMLRequestType7=ube 
+XMLKernelHostName7=local 
+XMLKernelMessageRange7=380 
+XMLKernelPort7=0 
+XMLKernelReply7=1
+----
+
+== Enterprise Server Connection Considerations
+
+Enable Predefined JDENET Ports in *JDE.INI*.
+
+When there is a firewall between the Mulesoft ESB and the Enterprise Server, set the *PredfinedJDENETPorts* setting to *1* in the *JDE.INI* file of the Enterprise Server.
+
+This setting enables the JDENET network process to use a predefined range of TCP/IP ports. This port range starts at the port number that is specified by serviceNameListen and ends at the port that is calculated by the equation serviceNameListen = maxNetProcesses - 1. 
+
+You must open these ports in a firewall setup to successfully connect the Mulesoft ESB to the Enterprise Server.
+
+Please refer to https://docs.oracle.com/cd/E53430_01/EOTIN/title.htm[_JD Edwards EnterpriseOne™ Tools Interoperability Guide_] to check for updates.
+
+== Configuring the INI Files for JDE Connector
+
+The PortX JDE Connector relies on Oracle’s Java Dynamic Connector to establish the link to the Enterprise Server. In order to achieve this link, the following required standard configuration files must be set. 
+
+NOTE: It is recommended that these files are copied from the server to the development machine, as they are required in all projects using the PortX JDE Connector.
+
+* *jdbj.ini*
+* *jdeinterop.ini*
+* *jdelog.properties*
+* *tnsnames.ora* (for Oracle RDBMS based installations only)
+
+These files are distributed with both Development Clients and/or Enterprise Server modules. 
+
+There are additional configurations needed inside *JDEINTEROP.INI*. 
+
+Add the following:
+
+*[EVENT]*
+|===
+|*Property*|*Explanation*
+|lockEventsYN=N
+|Flag used by the JDE Connector to lock transactions events before consumed. It must be used if the connector runs in more that one Mule instance.
+
+|specialEDITables=<F470462>
+|List of *EDI* tables without *EDLN* in its column definitions (between < and >)
+
+|validateEnterpriseServicesWith=BOTH
+|(Optional) This option is used by the Test Connection to Validate Enterprise Servicies. The values are *BSFN, UBE, BOTH or NONE*.
+
+|validateEnterpriseServicesUBEName=R0008P_XJDE0001
+|(Optional) This is the *UBE* used to validate the connection.
+|===
+
+Eample:
+[source,ini]
+----
+[EVENT]
+lockEventsYN=N
+specialEDITables=<F470462>
+validateEnterpriseServicesWith=BOTH
+validateEnterpriseServicesUBEName=R0008P_XJDE0001
+----
+If you are required to run the application on _CloudHub_, add the section *OCM_SERVERS* with the servers that the _JDE Connector_ uses in the connection. The JDE Servers *Names* are in the column *OMSRVR* of *F98611* table. 
+
+Follow this format to add these servers on the *OCM_SERVERS* section.
+
+* JDE Server Name = *FQDN* or *IP*
+
+*[OCM_SERVERS]*
+|===
+|*Property*|*Explanation*
+|jdeserver01=jdeserver01.yourdomain.com
+|The JDE Connector asks the DNS Server the IP address of *jdeserver01.yourdomain.com*. Then, the JDE Connector uses this IP address for each reference to *jdeserver01*.
+
+|jdeserver02=10.168.45.1
+|The JDE Connector uses the *IP 10.168.45.1* for each reference to *jdeserver02*.
+|===
+
+[source,ini]
+----
+[OCM_SERVERS]
+jdeserver01=jdeserver01.yourdomain.com
+jdeserver02=10.168.45.1
+----
+NOTE: You can use the DNS name or the IP Address.
+
+_[.underline]#JDELOG.PROPERTIES (optional)#_
+
+NOTE: See __JD Edwards EnterpriseOne__™ documentation for usage guidelines. 
+
+[source,ini]
+----
+[E1LOG]
+FILE=/tmp/jdelog/jderoot.log
+LEVEL=SEVERE
+FORMAT=APPS
+MAXFILESIZE=10MB
+MAXBACKUPINDEX=20
+COMPONENT=ALL
+APPEND=TRUE
+
+#Logging runtime and JAS above APP level is helpful for application developers.
+#Application developers should use this log as a substitute to analyze the flow of events
+#in the webclient.
+[JASLOG]
+FILE=/tmp/jdelog/jas.log
+LEVEL=APP
+FORMAT=APPS
+MAXFILESIZE=10MB
+MAXBACKUPINDEX=20
+COMPONENT=RUNTIME|JAS|JDBJ
+APPEND=TRUE
+
+#Logging runtime and JAS at DEBUG level is helpful for tools developers.
+#Tool developers should use this log ato debug tool level issues
+[JASDEBUG]
+FILE=/tmp/jdelog/jasdebug.log
+LEVEL=DEBUG
+FORMAT=TOOLS_THREAD
+MAXFILESIZE=10MB
+MAXBACKUPINDEX=20
+COMPONENT=ALL
+APPEND=TRUE
+----

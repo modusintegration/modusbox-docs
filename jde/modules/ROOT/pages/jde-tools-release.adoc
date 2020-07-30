@@ -1,0 +1,71 @@
+= JDE Tools Release 9.2.1 onwards
+
+To retrieve your *JD Edwards System Configuration* for tools releases from 9.2.1 and above, the following information is required:
+
+* JD Edwards EnterpriseOne Server Manager
+** *Host Name* 
+** *Port*
+** *Username* (user only requires view permissions)
+** *Password*
+* *Rest Client* (eg, POSTMAN from Chrome Apps)
+
+== Getting your JD Edwards Configuration
+
+The following requests must be executed to retrieve your JDE configuration from JD Edwards EnterpriseOne Server Manager.
+
+Using a *Rest Client*, execute the following requests using basic authentication and the server manager user’s credentials (The default admin user is usually *jde_admin*).
+
+Save the resulting json responses in separate, clearly identified files and submit them for review. Remove any sensitive information (eg. passwords) from the json files, before you submit your files.
+
+In the below request urls, replace the following values with the relevant details from your JDE Instances:
+
+* *sm-host* with the server manager host name
+* *sm-port* with the server manager port
+* *instance* (where applicable) with the instance name of the server JD Edwards EnterpriseOne Server Manager instance the request is being executed for.
+
+== Requests
+* Global
+** Instances Detail: 
+
+    http://sm-host:sm-port/manage/mgmtrestservice/instancesinfo
+
+* Enterprise Server instance (Required for each Enterprise Server instance)
+** Configuration Summary by instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/configsummary?instanceName=instance
+    
+** Ini Configuration by Instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/iniconfig?instanceName=instance
+    
+* HTML/JAS Server instance (Required for each HTML/JAS instance)
+** Configuration Summary by instance:
+
+    http://sm-host:sm-port/manage/mgmtrestservice/configsummary?instanceName=instance
+    
+** Ini Configuration by Instance:     
+
+    http://sm-host:sm-port/manage/mgmtrestservice/iniconfig?instanceName=instance
+
+* Click *Refresh Headers* to add the encoded credentials to the request header if you haven’t already done so. 
+
+image:demo_getting_started/postman1.png[image,width=700,height=344]
+
+The resulting image is similar to the image below.
+
+image:demo_getting_started/postman2.png[image,width=700,height=224]
+
+== JDE Tools Releases before 9.2.1.0
+To retrieve your JD Edwards System Configuration for tools releases before 9.2.1, you will need the following
+
+* Server (OS Level) access to you HTML/Jas instance
+
+=== Getting your JD Edwards Configuration
+. Log into the Server where your HTML/Jas Instance is running.
+. Navigate to the *directory/folder* where your Server Manager Agent is installed.
+(eg. /u01/Oracle/jde_home/SCFHA or X:\Oracle\jde_home\SCFHA)
+. Under the *SCFHA folder/directory*, navigate to targets/_web-instance-name_/config/.
+. Attach the following files to us for review (rename them to _filename_ *server.ini* to aviod conflict with the files in your Mule project)
+* *jdbj.ini* (rename to _jdbj_server.ini_)
+* *jdeinterop.ini* (rename to _jdeinterop_server.ini_)
+* *tnsnames.ora* (rename to _jdbj_server.ini_)

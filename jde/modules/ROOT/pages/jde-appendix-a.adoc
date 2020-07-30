@@ -1,0 +1,167 @@
+= Appendix A : Required Files
+
+== Required Configuration Files
+
+NOTE: You may need the assistance of your JD Edwards CNC Administrator to acquire these files.
+
+In most cases, get your configuration files from the relevant environment's *HTML/JAS* server. 
+
+These files are located in the JD Edwards Server Manager Agent's *config* folder relating to the *HTML/JAS* instance
+(eg. */u01/Oracle/SCFHA/jde_home/targets/_instanceName_/config*).
+
+* The required files are:
+** *jdbi.ini*
+** *jdeinterop.ini*
+** *tnsnames.ora (if using an Oracle database)*
+** *jdelog.properties*
+
+Where *instanceName* is the *HTML/JAS* instance name for the relevant environment.
+
+== Required JARs by Tools Release
+
+
+Tools Release 8.98::
+
+Copy the following files:
+
+* ApplicationAPIs_JAR.jar
+* ApplicationLogic_JAR.jar
+* Base_JAR.jar
+* BizLogicContainer_JAR.jar
+* BizLogicContainerClient_JAR.jar
+* BusinessLogicServices_JAR.jar
+* castor.jar
+* commons-httpclient-3.0.jar
+* commons-logging.jar
+* Connector.jar / Connector_JAR.jar
+* EventProcessor_JAR.jar
+* Generator.jar / Generator_JAR.jar
+* j2ee1_3.jar
+* JdbjBase_JAR.jar
+* JdbjInterfaces_JAR.jar
+* JdeNet_JAR.jar
+* jmxremote.jar
+* jmxremote_optional.jar
+* jmxri.jar
+* log4j.jar
+* ManagementAgent_JAR.jar
+* Metadata.jar
+* MetadataInterface.jar
+* PMApi_JAR.jar
+* Spec_JAR.jar
+* System_JAR.jar
+* SystemInterfaces_JAR.jar
+* xerces.jar
+* xmlparserv2.jar
+
+Tools Releases 9.1 prior Update 4::
+
+Copy the following files:
+
+* ApplicationAPIs_JAR.jar
+* ApplicationLogic_JAR.jar
+* Base_JAR.jar
+* BizLogicContainer_JAR.jar
+* BizLogicContainerClient_JAR.jar
+* BusinessLogicServices_JAR.jar
+* castor.jar
+* commons-httpclient-3.0.jar
+* commons-logging.jar
+* Connector.jar / Connector_JAR.jar
+* EventProcessor_JAR.jar
+* Generator.jar / Generator_JAR.jar
+* JdbjBase_JAR.jar
+* JdbjInterfaces_JAR.jar
+* JdeNet_JAR.jar
+* jmxremote.jar
+* jmxremote_optional.jar
+* jmxri.jar
+* ManagementAgent_JAR.jar
+* Metadata.jar
+* MetadataInterface.jar
+* PMApi_JAR.jar
+* Spec_JAR.jar
+* System_JAR.jar
+* SystemInterfaces_JAR.jar
+* xalan.jar
+* xerces.jar
+* xmlparserv2.jar
+
+Tools Releases 9.1 Update 4 and later updates::
+
+Copy these files:
+
+* ApplicationAPIs_JAR.jar
+* ApplicationLogic_JAR.jar
+* Base_JAR.jar
+* BizLogicContainer_JAR.jar
+* BizLogicContainerClient_JAR.jar
+* BusinessLogicServices_JAR.jar
+* castor.jar
+* commons-codec.jar
+* commons-lang.jar / commons-lang2.6.jar
+* commons-logging.jar
+* Connector.jar / Connector_JAR.jar
+* EventProcessor_JAR.jar
+* Generator.jar / Generator_JAR.jar
+* httpclient.jar
+* httpcore.jar
+* httpmime.jar
+* j2ee1_3.jar
+* JdbjBase_JAR.jar
+* JdbjInterfaces_JAR.jar
+* JdeNet_JAR.jar
+* jmxremote.jar
+* jmxremote_optional.jar
+* jmxri.jar
+* ManagementAgent_JAR.jar
+* Metadata.jar
+* MetadataInterface.jar
+* PMApi_JAR.jar
+* Spec_JAR.jar
+* System_JAR.jar
+* SystemInterfaces_JAR.jar
+* xerces.jar
+* xml-apis.jar
+* xmlparserv2.jar
+
+Tools Releases 9.2 and later::
+
+Copy the following files:
+
+* ApplicationAPIs_JAR.jar
+* ApplicationLogic_JAR.jar
+* Base_JAR.jar
+* BizLogicContainer_JAR.jar
+* BizLogicContainerClient_JAR.jar
+* BusinessLogicServices_JAR.jar
+* commons-codec.jar
+* castor.jar
+* commons-lang.jar / commons-lang2.6.jar
+* commons-logging.jar
+* Connector.jar / Connector_JAR.jar
+* EventProcessor_JAR.jar
+* Generator.jar / Generator_JAR.jar
+* httpclient.jar
+* httpcore.jar
+* httpmime.jar
+* j2ee1_3.jar
+* JdbjBase_JAR.jar
+* JdbjInterfaces_JAR.jar
+* JdeNet_JAR.jar
+* jmxremote.jar
+* jmxremote_optional.jar
+* jmxri.jar
+* ManagementAgent_JAR.jar
+* Metadata.jar
+* MetadataInterface.jar
+* PMApi_JAR.jar
+* Spec_JAR.jar
+* System_JAR.jar
+* SystemInterfaces_JAR.jar
+* xerces.jar
+* xml-apis.jar
+* xmlparserv2.jar
+ 
+
+
