@@ -3,9 +3,6 @@
 :imagesdir: images
 :toc: macro
 :toclevels: 2
-////
-toc::[]
-////
 
 == Introduction
 
@@ -151,41 +148,7 @@ mvn clean install
 . Open AnyPoint Studio and check dependencies again.
 
 === Configure the Global Element
-
-To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
-
-. Open the Mule flow for the project, and select the *Global Elements* tab at the bottom of the Editor Window.
-
-image:demo_ube_status/image3_demo_ube_status.png[image,width=515,height=273]
-
-[start=2]
-
-. Click *Create*.
-
-image:demo_ube_status/image4_demo_ube_status.png[image,width=511,height=312]
-
-[start=3]
-
-. Type *JDE* in the filter edit box and select *JDE Config*.
-. Click *OK*
-
-image:demo_ube_status/image5_demo_ube_status.png[image,width=386,height=390]
-
-[start=5]
-
-. On the *General* tab, enter the required *Credential* and *Environment*.
-
-image:demo_ube_status/image6_demo_ube_status.png[image,width=378,height=383]
-
-[start=6]
-
-. Click *Test Connection*.
-
-The following message appears.
-
-image:demo_ube_status/image7_demo_ube_status.png[image,width=513,height=135]
-
-You are now ready to start using the _PortX JDE Connector_ in your project.
+include::{partialsdir}/configure-global-element.adoc[]
 
 === Creating an HTTP Listener for Your Flow
 

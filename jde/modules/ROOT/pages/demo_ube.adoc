@@ -1,40 +1,23 @@
-= *PortX JD Edwards Connector for Mule 4 - Submit a UBE*
+=  Submitting a UBE Batch Job/Report
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
 :toclevels: 2
 
-////
-toc::[]
-////
 
-== Introduction
+The following guide explains how to submit a batch process on the JD Edwards EnterpriseOne™ server.
 
-The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution and uses the power of Oracle’s _Java Dynamic Connector_ to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
+== Getting Started
 
-The following guide explains how to submit a batch process on the _JD Edwards EnterpriseOne™_ server.
+* Review the xref:jde-requirements.adoc[PortX JDE Connector Reqirements].
+* Review the xref:jde-preliminary-setup.adoc[PortX JDE Connector Preliminary Setup].
+* See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
+* A basic understanding of Oracle’s JD Edwards EnterpriseOne™, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
-The _PortX JDE Connector_ allows you to discover functions by name, providing full access to all Business Function signatures. The Connector manages a cache repository for all function’s metadata used at least once.
 
-The results of a function call are injected into the flow as a Map containing key-value pairs with the invocation’s output values. This approach allows you to construct complex flows and manage custom exception strategies.
-
-Furthermore, you can have all functions in the flow, processing within the same transaction, and commit or rollback all changes.
-
-=== Prerequisites
-
-A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
-
-=== Requirements
-
-Review the link:/[_PortX JDE Connector for Mule 4 – Getting Started Guide_] for a detailed list of requirements and setup prerequisites.
-
-== Submit a Batch Process
-
-NOTE: Update your AnyPoint Studio before starting with a _PortX JDE Connector_ project.
-
-=== Creating a New Mule Project 
-
-Create a new Mule Project with Mule Server 4.1.1 EE or greater as runtime.
+== Creating a New Mule Project 
+. Start the Mule application
+. Create a new Mule Project with *Mule Server 4.1.1 EE* or greater as runtime.
 
 image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 
@@ -91,16 +74,17 @@ image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 ----
 === Required files
 
-Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folders within your project:
+. Copy the JD Edwards EntrpriseOne™ configuration files to the following folders within your project:
 
 * Project *Root*
-* *_src/main/resources_*
+* *src/main/resources*
 
-NOTE: If you require different configuration files per environment, you may create separate folders under *_src/main/resources_* corresponding to each environment as shown below.
+NOTE: If you require different configuration files per environment, you may create separate folders under *src/main/resources* corresponding to each environment as shown below.
 
 image:demo_ube/image2_demo_ube.png[image,width=250,height=446]
+[start=2]
 
-The *mule-arifact.json* file must be updated per environment as shown below.
+. The *mule-arifact.json* file must be updated per environment as shown below.
 
 [source,json]
 ----
@@ -131,7 +115,7 @@ The *mule-arifact.json* file must be updated per environment as shown below.
 
 === Other Considerations
 
-To redirect the _JD Edwards EntrpriseOne™_ Logger to the Mule Logger (allowing you to see JDE activity in both your Console and the JDE files defined in the *jdelog.properties*), you may add the following *Async Loggers* to *log4j2.xml* file.
+To redirect the JD Edwards EntrpriseOne™ Logger to the Mule Logger (allowing you to see JDE activity in both your Console and the JDE files defined in the *jdelog.properties*), you may add the following *Async Loggers* to *log4j2.xml* file.
 
 [source,xml]
 ----
@@ -145,7 +129,6 @@ If you are experiencing trouble resolving all dependencies:
 
 . Shut down AnyPoint Studio.
 . Run the following command in the project *ROOT* folder from the terminal/command prompt.
-
 [source]
 mvn clean install
 
@@ -153,44 +136,12 @@ mvn clean install
 . Open AnyPoint Studio and check dependencies again.
 
 === Configure the Global Element
+include::{partialsdir}/configure-global-element.adoc[]
 
-To use the _PortX JDE Connector_ in your Mule application, you must configure a global element that can be used by the connector.
-
-. Open the Mule flow for your project and select the *Global Elements* tab at the bottom of the *Editor Window*.
-
-image:demo_ube/image3_demo_ube.png[image,width=515,height=273]
-[start=2]
-
-Click *Create*.
-
-image:demo_ube/image4_demo_ube.png[image,width=511,height=312]
-
-[start=3]
-
-. Type *JDE* in the filter edit box and select *JDE Config*. 
-. Click *OK*.
-
-image:demo_ube/image5_demo_ube.png[image,width=386,height=390]
-
-[start=5]
-
-. On the *General* tab, enter the required credential and environment.
-
-image:demo_ube/image6_demo_ube.png[image,width=378,height=383]
-
-[start=6]
-
-. Click *Test Connection*.
-
-The following message appears.
-
-image:demo_ube/image7_demo_ube.png[image,width=513,height=135]
-
-You are now ready to start using the _PortX JDE Connector_ in your project.
 
 === Creating an HTTP Listener for Your Flow
 
-In this use case example, you are creating a simple flow to submit a job for *UBE R0008P_XJDE0001* on _Oracle’s JDE EnterpriseOne_ server.
+In this use case example, you are creating a simple flow to submit a job for *UBE R0008P_XJDE0001* on Oracle’s JDE EnterpriseOne server.
 
 . Go to the *Message Flow* tab.
 
@@ -213,7 +164,7 @@ The connector requires a *Connector Configuration*.
 [start=4]
 . Click on *Add* to create a connector configuration.
 
-. Give the *HTTP Endpoint* a more descriptive name (eg: _get-submitR0008P-http-endpoint_) and press *OK*.
+. Give the *HTTP Endpoint* a more descriptive name (eg: get-submitR0008P-http-endpoint) and press *OK*.
 
 This takes you back to the global HTTP endpoint dialog box.
 
@@ -221,7 +172,7 @@ image:demo_ube/image11_demo_ube.png[image,width=415,height=420]
 
 [start=6]
 
-. Add a path to the URL (eg. _submitR0008P_XJDE0001._).
+. Add a path to the URL (eg. submitR0008P_XJDE0001.).
 
 image:demo_ube/image12_demo_ube.png[image,width=601,height=252]
 
@@ -242,7 +193,7 @@ image:demo_ube/image13_demo_ube.png[image,width=331,height=232]
 . Give the connector a meaningful name (eg. Submit R0008P_XJDE0001).
 
 . Under the *General* section, click the drop-down for *UBE Name*.
-. Type in the *Batch Job* and *Version* you want to call in the __BatchJob_Version__ format (eg. R0008P_XJDE0001).
+. Type in the *Batch Job* and *Version* you want to call in the *BatchJob Version* format (eg. *R0008P_XJDE0001*).
 
 image:demo_ube/image14_demo_ube.png[image,width=601,height=253]
 
@@ -255,7 +206,7 @@ If the operation fails (possibly due to a timeout), the following message appear
 
 image:demo_ube/troubleshoot_timeout_message.png[image,width=345,height=115]
 
-Review the timeout settings in _Anypoint Studio_'s *Preferences*.
+Review the timeout settings in Anypoint Studio's *Preferences*.
 
 . Go the *Window > Preferences* menu.
 
@@ -336,13 +287,13 @@ To Test your flow:
 
 image:demo_ube/image22_demo_ube.png[image,width=461,height=305]
 
-Once your project is deployed, you can test you flow by typing the URL into a web browser (eg. http://localhost:8081/submitR0008P_XJDE0001).
+Once your project is deployed, you can test you flow by typing the URL into a web browser (eg. *http://localhost:8081/submitR0008P_XJDE0001*).
 
 image:demo_ube/image23_demo_ube.png[image,width=403,height=126]
 
 [start=3]
 
-. Log into _JD Edwards EnterpriseOne_ and *View Job Status* for the user specified in the global element (eg. JDE).
+. Log into JD Edwards EnterpriseOne and *View Job Status* for the user specified in the global element (eg. JDE).
 
 image:demo_ube/image24_demo_ube.png[image,width=601,height=125]
 
@@ -413,11 +364,11 @@ Example:
 
 Valid Sentence (maximum level of Parenthesis opened is 1).
 
-* _C1 AND (C2 OR C3) AND (C4 OR C5)_
+* C1 AND (C2 OR C3) AND (C4 OR C5)
 
 Invalid Sentence (maximum level of Parenthesis opened is 2).
 
-* _C1 AND (C2 OR (C3 AND C4))_
+* C1 AND (C2 OR (C3 AND C4))
 
 Examples:
 
@@ -434,11 +385,3 @@ F4211.KCOO = '00001' AND F4211.DOCO BETWEEN 1022 AND 400
 F4211.KCOO = '00001' AND F4211.DOCO NOT BETWEEN 1022 AND 400
 F4211.MCU = F4211.EMCU AND F4211.DOCO NOT BETWEEN 1022 AND 400
 ----
-
-== _PortX JDE Connector_ – Additional Example Projects
-
-* <<jde.adoc#,Invoke a Business Function>>
-* <<demo_ube_status.adoc#,Retrieve a Batch Process’s Status>>
-* <<demo_poll_mbf_events.adoc#,Poll MBF Events>> 
-* <<demo_poll_edi_events.adoc#,Poll EDI Events>>
- 
