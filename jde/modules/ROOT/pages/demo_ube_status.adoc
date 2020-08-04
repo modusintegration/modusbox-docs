@@ -1,4 +1,4 @@
-= PortX JD Edwards Connector for Mule 4 – Retrieve a UBE’s Job Status
+= Retrieve a UBE Batch Process Status
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
@@ -6,32 +6,23 @@
 
 == Introduction
 
-The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD Edwards EnterpriseOne™_ solution and uses the power of Oracle’s Java Dynamic Connector to provide interoperability with _JD Edwards EnterpriseOne™_ and external systems.
 
-This guide explains how to retrieve a batch process's status from the server by passing it a job id.
+This guide explains how to retrieve a Batch Process Status from the server by passing it a job ID.
 
-The _PortX JDE Connector_ allows you to discover functions by name providing full access to all Business Function signatures.
-The Connector manages a cache repository for all function’s metadata used at least once.
+== Getting Started
+* Review the PortX JDE Connector xref:jde-requirements.adoc[Reqirements].
+* Review the PortX JDE Connector xref:jde-preliminary-setup.adoc[Preliminary Setup].
+* See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
+* A basic understanding of Oracle’s JD Edwards EnterpriseOne™, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
-The results of a function call are injected into the flow as a Map containing key-value pairs with the invocation’s output values. This gives the user freedom of choice to construct complex flows and manage custom exception strategies.
+NOTE:  Update AnyPoint Studio before starting a PortX JDE Connector project.
 
-Furthermore, you can have all functions in the flow, processing within the same transaction, and commit or rollback all changes.
+=== Creating a New Mule Project
+To retrieve a UBE Batch Process Status, begin with a new Mule Project.
 
-=== Prerequisites
-
-A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule. and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
-
-=== Requirements
-
-* Review the link:/[PortX JDE Connector for Mule 4 – Getting Started Guide] for a detailed list of requirements and setup prerequisites.
-
-== Retrieve a Batch Process's Status
-
-NOTE: Ensure that you have updated AnyPoint Studio before starting with a _PortX JDE Connector_ project.
-
-=== Creating a New Mule Project 
-
-Create a new Mule Project with Mule Server 4.1.1 EE or greater as runtime:
+. Login to your Mule Application
+. Create a new Mule Project.
+. Select *Mule Server 4.1.1 EE* or greater as runtime.
 
 image:demo_ube_status/image1_demo_ube_status.png[image,width=321,height=423]
 
@@ -87,17 +78,19 @@ image:demo_ube_status/image1_demo_ube_status.png[image,width=321,height=423]
 </plugin>
 ----
 === Required files
+Complete the following actions:
 
-Copy the _JD Edwards EntrpriseOne™_ configuration files to the following folders within your project:
+. Copy the JD Edwards EntrpriseOne™ configuration files to the following folders within your project:
 
 * Project *Root*
-* *_src/main/resources_*
+* *src/main/resources*
 
-NOTE: If you are required to use different configuration files per environment, you may create separate folders under _src/main/resources_ corresponding to each environment as shown below.
+NOTE: If you are required to use different configuration files per environment, you may create separate folders under *src/main/resources* corresponding to each environment as shown below.
 
 image:demo_ube_status/image2_demo_ube_status.png[image,width=250,height=446]
 
-The *mule-arifact.json* file needs to be updated per environment as shown below.
+[start=2]
+. Update the *mule-arifact.json* file per environment as shown below.
 
 [source,json]
 ----

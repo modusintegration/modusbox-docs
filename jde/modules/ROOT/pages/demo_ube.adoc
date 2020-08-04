@@ -1,4 +1,4 @@
-=  Submitting a UBE Batch Job/Report
+=  Submitting a UBE Batch Process
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
@@ -16,8 +16,11 @@ The following guide explains how to submit a batch process on the JD Edwards Ent
 
 
 == Creating a New Mule Project 
-. Start the Mule application
-. Create a new Mule Project with *Mule Server 4.1.1 EE* or greater as runtime.
+To submit a UBE Batch Job/Report, begin with a new Mule Project.
+
+. Login to your Mule Application
+. Create a new Mule Project.
+. Select *Mule Server 4.1.1 EE* or greater as runtime.
 
 image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 
@@ -73,6 +76,7 @@ image:demo_ube/image1_demo_ube.png[image,width=321,height=423]
 </plugin>
 ----
 === Required files
+Complete the following actions:
 
 . Copy the JD Edwards EntrpriseOne™ configuration files to the following folders within your project:
 
@@ -84,7 +88,7 @@ NOTE: If you require different configuration files per environment, you may crea
 image:demo_ube/image2_demo_ube.png[image,width=250,height=446]
 [start=2]
 
-. The *mule-arifact.json* file must be updated per environment as shown below.
+. Update the *mule-arifact.json* file per environment as shown below.
 
 [source,json]
 ----
@@ -115,7 +119,7 @@ image:demo_ube/image2_demo_ube.png[image,width=250,height=446]
 
 === Other Considerations
 
-To redirect the JD Edwards EntrpriseOne™ Logger to the Mule Logger (allowing you to see JDE activity in both your Console and the JDE files defined in the *jdelog.properties*), you may add the following *Async Loggers* to *log4j2.xml* file.
+To redirect the JD Edwards EntrpriseOne™ Logger to the Mule Logger (allowing you to see JDE activity in both your Console and the JDE files defined in the *jdelog.properties*), you may add the following *Async Loggers* to the *log4j2.xml* file.
 
 [source,xml]
 ----
@@ -141,9 +145,9 @@ include::{partialsdir}/configure-global-element.adoc[]
 
 === Creating an HTTP Listener for Your Flow
 
-In this use case example, you are creating a simple flow to submit a job for *UBE R0008P_XJDE0001* on Oracle’s JDE EnterpriseOne server.
+To submit a batch/job process, you must create a simple flow to submit a job for *UBE R0008P_XJDE0001* on Oracle’s JDE EnterpriseOne server.
 
-. Go to the *Message Flow* tab.
+. In your Anypoint Studio project, go to the *Message Flow* tab.
 
 image:demo_ube/image8_demo_ube.png[image,width=615,height=459]
 
@@ -156,46 +160,56 @@ image:demo_ube/image9_demo_ube.png[image,width=263,height=286]
 [start=3]
 
 . Select the *HTTP Listener* component from your canvas and inspect the *Properties* window.
++
+The Properties window appears.
 
 image:demo_ube/image10_demo_ube.png[image,width=655,height=390]
 
-The connector requires a *Connector Configuration*.
-
 [start=4]
-. Click on *Add* to create a connector configuration.
-
-. Give the *HTTP Endpoint* a more descriptive name (eg: get-submitR0008P-http-endpoint) and press *OK*.
-
-This takes you back to the global HTTP endpoint dialog box.
+. Click *Add* to create a connector configuration.
++
+The Global Element Properties window appears.
 
 image:demo_ube/image11_demo_ube.png[image,width=415,height=420]
 
-[start=6]
+[start=5]
+. Under the *General* tab, give the *HTTP Endpoint* a more descriptive name (eg: get-submitR0008P-http-endpoint).
 
-. Add a path to the URL (eg. submitR0008P_XJDE0001.).
+
+. Click *OK*.
++
+The global HTTP endpoint dialog box appears.
+[start=7]
+
+. Add a path to the URL (eg. submit R0008P_XJDE0001.).
 
 image:demo_ube/image12_demo_ube.png[image,width=601,height=252]
 
-[start=7]
+[start=8]
 
 . Save your project. 
-
++
 The connector is ready to process requests.
 
-=== Submit a Batch Process / Report
+=== Submit a Batch Process
 
-. Locate the *JDE* Connector, and select *Submit batch process*
+. In your Mule Pallet, locate the *JDE* Connector.
+. Select *Submit batch process*.
 . Drag it to your canvas.
 
 image:demo_ube/image13_demo_ube.png[image,width=331,height=232]
 
+[start=4]
 . Select the connector and review the *Properties* window.
-. Give the connector a meaningful name (eg. Submit R0008P_XJDE0001).
-
-. Under the *General* section, click the drop-down for *UBE Name*.
-. Type in the *Batch Job* and *Version* you want to call in the *BatchJob Version* format (eg. *R0008P_XJDE0001*).
++
+The Properties window appears.
 
 image:demo_ube/image14_demo_ube.png[image,width=601,height=253]
+
+[start=5]
+. Give the connector a meaningful name (eg. Submit R0008P_XJDE0001).
+. Under the *General* section, click the drop-down for *UBE Name*.
+. Type in the *Batch Job* and *Version* you want to call in the *BatchJob Version* format (eg. *R0008P_XJDE0001*).
 
 NOTE: If this the first time you are selecting a *UBE*, the process  may take some time, as no information has been cached yet. The status bar (bottom right) displays the following image while it's retrieving the metadata.
 
@@ -206,12 +220,13 @@ If the operation fails (possibly due to a timeout), the following message appear
 
 image:demo_ube/troubleshoot_timeout_message.png[image,width=345,height=115]
 
-Review the timeout settings in Anypoint Studio's *Preferences*.
+Review the timeout settings in Anypoint Studio *Preferences*.
 
 . Go the *Window > Preferences* menu.
 
 image:demo_ube/troubleshoot_preferences_menu.png[image,width=154,height=199]
 
+The Preferences window appears.
 [start=2]
 
 . Go to *Anypoint Studio > DataSense* and change the *DataSense Connection Timeout* setting as demonstrated below.
@@ -224,18 +239,18 @@ image:demo_ube/troubleshoot_datasense_timeout.png[image,width=622,height=551]
 
 image:demo_ube/troubleshoot_timeout_tooling.png[image,width=622,height=551]
 
-==== *Setting Parameters*
-After your system has retrieved the required metadata:
+=== Setting Parameters
+After your system has retrieved the required metadata set your paramaters.
 
-. Select *R0008P_XJDE0001* from the list. 
-
+. Select *R0008P_XJDE0001*. 
++
 The specification metadata is retrieved from the enterprise server, and put into your project metadata repository.
 
 image:demo_ube/image12_demo_ube.png[image,width=601,height=252]
 
-Assign the input parameters. 
+Assign the input parameters.
 [start=2]
-. Enter the *Payload* values manually, or via the *Show Graphical View* button.
+. Enter the *Payload* values manually, or via the *Show Graphical View* button, as demonstrated below.
 
 image:demo_ube/image16_demo_ube.png[image,width=586,height=225]
 
@@ -243,11 +258,11 @@ image:demo_ube/image16_demo_ube.png[image,width=586,height=225]
 
 . Drag the inputs to outputs or double-click the output parameter to add to your edit window and change as required. 
 
-Examples:
+Example:
 
 * *_Job Queue* : Enter the Job Queue or leave it blank for the default job queue.
 
-* *_Selection* : F0010.CO = ''00000'' (See link:#appendix-a-how-define-data-selection[Appendix A] for data selection details)
+* *_Selection* : F0010.CO = ''00000'' (See xref:jde-appendix-a.adoc#how-define-data-selection[Appendix A] for data selection details)
 
 * *cFiscalDatePattern* : F
 
@@ -279,7 +294,7 @@ image:demo_ube/image21_demo_ube.png[image,width=601,height=174]
 
 === Testing the Mule Flow
 
-To Test your flow:
+To ensure your connector is working properly, test your mule flow.
 
 . Start your Mule application.
 
@@ -360,17 +375,17 @@ image:demo_ube/image30_demo_ube.png[image,width=506,height=202]
 ** *C1 AND (C2 OR C3)*
 ** The sentence only accepts one level of Parenthesis.
 
-Example:
-
-Valid Sentence (maximum level of Parenthesis opened is 1).
-
-* C1 AND (C2 OR C3) AND (C4 OR C5)
-
-Invalid Sentence (maximum level of Parenthesis opened is 2).
-
-* C1 AND (C2 OR (C3 AND C4))
-
 Examples:
+
+* Valid Sentence (maximum level of Parenthesis opened is 1).
+
+** C1 AND (C2 OR C3) AND (C4 OR C5)
+
+* Invalid Sentence (maximum level of Parenthesis opened is 2).
+
+** C1 AND (C2 OR (C3 AND C4))
+
+Use case examples:
 
 [source,sql]
 ----

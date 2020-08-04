@@ -11,7 +11,7 @@ The following guide explains how to Poll for EDI Events created on the JD Edward
 * Review the PortX JDE Connector xref:jde-requirements.adoc[Reqirements].
 * Review the PortX JDE Connector xref:jde-preliminary-setup.adoc[Preliminary Setup].
 * See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
-* A basic understanding of Oracle’s _JD Edwards EnterpriseOne™_, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
+* A basic understanding of Oracle’s JD Edwards EnterpriseOne™, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
 === Setup - Processing Option
 JDE outbound transactions require that you set a _Processing Option_ specifying EDI information.
@@ -117,12 +117,12 @@ image:demo_poll_edi_events/image4_demo_poll_edi_events.png[image,width=345,heigh
 * Project *Root*
 * *src/main/resources*
 
-NOTE: If the requirement is to use different configuration files per environment, you may create separate folders under *src/main/resources* corresponding to each environment as shown below.
+NOTE: If you are required to use different configuration files per environment, you may create separate folders under *src/main/resources* corresponding to each environment as shown below.
 
 image:demo_poll_edi_events/image5_demo_poll_edi_events.png[image,width=250,height=446]
 [start=2]
 
-. The *mule-arifact.json* file needs to be updated per environment as shown below.
+. Update the *mule-arifact.json* file per environment as shown below.
 
 [source,json]
 ----
