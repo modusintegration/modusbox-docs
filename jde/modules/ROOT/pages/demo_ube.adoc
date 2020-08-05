@@ -220,8 +220,6 @@ If the operation fails (possibly due to a timeout), the following message appear
 
 image:demo_ube/troubleshoot_timeout_message.png[image,width=345,height=115]
 
-Review the timeout settings in Anypoint Studio *Preferences*.
-
 . Go the *Window > Preferences* menu.
 
 image:demo_ube/troubleshoot_preferences_menu.png[image,width=154,height=199]
@@ -248,7 +246,7 @@ The specification metadata is retrieved from the enterprise server, and put into
 
 image:demo_ube/image12_demo_ube.png[image,width=601,height=252]
 
-Assign the input parameters.
+==== *Assign Input Parameters*
 [start=2]
 . Enter the *Payload* values manually, or via the *Show Graphical View* button, as demonstrated below.
 
@@ -270,7 +268,7 @@ image:demo_ube/image17_demo_ube.png[image,width=601,height=218]
 
 === Set Payload Output
 
-. In the Mule Palette select *Core*, scroll down to *Transformers* or type *Payload* in the search bar.
+. In the Mule Palette either select *Core* and scroll down to *Transformers*, or type *Payload* in the search bar.
 
 image:demo_ube/image18_demo_ube.png[image,width=325,height=246]
 

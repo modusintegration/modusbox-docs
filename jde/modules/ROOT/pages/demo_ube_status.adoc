@@ -10,8 +10,8 @@
 This guide explains how to retrieve a Batch Process Status from the server by passing it a job ID.
 
 == Getting Started
-* Review the PortX JDE Connector xref:jde-requirements.adoc[Reqirements].
-* Review the PortX JDE Connector xref:jde-preliminary-setup.adoc[Preliminary Setup].
+* Review the  xref:jde-requirements.adoc[PortX JDE Connector Reqirements].
+* Review the  xref:jde-preliminary-setup.adoc[PortX JDE Connector Preliminary Setup].
 * See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
 * A basic understanding of Oracle’s JD Edwards EnterpriseOne™, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
@@ -196,7 +196,7 @@ image:demo_ube_status/image14_demo_ube_status.png[image,width=601,height=234]
 [start=11]
 
 . Save the project. 
-
++
 The connector is ready to process requests.
 
 == Retrieve a UBE Status
@@ -221,26 +221,24 @@ image:demo_ube_status/image16_demo_ube_status.png[image,width=463,height=229]
 
 image:demo_ube_status/image17_demo_ube_status.png[image,width=460,height=228]
 
-You may now assign the input parameters.
+=== Assign Input Parameters.
 
-[start=6]
-
-. Enter the *payload values* manually, or via the *Show Graphical View* button.
+. In the Properties Window, enter the *payload values* manually, or via the *Show Graphical View* button.
 
 image:demo_ube_status/image18_demo_ube_status.png[image,width=601,height=231]
 
-[start=7]
+[start=2]
 
-. Map the query parameter *jobnumber* to the *Job ID* input parameter and click *Done*.
+. Map the query parameter *jobnumber* to the *Job ID* input parameter.
 
 image:demo_ube_status/image19_demo_ube_status.png[image,width=550,height=264]
+[start=3]
+. Click *Done*.
 
 === Troubleshooting
 If the operation fails (possibly due to a timeout), the following message appears.
 
 image:demo_ube_status/troubleshoot_timeout_message.png[image,width=345,height=115]
-
-Review the Timeout Settings in _Anypoint Studio_ *Preferences*.
 
 . Go the *Window > Preferences* menu.
 
@@ -260,7 +258,7 @@ image:demo_ube_status/troubleshoot_timeout_tooling.png[image,width=622,height=55
 
 === Set Payload Output
 
-. In the Mule Palette, either select *Core*, scroll down to *Transformers* or type *Payload* in the search bar.
+. In your Mule Palette, either select *Core* and scroll down to *Transformers*, or type *Payload* in the search bar.
 
 image:demo_ube_status/image20_demo_ube_status.png[image,width=325,height=246]
 
@@ -273,31 +271,37 @@ image:demo_ube_status/image21_demo_ube_status.png[image,width=354,height=319]
 [start=3]
 
 . Select the *Set Payload* component and review the *Properties*.
++
+The Properties Window appears.
 . Click *Show Graphical View*.
++
+Graphical View appears.
 
 image:demo_ube_status/image22_demo_ube_status.png[image,width=556,height=145]
 
 [start=5]
 
-. Change the *Payload* to reflect the desired output and save the project
+. Change the *Payload* to reflect the desired output. 
 
 image:demo_ube_status/image23_demo_ube_status.png[image,width=559,height=134]
+[start=6]
+
+. Save the project.
 
 === Testing the Mule Flow
 
-To Test your flow, start the Mule application.
-
+. Start the Mule application.
 . Go to the *Run Menu* and select *Run*.
 
 image:demo_ube_status/image24_demo_ube_status.png[image,width=461,height=305]
 
-[start=2]
+[start=3]
 
 . Once the project is deployed, test you flow by typing the *URL* into a web browser (eg. http://localhost:8081/getubestatus).
 
 image:demo_ube_status/image25_demo_ube_status.png[image,width=403,height=126]
 
-=== Handling exceptions
+=== Handling Exceptions
 
 . From your Mule Pallete select and drag the *Error Handler* to your canvas
 
@@ -312,16 +316,19 @@ image:demo_ube_status/image28_demo_ube_status.png[image,width=245,height=128]
 [start=3]
 
 . Select the *On Error Continue* scope.
-. Under *Type* enter *_JDE:ERROR_GETTING_JOB_STATUS_*.
++
+The Scope Window appears.
+. Under *Type* enter *JDE:ERROR_GETTING_JOB_STATUS*.
 
 image:demo_ube_status/image29_demo_ube_status.png[image,width=601,height=247]
 
-NOTE: The operation error types are visable when selecting the operation on your canvas, going to *Error Mapping*, and clicking add. You may also map this error to a application specific error.
+NOTE: The operation error types are visable when selecting the operation on your canvas, going to *Error Mapping*, and clicking add. You may also map this error to an application specific error.
 
 image:demo_ube_status/image30_demo_ube_status.png[image,width=258,height=301]
 
 [start=5]
 
-. Drag the *Set Payload* component to the *Error Handler*, and set an appropriate message.
+. Drag the *Set Payload* component to the *Error Handler*.
+. Set an appropriate message.
 
 image:demo_ube_status/image31_demo_ube_status.png[image,width=506,height=202]
