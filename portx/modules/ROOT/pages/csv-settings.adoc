@@ -8,6 +8,9 @@ include::{partialsdir}/relationships-settings.adoc[]
 +
 Alternatively, you can use the Filter Bar to search for a Relationship. 
 
++
+The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
+
 . In the *FORMAT DEFAULTS* section of the left-hand navigation pane on the, click *CSV*.
 +
 The <<img-csv-settings>> appears.

@@ -2,12 +2,16 @@
 
 A _channel_ provides a means of specifying the connection for a given partner. You can use the channel designer to visually craft and edit channels with pre-configured settings in Portx.
 
-Channel designer allows you specify:
+<<img-channels>> and <<img-channel>> allow you specify:
 
-Type:: Source or Target
-Document:: As created in xref:document-types[Document Types].
-Document Map:: As created in xref:maps[Maps].
-Endpoint:: As created in xref:endpoints[Endpoints]
+*Type*- Either Source or Target.
+
+*Document*- As created in xref:document-types[Document Types].
+
+*Document Map*- As created in xref:maps[Maps].
+
+*Endpoint*- As created in xref:endpoints[Endpoints].
+
 
 include::{partialsdir}/relationships-settings.adoc[]
 
@@ -16,6 +20,9 @@ include::{partialsdir}/relationships-settings.adoc[]
 . Select a Relationship with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
 +
 Alternatively, you can use the Filter Bar to search for a Relationship.  
+
++
+The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Channels*.
 +
@@ -69,11 +76,13 @@ Use configuration settings found in xref:endpoints.adoc[Endpoints] to configure 
 +
 The <<img-channel>> appears.
 
-The following settings are configuration requirements.
+
 [[img-channel]]
 
 image::channel-designer.png[img-channel, title="Channel Designer Page"]
+[start=2]
 
+. Use the following settings to guide your channel configuration.
 
 [%header,cols="3s,7a"]
 |===
