@@ -6,7 +6,7 @@ include::{partialsdir}/edit-settings.adoc[]
 
 [start=3]
 
-. On the Partners and Applications page, select the partner from the list that you are adding a certificate to.
+. On the Partners and Applications page, select a Relationship with which you are adding a certificate.
 +
 The Partner Information Page appears.
 

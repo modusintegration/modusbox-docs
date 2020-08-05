@@ -5,8 +5,9 @@ X12 standards define the structure, format, and content of business transactions
 include::{partialsdir}/relationships-settings.adoc[]
 
 [start=3]
-. Select a relationship with partners and/or applications, from the list. +
-Alternatively, you can use the Filter Bar to search for a relationship. 
+. Select a Relationship with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
++
+Alternatively, you can use the Filter Bar to search for a Relationship.
 
 
 . In the *FORMAT DEFAULTS* section of the left-hand navigation pane, click *X12*.
