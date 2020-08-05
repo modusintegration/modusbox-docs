@@ -120,7 +120,7 @@ image:demo_ube_status/image2_demo_ube_status.png[image,width=250,height=446]
 ----
 === Other Considerations
 
-To redirect the _JD Edwards EntrpriseOne™_ Logger to the Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the _jdelog.properties_), you may add the following *Async Loggers* to the *log4j2.xml* file.
+To redirect the JD Edwards EntrpriseOne™ Logger to the Mule Logger (allowing you to see the JDE activity in both Console and JDE files defined in the *jdelog.properties*), you may add the following *Async Loggers* to the *log4j2.xml* file.
 [source,xml]
 ----
 _<!-- JDE Connector wire logging -->_
@@ -131,9 +131,8 @@ _<!-- JDE Connector wire logging -->_
 
 If you are having trouble resolving all dependencies:
 
-. Shut down AnyPoint Studio
-. Run the following command in the project root folder from the terminal/command prompt.
-
+. Shut down AnyPoint Studio.
+. Run the following command in the project *Root* folder from the terminal/command prompt.
 [source]
 mvn clean install
 
@@ -145,19 +144,20 @@ include::{partialsdir}/configure-global-element.adoc[]
 
 === Creating an HTTP Listener for Your Flow
 
-NOTE: This use case example will create a simple flow to retrieve the status of UBE R000P_XJDE0001 from the _Oracle’s JDE EnterpriseOne_ Server.
+To retrieve a UBE Batch Process Status, you must create a simple flow for *UBE R000P_XJDE0001* on Oracle’s JDE EnterpriseOne server.
 
-. Log into your _JDE EnterpriseOne_ and navigate to *Submitted Jobs*.
-
-. Find a previously submitted job for *ube R0008P*, *Version XJDE0001*, and note the *Job Number* (248 in this case).
+. Log into your JDE EnterpriseOne and navigate to *Submitted Jobs*.
++
+The Submitted Job Search Page appears.
+. Find a previously submitted job for *ube R0008P*, *Version XJDE0001*, and note the *Job Number* (*248* in this case).
 
 image:demo_ube_status/image8_demo_ube_status.png[image,width=601,height=133]
 
-NOTE: See <<demo_ube.adoc#,Submit a Batch Process>>  for details on how to submit this report from a flow.
+NOTE: See <<demo_ube.adoc#,Submitting a UBE Batch Process>>  for details on how to submit this report from a flow.
 
 [start=3]
 
-. Go back to the *Message Flow* tab.
+. Go back and select the *Message Flow* tab.
 
 image:demo_ube_status/image9_demo_ube_status.png[image,width=615,height=459]
 
@@ -170,25 +170,26 @@ image:demo_ube_status/image10_demo_ube_status.png[image,width=263,height=286]
 [start=5]
 
 . Select the *HTTP Listener* component from your canvas and inspect the *Properties* window.
-
++
+The Properties window appears.
 image:demo_ube_status/image11_demo_ube_status.png[image,width=655,height=390]
 
 [start=6]
 
-. The connector requires a Connector Configuration.
-. Click on *Add* to create a connector configuration.
-. Give the *HTTP* endpoint a more descriptive name (eg. _get-ubestatus-http-endpoint_) and press *OK* to go back to the global HTTP endpoint dialog box.
+. Click *Add* to create a connector configuration.
+. Give the *HTTP* endpoint a more descriptive name (eg. *get-ubestatus-http-endpoint*).
+. Click *OK* to go back to the global HTTP endpoint dialog box.
 
 image:demo_ube_status/image12_demo_ube_status.png[image,width=404,height=410]
 [start=9]
 
-. Add a path to the *URL* (eg. _getubestatus_)
+. Under *General*, add a path to the URL (eg. *getubestatus*)
 
 image:demo_ube_status/image13_demo_ube_status.png[image,width=601,height=223]
 
 [start=10]
 
-. Select *Mime Type* and add a parameter for *Job Number*.
+. Select *Mime Type* on the left, and add a parameter for *Job Number*.
 
 image:demo_ube_status/image14_demo_ube_status.png[image,width=601,height=234]
 
@@ -198,16 +199,20 @@ image:demo_ube_status/image14_demo_ube_status.png[image,width=601,height=234]
 
 The connector is ready to process requests.
 
-=== Get a UBE’s Status
+== Retrieve a UBE Status
 
-. Locate the _JDE_ Connector and select *Get Batch Process Information*. . . Drag it to your canvas.
+. In your Mule Pallet locate the JDE Connector.
+. Select *Get Batch Process Information*.
+. Drag it to your canvas.
 
 image:demo_ube_status/image15_demo_ube_status.png[image,width=378,height=234]
 
 [start=3]
 
-. Drag the connector over to your canvas. 
-. Select it and review the *Properties* window.
+. Drag the JDE Connector over to your canvas. 
+. Select the JDE Connector and review the *Properties* window.
++
+The Properties window appears.
 
 image:demo_ube_status/image16_demo_ube_status.png[image,width=463,height=229]
 [start=5]
@@ -320,13 +325,3 @@ image:demo_ube_status/image30_demo_ube_status.png[image,width=258,height=301]
 . Drag the *Set Payload* component to the *Error Handler*, and set an appropriate message.
 
 image:demo_ube_status/image31_demo_ube_status.png[image,width=506,height=202]
-
-== PortX JDE Connector – Example Projects
-
-=== Additional Examples
-
-* <<jde.adoc#,Invoke a Business Function>>
-* <<demo_ube.adoc#,Submit a Batch Process>> 
-* <<demo_poll_mbf_events.adoc#,Poll Transaction (MBF) Events>>
-* <<demo_poll_edi_events.adoc#,Poll EDI Events>>
- 

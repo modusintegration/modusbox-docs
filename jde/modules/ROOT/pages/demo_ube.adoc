@@ -178,7 +178,7 @@ image:demo_ube/image11_demo_ube.png[image,width=415,height=420]
 
 . Click *OK*.
 +
-The global HTTP endpoint dialog box appears.
+The Properties Window appears.
 [start=7]
 
 . Add a path to the URL (eg. submit R0008P_XJDE0001.).
