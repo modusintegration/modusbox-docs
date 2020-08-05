@@ -1,6 +1,6 @@
 = Transaction Designer
 
-_Transaction Designer_ is an PortX feature that enables you to design the _elements_ of a transaction. Transaction elements include:
+Transaction Designer is an PortX feature that enables you to design the _elements_ of a transaction. Transaction elements include:
 
 * Document Types
 * Endpoints
@@ -14,7 +14,7 @@ Transaction Designer enables you to configure these elements from a central page
 include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
 
-. Select a Relationship with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
+. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
 +
 Alternatively, you can use the Filter Bar to search for a Relationship.  
 

@@ -12,7 +12,7 @@ Configuring a map for a partner enables you to specify:
 
 include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
-. Select a Relationship with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
+. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
 +
 Alternatively, you can use the Filter Bar to search for a Relationship. 
 
