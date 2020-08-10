@@ -1,53 +1,49 @@
 == Documents View
-[[img-documents-view, Documents View]]
-
-image::documents-view.png[img-documents-view, title="Documents View"]
-
 :icons: font
-The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor].
-For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Examples].
+The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[PortX Transaction Monitor].
+For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Documents].
 
 
 === Content
-Each row has 6 columns:
+Each row contains six columns:
 
-. *From*- Who the document was sent from.
+From:: Who the document was sent from.
 
-. *To*- Who the document was sent to.
+To:: Who the document was sent to.
 
-. *Date*- Date and time at which the document was sent.
+Date:: Date and time at which the document was sent.
 
-. *Standard*- The standard used to send the document.
+Standard:: The standard used to send the document.
 
-. *Message Type*- The type of message that was sent.
+Message:: Type The type of message that was sent.
 
-. *Label*- Detail information describing the document.
+Label:: Detail information describing the document.
 
 === Document Detail Pane (Right)
 This pane is hidden when no document is selected. It contains:
 
-* *Document ID*- Unique copyable document identification.
-* *Document Definiton ID*- Unique copyable document definition identification. icon:plus-square-o[role="blue"]
-* *Standard*- The document standard used.
-* *Version*- The version of the document.
-* *Message Type*- The type/reason for the message.
-* *From*- Who the document is from.
-* *To*- Who the document is to.
-* *Date*- Date the document was sent.
-* *Duplicate Quiry*- Indicating if a document is a duplicate.
-* *Message Payload*- icon:share[role="blue"]Link to payload url and payload content
-* *Partnership ID*- icon:plus-square-o[role="blue"]Unique copyable partnership identification.
+* Document ID icon:plus-square-o[role="blue"]
+* Document Definiton ID icon:plus-square-o[role="blue"]
+* Standard
+* Version
+* Message Type
+* From
+* To
+* Date
+* Duplicate Quiry
+* Message Payload icon:share[role="blue"]
+* Partnership ID icon:plus-square-o[role="blue"]
 
-==== *Detail Pane Action Icons*
+==== Action Icons
 
-* The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
-* The *blue share icon* icon:share[role="blue"] opens a detail pane that shows the complete message payload.
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
+* The blue share icon icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:
 ** Copy Payload URL
-** Download Content
+** Download 
 ** Copy content to clipboard
 
-==== *Buttons*
+==== Buttons
 * A *Transaction* icon:exchange[] button will appear when a document is selected
 ** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific document
 
@@ -68,12 +64,12 @@ View::
 * Partners
 * Applications
 
-Relationship:: Select the partner or application that is associated with the document.
-Message Type:: Enter the message type found in the <<Document Detail Pane (Right)>>.
-Property Name:: Select the document property name from the dropdown list.
-Property Value:: Enter the document property value found in the <<Document Detail Pane (Right)>>.
-Standard:: Select the document standard protocol from the dropdown list.
-Document ID:: Enter the document ID found in the <<Document Detail Pane (Right)>>.
+Relationship:: The partner or application that is associated with the document.
+Message Type:: The message type found in the <<Document Detail Pane (Right)>>.
+Property Name:: The document property name from the dropdown list.
+Property Value:: The document property value found in the <<Document Detail Pane (Right)>>.
+Standard:: The document standard protocol from the dropdown list.
+Document ID:: The document ID found in the <<Document Detail Pane (Right)>>
 
-==== *Show all Documents*
+==== To Show all Documents
 Click [blue]#*Reset filters*# in the top right.
