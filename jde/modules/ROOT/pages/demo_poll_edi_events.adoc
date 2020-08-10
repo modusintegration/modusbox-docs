@@ -1,4 +1,4 @@
-= Polling for EDI Events
+= Poll for EDI Events
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
