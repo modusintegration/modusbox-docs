@@ -4,6 +4,7 @@
 ** xref:portx:ROOT:index.adoc[PortX]
 ////
 
+** xref:seven-days.adoc[Seven Days to Integration Hub Mastery]
 ** xref:key-concepts.adoc[Key Concepts]
 *** xref:transaction-processing-framework.adoc[Transaction-Processing Framework]
 
