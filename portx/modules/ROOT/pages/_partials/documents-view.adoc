@@ -5,42 +5,42 @@ image::documents-view.png[img-documents-view, title="Documents View"]
 
 :icons: font
 The Documents View presents data on documents that are sent through xref:transaction-monitoring.adoc[Transaction Monitor].
-For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Examples].
+For more information on documents see xref:tracking-examples.adoc#tracking-documents[Tracking Documents].
 
 
 === Content
-Each row has 6 columns:
+Each row has six columns:
 
-. *From*- Who the document was sent from.
+From:: From whom the document was sent.
 
-. *To*- Who the document was sent to.
+To:: To whom the document was sent.
 
-. *Date*- Date and time at which the document was sent.
+Date:: Date and time at which the document was sent.
 
-. *Standard*- The standard used to send the document.
+Standard:: The standard used to send the document.
 
-. *Message Type*- The type of message that was sent.
+Message Type:: The type of message that was sent.
 
-. *Label*- Detail information describing the document.
+Label:: Detail information describing the document.
 
 === Document Detail Pane (Right)
 This pane is hidden when no document is selected. It contains:
 
-* *Document ID*- Unique copyable document identification.
-* *Document Definiton ID*- Unique copyable document definition identification. icon:plus-square-o[role="blue"]
-* *Standard*- The document standard used.
-* *Version*- The version of the document.
-* *Message Type*- The type/reason for the message.
-* *From*- Who the document is from.
-* *To*- Who the document is to.
-* *Date*- Date the document was sent.
-* *Duplicate Quiry*- Indicating if a document is a duplicate.
-* *Message Payload*- icon:share[role="blue"]Link to payload url and payload content
-* *Partnership ID*- icon:plus-square-o[role="blue"]Unique copyable partnership identification.
+Document ID:: Unique copyable document identification.
+Document Definiton ID:: Unique copyable document definition identification. icon:plus-square-o[role="blue"]
+Standard:: The document standard used.
+Version:: The version of the document.
+Message Type:: The type/reason for the message.
+From:: From whom the document came.
+To:: To whom the document is going.
+Date:: Date the document was sent.
+Duplicate Quiry:: Indicating if a document is a duplicate.
+Message Payload:: icon:share[role="blue"] A link to the payload url and payload content
+Partnership ID:: icon:plus-square-o[role="blue"] Unique copyable partnership identification.
 
 ==== *Detail Pane Action Icons*
 
-* The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
+* The *blue copy icon* icon:plus-square-o[role="blue"] enables you to copy information to your clipboard
 * The *blue share icon* icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:
 ** Copy Payload URL
@@ -48,8 +48,7 @@ This pane allows you to:
 ** Copy content to clipboard
 
 ==== *Buttons*
-* A *Transaction* icon:exchange[] button will appear when a document is selected
-** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific document
+* A *Transaction* icon:exchange[] button appears when a document is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific document.
 
 === Filters
 You can filter documents based on:
@@ -60,20 +59,22 @@ Date::
 * 1 Week
 * 1 Month
 * Custom Range
-** *From*: Select a date from the calendar; only documents that occurred after that date will appear.
-** *To*: Select a date from calendar; only documents that occurred before that date will appear
++
+*From*: Select a date from the calendar; only documents that occurred after that date appear.
++
+*To*: Select a date from calendar; only documents that occurred before that date appear.
 
 View::
 * Both
 * Partners
 * Applications
 
-Relationship:: Select the partner or application that is associated with the document.
-Message Type:: Enter the message type found in the <<Document Detail Pane (Right)>>.
-Property Name:: Select the document property name from the dropdown list.
-Property Value:: Enter the document property value found in the <<Document Detail Pane (Right)>>.
-Standard:: Select the document standard protocol from the dropdown list.
-Document ID:: Enter the document ID found in the <<Document Detail Pane (Right)>>.
+Relationship:: The partner or application that is associated with the document.
+Message Type:: the message type found in the <<Document Detail Pane (Right)>>.
+Property Name:: The document property name from the dropdown list.
+Property Value:: The document property value found in the <<Document Detail Pane (Right)>>.
+Standard:: The document standard protocol from the dropdown list.
+Document ID:: The document ID found in the <<Document Detail Pane (Right)>>.
 
 ==== *Show all Documents*
 Click [blue]#*Reset filters*# in the top right.
