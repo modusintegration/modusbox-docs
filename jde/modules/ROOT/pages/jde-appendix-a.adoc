@@ -2,18 +2,19 @@
 
 == Required Configuration Files
 
-NOTE: You may need the assistance of your JD Edwards CNC Administrator to acquire these files.
+NOTE: You may need the assistance of your JD Edwards CNC Administrator to acquire the configuration files.
 
 In most cases, get your configuration files from the relevant environment's *HTML/JAS* server. 
 
 These files are located in the JD Edwards Server Manager Agent's *config* folder relating to the *HTML/JAS* instance
 (eg. */u01/Oracle/SCFHA/jde_home/targets/_instanceName_/config*).
 
-* The required files are:
-** *jdbi.ini*
-** *jdeinterop.ini*
-** *tnsnames.ora (if using an Oracle database)*
-** *jdelog.properties*
+The required files are:
+
+* *jdbi.ini*
+* *jdeinterop.ini*
+* *tnsnames.ora (if using an Oracle database)*
+* *jdelog.properties*
 
 Where *instanceName* is the *HTML/JAS* instance name for the relevant environment.
 

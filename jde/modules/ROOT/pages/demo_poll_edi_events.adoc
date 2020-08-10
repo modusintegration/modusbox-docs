@@ -177,7 +177,7 @@ include::{partialsdir}/configure-global-element.adoc[]
 
 == Creating a Scheduler for Your Flow
 
-This use case example create a simple flow to poll for outbound events coming from an application that uses *Print Invoices* (*R42565*) to generate a *Order Acknowledgement (855/ORDSP)* EDI document, and write these to files.
+This use case example creates a simple flow to poll for outbound events coming from an application that uses *Print Invoices* (*R42565*) to generate a *Order Acknowledgement (855/ORDSP)* EDI document, and writes to each of these files.
 
 See xref:jde-requirements.adoc[Requirements] setup details.
 
