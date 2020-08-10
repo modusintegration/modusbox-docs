@@ -1,9 +1,4 @@
 == Errors View
-
-[[img-errors-view, Errors View]]
-
-image::errors-view.png[img-errors-view, title="Errors View"]
-
 :icons: font
 The errors view presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
 For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Examples].
@@ -11,28 +6,27 @@ For more information on errors see xref:tracking-examples.adoc#tracking-errors[T
 === Content
 Each row has 4 columns:
 
-. *From-* Who the transaction came from
-. *To-* Who the transaction was going to
-. *Date-* Date and time at which the error occurred
-. *Error Code-* Code associated with the error
+From:: Who the transaction came from.
+To:: Who the transaction was going to.
+Date:: Date and time at which the error occurred.
+Error Code:: Code associated with the error.
 
 === Error Detail Pane (Right)
 This pane is hidden when no error is selected. It contains:
 
-* *Error Message*- icon:file-code-o[role="blue"]Detailed message of the error.
-* *Error ID*- icon:plus-square-o[role="blue"]Unique copyable error identification.
-* *Source-* Source of the error.
-* *Source ID*- Unique copyable error source identification.
+* Error Message icon:file-code-o[role="blue"]
+* Error ID icon:plus-square-o[role="blue"]
+* Source
+* Source ID icon:plus-square-o[role="blue"]
 
-==== *Detail Pane Action Icons*
+==== Action Icons
 
-* The *blue copy icon* icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard.
-* The *blue file code icon* icon:file-code-o[role="blue"] opens a detailed error message.
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue file code icon icon:file-code-o[role="blue"] opens a detailed error message
 
-==== *Buttons*
+==== Buttons
 * A *Transaction* icon:exchange[] button will appear when an error is selected.
-+
-This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
+** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
 
 
 === Filters
@@ -67,12 +61,12 @@ Error Source::
 * Document
 
 Relationship:: 
-Select the application or partner between which the error occurs.
+The application or partner between which the error occurs.
 
 Error ID::
-Enter a specific error identifier.
+A specific error identifier.
 
 
-==== *Show all Errors*
+==== To Show all Errors
 
 Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.
