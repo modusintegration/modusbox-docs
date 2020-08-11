@@ -191,7 +191,7 @@ image:demo_ube/image12_demo_ube.png[image,width=601,height=252]
 +
 The connector is ready to process requests.
 
-=== Submit a Batch Process
+== Submit a Batch Process
 
 . In your Mule Pallet, locate the *JDE* Connector.
 . Select *Submit batch process*.

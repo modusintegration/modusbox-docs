@@ -10,14 +10,14 @@ The _PortX JDE Connector_ leverages the internal capabilities of Oracle’s _JD 
 
 This User Guide provides information to accomplish the following scenarios.
 
-* Log into _JD Edwards EnterpriseOne™_
-* <<Invoke Business Functions>> (BSFN) on the server by passing its parameters.
+* xref:anypoint-studio-project.adoc[Invoke Business Functions] (BSFN) on the server by passing its parameters.
+////
 * <<Invoke Business Functions>> (BSFN) on the server using Transaction Processing.
+////
 * Invoke a xref:demo_ube.adoc[UBE] by name.
 * Check a xref:demo_ube_status.adoc[UBE Call Status] asynchronously.
 * xref:demo_poll_mbf_events.adoc[Poll MFB Events].
 * xref:demo_poll_edi_events.adoc[Poll EDI Events].
-* Log out.
 
 
 The _PortX_ _JDE Connector_ allows you to discover functions by name, providing you with full access to all Business Function signatures.

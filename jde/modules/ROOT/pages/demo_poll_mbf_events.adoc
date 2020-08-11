@@ -1,4 +1,4 @@
-= Poll Transaction (MBF) Events
+= Polling Transaction (MBF) Events
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro

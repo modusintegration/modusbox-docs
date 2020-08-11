@@ -1,4 +1,4 @@
-= Poll for EDI Events
+= Polling for EDI Events
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
@@ -8,8 +8,8 @@
 The following guide explains how to Poll for EDI Events created on the JD Edwards EnterpriseOne server.
 
 == Getting Started
-* Review the PortX JDE Connector xref:jde-requirements.adoc[Reqirements].
-* Review the PortX JDE Connector xref:jde-preliminary-setup.adoc[Preliminary Setup].
+* Review the  xref:jde-requirements.adoc[PortX JDE ConnectorReqirements].
+* Review the xref:jde-preliminary-setup.adoc[PortX JDE ConnectorPreliminary Setup].
 * See the link:/https://docs.oracle.com/cd/E64610_01/EOADI/title.htm[JD Edwards EnterpriseOne Applications Data Interface for Electronic Data Interchange Implementation Guide] for more information about requirements.
 * A basic understanding of Oracle’s JD Edwards EnterpriseOne™, Mule, the and the https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface is assumed.
 
@@ -172,10 +172,10 @@ mvn clean install
 [start=3]
 . Open AnyPoint Studio and check dependencies again.
 
-== Configure the Global Element
+=== Configure the Global Element
 include::{partialsdir}/configure-global-element.adoc[]
 
-== Creating a Scheduler for Your Flow
+=== Creating a Scheduler for Your Flow
 
 This use case example creates a simple flow to poll for outbound events coming from an application that uses *Print Invoices* (*R42565*) to generate a *Order Acknowledgement (855/ORDSP)* EDI document, and writes to each of these files.
 
@@ -523,7 +523,7 @@ image:demo_poll_edi_events/image44_demo_poll_edi_events.png[image,width=596,heig
 
 Your schema definitons are changed.
 
-== Testing the Mule Flow
+=== Testing the Mule Flow
 
 . Start the Mule application. 
 

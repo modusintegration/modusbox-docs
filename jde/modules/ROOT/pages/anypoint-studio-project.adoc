@@ -2,15 +2,17 @@
 
 This user guide provides instructions to accomplish the following:
 
-* <<Create a New Mule Project>>
+* <<Creating a New Mule Project>>
 * <<Configure the Global Element>>
 * <<Creating a HTTP Listener for Your Flow>>
 * <<Invoke Business Functions>>
+* <<Setting Parameters>>
+* <<Set Payload Output>>
 * <<Testing the Mule Flow>>
 
 NOTE: Update AnyPoint Studio before starting a PortX JDE Connector project.
 
-== Create a New Mule Project 
+== Creating a New Mule Project 
 . Open Anypoint Studio.
 . Create a new Mule Project.
 . Name the project appropritely.
@@ -136,10 +138,10 @@ mvn clean install
 
 
 
-== Configure the Global Element
+=== Configure the Global Element
 include::{partialsdir}/configure-global-element.adoc[]
 
-== Creating a HTTP Listener for Your Flow
+=== Creating a HTTP Listener for Your Flow
 
 This procedure shows how to create a simple flow to get the address book name from the *Address Book table (A/B)*, invoking the *Master Business Function (MBF)* on Oracle’s JDE EnterpriseOne™ Server.
 
@@ -288,7 +290,7 @@ image:demo_getting_started/image23_getting_started.png[image,width=601,height=15
 
 image:demo_getting_started/image24_getting_started.png[image,width=601,height=178]
 
-== Testing the Mule Flow
+=== Testing the Mule Flow
 
 To test your flow, start your Mule Application.
 

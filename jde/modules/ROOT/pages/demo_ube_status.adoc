@@ -1,10 +1,8 @@
-= Retrieve a UBE Batch Process Status
+= Retrieving a UBE Batch Process Status
 :keywords: add_keywords_separated_by_commas
 :imagesdir: images
 :toc: macro
 :toclevels: 2
-
-== Introduction
 
 
 This guide explains how to retrieve a Batch Process Status from the server by passing it a job ID.

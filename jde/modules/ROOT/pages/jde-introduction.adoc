@@ -16,16 +16,16 @@ The PortX JDE Connector manages a cache repository for all functional metadata u
 The results of a Function Call are injected into the flow as a Map containing key-value pairs with the invocation’s output values. This approach gives you the freedom of choice to construct complex flows and manage custom exception strategies.
 
 === Using the PortX JDE Connector
+Use the Porx JDE Connector to:
 
-Use the connector to: ::
-
-* xref:anypoint-studio-projet.adoc[Invoke a BSFN on JD Edwards Enterprise Server by passing it's paramaters].
-* xref:anypoint-studio-project.adoc[Invoke a BSFN on JD Edwards Enterprise Server using Transaction Processing].
-* Invoke a xref:demo_ube.adoc[UBE] by name.
-* Check a xref:demo_ube_status.adoc[UBE Call Status asynchronously].
-* Submit a UBE.
+* xref:anypoint-studio-project.adoc[Invoke a BSFN] on JD Edwards Enterprise Server by passing it's paramaters.
+* xref:demo_ube.adoc[Invoke a UBE] by name.
+* xref:demo_ube_status.adoc[Retrieve a UBE] call status asynchronously.
+* xref:demo_ube.adoc[Submit a UBE].
+////
 * Get UBE Job Status for a UBE using JDE Job Id.
 * Get Outbound Events from a JD Edwards Application.
 * Get EDI Event from EDI Application.
+////
 * xref:demo_poll_mbf_events.adoc[Poll MFB Events].
 * xref:demo_poll_edi_events.adoc[Poll EDI Events].
