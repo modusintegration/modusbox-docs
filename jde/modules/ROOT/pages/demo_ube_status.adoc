@@ -15,7 +15,7 @@ This guide explains how to retrieve a Batch Process Status from the server by pa
 
 NOTE:  Update AnyPoint Studio before starting a PortX JDE Connector project.
 
-=== Creating a New Mule Project
+== Creating a New Mule Project
 To retrieve a UBE Batch Process Status, begin with a new Mule Project.
 
 . Login to your Mule Application
