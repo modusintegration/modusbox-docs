@@ -1,20 +1,49 @@
 == Transmissions View
 :icons: font
 The transmissions view presents data on each transmission between applications and partners in xref:transaction-monitoring[Transaction Monitor].
-For more information on transmissions see xref:tracking-examples.adoc#tracking-transmissions[Tracking Examples].
+For more information on transmissions see xref:tracking-examples.adoc#tracking-transmissions[Tracking Transmissions].
 
 === Content
-Each row has 5 columns:
+Each row has five columns:
 
-. *From:* Who the transmission came from
-. *To:* Who the transmission was sent to
-. *Date:* Date and time at which the transmission occurred
-. *Transmission Type:* The protocol the transmission was sent over
-. *Label:* Any label associated with the transmission
+<<<<<<< HEAD
+From:: From whom the transmission came.
+To:: To whom the transmission was sent.
+Date:: Date and time at which the transmission occurred.
+Transmission Type:: The protocol the transmission was sent over.
+Label:: Any label associated with the transmission.
+=======
+From:: Who the transmission came from
+To:: Who the transmission was sent to
+Date:: Date and time at which the transmission occurred
+Transmission Type:: The protocol the transmission was sent over
+Label:: Any label associated with the transmission
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 === Transmission Detail Pane (Right)
 This pane is hidden when no transmission is selected. It contains:
 
+<<<<<<< HEAD
+From:: From whom the transmission came.
+Transmission Type:: The transport type used in the transmission.
+Date:: Date transmission was sent.
+Message Payload:: icon:share[role="blue"]Link to payload url and payload content.
+Status:: State of the transmission.
+Transmission ID:: icon:plus-square-o[role="blue"] Unique copyable transmission identification.
+Partnership ID:: icon:plus-square-o[role="blue"] Unique copyable partnership identification.
+Content Type:: Type of message sent.
+MDN Time:: Time message was sent.
+MDN Expected:: Expectation that the server accept the message.
+MDN Async:: If data is automatically synchornized in JavaScript. 
+MDN Status:: Confirmation the message is sent.
+MDN Content:: Content type and content of message.
+Message ID:: Unique copyable message identification labeled by the transport used.
+
+==== *Detail Pane Action Icons*
+* The *blue copy icon* icon:plus-square-o[role="blue"] enables you to copy information to your clipboard
+* The *blue arrow icon* icon:share[role="blue"] opens a detail page that shows the complete message payload.
+This detail page enables you to:
+=======
 * From 
 * Transmission Type
 * Date
@@ -26,13 +55,19 @@ This pane is hidden when no transmission is selected. It contains:
 * The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
 * The blue share icon icon:share[role="blue"] opens a detail page that shows the complete message payload.
 This detail page allows you to:
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 ** Copy Payload URL
 ** Download 
 ** Copy content to clipboard
 
+<<<<<<< HEAD
+==== *Buttons*
+A *Transaction* icon:exchange[] button appears when a transmission is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific transmission
+=======
 ==== Buttons
 * A *Transaction* icon:exchange[] button will appear when a transmission is selected
 ** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific transmission
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 === Filters
 You can filter transmissions based on:
@@ -43,17 +78,26 @@ Date::
 * 1 Week
 * 1 Month
 * Custom Range
-** *From*: Select a date from the calendar; only transmissions that occurred after that date will appear.
-** *To*: Select a date from calendar; only transmissions that occurred before that date will appear
++
+*From*- Select a date from the calendar; only transmissions that occurred after that date appear.
++
+*To*- Select a date from calendar; only transmissions that occurred before that date appear.
+
 View::
 * Both
 * Partners
 * Applications
 
-Relationship:: Select the partner or application associated with the transmission
-File Name:: Enter in part or all of a file name
-Transport:: Select the transport protocol the transmission was sent over
-Transmission ID:: Allows you to filter for a transmission by entering the ID
+Relationship:: The partner or application associated with the transmission.
+<<<<<<< HEAD
+File Name::  Part or all of a file name.
+Transport:: The transport protocol the transmission was sent over.
+Transmission ID:: Filter by transmission ID.
+=======
+File Name:: Part or all of a file name.
+Transport:: The transport protocol the transmission was sent over.
+Transmission ID:: Search by Transmission ID.
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 ==== To Show all Transmissions
 Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.

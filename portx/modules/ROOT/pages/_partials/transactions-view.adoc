@@ -1,31 +1,43 @@
 == Transactions View
+<<<<<<< HEAD
+[[img-transactions-view, Transactions View]]
+
+image::transactions-view.png[img-transactions-view, title="Transactions View"]
+
+The Transactions View is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
+For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Transactions].
+=======
 The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
 For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Examples].
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 
 === Content
 Each row has 10 columns:
 
-Column 1 (Replay Indicator):: This column presents a grey circle icon:circle-o[] at the top of the column allowing you to select all incomplete transactions in the content area below. 
-You can also select individual incomplete transactions in this column.
+Column 1 (Replay Indicator):: From this column, you can select:
 
-* Select incomplete transaction(s) and you may replay that transaction by clicking the blue [blue]#*Replay*# button in the top right of the filter Bar.
+* The a grey circle icon:circle-o[] at the top of the column in order to select all incomplete transactions in the content area below. 
+
+* Individual transactions.
+
+* Incomplete transaction(s) so that you may replay them by clicking the blue [blue]#*Replay*# button in the top right of the filter Bar.
 
 Column 2 (Status):: 
-This column contains the following symbols:
-* A green checkmark icon:check[role="green"] means the transaction was successful
+This column may contain the following symbols:
+* A green checkmark icon:check[role="green"] means the transaction was successful.
 * A red caution sign icon:exclamation-triangle[role="red"] means that an error occurred somewhere in the transaction.
 
 Column 3 (Replay Status)::
-This column contains the following symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:undo[]
+This column may contain the following symbols: icon:fa fa-clock-o[role="red"] icon:fa fa-repeat[role="blue"] icon:undo[]
 * An orange clock icon:clock-o[role="red"] means a replay is requested and currently being processed.
-* A blue partial circle with an arrowhead pointing right, icon:repeat[role="blue"] means that the transaction has been replayed.
-* A gray partial circle with an arrowhead pointing left icon:undo[], means that the transaction is a replay of another transaction.
+* A blue partial circle with an arrowhead pointing right icon:repeat[role="blue"] means that the transaction has been replayed.
+* A gray partial circle with an arrowhead pointing left icon:undo[] means that the transaction is a replay of another transaction.
 
 See xref:tracking-examples.adoc#Replaying-an-Incomplete-Transaction[Replaying an Incomplete Transaction] for information on replaying transactions.
 
 Column 4 (Proceeding Transaction Type)::
-This column contains symbols indicating the preceding transaction type.
+This column may contain symbols indicating the preceding transaction type.
 * Batch
 * Debatch
 * Chain
@@ -33,7 +45,7 @@ This column contains symbols indicating the preceding transaction type.
 
  
 Column 5 (Next Transaction Type)::
-This column contains symbols indicating the next transaction type.
+This column may contain symbols indicating the next transaction type.
 * Batch
 * Debatch
 * Chain
@@ -41,15 +53,15 @@ This column contains symbols indicating the next transaction type.
 
 Hover over each icon for details on the Transaction type.
 
-Column 6 (Status):: This column provides a detailed transaction status label.
+Column 6 (Status):: This column may provide a detailed transaction status label.
 
-Column 7 (Name):: This column provides the name of the transaction.
+Column 7 (Name):: This column may provide the name of the transaction.
 
-Column 8 (From):: This column indicates who the transaction originated from.
+Column 8 (From):: This column may indicate from whom the transaction originated.
 
-Column 9 (To):: This column indicates who the transaction is going to.
+Column 9 (To):: This column may indicate to whom the transaction is going.
 
-Column 10 (Date):: This column indicates the date and time at which the transaction occurred.
+Column 10 (Date):: This column may indicate the date and time at which the transaction occurred.
 
 ==== Transaction Event Rows
 
@@ -64,6 +76,22 @@ Label:: Type of event action in the transaction
 === Transaction Detail Pane (Right)
 Hidden when no transaction is selected, this pane includes:
 
+<<<<<<< HEAD
+Preceding Transaction:: Preceding transaction type.
+Next Transaction:: Next transaction type.
+From:: From whom the transaction came.
+To:: To whom the transaction is going.
+Date:: The date of the transaction.
+Transaction ID:: icon:plus-square-o[role="blue"] Unique copyable transaction identifier. 
+
+==== *Detail Pane Action Icons*
+Click the blue *Copy* icon next to Transaction ID to copy it.
+
+==== *Detail Pane Links*
+If you need to navagate to a previous transaction, click [blue]#*View Preceding Transaction*# to view the preceding transaction.
+
+If you need to navagate to the next transaction, click [blue]#*View Next Transaction*# to view the next transaction.
+=======
 * Preceding transaction ID and Link
 * Next transaction ID and Link
 * From
@@ -79,12 +107,11 @@ Hidden when no transaction is selected, this pane includes:
 * Click [blue]#*View Next Transaction*# to see the next transaction
 
 If a transaction has been replayed icon:repeat[role="blue"] a blue [blue]#*View replays*# link appears. 
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
-* Click the [blue]#*View replays*# link to view transaction replays
+If a transaction has been replayed icon:repeat[role="blue"] a blue [blue]#*View replays*# link appears. Click the [blue]#*View replays*# link to view transaction replays.
 
-If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View original*# link appears.
-
-* Click the blue [blue]#*View original*# link to view the original transaction
+If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View original*# link appears. Click the blue [blue]#*View original*# link to view the original transaction.
 
 ** Additionally you can copy the Original Transaction ID by clicking the blue copy icon:plus-square-o[role="blue"] action icon next to it.
 
@@ -100,8 +127,10 @@ Date of Transaction::
 * 1 Week
 * 1 Month
 * Custom Range
-** *From*: Select a date from the calendar; only transactions that occurred after that date will appear.
-** *To*: Select a date from calendar; only transactions that occurred before that date will appear
++
+*From*: Select a date from the calendar; only transactions that occurred after that date appear.
++
+*To*: Select a date from calendar; only transactions that occurred before that date appear.
 
 View::
 In the xref:central-pane-elements#View-Dropdown-List[View Dropdown List] filter by:
@@ -110,11 +139,20 @@ In the xref:central-pane-elements#View-Dropdown-List[View Dropdown List] filter 
 * Partners
 * Applications
 
-Relationship:: Filter by the application or partner between which the transaction occurs.
+<<<<<<< HEAD
+Relationship:: The Application or Partner between which the transaction occurs. Choose the Partner or Application from the dropdown menu.
+
+Transaction ID:: The individual Transaction ID.
++
+
+NOTE: You can view replays of this Transaction ID by clicking [blue]#*View replays*# in the <<Transaction Detail Pane (Right)>>.
+=======
+Relationship:: The application or partner between which the transaction occurs.
 * Choose the Partner or Application from the dropdown menu
 
-Transaction ID:: Filter by individual Transaction ID.
+Transaction ID:: The individual Transaction ID.
 * You can view replays of this Transaction ID by clicking [blue]#*View replays*# in the <<Transaction Detail Pane (Right)>>.
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 
 ==== To Show all Transactions
