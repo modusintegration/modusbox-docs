@@ -1,10 +1,16 @@
 == Transactions View
+<<<<<<< HEAD
 [[img-transactions-view, Transactions View]]
 
 image::transactions-view.png[img-transactions-view, title="Transactions View"]
 
 The Transactions View is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
 For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Transactions].
+=======
+The transactions view is the default view for the xref::transaction-monitoring.adoc[Transaction Monitor] page.
+For more information on transactions see xref:tracking-examples.adoc#tracking-transactions[Tracking Examples].
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
+
 
 === Content
 Each row has 10 columns:
@@ -37,6 +43,7 @@ This column may contain symbols indicating the preceding transaction type.
 * Chain
 * Multi-route
 
+ 
 Column 5 (Next Transaction Type)::
 This column may contain symbols indicating the next transaction type.
 * Batch
@@ -56,7 +63,7 @@ Column 9 (To):: This column may indicate to whom the transaction is going.
 
 Column 10 (Date):: This column may indicate the date and time at which the transaction occurred.
 
-==== *Transaction Event Rows*
+==== Transaction Event Rows
 
 To view detailed information for the events that comprise a transaction, click anywhere in a transaction row. A new table appears beneath the transaction row. Events appear in inverse chronological order (oldest first). Details include:
 
@@ -69,6 +76,7 @@ Label:: Type of event action in the transaction
 === Transaction Detail Pane (Right)
 Hidden when no transaction is selected, this pane includes:
 
+<<<<<<< HEAD
 Preceding Transaction:: Preceding transaction type.
 Next Transaction:: Next transaction type.
 From:: From whom the transaction came.
@@ -83,10 +91,29 @@ Click the blue *Copy* icon next to Transaction ID to copy it.
 If you need to navagate to a previous transaction, click [blue]#*View Preceding Transaction*# to view the preceding transaction.
 
 If you need to navagate to the next transaction, click [blue]#*View Next Transaction*# to view the next transaction.
+=======
+* Preceding transaction ID and Link
+* Next transaction ID and Link
+* From
+* To
+* Date
+* Transaction ID icon:plus-square-o[role="blue"] 
+
+==== Action Icons
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
+
+==== Links
+* Click [blue]#*View Preceding Transaction*# to see the preceding transaction
+* Click [blue]#*View Next Transaction*# to see the next transaction
+
+If a transaction has been replayed icon:repeat[role="blue"] a blue [blue]#*View replays*# link appears. 
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 If a transaction has been replayed icon:repeat[role="blue"] a blue [blue]#*View replays*# link appears. Click the [blue]#*View replays*# link to view transaction replays.
 
 If a transaction is a replay of a transaction icon:undo[] a blue [blue]#*View original*# link appears. Click the blue [blue]#*View original*# link to view the original transaction.
+
+** Additionally you can copy the Original Transaction ID by clicking the blue copy icon:plus-square-o[role="blue"] action icon next to it.
 
 See xref:tracking-examples.adoc#Replaying-an-Incomplete-Transaction[Replaying an Incomplete Transaction] for information on replaying transactions.
 
@@ -112,14 +139,22 @@ In the xref:central-pane-elements#View-Dropdown-List[View Dropdown List] filter 
 * Partners
 * Applications
 
+<<<<<<< HEAD
 Relationship:: The Application or Partner between which the transaction occurs. Choose the Partner or Application from the dropdown menu.
 
 Transaction ID:: The individual Transaction ID.
 +
 
 NOTE: You can view replays of this Transaction ID by clicking [blue]#*View replays*# in the <<Transaction Detail Pane (Right)>>.
+=======
+Relationship:: The application or partner between which the transaction occurs.
+* Choose the Partner or Application from the dropdown menu
+
+Transaction ID:: The individual Transaction ID.
+* You can view replays of this Transaction ID by clicking [blue]#*View replays*# in the <<Transaction Detail Pane (Right)>>.
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 
-==== *Show all Transactions*
+==== To Show all Transactions
 Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.
 

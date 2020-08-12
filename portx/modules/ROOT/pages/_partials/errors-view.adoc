@@ -1,9 +1,4 @@
 == Errors View
-
-[[img-errors-view, Errors View]]
-
-image::errors-view.png[img-errors-view, title="Errors View"]
-
 :icons: font
 The Errors View presents error data in xref:transaction-monitoring.adoc[Transaction Monitor].
 For more information on errors see xref:tracking-examples.adoc#tracking-errors[Tracking Errors].
@@ -11,26 +6,47 @@ For more information on errors see xref:tracking-examples.adoc#tracking-errors[T
 === Content
 Each row has four columns:
 
+<<<<<<< HEAD
 From:: From whom the transaction came.
 To:: To whom the transaction was going.
+=======
+From:: Who the transaction came from.
+To:: Who the transaction was going to.
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 Date:: Date and time at which the error occurred.
 Error Code:: Code associated with the error.
 
 === Error Detail Pane (Right)
 This pane is hidden when no error is selected. It contains:
 
+<<<<<<< HEAD
 Error Message:: icon:file-code-o[role="blue"]Detailed message of the error.
 Error ID:: icon:plus-square-o[role="blue"]Unique copyable error identification.
 Source:: Source of the error.
 Source ID:: Unique copyable error source identification.
+=======
+* Error Message icon:file-code-o[role="blue"]
+* Error ID icon:plus-square-o[role="blue"]
+* Source
+* Source ID icon:plus-square-o[role="blue"]
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
-==== *Detail Pane Action Icons*
+==== Action Icons
 
+<<<<<<< HEAD
 * The *blue copy icon* icon:plus-square-o[role="blue"] enables you to copy informaiton to your clipboard.
 * The *blue file code icon* icon:file-code-o[role="blue"] opens a detailed error message.
 
 ==== *Buttons*
 * A *Transaction* icon:exchange[] button appears when an error is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
+=======
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy informaiton to your clipboard
+* The blue file code icon icon:file-code-o[role="blue"] opens a detailed error message
+
+==== Buttons
+* A *Transaction* icon:exchange[] button will appear when an error is selected.
+** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 
 === Filters
@@ -71,6 +87,6 @@ Error ID::
 A specific error identifier.
 
 
-==== *Show all Errors*
+==== To Show all Errors
 
 Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.

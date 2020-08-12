@@ -1,8 +1,4 @@
 == Transmissions View
-[[img-transmissions-view, Transmissions View]]
-
-image::transmissions-view.png[img-transmissions-view, title="Transmissions View"]
-
 :icons: font
 The transmissions view presents data on each transmission between applications and partners in xref:transaction-monitoring[Transaction Monitor].
 For more information on transmissions see xref:tracking-examples.adoc#tracking-transmissions[Tracking Transmissions].
@@ -10,15 +6,24 @@ For more information on transmissions see xref:tracking-examples.adoc#tracking-t
 === Content
 Each row has five columns:
 
+<<<<<<< HEAD
 From:: From whom the transmission came.
 To:: To whom the transmission was sent.
 Date:: Date and time at which the transmission occurred.
 Transmission Type:: The protocol the transmission was sent over.
 Label:: Any label associated with the transmission.
+=======
+From:: Who the transmission came from
+To:: Who the transmission was sent to
+Date:: Date and time at which the transmission occurred
+Transmission Type:: The protocol the transmission was sent over
+Label:: Any label associated with the transmission
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 === Transmission Detail Pane (Right)
 This pane is hidden when no transmission is selected. It contains:
 
+<<<<<<< HEAD
 From:: From whom the transmission came.
 Transmission Type:: The transport type used in the transmission.
 Date:: Date transmission was sent.
@@ -38,12 +43,31 @@ Message ID:: Unique copyable message identification labeled by the transport use
 * The *blue copy icon* icon:plus-square-o[role="blue"] enables you to copy information to your clipboard
 * The *blue arrow icon* icon:share[role="blue"] opens a detail page that shows the complete message payload.
 This detail page enables you to:
+=======
+* From 
+* Transmission Type
+* Date
+* The Message payload icon:share[role="blue"] 
+* Status
+* Transmission IDs icon:plus-square-o[role="blue"]
+
+==== Action Icons
+* The blue copy icon icon:plus-square-o[role="blue"] allows you to copy information to your clipboard
+* The blue share icon icon:share[role="blue"] opens a detail page that shows the complete message payload.
+This detail page allows you to:
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 ** Copy Payload URL
 ** Download 
 ** Copy content to clipboard
 
+<<<<<<< HEAD
 ==== *Buttons*
 A *Transaction* icon:exchange[] button appears when a transmission is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific transmission
+=======
+==== Buttons
+* A *Transaction* icon:exchange[] button will appear when a transmission is selected
+** This will take you to the xref:central-pane-elements#transactions-view[Transactions View] and highlight this specific transmission
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
 === Filters
 You can filter transmissions based on:
@@ -65,10 +89,16 @@ View::
 * Applications
 
 Relationship:: The partner or application associated with the transmission.
+<<<<<<< HEAD
 File Name::  Part or all of a file name.
 Transport:: The transport protocol the transmission was sent over.
 Transmission ID:: Filter by transmission ID.
+=======
+File Name:: Part or all of a file name.
+Transport:: The transport protocol the transmission was sent over.
+Transmission ID:: Search by Transmission ID.
+>>>>>>> 99ea637bc3c87a70f7efacb90df84012f1d06d6e
 
-==== *Show all Transmissions*
+==== To Show all Transmissions
 Click icon:trash-o[role="blue"] [blue]#*Reset Filters*# in the top right.
 
