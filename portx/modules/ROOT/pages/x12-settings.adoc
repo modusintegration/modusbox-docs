@@ -4,13 +4,7 @@ X12 standards define the structure, format, and content of business transactions
 
 include::{partialsdir}/relationships-settings.adoc[]
 
-[start=3]
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship.
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
+[start=4]
 
 . In the *FORMAT DEFAULTS* section of the left-hand navigation pane, click *X12*.
 +
@@ -20,8 +14,8 @@ The <<img-x12-settings>> appears.
 
 image::x12-settings.png[img-x12-settings,title="X12 Settings Page"]
 
-Use the following settings to assist in populating each field based on your requirements.
+Use the following sections to identify configurable x12 settings.
 
 * xref:x12-identity-settings.adoc[X12 Identity Settings]
-* xref:x12-inbound-(read)-settings.adoc[X12 Inbound (Read) Settings]
-* xref:x12-outbound-(write)-settings.adoc[X12 Outbound (Write) Settings]
+* xref:x12-inbound-(read)-settings.adoc[X12 Inbound Settings]
+* xref:x12-outbound-(write)-settings.adoc[X12 Outbound Settings]

@@ -1,22 +1,21 @@
 = Transaction Designer
 
-Transaction Designer is an PortX feature that enables you to design the _elements_ of a transaction. Transaction elements include:
+Transaction Designer is a PortX feature that enables you to design the xref:glossary#a[*_Artifacts_*] of a transaction. Transaction Artifacts include:
 
-* Document Types
-* Endpoints
-* Channels
-* Maps
+* xref:document-types.adoc[Document Types]
+* xref:endpoints.adoc[Endpoints]
+* xref:channels.adoc[Channels]
+* xref:maps.adoc[Maps]
 
-
-Transaction Designer enables you to configure these elements from a central page that displays the elements along with their completion status, and what steps may remain in order to complete them. To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:apm-tutorial-td[PortX Tutorial: Designing a Transaction].
-
+Transaction Designer enables you to configure these Artifacts from a central page that displays the Artifacts along with their completion status, and what steps may remain in order to complete them.
+////
+To see how to use this feature to create a transaction that receives a Purchase Order, see  xref:apm-tutorial-td[PortX Tutorial: Designing a Transaction].
+////
+For more information about Artifacts see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships, and Artifacts].
 
 include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
 
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship.  
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Transaction Designs*.
 +

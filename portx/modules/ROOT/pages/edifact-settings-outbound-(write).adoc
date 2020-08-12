@@ -10,13 +10,13 @@
 
 |Interchange Sender ID (UNB 2.1)
 |This field is the EDI Interchange ID for your Company. This is auto populated from
-<<EDIFACT Identity Settings>>.
+xref:edifact-identity-settings.adoc[EDIFACT Identity Settings].
 
 
 
 |Interchange sender ID qualifier (UNB 2.2)
 |This is a field for your EDIFACT Interchange sender ID qualifier. This is auto populated from
-<<EDIFACT Identity Settings - Home Org>>.
+xref:edifact-identity-settings.adoc[EDIFACT Identity Settings HomeOrg].
 
 
 

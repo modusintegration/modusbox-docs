@@ -1,19 +1,15 @@
 = Identifiers
 
+You can add an xref:glossary#i[*_Identifier_*] to an existing Partner.
+
 include::{partialsdir}/edit-settings.adoc[]
 
 [start=3]
-
-. In the *Configuration* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Partners and Applications Page>>, do one of the following:
-
-* Click *Add Partner*
-* Filter and/or select a *Partner* from the list.
-
-If you click *Add Partner*, complete the steps outlined in the xref:company-information.adoc[Company Information Page] before continuing.
-
-If you select a *Partner* from the list, continue on and select *Identifiers* from the left-hand navigation pane. 
-
-
+. On the <<partner-configuration#img-company-information, Partners and Applications Page>>, select a partner from the list with which you want to add an Identifier.
++
+Alternatively, use the Filter Bar to search for a Partner.
+. In the *Configuration* section of the left-hand navigation pane select *Identifiers*. 
++
 The <<img-identifiers>> appears.
 
 [[img-identifiers, Identifiers Page]]
@@ -55,11 +51,11 @@ image::identifier-new.png[img-identifier-new, title="New Identifier Page"]
 . In the *Type* box, click the down-arrowhead.
 +
 The list of types appears.
-. Click the type of identifier you want to create.
+. Click the type of Identifier you want to create.
 +
 More identifier boxes appear. The specific boxes that appear depend on your choice in this step.
 . Enter values in the boxes.
-. Click *Save* to save the new identifier.
+. Click *Save* to save the new Identifier.
 
 
 ////

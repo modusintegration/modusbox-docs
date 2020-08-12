@@ -1,16 +1,23 @@
 = Routes
 
 
-Configuring a _route_ for a partner enables you to specify:
+Configuring a xref:glossary#r[*_Route_*] for a partner enables you to specify:
+
+Route Name::
+Name specific to Route (Auto-Fill Enabled)
+
+Source Channel:: 
+Source Channel as specified in xref:channels.adoc[Channels]
+Target Channel::
+Target Channel as specified in xref:channels.adoc[Channels]
+From Application::
+Application from which the Route is coming.
+To Application::
+Application to which the Route is going.
 
 include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship. 
 
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Routes*.
 +
@@ -61,7 +68,7 @@ Valid values:: xref:glossary#s[Standard PortX field format]
 
 == Source Channel, Target Channel
 
-When you click either the Source Channel or the Target Channel box, the Pick a Channel selection page appears. You can make the following selections:
+When you click either the Source Channel or the Target Channel box, the Pick a Channel Selection Page appears. You can make the following selections:
 
 [%header,cols="3s,7a"]
 |===

@@ -38,12 +38,12 @@ None provided
 
 
 |Interchange Receiver ID (UNB 3.1)
-|Your company’s EDIFACT Interchange Receiver ID; auto-populated from <<EDIFACT Identity Settings>>. If no value appears in the box, you must enter a value in <<EDIFACT Identity Settings>>.
+|Your company’s EDIFACT Interchange Receiver ID; auto-populated from xref:edifact-identity-settings.adoc[EDIFACT Identity Settings]. If no value appears in the box, you must enter a value in xref:edifact-identity-settings.adoc[EDIFACT Identity Settings].
 
 
 
 |Interchange receiver ID qualifier (UNB 3.2)
-|Auto-populated from <<EDIFACT Identity Settings>>. If no value appears in the box, you must enter a value in <<EDIFACT Identity Settings>>.
+|Auto-populated from xref:edifact-identity-settings.adoc[EDIFACT Identity Settings]. If no value appears in the box, you must enter a value in xref:edifact-identity-settings.adoc[EDIFACT Identity Settings].
 
 |===
 

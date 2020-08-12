@@ -1,17 +1,10 @@
 = Endpoints
 
-An _endpoint_ is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In PortX, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
+An xref:glossary#e[*_Endpoint_*] is the entry point to a service, a process, or a queue or topic destination in service-oriented architecture. In PortX, an endpoint defines the protocol, address, and other details specific to an exchange of messages between partners.
 
 
 include::{partialsdir}/relationships-settings.adoc[]
 
-[start=3]
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship. 
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Endpoints*.
 +
@@ -48,6 +41,7 @@ The Add New Endpoint Page appears.
 
 [[img-endpoint-add]]
 image::endpoint-add.png[img-endpoint-add, title="Add New Endpoint Page"]
+[start=2]
 
 . Go to xref:choose[Choose Endpoint Name, Protocol, and Type].
 +

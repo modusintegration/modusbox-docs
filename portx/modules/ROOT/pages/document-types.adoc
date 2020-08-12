@@ -1,18 +1,12 @@
 
 = Document Types
 
-Configuring a _document type_ for a partner means configuring settings specific to that document type.
+Configuring a xref:glossary#d[*_Document Type_*] for a partner means configuring settings specific to that document type.
 
 include::{partialsdir}/relationships-settings.adoc[]
 
-[start=3]
+[start=4]
 
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship. 
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Document Types*.
 +
@@ -70,7 +64,7 @@ image::document-type.png[img-document-type, title="Document Type Page"]
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
-* *Company name* (see xref:partners[Partners] and xref:company-information[Company Information])
+* *Company name* (see xref:actor-information.adoc[Actor Information])
 * *Standard* (see <<Format>>)
 * *Version* (see <<Format>>)
 

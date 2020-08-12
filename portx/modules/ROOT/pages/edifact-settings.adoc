@@ -1,18 +1,12 @@
 = EDIFACT Settings
 
 
-EDIFACT (Electronic Data Interchange For Administration, Commerce and Transport) provides a set of standard messages which allow multi-country and multi-industry business document exchanges. EDIFACT is widely used across Europe.
+EDIFACT (Electronic Data Interchange For Administration, Commerce and Transport) provides a set of standard messages which allow multi-country and multi-industry business document exchanges. EDIFACT is widely used in Europe.
 
 include::{partialsdir}/relationships-settings.adoc[]
 
-[start=3]
+[start=4]
 
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship. 
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 
 . In the *FORMAT DEFAULTS* section of the left-hand navigation pane, click *EDIFACT*.
 +
@@ -25,5 +19,5 @@ image::edifact-settings.png[img-edifact-settings, title="EDIFACT Settings Page"]
 Use the following settings to assist in populating each field based on your requirements.
 
 * xref:edifact-identity-settings.adoc[EDIFACT Identity Settings]
-* xref:edifact-settings-inbound-(read).adoc[EDIFACT Inbound (Read) Settings]
-* xref:edifact-settings-outbound-(write).adoc[EDIFACT Outbound (Write) Settings]
+* xref:edifact-settings-inbound-(read).adoc[EDIFACT Inbound Settings]
+* xref:edifact-settings-outbound-(write).adoc[EDIFACT Outbound  Settings]

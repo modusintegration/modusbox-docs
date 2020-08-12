@@ -12,12 +12,6 @@ Configuring a map for a partner enables you to specify:
 
 include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship. 
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Maps*.
 +
@@ -48,11 +42,11 @@ image::map-settings.png[img-map-settings-page, title="Map Settings Page"]
 
 . On the <<img-maps>>, click *New*.
 +
-The <<img-map>> appears.
+The <<img-map-icon>> appears.
 
-[[img-map]]
+[[img-map-icon]]
 
-image::map-add.png[img-map, title="Map Page"]
+image::map-add.png[img-map-icon, title="Map Page"]
 
 [%header,cols="3s,7a"]
 |===
