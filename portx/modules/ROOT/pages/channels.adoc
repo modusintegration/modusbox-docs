@@ -1,28 +1,13 @@
 = Channels
 
-A _channel_ provides a means of specifying the connection for a given partner. You can use the channel designer to visually craft and edit channels with pre-configured settings in Portx.
+A xref:glossary.#c[*_Channel_*] provides a means of specifying the connection for a given partner. You can use the Channel Designer to visually craft and edit channels with pre-configured settings in PortX.
 
-<<img-channels>> and <<img-channel>> allow you specify:
-
-*Type*- Either Source or Target.
-
-*Document*- As created in xref:document-types[Document Types].
-
-*Document Map*- As created in xref:maps[Maps].
-
-*Endpoint*- As created in xref:endpoints[Endpoints].
+== Channels Page
 
 
 include::{partialsdir}/relationships-settings.adoc[]
 
-[start=3]
-
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship.  
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
+[start=4]
 
 . In the *CONFIGURATION* section of the left-hand navigation pane, click *Channels*.
 +
@@ -31,46 +16,25 @@ The <<img-channels>> appears.
 [[img-channels]]
 
 image::channels.png[img-channels, title="Channels Page"]
+Click Box *Show all channels visable to selected relationship* to show all channels available for this relationship, from the:
+* Homeo. 
+From this page, you can:
 
-. From this page, you can:
-
+* <<Add a New Channel>>
 * <<Edit a Source Channel>>
 * <<Edit a Target Channel>>
-* <<Add a New Channel>>
 
-== Edit a Source Channel
-. Select the Source Channel you want to edit from the <<img-channels>>.
-+ 
-The <<img-channel>> appears.
+== Channel Designer Page
 
-. You may select and edit:
+Type:: The channel type (Source or Target).
 
-* *Source Document*
-* *Map*
-* *Target Document*
+Document:: As created in xref:document-types[Document Types].
 
-Use configuration settings found in xref:document-types.adoc[Document Types] to configure your Source and Target Document.
+Document Map:: As created in xref:maps[Maps].
 
-Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
+Endpoint:: As created in xref:endpoints[Endpoints].
 
-== Edit a Target Channel
-. Select the Target Channel you want to edit from the <<img-channels>>.
-+
-The <<img-channel>> appears.
-
-. You may select and edit:
-
-* *Source Document*
-* *Map*
-* *Endpoint*
-
-Use configuration settings found in xref:document-types.adoc[Document Types] to configure your Source Document.
-
-Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
-
-Use configuration settings found in xref:endpoints.adoc[Endpoints] to configure your Endpoint.
-
-== Add a New Channel
+=== Add a New Channel
 
 . On the <<img-channel>>, click *New*.
 +
@@ -150,3 +114,35 @@ Default::
 None
 
 |===
+
+=== Edit a Source Channel
+. Select the Source Channel you want to edit from the <<img-channels>>.
++ 
+The <<img-channel>> appears.
+
+. You may select and edit:
+
+* *Source Document*
+* *Map*
+* *Target Document*
+
+Use configuration settings found in xref:document-types.adoc[Document Types] to configure your Source and Target Document.
+
+Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
+
+=== Edit a Target Channel
+. Select the Target Channel you want to edit from the <<img-channels>>.
++
+The <<img-channel>> appears.
+
+. You may select and edit:
+
+* *Source Document*
+* *Map*
+* *Endpoint*
+
+Use configuration settings found in xref:document-types.adoc[Document Types] to configure your Source Document.
+
+Use configuration settings found in xref:maps.adoc[Maps] to configure your map.
+
+Use configuration settings found in xref:endpoints.adoc[Endpoints] to configure your Endpoint.

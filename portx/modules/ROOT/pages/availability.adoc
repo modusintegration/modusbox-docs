@@ -2,15 +2,10 @@
 
 You can configure windows (periods of time) during which partners or transactions are on-hold or inactive.
 
+NOTE: Availability is not configurable for the *Any* <--> *Any* Relationship.
+
 include::{partialsdir}/relationships-settings.adoc[]
-[start=3]
 
-. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
-+
-Alternatively, you can use the Filter Bar to search for a Relationship. 
-
-+
-The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
 [start=4]
 . In the *Relationship Info* section of the left-hand navigation pane, click *Availability*.
 +
@@ -50,7 +45,7 @@ image::transaction-status-window-add.png[img-transaction-status-window-add, titl
 
 [start=2]
 
-. On the <<img-transaction-status-window-add>>, in the *Type* box, click the down-arrow to expose the drop-down list.
+. On the <<img-transaction-status-window-add>>, in the *Type* box, click the down-arrow to open the drop-down list.
 . From the drop-down list, to create an on-hold window, click *ON-HOLD*. +
 To create an inactive window, click *INACTIVE*.
 . Use the calendars and dropdown lists in the Time Bar to identify the start and end dates and times for the window.
