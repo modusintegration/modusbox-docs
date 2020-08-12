@@ -1,7 +1,11 @@
 = Examples
 :keywords: b2b, portal, partner, manager, environments
 
+<<<<<<< HEAD:integration-hub/modules/ROOT/pages/examples.adoc
+This page identifies examples of  xref:index.adoc[Integration Hub] in use.
+=======
 This page identifies examples of  xref:index.adoc[PortX] in use.
+>>>>>>> 7da98af52a3616c280b6e8cd525a41444e6d7222:portx/modules/ROOT/pages/examples.adoc
 
 For conceptual information, see xref:key-concepts.adoc[Key Concepts].
 

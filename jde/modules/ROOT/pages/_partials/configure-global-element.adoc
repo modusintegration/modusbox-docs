@@ -1,0 +1,37 @@
+
+To use the PortX JDE Connector in your Mule application, configure a global element that can be used by the connector.
+
+. Open the Mule flow for your project.
+. Select the *Global Elements* tab at the bottom of the Editor Window.
+
+
+image:demo_getting_started/image4_getting_started.png[image,width=515,height=273]
+
+The Global Elements Page Appears.
+[start=3]
+. Click *Create*.
+
+image:demo_getting_started/image5_getting_started.png[image,width=511,height=312]
+
+The Choose Global Type Page appears.
+[start=4]
+. Type *JDE* in the filter edit box and select *JDE Config*. 
+. Click *OK*.
+
+image:demo_getting_started/image6_getting_started.png[image,width=386,height=390]
+
+The JDE  Config Page Appears.
+[start=6]
+
+. On the *General* tab, enter the required *Credentials* and *Environment*.
+
+image:demo_getting_started/image7_getting_started.png[image,width=378,height=383]
+
+[start=7]
+. Click *Test Connection*.
+
+The following message appears.
+
+image:demo_getting_started/image8_getting_started.png[image,width=513,height=135]
+
+You are now ready to start using the PortX JDE Connector in your project.
