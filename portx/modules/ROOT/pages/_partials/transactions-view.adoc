@@ -101,9 +101,9 @@ Date of Transaction::
 * 1 Month
 * Custom Range
 +
-*From*: Select a date from the calendar; only transactions that occurred after that date appear.
+*From*- Select a date from the calendar; only transactions that occurred after that date appear.
 +
-*To*: Select a date from calendar; only transactions that occurred before that date appear.
+*To*- Select a date from calendar; only transactions that occurred before that date appear.
 
 View::
 In the xref:central-pane-elements#View-Dropdown-List[View Dropdown List] filter by:

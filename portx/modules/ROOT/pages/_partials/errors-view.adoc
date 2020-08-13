@@ -30,7 +30,7 @@ Source ID:: Unique copyable error source identification.
 * The *blue file code icon* icon:file-code-o[role="blue"] opens a detailed error message.
 
 ==== *Buttons*
-* A *Transaction* icon:exchange[] button appears when an error is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
+A *Transaction* icon:exchange[] button appears when an error is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific error.
 
 
 === Filters
@@ -42,8 +42,10 @@ Date::
 * 1 Week
 * 1 Month
 * Custom Range
-** *From*: Select a date from the calendar; only errors that occurred after that date will appear.
-** *To*: Select a date from calendar; only errors that occurred before that date will appear
++
+*From*- Select a date from the calendar; only errors that occurred after that date will appear.
++
+*To*- Select a date from calendar; only errors that occurred before that date will appear
 
 Viewing::
 * Both
@@ -51,6 +53,8 @@ Viewing::
 * Applications
 
 Error code::
++
+
 * 0- Unknown
 * 1- Duplicate
 * 2- FA

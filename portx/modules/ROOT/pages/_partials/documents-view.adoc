@@ -33,14 +33,14 @@ Version:: The version of the document.
 Message Type:: The type/reason for the message.
 From:: From whom the document came.
 To:: To whom the document is going.
-Date:: Date the document was sent.
-Duplicate Quiry:: Indicating if a document is a duplicate.
-Message Payload:: icon:share[role="blue"] A link to the payload url and payload content
+Date:: The date the document was sent.
+Is Duplicate::  Quiry indicating if a document is a duplicate.
+Message Payload:: icon:share[role="blue"] A link to the payload url and payload content.
 Partnership ID:: icon:plus-square-o[role="blue"] Unique copyable partnership identification.
 
 ==== *Detail Pane Action Icons*
 
-* The *blue copy icon* icon:plus-square-o[role="blue"] enables you to copy information to your clipboard
+* The *blue copy icon* icon:plus-square-o[role="blue"] enables you to copy information to your clipboard.
 * The *blue share icon* icon:share[role="blue"] opens a detail pane that shows the complete message payload.
 This pane allows you to:
 ** Copy Payload URL
@@ -48,7 +48,7 @@ This pane allows you to:
 ** Copy content to clipboard
 
 ==== *Buttons*
-* A *Transaction* icon:exchange[] button appears when a document is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific document.
+A *Transaction* icon:exchange[] button appears when a document is selected; which takes you to the xref:central-pane-elements#transactions-view[Transactions View] and highlights this specific document.
 
 === Filters
 You can filter documents based on:
@@ -60,9 +60,9 @@ Date::
 * 1 Month
 * Custom Range
 +
-*From*: Select a date from the calendar; only documents that occurred after that date appear.
+*From*- Select a date from the calendar; only documents that occurred after that date appear.
 +
-*To*: Select a date from calendar; only documents that occurred before that date appear.
+*To*- Select a date from calendar; only documents that occurred before that date appear.
 
 View::
 * Both
