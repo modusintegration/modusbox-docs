@@ -1,13 +1,14 @@
-= Use Case Example - Hello World
+== Use Case Example - Hello World
 
-The following use case example demonstrates the FTPS Connector configuration options for sending and receiving files.
+The following use case example illustrates the FTPS Connector configuration options for sending and receiving files.
 
-Learn how to: ::
-* Receive a file over FTPS
-* Write a file on the server over FTPS
-* Receive one or more files over FTPS filtering by wildcard pattern
+Learn how to:
 
-== Receive a File Over FTPS
+* Receive a file over FTPS.
+* Write a file on the server over FTPS.
+* Receive one or more files over FTPS, filtering by wildcard pattern.
+
+=== Receive a File Over FTPS
 
 In this example, the connector reads a file over FTPS and saves its contents locally.
 
@@ -100,7 +101,7 @@ image:b2b_ftps_connector_09.png[b2b_ftps_connector_09]
 
 If the file exists on the remote FTP server, the Connector should read it and locate it under the */tmp* folder, previously setup in step 7.
 
-== Write a File on the Server Over FTPS
+=== Write a File on the Server Over FTPS
 
 The following example demonstrates how to write a file over FTPS using the contents received in the payload.
 
@@ -129,7 +130,7 @@ You can select which path to upload your file to. Under *Filename* you can enter
 
 The application writes your file to the FTPS server under the name specified in the configuration.
 
-== Receive One or More Files Over FTPS Filtering by a Wildcard Pattern
+=== Receive One or More Files Over FTPS Filtering by a Wildcard Pattern
 
 This example demonstrates receiving one or more files over FTPS filtering by a wildcard pattern.
 

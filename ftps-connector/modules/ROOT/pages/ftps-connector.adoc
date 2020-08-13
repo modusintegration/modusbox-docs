@@ -1,23 +1,23 @@
 = FTPS Connector
 :keywords: b2b, ftps, connector
 
-== Introduction
 
 The FTPS Connector allows you to send and receive data over the FTPS protocol. With the FTPS Connector, you can send and receive files over FTP on top of a TLS/SSL connection.
 
 Follow these instructional guidelines to accomplish the following:
 
 * Install the FTPS Connector.
-* Configure the FTPS Connector to fit your needs.
+* Configure the FTPS Connector.
 * Build a Hello World example project.
 * Run the example project.
 
 == Prerequisites
 
-A familiar understanding of Mule,
+A familiar understanding of Mule
 https://docs.mulesoft.com/anypoint-studio/v/6/download-and-launch-anypoint-studio[Anypoint™ Studio] interface and FTPS is assumed.
 
 === Namespace
+Before you can use the FTPS connector you must manually code the Mule application in Anypoint Studo's XML Editor. Define the name space and schema location in the header of your configuration XML inside the <mule> tag. Enter the following in the Anypoint Studio XML Editor.
 
 [source, code, linenums]
 ----
@@ -28,7 +28,7 @@ xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/ftps http://www.mulesoft.org/schema/mule/ftps/current/mule-ftps.xsd"
 ----
 
-=== Requirements
+== Requirements
 
 * Mule 3.6.0+ server Runtime
 * Anypoint Studio March 2015 onwards
@@ -46,11 +46,9 @@ NOTE: When Anypoint Studio has an update, a message displays in the lower right 
 
 === Using the FTPS Module via Maven
 
-If you deside to use the FTPS Module in conjunction with Maven, follow the instructions link:http://modusintegration.github.io/mule-connector-ftps/[here].
+If you want to use the FTPS Module in conjunction with Maven, follow the instructions link:http://modusintegration.github.io/mule-connector-ftps/[here].
 
-== Configuration
 
-To configure the FTPS Connector, determine your endpoint configuration needs. See the xref:use-case-example.adoc[Hello World] use case example for a configuration example.
 
 ////
 === Updating From an Older Version
@@ -60,7 +58,7 @@ This is currently the first version of the connector.
 
 == FTPS Connector Use Cases
 
-See the xref:use-case-example.adoc[Hello World] use case example for information on how to use and configure the FTPS connector.
+See the xref:use-case-example.adoc[Hello World] use case example for information on how to configure and use the FTPS connector.
 
 === Use Cases
 
@@ -71,9 +69,9 @@ See the xref:use-case-example.adoc[Hello World] use case example for information
 
 === Tips
 
-* Use passive mode whenever possible. It is easier to set up from the client’s perspective.
+* Since it is easier to set up from the client’s perspective, use passive mode whenever possible.
 * Polling the server is possible from the FTPS connector itself; there is no need to use a Poll component. This is useful when waiting for a given file to be published by others.
-* The FTPS Connector supports compression out-of-the-box. If your FTP server supports deflate mode (known as “mode z”), the FTPS Connector detects this feature and enters compression mode for you.
+* The FTPS Connector supports compression out-of-the-box. If your FTP server supports deflate mode (also known as “mode z”), the FTPS Connector detects this feature and enters compression mode for you.
 
 
 ////
