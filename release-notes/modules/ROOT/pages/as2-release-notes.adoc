@@ -1,4 +1,5 @@
 = AS2 Connector Release Notes
+ifdef::mule4[]
 :keywords: as2, connector, b2b, release notes
 
 == Version 1.0.0 - Apr 20, 2020
@@ -18,3 +19,4 @@ Tested against: 4.0.0 and 4.1.1
 
 * PortX support is not yet included
 * HTTPS support for asynchronous receipts is not yet supported
+endif::mule4[]
