@@ -73,6 +73,195 @@ See the xref:use-case-example.adoc[Hello World] use case example for information
 * Polling the server is possible from the FTPS connector itself; there is no need to use a Poll component. This is useful when waiting for a given file to be published by others.
 * The FTPS Connector supports compression out-of-the-box. If your FTP server supports deflate mode (also known as “mode z”), the FTPS Connector detects this feature and enters compression mode for you.
 
+== Use Case Example - Hello World
+
+The following use case example illustrates the FTPS Connector configuration options for sending and receiving files.
+
+Learn how to:
+
+* Receive a file over FTPS.
+* Write a file on the server over FTPS.
+* Receive one or more files over FTPS, filtering by wildcard pattern.
+
+=== Receive a File Over FTPS
+
+In this example, the connector reads a file over FTPS and saves its contents locally.
+
+. In Anypoint Studio, navigate to the Project Settings Page.
+
+image:b2b_ftps_connector_01.png[b2b_ftps_connector_01]
+[start=2]
+
+. Create a new Mule Project using Mule Server 3.6.0 EE as runtime.
+. Click *Finish*.
++
+The Mule Paletted appears.
+
+image:b2b_ftps_connector_02.png[b2b_ftps_connector_02]
+
+[start=3]
+. Locate the *FTPS Connector* on the right hand-side palette.
+
+image:b2b_ftps_connector_03.png[b2b_ftps_connector_03]
+
+[start=4]
+. Drag and drop the *FTPS Connector* over to the Canvas.
+
+image:b2b_ftps_connector_04.png[b2b_ftps_connector_04]
+
+[start=5]
+. Create a connector configuration for the FTPS element, by clicking the *Green Plus* sign.
++
+The Global Element Properties page appears.
+
+image:b2b_ftps_connector_05.png[b2b_ftps_connector_05]
+
+[start=6]
+. Set the FTPS settings according to your scenario.
++
+In this example, the FTPS serveri is running on *localhost*.
+
+==== *Connection Settings*
+In your Globel Element Properties window set the following Connection Settings.
+
+* The _Host_ of your FTP server (IP address or host name).
+* The _Port_ the FTP server is listening to (control channel). 
+* Set whether you prefer *Active* or *Passive* connection modes.
+* Fill in the blanks in the Advanced tab if choosing *Active mode*. 
+* If you want to use Explicit Mode, select *EXPLICIT* in the _Encryption mode_ field. 
+
+* The _Streaming_ option is suitable for large files; instead of reading the contents to a byte array in memory; an input stream is passed as the  payload to the next component in the flow.
+
+==== *Security - FTP*
+Set the following security settings on the Global Element Properties Page.
+
+image:b2b_ftps_connector_06.png[b2b_ftps_connector_06]
+
+. _Username_ and _Password_ on the FTP server.
+.  Advanced settings:
+
+Security - Certificates* (Optional)::
+If set, the FTPS connector validates your server’s identity with these certs. Only JKS format is supported at the moment. _If you want to disable server certificate validation, you’ll be able to find that option in this section as well, although it’s not recommended.
+ 
+Active Mode settings::
+These fields are going to be read in case _ACTIVE_ was selected as _Transfer Mode_. The _Reported IP Address_ is the external IP address to use if your application runs within a LAN and the FTP server is external to it.
+
+Pre-processing::
+The _Upload temp directory_ sets the location on the *server side* where the files are going to be uploaded before they reach they final destination.
+
+Concurrent downloads::
+The number of worker threads to use when downloading multiple files (useful when reading files using a wildcard pattern or a directory).
+
+[start=7]
+==== Set Read File
+Set up the connector’s Read File operation to retrieve a file securely from the FTP Server. 
+File contents are passed to the next processor in the flow.
+
+. Navage to the Read File for the connector.
++
+The General Settings Window appears.
+
+image:b2b_ftps_connector_07.png[b2b_ftps_connector_07]
+
+The following settings, along with their descriptons, are part of this use case example.
+
+Basic Settings::
++
+Select the *Read* operation.
+
+General Options::
++
+Enter the _path_ and _filename_ of the file you aim to read from the server. In this case the transfer is *modus-test-read.txt* which is located at the */demo* directory of the FTP user that is set.
+
+Post-processing::
+After a file is read, the connector attempts to delete it from the server unless _Move to Directory_ is set to an existing location on the server (optional).
+
+Polling::
+The connector polls the server for the specified file. By default it checks for the file every second. Once it gets the file, it continues to read the file and injects it into the flow.
+
+image:b2b_ftps_connector_08.png[b2b_ftps_connector_08]
+
+In this example, the contents of your Read file are written to a file.
+The FTPS connector assists with this process as it gives you 2 extra bits of information: 
+
+* Original filename
+* Original file size
+
+
+In this insance, have your application ready to read a file securely from the FTP server.
+
+[start=8]
+
+. Run the following example as a Mule application.
+
+image:b2b_ftps_connector_09.png[b2b_ftps_connector_09]
+
+If the file exists on the remote FTP server, the Connector reads it and locates it under the */tmp* folder, previously setup in step 7.
+
+=== Write a File on the Server Over FTPS
+
+The following example demonstrates how to write a file over FTPS using the contents received in the payload.
+
+
+. Follow steps 1-5 in the <<Receive a File Over FTPS>> example above.
+
+. Drag and drop the *File* message source into the canvas.
+Set it up to read any given file in your filesystem.
+
+. Drag and drop the *FTPS* connector icon over the canvas, next to the *File* message source as shown below.
+
+image:b2b_ftps_connector_10.png[b2b_ftps_connector_10]
+
+[start=4]
+. Set up the FTPS write file operation.
+
+image:b2b_ftps_connector_11.png[b2b_ftps_connector_11]
+
+This is the same Global Configuration element from the previous example. Review step 5 of <<Receive a File Over FTPS>> for more information.
+
+* *General Options*  +
+You can select which path to upload your file to. Under *Filename* you can enter any MEL expression you want. This example setting is a fixed name, for simplicity.
+
+[start=5]
+. Save your changes and run the application. 
+
+The application writes your file to the FTPS server under the name specified in the configuration.
+
+=== Receive One or More Files Over FTPS Filtering by a Wildcard Pattern
+
+This example demonstrates receiving one or more files over FTPS filtering by a wildcard pattern.
+
+. Follow steps 1-6 in the <<Receive a File Over FTPS>> example above.
+
+. Setup the connector’s *Read File* using Pattern operation to retrieve a set of files securely from the FTPS server. 
++
+Every time a file matches the pattern, the set up flow activates with the contents of the file.
+
+. Open the Read File for your configuration.
++   
+The General Settings Page appears.
+
+image:b2b_ftps_connector_12.png[b2b_ftps_connector_12]
+
+* Enter the path of the parent directory you aim to read the files from on the server.
+
+* Enter the *File Pattern*.
+
+NOTE: This is a wildcard pattern that initiates transfer of every file that starts with *modusbox-*.
+
+[start=4]
+
+. To see an example of how to use the files you have just read, drag and drop a *File* connector and set it up as follows.
+
+image:b2b_ftps_connector_13.png[b2b_ftps_connector_13]
+
+The above screenshot shows that the files are saved in the local */tmp* directory. Take a look at the *File Name/Pattern* configuration value. The *fileName inbound* property is added by the FTPS connector along with the *fileSize* property. These values can come in handy for when you need to deal with multiple files.
+
+[start=5]
+. Save your changes and run the application. 
+
+The application reads files from the server matching the filename pattern and saves them locally under the same filename they had on the server.
+
 
 ////
 == Example Use Case - Hello World
