@@ -323,18 +323,19 @@ image:image2015-6-26-step11bb.png[image2015-6-26+9%3A37%3A25]
 
 image:image2015-6-26-step12b.png[image2015-6-26+9%3A38%3A57]
 
-[start=9]
+[start=10]
 
 . Populate the _AS2-From_ and _AS2-To_ attributes. 
 
 NOTE: The AS2-To identifier is typically provided out-of-band by the AS2 receiver.
 
+=== Configure a Key Store Path Attribute
 
-The connector’s Key Store Path attribute must be configured in either of the following scenarios:
+The AS2 Connector’s Key Store Path attribute must be configured in the following scenarios:
 
-. Connector sends a signed request +
-. Connector sends an encrypted request +
-. Receiver returns a signed receipt
+* Scenario 1: Connector sends a signed request +
+* Scenario 2: Connector sends an encrypted request +
+* Scenario 3: Receiver returns a signed receipt
 
 IMPORTANT: The key store must be in JKS format. A cross-platform tool that can help you with the setting up of JKS key
 stores is http://keystore-explorer.sourceforge.net/[KeyStore Explorer].
@@ -343,26 +344,38 @@ IMPORTANT: CloudHub deployments must have key stores located within the Mule app
 Furthermore, the key store path attribute has to be relative to the classpath. For instance, if the key store is located
 at src/main/resources/key-stores/my-key-store.jks, then Key Store Path is set to key-stores/my-key-store.jks.
 
-Scenario 1 and 2 require the key store to have a dual-purpose public/private key pair that the connector uses to encrypt
-and sign the request. For scenario 3, the key store has to contain the certificate used by the AS2 connector to verify the
-receipt’s authenticity. The key store entry alias name for the public/private key pair is required to match the value set
-in the AS2-From attribute. Similarly, the key store entry alias name for the certificate is required to match the value
-set in the AS2-To attribute. The attribute Key Store Password must be set if the key store is protected by a password.
+* *Scenario 1 and 2* require the key store to have a dual-purpose public/private key pair that the connector uses to encrypt
+and sign the request. 
 
-For the sake of keeping the example simple, no key store is set so no security is provided by the connector.
+* *Scenario 3* the key store has to contain the certificate used by the AS2 connector to verify the receipt’s authenticity. The key store entry alias name for the public/private key pair is required to match the value set in the _AS2-From_ attribute. Similarly, the key store entry alias name for the certificate is required to match the value set in the _AS2-To_ attribute. The attribute Key Store Password must be set if the key store is protected by a password.
++
+To keep this example simple the key stores are not set, so no security is provided by the connector.
 
-==== Step 14
+=== AS2 Receiver Receipt
 
-Viewing the receipt returned by the AS2 receiver is optional but useful for testing. Append to the flow a Byte Array to String transformer followed by a Logger processor to print the receipt's content to console.
+Viewing the receipt returned by the AS2 receiver is optional but useful for testing.
+
+. Navagate to your connector (e.g, *send-as2-hello-world*).
 
 image:image2015-6-26-step14.png[image2015-6-26+9%3A41%3A2]
+[start=2]
 
-Note that the Logger in the screenshot has its Message attribute set to "#[payload]"
+. Append to the flow a *Byte Array to String* transformer followed by a *Logger* processor to print the receipt's content to console.
 
-==== Step 15
+NOTE: The Logger in the above screenshot has its Message attribute set to *#[payload]*
 
-Finally, run the example as a Mule application:
+=== Run the Connector
+
+Run this example as a Mule application:
+
+. Under Package Explorer select your connector (e.g send-as2-hello-world).
 
 image:image2015-6-26-step15.png[image2015-6-26+9%3A41%3A51]
 
-Drop a file in the "outbox" directory to send it to the receiver over AS2. If you have followed step 14, you should see the receiver's receipt in the console.
+[start=2]
+
+. In the dropdown menu select *Run As ⇒ Mule Application*.
+. The receiver's receipt appears in the console.
++
+The connector saves the content of valid AS2 messages in the file *data.txt* inside the project root directory *inbox*.
+Drop a file in the *outbox* directory to send it to the receiver over AS2. 
