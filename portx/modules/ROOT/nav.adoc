@@ -72,6 +72,6 @@ ifdef::mule[]
 ** xref:jde:ROOT:jde.adoc[JDE Connector]
 endif::mule[]
 
-** xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator]
+** xref:latest@x12-translator:ROOT:getting-started.adoc[X12 Translator]
 
 ** xref:release-notes:ROOT:release-notes.adoc[Release Notes]
