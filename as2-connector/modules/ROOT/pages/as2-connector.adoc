@@ -1,6 +1,8 @@
+ifdef::mule3[]
 = AS2 Connector for Mulesoft Version 3
+endif::mule3[]
 :keywords: b2b, as2, connector
-indef::mule4[]
+ifdef::mule4[]
 = AS2 Connector for Mulesoft Version 4
 endif::mule4[]
 
