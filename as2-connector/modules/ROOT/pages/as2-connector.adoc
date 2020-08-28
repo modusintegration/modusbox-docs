@@ -339,9 +339,13 @@ Scenario 1:: Connector sends a signed request. +
 Scenario 2:: Connector sends an encrypted request. +
 Scenario 3:: Receiver returns a signed receipt.
 
-* *Scenario 1 and 2* require the key store to have a dual-purpose public/private key pair that the connector uses to encrypt and sign the request. 
+In scenario 1 and 2 the key store is required  to have a dual-purpose public/private key pair that the connector uses to encrypt and sign the request. 
 
-* *Scenario 3* the key store has to contain the certificate used by the AS2 connector to verify the receipt’s authenticity. The key store entry alias name for the public/private key pair is required to match the value set in the _AS2-From_ attribute. Similarly, the key store entry alias name for the certificate is required to match the value set in the _AS2-To_ attribute. The attribute Key Store Password must be set if the key store is protected by a password.
+In scenario 3 the key store has to contain the _certificate_ used by the AS2 connector to verify the receipt’s authenticity. 
+
+The key store entry alias name for the _public/private_ key pair is required to match the value set in the _AS2-From_ attribute. 
+
+The key store entry alias name for the certificate is required to match the value set in the _AS2-To_ attribute. The attribute Key Store Password must be set if the key store is protected by a password.
 
 
 IMPORTANT: The key store must be in JKS format. A cross-platform tool that can help you with the setting up of JKS key
