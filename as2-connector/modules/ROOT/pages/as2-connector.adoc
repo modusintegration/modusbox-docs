@@ -1,12 +1,18 @@
-= AS2 Connector 2.0.0
+ifdef::mule3[]
+= AS2 Connector for Mulesoft Version 3
+endif::mule3[]
 :keywords: b2b, as2, connector
+ifdef::mule4[]
+= AS2 Connector for Mulesoft Version 4
+endif::mule4[]
+
 
 The https://www.anypoint.mulesoft.com/exchange/?search=as2[AS2 Connector] allows you to send and receive data from AS2 certified servers.
 
 After reading this page you should be able to accomplish the following:
 
-* Install the AS2 Connector.
-* Build a simple Hello World project.
+* <<Installation>> of the AS2 Connector.
+* Build an <<Example Use Case - Hello World>> project.
 * Run the example project.
 
 == Prerequisites
