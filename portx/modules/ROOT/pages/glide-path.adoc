@@ -1,0 +1,309 @@
+= Seven Days to PortXtegration Mastery, Day 1: Let the people build a PortXtegration
+
+.A PortXtreme GlidePath
+[cols="*"]
+
+|===
+|Page|Button, Box or Dropdown list|Action or Value|Elapsed Time
+
+|Transaction Monitor
+s|Partners and Applications
+|Select
+|5:55
+
+|Partners and Applications
+s|Add Partner
+|Select
+|6:00
+
+|Partner Information
+s|Partner Name
+s|FastBoards
+|6:05
+
+|
+s|Save
+|Select
+|6:40
+
+|Partners and Applications
+s|Relationships
+|Select
+|7:15
+
+|Relationships
+s|GearCo B2B&#8596;FastBoards
+|Select
+|7:30
+
+|Transaction Designer
+s|+ New
+|Select
+|7:45
+
+|Transaction Designer / From Partner
+|Partner
+|Change to from GearCo to FastBoards
+|8:05
+
+|Transaction Designer / Source Channel
+s|+ Create New Channel
+|Select
+|8:20
+
+|Transaction Designer / Source Channel
+s|+ New Document
+|Select
+|8:25
+
+|Source Document
+s|Standard
+s|XML
+|8:35
+
+|
+s|Root Node
+s|Y
+|8:40
+
+|
+s|Save
+|Select
+|8:45
+
+|Source Channel
+s|Possible Endpoints
+|Select
+|9:20
+
+|Source Document
+s|+ Add New Endpoint
+|Select
+|9:25
+
+|Endpoint
+|Protocol
+s|HTTP
+|9:30
+
+|
+s|Uses Reusable Endpoint
+|De-select
+|9:40
+
+|
+s|Host
+s|0.0.0.0
+|10:00
+
+|
+s|Port
+s|8081
+|10:00
+
+|
+s|Path
+s|FastBoardsReceive
+|10:00
+
+|
+s|Allowed Methods
+s|POST
+|10:00
+
+|
+s|Save
+|Select
+|10:10
+
+|Source Document
+s|Save
+|Select
+|10:15
+
+|Source Channel
+s|Possible Endpoints
+|Select
+|10:30
+
+|
+s|Expand arrow
+s|Select
+|10:40
+
+|
+s|View Properties 
+|Select
+|10:45
+
+|Linked Endpoint Properties
+s|New Property
+|Select
+|10:50
+
+|Add Property
+s|Property Type
+s|To Partner Identifier 
+|10:55
+
+|
+s|Property Type
+s|Inbound Properties
+|11:00
+
+|
+s|Path
+s|toPartnerIdentifier
+|&nbsp;&nbsp; :05
+
+|
+s|Save
+|Select
+|&nbsp;&nbsp; :06
+
+|Linked Endpoint Properties
+s|New Property
+|Select
+|&nbsp;&nbsp; :10
+
+|Add Property
+s|Property Type
+s|From Partner Identifier 
+|&nbsp;&nbsp; :15
+
+|
+s|Property Type
+s|Inbound Properties
+|&nbsp;&nbsp; :18
+
+|
+s|Path
+s|fromPartnerIdentifier
+|&nbsp;&nbsp; :20
+
+|
+s|Save Property
+|Select
+|&nbsp;&nbsp; :23
+
+|Linked Endpoint Properties
+s|Save 
+|Select
+|&nbsp;&nbsp; :25
+
+|Source Document
+s|Save
+|Select
+|&nbsp;&nbsp; :30
+
+|Source Document
+s|+ Add Map
+|Select
+|&nbsp;&nbsp; :55
+
+|Target Document (Source Channel)
+s|+ New Document
+|Select
+|12:05
+
+|
+s|Standard
+s|JSON
+|&nbsp;&nbsp; :10
+
+|
+s|Message Type
+s|X
+|&nbsp;&nbsp; :15
+
+|
+s|Save
+|Select
+|&nbsp;&nbsp; :20
+
+|Source Channel
+s|+ Add Map
+|Select
+|&nbsp;&nbsp; :35
+
+|Map
+s|Mapping Type
+|DataSonnet
+|&nbsp;&nbsp; :40
+
+|Map
+s|Save
+|Select
+|&nbsp;&nbsp; :45
+
+|Target Channel
+s|Auto-Populate Document
+|Select
+|13:05
+
+|Target Channel/End[point
+s|+ New Endpoint
+|Select
+|&nbsp;&nbsp; :10
+
+|Endpoint
+|Protocol
+s|HTTP
+|&nbsp;&nbsp; :20
+
+|
+s|Uses Reusable Endpoint
+|De-select
+|&nbsp;&nbsp; :23
+
+|
+s|Host
+s|portx-sm-demo-api-gearco.us-w2.cloudhub.io
+|&nbsp;&nbsp; :25
+
+|
+s|Port
+s|80
+|&nbsp;&nbsp; :26
+
+|
+s|Path
+s|/salesforce/shipments/
+|&nbsp;&nbsp; :27
+
+|
+s|Method
+s|POST
+|&nbsp;&nbsp; :28
+
+|
+s|Authentication
+|Select
+|&nbsp;&nbsp; :30
+
+|
+s|Save
+|Select
+|&nbsp;&nbsp; :32
+
+|Transaction Designer
+s|Quick View
+|Select
+|&nbsp;&nbsp; :40
+
+|Transaction Designer
+s|Transaction Designs
+|Select
+|14:00
+
+|Transaction Designer
+s|Relationships
+|Select
+|&nbsp;&nbsp; :10
+
+|Postman
+s|Send
+|Select
+|&nbsp;&nbsp; :45
+
+|===

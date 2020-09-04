@@ -1,26 +1,24 @@
 = Seven Days to PortX Mastery
 
-:figure-caption!:
+Welcome to PortX! In order to get you started using PortX to integrate partners and applications, we've created a week-long digital integration tour with a PortXpert. 
+
+== Day Zero
+Meet the -xpert and let them show you the beauty and simplicity of PortX concepts in https://drive.google.com/file/d/1tf4UMPMRc6uvD7uQU8WQ8gSWLBhhPXC7/view?usp=sharing[this video]. 
 
 
-Welcome to PortX! In order to get you started using PortX to integrate partners and applications, we've created a week-long digital integration tour with an PortX expert. Meet the expert and get started with PortX concepts in https://drive.google.com/file/d/1tf4UMPMRc6uvD7uQU8WQ8gSWLBhhPXC7/view?usp=sharing[this video]. Once you've watched it, you're ready to take the tour. 
+== Day One: Basic Routing, already
 
-On Day One, we show you:
+Believe it or not, after Day Zero, you are al _ready_ ready to build your first integration (we call them PortXtegrations, but we are a little bashful about that - a lot of decision-makers tell us this stuff is not supposed to be fun). We start with one of the most common scenarios in digital integration: Receiving, mapping, and sending a document from a partner to an internal endpoint. 
 
-* A _video_ in which our expert identifies scenario concepts and shows you the actual PortX screens that enable an example of a basic routing scenario to work.
+* https://drive.google.com/file/d/1mxJ0i81XEuC7RysDlt-iKOFE3WUmZM-V/view?usp=sharing[Day One: Let the people build their first PortXtegration] tells the story of a basic routing scenario.
+Our PortXpert identifies scenario concepts and shows you the actual PortX pages that enable such a scenario to work.
 
-* A _tutorial_ that provides step-by-step instructions for implementing this example of the scenario in your environment.
+* People pick this stuff up so quickly that as early as Day One, we introduce a xref:glide-path.adoc[glide path] (technically a PortXtreme Glide Path), but we haven't heard back about the trademark yet) that, for the people's first integration, gives you just the facts: 
 
-After Day One, we replace the tutorial with a _functional overview_ that illustrates the broader concepts of the scenario. 
-
-== Day One: Basic Routing 
-
-
-We start with one of the most common scenarios in digital integration: Receiving, mapping, and sending a document from a partner to an internal endpoint. 
-
-https://drive.google.com/file/d/1mxJ0i81XEuC7RysDlt-iKOFE3WUmZM-V/view?usp=sharing[This video tells the story of this scenario].
-
-xref:day-one-tutorial.adoc[This tutorial] provides step-by-step instructions for implementing this scenario in your organization. 
+* PortX Page
+* Button, Box or Dropdown list
+* Action or Value
+* Elapsed Time
 
 == Day Two: Basic Routing, EDI-style 
 
