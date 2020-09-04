@@ -1,6 +1,58 @@
 = PortX Release Notes
 :keywords: b2b, release notes
 
+== Version 1.30.0 - 20 August 2020
+
+=== Browser Support
+
+PortX supports the following browsers:
+
+* Firefox (latest version)
+* Chrome (latest version)
+
+ifdef::camel[]
+=== New in This Release
+
+* New PropertySourceType added: *DataSonnetExpression* 
+endif::camel[]
+
+=== Fixed in This Release 
+
+[cols=2*] 
+|===
+|Issue
+|Fix
+
+|In some circumstances, in Transaction Monitor, the Transaction Status column would not display the last label of a transaction.
+|Fixed - issue no longer occurs.
+
+|Persisted Message Authentication settings, when configured for a new environment, were not being saved. 
+|Fixed - issue no longer occurs.
+
+
+|No provision existed for deleting properties
+|Added a *Delete* button in the Properties section of the Document Type Page.
+
+|When a working with a map for which a script had been uploaded, the Script section of the Map page displayed the *Choose file* button instead of the *Delete file* button.
+|The appropriate button now appears.
+
+|As channels are added in the Transaction Monitor Transaction Status window, they are not removed from the dialog box from which they were added. 
+|Channels are now removed as expected.
+
+|Existing records do not appear in Transaction Monitor for the Relationship SAP&#8596;All.
+|Records appear as expected. 
+|===
+
+=== Compatibility
+
+Compatible with:
+
+* X12 Module 1.2.1
+* EDIFACT Module 1.2.1
+* PortX Connector 3.0.x
+* FTPS Connector 1.0.8
+* AS2 Connector 2.0.1
+
 == Version 1.29.0 - 7 March 2020
 
 === Browser Support

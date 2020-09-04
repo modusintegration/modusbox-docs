@@ -51,9 +51,9 @@
 *** xref:error-codes.adoc[Error Codes]
 *** xref:security.adoc[Security]
 ////
-ifdef::mule[]
+ifdef::mule3[]
 ** xref:portx-tutorial-td.adoc[PortX Tutorial: Designing a Transaction]
-endif::[]
+endif::mule3[]
 ////
 ** xref:portx-apis.adoc[PortX APIs]
 
@@ -67,12 +67,18 @@ endif::[]
 
 ** xref:portx-connector:ROOT:portx-connector.adoc[PortX Connector]
 
-ifdef::mule[]
+ifdef::mule3[]
 ** xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
 ** xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
 ** xref:jde:ROOT:jde.adoc[JDE Connector]
-endif::mule[]
+endif::mule3[]
 
-** xref:1.0.0@x12-translator:ROOT:getting-started.adoc[X12 Translator]
+ifdef::mule4[]
+** xref:as2-connector:ROOT:as2-connector.adoc[AS2 Connector]
+** xref:ftps-connector:ROOT:ftps-connector.adoc[FTPS Connector]
+** xref:jde:ROOT:jde.adoc[JDE Connector]
+endif::mule4[]
+
+** xref:latest@x12-translator:ROOT:getting-started.adoc[X12 Translator]
 
 ** xref:release-notes:ROOT:release-notes.adoc[Release Notes]

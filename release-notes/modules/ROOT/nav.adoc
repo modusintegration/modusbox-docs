@@ -1,10 +1,18 @@
 // Release Notes TOC File
 
 ** xref:portx-release-notes.adoc[PortX Release Notes]
-ifdef::mule[]
+ifdef::mule3[]
 ** xref:portx-connector-release-notes.adoc[PortX Connector Release Notes]
 ** xref:as2-release-notes.adoc[AS2 Connector Release Notes]
 ** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes]
 ** xref:x12-translator-release-notes.adoc[X12 Translator Release Notes]
 ** xref:jde-release-notes.adoc[JD Edwards Connector Release Notes]
-endif::mule[]
+endif::mule3[]
+
+ifdef::mule4[]
+** xref:portx-connector-release-notes.adoc[PortX Connector Release Notes]
+** xref:as2-release-notes.adoc[AS2 Connector Release Notes]
+** xref:ftps-connector-release-notes.adoc[FTPS Connector Release Notes]
+** xref:x12-translator-release-notes.adoc[X12 Translator Release Notes]
+** xref:jde-release-notes.adoc[JD Edwards Connector Release Notes]
+endif::mule4[]
