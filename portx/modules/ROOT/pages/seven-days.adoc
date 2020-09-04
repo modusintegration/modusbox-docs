@@ -3,7 +3,7 @@
 :figure-caption!:
 
 
-Welcome to PortX! In order to get you started using PortX to integrate partners and applications, we've created a week-long digital integration tour with an PortX expert. Meet the expert and get started with PortX concepts in xref:day-0-video[this video]. Once you've watched it, you're ready to take the tour. 
+Welcome to PortX! In order to get you started using PortX to integrate partners and applications, we've created a week-long digital integration tour with an PortX expert. Meet the expert and get started with PortX concepts in https://drive.google.com/file/d/1tf4UMPMRc6uvD7uQU8WQ8gSWLBhhPXC7/view?usp=sharing[this video]. Once you've watched it, you're ready to take the tour. 
 
 On Day One, we show you:
 
@@ -18,7 +18,7 @@ After Day One, we replace the tutorial with a _functional overview_ that illustr
 
 We start with one of the most common scenarios in digital integration: Receiving, mapping, and sending a document from a partner to an internal endpoint. 
 
-https://drive.google.com/open?id=12AgIbzJsKVX4m_178H1dcf7b751Gs1pL[This video tells the story of this scenario, YouTube-style].
+https://drive.google.com/file/d/1mxJ0i81XEuC7RysDlt-iKOFE3WUmZM-V/view?usp=sharing[This video tells the story of this scenario].
 
 xref:day-one-tutorial.adoc[This tutorial] provides step-by-step instructions for implementing this scenario in your organization. 
 
