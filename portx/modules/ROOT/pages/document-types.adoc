@@ -1,13 +1,14 @@
 
 = Document Types
 
-Configuring a _document type_ for a partner means configuring settings specific to that document type.
+Configuring a xref:glossary#d[*_Document Type_*] for a partner means configuring settings specific to that document type.
 
-include::{partialsdir}/edit-short.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 
-[start=3]
+[start=4]
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Document Types*.
+
+. In the *CONFIGURATION* section of the left-hand navigation pane, click *Document Types*.
 +
 The <<img-document-types>> appears.
 
@@ -15,7 +16,7 @@ The <<img-document-types>> appears.
 
 image::document-types.png[img-document-types, title="Document Types Page"]
 
-[start=4]
+[start=5]
 
 . From this page, you can:
 
@@ -33,6 +34,7 @@ The <<img-document-types-edit>> appears.
 
 image::document-types-edit.png[img-document-types-edit, title="Existing Document Types Page"]
 
+[start=2]
 . Edit settings as appropriate. +
 For information about editing specific settings, see <<Add a New Document Type>>.
 
@@ -47,6 +49,7 @@ The <<img-document-type>> appears.
 
 image::document-type.png[img-document-type, title="Document Type Page"]
 
+[start=2]
 . Enter settings as appropriate.
 . To add a new property, see <<Document Properties>>.
 
@@ -61,7 +64,7 @@ image::document-type.png[img-document-type, title="Document Type Page"]
 Required:: Yes
 
 Default:: Auto-populates based on the following values:
-* *Company name* (see xref:partners[Partners] and xref:company-information[Company Information])
+* *Company name* (see xref:actor-information.adoc[Actor Information])
 * *Standard* (see <<Format>>)
 * *Version* (see <<Format>>)
 
@@ -548,7 +551,10 @@ These settings, which must be configured independently for each format, enable y
 
 ==== Add New Document Properties
 
-On the <<img-document-types>>, click *New Property*. The *Add Property* box appears.
+. On the <<img-document-types>>, click *Properties*.
+
+. Click *New Property*. +
+The *Add Property* box appears.
 
 [%header,cols="3s,7a"]
 |===

@@ -1,0 +1,69 @@
+= Actor Information
+
+The xref:glossary#a[*_Actor_*] information page allows you to add or edit Partner and Application information. 
+
+include::{partialsdir}/edit-settings.adoc[]
+
+
+== Add a New Partner
+
+. On the Partners and Applications Page, click *Add Partner*.
+. Enter the name of the partner in the *Partner Name* box.
++
+The <<img-partner-information>> appears.
+
+[[img-partner-information, Partner Information Page]]
+
+image::partner-information.png[img-partner-information, title="Partner Information Page"]
+[start=3]
+
+. Fill out each field in <<Enter Actor Information>>.
+. Click *Save*.
+
+== Add a New Application
+. On the Partners and Applications Page, click *Add Application*.
+. Enter the name of the Application in the *Application Name* box.
++
+The <<img-application-information>> appears.
+
+[[img-application-information, Application Information Page]]
+
+image::application-information.png[img-application-information, title="Application Information Page"]
+
+[start=3]
+. Fill out each field in <<Enter Actor Information>>.
+. Click *Save*.
+
+== Enter Actor Information
+////
+. The name of the partner you selected on the Trading Partners Page (or added on this page, as a new partner) appears in the *Partner Name* box. If appropriate, you can change it.
+////
+
+. On the <<img-partner-information>> or <<img-application-information>> enter the following:
+
+** *Contact type* +
+(In the dropdown listbox, select *Technical*, *Business*, or *Both*.)
+. After you enter a contact type, you can enter the following contact-specific information. All fields are xref:glossary#s[standard PortX field format].
+
+** *First Name*
+** *Last Name*
+** *Title*
+** *E-mail*
+** *Office Phone*
+** *Mobile Phone*
+** *Fax*
+** *Country*
+** *Address Line 1*
+** *Address Line 2*
+** *City*
+** *State*
+** *Postal Code*
+. Click *Save* to save the values you entered.
+
+== Edit Actor Information
+
+. On the Partners and Applications Page, select the xref:glossary#a[*Actor*] from the list with which you want to edit. 
++
+For more information on Actors see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships, and Artifacts].
+. Enter new values for the necessary fields found in <<Enter Actor Information>>.
+. Click *Save* to save the values you entered.

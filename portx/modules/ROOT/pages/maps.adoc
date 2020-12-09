@@ -10,10 +10,10 @@ Configuring a map for a partner enables you to specify:
 * Mapping Type 
 * Script 
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 [start=3]
 
-. In the *CONFIGURATION* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *Maps*.
+. In the *CONFIGURATION* section of the left-hand navigation pane, click *Maps*.
 +
 The <<img-maps>> appears.
 
@@ -21,7 +21,7 @@ The <<img-maps>> appears.
 
 image::maps.png[img-maps, title="Maps Page"]
 
-[start=4]
+[start=5]
 
 . From this page, you can:
 
@@ -32,17 +32,21 @@ image::maps.png[img-maps, title="Maps Page"]
 
 . On the <<img-maps>>, click the map you want to edit.
 +
-The <<img-map>> appears.
+The <<img-map-settings-page>> appears.
+
+[[img-map-settings-page]]
+
+image::map-settings.png[img-map-settings-page, title="Map Settings Page"]
 
 == Add a New Map
 
 . On the <<img-maps>>, click *New*.
 +
-The <<img-map>> appears.
+The <<img-map-icon>> appears.
 
-[[img-map]]
+[[img-map-icon]]
 
-image::map.png[img-map, title="Map Page"]
+image::map-add.png[img-map-icon, title="Map Page"]
 
 [%header,cols="3s,7a"]
 |===
@@ -80,6 +84,7 @@ Valid values::
 
 * 'Dataweave'
 * 'XSLT'
+* 'DataSonnet'
 
 Default::
 

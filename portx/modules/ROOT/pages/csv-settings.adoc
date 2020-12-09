@@ -1,10 +1,17 @@
 = CSV Settings
 
-include::{partialsdir}/edit-settings.adoc[]
+include::{partialsdir}/relationships-settings.adoc[]
 
 [start=3]
 
-. In the *Partners* section of the left-hand navigation pane on the <<partner-configuration.adoc#img-company-information, Company Information Page>>, click *CSV*.
+. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
++
+Alternatively, you can use the Filter Bar to search for a Relationship. 
+
++
+The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears.
+
+. In the *FORMAT DEFAULTS* section of the left-hand navigation pane on the, click *CSV*.
 +
 The <<img-csv-settings>> appears.
 
@@ -13,7 +20,7 @@ The <<img-csv-settings>> appears.
 image::csv-settings.png[img-csv-settings, title="CSV Settings Page"]
 
 
-== Inbound (Read)
+== Receive (Read)
 
 
 [%header,cols="3s,7a"]
@@ -39,7 +46,7 @@ Deselect the checkbox to omit header rows.
 
 |===
 
-== Outbound (Write)
+== Send (Write)
 
 [%header,cols="3s,7a"]
 |===
@@ -60,3 +67,6 @@ It is common to use a comma or pipe character as a delimiter.
 Deselect the checkbox to omit header rows.
 
 |===
+
+[start=5]
+. When you have completed your configuration, click *Save*.

@@ -1,0 +1,14 @@
+. xref:index.adoc#start-portx[Start PortX].
+The <<index.adoc#img-portx-start,Transaction Monitoring Page>> appears.
+. In the left-hand navigation pane, in the *CONFIGURATION* section, click *Relationships*.
+The xref:img-relationships[] appears.
+
+[[img-relationships]]
+image::relationships.png[img-relationships,title="Relationships Page"]
+[start=3]
+. Select a xref:glossary#r [*_Relationship_*] with which you want to work from the list. For more information see xref:actors-relationships-and-artifacts.adoc[Actors, Relationships and Artifacts].
++
+Alternatively, you can use the Filter Bar to search for a Relationship. 
+
++
+The xref:transaction-designer.adoc#img-transaction-designer[Transaction Designer Page] appears
