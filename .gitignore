@@ -4,7 +4,7 @@
 /_assets/
 /_site/
 /_tmp/
-/build/
+/build/site
 mulesoft-docs.iml
 .idea/
 mule-user-guide/v/3.7/_images/mq-dataweave.png

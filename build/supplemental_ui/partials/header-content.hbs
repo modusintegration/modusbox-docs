@@ -1,0 +1,36 @@
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{or site.url (or siteRootUrl siteRootPath)}}">{{site.title}}</a>
+      {{#if env.DOCSEARCH_ENABLED}}
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
+      {{/if}}
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+    <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+      <a class="navbar-link" href="#">Platforms</a>
+      <div class="navbar-dropdown ">
+        <a class="navbar-item" href="http://docs.portx.io/portx/latest/index.html">Any ESB</a>
+        <a class="navbar-item" href="http://docs.portx.io/camel/portx/latest/index.html">Apache Camel</a>
+      <a class="navbar-item" href="http://docs.portx.io/mule/portx/latest/index.html">Mulesoft</a>
+      </div>
+    </div>
+        <!--
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+        !-->
+      </div>
+    </div>
+  </nav>
+</header>
