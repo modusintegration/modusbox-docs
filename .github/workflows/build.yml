@@ -10,11 +10,29 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
+
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
+      - name: Download Antora
+        run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
+
+
+      - name: Checkout portx-ui repo
+        uses: actions/checkout@v2
+        with:
+          repository: modusbox/portx-ui
+          path: portx-ui
+
+      - name: Download Antora
+        run: npm install -g gulp-cli
+
+      - name: Build UI
+        run: make bundle
+        working-directory: ./portx-ui
+
   # Cache ui-bundle?
 #      - name: Setup m2 cache
 #        uses: actions/cache@v2
@@ -25,9 +43,6 @@ jobs:
 #            ${{ runner.os }}-maven-
         # Build UI Bundle
 
-
-      - name: Download Antora
-        run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
 
       # Run Playbook
       - name: Run Playbook
