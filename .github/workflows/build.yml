@@ -26,6 +26,7 @@ jobs:
           repository: modusintegration/portx-ui
           ref: master
           path: portx-ui
+          token: ${{ secrets.GIT_PAT }}
 
       - name: Download Antora
         run: npm install -g gulp-cli
