@@ -23,7 +23,7 @@ jobs:
       - name: Checkout portx-ui repo master branch
         uses: actions/checkout@v2
         with:
-          repository: modusbox/portx-ui
+          repository: modusintegration/portx-ui
           ref: master
           path: portx-ui
 
