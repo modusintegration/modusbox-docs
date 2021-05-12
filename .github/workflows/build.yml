@@ -19,7 +19,6 @@ jobs:
 #          key: ${{ runner.os }}-maven
 #          restore-keys: |
 #            ${{ runner.os }}-maven-
-          -
         # Build UI Bundle
 
       # Run Playbook
