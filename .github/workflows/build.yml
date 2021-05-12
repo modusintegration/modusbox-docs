@@ -22,9 +22,9 @@ jobs:
           -
         # Build UI Bundle
 
-        # Run Playbook
-        - name: Push to Artifactory
-          run: make playbook
+      # Run Playbook
+      - name: Push to Artifactory
+        run: make playbook
 
       # Upload to s3
       - name: Configure main account AWS credentials
