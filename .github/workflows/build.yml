@@ -19,11 +19,12 @@ jobs:
       - name: Download Antora
         run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
 
-
-      - name: Checkout portx-ui repo
+      # Checkout portx-ui repo master branch
+      - name: Checkout portx-ui repo master branch
         uses: actions/checkout@v2
         with:
           repository: modusbox/portx-ui
+          ref: master
           path: portx-ui
 
       - name: Download Antora
