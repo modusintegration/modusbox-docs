@@ -45,7 +45,7 @@ output:
     clean: true
 ui:
   bundle:
-    url: ./build-resources/ui-bundle.zip
+    url: ./portx-ui/build/ui-bundle.zip
     snapshot: true
   supplemental_files: ./build-resources/supplemental_ui
 runtime:
