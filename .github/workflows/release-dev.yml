@@ -1,8 +1,9 @@
-name: build
+name: release-dev
 
 on:
   push:
-
+    branches:
+      - dev
 jobs:
   build-and-upload:
     name: Build site in github vm and upload to s3
@@ -19,7 +20,7 @@ jobs:
       - name: Download Antora
         run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
 
-      # Checkout portx-ui repo master branch
+      # Start using portx-ui
       - name: Checkout portx-ui repo master branch
         uses: actions/checkout@v2
         with:
@@ -34,17 +35,7 @@ jobs:
       - name: Build UI
         run: make bundle
         working-directory: ./portx-ui
-
-  # Cache ui-bundle?
-#      - name: Setup m2 cache
-#        uses: actions/cache@v2
-#        with:
-#          path: ~/.m2/repository
-#          key: ${{ runner.os }}-maven
-#          restore-keys: |
-#            ${{ runner.os }}-maven-
-        # Build UI Bundle
-
+      # End using portx-ui
 
       # Run Playbook
       - name: Run Playbook
@@ -59,5 +50,5 @@ jobs:
           aws-region: us-west-2
 
       # Dev
-      - name: Get zelle build settings.xml from s3
+      - name: Upload the site to s3
         run: aws s3 sync ./build/site s3://modusbox-docs
