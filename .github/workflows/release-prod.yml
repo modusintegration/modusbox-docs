@@ -1,0 +1,54 @@
+name: release-dev
+
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build-and-upload:
+    name: Build site in github vm and upload to s3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Download Antora
+        run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
+
+      # Start using portx-ui
+      - name: Checkout portx-ui repo master branch
+        uses: actions/checkout@v2
+        with:
+          repository: modusintegration/portx-ui
+          ref: master
+          path: portx-ui
+          token: ${{ secrets.GIT_PAT }}
+
+      - name: Download Antora
+        run: npm install -g gulp-cli
+
+      - name: Build UI
+        run: make bundle
+        working-directory: ./portx-ui
+      # End using portx-ui
+
+      # Run Playbook
+      - name: Run Playbook
+        run: make playbook
+
+      # Upload to s3
+      - name: Configure main account AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.MAIN_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.MAIN_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      # Dev
+      - name: Upload the site to s3
+        run: aws s3 sync ./build/site s3://modusbox-docs
