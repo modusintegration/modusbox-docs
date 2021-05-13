@@ -1,0 +1,113 @@
+= Usage
+
+_X12Translator_ interface is the entry point for reading and writing X12 documents. Instantiating _DefaultX12Translator_
+will give you a reference to _X12Translator_:
+
+[source,java]
+----
+io.portx.x12.translator.api.X12Translator x12Translator = new io.portx.x12.translator.impl.DefaultX12Translator();
+----
+
+_DefaultX12Translator_ is a thread-safe implementation of _X12Translator_ which means that different threads of execution can concurrently
+invoke methods on an instance of _DefaultX12Translator_ without compromising its state. We strongly recommend that _DefaultX12Translator_
+is instantiated only once and used throughout your application in order to leverage its caching features.
+
+== Reading an interchange
+
+The translator offers two ways to read an X12 envelope:
+
+Small document:: Can be read as simple string
+Large document:: Can be read from a stream in chunks, which facilitates keeping the Java process's memory consumption manageable. _X12Translator#read(...)_
+is called to obtain an _X12EnvelopeIterator_ object and iterate over an envelope's transaction sets:
++
+[source,java]
+----
+io.portx.x12.translator.api.X12Translator x12Translator = new io.portx.x12.translator.impl.DefaultX12Translator();
+io.portx.x12.translator.reader.X12EnvelopeIterator x12EnvelopeIterator = x12Translator.read(interchange);
+while (x12EnvelopeIterator.hasNext()) {
+  io.portx.x12.translator.api.X12Envelope x12Envelope = x12EnvelopeIterator.next();
+  Map<String, Object> map = x12Envelope.getAsMap();
+  ...
+}
+----
+
+The Java snippet above is a standard template for reading an interchange. _x12EnvelopeIterator.next()_
+processes the next batch of unprocessed transaction sets and returns an _X12Envelope_ which is an in-memory model of the processed batch.
+The batch size is unbounded by default though it can be controlled by the *maxTransactionSets* parameter set when calling _DefaultX12Translator_'s constructor.
+A good strategy to keep the memory footprint to a minimum is to process one transaction set a time, as follows:
+
+[source,java]
+----
+io.portx.x12.translator.api.X12Translator x12Translator = new io.portx.x12.translator.impl.DefaultX12Translator(1);
+----
+
+IMPORTANT: Neither _X12EnvelopeIterator_ nor _X12Envelope_ are thread-safe. 
+Access from different threads should be synchronized.
+
+A digestible form of the transaction sets can be obtained from _X12Envelope_ as a _java.util.Map_ or as JSON with
+_X12Envelope#getAsMap()_ and _X12Envelope#getAsJson()_, respectively. 
+
+_getAsMap()_ is useful for scenarios in which you want to interact with the in-memory model programmatically. 
+
+_getAsJson()_ is useful when you want to
+transmit the transaction sets to a downstream remote process.
+
+=== Functional Group Reports
+
+_X12Envelope_ reports provide an overview of the processed transaction sets as well any errors encountered during processing.
+For instance, you can determine the idnenty of the sender as follows:
+
+[source,java]
+----
+System.out.println(x12Envelope.getFunctionalGroupReports().get(0).getApplicationSenderCode());
+----
+
+Similarly, you may be interested as to whether a functional group was processed without errors:
+
+[source,java]
+----
+System.out.println(x12Envelope.getFunctionalGroupReports().get(0).getStatus().toString());
+----
+
+Consult the xref:API[insert API link] documentation for more information about reports.
+
+=== Generating Acknowledgments
+
+A common requirement after processing an inbound interchange is to acknowledge receipt to the sender. 
+An acknowledgement like the FA 997 can be constructed from a JSON document or a _java.util.Map_ object; however, _X12EnvelopeIterator_ has a convenience
+method named _generateAck()_ that does this programmatically. 
+When called, the method returns all supported acknowledgments for the transaction sets processed at the time of the method call. 
+Alternatively, _X12Envelope#generateAck()_ returns acknowledgments for the encapsulated transaction sets.
+
+
+== Writing an interchange
+
+_X12Translator#write(...)_ transforms a JSON document into its X12 counterpart and writes it to a _java.io.OutputStream_
+or a _java.nio.channels.WritableByteChannel_ object. 
+
+At a minimum, the _X12Translator#write(...)_ method accepts two arguments:
+
+. A reference to a JSON document that adheres to a valid interchange structure. 
+The document can be a string reference, but you should choose an appropriate _java.io.Reader_ stream implementation for large streaming documents.
++
+. The destination to which the document will be written. 
+As aforementioned, this can be either an instance of type _OutputStream_ or a _WritableByteChannel_.
+
+The following snippet shows a JSON representation of a generated acknowledgment transformed to X12 with the _write(...)_ method:
+
+[source,java]
+----
+io.portx.x12.translator.api.X12Translator x12Translator = new io.portx.x12.translator.impl.DefaultX12Translator();
+io.portx.x12.translator.reader.X12EnvelopeIterator x12EnvelopeIterator = x12Translator.read(interchange);
+while (x12EnvelopeIterator.hasNext()) {
+  io.portx.x12.translator.api.X12Envelope x12Envelope = x12EnvelopeIterator.next();
+  io.portx.x12.translator.api.X12Envelope ackX12Envelope = x12Envelope.generateAck();
+
+  java.io.ByteArrayOutputStream outputStream = new java.io.ByteArrayOutputStream();
+  x12Translator.write(ackX12Envelope.getAsJson(), outputStream);
+
+  System.out.println(new String(outputStream.toByteArray()));
+}
+----
+
+Similar to _X12Translator#read(...)_, the write method processes a JSON document in increments with the _maxTransactionSets_ knob used to control the increment size.

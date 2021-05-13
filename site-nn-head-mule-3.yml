@@ -1,0 +1,57 @@
+site:
+  start_page: portx::index.adoc
+  title: ModusBox for Mulesoft ESB 
+  url: https://docs.portx.io
+
+content:
+  sources:
+
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: portx
+
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: portx-connector
+    
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: as2-connector
+    
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: ftps-connector
+
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: x12-translator
+    
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: jde
+
+  - url: ../modusbox-docs
+    branches: [HEAD]
+    start_path: release-notes
+
+asciidoc:
+  attributes:
+    mule: ''
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    linkattrs: ''
+    product: 'PortX'
+
+output:
+  destinations:
+  - provider: fs
+    path: build/site/mule
+    clean: true
+ui:
+  bundle:
+    url: ./build-resources/ui-bundle.zip
+    snapshot: true
+  supplemental_files: ./build-resources/supplemental_ui
+runtime:
+  pull: true

@@ -1,0 +1,6 @@
+name: x12-translator
+title: X12 Translator
+version: 'latest'
+start_page: ROOT:getting-started.adoc
+nav:
+  - modules/ROOT/nav.adoc

@@ -1,0 +1,50 @@
+= Installation
+
+== Software Requirements
+- Java 8
+- Maven 3
+
+== Download
+The X12 Translator runtime binaries are hosted on private Maven repositories. For more information, contact your ModusBox representative. 
+The binaries are available in two forms:
+
+* Java Archives (<<JARs>>)
+* <<Fat JAR>>
+
+=== JARs
+
+These archives are at the following Maven coordinates:
+
+[source,xml]
+----
+<groupId>io.portx.x12</groupId>
+<artifactId>x12-translator</artifactId>
+<version>1.0.0</version>
+----
+
+For each schema pack you intend to use, artifact coordinates need to be declared ahead of time. 
+For example, the coordinates for the 005010 X12 release schema pack are:
+
+[source,xml]
+----
+<groupId>io.portx.x12</groupId>
+<artifactId>x12-schemas</artifactId>
+<classifier>005010</classifier>
+<version>1.0.0</version>
+----
+ 
+The schema pack dependency version must always match the version of the  _x12-translator_ artifact.
+
+=== Fat JAR
+
+The Fat JAR contains nearly all dependencies.
+The Maven coordinates for the Fat JAR are:
+ 
+[source,xml]
+----
+<groupId>io.portx.x12</groupId>
+<artifactId>x12-translator-all</artifactId>
+<version>1.0.0</version>
+----
+
+We recommend the <<JARs>> option because it makes debugging easier and requires less memory. The <<Fat JAR>> option is useful when you need to embed the translator in a complex runtime environment and want to avoid library conflicts and other classpath issues.

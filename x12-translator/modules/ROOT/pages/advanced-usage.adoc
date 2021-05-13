@@ -1,0 +1,57 @@
+= Advanced usage
+
+== Customizing schemas
+
+The translator's ANSI X12 schema packs are packaged by release version and are described in
+https://relaxng.org/compact-tutorial-20030326.html[Relax NG Compact (RNC) Syntax Tutorial]. RNC is a succinct pattern language for describing the structure and  content of documents. 
+An X12 document is validated and parsed according to the rules laid out in the RNC schema. 
+A schema pack may need to be customized to accommodate your
+organization's needs. 
+ 
+=== To customize a schema pack
+
+. Extract the RNC schema from the schema pack JAR of the release version you want to change. 
+The directory layout of a schema pack generally adheres to the following structure:
++
+.x12-schemas-1.0.0-005010.jar
+----
+/005010
+  /dfdl
+    ...
+    ...
+  /rnc
+    100.x12.rnc
+    101.x12.rnc
+    102.x12.rnc
+    103.x12.rnc
+    ...
+    ...
+    elements.x12.rnc
+    interchange.x12.rnc
+    segments.x12.rnc
+ /rng
+    ...
+    ...
+----
++
+Generally speaking, you will only need to copy and edit files in the *rnc* directory. The directory holds an RNC schema for each transaction set type (for example, 100.x12.rnc) and shared schemas (elements.x12.rnc, interchange.x12.rnc, and segments.x12.rnc).
+
+. Edit the RNC schema accordingly. 
+For more information, see this http://books.xmlschemata.org/relaxng/page2.html[detailed guide to Relax NG].
+
+. Place the modified schema in the ".x12-translator/schemas" directory path located within the running program's current directory.
+On initialization, _DefaultX12Translator_ automatically creates the ".x12-translator/schemas" directory path. Schemas in the hidden
+directory will overwrite the bundled schemas.
++
+IMPORTANT: Make sure you place the modified schema in the correct location relative to the *.x12-translator/schemas* path so the translator can pick up your customizations. 
+The path to the modified schema must mirror the path as found in the bundled schema archive. 
++
+For example:
++
+----
+.x12-translator
+  /schemas
+    /005010
+      /rnc
+        102.x12.rnc
+----

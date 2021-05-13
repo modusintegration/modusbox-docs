@@ -3,7 +3,7 @@ name: release-dev
 on:
   push:
     branches:
-      - dev
+      - prod
 jobs:
   build-and-upload:
     name: Build site in github vm and upload to s3
@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: modusintegration/portx-ui
-          ref: master
+          ref: prod-links
           path: portx-ui
           token: ${{ secrets.GIT_PAT }}
 
