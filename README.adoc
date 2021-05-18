@@ -18,13 +18,25 @@ build you have in your local build folder.
 test: `https://docs.portx.io/portx/latest/index.html`
 
 ### port-ui
-A requirement for this repo is https://github.com/modusintegration/port-ui[port-ui], it is used to create customized ui bundles.
-For the automated release via github actions,
-the master branch of port-ui is used for building the dev docs environment,
-the staging-links branch of port-ui is used for building the stg docs environment,
-and the prod-links of branch port-ui is used for building the prod docs environment.
+A requirement for this repo is https://github.com/modusintegration/port-ui[port-ui], it is used to create customized
+ui bundles.
+
+### AWS config
+If you want to upload to the test environment you will need to configure an aws profile
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html[aws-docs]. You will need to make sure your
+key is for the `portx-prod` account.
+
 
 == Getting Started
 
-Once you get gulp installed see bellow you can simply run `make bundle` if successful you will a new file generated at `build/ui-bundle.zip`
-You can then use this bundle by coping it over to the modusbox-docs repo.
+Once you have made an appropriate bundle from port-ui you can simply move it into `/build-resources`. Then run
+`make playbook` which will generate the site from the defined playbooks
+
+
+    site-nn-head-esb-3.yml,
+    site-nn-head-mule-3.yml,
+    site-nn-head-camel-3.yml
+
+and automaticly put the site into your `/build` directory. Once the site is built you can run `make local` which will
+open up your local site you just built.
+
