@@ -51,4 +51,4 @@ jobs:
 
       # Dev
       - name: Upload the site to s3
-        run: aws s3 sync ./build/site s3://modusbox-docs
+        run: aws s3 sync ./build/site s3://staging.docs.portx.io
