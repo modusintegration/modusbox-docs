@@ -49,6 +49,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.MAIN_AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
 
-      # Dev
+      # dev
       - name: Upload the site to s3
-        run: aws s3 sync ./build/site s3://modusbox-docs
+        run: make upload-dev
