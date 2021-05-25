@@ -37,10 +37,6 @@ jobs:
 #        working-directory: ./portx-ui
       # End using portx-ui
 
-      - name: Download Antora
-        run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
-
-
       # Upload to s3
       - name: Configure main account AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
