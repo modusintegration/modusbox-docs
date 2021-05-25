@@ -21,25 +21,25 @@ jobs:
         run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
 
       # Start using portx-ui
-      - name: Checkout portx-ui repo master branch
-        uses: actions/checkout@v2
-        with:
-          repository: modusintegration/portx-ui
-          ref: master
-          path: portx-ui
-          token: ${{ secrets.GIT_PAT }}
-
-      - name: Download Antora
-        run: npm install -g gulp-cli
-
-      - name: Build UI
-        run: make bundle
-        working-directory: ./portx-ui
+#      - name: Checkout portx-ui repo master branch
+#        uses: actions/checkout@v2
+#        with:
+#          repository: modusintegration/portx-ui
+#          ref: master
+#          path: portx-ui
+#          token: ${{ secrets.GIT_PAT }}
+#
+#      - name: Download Antora
+#        run: npm install -g gulp-cli
+#
+#      - name: Build UI
+#        run: make bundle
+#        working-directory: ./portx-ui
       # End using portx-ui
 
-      # Run Playbook
-      - name: Run Playbook
-        run: make playbook
+      - name: Download Antora
+        run: npm i -g @antora/cli@2.3 @antora/site-generator-default@2.3
+
 
       # Upload to s3
       - name: Configure main account AWS credentials
@@ -48,6 +48,13 @@ jobs:
           aws-access-key-id: ${{ secrets.MAIN_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.MAIN_AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
+
+      - name: Download the bundle from s3
+        run: make download-aws
+
+      # Run Playbook
+      - name: Run Playbook
+        run: make playbook
 
       # dev
       - name: Upload the site to s3

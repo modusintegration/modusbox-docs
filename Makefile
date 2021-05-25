@@ -7,6 +7,12 @@ playbook:
 local:
 	open build/site/index.html
 
+download-artifact:
+	curl -H "Authorization: token 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" https://github.com/modusintegration/portx-ui/releases/download/dev/ui-bundle.zip
+
+download-aws:
+	aws s3 cp s3://modusbox-docs-ui-bundle ./build-resources/ui-bundle.zip
+
 upload-test:
 	aws s3 sync ./build/site s3://test.docs.portx.io/test
 
