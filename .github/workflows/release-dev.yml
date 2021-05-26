@@ -53,7 +53,7 @@ jobs:
         run: make playbook
 
       # Run Linkchecker
-       - name: Run Linkchecker
+      - name: Run Linkchecker
        run: make linkchecker
 
       # dev
