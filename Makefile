@@ -13,6 +13,9 @@ download-artifact:
 download-aws:
 	aws s3 cp s3://modusbox-docs-ui-bundle/ui-bundle.zip ./build-resources/ui-bundle.zip
 
+linkchecker:
+	docker run --rm -it -u $(id -u):$(id -g) -v`pwd`:/mnt linkchecker/linkchecker --verbose ./build/site/index.html
+
 upload-test:
 	aws s3 sync ./build/site s3://test.docs.portx.io/test
 
@@ -24,3 +27,4 @@ upload-stg:
 
 upload-prod:
 	aws s3 sync ./build/site s3://portx-prod-docs
+
