@@ -54,7 +54,7 @@ jobs:
 
       # Run Linkchecker
       - name: Run Linkchecker
-       run: make linkchecker
+        run: make linkchecker
 
       # dev
       - name: Upload the site to s3
