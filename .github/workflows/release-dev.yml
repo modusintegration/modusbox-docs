@@ -55,10 +55,10 @@ jobs:
       # Run Linkchecker
       - name: Run Linkchecker
         run: make linkchecker
-
-      # dev
-      - name: Upload the site to s3
-        run: make upload-dev
+#
+#      # dev
+#      - name: Upload the site to s3
+#        run: make upload-dev
 
       # Create a github Release Artifact
       - name: Create Release
