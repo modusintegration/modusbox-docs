@@ -1,6 +1,48 @@
 = PortX Release Notes
 :keywords: b2b, release notes
 
+
+== Version 1.33.3 - 22 June 2021
+
+=== Browser Support
+
+PortX supports the following browsers:
+
+* Firefox (latest version)
+* Chrome (latest version)
+
+=== Fixed in This Release 
+
+[cols=2*] 
+|===
+|Issue
+|Fix
+
+|The Availability window displays an error for some Relationship Info.
+|Fixed the issues with Released transaction that were put on hold.
+
+|On the *Endpoint* page in *Properties* tab, the *Save* button initiates an infinite loop after editing the existing Property. 
+|Fixed - issue no longer occurs.
+
+|On the *Edit Lookup Table Key* pop-up window, the *Confirm and Change* button remains disabled after entering the value in the *Field* box.
+|The *Save* button functions appropriately.
+
+|Transaction initiator notification is missing or incomplete.
+|Fixed - issue no longer occurs.
+
+|Various internal stability and performance issues. 
+|Fixed - issue no longer occurs.
+|===
+
+=== Compatibility
+
+Compatible with:
+
+* X12 Module 1.2.1
+* PortX Connector 3.0.x
+* FTPS Connector 1.0.8
+* AS2 Connector 2.0.1
+
 == Version 1.30.0 - 20 August 2020
 
 === Browser Support
